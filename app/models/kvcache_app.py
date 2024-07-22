@@ -1,25 +1,28 @@
-from sqlalchemy import Table, Column, ForeignKey, Integer, String, UniqueConstraint
+#!/usr/bin/env python
+# coding=utf-8
+'''
+Description  : kvcache_app model, define kvcache_app's table in database
+Author       : linchen
+Date         : 2024-07-20 12:26:30
+Version      : 1.0.0
+LastEditors  : linchen
+LastEditTime : 2024-07-22 08:42:42
+'''
+
+from sqlalchemy import Column, Integer, String
+
 from sqlalchemy.orm import relationship
 
-from utils.database import Base
+from app.models.kvcache import Kvcache
+from app.utils.sql_util import Base
 
-
-kvcache = Table(
-    'kvcache',
-    Base.metadata,
-    Column('kvcache_app_id', Integer, ForeignKey("kvcache_app.id")), 
-    Column('quantedllm_id', Integer, ForeignKey("quantedllm.id")),
-    Column('kvcache_download_path', String),    # kvcache 下载链接
-    Column('latest_updated_time', String),      # 最近更新时间
-    Column('kvcache_size', Integer),            # kvcache 大小
-)
 
  
 class KvcacheApp(Base):
     __tablename__ = "kvcache_app"
-    
+
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)   # 唯一主键
-    
+
     title = Column(String, index=True)      # 标题，用户创建时指定
     picture = Column(String)                # 图片的路径
     summary = Column(String)                # 总结
@@ -27,17 +30,6 @@ class KvcacheApp(Base):
 
     pull_count = Column(Integer)            # 下载量
     star_count = Column(Integer)            # 点赞数
-    latest_updated_time = Column(String)    # 最新更改时间
+    latest_updated_time = Column(Integer)    # 最新更改时间
 
-    quantedllm = relationship('Quantedllm', secondary=kvcache, back_populates='kvcache_app')
-
-
-class Quantedllm(Base):
-    __tablename__ = "quantedllm"
-
-    id = Column(Integer, primary_key=True, index=True, autoincrement=True)   # 唯一主键
-    name = Column(String)                        # model name
-    quantedllm_download_path = Column(String)    # model 下载url
-
-    kvcache_app = relationship('KvcacheApp', secondary=kvcache, back_populates='quantedllm')
-
+    llm = relationship('Llm', secondary=Kvcache, back_populates='kvcache_app')

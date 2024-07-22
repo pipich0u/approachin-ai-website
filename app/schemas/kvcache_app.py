@@ -1,43 +1,19 @@
+#!/usr/bin/env python
+# coding=utf-8
+'''
+Description  : kvcache_app schemas
+Author       : linchen
+Date         : 2024-07-20 12:27:00
+Version      : 1.0.0
+LastEditors  : linchen
+LastEditTime : 2024-07-22 11:48:07
+'''
+
+
 from pydantic import BaseModel
+from app.schemas.llm import LlmDetial
+from app.schemas.kvcache import KvcacheWithllmInfo
 
-
-# quanted_llm schemas
-class QuantedllmBase(BaseModel):
-    name: str
-    quantedllm_download_path: str
-
-
-class QuantedllmCreate(QuantedllmBase):
-    pass 
-
-
-class QuantedllmDetial(QuantedllmBase):
-    id: int
-
-    class Config:
-        from_attributes = True
-
-
-
-# kvcache schemas
-class KvcacheBase(BaseModel):
-    kvcache_app_id: int
-    quantedllm_id: int
-    kvcache_download_path: str
-
-
-class KvcacheCreate(KvcacheBase):
-    pass
-
-
-class KvcacheDetail(KvcacheBase):
-    latest_updated_time: str
-    kvcache_size: int
-
-
-class KvcacheWithllmInfo(KvcacheDetail):
-    quantedllm_name: str
-    quantedllm_download_path: str
 
 
 # kvcache_app schemas
@@ -56,24 +32,20 @@ class KvcacheAppCreate(KvcacheAppBase):
 class KvcacheAppSummary(KvcacheAppBase):
 
     id: int
-    pull_count: int 
+    pull_count: int
     star_count: int
+
+    class Config:
+        from_attributes = True  
 
 
 class KvcacheAppHomeSummary(KvcacheAppSummary):
-    quantedllm: list[QuantedllmDetial]
-    
-    class Config:
-        from_attributes = True
+    llm: list[LlmDetial]
 
 
 class KvcacheAppDetial(KvcacheAppSummary):
 
     description: str | None = None
-    latest_updated_time : str
+    latest_updated_time : int
 
     kvcache: list[KvcacheWithllmInfo]
-
-    class Config:
-        from_attributes = True
-
