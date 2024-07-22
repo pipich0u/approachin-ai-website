@@ -6,7 +6,7 @@ Author       : linchen
 Date         : 2024-07-22 04:20:29
 Version      : 1.0.0
 LastEditors  : linchen
-LastEditTime : 2024-07-22 09:01:27
+LastEditTime : 2024-07-22 14:52:34
 '''
 from time import time
 
@@ -19,7 +19,7 @@ router = APIRouter()
 kvcache_database_manager = KvcacheDatabaseManager()
 
 
-@router.post("/upload_kvcache",response_model=KvcacheCreate)
+@router.post("/upload_kvcache", response_model=KvcacheCreate)
 async def upload_kvcache(db_kvcache: KvcacheCreate):
     # TODO: get latest_updated_time and kvcache_size from web, now is hard writen
 

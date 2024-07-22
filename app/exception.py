@@ -6,9 +6,10 @@ Author       : linchen
 Date         : 2024-07-22 08:50:31
 Version      : 1.0.0
 LastEditors  : linchen
-LastEditTime : 2024-07-22 08:50:32
+LastEditTime : 2024-07-22 14:56:06
 '''
 from fastapi import HTTPException, status
+
 
 def db_exception():
     return HTTPException(

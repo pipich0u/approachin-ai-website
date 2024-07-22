@@ -6,7 +6,7 @@ Author       : linchen
 Date         : 2024-07-20 12:12:10
 Version      : 1.0.0
 LastEditors  : linchen
-LastEditTime : 2024-07-22 09:18:05
+LastEditTime : 2024-07-22 14:55:18
 '''
 import os
 from urllib.parse import urlparse
@@ -50,7 +50,6 @@ class SQLUtil(metaclass=Singleton):
             SQLUtil.session_local = sessionmaker(
                 autocommit=False, autoflush=False, bind=SQLUtil.sqlalchemy_engine)
 
-
     @staticmethod
     def create_sqllite_url(cfg):
         """
@@ -70,7 +69,6 @@ class SQLUtil(metaclass=Singleton):
         except ValueError:
             logger.error("invalid sqllite url: %s", url)
             exit(-1)
-
 
     @contextmanager
     def get_db(self):
@@ -94,7 +92,8 @@ class SQLUtil(metaclass=Singleton):
             session.commit()
             session.refresh(what)
         except Exception as e:
-            logger.exception("db commit error with data %s", str(what.__dict__))
+            logger.exception("db commit error with data %s",
+                             str(what.__dict__))
             ex = db_exception()
             ex.detail = str(e)
             session.rollback()
@@ -107,7 +106,9 @@ class SQLUtil(metaclass=Singleton):
         except Exception as e:
             ex = db_exception()
             ex.detail = str(e)
-            logger.exception("db merge commit error with data %s", str(what.__dict__))
+            logger.exception(
+                "db merge commit error with data %s", str(what.__dict__)
+            )
             session.rollback()
             raise ex from e
 
@@ -122,6 +123,7 @@ class SQLUtil(metaclass=Singleton):
         except Exception as e:
             ex = db_exception()
             ex.detail = str(e)
-            logger.exception("db update commit refresh error with data %s", str(what.__dict__))
+            logger.exception(
+                "db update commit refresh error with data %s", str(what.__dict__))
             session.rollback()
             raise ex from e

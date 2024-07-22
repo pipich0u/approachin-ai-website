@@ -6,14 +6,13 @@ Author       : linchen
 Date         : 2024-07-20 12:27:00
 Version      : 1.0.0
 LastEditors  : linchen
-LastEditTime : 2024-07-22 11:48:07
+LastEditTime : 2024-07-22 14:54:58
 '''
 
 
 from pydantic import BaseModel
 from app.schemas.llm import LlmDetial
 from app.schemas.kvcache import KvcacheWithllmInfo
-
 
 
 # kvcache_app schemas
@@ -28,7 +27,6 @@ class KvcacheAppCreate(KvcacheAppBase):
     pass
 
 
-
 class KvcacheAppSummary(KvcacheAppBase):
 
     id: int
@@ -36,7 +34,7 @@ class KvcacheAppSummary(KvcacheAppBase):
     star_count: int
 
     class Config:
-        from_attributes = True  
+        from_attributes = True
 
 
 class KvcacheAppHomeSummary(KvcacheAppSummary):
@@ -46,6 +44,6 @@ class KvcacheAppHomeSummary(KvcacheAppSummary):
 class KvcacheAppDetial(KvcacheAppSummary):
 
     description: str | None = None
-    latest_updated_time : int
+    latest_updated_time: int
 
     kvcache: list[KvcacheWithllmInfo]

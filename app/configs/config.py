@@ -6,7 +6,7 @@ Author       : linchen
 Date         : 2024-07-22 08:17:02
 Version      : 1.0.0
 LastEditors  : linchen
-LastEditTime : 2024-07-22 09:18:09
+LastEditTime : 2024-07-22 14:52:55
 '''
 
 
@@ -16,6 +16,7 @@ import yaml
 from app.configs.singleton import Singleton
 
 from app.constants import Constants
+
 
 class Config(metaclass=Singleton):
 
@@ -36,7 +37,6 @@ class Config(metaclass=Singleton):
             config = yaml.safe_load(fp)
         return config
 
-
     @staticmethod
     def to_path(path: str) -> str:
         """
@@ -52,7 +52,8 @@ class Config(metaclass=Singleton):
         self.base_path = os.path.dirname(
             os.path.dirname(os.path.dirname(__file__)))
         # log configs
-        self.log_dir = os.path.join(self.base_path, Config.to_path(cfg["log"]["dir"]))
+        self.log_dir = os.path.join(
+            self.base_path, Config.to_path(cfg["log"]["dir"]))
         self.log_file = cfg["log"]["file"]
         self.log_level = cfg["log"]["level"]
         self.backup_count = cfg["log"]["backup_count"]
@@ -60,7 +61,8 @@ class Config(metaclass=Singleton):
         # db configs
         self.db_configs: dict = cfg.get("db", {})
         self.db_type = self.db_configs.get("type", "")
-        self.db_host = os.path.join(self.base_path, self.db_configs.get("host", ""))
+        self.db_host = os.path.join(
+            self.base_path, self.db_configs.get("host", ""))
         self.db_port = self.db_configs.get("port", "")
         self.db_name = self.db_configs.get("database", "")
         self.db_pool_size = self.db_configs.get("pool_size")

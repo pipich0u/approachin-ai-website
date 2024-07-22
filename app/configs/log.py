@@ -6,7 +6,7 @@ Author       : linchen
 Date         : 2024-07-22 08:15:48
 Version      : 1.0.0
 LastEditors  : linchen
-LastEditTime : 2024-07-22 09:18:07
+LastEditTime : 2024-07-22 14:53:04
 '''
 import codecs
 import os
@@ -21,7 +21,6 @@ import colorlog
 from app.configs.config import Config
 
 
-
 class DailyRotatingFileHandler(BaseRotatingHandler):
     """
     such as 'logging.TimeRotatingFileHandler', Additional features:
@@ -29,7 +28,7 @@ class DailyRotatingFileHandler(BaseRotatingHandler):
      - support rotating daily
     """
 
-    def __init__(self, filename, backupCount=0, encoding=None, delay=False, utc=False, **kwargs): # pylint: disable=unused-argument
+    def __init__(self, filename, backupCount=0, encoding=None, delay=False, utc=False, **kwargs):  # pylint: disable=unused-argument
         self.backup_count = backupCount
         self.utc = utc
         self.suffix = "%Y-%m-%d"
@@ -71,7 +70,7 @@ class DailyRotatingFileHandler(BaseRotatingHandler):
             self.current_filename)
 
         if not self.delay:
-            self.stream = self._open() # type: ignore
+            self.stream = self._open()  # type: ignore
 
         self.delete_expired_files()
 
@@ -86,9 +85,11 @@ class DailyRotatingFileHandler(BaseRotatingHandler):
         open a new log file, create soft link
         """
         if self.encoding is None:
-            stream = open(str(self.current_log_path), self.mode, encoding=locale.getpreferredencoding())
+            stream = open(str(self.current_log_path), self.mode,
+                          encoding=locale.getpreferredencoding())
         else:
-            stream = codecs.open(str(self.current_log_path), self.mode, self.encoding)
+            stream = codecs.open(str(self.current_log_path),
+                                 self.mode, self.encoding)
 
         if self.base_log_path.exists():
             try:
@@ -129,7 +130,6 @@ class DailyRotatingFileHandler(BaseRotatingHandler):
             os.remove(str(self.base_log_path.with_name(file_name)))
 
 
-
 class Logger(object):
     """
     logger class
@@ -147,9 +147,9 @@ class Logger(object):
         cfg: Config = Config()
         filename: str = os.path.join(cfg.log_dir, cfg.log_file)
         backup_count: int = cfg.backup_count
-        th = DailyRotatingFileHandler(filename=filename, when='MIDNIGHT', backupCount=backup_count, encoding="utf-8")
+        th = DailyRotatingFileHandler(
+            filename=filename, when='MIDNIGHT', backupCount=backup_count, encoding="utf-8")
         th.setFormatter(logging.Formatter(fmt))
-
 
         color_fmt = (
             '%(log_color)s%(asctime)s %(levelname)s %(pathname)s[%(lineno)d]: %(message)s'
@@ -169,8 +169,9 @@ class Logger(object):
         sh.setFormatter(color_formatter)
 
         self.logger = logging.getLogger(filename)
-        self.logger.setLevel(self.level_relations.get(level)) # type: ignore
+        self.logger.setLevel(self.level_relations.get(level))  # type: ignore
         self.logger.addHandler(th)
         self.logger.addHandler(sh)
+
 
 logger = Logger(level=Config().log_level).logger

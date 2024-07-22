@@ -6,7 +6,7 @@ Author       : linchen
 Date         : 2024-07-22 03:18:54
 Version      : 1.0.0
 LastEditors  : linchen
-LastEditTime : 2024-07-22 07:58:54
+LastEditTime : 2024-07-22 14:55:10
 '''
 
 from pydantic import BaseModel
@@ -19,7 +19,7 @@ class LlmBase(BaseModel):
 
 
 class LlmCreate(LlmBase):
-    pass 
+    pass
 
 
 class LlmDetial(LlmBase):

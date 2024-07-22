@@ -17,12 +17,13 @@ from app.models.kvcache import Kvcache
 from app.utils.sql_util import Base
 
 
-
 class Llm(Base):
     __tablename__ = "llm"
 
-    id = Column(Integer, primary_key=True, index=True, autoincrement=True)   # 唯一主键
-    name = Column(String)                        # model name
-    llm_download_path = Column(String)    # model 下载url
+    id = Column(Integer, primary_key=True, index=True,
+                autoincrement=True)                 # 唯一主键
+    name = Column(String)                           # model name
+    llm_download_path = Column(String)              # model 下载url
 
-    kvcache_app = relationship('KvcacheApp', secondary=Kvcache, back_populates='llm')
+    kvcache_app = relationship(
+        'KvcacheApp', secondary=Kvcache, back_populates='llm')
