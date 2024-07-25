@@ -152,7 +152,6 @@
       text-decoration: none;
       color: black;
       transition-duration: 0.5s;
-      transition-propety: background-color;
       margin: 0 5px;
     }
     a:hover {
