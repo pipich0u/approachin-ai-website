@@ -24,9 +24,26 @@
         <a href="">123</a>
       </li>
     </ul> -->
+    <div class="footer">
+      <a href="https://beian.miit.gov.cn/" targe="_blank">
+        京公网安备11010802044671号
+      </a>
+      <a href="https://beian.miit.gov.cn/" targe="_blank">
+        京ICP备2024077296号-1
+      </a>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
+.footer {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  > a {
+    color: #ffffff;
+  }
+}
 .home-content {
   position: absolute;
   top: 50%;
