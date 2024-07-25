@@ -7,11 +7,13 @@ import basicSsl from '@vitejs/plugin-basic-ssl'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), basicSsl()],
+  plugins: [vue()],
   server: {
     // 启用 HTTPS
     host: '0.0.0.0',
-    https: true,
+    https: {
+
+    },
     port: 8991,
     // 如果你有自定义的证书和密钥文件，可以这样指定它们的路径
     // https: {
