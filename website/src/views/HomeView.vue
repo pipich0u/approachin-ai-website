@@ -108,7 +108,7 @@
     content: "";
     position: absolute;
     left: 50%;
-    top: 65%;
+    top: 95%;
     transform: translateY(-50%);
     transform: translateX(-50%);
     width: 0;
