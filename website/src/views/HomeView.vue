@@ -5,12 +5,13 @@
   <div>
     <div class="home-content">
       <div class="logo-box">
-        <a class="logo" href="/">
-          <img src="../assets/image/three.png" alt="" />
-        </a>
+        <div class="logo clearfix">
+          <img src="../assets/image/iii.png" alt="" />
+        </div>
       </div>
-      <h1 class="Company-name">KVCache.ai</h1>
-      <div class="motto">智能核心，引领潮流</div>
+      <h1 class="Company-name">Approaching.ai</h1>
+      <div class="Company">趋境科技</div>
+      <div class="motto">加速来到你的AI世界</div>
       <hr />
     </div>
     <!-- <ul class="nav">
@@ -35,6 +36,15 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.clearfix {
+  &:after {
+    clear: both;
+    content: "\20";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+}
 .footer {
   position: fixed;
   bottom: 5%;
@@ -46,18 +56,26 @@
 }
 .home-content {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   width: 100%;
   height: 300px;
   text-align: center;
+  .Company {
+    font-size: 26px;
+    font-weight: bold;
+    font-style: normal;
+    color: #686868;
+  }
   .logo-box {
-    a {
+    div {
       text-decoration: none;
+
       img {
         display: inline-block;
-        // width: 100px;
-        // height: 100px;
+        margin-left: 20px;
+        width: 180px;
+        height: 180px;
         -o-object-fit: cover;
         object-fit: cover;
         overflow: hidden;
@@ -71,19 +89,18 @@
     }
   }
   h1 {
-    // font-size: 26px;
+    font-size: 26px;
     font-weight: bold;
     font-style: normal;
-    line-height: 50px;
     height: 50px;
-    margin-bottom: 10px;
-    color: rgb(255, 255, 255);
+    color: #777;
   }
   .motto {
     // font-size: 16px;
-    font-weight: 200;
+    font-weight: 600;
     margin-bottom: 26px;
-    color: #ffffff;
+    color: #585858;
+    margin-top: 50px;
     display: inline-block;
     cursor: pointer;
   }
@@ -118,10 +135,10 @@
   }
 
   hr {
-    max-width: 400px;
+    max-width: 500px;
     text-align: center;
     margin: 0 auto;
-    height: 1px;
+    height: 2px;
     margin-top: -1px;
     border: none;
     background-image: linear-gradient(0deg, transparent, #d5d5d5, transparent);

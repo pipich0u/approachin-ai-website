@@ -4,8 +4,8 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  background: linear-gradient(to bottom right,#f0e9de 0%,#2a8c80 100%);
-  /* background: linear-gradient(to bottom left, #EEEEEE 0%, #DDE6ED 50%, #a9b9c4 75%,#9fbec0 100%); */
+  /* background: linear-gradient(to bottom right,#f0e9de 0%,#2a8c80 100%); */
+  background: linear-gradient(to bottom, #EEEEEE 0%, #DDE6ED 35%, #c2d4e0 50%,#90b3b6 100%);
 }
 
 a,
