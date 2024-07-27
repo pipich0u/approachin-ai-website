@@ -180,14 +180,14 @@ const gotogithub = () => {
     align-items: center;
     justify-content: center;
     .welcome {
-      font-size: 100px;
+      font-size: 80px;
       font-weight: 600;
       line-height: 157.34px;
       letter-spacing: 0.04em;
       text-align: center;
       color: #000;
       span {
-        font-size: 100px;
+        font-size: 80px;
         font-weight: 700;
         line-height: 157.34px;
         letter-spacing: 0.04em;
@@ -210,9 +210,9 @@ const gotogithub = () => {
       font-weight: 500;
       line-height: 31.82px;
       text-align: center;
-      width: 300px;
-      height: 80px;
-      margin-top: 150px;
+      width: 280px;
+      height: 70px;
+      margin-top: 130px;
       border-radius: 20px;
       background: #000;
       color: #ffffff;
