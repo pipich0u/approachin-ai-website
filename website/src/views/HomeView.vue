@@ -8,7 +8,7 @@
           <span class="fontf">Approaching.ai</span>
         </div>
       </div>
-      <div class="tab">
+      <!-- <div class="tab">
         <ul class="ul">
           <li class="fontf">Home</li>
           <li class="fontf" @click="gotogithub">Community</li>
@@ -28,7 +28,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="main">
       <div class="welcome fontf">加速到来你的<span>AI</span>世界</div>
