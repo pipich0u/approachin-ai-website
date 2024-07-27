@@ -501,7 +501,7 @@ const onshow = () => {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap:10px;
+            gap:15%;
             transition-duration: 0.5s;
           }
 
@@ -577,7 +577,7 @@ const onshow = () => {
       }
       .text {
         width: 100%;
-        padding: 5% 0;
+        padding: 0 5%;
         height: 64px;
         font-size: 18px;
         font-weight: 400;
