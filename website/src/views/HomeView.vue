@@ -212,7 +212,7 @@ const gotogithub = () => {
       text-align: center;
       width: 280px;
       height: 70px;
-      margin-top: 130px;
+      margin-top: 100px;
       border-radius: 20px;
       background: #000;
       color: #ffffff;
