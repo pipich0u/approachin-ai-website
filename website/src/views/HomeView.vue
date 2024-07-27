@@ -8,13 +8,13 @@
           <span class="fontf">Approaching.ai</span>
         </div>
       </div>
-      <div class="tab">
+      <!-- <div class="tab">
         <ul class="ul">
           <li class="fontf">Home</li>
           <li class="fontf" @click="gotogithub">Community</li>
           <li class="fontf not">About us</li>
         </ul>
-        <!-- <div class="menu">
+        <div class="menu">
           <input type="checkbox" id="checkbox2" />
           <label class="toggle toggle2" for="checkbox2" @click="onshow">
             <div id="bar4" class="bars"></div>
@@ -27,8 +27,8 @@
               <li class="fontf" @click="gotogithub">Community</li>
             </ul>
           </div>
-        </div> -->
-      </div>
+        </div>
+      </div> -->
     </div>
     <div class="main">
       <div class="welcome fontf">加速到来你的<span>AI</span>世界</div>
