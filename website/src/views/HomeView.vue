@@ -501,7 +501,7 @@ const onshow = () => {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap:10px;
             transition-duration: 0.5s;
           }
 
