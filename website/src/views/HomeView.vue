@@ -1,31 +1,60 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <div>
-    <div class="home-content">
-      <div class="logo-box">
-        <div class="logo clearfix">
-          <img src="../assets/image/iii.png" alt="" />
+  <div class="container">
+    <div class="top_nav">
+      <div class="logo">
+        <img src="/images/iii.png" alt="" />
+        <div class="left">
+          <span class="fontf company">趋境科技</span>
+          <span class="fontf">Approaching.ai</span>
         </div>
       </div>
-      <h1 class="Company-name">Approaching.ai</h1>
-      <div class="Company">趋境科技</div>
-      <div class="motto">加速来到你的AI世界</div>
-      <hr />
+      <div class="tab">
+        <ul>
+          <li class="fontf">Home</li>
+          <li class="fontf" @click="gotogithub">Community</li>
+          <li class="fontf not">About us</li>
+        </ul>
+      </div>
     </div>
-    <!-- <ul class="nav">
-      <li class="item">
-        <a href="">123</a>
-      </li>
-      <li class="item">
-        <a href="">123</a>
-      </li>
-      <li class="item">
-        <a href="">123</a>
-      </li>
-    </ul> -->
-    <div class="footer">
+    <div class="main">
+      <div class="welcome fontf">加速到来你的<span>AI</span>世界</div>
+      <div class="text fontf">
+        More Efficiency, More Affordable, More Accessible : Accelerate the
+        Arrival of Your AI World
+      </div>
+      <!-- <button>Comming Soon</button> -->
+      <button>
+        <span class="span-mother">
+          <span>C</span>
+          <span>o</span>
+          <span>m</span>
+          <span>m</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
+          <span>&nbsp;</span>
+          <span>S</span>
+          <span>o</span>
+          <span>o</span>
+          <span>n</span>
+        </span>
+        <span class="span-mother2">
+          <span>C</span>
+          <span>o</span>
+          <span>m</span>
+          <span>m</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
+          <span>&nbsp;</span>
+          <span>S</span>
+          <span>o</span>
+          <span>o</span>
+          <span>n</span>
+        </span>
+      </button>
+    </div>
+    <div class="footer fontf">
       <a href="https://beian.miit.gov.cn/" targe="_blank">
         京公网安备11010802044671号
       </a>
@@ -35,151 +64,295 @@
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
-.clearfix {
-  &:after {
-    clear: both;
-    content: "\20";
-    display: block;
-    height: 0;
-    visibility: hidden;
-  }
+
+<script setup lang="ts">
+const gotogithub = () => {
+  window.open("https://github.com/kvcache-ai", "_blank");
+};
+</script>
+
+<style scoped lang="scss">
+.fontf {
+  font-family: MiSans;
+  user-select: none;
 }
-.footer {
-  position: fixed;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  > a {
-    color: #ffffff;
-  }
-}
-.home-content {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
+.container {
   width: 100%;
-  height: 300px;
-  text-align: center;
-  .Company {
-    font-size: 26px;
-    font-weight: bold;
-    font-style: normal;
-    color: #686868;
-  }
-  .logo-box {
-    div {
-      text-decoration: none;
-
+  height: 100%;
+  background: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  .top_nav {
+    position: fixed;
+    width: 100%;
+    height: 58px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-top: 60px;
+      margin-left: 103px;
       img {
-        display: inline-block;
-        margin-left: 20px;
-        width: 180px;
-        height: 180px;
-        -o-object-fit: cover;
-        object-fit: cover;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-        //  background: url(../assets/image/three.png) no-repeat 0 0 / 100px 100px;
+        width: 65px;
+        height: 65px;
       }
-      img:hover {
-        transform: scale(1.1);
-        // background: url(../assets/image/black.png) no-repeat 0 0 / 100px 100px;
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .company {
+          position: relative;
+          overflow: hidden;
+          display: block;
+          cursor: pointer;
+        }
+        .company::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background-color: #000;
+          transform: translateX(-100%);
+          transition: transform 0.3s;
+        }
+
+        .company:hover::after {
+          transform: translateX(0);
+        }
+        span {
+          text-align: left;
+          color: #000;
+        }
+        span:nth-child(1) {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 31.82px;
+        }
+        span:nth-child(2) {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 21.22px;
+        }
+      }
+    }
+    .tab {
+      width: 422px;
+      height: 27px;
+      margin-right: 120px;
+      margin-top: 80px;
+      ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        li {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 26.52px;
+          text-align: center;
+          cursor: pointer;
+          transition: all 0.25s ease-out;
+        }
+        li:nth-child(1):hover {
+          transform: translateY(-3px);
+          color: #5417fe;
+        }
+        li:nth-child(2):hover {
+          transform: translateY(-3px);
+          color: #5417fe;
+        }
+        .not {
+          cursor: no-drop;
+        }
       }
     }
   }
-  h1 {
-    font-size: 26px;
-    font-weight: bold;
-    font-style: normal;
-    height: 50px;
-    color: #777;
-  }
-  .motto {
-    // font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 26px;
-    color: #585858;
-    margin-top: 50px;
-    display: inline-block;
-    cursor: pointer;
-  }
-  .motto::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 95%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
-    width: 0;
-    height: 1px;
-    background: black;
-    transition: width 0.3s ease;
-  }
-
-  .motto:hover::after {
-    width: 140px;
-  }
-
-  @keyframes underline-animation {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-
-  .motto.underline-animation::after {
-    animation: underline-animation 0.3s ease forwards;
-  }
-
-  hr {
-    max-width: 500px;
-    text-align: center;
-    margin: 0 auto;
-    height: 2px;
-    margin-top: -1px;
-    border: none;
-    background-image: linear-gradient(0deg, transparent, #d5d5d5, transparent);
-    background-image: -webkit-linear-gradient(
-      0deg,
-      transparent,
-      #fff,
-      transparent
-    );
-  }
-}
-
-.nav {
-  position: fixed;
-  right: 100px;
-  top: 30px;
-  max-width: 400px;
-  margin: 0 auto;
-  line-height: 40px;
-  padding: 0 10px;
-  .item {
-    display: inline-block;
-    font-size: 18px;
-    a {
-      font-size: 16px;
-      display: inline-block;
+  .main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .welcome {
+      font-size: 100px;
+      font-weight: 600;
+      line-height: 157.34px;
+      letter-spacing: 0.04em;
       text-align: center;
-      text-decoration: none;
-      color: black;
-      transition-duration: 0.5s;
-      margin: 0 5px;
+      color: #000;
+      span {
+        font-size: 100px;
+        font-weight: 700;
+        line-height: 157.34px;
+        letter-spacing: 0.04em;
+        text-align: center;
+        color: #5417fe;
+      }
     }
-    a:hover {
-      color: #7c9399;
+    .text {
+      margin-top: 10px;
+      width: 760px;
+      height: 64px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 31.82px;
+      text-align: center;
+      color: #000;
+    }
+    button {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 31.82px;
+      text-align: center;
+      width: 300px;
+      height: 80px;
+      margin-top: 150px;
+      border-radius: 20px;
+      background: #000;
+      color: #ffffff;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button .span-mother {
+      display: flex;
+      overflow: hidden;
+    }
+
+    button:hover .span-mother {
+      position: absolute;
+    }
+
+    button:hover .span-mother span {
+      transform: translateY(1.2em);
+    }
+
+    button .span-mother span:nth-child(1) {
+      transition: 0.1s;
+    }
+
+    button .span-mother span:nth-child(2) {
+      transition: 0.2s;
+    }
+
+    button .span-mother span:nth-child(3) {
+      transition: 0.3s;
+    }
+
+    button .span-mother span:nth-child(4) {
+      transition: 0.4s;
+    }
+
+    button .span-mother span:nth-child(5) {
+      transition: 0.5s;
+    }
+
+    button .span-mother span:nth-child(6) {
+      transition: 0.6s;
+    }
+    button .span-mother span:nth-child(7) {
+      transition: 0.7s;
+    }
+
+    button .span-mother span:nth-child(8) {
+      transition: 0.8s;
+    }
+
+    button .span-mother span:nth-child(9) {
+      transition: 0.9s;
+    }
+
+    button .span-mother span:nth-child(10) {
+      transition: 1s;
+    }
+
+    button .span-mother span:nth-child(11) {
+      transition: 1.1s;
+    }
+
+    button .span-mother span:nth-child(12) {
+      transition: 1.2s;
+    }
+
+    button .span-mother2 {
+      display: flex;
+      position: absolute;
+      overflow: hidden;
+    }
+
+    button .span-mother2 span {
+      transform: translateY(-1.2em);
+    }
+
+    button:hover .span-mother2 span {
+      transform: translateY(0);
+    }
+
+    button .span-mother2 span {
+      transition: 0.1s;
+    }
+
+    button .span-mother2 span:nth-child(2) {
+      transition: 0.2s;
+    }
+
+    button .span-mother2 span:nth-child(3) {
+      transition: 0.3s;
+    }
+
+    button .span-mother2 span:nth-child(4) {
+      transition: 0.4s;
+    }
+
+    button .span-mother2 span:nth-child(5) {
+      transition: 0.5s;
+    }
+
+    button .span-mother2 span:nth-child(6) {
+      transition: 0.6s;
+    }
+    button .span-mother2 span:nth-child(7) {
+      transition: 0.7s;
+    }
+
+    button .span-mother2 span:nth-child(8) {
+      transition: 0.8s;
+    }
+
+    button .span-mother2 span:nth-child(9) {
+      transition: 0.9s;
+    }
+
+    button .span-mother2 span:nth-child(10) {
+      transition: 1s;
+    }
+
+    button .span-mother2 span:nth-child(11) {
+      transition: 1.1s;
+    }
+
+    button .span-mother2 span:nth-child(12) {
+      transition: 1.2s;
     }
   }
-  .item:last-child span {
-    display: none;
-  }
-  .item span {
-    color: #bbb;
+  .footer {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    > a {
+      color: #ffffff;
+      font-size: 14px;
+    }
   }
 }
 </style>
