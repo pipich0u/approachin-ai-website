@@ -501,13 +501,13 @@ const onshow = () => {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap:10px;
             transition-duration: 0.5s;
           }
 
           .bars {
             width: 100%;
-            height: 6px;
+            height: 3px;
             background-color: #5417fe;
             border-radius: 6px;
           }
@@ -577,6 +577,7 @@ const onshow = () => {
       }
       .text {
         width: 100%;
+        padding: 5% 0;
         height: 64px;
         font-size: 18px;
         font-weight: 400;
