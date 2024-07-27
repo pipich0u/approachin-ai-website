@@ -197,6 +197,7 @@ const gotogithub = () => {
     }
     .text {
       margin-top: 10px;
+      margin-bottom: 20px;
       width: 760px;
       height: 64px;
       font-size: 20px;
