@@ -2,11 +2,11 @@
   <div class="container">
     <div class="top_nav">
       <div class="logo">
-        <img src="/images/iii.png" alt="" />
-        <div class="left">
+        <img src="/images/GroupBlack.png" alt="" />
+        <!-- <div class="left">
           <span class="fontf company">趋境科技</span>
           <span class="fontf">Approaching.ai</span>
-        </div>
+        </div> -->
       </div>
       <!-- <div class="tab">
         <ul class="ul">
@@ -116,8 +116,8 @@ const onshow = () => {
         margin-top: 60px;
         margin-left: 103px;
         img {
-          width: 65px;
-          height: 65px;
+          width: 200px;
+          height: 56px;
         }
         .left {
           display: flex;
