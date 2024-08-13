@@ -1,13 +1,129 @@
-@import './base.css';
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+textarea,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit, Arial, Microsoft YaHei, SimHei, Tahoma, sans-serif !important;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  -webkit-text-size-adjust: 100% !important;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+span,
+img {
+  user-select: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
 
 #app {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   text-align: center;
   /* background: linear-gradient(to bottom right,#f0e9de 0%,#2a8c80 100%); */
   /* background: linear-gradient(to bottom, #EEEEEE 0%, #DDE6ED 35%, #c2d4e0 50%,#90b3b6 100%); */
-  background: url(/public/images/Rectangle.png) no-repeat 0 0 /100% 100%;
+  background: url(/public/images/Rectangle.png) 50% 50% /100% 100%;
   background-color: #F7F7F8;
+
 }
 
 a,
@@ -16,4 +132,29 @@ a,
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
   padding: 3px;
+}
+
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 25px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 25px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  &::-webkit-resizer {
+    display: none;
+  }
+
 }

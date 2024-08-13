@@ -1,0 +1,107 @@
+{
+  "id": "4626763",
+  "name": "approachingAI",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11067340",
+      "name": "中英文切换1",
+      "font_class": "en",
+      "unicode": "ef62",
+      "unicode_decimal": 61282
+    },
+    {
+      "icon_id": "11067341",
+      "name": "中英文切换2",
+      "font_class": "cn",
+      "unicode": "ef63",
+      "unicode_decimal": 61283
+    },
+    {
+      "icon_id": "577357",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e74b",
+      "unicode_decimal": 59211
+    },
+    {
+      "icon_id": "1727549",
+      "name": "313指向右",
+      "font_class": "zhixiangyou",
+      "unicode": "e8f4",
+      "unicode_decimal": 59636
+    },
+    {
+      "icon_id": "41296812",
+      "name": "发送",
+      "font_class": "send",
+      "unicode": "ee3d",
+      "unicode_decimal": 60989
+    },
+    {
+      "icon_id": "9512584",
+      "name": "喜欢",
+      "font_class": "like",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "6582365",
+      "name": "减",
+      "font_class": "jian",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "577382",
+      "name": "喜欢",
+      "font_class": "xihuan",
+      "unicode": "e761",
+      "unicode_decimal": 59233
+    },
+    {
+      "icon_id": "2815741",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "4880421",
+      "name": "下载",
+      "font_class": "xiazai",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "5387527",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "eaf3",
+      "unicode_decimal": 60147
+    },
+    {
+      "icon_id": "11195054",
+      "name": "时钟",
+      "font_class": "shizhong",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "12911875",
+      "name": "下 拉",
+      "font_class": "xiala1",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "14456895",
+      "name": "下 拉",
+      "font_class": "shang",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}
