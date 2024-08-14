@@ -17,11 +17,9 @@
             </li>
           </ul>
           <div class="toggle-box">
-            <label class="toggle" for="checkbox" @click="showmod">
-              <div id="bar1" class="bars"></div>
-              <div id="bar2" class="bars"></div>
-              <div id="bar3" class="bars"></div>
-            </label>
+            <div class="toggle" @click="showmod">
+              <i class="icon iconfont icon-gengduo"></i>
+            </div>
             <ul v-if="mod">
               <li
                 v-for="item in childrenRouter"
@@ -30,6 +28,11 @@
                 @click="navgit(item.path)"
               >
                 {{ item.name }}
+              </li>
+              <li @click="changeLanguage">
+                切换语言
+                <i class="icon iconfont icon-zhongyingwenqiehuan-zhongwen" v-if="!flag"></i>
+                <i class="icon iconfont icon-zhongyingwenqiehuan-yingwen" v-if="flag"></i>
               </li>
             </ul>
           </div>
@@ -77,11 +80,11 @@ const scrollbarRef = ref()
 const navgit = (path: string) => {
   router.push(path)
 }
-const showmod = (e) => {
+const showmod = (e: any) => {
   mod.value = !mod.value
   if (mod.value) {
     document.addEventListener('click', function (e) {
-      if (e.srcElement.className != 'bars') {
+      if (e.srcElement.className != 'icon iconfont icon-gengduo') {
         mod.value = false
       }
     })
@@ -223,27 +226,20 @@ onMounted(() => {})
             position: relative;
             width: 2rem;
             .toggle {
-              position: relative;
+              cursor: pointer;
               width: 1.875rem;
               height: 1.875rem;
-              cursor: pointer;
               display: flex;
-              flex-direction: column;
-              align-items: center;
               justify-content: center;
-              gap: 0.5rem;
-            }
-
-            .bars {
-              width: 100%;
-              height: 0.1875rem;
-              background-color: black;
-              border-radius: 0.3125rem;
+              align-items: center;
+              .icon {
+                font-size: 26px;
+              }
             }
             ul {
               border-radius: 0.3125rem;
               transition: 1s ease-in-out;
-              left: 0;
+              left: -120%;
               top: 120%;
               position: absolute;
               display: flex;
@@ -292,20 +288,7 @@ onMounted(() => {})
             }
           }
           .language {
-            margin-left: 20px;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            .icon {
-              font-size: 1.125rem;
-              color: #333;
-              font-weight: 500;
-              cursor: pointer;
-              &:active {
-                scale: 0.9;
-              }
-            }
+            display: none;
           }
         }
       }

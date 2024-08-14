@@ -203,9 +203,9 @@
 
 <script setup lang="ts">
 import { useRoute, useRouter, RouterView } from 'vue-router'
-import { ref, onMounted, reactive, watch } from 'vue'
+import { ref, onMounted, reactive, watch, h } from 'vue'
 import { Plus } from '@element-plus/icons-vue'
-import { ElMessageBox, ElMessage } from 'element-plus'
+import { ElMessageBox, ElMessage, ElNotification } from 'element-plus'
 import type { FormInstance, UploadProps, Action } from 'element-plus'
 import { fa } from 'element-plus/es/locale'
 import { getAllInfo, getAllKVSummary, getKVdetail } from '../../api/kVcacheInfo'
@@ -260,9 +260,11 @@ const _isMobile = () => {
 }
 const openDialog = () => {
   if (_isMobile()) {
-    ElMessageBox.alert(`${t('alert')}`, {
-      confirmButtonText: 'OK',
-      center: true
+    ElNotification({
+      title: '',
+      dangerouslyUseHTMLString: true,
+      message: `${t('alert')}`,
+      position: 'top-right'
     })
   } else {
     dialogVisible.value = true
@@ -466,9 +468,11 @@ const IwantThis = () => {
 }
 const navigatorToDetail = (item: any) => {
   if (_isMobile()) {
-    ElMessageBox.alert(`${t('alert')}`, {
-      confirmButtonText: 'OK',
-      center: true
+    ElNotification({
+      title: '',
+      dangerouslyUseHTMLString: true,
+      message: `${t('alert')}`,
+      position: 'top-right'
     })
   } else {
     router.push({ path: '/index/detail', query: { id: item } })
@@ -1072,7 +1076,7 @@ onMounted(() => {
             font-size: 14px;
             font-weight: 400;
             line-height: 21px;
-            text-align: left;
+            text-align: center;
           }
           .upload {
             display: flex;
