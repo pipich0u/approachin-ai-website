@@ -56,9 +56,7 @@ const _isMobile = () => {
   return flag
 }
 //
-onMounted(() => {
-
-})
+onMounted(() => {})
 </script>
 
 <style scoped lang="scss">
@@ -248,9 +246,9 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     .main {
       margin-top: 6rem;
-      // width: 100%;
       padding: 0 5%;
       height: 100%;
       display: flex;
