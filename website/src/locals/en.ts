@@ -1,5 +1,6 @@
 
 export default {
+    alert:'For more features, please use PC to access them',
     home: {
         welcome: {
             title: 'Accelerate into your ',

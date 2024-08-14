@@ -11,16 +11,32 @@
 </script>
 
 <style scoped lang="scss">
-.footer {
-  margin-top: 1.25rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  > a {
-    color: #000;
-    font-size: 14px;
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .footer {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    > a {
+      color: #000;
+      font-size: 10px;
+    }
+  }
+}
+@media only screen and (min-width: 767px) {
+  .footer {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    > a {
+      color: #000;
+      font-size: 14px;
+    }
   }
 }
 </style>

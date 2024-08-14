@@ -1,5 +1,6 @@
 
 export default {
+    alert: ' 更多功能请使用pc端访问',
     home: {
         welcome: {
             title: '加速到来你的',
