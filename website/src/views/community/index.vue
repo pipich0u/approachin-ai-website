@@ -10,7 +10,6 @@
             <div class="searchBox">
               <input
                 v-model="seachInp"
-                @change="Search"
                 type="text"
                 placeholder="Search for a topic..."
                 class="searchInp"
@@ -310,17 +309,17 @@ const getKvSummary = async () => {
 }
 const sendSearch = () => {
   const searchText = seachInp.value.toLowerCase()
-  console.log(searchText)
 
   KVCacheData.value = KVCacheSummery.value.filter((item) => {
-    return (
-      item.title.toLowerCase().includes(searchText) ||
-      item.summary.toLowerCase().includes(searchText) ||
-      item.llm.some((i) => i.name.toLowerCase().includes(searchText)) // 使用 some() 返回布尔值
-    )
-  })
+    // 确保 item.title 和 item.summary 存在
+    const titleMatches = item.title?.toLowerCase().includes(searchText) || false
+    const summaryMatches = item.summary?.toLowerCase().includes(searchText) || false
 
-  console.log(KVCacheData.value)
+    // 确保 item.llm 存在并且是数组
+    const llmMatches = item.llm?.some((i) => i.name.toLowerCase().includes(searchText)) || false
+
+    return titleMatches || summaryMatches || llmMatches
+  })
 }
 const fileterList = (searchText: any) => {}
 const delUrlInp = (index: number) => {
@@ -416,20 +415,25 @@ const rules = reactive({
 })
 const submitForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return
+
   formEl.validate(async (valid) => {
     if (valid) {
-      console.log(ruleForm, '123')
+      console.log(ruleForm, 'Form Data')
+
       try {
         const res = await createKVcacheApp(ruleForm)
-        console.log(res, 'nnn')
+        console.log(res, 'Response from API')
       } catch (err) {
-        console.error(err)
+        console.error('Error while creating KVCache app:', err)
       }
 
-      console.log('submit!')
+      console.log('Form submitted successfully!')
+      // 这里可以返回 void 或 Promise<void>
+      return // 或者使用 `return Promise.resolve();`
     } else {
-      console.log('error submit!')
-      return false
+      console.log('Form validation failed, submission error!')
+      // 这里不需要返回 false
+      return // 或者使用 `return Promise.resolve();`
     }
   })
 }
@@ -481,9 +485,9 @@ const navigatorToDetail = (item: any) => {
 const openSelect = () => {
   selectFlag.value = !selectFlag.value
   if (selectbox.value && selectFlag.value) {
-    selectbox.value.classList.add('border')
+    selectbox.value?.classList.add('border')
   } else {
-    selectbox.value.classList.remove('border')
+    selectbox.value?.classList.remove('border')
   }
 }
 const selectItem = (item: string) => {
@@ -522,9 +526,9 @@ const submitFrom = () => {
 watch(selectFlag, () => {
   if (selectFlag.value) {
     document.addEventListener('click', function (e) {
-      if (e.srcElement.className != 'icon iconfont icon-xiala1') {
+      if ((e.srcElement as HTMLElement)?.className != 'icon iconfont icon-xiala1') {
         selectFlag.value = false
-        selectbox.value.classList.remove('border')
+        selectbox.value?.classList.remove('border')
       }
     })
   }

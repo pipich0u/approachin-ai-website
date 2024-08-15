@@ -84,7 +84,7 @@ const showmod = (e: any) => {
   mod.value = !mod.value
   if (mod.value) {
     document.addEventListener('click', function (e) {
-      if (e.srcElement.className != 'icon iconfont icon-gengduo') {
+      if ((e.srcElement as HTMLElement)?.className !== 'icon iconfont icon-gengduo') {
         mod.value = false
       }
     })

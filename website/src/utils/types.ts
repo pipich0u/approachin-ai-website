@@ -8,11 +8,11 @@ export interface KVcachedetail {
     description: string;
     picture: string;
     latest_updated_time: number;
-    pull_count?: number;
-    star_count?: number;
+    pull_count?: number | undefined;
+    star_count?: number | undefined;
     summary: string
     title: string
-    kvcache: kvcache
+    kvcache: kvcache[]
 }
 export interface kvcache {
     kvcache_app_id: number

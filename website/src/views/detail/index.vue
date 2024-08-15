@@ -10,15 +10,15 @@
         <div class="iconbox">
           <div class="box download">
             <i class="icon iconfont icon-xiazai"></i>
-            <span>{{ detailData.pull_count }} Puls</span>
+            <span>{{ detailData?.pull_count }} Puls</span>
           </div>
           <div class="box start">
             <i class="icon iconfont icon-xihuan"></i>
-            <span>{{ detailData.star_count }} Stars</span>
+            <span>{{ detailData?.star_count }} Stars</span>
           </div>
           <div class="box upload">
             <i class="icon iconfont icon-shizhong"></i>
-            <span>{{ timeAgo(detailData.latest_updated_time) }}</span>
+            <span>{{ timeAgo(detailData?.latest_updated_time) }}</span>
           </div>
         </div>
       </div>
@@ -67,14 +67,33 @@
 <script setup lang="ts">
 import { onMounted, ref, reactive } from 'vue'
 import { useRoute } from 'vue-router'
-import type { KVcachedetail } from '../../utils/types'
+// import type { KVcachedetail } from '../../utils/types'
 import { getKVdetail } from '../../api/kVcacheInfo'
 import footerVue from '../../components/footer/index.vue'
 import { useI18n } from 'vue-i18n'
 //state
+interface KVCacheDetail {
+  id: number
+  description: string
+  picture: string
+  latest_updated_time: number
+  pull_count?: number | undefined
+  star_count?: number | undefined
+  summary: string
+  title: string
+  kvcache: any[]
+}
 const { t } = useI18n()
 const route = useRoute()
-const detailData = ref<KVcachedetail[]>([])
+const detailData = ref<KVCacheDetail>({
+  id: 0,
+  description: '',
+  picture: '',
+  latest_updated_time: 0,
+  summary: '',
+  title: '',
+  kvcache: []
+})
 //func
 const getdetail = async (id: string) => {
   try {

@@ -41,10 +41,9 @@ export default defineConfig({
           // vue vue-router合并打包
           vue: ['vue', 'vue-router'],
           lodash: ['lodash'],
-          // 两个文件合并成一个a文件
-          helloWorld: ['src/components/a.vue', 'src/components/b.vue'],
         }
-      }
+      },
+      external: ['element-plus/es/locale']
     }
   },
 })
