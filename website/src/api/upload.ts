@@ -1,12 +1,12 @@
 import { instance } from './axios'
 import type { CreateKVApp, createKVSuc } from '../utils/types';
 export async function createKVcacheApp(data: any): Promise<createKVSuc[]> {
+    console.log(data, 'nininii');
     const response: createKVSuc[] = await instance({
         url: '/create_kvcache_app',
         method: "POST",
         data: data
     })
-    console.log(response, 'nininii');
 
     return response;
 }

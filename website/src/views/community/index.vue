@@ -31,7 +31,9 @@
                   :key="index"
                   @click="selectItem(item.name)"
                 >
-                  {{ item.name }}
+                  <el-tooltip class="box-item" effect="dark" :content="item.name" placement="right">
+                    {{ item.name }}
+                  </el-tooltip>
                 </div>
               </div>
             </div>
@@ -422,18 +424,19 @@ const submitForm = (formEl: FormInstance | undefined) => {
 
       try {
         const res = await createKVcacheApp(ruleForm)
-        console.log(res, 'Response from API')
+        ElMessage({
+          message: '上传成功，请等待审核通过！',
+          type: 'success',
+          plain: true
+        })
       } catch (err) {
         console.error('Error while creating KVCache app:', err)
       }
+      dialogVisible.value = false
 
-      console.log('Form submitted successfully!')
-      // 这里可以返回 void 或 Promise<void>
-      return // 或者使用 `return Promise.resolve();`
+      return
     } else {
-      console.log('Form validation failed, submission error!')
-      // 这里不需要返回 false
-      return // 或者使用 `return Promise.resolve();`
+      return
     }
   })
 }

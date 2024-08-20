@@ -11,11 +11,11 @@ export const childrenRouter = [
     name: 'community',
     component: () => import('../views/community/index.vue')
   },
-  {
-    path: '/index/about',
-    name: 'about',
-    component: () => import('../views/about/index.vue')
-  },
+  // {
+  //   path: '/index/about',
+  //   name: 'about',
+  //   component: () => import('../views/about/index.vue')
+  // },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
