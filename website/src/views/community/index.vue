@@ -31,7 +31,7 @@
                   :key="index"
                   @click="selectItem(item.name)"
                 >
-                  <el-tooltip class="box-item" effect="dark" :content="item.name" placement="right">
+                  <el-tooltip class="box-item" effect="dark" :content="item.name" placement="left">
                     {{ item.name }}
                   </el-tooltip>
                 </div>
@@ -690,7 +690,6 @@ onMounted(() => {
                   cursor: pointer;
                   &:hover {
                     color: rgba(84, 23, 254, 1);
-                    white-space: pre-wrap;
                   }
                 }
               }
