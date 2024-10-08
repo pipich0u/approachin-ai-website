@@ -6,16 +6,16 @@ export const childrenRouter = [
     name: 'home',
     component: () => import('../views/home/index.vue')
   },
-  {
-    path: '/index/community',
-    name: 'community',
-    component: () => import('../views/community/index.vue')
-  },
-  {
-    path: '/index/about',
-    name: '联系我们',
-    component: () => import('../views/about/index.vue')
-  },
+  // {
+  //   path: '/index/community',
+  //   name: 'community',
+  //   component: () => import('../views/community/index.vue')
+  // },
+  // {
+  //   path: '/index/about',
+  //   name: '联系我们',
+  //   component: () => import('../views/about/index.vue')
+  // },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

@@ -16,7 +16,7 @@
               {{ item.name }}
             </li>
           </ul>
-          <div class="toggle-box">
+          <!-- <div class="toggle-box">
             <div class="toggle" @click="showmod">
               <i class="icon iconfont icon-gengduo"></i>
             </div>
@@ -35,7 +35,7 @@
                 <i class="icon iconfont icon-zhongyingwenqiehuan-yingwen" v-if="flag"></i>
               </li>
             </ul>
-          </div>
+          </div> -->
           <div class="language" style="margin-left: 10px">
             <i class="icon iconfont icon-en" v-if="!flag" @click="changeLanguage"></i>
             <i class="icon iconfont icon-cn" v-if="flag" @click="changeLanguage"></i>
@@ -213,8 +213,8 @@ onMounted(() => {})
           display: flex;
           align-items: center;
           img {
-            width: 85px;
-            height: 25px;
+            width: 155px;
+            height: 45px;
           }
         }
 
