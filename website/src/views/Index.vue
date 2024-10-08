@@ -36,7 +36,7 @@
               </li>
             </ul>
           </div>
-          <div class="language">
+          <div class="language" style="margin-left: 10px">
             <i class="icon iconfont icon-en" v-if="!flag" @click="changeLanguage"></i>
             <i class="icon iconfont icon-cn" v-if="flag" @click="changeLanguage"></i>
           </div>
