@@ -5,9 +5,11 @@
         {{ $t('home.welcome.title') }}<span>AI</span>{{ $t('home.welcome.word') }}
       </div>
       <div class="text fontf">
-        {{ $t('home.text') }}
+        <!-- {{ $t('home.text') }} -->
+        Grow smarter, grow faster as we need Solutions at the right place, we are empowering all your digital twin needs
       </div>
-      <button class="pc" @click="navigatorToCommunity">
+       <!-- @click="navigatorToCommunity" -->
+      <button class="pc">
         <span class="span-mother">
           <span>G</span>
           <span>e</span>
@@ -36,6 +38,7 @@
         </span>
       </button>
     </div>
+    <FooterVue />
   </div>
 </template>
 
@@ -43,6 +46,7 @@
 import { useRouter } from 'vue-router'
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import FooterVue from '../../components/footer/index.vue'
 const { t } = useI18n()
 const router = useRouter()
 
@@ -63,11 +67,11 @@ onMounted(() => {})
 @media only screen and (min-width: 767px) {
   .start {
     width: 100%;
-    height: 100%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: space-between;
     .main {
       margin-top: 14.6875rem;
       width: 100%;
@@ -242,11 +246,11 @@ onMounted(() => {})
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .start {
     width: 100%;
-    height: 100%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     .main {
       margin-top: 6rem;
       padding: 0 5%;
