@@ -79,7 +79,7 @@ onMounted(() => {})
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      // justify-content: center;
       .welcome {
         font-size: 80px;
         font-weight: 600;
