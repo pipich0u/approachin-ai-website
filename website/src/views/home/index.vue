@@ -239,7 +239,7 @@ onMounted(() => {})
     }
   }
 }
-@media only screen and (min-width: 375px) and (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .start {
     width: 100%;
     height: 100%;

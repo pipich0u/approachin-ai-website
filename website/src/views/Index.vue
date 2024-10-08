@@ -185,7 +185,7 @@ onMounted(() => {})
     }
   }
 }
-@media only screen and (min-width: 375px) and (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .home_content {
     width: 100%;
     height: 100%;
@@ -208,7 +208,7 @@ onMounted(() => {})
         background-color: #eef0fe;
         padding: 0% 5%;
         .logo {
-          width: 14.6875rem;
+          width: 5.3125rem;
           height: 1.875rem;
           display: flex;
           align-items: center;
