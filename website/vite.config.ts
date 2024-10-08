@@ -1,31 +1,49 @@
 import { fileURLToPath, URL } from 'node:url'
-
+import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import basicSsl from '@vitejs/plugin-basic-ssl'
+import viteCompression from 'vite-plugin-compression'
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(),basicSsl()],
+  plugins: [
+    vue(),
+    viteCompression({
+      verbose: true,
+      disable: false,
+      deleteOriginFile: false,
+      threshold: 5120,
+      algorithm: 'gzip',
+      ext: '.gz'
+    })
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
   server: {
-    // 启用 HTTPS
-    host: '0.0.0.0',
-    port: 8991,
-    https: true,
-    // 如果你有自定义的证书和密钥文件，可以这样指定它们的路径
-    // https: {
-    //   key: '/root/license/cer/Nginx/approaching-ai.com.key',
-    //   cert: '/root/license/cer/Nginx/approaching-ai.com.crt'
-    // },
+    open: false, // 编译后默认打开浏览器
+    host: '0.0.0.0',  // 域名
+    port: 8080,  // 端口
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:8993',
+        target: 'http://localhost:11123', // 你的后端服务器地址
         changeOrigin: true, // 是否允许跨域
       }
     }
   },
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+
+  build: {
+    chunkSizeWarningLimit: 1500,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // vue vue-router合并打包
+          vue: ['vue', 'vue-router'],
+          lodash: ['lodash'],
+        }
+      },
+      external: ['element-plus/es/locale']
     }
-  }
+  },
 })

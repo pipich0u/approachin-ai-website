@@ -14,10 +14,8 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "types": [
-      "node"
+      "node",
+      "element-plus"
     ]
-  },
-  "exclude": [
-    "node_modules"
-  ]
+  }
 }
