@@ -388,7 +388,7 @@
   border-top: 3px solid;
   -webkit-transform: rotate(135deg); /* 箭头方向可以自由切换角度 */
   transform: rotate(135deg);
-  cursor: pointer;
+  
   color: #333;
 }
 
