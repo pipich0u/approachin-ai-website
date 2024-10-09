@@ -43,11 +43,9 @@
         </div>
       </div>
     </div>
-    <el-scrollbar ref="scrollbarRef">
-      <div class="home_content__main">
-        <RouterView />
-      </div>
-    </el-scrollbar>
+    <div class="home_content__main ">
+      <RouterView />
+    </div>
   </div>
 </template>
 
@@ -109,7 +107,7 @@ onMounted(() => {})
       flex-direction: column;
       background: #eef0fe;
       height: 5.9281rem !important;
-      // position: fixed;
+      position: fixed;
       justify-content: center;
 
       .home_content__header-logo {
@@ -197,7 +195,7 @@ onMounted(() => {})
       flex-direction: column;
       background: #eef0fe;
       height: 4rem !important;
-      // position: fixed;
+      position: fixed;
       justify-content: center;
 
       .home_content__header-logo {

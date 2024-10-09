@@ -1,5 +1,6 @@
 <template>
   <div class="start">
+    <!-- <el-scrollbar ref="scrollbarRef" style="width: 100%; height: 100%" @scroll="scroll"> -->
     <div class="main">
       <div class="welcome fontf">
         {{ $t('home.welcome.title') }}<span>AI</span>{{ $t('home.welcome.word') }}
@@ -39,11 +40,11 @@
           <span>n</span>
         </span>
       </button>
-      <div class="arrowTransform">
+      <div class="arrowTransform" @click="onScroll">
         <a class="arrowTransform_style"></a>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="footer" ref="footer">
       <div class="footer-container">
         <div class="footer-section">
           <h3>关于我们</h3>
@@ -77,6 +78,7 @@
         <p>&copy; 2024 趋境科技. 保留所有权利.</p>
       </div>
     </footer>
+    <!-- </el-scrollbar> -->
   </div>
 </template>
 
@@ -85,8 +87,23 @@ import { useRouter } from 'vue-router'
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterVue from '../../components/footer/index.vue'
+import { ElScrollbar } from 'element-plus'
 const { t } = useI18n()
 const router = useRouter()
+const value = ref(0)
+
+const scrollbarRef = ref<InstanceType<typeof ElScrollbar>>()
+const footer = ref()
+
+const scroll = ({ scrollTop }) => {
+  value.value = scrollTop
+}
+const onScroll = () => {
+  // scrollbarRef.value!.setScrollTop(323)
+  footer.value.scrollIntoView({
+    behavior: 'smooth'
+  })
+}
 
 const navigatorToCommunity = () => {
   router.push('/index/community')
@@ -105,19 +122,20 @@ onMounted(() => {})
 @media only screen and (min-width: 767px) {
   .start {
     width: 100%;
-    height: 90vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
     .main {
-      margin-top: 14.6875rem;
+      margin-top: 15.245rem;
       width: 100%;
-      height: 100%;
+      height: calc(100vh - 15.245rem);
       display: flex;
       flex-direction: column;
       align-items: center;
-      // justify-content: center;
+      justify-content: center;
       .welcome {
         font-size: 80px;
         font-weight: 600;
@@ -285,15 +303,15 @@ onMounted(() => {})
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .start {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     .main {
-      margin-top: 6rem;
-      padding: 25% 5%;
-      height: 100;
+      margin-top: 7rem;
+      padding: 0 5%;
+      height: calc(100vh - 4rem - 48px);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -336,7 +354,7 @@ onMounted(() => {})
         text-align: center;
         width: 11.25rem;
         height: 3.125rem;
-        margin-top: 4rem;
+        margin-top: 2rem;
         border-radius: 20px;
         background: linear-gradient(to right, rgba(54, 98, 255, 1), rgba(132, 63, 243, 1));
         color: #ffffff;
@@ -468,9 +486,10 @@ onMounted(() => {})
 .arrowTransform {
   animation: bounce-inSS 2s infinite; /* 启动动画特效 */
   width: 90px;
-  height: 150px;
+  height: 125px;
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 120px;
+  // padding: 10% 0;
 }
 /* 箭头效果的盒子 */
 .arrowTransform_style {
@@ -482,7 +501,7 @@ onMounted(() => {})
   border-top: 3px solid;
   -webkit-transform: rotate(135deg); /* 箭头方向可以自由切换角度 */
   transform: rotate(135deg);
-
+  cursor: pointer;
   color: #333;
 }
 
@@ -503,11 +522,13 @@ onMounted(() => {})
 .footer {
   width: calc(100% - 40px);
   // box-shadow: #00000026 0px 15px 0px;
-  background: linear-gradient(to bottom, #eef0fe 25%, rgb(159, 180, 255) 100%);
+  // background: linear-gradient(to bottom, #eef0fe 25%, rgb(159, 180, 255) 100%);
   // background: linear-gradient(to bottom, rgb(218, 227, 255), rgb(228, 211, 255));
+  background: #3c3d37;
   color: #fff;
-  padding: 15px 20px;
-  //   margin: 0 -5%;
+  // height: 100%;
+  padding: 20px 20px;
+  // margin: 5% 0%;
 }
 .footer-container {
   display: flex;
@@ -534,18 +555,18 @@ onMounted(() => {})
     }
   }
   h3 {
-    border-bottom: 2px solid #333; /* 底部边框 */
+    border-bottom: 2px solid #fcfaee; /* 底部边框 */
     padding-bottom: 10px;
     margin-bottom: 10px;
     font-size: 20px;
-    color: #333; /* 标题颜色 */
+    color: #fcfaee; /* 标题颜色 */
   }
 
   p {
     margin: 5px 0;
     line-height: 1.6; /* 行高 */
     font-size: 16px;
-    color: #333; /* 字体颜色 */
+    color: #fcfaee; /* 字体颜色 */
   }
 }
 
@@ -555,17 +576,17 @@ onMounted(() => {})
 
   .social-icon {
     margin-bottom: 10px;
-    color: #333; /* 社交链接颜色 */
+    color: #fcfaee; /* 社交链接颜色 */
     text-decoration: none;
     transition: color 0.3s;
     a {
-      color: #333;
+      color: #fcfaee;
     }
     &:hover {
-      color: #7b53dd; /* 悬停时改变颜色 */
+      color: #aff6ff; /* 悬停时改变颜色 */
       text-decoration: underline; /* 添加下划线 */
       a {
-        color: #7b53dd;
+        color: #aff6ff;
       }
     }
   }
@@ -573,9 +594,19 @@ onMounted(() => {})
 
 .footer-bottom {
   text-align: center;
+  font-size: 14px;
   a {
-    color: #333;
+    color: #999;
     line-height: 25px;
+    &:hover {
+      color: #0086f6;
+    }
+  }
+  p {
+    color: #999;
+    &:hover {
+      color: #0086f6;
+    }
   }
 }
 </style>
