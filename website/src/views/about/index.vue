@@ -100,11 +100,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="contact-info"> -->
-    <!-- <h2>联系信息</h2> -->
-    <!-- <p>邮箱: contact@qujingtech.com</p> -->
-    <!-- <p>地址: 北京市海淀区清华大学科技园</p> -->
-    <!-- </div> -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-section">
@@ -125,9 +120,6 @@
           <h3>关注我们</h3>
           <div class="social-links">
             <span href="#" class="social-icon">微信公众号: <a href="#">趋境科技</a></span>
-            <!-- <a href="#" class="social-icon">Twitter</a> -->
-            <!-- <a href="#" class="social-icon">知乎</a> -->
-            <!-- <a href="#" class="social-icon">GitHub</a> -->
           </div>
           <div class="code">
             <div>扫描二维码关注我们</div>

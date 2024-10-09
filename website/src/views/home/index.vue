@@ -6,39 +6,77 @@
       </div>
       <div class="text fontf">
         <!-- {{ $t('home.text') }} -->
-        Grow smarter, grow faster as we need Solutions at the right place, we are empowering all your digital twin needs
+        Accelerate the arrival of your AI world
+        <!-- Grow smarter, grow faster as we need Solutions at the right place, we are empowering all
+        your digital twin needs -->
       </div>
-       <!-- @click="navigatorToCommunity" -->
+      <!-- @click="navigatorToCommunity" -->
       <button class="pc">
         <span class="span-mother">
-          <span>G</span>
-          <span>e</span>
-          <span>t</span>
+          <span>C</span>
+          <span>o</span>
+          <span>m</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
           <span>&nbsp;</span>
           <span>S</span>
-          <span>t</span>
-          <span>a</span>
-          <span>r</span>
-          <span>t</span>
-          <span>e</span>
-          <span>d</span>
+          <span>o</span>
+          <span>o</span>
+          <span>n</span>
         </span>
         <span class="span-mother2">
-          <span>G</span>
-          <span>e</span>
-          <span>t</span>
+          <span>C</span>
+          <span>o</span>
+          <span>m</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
           <span>&nbsp;</span>
           <span>S</span>
-          <span>t</span>
-          <span>a</span>
-          <span>r</span>
-          <span>t</span>
-          <span>e</span>
-          <span>d</span>
+          <span>o</span>
+          <span>o</span>
+          <span>n</span>
         </span>
       </button>
+      <div class="arrowTransform">
+        <a class="arrowTransform_style"></a>
+      </div>
     </div>
-    <FooterVue />
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>关于我们</h3>
+          <p>
+            趋境科技专注于大模型推理加速服务，助力大模型低成本落地。
+            我们的团队致力于为客户提供最佳的服务体验。
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>联系方式</h3>
+          <p><strong>邮箱:</strong> market@approaching.ai</p>
+          <!-- <p><strong>地址:</strong> </p> -->
+        </div>
+
+        <div class="footer-section">
+          <h3>关注我们</h3>
+          <div class="social-links">
+            <span href="#" class="social-icon">微信公众号: <a href="#">趋境科技</a></span>
+          </div>
+          <div class="code">
+            <div>扫描二维码关注我们</div>
+            <img src="../../../public/images/code.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <a href="https://beian.miit.gov.cn/" targe="_blank"> 京公网安备11010802044671号 </a>
+        <a href="https://beian.miit.gov.cn/" targe="_blank"> 京ICP备2024077296号-1 </a>
+        <p>&copy; 2024 趋境科技. 保留所有权利.</p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -126,6 +164,7 @@ onMounted(() => {})
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
       }
 
       button .span-mother {
@@ -246,14 +285,14 @@ onMounted(() => {})
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .start {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     .main {
       margin-top: 6rem;
-      padding: 0 5%;
+      padding: 25% 5%;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -425,5 +464,116 @@ onMounted(() => {})
 }
 .fontf {
   user-select: none;
+}
+.arrowTransform {
+  animation: bounce-inSS 2s infinite; /* 启动动画特效 */
+  width: 90px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 90px;
+}
+/* 箭头效果的盒子 */
+.arrowTransform_style {
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid;
+  border-top: 3px solid;
+  -webkit-transform: rotate(135deg); /* 箭头方向可以自由切换角度 */
+  transform: rotate(135deg);
+
+  color: #333;
+}
+
+@keyframes bounce-inSS {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px); /* 向上移动 */
+  }
+}
+</style>
+<style scoped lang="scss">
+.footer {
+  width: calc(100% - 40px);
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
+  //   margin: 0 -5%;
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; /* 响应式设计 */
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px; /* 最小宽度 */
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+  .code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      margin-top: 10px;
+      width: 80px;
+      height: 100%;
+    }
+  }
+  h3 {
+    border-bottom: 2px solid #4caf50; /* 底部边框 */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #4caf50; /* 标题颜色 */
+  }
+
+  p {
+    margin: 5px 0;
+    line-height: 1.6; /* 行高 */
+    font-size: 16px;
+    color: #ccc; /* 字体颜色 */
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+
+  .social-icon {
+    margin-bottom: 10px;
+    color: #4caf50; /* 社交链接颜色 */
+    text-decoration: none;
+    transition: color 0.3s;
+    a {
+      color: #4caf50;
+    }
+    &:hover {
+      color: #fff; /* 悬停时改变颜色 */
+      text-decoration: underline; /* 添加下划线 */
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  a {
+    color: #c0c0c0;
+    line-height: 25px;
+  }
 }
 </style>
