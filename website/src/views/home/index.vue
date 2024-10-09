@@ -502,7 +502,9 @@ onMounted(() => {})
 <style scoped lang="scss">
 .footer {
   width: calc(100% - 40px);
-  background-color: #333;
+  // box-shadow: #00000026 0px 15px 0px;
+  background: linear-gradient(to bottom, #eef0fe 25%, rgb(159, 180, 255) 100%);
+  // background: linear-gradient(to bottom, rgb(218, 227, 255), rgb(228, 211, 255));
   color: #fff;
   padding: 15px 20px;
   //   margin: 0 -5%;
@@ -532,18 +534,18 @@ onMounted(() => {})
     }
   }
   h3 {
-    border-bottom: 2px solid #4caf50; /* 底部边框 */
+    border-bottom: 2px solid #333; /* 底部边框 */
     padding-bottom: 10px;
     margin-bottom: 10px;
     font-size: 20px;
-    color: #4caf50; /* 标题颜色 */
+    color: #333; /* 标题颜色 */
   }
 
   p {
     margin: 5px 0;
     line-height: 1.6; /* 行高 */
     font-size: 16px;
-    color: #ccc; /* 字体颜色 */
+    color: #333; /* 字体颜色 */
   }
 }
 
@@ -553,17 +555,17 @@ onMounted(() => {})
 
   .social-icon {
     margin-bottom: 10px;
-    color: #4caf50; /* 社交链接颜色 */
+    color: #333; /* 社交链接颜色 */
     text-decoration: none;
     transition: color 0.3s;
     a {
-      color: #4caf50;
+      color: #333;
     }
     &:hover {
-      color: #fff; /* 悬停时改变颜色 */
+      color: #7b53dd; /* 悬停时改变颜色 */
       text-decoration: underline; /* 添加下划线 */
       a {
-        color: #fff;
+        color: #7b53dd;
       }
     }
   }
@@ -572,7 +574,7 @@ onMounted(() => {})
 .footer-bottom {
   text-align: center;
   a {
-    color: #c0c0c0;
+    color: #333;
     line-height: 25px;
   }
 }
