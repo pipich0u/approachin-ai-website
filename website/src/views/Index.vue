@@ -6,7 +6,7 @@
           <img src="/images/GroupBlack.png" alt="" />
         </div>
         <div class="tabbar">
-          <ul>
+          <!-- <ul>
             <li
               v-for="item in childrenRouter"
               :key="item.path"
@@ -15,7 +15,7 @@
             >
               {{ item.name }}
             </li>
-          </ul>
+          </ul> -->
           <!-- <div class="toggle-box">
             <div class="toggle" @click="showmod">
               <i class="icon iconfont icon-gengduo"></i>
@@ -36,18 +36,16 @@
               </li>
             </ul>
           </div> -->
-          <div class="language" style="margin-left: 10px">
+          <!-- <div class="language" style="margin-left: 10px">
             <i class="icon iconfont icon-en" v-if="!flag" @click="changeLanguage"></i>
             <i class="icon iconfont icon-cn" v-if="flag" @click="changeLanguage"></i>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
-    <el-scrollbar ref="scrollbarRef">
-      <div class="home_content__main">
-        <RouterView />
-      </div>
-    </el-scrollbar>
+    <div class="home_content__main ">
+      <RouterView />
+    </div>
   </div>
 </template>
 
@@ -100,7 +98,7 @@ onMounted(() => {})
 @media only screen and (min-width: 767px) {
   .home_content {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     .home_content__header {
@@ -109,7 +107,7 @@ onMounted(() => {})
       flex-direction: column;
       background: #eef0fe;
       height: 5.9281rem !important;
-      // position: fixed;
+      position: fixed;
       justify-content: center;
 
       .home_content__header-logo {
@@ -127,8 +125,8 @@ onMounted(() => {})
           align-items: center;
           margin-left: 10%;
           img {
-            width: 143px;
-            height: 40px;
+            width: 200px;
+            height: 56.8px;
           }
         }
         .toggle-box {
@@ -188,7 +186,7 @@ onMounted(() => {})
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .home_content {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     .home_content__header {
@@ -197,7 +195,7 @@ onMounted(() => {})
       flex-direction: column;
       background: #eef0fe;
       height: 4rem !important;
-      // position: fixed;
+      position: fixed;
       justify-content: center;
 
       .home_content__header-logo {
