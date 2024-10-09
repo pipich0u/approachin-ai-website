@@ -545,6 +545,7 @@ onMounted(() => {})
     margin-right: 0;
   }
   .code {
+    font-size: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -558,14 +559,14 @@ onMounted(() => {})
     border-bottom: 2px solid #fcfaee; /* 底部边框 */
     padding-bottom: 10px;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 18px;
     color: #fcfaee; /* 标题颜色 */
   }
 
   p {
     margin: 5px 0;
     line-height: 1.6; /* 行高 */
-    font-size: 16px;
+    font-size: 14px;
     color: #fcfaee; /* 字体颜色 */
   }
 }
@@ -579,6 +580,7 @@ onMounted(() => {})
     color: #fcfaee; /* 社交链接颜色 */
     text-decoration: none;
     transition: color 0.3s;
+    font-size: 14px;
     a {
       color: #fcfaee;
     }
@@ -594,7 +596,7 @@ onMounted(() => {})
 
 .footer-bottom {
   text-align: center;
-  font-size: 14px;
+  font-size: 10px;
   a {
     color: #999;
     line-height: 25px;
