@@ -6,7 +6,7 @@
       </div>
       <div class="text fontf">
         <!-- {{ $t('home.text') }} -->
-        Accelerate the arrival of your AI world
+        An accelerated, accessible, affordable approach to AI
         <!-- Grow smarter, grow faster as we need Solutions at the right place, we are empowering all
         your digital twin needs -->
       </div>
@@ -65,7 +65,7 @@
             <span href="#" class="social-icon">微信公众号: <a href="#">趋境科技</a></span>
           </div>
           <div class="code">
-            <div>扫描二维码关注我们</div>
+            <!-- <div>扫描二维码关注我们</div> -->
             <img src="../../../public/images/code.png" alt="" />
           </div>
         </div>
@@ -293,7 +293,7 @@ onMounted(() => {})
     .main {
       margin-top: 6rem;
       padding: 25% 5%;
-      height: 100%;
+      height: 100;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -527,7 +527,7 @@ onMounted(() => {})
     align-items: center;
     img {
       margin-top: 10px;
-      width: 80px;
+      width: 100px;
       height: 100%;
     }
   }
