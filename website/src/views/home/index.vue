@@ -49,8 +49,9 @@
         <div class="footer-section">
           <h3>关于我们</h3>
           <p>
-            趋境科技专注于大模型推理加速服务，助力大模型低成本落地。
-            我们的团队致力于为客户提供最佳的服务体验。
+            趋境科技专注大模型推理加速服务，助力大模型低成本落地。公司创始团队均来自清华大学，在
+            AI、体系结构、系统软件等领域有多年学术与产业实践经验。
+            趋境科技首创全系统推理架构，并推出“大模型知识推理一体机”，提供开箱即用的大模型落地解决方案，协同存储、CPU、GPU、NPU等多种设备，充分释放异构算力，大模型部署成本降低10倍以上。
           </p>
         </div>
 
@@ -519,14 +520,9 @@ onMounted(() => {})
 }
 </style>
 <style scoped lang="scss">
-
-
-
 .footer {
-  
   width: calc(100% - 40px);
-  
-  
+
   padding: 20px 20px; // 增加内边距
 
   // box-shadow: #00000026 0px 15px 0px;
@@ -585,7 +581,7 @@ onMounted(() => {})
 
   .social-icon {
     margin-bottom: 10px;
-    color: #fcfaee; 
+    color: #fcfaee;
     text-decoration: none;
     transition: color 0.3s;
     font-size: 14px;
@@ -622,12 +618,12 @@ onMounted(() => {})
 </style>
 
 <style lang="scss">
-
-  html,body{
-    scrollbar-width: none; // 隐藏滚动条（Firefox）
-    -ms-overflow-style: none; // 隐藏滚动条（Internet Explorer和Edge）
-  }
-  html::-webkit-scrollbar {
-    display: none; // 隐藏滚动条（Chrome, Safari, Opera）
-  }
+html,
+body {
+  scrollbar-width: none; // 隐藏滚动条（Firefox）
+  -ms-overflow-style: none; // 隐藏滚动条（Internet Explorer和Edge）
+}
+html::-webkit-scrollbar {
+  display: none; // 隐藏滚动条（Chrome, Safari, Opera）
+}
 </style>
