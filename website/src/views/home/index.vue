@@ -519,15 +519,23 @@ onMounted(() => {})
 }
 </style>
 <style scoped lang="scss">
+
+
+
 .footer {
+  
   width: calc(100% - 40px);
+  
+  
+  padding: 20px 20px; // 增加内边距
+
   // box-shadow: #00000026 0px 15px 0px;
   // background: linear-gradient(to bottom, #eef0fe 25%, rgb(159, 180, 255) 100%);
   // background: linear-gradient(to bottom, rgb(218, 227, 255), rgb(228, 211, 255));
   background: #3c3d37;
   color: #fff;
   // height: 100%;
-  padding: 20px 20px;
+
   // margin: 5% 0%;
 }
 .footer-container {
@@ -539,7 +547,7 @@ onMounted(() => {})
 
 .footer-section {
   flex: 1;
-  min-width: 200px; /* 最小宽度 */
+  min-width: 220px; // 增加最小宽度
   margin-right: 20px;
   &:last-child {
     margin-right: 0;
@@ -551,15 +559,15 @@ onMounted(() => {})
     align-items: center;
     img {
       margin-top: 10px;
-      width: 100px;
-      height: 100%;
+      width: 120px; // 增加二维码宽度
+      height: auto; // 自适应高度
     }
   }
   h3 {
-    border-bottom: 2px solid #fcfaee; /* 底部边框 */
+    border-bottom: 1px solid #fcfaee; /* 底部边框 */
     padding-bottom: 10px;
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 22px;
     color: #fcfaee; /* 标题颜色 */
   }
 
@@ -596,7 +604,7 @@ onMounted(() => {})
 
 .footer-bottom {
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   a {
     color: #999;
     line-height: 25px;
@@ -611,4 +619,15 @@ onMounted(() => {})
     }
   }
 }
+</style>
+
+<style lang="scss">
+
+  html,body{
+    scrollbar-width: none; // 隐藏滚动条（Firefox）
+    -ms-overflow-style: none; // 隐藏滚动条（Internet Explorer和Edge）
+  }
+  html::-webkit-scrollbar {
+    display: none; // 隐藏滚动条（Chrome, Safari, Opera）
+  }
 </style>
