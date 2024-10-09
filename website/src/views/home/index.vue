@@ -585,7 +585,7 @@ onMounted(() => {})
 
   .social-icon {
     margin-bottom: 10px;
-    color: #fcfaee; /* 社交链接颜色 */
+    color: #fcfaee; 
     text-decoration: none;
     transition: color 0.3s;
     font-size: 14px;
