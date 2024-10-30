@@ -55,7 +55,7 @@
   background: #0d052e;
   color: white;
 
-  background-image: radial-gradient( 
+  background-image: radial-gradient(
     closest-side,
     rgba(81, 57, 230, 0.4),
     rgba(81, 57, 230, 0.3),
@@ -112,6 +112,7 @@
       line-height: 40px;
       letter-spacing: 0.02em;
       text-align: left;
+      color: rgb(173, 170, 185);
     }
   }
   .footer_right {
@@ -132,7 +133,7 @@
         line-height: 23.4px;
         letter-spacing: 0.06em;
         text-align: left;
-        color: #b3a3f5;
+        color: rgb(153, 145, 185);
       }
       .text {
         font-family: MiSans VF;
@@ -145,4 +146,4 @@
     }
   }
 }
-</style>                 
+</style>                  
