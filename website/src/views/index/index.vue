@@ -94,25 +94,16 @@ const scrollToComponent = (index: number) => {
     console.error(`Element not found for index: ${index}`)
   }
 }
-// const throttle = (func: Function, limit: number) => {
-//   let lastFunc: ReturnType<typeof setTimeout>
-//   let lastRan: number
-
-//   return function (...args: any[]) {
-//     if (!lastRan) {
-//       func.apply(this, args)
-//       lastRan = Date.now()
-//     } else {
-//       clearTimeout(lastFunc)
-//       lastFunc = setTimeout(() => {
-//         if (Date.now() - lastRan >= limit) {
-//           func.apply(this, args)
-//           lastRan = Date.now()
-//         }
-//       }, limit - (Date.now() - lastRan))
-//     }
-//   }
-// }
+const throttle = (func: Function, limit: number) => {
+  let inThrottle: boolean
+  return function (this: any, ...args: any[]) {
+    if (!inThrottle) {
+      func.apply(this, args)
+      inThrottle = true
+      setTimeout(() => (inThrottle = false), limit)
+    }
+  }
+}
 
 const handleWheel = (event: WheelEvent) => {
   event.preventDefault()
@@ -122,9 +113,12 @@ const handleWheel = (event: WheelEvent) => {
 
   const deltaY = event.deltaY
 
+  // 根据滚动方向决定翻页
   if (deltaY > 0) {
+    // 向下滚动
     scrollToComponent(Math.min(currentActive.value + 1, navbar.value.length - 1))
   } else {
+    // 向上滚动
     scrollToComponent(Math.max(currentActive.value - 1, 0))
   }
 
