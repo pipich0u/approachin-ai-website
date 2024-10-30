@@ -22,35 +22,40 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/index/home'
+      redirect: '/index'
     },
     {
-      path: '/',
+      path: '/index',
       name: 'index',
-      component: HomeVue,
-      children: [
-        {
-          path: '/index/home',
-          name: 'home',
-          component: () => import('../views/home/index.vue')
-        },
-        {
-          path: '/index/about',
-          name: 'about',
-          component: () => import('../views/about/index.vue')
-        },
-        {
-          path: '/index/community',
-          name: 'community',
-          component: () => import('../views/community/index.vue')
-        },
-        {
-          path: '/index/detail',
-          name: 'detail',
-          component: () => import('../views/detail/index.vue')
-        },
-      ]
+      component: () => import('../views/index/index.vue')
     },
+    // {
+    //   path: '/',
+    //   name: 'index',
+    //   component: HomeVue,
+    //   children: [
+    //     {
+    //       path: '/index/home',
+    //       name: 'home',
+    //       component: () => import('../views/home/index.vue')
+    //     },
+    //     {
+    //       path: '/index/about',
+    //       name: 'about',
+    //       component: () => import('../views/about/index.vue')
+    //     },
+    //     {
+    //       path: '/index/community',
+    //       name: 'community',
+    //       component: () => import('../views/community/index.vue')
+    //     },
+    //     {
+    //       path: '/index/detail',
+    //       name: 'detail',
+    //       component: () => import('../views/detail/index.vue')
+    //     },
+    //   ]
+    // },
     {
       path: '/:catchAll(.*)',
       name: 'notfound',
