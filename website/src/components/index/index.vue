@@ -29,16 +29,18 @@
 .index_content {
   width: calc(100% - 200px);
   height: calc(100vh - 200px);
-  background: rgba(51, 0, 159, 1);
-  background-image: radial-gradient(
-    closest-side,
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.3),
-    rgba(232, 230, 255, 0)
-  );
-  background-size: 80vmax 70vmax;
-  background-position: center -45vmax;
-  background-repeat: no-repeat;
+  background: linear-gradient(180deg, #28007e 0%, #120039 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+
+  // background-image: radial-gradient(
+  //   closest-side,
+  //   rgba(255, 255, 255, 0.4),
+  //   rgba(255, 255, 255, 0.3),
+  //   rgba(232, 230, 255, 0)
+  // );
+  // background-size: 80vmax 70vmax;
+  // background-position: center -45vmax;
+  // background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

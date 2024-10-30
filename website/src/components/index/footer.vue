@@ -52,13 +52,14 @@
   width: calc(100% - 200px);
   padding: 0 100px;
   height: 550px;
-  background: rgba(64, 23, 229, 1);
+  background: #0d052e;
   color: white;
-  background-image: radial-gradient(
+
+  background-image: radial-gradient( 
     closest-side,
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.3),
-    rgba(232, 230, 255, 0)
+    rgba(81, 57, 230, 0.4),
+    rgba(81, 57, 230, 0.3),
+    rgba(81, 57, 230, 0)
   );
   background-size: 80vmax 70vmax;
   background-position: 18vmax 12vmax;
