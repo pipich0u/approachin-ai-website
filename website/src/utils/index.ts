@@ -1,4 +1,3 @@
-// animateDirective.ts
 const distance = 150;
 const animationMap = new WeakMap();
 
@@ -7,9 +6,15 @@ const ob = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const animation = animationMap.get(entry.target);
             animation.play();
-            ob.unobserve(entry.target);
+        } else {
+            // 当元素离开视口时，重新设置动画状态
+            const animation = animationMap.get(entry.target);
+            animation.cancel();
+            animation.currentTime = 0;
         }
     }
+}, {
+    rootMargin: '0px 0px -100px 0px' 
 });
 
 function isBelowViewport(el: HTMLElement) {
@@ -23,7 +28,7 @@ const animateDirective = {
             return;
         }
 
-        const direction = binding.value || 'down'; // 默认方向为 'down'
+        const direction = binding.value || 'down';
         let transformValue;
 
         if (direction === 'right') {

@@ -57,6 +57,7 @@ const itemList = ref([
   background-size: 110vmax 80vmax;
   background-position: center 10vmax;
   background-repeat: no-repeat;
+  overflow: hidden;
   h2 {
     font-family: MiSans;
     font-size: 50px;

@@ -122,89 +122,94 @@
       width: 400px;
       height: 100%;
       // overflow: hidden;
+      @keyframes meteor-fall {
+        from {
+          bottom: -100px; /* Start below the viewport */
+        }
+        to {
+          bottom: 110%; /* End above the viewport */
+        }
+      }
       .line {
         position: absolute;
-        top: 100%;
-        width: 0px; /* 初始宽度 */
-        height: 100px; /* 初始高度 */
-        // background: linear-gradient(90deg, transparent 50%, orange 50%); /* 创建虚线效果 */
-        background-size: 4px 4px; /* 设置虚线的大小 */
-        animation: line-move 5s linear infinite; /* 应用动画 */
+        //  position: fixed;
+        bottom: -100px; /* Start below the viewport */
+        left: 50%; /* Start in the middle of the viewport */
+        width: 2px; /* Width of the meteor */
+        height: 100px; /* Length of the meteor */
+        background: linear-gradient(180deg, #cf9fff, rgba(207, 159, 255, 0.2)); /* Meteor color */
+        transform: translateX(-50%); /* Center the meteor horizontally */
+        animation: meteor-fall 2s linear infinite; /* Apply the falling animation */
+        // top: 100%;
+        // width: 0px; /* 初始宽度 */
+        // height: 100px; /* 初始高度 */
+        // // background: linear-gradient(90deg, transparent 50%, orange 50%); /* 创建虚线效果 */
+        // background-size: 4px 4px; /* 设置虚线的大小 */
+        // overflow: hidden; /* To hide the overflow of the animation */
+
+        // background: repeating-linear-gradient(
+        //     0deg,
+        //     transparent,
+        //     transparent 4px,
+        //     #cf9fff 4px,
+        //     #cf9fff 8px
+        //   ),
+        //   linear-gradient(180deg, #cf9fff -80.23%, rgba(207, 159, 255, 0.2) 100%);
+        // background-size: 100% 16px;
+        // animation: line-move 5s linear infinite; /* 应用动画 */
       }
 
       .line:nth-child(1) {
         left: 10%;
         width: 1px;
         height: 80px;
-        top: 0%;
+        // top: 0%;
         animation-duration: 2s;
-        &::after {
-          height: 195px;
-        }
+        height: 195px;
       }
 
       .line:nth-child(2) {
         left: 30%;
-        top: 20%;
+        // top: 20%;
         width: 3px;
         height: 120px;
         animation-duration: 3s;
-        &::after {
-          height: 279px;
-          // border: 2.65px dashed;
-          // background: repeating-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
-        }
+        height: 279px;
       }
 
       .line:nth-child(3) {
         left: 50%;
         width: 2px;
-        top: 8%;
+        // top: 8%;
         height: 100px;
         animation-duration: 2.6s;
-        &::after {
-          height: 185px;
-        }
+        height: 185px;
       }
 
       .line:nth-child(4) {
         left: 70%;
-        top: 25%;
+        // top: 25%;
         width: 1.5px;
         height: 90px;
         animation-duration: 4.5s;
-        &::after {
-          height: 325px;
-        }
+        height: 325px;
       }
 
       .line:nth-child(5) {
         left: 90%;
         width: 2.5px;
         height: 110px;
-        top: 8%;
+        // top: 8%;
         animation-duration: 1.5s;
-        &::after {
-          height: 200px;
-        }
+        height: 200px;
       }
 
       .line:nth-child(6) {
         left: 20%;
         width: 1px;
-        top: 35%;
+        // top: 35%;
         animation-duration: 3.5s;
-        &::after {
-          height: 280px;
-        }
-      }
-      .line::after {
-        content: '';
-        position: absolute;
-        width: 0px;
-        border: 1.98px dashed orange;
-        // border: 2.65px solid;
-        // border-image-source: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.2) 100%);
+        height: 280px;
       }
       @keyframes line-move {
         from {

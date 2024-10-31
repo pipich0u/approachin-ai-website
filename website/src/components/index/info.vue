@@ -51,6 +51,7 @@ const imgList = ref([
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  overflow: hidden;
   h2 {
     height: 80px;
     display: flex;
