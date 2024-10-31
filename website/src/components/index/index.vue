@@ -37,12 +37,9 @@
     ),
     linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     linear-gradient(180deg, #4000c8 0%, #120039 100%);
-
-  background-size: 120vmax 60vmax, cover, cover; /* 确保线性渐变覆盖整个元素 */
-
-  background-position: center -45vmax, center, center; /* 设置每个背景的位置 */
-
-  background-repeat: no-repeat, no-repeat, no-repeat; /* 防止重复 */
+  background-size: 120vmax 60vmax, cover, cover;
+  background-position: center -45vmax, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 
   // background-image: radial-gradient(
   //   closest-side,
@@ -59,6 +56,16 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 100px;
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em; /* 字母间距从负值开始 */
+      opacity: 0; /* 初始透明度为0 */
+    }
+    100% {
+      letter-spacing: normal; /* 字母间距恢复正常 */
+      opacity: 1; /* 最终透明度为1 */
+    }
+  }
   .index_content_title {
     width: 100%;
     margin-top: 28px;
@@ -80,8 +87,12 @@
         line-height: 160px;
         text-align: left;
         user-select: none;
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+        display: inline-block;
       }
       .p1 {
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both; /* 添加动画 */
+        display: inline-block;
         font-family: MiSans;
         font-size: 46px;
         font-weight: 250;

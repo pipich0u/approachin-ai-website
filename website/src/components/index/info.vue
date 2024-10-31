@@ -3,7 +3,7 @@
     <h2>企业资讯</h2>
     <div class="swiper">
       <!-- :autoplay="false" -->
-      <el-carousel :interval="4000" indicator-position="outside" class="swiper_img">
+      <el-carousel :interval="4000" indicator-position="outside" class="swiper_img" :autoplay='true'>
         <el-carousel-item v-for="(item, index) in imgList" :key="index">
           <img :src="item.src" alt="" class="img" />
           <div class="info_desc">

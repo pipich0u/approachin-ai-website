@@ -1,3 +1,4 @@
+// animateDirective.ts
 const distance = 150;
 const animationMap = new WeakMap();
 
@@ -18,10 +19,24 @@ function isBelowViewport(el: HTMLElement) {
 
 const animateDirective = {
     mounted(el: HTMLElement, binding: { value?: string }) {
-        // 默认从下方滑入的动画
-        const slideInAnimation = el.animate([
+        if (!isBelowViewport(el)) {
+            return;
+        }
+
+        const direction = binding.value || 'down'; // 默认方向为 'down'
+        let transformValue;
+
+        if (direction === 'right') {
+            transformValue = `translateX(${distance}px)`; // 从右侧滑出
+        } else if (direction === 'left') {
+            transformValue = `translateX(-${distance}px)`; // 从左侧滑出
+        } else {
+            transformValue = `translateY(${distance}px)`; // 从下方滑入
+        }
+
+        const animation = el.animate([
             {
-                transform: `translateY(${distance}px)`, // 从下方滑入
+                transform: transformValue,
                 opacity: 0.5,
             },
             {
@@ -33,45 +48,9 @@ const animateDirective = {
             easing: "ease-in-out"
         });
 
-        slideInAnimation.pause();
-        animationMap.set(el, slideInAnimation);
-
-        if (!isBelowViewport(el)) {
-            // 如果元素已经在视口中，根据方向执行滑出动画
-            const direction = binding.value || 'none'; // 默认方向为 'none'
-            let transformValue;
-            console.log(direction);
-            
-            // 根据方向设置 transform 的值
-            if (direction === 'right') {
-                transformValue = `translateX(${distance}px)`; // 从右侧滑出
-            } else if (direction === 'left') {
-                transformValue = `translateX(-${distance}px)`; // 从左侧滑出
-            } else {
-                // 如果没有指定方向，使用默认的下方滑入动画
-                ob.observe(el);
-                return;
-            }
-
-            const slideOutAnimation = el.animate([
-                {
-                    transform: transformValue,
-                    opacity: 0.5,
-                },
-                {
-                    transform: 'translateX(0)', // 回到原位
-                    opacity: 1,
-                }
-            ], {
-                duration: 500,
-                easing: "ease-in-out"
-            });
-
-            slideOutAnimation.pause();
-            animationMap.set(el, slideOutAnimation);
-        }
-
-        ob.observe(el); // 开始观察元素
+        animation.pause();
+        animationMap.set(el, animation);
+        ob.observe(el);
     },
     unmounted(el: HTMLElement) {
         ob.unobserve(el);

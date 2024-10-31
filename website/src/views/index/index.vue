@@ -170,6 +170,7 @@ onUnmounted(() => {
   &::-webkit-scrollbar {
     display: none;
   }
+  
   .header {
     height: 100px;
     width: calc(100% - 200px);
