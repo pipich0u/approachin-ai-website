@@ -40,7 +40,8 @@ const animateDirective = {
             // 如果元素已经在视口中，根据方向执行滑出动画
             const direction = binding.value || 'none'; // 默认方向为 'none'
             let transformValue;
-
+            console.log(direction);
+            
             // 根据方向设置 transform 的值
             if (direction === 'right') {
                 transformValue = `translateX(${distance}px)`; // 从右侧滑出

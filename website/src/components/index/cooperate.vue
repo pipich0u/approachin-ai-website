@@ -42,6 +42,9 @@ const itemList = ref([
 .cpt_content {
   width: calc(100% - 200px);
   height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   padding: 100px;
   background: #000;
   color: white;
@@ -64,23 +67,34 @@ const itemList = ref([
   }
   .content {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 120px);
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     .item {
       width: 30%;
       height: calc(100% - 20px);
       margin: 0 20px;
       position: relative;
+      border-radius: 28px;
       img {
+        position: absolute;
         width: 100%;
+        top: 0;
+        left: 0;
         border-radius: 28px;
         user-select: none;
       }
       .desc {
-        position: absolute;
-        top: 38%;
-        left: 0;
+        width: calc(100% - 80px);
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-around;
+        align-items: flex-start;
+        // position: absolute;
+        // top: 38%;
+        // left: 0;
         padding: 0 40px;
         // background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
         border-radius: 28px;
@@ -92,6 +106,7 @@ const itemList = ref([
           letter-spacing: 0.02em;
           text-align: left;
           position: relative;
+          margin-top: 60%;
           &::before {
             content: '';
             position: absolute;
@@ -104,8 +119,9 @@ const itemList = ref([
           }
         }
         .text {
+          position: relative;
           font-family: MiSans;
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 330;
           line-height: 40.5px;
           letter-spacing: 0.02em;

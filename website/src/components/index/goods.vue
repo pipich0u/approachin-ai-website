@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="content_right">
-        <img src="/public/images/img/zhiwen.png" alt="" class="img1" v-animate />
+        <img src="/public/images/img/zhiwen.png" alt="" class="img1" v-animate="'right'" />
         <div class="img2">
           <img src="/public/images/img/chanp1.png" alt="" class="img21" v-animate />
           <img src="/public/images/img/chanp2.png" alt="" class="img22" v-animate />
@@ -77,7 +77,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    h2 { 
+    h2 {
       color: white;
       font-family: MiSans;
       font-size: 46px;
