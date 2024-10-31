@@ -29,18 +29,32 @@
 .index_content {
   width: calc(100% - 200px);
   height: calc(100vh - 200px);
-  background: linear-gradient(180deg, #28007e 0%, #120039 100%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background: radial-gradient(
+      closest-side,
+      rgba(178, 98, 255, 0.5),
+      rgba(178, 98, 255, 0.4),
+      rgba(232, 230, 255, 0)
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    linear-gradient(180deg, #4000c8 0%, #120039 100%);
+
+  background-size: 120vmax 60vmax, cover, cover; /* 确保线性渐变覆盖整个元素 */
+
+  background-position: center -45vmax, center, center; /* 设置每个背景的位置 */
+
+  background-repeat: no-repeat, no-repeat, no-repeat; /* 防止重复 */
 
   // background-image: radial-gradient(
   //   closest-side,
-  //   rgba(255, 255, 255, 0.4),
+  //   rgba(178, 98, 255, 0.4),
   //   rgba(255, 255, 255, 0.3),
   //   rgba(232, 230, 255, 0)
   // );
   // background-size: 80vmax 70vmax;
   // background-position: center -45vmax;
   // background-repeat: no-repeat;
+  // background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  //   linear-gradient(180deg, #4000c8 0%, #120039 100%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

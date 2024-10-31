@@ -23,10 +23,10 @@
         </div>
       </div>
       <div class="content_right">
-        <img src="/public/images/img/zhiwen.png" alt="" class="img1" />
+        <img src="/public/images/img/zhiwen.png" alt="" class="img1" v-animate />
         <div class="img2">
-          <img src="/public/images/img/chanp1.png" alt="" class="img21" />
-          <img src="/public/images/img/chanp2.png" alt="" class="img22" />
+          <img src="/public/images/img/chanp1.png" alt="" class="img21" v-animate />
+          <img src="/public/images/img/chanp2.png" alt="" class="img22" v-animate />
         </div>
       </div>
     </div>

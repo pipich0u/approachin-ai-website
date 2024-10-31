@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" ref="containerRef">
     <div class="header navbar" :class="{ 'navbar-scrolled': isScrolled }">
       <div class="logo_box">
         <img src="/public/images/img/logo-fff.png" alt="" />
@@ -22,7 +22,7 @@
       <IndexVue ref="indexRef" />
       <GoodsVue ref="goodsRef" />
       <SkillOneVue ref="skillOneRef" />
-      <SkillTwoVue />
+      <SkillTwoVue ref="skillTwoRef" />
       <CooperateVue ref="cooperateRef" />
       <InfoVue ref="infoRef" />
       <FooterVue ref="footerRef" />
@@ -41,24 +41,29 @@ import InfoVue from '../../components/index/info.vue'
 import FooterVue from '../../components/index/footer.vue'
 const isScrolled = ref(false)
 const currentActive = ref<number>(0)
-
+const containerRef = ref<HTMLElement | null>(null)
 const indexRef = ref<HTMLElement | null>(null)
 const goodsRef = ref<HTMLElement | null>(null)
 const skillOneRef = ref<HTMLElement | null>(null)
+const skillTwoRef = ref<HTMLElement | null>(null)
 const cooperateRef = ref<HTMLElement | null>(null)
 const infoRef = ref<HTMLElement | null>(null)
 const footerRef = ref<HTMLElement | null>(null)
 let isThrottled = false
+let isScrolling = ref(false)
 const navbar = ref([
   { name: '首页', id: 0 },
   { name: '产品', id: 1 },
   { name: '技术', id: 2 },
-  { name: '案例', id: 3 },
-  { name: '资讯', id: 4 },
-  { name: '联系我们', id: 5 }
+  { name: 'KTransformers', id: 3 },
+  { name: '案例', id: 4 },
+  { name: '资讯', id: 5 },
+  { name: '联系我们', id: 6 }
 ])
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 0
+  if (containerRef.value) {
+    isScrolled.value = containerRef.value.scrollTop > 0 // 使用 container 的 scrollTop
+  }
 }
 
 const scrollToComponent = (index: number) => {
@@ -75,12 +80,15 @@ const scrollToComponent = (index: number) => {
       el = skillOneRef.value
       break
     case 3:
-      el = cooperateRef.value
+      el = skillTwoRef.value
       break
     case 4:
-      el = infoRef.value
+      el = cooperateRef.value
       break
     case 5:
+      el = infoRef.value
+      break
+    case 6:
       el = footerRef.value
       break
     default:
@@ -94,44 +102,58 @@ const scrollToComponent = (index: number) => {
     console.error(`Element not found for index: ${index}`)
   }
 }
-const throttle = (func: Function, limit: number) => {
-  let inThrottle: boolean
-  return function (this: any, ...args: any[]) {
-    if (!inThrottle) {
-      func.apply(this, args)
-      inThrottle = true
-      setTimeout(() => (inThrottle = false), limit)
-    }
-  }
-}
+// const throttle = (func: Function, limit: number) => {
+//   let inThrottle: boolean
+//   return function (this: any, ...args: any[]) {
+//     if (!inThrottle) {
+//       func.apply(this, args)
+//       inThrottle = true
+//       setTimeout(() => (inThrottle = false), limit)
+//     }
+//   }
+// }
 
 const handleWheel = (event: WheelEvent) => {
   event.preventDefault()
 
-  if (isThrottled) return
-  isThrottled = true
+  if (isScrolling.value) {
+    event.preventDefault()
+    event.stopPropagation()
+    return
+  }
+  isScrolling.value = true
 
   const deltaY = event.deltaY
 
-  // 根据滚动方向决定翻页
   if (deltaY > 0) {
-    // 向下滚动
     scrollToComponent(Math.min(currentActive.value + 1, navbar.value.length - 1))
   } else {
-    // 向上滚动
     scrollToComponent(Math.max(currentActive.value - 1, 0))
   }
 
   setTimeout(() => {
-    isThrottled = false
-  }, 500)
+    isScrolling.value = false
+  }, 800)
 }
+document.addEventListener(
+  'wheel',
+  function (event) {
+    event.preventDefault()
+  },
+  { passive: false }
+)
 onMounted(() => {
+  if (containerRef.value) {
+    containerRef.value.addEventListener('scroll', handleScroll)
+  }
   window.addEventListener('scroll', handleScroll)
   window.addEventListener('wheel', handleWheel)
 })
 
 onUnmounted(() => {
+  if (containerRef.value) {
+    containerRef.value.removeEventListener('scroll', handleScroll)
+  }
   window.removeEventListener('scroll', handleScroll)
   window.removeEventListener('wheel', handleWheel)
 })
@@ -144,7 +166,10 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   // overflow: hidden;
-  // overflow-y: scroll;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .header {
     height: 100px;
     width: calc(100% - 200px);
@@ -214,10 +239,6 @@ onUnmounted(() => {
   .content {
     width: 100%;
     height: 100%;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 }
 </style>
