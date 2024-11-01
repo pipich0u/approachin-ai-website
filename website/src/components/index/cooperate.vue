@@ -132,4 +132,13 @@ const itemList = ref([
     }
   }
 }
+@media (min-width: 1920px) {
+}
+
+@media (min-width: 2560px) {
+  .content {
+    margin-top: 50px;
+    align-items: flex-start !important;
+  }
+}
 </style>

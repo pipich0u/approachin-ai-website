@@ -3,7 +3,12 @@
     <h2>企业资讯</h2>
     <div class="swiper">
       <!-- :autoplay="false" -->
-      <el-carousel :interval="4000" indicator-position="outside" class="swiper_img" :autoplay='true'>
+      <el-carousel
+        :interval="4000"
+        indicator-position="outside"
+        class="swiper_img"
+        :autoplay="true"
+      >
         <el-carousel-item v-for="(item, index) in imgList" :key="index">
           <img :src="item.src" alt="" class="img" />
           <div class="info_desc">
@@ -136,5 +141,19 @@ const imgList = ref([
 }
 :deep(.el-carousel__container) {
   height: 100%;
+}
+@media (min-width: 1920px) {
+}
+
+@media (min-width: 2560px) {
+  .swiper {
+    .swiper_img {
+      max-width: 2300px !important;
+      .el-carousel__item {
+        width: 100%;
+        max-width: 2300px !important;
+      }
+    }
+  }
 }
 </style>

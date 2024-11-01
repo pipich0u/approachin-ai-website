@@ -100,11 +100,37 @@
     .left {
       width: 50%;
       height: 100%;
+      position: relative;
       img {
-        left: 0;
-        bottom: 50px;
+        width: 100%;
+        left: -100px;
+        bottom: -20px;
         position: absolute;
       }
+    }
+  }
+}
+@media (min-width: 2560px) {
+  .right {
+    .item {
+      img {
+        user-select: none;
+        width: 50px;
+        height: 34px;
+      }
+      .text {
+        margin-top: 30px;
+        font-size: 35px !important;
+        line-height: 60.5px !important;
+      }
+    }
+  }
+  .left {
+    img {
+      width: 1200px;
+      left: 0;
+      // bottom: 0px !important;
+      position: absolute;
     }
   }
 }

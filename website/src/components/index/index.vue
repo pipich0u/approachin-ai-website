@@ -40,7 +40,7 @@
   background-size: 120vmax 60vmax, cover, cover;
   background-position: center -45vmax, center, center;
   background-repeat: no-repeat, no-repeat, no-repeat;
-
+  overflow: hidden;
   // background-image: radial-gradient(
   //   closest-side,
   //   rgba(178, 98, 255, 0.4),
@@ -233,4 +233,5 @@
     }
   }
 }
+
 </style>
