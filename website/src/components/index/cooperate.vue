@@ -71,10 +71,10 @@ const itemList = ref([
     height: calc(100% - 120px);
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     .item {
       width: 30%;
-      height: calc(100% - 20px);
+      // height: calc(100% - 20px);
       margin: 0 20px;
       position: relative;
       border-radius: 28px;

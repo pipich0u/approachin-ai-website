@@ -88,7 +88,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     .top {
       width: 100%;
       height: 290px;
@@ -162,7 +162,7 @@
     }
     .bottom {
       width: 100%;
-      height: calc(100% - 290px);
+      // height: calc(100% - 290px);
       display: flex;
       justify-content: space-between;
       margin-top: 20px;
