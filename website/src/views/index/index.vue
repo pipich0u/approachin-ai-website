@@ -1,6 +1,6 @@
 <template>
   <div class="container" ref="containerRef">
-    <div class="header navbar" :class="{ 'navbar-scrolled': isScrolled }" v-if="isPhone.value">
+    <div class="header navbar" :class="{ 'navbar-scrolled': isScrolled }" v-if="!isMobile">
       <div class="logo_box">
         <img src="/public/images/img/logo-fff.png" alt="" />
       </div>
@@ -18,12 +18,12 @@
         </ul>
       </div>
     </div>
-    <div class="header_phone navbar" :class="{ 'navbar-scrolled-phone': isScrolled }" v-else>
+    <div class="header_phone" :class="{ 'navbar-scrolled-phone': isScrolled }" v-else>
       <div class="logo_box">
         <img src="/public/images/img/logo-fff.png" alt="" />
       </div>
     </div>
-    <div class="content" v-if="isPhone.value">
+    <div class="content" v-if="!isMobile">
       <IndexVue ref="indexRef" />
       <GoodsVue ref="goodsRef" />
       <SkillOneVue ref="skillOneRef" />
@@ -140,10 +140,11 @@ const handleWheel = (event: WheelEvent) => {
 }
 
 const _isMobile = () => {
-  let flag = navigator.userAgent.match(
-    /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-  )
-  return flag
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera
+  isPhone.value =
+    /android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos|iphone|ipod|ios|ipad|iemobile|opera mobi|windows phone/i.test(
+      userAgent
+    )
 }
 
 document.addEventListener(
@@ -154,12 +155,20 @@ document.addEventListener(
   { passive: false }
 )
 
+const isMobile = ref(window.innerWidth <= 768);
+
+// 添加事件监听器以响应窗口大小变化
+const handleResize = () => {
+  isMobile.value = window.innerWidth <= 768;
+};
 onMounted(() => {
   if (containerRef.value) {
     containerRef.value.addEventListener('scroll', handleScroll)
   }
   window.addEventListener('scroll', handleScroll)
   window.addEventListener('wheel', handleWheel)
+  window.addEventListener('resize', handleResize);
+  _isMobile()
 })
 
 onUnmounted(() => {
@@ -168,6 +177,7 @@ onUnmounted(() => {
   }
   window.removeEventListener('scroll', handleScroll)
   window.removeEventListener('wheel', handleWheel)
+  window.removeEventListener('resize', handleResize);
 })
 </script>
 
