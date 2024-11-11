@@ -1,6 +1,6 @@
 <template>
   <div class="container" ref="containerRef">
-    <div class="header navbar" :class="{ 'navbar-scrolled': isScrolled }">
+    <div class="header navbar" :class="{ 'navbar-scrolled': isScrolled }" v-if="isPhone.value">
       <div class="logo_box">
         <img src="/public/images/img/logo-fff.png" alt="" />
       </div>
@@ -18,7 +18,12 @@
         </ul>
       </div>
     </div>
-    <div class="content">
+    <div class="header_phone navbar" :class="{ 'navbar-scrolled-phone': isScrolled }" v-else>
+      <div class="logo_box">
+        <img src="/public/images/img/logo-fff.png" alt="" />
+      </div>
+    </div>
+    <div class="content" v-if="isPhone.value">
       <IndexVue ref="indexRef" />
       <GoodsVue ref="goodsRef" />
       <SkillOneVue ref="skillOneRef" />
@@ -27,12 +32,18 @@
       <InfoVue ref="infoRef" />
       <FooterVue ref="footerRef" />
     </div>
+    <div class="content_phone" v-else>
+      <IndexPhoneVue />
+      <FooterPhoneVue />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import IndexVue from '../../components/index/index.vue'
+import IndexPhoneVue from '../../components/phone/index.vue'
+import FooterPhoneVue from '../../components/phone/footer.vue'
 import GoodsVue from '../../components/index/goods.vue'
 import SkillOneVue from '../../components/index/skillone.vue'
 import SkillTwoVue from '../../components/index/skilltwo.vue'
@@ -49,6 +60,8 @@ const skillTwoRef = ref<HTMLElement | null>(null)
 const cooperateRef = ref<HTMLElement | null>(null)
 const infoRef = ref<HTMLElement | null>(null)
 const footerRef = ref<HTMLElement | null>(null)
+const isPhone = ref(false)
+
 let isThrottled = false
 let isScrolling = ref(false)
 const navbar = ref([
@@ -102,16 +115,6 @@ const scrollToComponent = (index: number) => {
     console.error(`Element not found for index: ${index}`)
   }
 }
-// const throttle = (func: Function, limit: number) => {
-//   let inThrottle: boolean
-//   return function (this: any, ...args: any[]) {
-//     if (!inThrottle) {
-//       func.apply(this, args)
-//       inThrottle = true
-//       setTimeout(() => (inThrottle = false), limit)
-//     }
-//   }
-// }
 
 const handleWheel = (event: WheelEvent) => {
   // event.preventDefault()
@@ -135,6 +138,14 @@ const handleWheel = (event: WheelEvent) => {
     isScrolling.value = false
   }, 800)
 }
+
+const _isMobile = () => {
+  let flag = navigator.userAgent.match(
+    /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+  )
+  return flag
+}
+
 document.addEventListener(
   'wheel',
   function (event) {
@@ -142,6 +153,7 @@ document.addEventListener(
   },
   { passive: false }
 )
+
 onMounted(() => {
   if (containerRef.value) {
     containerRef.value.addEventListener('scroll', handleScroll)
@@ -170,7 +182,7 @@ onUnmounted(() => {
   &::-webkit-scrollbar {
     display: none;
   }
-  
+
   .header {
     height: 100px;
     width: calc(100% - 200px);
@@ -234,8 +246,32 @@ onUnmounted(() => {
       }
     }
   }
+  .header_phone {
+    height: 100px;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.5s ease;
+    background-color: transparent;
+    z-index: 1000; /* 确保导航栏在最前面 */
+    .logo_box {
+      img {
+        user-select: none;
+        width: 160px;
+        height: 45px;
+      }
+    }
+  }
   .navbar-scrolled {
     background-color: rgba(0, 0, 0, 0.8); /* 滚动后背景色 */
+  }
+  .navbar-scrolled-phone {
+    background-color: rgba(0, 0, 0, 1); /* 滚动后背景色 */
   }
   .content {
     width: 100%;
