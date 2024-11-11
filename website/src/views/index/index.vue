@@ -118,7 +118,9 @@ const scrollToComponent = (index: number) => {
 
 const handleWheel = (event: WheelEvent) => {
   // event.preventDefault()
-
+  if(isMobile.value){
+    return
+  }
   if (isScrolling.value) {
     // event.preventDefault()
     event.stopPropagation()
