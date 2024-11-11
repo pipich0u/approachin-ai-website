@@ -274,8 +274,8 @@ onUnmounted(() => {
     .logo_box {
       img {
         user-select: none;
-        width: 160px;
-        height: 45px;
+        width: 176px;
+        height: 50px;
       }
     }
   }
