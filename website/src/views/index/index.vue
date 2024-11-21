@@ -1,6 +1,7 @@
 <template>
   <div class="container" ref="containerRef">
-    <div class="header navbar" :class="{ 'navbar-scrolled': isScrolled }" v-if="!isMobile">
+    <!--   v-if="!isMobile" -->
+    <div class="header navbar" :class="{ 'navbar-scrolled': isScrolled }">
       <div class="logo_box">
         <img src="/public/images/img/logo-fff.png" alt="" />
       </div>
@@ -18,12 +19,17 @@
         </ul>
       </div>
     </div>
-    <div class="header_phone" :class="{ 'navbar-scrolled-phone': isScrolled }" v-else>
+    <!-- :class="{ 'navbar-scrolled-phone': isScrolled }" v-else -->
+    <div class="header_phone" :class="{ 'navbar-scrolled': isScrolled }">
       <div class="logo_box">
         <img src="/public/images/img/logo-fff.png" alt="" />
       </div>
+      <div>
+        <i class="iconfont icon-xuanxiang"></i>
+      </div>
     </div>
-    <div class="content" v-if="!isMobile">
+    <!-- v-if="!isMobile" -->
+    <div class="content">
       <IndexVue ref="indexRef" />
       <GoodsVue ref="goodsRef" />
       <SkillOneVue ref="skillOneRef" />
@@ -32,10 +38,11 @@
       <InfoVue ref="infoRef" />
       <FooterVue ref="footerRef" />
     </div>
-    <div class="content_phone" v-else>
+    <!-- v-else -->
+    <!-- <div class="content_phone" >
       <IndexPhoneVue />
       <FooterPhoneVue />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -118,7 +125,7 @@ const scrollToComponent = (index: number) => {
 
 const handleWheel = (event: WheelEvent) => {
   // event.preventDefault()
-  if(isMobile.value){
+  if (isMobile.value) {
     return
   }
   if (isScrolling.value) {
@@ -157,19 +164,19 @@ document.addEventListener(
   { passive: false }
 )
 
-const isMobile = ref(window.innerWidth <= 768);
+const isMobile = ref(window.innerWidth <= 768)
 
 // 添加事件监听器以响应窗口大小变化
 const handleResize = () => {
-  isMobile.value = window.innerWidth <= 768;
-};
+  isMobile.value = window.innerWidth <= 768
+}
 onMounted(() => {
   if (containerRef.value) {
     containerRef.value.addEventListener('scroll', handleScroll)
   }
   window.addEventListener('scroll', handleScroll)
   window.addEventListener('wheel', handleWheel)
-  window.addEventListener('resize', handleResize);
+  window.addEventListener('resize', handleResize)
   _isMobile()
 })
 
@@ -179,115 +186,342 @@ onUnmounted(() => {
   }
   window.removeEventListener('scroll', handleScroll)
   window.removeEventListener('wheel', handleWheel)
-  window.removeEventListener('resize', handleResize);
+  window.removeEventListener('resize', handleResize)
 })
 </script>
-
-<style scoped lang="scss">
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  // overflow: hidden;
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  .header {
-    height: 100px;
-    width: calc(100% - 200px);
-    padding: 0 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #000;
-    position: fixed;
-    top: 0;
-    transition: background-color 0.5s ease;
-    background-color: transparent;
-    z-index: 1000; /* 确保导航栏在最前面 */
-
-    .logo_box {
-      img {
-        user-select: none;
-        width: 160px;
-        height: 45px;
-      }
-    }
-    .nav_box {
-      display: flex;
-      align-items: center;
-      .nav {
-        display: flex;
-        align-items: center;
-        width: 560px;
-        align-items: center;
-        justify-content: space-between;
-        .nav_item {
-          font-family: MiSans;
-          font-size: 18px;
-          font-weight: 380;
-          padding: 10px 0;
-          width: fit-content;
-          //   margin-right: 40px;
-          //   font-size: 16px;
-          color: #fff;
-          cursor: pointer;
-          transition: color 0.3s;
-          position: relative;
-          &::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            width: 0;
-            height: 1px;
-            background-color: #fff;
-            transition: width 0.3s ease, left 0.3s ease;
-          }
-          &:hover::after {
-            width: 100%;
-            left: 0;
-          }
-        }
-        .active {
-          border-bottom: #fff 2px solid;
-        }
-      }
-    }
-  }
-  .header_phone {
-    height: 100px;
-    width: calc(100% - 40px);
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #000;
-    position: fixed;
-    top: 0;
-    transition: background-color 0.5s ease;
-    background-color: transparent;
-    z-index: 1000; /* 确保导航栏在最前面 */
-    .logo_box {
-      img {
-        user-select: none;
-        width: 176px;
-        height: 50px;
-      }
-    }
-  }
-  .navbar-scrolled {
-    background-color: rgba(0, 0, 0, 0.8); /* 滚动后背景色 */
-  }
-  .navbar-scrolled-phone {
-    background-color: rgba(0, 0, 0, 1); /* 滚动后背景色 */
-  }
-  .content {
+<style lang="scss" scoped>
+@media only screen and (min-width: 1920px) {
+  .container {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .header_phone {
+      display: none;
+    }
+    .header {
+      height: 100px;
+      width: calc(100% - 200px);
+      padding: 0 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000;
+      position: fixed;
+      top: 0;
+      transition: background-color 0.5s ease;
+      background-color: transparent;
+      z-index: 1000; /* 确保导航栏在最前面 */
+
+      .logo_box {
+        img {
+          user-select: none;
+          width: 160px;
+          height: 45px;
+        }
+      }
+      .nav_box {
+        // width: 860px;
+        // flex: 1;
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        .nav {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          .nav_item {
+            font-family: MiSans;
+            font-size: 18px;
+            font-weight: 380;
+            padding: 10px 0;
+            width: fit-content;
+            margin: 0px 10px;
+            //   margin-right: 40px;
+            //   font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.3s;
+            position: relative;
+            &::after {
+              content: '';
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              width: 0;
+              height: 1px;
+              background-color: #fff;
+              transition: width 0.3s ease, left 0.3s ease;
+            }
+            &:hover::after {
+              width: 100%;
+              left: 0;
+            }
+          }
+          .active {
+            border-bottom: #fff 2px solid;
+          }
+        }
+      }
+    }
+
+    .navbar-scrolled {
+      background-color: rgba(0, 0, 0, 0.8); /* 滚动后背景色 */
+    }
+    .navbar-scrolled-phone {
+      background-color: rgba(0, 0, 0, 1); /* 滚动后背景色 */
+    }
+    .content {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .header_phone {
+      display: none;
+    }
+    .header {
+      height: 100px;
+      width: calc(100% - 200px);
+      padding: 0 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000;
+      position: fixed;
+      top: 0;
+      transition: background-color 0.5s ease;
+      background-color: transparent;
+      z-index: 1000; /* 确保导航栏在最前面 */
+
+      .logo_box {
+        img {
+          user-select: none;
+          width: 160px;
+          height: 45px;
+        }
+      }
+      .nav_box {
+        // width: 760px;
+        // flex: 1;
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        .nav {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          .nav_item {
+            font-family: MiSans;
+            font-size: 18px;
+            font-weight: 380;
+            padding: 10px 0;
+            width: fit-content;
+            margin: 0px 10px;
+            //   font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.3s;
+            position: relative;
+            &::after {
+              content: '';
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              width: 0;
+              height: 1px;
+              background-color: #fff;
+              transition: width 0.3s ease, left 0.3s ease;
+            }
+            &:hover::after {
+              width: 100%;
+              left: 0;
+            }
+          }
+          .active {
+            border-bottom: #fff 2px solid;
+          }
+        }
+      }
+    }
+
+    .navbar-scrolled {
+      background-color: rgba(0, 0, 0, 0.8); /* 滚动后背景色 */
+    }
+    .navbar-scrolled-phone {
+      background-color: rgba(0, 0, 0, 1); /* 滚动后背景色 */
+    }
+    .content {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1199px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .header_phone {
+      display: none;
+    }
+    .header {
+      height: 100px;
+      width: calc(100% - 100px);
+      padding: 0 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000;
+      position: fixed;
+      top: 0;
+      transition: background-color 0.5s ease;
+      background-color: transparent;
+      z-index: 1000; /* 确保导航栏在最前面 */
+
+      .logo_box {
+        img {
+          user-select: none;
+          width: 160px;
+          height: 45px;
+        }
+      }
+      .nav_box {
+        width: calc(100% - 360px);
+        display: flex;
+        align-items: center;
+        .nav {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          .nav_item {
+            font-family: MiSans;
+            font-size: 15px;
+            font-weight: 380;
+            padding: 10px 0;
+            margin: 0 10px;
+            width: fit-content;
+            //   margin-right: 40px;
+            //   font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.3s;
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              width: 0;
+              height: 1px;
+              background-color: #fff;
+              transition: width 0.3s ease, left 0.3s ease;
+            }
+            &:hover::after {
+              width: 100%;
+              left: 0;
+            }
+          }
+          .active {
+            border-bottom: #fff 2px solid;
+          }
+        }
+      }
+    }
+
+    .navbar-scrolled {
+      background-color: rgba(0, 0, 0, 0.8); /* 滚动后背景色 */
+    }
+    .navbar-scrolled-phone {
+      background-color: rgba(0, 0, 0, 1); /* 滚动后背景色 */
+    }
+    .content {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 766px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .header {
+      display: none;
+    }
+    .header_phone {
+      height: 100px;
+      width: calc(100% - 40px);
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000;
+      position: fixed;
+      top: 0;
+      transition: background-color 0.5s ease;
+      background-color: transparent;
+      z-index: 1000; /* 确保导航栏在最前面 */
+      .logo_box {
+        img {
+          user-select: none;
+          width: 139px;
+          height: 40px;
+        }
+      }
+      div {
+        i {
+          font-size: 22px;
+          color: #fff;
+        }
+      }
+    }
+
+    .navbar-scrolled {
+      background-color: rgba(0, 0, 0, 0.8); /* 滚动后背景色 */
+    }
+    .navbar-scrolled-phone {
+      background-color: rgba(0, 0, 0, 1); /* 滚动后背景色 */
+    }
+    .content {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 </style>
