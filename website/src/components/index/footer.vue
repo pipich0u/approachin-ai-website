@@ -36,7 +36,7 @@
       </div>
       <div class="we_gzh we">
         <div class="title">微信公众号</div>
-        <div>
+        <div class="img">
           <img src="/public/images/img/gzh.png" alt="" />
         </div>
       </div>
@@ -48,100 +48,438 @@
 </script>
 
 <style scoped lang="scss">
-.footer_content {
-  width: calc(100% - 200px);
-  padding: 0 100px;
-  height: 550px;
-  background: #0d052e;
-  color: white;
+@media only screen and (min-width: 1920px) {
+  .footer_content {
+    width: calc(100% - 200px);
+    padding: 0 100px;
+    height: 550px;
+    background: #0d052e;
+    color: white;
 
-  background-image: radial-gradient(
-    closest-side,
-    rgba(81, 57, 230, 0.4),
-    rgba(81, 57, 230, 0.3),
-    rgba(81, 57, 230, 0)
-  );
-  background-size: 80vmax 70vmax;
-  background-position: 18vmax 12vmax;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
-  .footer_left {
-    margin-top: 90px;
-    width: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    .footer_bottom {
-      width: fit-content;
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      // flex-direction: column;
-      .ggb {
-        margin-left: 10px;
-        display: flex;
-        align-items: center;
-        img {
-          width: 18px;
-        }
-      }
-      a {
-        line-height: 24px;
-        color: #fff;
-      }
-    }
-    .logo {
-      width: 100%;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      img {
-        width: 284px;
-        height: 80px;
-      }
-    }
-    .info {
-      font-family: MiSans;
-      font-size: 18px;
-      font-weight: 305;
-      line-height: 40px;
-      letter-spacing: 0.02em;
-      text-align: left;
-      color: rgb(173, 170, 185);
-    }
-  }
-  .footer_right {
-    margin-top: 90px;
-    flex: 1;
+    background-image: radial-gradient(
+      closest-side,
+      rgba(81, 57, 230, 0.4),
+      rgba(81, 57, 230, 0.3),
+      rgba(81, 57, 230, 0)
+    );
+    background-size: 80vmax 70vmax;
+    background-position: 18vmax 12vmax;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
-    .we {
-      margin-left: 134px;
+    position: relative;
+
+    .footer_left {
+      margin-top: 90px;
+      width: 550px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      .title {
-        margin-bottom: 65px;
-        font-family: MiSans VF;
-        font-size: 18px;
-        font-weight: 380;
-        line-height: 23.4px;
-        letter-spacing: 0.06em;
-        text-align: left;
-        color: rgb(153, 145, 185);
+      .footer_bottom {
+        width: fit-content;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        // flex-direction: column;
+        .ggb {
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+          img {
+            width: 18px;
+          }
+        }
+        a {
+          line-height: 24px;
+          color: #fff;
+        }
       }
-      .text {
-        font-family: MiSans VF;
+      .logo {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        img {
+          width: 284px;
+          height: 80px;
+        }
+      }
+      .info {
+        font-family: MiSans;
         font-size: 18px;
-        font-weight: 380;
-        line-height: 23.4px;
-        letter-spacing: 0.06em;
+        font-weight: 305;
+        line-height: 40px;
+        letter-spacing: 0.02em;
         text-align: left;
+        color: rgb(173, 170, 185);
+      }
+    }
+    .footer_right {
+      margin-top: 90px;
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      .we {
+        margin-left: 134px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .title {
+          margin-bottom: 65px;
+          font-family: MiSans VF;
+          font-size: 18px;
+          font-weight: 380;
+          line-height: 23.4px;
+          letter-spacing: 0.06em;
+          text-align: left;
+          color: rgb(153, 145, 185);
+        }
+        .text {
+          font-family: MiSans VF;
+          font-size: 18px;
+          font-weight: 380;
+          line-height: 23.4px;
+          letter-spacing: 0.06em;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  .footer_content {
+    width: calc(100% - 200px);
+    padding: 0 100px;
+    height: 550px;
+    background: #0d052e;
+    color: white;
+
+    background-image: radial-gradient(
+      closest-side,
+      rgba(81, 57, 230, 0.4),
+      rgba(81, 57, 230, 0.3),
+      rgba(81, 57, 230, 0)
+    );
+    background-size: 80vmax 70vmax;
+    background-position: 18vmax 12vmax;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .footer_left {
+      margin-top: 90px;
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .footer_bottom {
+        width: fit-content;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        // flex-direction: column;
+        .ggb {
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+          img {
+            width: 18px;
+          }
+        }
+        a {
+          line-height: 24px;
+          color: #fff;
+        }
+      }
+      .logo {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        img {
+          width: 284px;
+          height: 80px;
+        }
+      }
+      .info {
+        font-family: MiSans;
+        font-size: 18px;
+        font-weight: 305;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: rgb(173, 170, 185);
+      }
+    }
+    .footer_right {
+      margin-top: 90px;
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      .we {
+        margin-left: 34px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .title {
+          margin-bottom: 65px;
+          font-family: MiSans VF;
+          font-size: 18px;
+          font-weight: 380;
+          line-height: 23.4px;
+          letter-spacing: 0.06em;
+          text-align: left;
+          color: rgb(153, 145, 185);
+        }
+        .text {
+          font-family: MiSans VF;
+          font-size: 18px;
+          font-weight: 380;
+          line-height: 23.4px;
+          letter-spacing: 0.06em;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1199px) {
+  .footer_content {
+    width: calc(100% - 100px);
+    padding: 20px 50px;
+    height: 500px;
+    background: #0d052e;
+    color: white;
+
+    background-image: radial-gradient(
+      closest-side,
+      rgba(81, 57, 230, 0.4),
+      rgba(81, 57, 230, 0.3),
+      rgba(81, 57, 230, 0)
+    );
+    background-size: 80vmax 70vmax;
+    background-position: 18vmax 12vmax;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .footer_left {
+      margin-top: 20px;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      .footer_bottom {
+        width: fit-content;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 12px;
+        // flex-direction: column;
+        position: absolute;
+        bottom: 10px;
+        .ggb {
+          margin-left: 5px;
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+          img {
+            width: 12px;
+          }
+        }
+        a {
+          line-height: 20px;
+          color: #fff;
+        }
+      }
+      .logo {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        // margin-bottom: 20px;
+        img {
+          width: 200px;
+          height: 56px;
+        }
+      }
+      .info {
+        font-family: MiSans;
+        font-size: 16px;
+        font-weight: 305;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: rgb(173, 170, 185);
+      }
+    }
+    .footer_right {
+      margin-left: 100px;
+      // margin-top: 50px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .we {
+        height: 100px;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .title {
+          // margin-bottom: 65px;
+          font-family: MiSans VF;
+          font-size: 18px;
+          font-weight: 380;
+          line-height: 23.4px;
+          letter-spacing: 0.06em;
+          color: rgb(153, 145, 185);
+        }
+        .text {
+          margin-left: 20px;
+          margin-top: 10px;
+          font-family: MiSans VF;
+          font-size: 18px;
+          font-weight: 380;
+          line-height: 23.4px;
+          letter-spacing: 0.06em;
+        }
+        .img {
+          margin-left: 20px;
+          margin-top: 20px;
+          img {
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 766px) {
+  .footer_content {
+    width: calc(100% - 100px);
+    padding: 30px 50px;
+    height: fit-content;
+    background: #0d052e;
+    color: white;
+
+    background-image: radial-gradient(
+      closest-side,
+      rgba(81, 57, 230, 0.4),
+      rgba(81, 57, 230, 0.3),
+      rgba(81, 57, 230, 0)
+    );
+    background-size: 80vmax 70vmax;
+    background-position: 18vmax 12vmax;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    .footer_left {
+      margin-top: 20px;
+      // width: 550px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .footer_bottom {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 12px;
+        // text-align: center;
+        justify-content: center;
+        // flex-direction: column;
+        .ggb {
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+          img {
+            width: 18px;
+          }
+        }
+        a {
+          line-height: 24px;
+          color: #fff;
+        }
+      }
+      .logo {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        img {
+          width: 200px;
+          height: 56px;
+        }
+      }
+      .info {
+        font-family: MiSans;
+        font-size: 14px;
+        font-weight: 305;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: rgb(173, 170, 185);
+      }
+    }
+    .footer_right {
+      margin-top: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .we {
+        // margin-left: 134px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px 0;
+        .title {
+          // margin-bottom: 15px;
+          font-family: MiSans VF;
+          font-size: 16px;
+          font-weight: 380;
+          line-height: 23.4px;
+          letter-spacing: 0.06em;
+          text-align: left;
+          color: rgb(153, 145, 185);
+        }
+        .text {
+          font-family: MiSans VF;
+          font-size: 14px;
+          font-weight: 380;
+          line-height: 23.4px;
+          letter-spacing: 0.06em;
+          text-align: left;
+          margin-left: 10px;
+          margin-top: 20px;
+        }
+        .img {
+          margin-left: 10px;
+
+          img {
+            margin-top: 20px;
+            width: 80px;
+            border-radius: 12px;
+          }
+        }
       }
     }
   }
