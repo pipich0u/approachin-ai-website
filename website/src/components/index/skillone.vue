@@ -679,7 +679,7 @@
       justify-content: center;
       .modcentent {
         width: 100%;
-        height: 200px;
+        height: fit-content;
         display: flex;
         margin-top: 10px;
         .items {
@@ -695,6 +695,7 @@
           background-position: center;
           justify-content: center;
           align-items: center;
+          padding: 10px 50px;
           &::before {
             content: ''; /* 伪元素内容为空 */
             position: absolute; /* 绝对定位 */
@@ -703,7 +704,7 @@
             width: 100%; /* 设置伪元素宽度为100% */
             height: 100%; /* 设置伪元素高度为100% */
             background-image: url('/public/images/img/langjiantou.png');
-            background-size: 600px 80%;
+            background-size: 100% 80%;
             background-repeat: no-repeat;
             background-position: 70% 50%;
           }
@@ -715,11 +716,12 @@
             letter-spacing: 0.02em;
             text-align: left;
             color: white;
-            margin-left: 80px;
+            margin-left: 30px;
+            margin-bottom: 20px;
           }
           .num {
-            margin-left: 80px;
-            margin-top: 30px;
+            margin-left: 30px;
+            margin-top: 20px;
             font-family: MiSans;
             font-size: 50px;
             font-weight: 520;
@@ -732,22 +734,23 @@
       }
       .top {
         width: 100%;
-        height: 200px;
+        height: fit-content;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
+        // align-items: center;
+        // justify-content: space-between;
         // background: #343436;
         border-radius: 8px;
         // padding: 0 100px;
         .it {
-          width: 50%;
+          // width: 100%;
           height: calc(200px - 80px);
           display: flex;
           flex-direction: column;
           border-radius: 59px;
           background-image: url('/public/images/img/jiantou.png'),
             linear-gradient(59.7deg, #303030 -40.74%, #000000 106.58%);
-          background-size: 300px 80%, cover;
+          background-size: 100% 80%, cover;
           background-repeat: no-repeat, no-repeat;
           background-position: 70% 50%, center;
           padding: 40px 50px;
@@ -787,7 +790,7 @@
         // margin-top: 20px;
         .box {
           margin-top: 10px;
-          width: 100%;
+          width: calc(100% - 80px);
           height: calc(280px - 80px);
           padding: 40px;
           display: flex;
@@ -801,16 +804,16 @@
           align-items: flex-start;
           .box_title {
             font-family: MiSans;
-            font-size: 30px;
+            font-size: 20px;
             font-weight: 520;
-            line-height: 60px;
+            line-height: 40px;
             letter-spacing: 0.02em;
             text-align: left;
             position: relative;
             &::before {
               content: '';
               position: absolute;
-              top: 20px;
+              top: 10px;
               left: -10px;
               width: 5px;
               height: 10px;
@@ -831,9 +834,9 @@
           }
           .txt {
             font-family: MiSans;
-            font-size: 24px;
+            font-size: 18px;
             font-weight: 330;
-            line-height: 45px;
+            line-height: 25px;
             letter-spacing: 0.02em;
             text-align: left;
             columns: #e8e8e8;
@@ -842,9 +845,9 @@
             width: 80%;
             color: #a3a3a3;
             font-family: MiSans;
-            font-size: 20px;
+            font-size: 14px;
             font-weight: 305;
-            line-height: 40.5px;
+            line-height: 20px;
             letter-spacing: 0.02em;
             text-align: left;
           }
