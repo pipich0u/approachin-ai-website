@@ -366,7 +366,7 @@
 @media only screen and (max-width: 766px) {
   .footer_content {
     width: calc(100% - 100px);
-    padding: 30px 50px;
+    padding: 40px 50px;
     height: fit-content;
     background: #0d052e;
     color: white;

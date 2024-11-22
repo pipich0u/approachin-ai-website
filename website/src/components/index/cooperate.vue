@@ -408,9 +408,9 @@ const itemList = ref([
           .text {
             position: relative;
             font-family: MiSans;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 330;
-            line-height: 40.5px;
+            line-height: 24px;
             letter-spacing: 0.02em;
             text-align: left;
           }

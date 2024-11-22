@@ -621,7 +621,7 @@
           font-family: MiSans;
           font-size: 64px;
           font-weight: 380;
-          line-height: 160px;
+          line-height: 64px;
           user-select: none;
           animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
           display: inline-block;

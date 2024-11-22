@@ -291,14 +291,14 @@
     position: relative;
     .header {
       width: 100%;
-      height: 150px;
+      height: 180px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       .title,
       .ktr {
         font-family: MiSans;
-        font-size: 42px;
+        font-size: 40px;
         font-weight: 520;
         line-height: 56px;
         letter-spacing: 0.02em;

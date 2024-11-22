@@ -542,45 +542,66 @@
       .content_right {
         margin-top: 20px;
         width: 100%;
-        height: 356px;
+        height: 306px;
         position: relative;
         z-index: 999;
-        background-image: radial-gradient(
-            closest-side,
-            rgba(178, 241, 234, 0.45),
-            rgba(178, 241, 234, 0.35),
-            rgba(178, 241, 234, 0.25),
-            rgba(178, 241, 234, 0)
-          ),
-          radial-gradient(
-            closest-side,
-            rgba(178, 98, 255, 0.45),
-            rgba(178, 98, 255, 0.35),
-            rgba(178, 98, 255, 0.25),
-            rgba(178, 98, 255, 0)
-          ),
-          radial-gradient(
-            closest-side,
-            rgba(255, 185, 135, 0.45),
-            rgba(255, 185, 135, 0.35),
-            rgba(255, 185, 135, 0.25),
-            rgba(255, 185, 135, 0)
-          );
-        background-size: 80vmax 35vmax, 60vmax 35vmax, 60vmax 35vmax;
-        background-position: -2vmax 1vmax,10vmax 1vmax;
-        background-repeat: no-repeat;
+        // background-image: radial-gradient(
+        //     closest-side,
+        //     rgba(178, 241, 234, 0.45),
+        //     rgba(178, 241, 234, 0.35),
+        //     rgba(178, 241, 234, 0.25),
+        //     rgba(178, 241, 234, 0)
+        //   ),
+        //   radial-gradient(
+        //     closest-side,
+        //     rgba(178, 98, 255, 0.45),
+        //     rgba(178, 98, 255, 0.35),
+        //     rgba(178, 98, 255, 0.25),
+        //     rgba(178, 98, 255, 0)
+        //   ),
+        //   radial-gradient(
+        //     closest-side,
+        //     rgba(255, 185, 135, 0.45),
+        //     rgba(255, 185, 135, 0.35),
+        //     rgba(255, 185, 135, 0.25),
+        //     rgba(255, 185, 135, 0)
+        //   );
+        // background-size: 80vmax 35vmax, 60vmax 35vmax, 60vmax 35vmax;
+        // background-position: -2vmax 1vmax,10vmax 1vmax;
+        // background-repeat: no-repeat;
         .img1 {
           position: absolute;
           top: 0px;
-          right: -100px;
-          width: 426px;
+          right: -50px;
+          width: 326px;
           // height: 526px;
         }
         .img2 {
           position: absolute;
           right: 120px;
           top: 200px;
-          width: 347px;
+          width: 247px;
+          // background-image: radial-gradient(
+          //     closest-side,
+          //     rgba(178, 241, 234, 0.45),
+          //     rgba(178, 241, 234, 0.35),
+          //     rgba(178, 241, 234, 0.25),
+          //     rgba(178, 241, 234, 0)
+          //   ),
+          //   radial-gradient(
+          //     closest-side,
+          //     rgba(178, 98, 255, 0.45),
+          //     rgba(178, 98, 255, 0.35),
+          //     rgba(178, 98, 255, 0.25),
+          //     rgba(178, 98, 255, 0)
+          //   ),
+          //   radial-gradient(
+          //     closest-side,
+          //     rgba(255, 185, 135, 0.45),
+          //     rgba(255, 185, 135, 0.35),
+          //     rgba(255, 185, 135, 0.25),
+          //     rgba(255, 185, 135, 0)
+          //   );
           img {
             width: 100%;
             user-select: none;
