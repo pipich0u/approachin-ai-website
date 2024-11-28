@@ -18,6 +18,7 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 
 // 使用插件
+
 app.use(ElementPlus);
 app.use(createPinia());
 app.use(router);
