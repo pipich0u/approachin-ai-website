@@ -23,7 +23,8 @@
         </div>
       </div>
       <div class="content_right">
-        <img src="/public/images/img/zhiwen.png" alt="" class="img1" v-animate="'right'" />
+        <div id="xgPlayerWrap"></div>
+        <!-- <img src="/public/images/img/zhiwen.png" alt="" class="img1" v-animate="'right'" /> -->
         <div class="img2">
           <img src="/public/images/img/chanp1.png" alt="" class="img21" v-animate />
           <img src="/public/images/img/chanp2.png" alt="" class="img22" v-animate />
@@ -34,6 +35,42 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import Player, { Events } from 'xgplayer' // 引入 xgplayer
+import 'xgplayer/dist/index.min.css' // 引入样式
+
+const conf = {
+  id: 'xgPlayerWrap', // 播放器占位元素的 ID
+  width: '90%', // 播放器宽度
+  height: '340px',
+  url: '/public/video/video.mov', // 视频源
+  poster: '/public/images/img/vido.png', // 视频封面
+  autoplay: false, // 是否自动播放
+  fitVideoSize: 'fixWidth'
+}
+
+let player = null
+
+onMounted(() => {
+  player = new Player(conf)
+
+  // 添加事件监听
+  player.on(Events.PLAY, (ev) => {
+    // console.log('-播放开始-', ev)
+  })
+
+  player.on(Events.PAUSE, (ev) => {
+    // console.log('-播放结束-', ev)
+  })
+
+  player.on('loadedmetadata', (ev) => {
+    // console.log('-媒体数据加载好了-', ev)
+  })
+
+  player.on(Events.SEEKED, (ev) => {
+    console.log('-跳着播放-', ev)
+  })
+})
 </script>
 
 <style scoped lang="scss">
@@ -207,6 +244,16 @@
       }
       .content_right {
         position: relative;
+        width: 50%;
+        #xgPlayerWrap {
+          flex: auto;
+          position: absolute;
+          top: -100px;
+        }
+        #xgPlayerWrap video {
+          width: 90%;
+          position: absolute;
+        }
         .img1 {
           position: absolute;
           top: 0px;
@@ -217,10 +264,10 @@
         .img2 {
           position: absolute;
           right: 200px;
-          top: 500px;
+          top: 350px;
           width: 798px;
           img {
-            width: 100%;
+            width: 80%;
             user-select: none;
           }
         }
@@ -324,7 +371,16 @@
         }
       }
       .content_right {
+        width: 50%;
         position: relative;
+        #xgPlayerWrap {
+          flex: auto;
+          position: absolute;
+          top: -100px;
+        }
+        #xgPlayerWrap video {
+          width: 100%;
+        }
         .img1 {
           position: absolute;
           top: 0px;
@@ -334,9 +390,9 @@
         }
         .img2 {
           position: absolute;
-          right: 120px;
-          top: 350px;
-          width: 447px;
+          right: 100px;
+          top: 300px;
+          width: 547px;
           img {
             width: 100%;
             user-select: none;
@@ -443,6 +499,15 @@
       }
       .content_right {
         position: relative;
+        width: 50%;
+        #xgPlayerWrap {
+          flex: auto;
+          position: absolute;
+          top: -100px;
+        }
+        #xgPlayerWrap video {
+          width: 100%;
+        }
         .img1 {
           position: absolute;
           top: 0px;
@@ -453,9 +518,9 @@
 
         .img2 {
           position: absolute;
-          right: -100px;
+          right: 50px;
           top: 300px;
-          width: 347px;
+          width: 387px;
           img {
             width: 100%;
             user-select: none;
@@ -545,6 +610,13 @@
         height: 306px;
         position: relative;
         z-index: 999;
+        // width: 50%;
+        #xgPlayerWrap {
+          flex: auto;
+        }
+        #xgPlayerWrap video {
+          width: 100%;
+        }
         // background-image: radial-gradient(
         //     closest-side,
         //     rgba(178, 241, 234, 0.45),
@@ -578,9 +650,11 @@
         }
         .img2 {
           position: absolute;
-          right: 120px;
-          top: 200px;
+          right: 50%;
+          transform: translateX(50%);
+          top: 370px;
           width: 247px;
+
           // background-image: radial-gradient(
           //     closest-side,
           //     rgba(178, 241, 234, 0.45),
