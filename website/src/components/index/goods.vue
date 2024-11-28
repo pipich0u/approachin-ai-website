@@ -37,7 +37,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import Player from 'xgplayer' // 引入 xgplayer
-import 'xgplayer/dist/index.min.css' // 引入样式
+// import 'xgplayer/dist/index.min.css' // 引入样式
 
 const conf = {
   id: 'xgPlayerWrap', // 播放器占位元素的 ID
