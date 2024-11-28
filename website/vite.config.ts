@@ -43,7 +43,7 @@ export default defineConfig({
           lodash: ['lodash'],
         }
       },
-      external: ['element-plus/es/locale']
+      external: ['element-plus/es/locale','xgplayer']
     }
   },
 })

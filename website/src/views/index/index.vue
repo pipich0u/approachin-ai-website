@@ -149,7 +149,7 @@ const handleWheel = (event: WheelEvent) => {
 }
 
 const _isMobile = () => {
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera?.tostring()
   isPhone.value =
     /android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos|iphone|ipod|ios|ipad|iemobile|opera mobi|windows phone/i.test(
       userAgent
