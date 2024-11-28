@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import Player, { Events } from 'xgplayer' // 引入 xgplayer
+import Player from 'xgplayer' // 引入 xgplayer
 import 'xgplayer/dist/index.min.css' // 引入样式
 
 const conf = {
@@ -55,21 +55,21 @@ onMounted(() => {
   player = new Player(conf)
 
   // 添加事件监听
-  player.on(Events.PLAY, (ev) => {
-    // console.log('-播放开始-', ev)
-  })
+  // player.on(Events.PLAY, (ev) => {
+  //   // console.log('-播放开始-', ev)
+  // })
 
-  player.on(Events.PAUSE, (ev) => {
-    // console.log('-播放结束-', ev)
-  })
+  // player.on(Events.PAUSE, (ev) => {
+  //   // console.log('-播放结束-', ev)
+  // })
 
-  player.on('loadedmetadata', (ev) => {
-    // console.log('-媒体数据加载好了-', ev)
-  })
+  // player.on('loadedmetadata', (ev) => {
+  //   // console.log('-媒体数据加载好了-', ev)
+  // })
 
-  player.on(Events.SEEKED, (ev) => {
-    console.log('-跳着播放-', ev)
-  })
+  // player.on(Events.SEEKED, (ev) => {
+  //   console.log('-跳着播放-', ev)
+  // })
 })
 </script>
 
