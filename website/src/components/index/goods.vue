@@ -41,8 +41,9 @@ import Player from 'xgplayer' // 引入 xgplayer
 
 const conf = {
   id: 'xgPlayerWrap', // 播放器占位元素的 ID
-  width: '90%', // 播放器宽度
-  height: '340px',
+  width: '700px', // 播放器宽度
+  height: '380px',
+  // url: '/public/video.mov', // 视频源
   url: '/public/video/video.mov', // 视频源
   poster: '/public/images/img/vido.png', // 视频封面
   autoplay: false, // 是否自动播放
@@ -377,6 +378,8 @@ onMounted(() => {
           flex: auto;
           position: absolute;
           top: -100px;
+          width: 600px !important;
+          height: 340px !important;
         }
         #xgPlayerWrap video {
           width: 100%;
@@ -504,6 +507,8 @@ onMounted(() => {
           flex: auto;
           position: absolute;
           top: -100px;
+          width: 500px !important;
+          height: 280px !important;
         }
         #xgPlayerWrap video {
           width: 100%;
@@ -613,6 +618,8 @@ onMounted(() => {
         // width: 50%;
         #xgPlayerWrap {
           flex: auto;
+          width: 100% !important;
+          height:180px !important;
         }
         #xgPlayerWrap video {
           width: 100%;
@@ -652,7 +659,7 @@ onMounted(() => {
           position: absolute;
           right: 50%;
           transform: translateX(50%);
-          top: 370px;
+          top: 230px;
           width: 247px;
 
           // background-image: radial-gradient(
