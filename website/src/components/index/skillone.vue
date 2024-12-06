@@ -52,6 +52,12 @@
 </script>
 
 <style scoped lang="scss">
+.skill_content {
+  min-height: 675px;
+  overflow: hidden;
+  // overflow-y: auto;
+}
+
 @media only screen and (min-width: 1920px) {
   .skill_content {
     width: calc(100% - 200px);
@@ -440,7 +446,7 @@
   .skill_content {
     width: calc(100% - 100px);
     height: calc(100vh - 200px);
-    padding: 100px 50px;
+    padding: 100px 50px 50px 50px;
     background: #000;
     color: white;
     .title {
@@ -848,6 +854,198 @@
             font-size: 14px;
             font-weight: 305;
             line-height: 20px;
+            letter-spacing: 0.02em;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-height: 755px) {
+  .skill_content {
+    width: calc(100% - 100px);
+    height: calc(100vh - 200px);
+    padding: 100px 50px 50px 50px;
+    background: #000;
+    color: white;
+    .title {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        font-family: MiSans;
+        font-size: 36px;
+        font-weight: 520;
+        line-height: 60px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        span {
+          color: rgba(177, 157, 255, 1);
+        }
+      }
+      div {
+        // width: 60%;
+        display: flex;
+        align-items: flex-start;
+        font-family: MiSans;
+        font-size: 17px;
+        font-weight: 330;
+        line-height: 32 px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #a8a8a9;
+      }
+    }
+    .content {
+      width: 100%;
+      height: calc(100% - 200px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .modcentent {
+        display: none;
+      }
+      .top {
+        width: 100%;
+        height: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // background: #343436;
+        border-radius: 8px;
+        // padding: 0 100px;
+        .it {
+          width: 25%;
+          height: calc(190px - 80px);
+          display: flex;
+          flex-direction: column;
+          border-radius: 59px;
+          background-image: url('/public/images/img/jiantou.png'),
+            linear-gradient(59.7deg, #303030 -40.74%, #000000 106.58%);
+          background-size: 200px 80%, cover;
+          background-repeat: no-repeat, no-repeat;
+          background-position: 70% 50%, center;
+          padding: 40px 50px;
+          color: #d0d0d0;
+          user-select: none;
+          .text {
+            font-family: MiSans;
+            font-size: 20px;
+            font-weight: 520;
+            line-height: 40px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            color: white;
+            margin-left: 8px;
+          }
+          .num {
+            margin-left: 8px;
+            margin-top: 30px;
+            font-family: MiSans;
+            font-size: 30px;
+            font-weight: 520;
+            line-height: 40px;
+            letter-spacing: 0.02em;
+            text-align: left;
+          }
+        }
+        .items {
+          transform: rotateX(0deg);
+          justify-content: flex-end;
+          align-items: flex-start;
+          overflow: hidden;
+          background-image: linear-gradient(59.7deg, #303030 -40.74%, #000000 106.58%);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          justify-content: flex-start;
+          &::before {
+            content: ''; /* 伪元素内容为空 */
+            position: absolute; /* 绝对定位 */
+            top: 0; /* 距离顶部0 */
+            left: 0; /* 距离左侧0 */
+            width: 100%; /* 设置伪元素宽度为100% */
+            height: 100%; /* 设置伪元素高度为100% */
+            background-image: url('/public/images/img/jiantou.png');
+            background-size: 200px 80%;
+            background-repeat: no-repeat;
+            background-position: 70% 50%;
+            transform: scale(1, -1); /* 将伪元素同时旋转180度 */
+          }
+          .num {
+            margin-top: 20px;
+          }
+        }
+      }
+      .bottom {
+        width: 100%;
+        // height: calc(100% - 290px);
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        .box {
+          width: 40%;
+          height: calc(280px - 80px);
+          padding: 20px 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          background-image: linear-gradient(59.7deg, #303030 -40.74%, #000000 106.58%);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 50px;
+          align-items: flex-start;
+          .box_title {
+            font-family: MiSans;
+            font-size: 20px;
+            font-weight: 520;
+            line-height: 40px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            position: relative;
+            &::before {
+              content: '';
+              position: absolute;
+              top: 5px;
+              left: -10px;
+              width: 5px;
+              height: 10px;
+              border-top: 3px solid #fff;
+              border-left: 3px solid #fff;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 5px; /* 设置为右下角 */
+              right: -10px; /* 设置为右下角 */
+              width: 5px;
+              height: 10px;
+              border-bottom: 3px solid #fff; /* 下边框 */
+              border-right: 3px solid #fff; /* 右边框 */
+            }
+          }
+          .txt {
+            font-family: MiSans;
+            font-size: 16px;
+            font-weight: 330;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            columns: #e8e8e8;
+          }
+          .title_content {
+            width: 100%;
+            color: #a3a3a3;
+            font-family: MiSans;
+            font-size: 12px;
+            font-weight: 305;
+            line-height: 24px;
             letter-spacing: 0.02em;
             text-align: left;
           }
