@@ -204,7 +204,8 @@ const itemList = ref([
             letter-spacing: 0.02em;
             text-align: left;
             position: relative;
-            margin-top: 60%;
+            margin-top: 50%;
+            white-space: nowrap;
             &::before {
               content: '';
               position: absolute;
@@ -221,7 +222,7 @@ const itemList = ref([
             font-family: MiSans;
             font-size: 18px;
             font-weight: 330;
-            line-height: 28px;
+            line-height: 26px;
             letter-spacing: 0.02em;
             text-align: left;
           }
@@ -268,9 +269,10 @@ const itemList = ref([
       .item {
         width: 30%;
         height: calc(100% - 100px);
-        margin: 0 20px;
+        margin: 0 10px;
         position: relative;
         border-radius: 28px;
+        // overflow: hidden;
         img {
           position: absolute;
           width: 100%;
@@ -295,13 +297,13 @@ const itemList = ref([
           border-radius: 28px;
           .title {
             font-family: MiSans;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 420;
             line-height: 30px;
             letter-spacing: 0.02em;
             text-align: left;
             position: relative;
-            margin-top: 60%;
+            margin-top: 40%;
             &::before {
               content: '';
               position: absolute;
@@ -318,7 +320,7 @@ const itemList = ref([
             font-family: MiSans;
             font-size: 16px;
             font-weight: 330;
-            line-height: 25px;
+            line-height: 22px;
             letter-spacing: 0.02em;
             text-align: left;
           }
@@ -399,6 +401,104 @@ const itemList = ref([
               position: absolute;
               top: 10px;
               left: -10px;
+              width: 15px;
+              height: 15px;
+              border-top: 2px solid rgba(176, 164, 255, 1);
+              border-left: 2px solid rgba(176, 164, 255, 1);
+            }
+          }
+          .text {
+            position: relative;
+            font-family: MiSans;
+            font-size: 16px;
+            font-weight: 330;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-height: 755px) {
+   .cpt_content {
+    width: calc(100% - 100px);
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 100px 50px 50px 50px;
+    background: #000;
+    color: white;
+    background-image: radial-gradient(
+      closest-side,
+      rgba(31, 13, 107, 0.9),
+      rgba(31, 13, 107, 0.6),
+      rgba(31, 13, 107, 0)
+    );
+    background-size: 110vmax 80vmax;
+    background-position: center 10vmax;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    h2 {
+      font-family: MiSans;
+      font-size: 50px;
+      font-weight: 520;
+      line-height: 120px;
+      letter-spacing: 0.02em;
+      text-align: center;
+    }
+    .content {
+      width: 100%;
+      height: calc(100% - 120px);
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+      .item {
+        width: 30%;
+        height: calc(100% - 50px);
+        margin: 0 10px;
+        position: relative;
+        border-radius: 28px;
+        // overflow: hidden;
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          border-radius: 28px;
+          user-select: none;
+        }
+        .desc {
+          width: calc(100% - 80px);
+          height: fit-content;
+          display: flex;
+          flex-direction: column;
+          // justify-content: space-around;
+          align-items: flex-start;
+          // position: absolute;
+          // top: 38%;
+          // left: 0;
+          padding: 0 40px;
+          // background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+          border-radius: 28px;
+          .title {
+            font-family: MiSans;
+            font-size: 18px;
+            font-weight: 420;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            position: relative;
+            margin-top: 40%;
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0px;
+              left: -15px;
               width: 15px;
               height: 15px;
               border-top: 2px solid rgba(176, 164, 255, 1);
