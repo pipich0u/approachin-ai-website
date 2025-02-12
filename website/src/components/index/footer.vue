@@ -34,6 +34,12 @@
         <div class="title">企业地址</div>
         <div class="text">北京市海淀区东升大厦AB座</div>
       </div>
+      <div class="we_wx we">
+        <div class="title">产品预约试用</div>
+        <div class="img">
+          <img src="/public/images/qiyewenxin.jpg" alt="" />
+        </div>
+      </div>
       <div class="we_gzh we">
         <div class="title">微信公众号</div>
         <div class="img">
@@ -126,6 +132,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        .img {
+          width: 100px;
+          img {
+            width: 100%;
+          }
+        }
         .title {
           margin-bottom: 65px;
           font-family: MiSans VF;
@@ -226,6 +238,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        .img {
+          width: 100px;
+          img {
+            width: 100%;
+          }
+        }
         .title {
           margin-bottom: 65px;
           font-family: MiSans VF;
@@ -334,6 +352,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        .img {
+          width: 100px;
+          img {
+            width: 100%;
+          }
+        }
         .title {
           // margin-bottom: 65px;
           font-family: MiSans VF;
@@ -451,6 +475,12 @@
         flex-direction: column;
         align-items: flex-start;
         margin: 20px 0;
+        .img {
+          width: 80px;
+          img {
+            width: 100%;
+          }
+        }
         .title {
           // margin-bottom: 15px;
           font-family: MiSans VF;
