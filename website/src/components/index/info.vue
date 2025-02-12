@@ -73,6 +73,9 @@ const navigateTo = (url: string) => {
       .el-carousel__item {
         width: 100%;
         max-width: 2300px !important;
+        img {
+          object-fit: contain;
+        }
       }
     }
   }
@@ -127,6 +130,7 @@ const navigateTo = (url: string) => {
             width: 100%;
             height: 100%;
             position: relative;
+            object-fit: contain;
           }
           .info_desc {
             width: 100%;
@@ -220,6 +224,7 @@ const navigateTo = (url: string) => {
             width: 100%;
             height: 100%;
             position: relative;
+            object-fit: contain;
           }
           .info_desc {
             width: 100%;
@@ -313,6 +318,7 @@ const navigateTo = (url: string) => {
             width: 100%;
             height: 100%;
             position: relative;
+            object-fit: contain;
           }
           .info_desc {
             width: 100%;
@@ -400,6 +406,7 @@ const navigateTo = (url: string) => {
           img {
             width: 100%;
             height: 80%;
+            object-fit: contain;
             position: relative;
           }
           .info_desc {
@@ -491,6 +498,7 @@ const navigateTo = (url: string) => {
             width: 100%;
             height: 100%;
             position: relative;
+            object-fit: contain;
           }
           .info_desc {
             width: 100%;
