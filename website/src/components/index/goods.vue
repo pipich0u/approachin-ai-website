@@ -816,7 +816,7 @@ onMounted(() => {
   // }
   .goods_content {
     width: calc(100% - 100px);
-    height: calc(100vh - 200px);
+    // height: calc(100vh - 200px);
     padding: 100px 50px;
     background: rgb(0, 0, 0);
     display: flex;
@@ -909,13 +909,13 @@ onMounted(() => {
       }
       .content_right {
         position: relative;
-        width: 50%;
+        // width: 50%;
         #xgPlayerWrap {
           flex: auto;
           position: absolute;
-          transform: translateY(50%);
+          // transform: translateY(50%);
           // top: -100px;
-          width: 500px !important;
+          width: 100%;
           height: 280px !important;
         }
         #xgPlayerWrap video {

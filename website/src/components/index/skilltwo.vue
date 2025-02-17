@@ -296,7 +296,7 @@
     position: relative;
     .header {
       width: 100%;
-      height: 100px;
+      height: fit-content;
       display: flex;
       flex-direction: column;
       align-items: flex-start;

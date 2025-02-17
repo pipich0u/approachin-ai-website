@@ -643,7 +643,7 @@
     color: white;
     .title {
       width: 100%;
-      height: 100px;
+      height: fit-content;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -863,7 +863,8 @@
 @media only screen and (max-height: 766px) {
   .skill_content {
     .title {
-      height: 200px;
+      // height: 120px;
+      height: fit-content;
     }
     .content {
       width: 100%;
