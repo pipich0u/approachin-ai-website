@@ -34,13 +34,13 @@
         <div class="title">企业地址</div>
         <div class="text">北京市海淀区东升大厦AB座</div>
       </div>
-      <div class="we_wx we">
+      <div class="we_wx we bt-1">
         <div class="title">产品预约试用</div>
         <div class="img">
           <img src="/public/images/qiyewenxin.jpg" alt="" />
         </div>
       </div>
-      <div class="we_gzh we">
+      <div class="we_gzh we bt-1">
         <div class="title">微信公众号</div>
         <div class="img">
           <img src="/public/images/img/gzh.png" alt="" />
@@ -346,11 +346,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       .we {
         height: 100px;
         margin-left: 10px;
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         align-items: flex-start;
         .img {
           width: 100px;
@@ -360,6 +361,7 @@
         }
         .title {
           // margin-bottom: 65px;
+          width: 100px;
           font-family: MiSans VF;
           font-size: 18px;
           font-weight: 380;
@@ -383,6 +385,12 @@
             width: 80px;
           }
         }
+      }
+      .bit-1 {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+
       }
     }
   }
@@ -457,7 +465,7 @@
         font-family: MiSans;
         font-size: 14px;
         font-weight: 305;
-        line-height: 40px;
+        line-height: 24px;
         letter-spacing: 0.02em;
         text-align: left;
         color: rgb(173, 170, 185);
@@ -474,7 +482,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin: 20px 0;
+        margin: 10px 0;
         .img {
           width: 80px;
           img {

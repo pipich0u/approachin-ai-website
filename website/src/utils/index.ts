@@ -5,12 +5,21 @@ const ob = new IntersectionObserver((entries) => {
     for (const entry of entries) {
         if (entry.isIntersecting) {
             const animation = animationMap.get(entry.target);
-            animation.play();
+            if (animation) {
+                animation.play();
+                // 动画播放完成后停止观察
+                animation.onfinish = () => {
+                    ob.unobserve(entry.target);
+                    animationMap.delete(entry.target);
+                };
+            }
         } else {
-            // 当元素离开视口时，重新设置动画状态
+            // 当元素离开视口时，如果动画未播放，则取消动画
             const animation = animationMap.get(entry.target);
-            animation.cancel();
-            animation.currentTime = 0;
+            if (animation && animation.playState !== 'finished') {
+                animation.cancel();
+                animation.currentTime = 0;
+            }
         }
     }
 }, {
@@ -58,6 +67,11 @@ const animateDirective = {
         ob.observe(el);
     },
     unmounted(el: HTMLElement) {
+        const animation = animationMap.get(el);
+        if (animation) {
+            animation.cancel();
+            animationMap.delete(el);
+        }
         ob.unobserve(el);
     },
 };
