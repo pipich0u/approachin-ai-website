@@ -1,5 +1,5 @@
 <template>
-  <div class="skill_content scrollbar">
+  <div class="skill_content">
     <div class="header">
       <div class="title">开源个人版异构协同推理框架</div>
       <div class="ktr">KTransformers</div>
@@ -296,17 +296,16 @@
     position: relative;
     .header {
       width: 100%;
-      height: 180px;
+      height: fit-content;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       .title,
       .ktr {
         font-family: MiSans;
-        font-size: 40px;
+        font-size: 32px;
         font-weight: 520;
-        line-height: 56px;
-        letter-spacing: 0.02em;
+        line-height: 42px;
         text-align: left;
       }
       .ktr {
@@ -335,15 +334,15 @@
           align-items: flex-start;
           img {
             user-select: none;
-            width: 46px;
-            height: 30px;
+            width: 30px;
+            height: 24px;
           }
           .text {
             margin: 10px 0;
             font-family: MiSans;
-            font-size: 20px;
+            font-size: 14px;
             font-weight: 330;
-            line-height: 36px;
+            line-height: 24px;
             letter-spacing: 0.02em;
             text-align: left;
           }
@@ -351,12 +350,12 @@
       }
       .left {
         // margin-top: 20px;
-        width: 100%;
-        height: 500px;
+        width: 80%;
+        height: fit-content;
         position: relative;
         img {
-          width: calc(100% + 80px);
-          left: -50px;
+          width: calc(80% + 80px);
+          left: -100px;
           top: 20px;
           position: absolute;
         }
@@ -366,54 +365,9 @@
 }
 @media only screen and (max-height: 824px) {
   .skill_content {
-    width: calc(100% - 100px);
-    height: calc(100vh - 150px);
-    padding: 100px 50px 50px 50px;
     .content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: calc(100vh - 350px);
-
       .right {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        .item {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          img {
-            user-select: none;
-            width: 50px;
-            height: 34px;
-          }
-          .text {
-            margin-top: 15px;
-            font-family: MiSans;
-            font-size: 16px;
-            font-weight: 330;
-            line-height: 32px;
-            letter-spacing: 0.02em;
-            text-align: left;
-          }
-        }
-      }
-      .left {
-        width: 50%;
-        height: 100%;
-        position: relative;
-        img {
-          width: calc(80% + 80px);
-          left: -100px;
-          top: 10vh;
-          position: absolute;
-        }
+        width: 100%;
       }
     }
   }

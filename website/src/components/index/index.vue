@@ -637,6 +637,7 @@
           font-size: 20px;
           font-weight: 200;
           line-height: 24px;
+          margin-top: 20px;
         }
         .p2 {
           display: none;
@@ -647,7 +648,7 @@
           font-family: MiSans;
           font-size: 20px;
           font-weight: 250;
-          line-height: 46px;
+          line-height: 36px;
           letter-spacing: 0.02em;
           // color: #9dbaf0;
           user-select: none;

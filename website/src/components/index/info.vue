@@ -340,18 +340,18 @@ const navigateTo = (url: string) => {
               flex-direction: column;
               h3 {
                 font-family: MiSans;
-                font-size: 42px;
+                font-size: 38px;
                 font-weight: 450;
-                line-height: 60px;
+                line-height: 48px;
                 letter-spacing: 0.02em;
               }
               p {
                 display: flex;
                 align-items: flex-start;
                 font-family: MiSans;
-                font-size: 24px;
+                font-size: 22px;
                 font-weight: 380;
-                line-height: 48px;
+                line-height: 42px;
                 letter-spacing: 0.02em;
                 margin-left: 5 0px;
               }
@@ -520,18 +520,18 @@ const navigateTo = (url: string) => {
               flex-direction: column;
               h3 {
                 font-family: MiSans;
-                font-size: 28px;
+                font-size: 24px;
                 font-weight: 450;
-                line-height: 50px;
+                line-height: 32px;
                 letter-spacing: 0.02em;
               }
               p {
                 display: flex;
                 align-items: flex-start;
                 font-family: MiSans;
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 380;
-                line-height: 48px;
+                line-height: 32px;
                 letter-spacing: 0.02em;
                 margin-left: 5 0px;
               }

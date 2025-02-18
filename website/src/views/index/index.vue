@@ -24,8 +24,9 @@
       <div class="logo_box">
         <img src="/public/images/img/logo-fff.png" alt="" />
       </div>
-      <div>
-        <i class="iconfont icon-xuanxiang"></i>
+      <div @click="onClickMenu" class="menu">
+        <!-- <i class="iconfont icon-xuanxiang"></i> -->
+        联系我们
       </div>
     </div>
     <!-- v-if="!isMobile" -->
@@ -122,7 +123,9 @@ const scrollToComponent = (index: number) => {
     console.error(`Element not found for index: ${index}`)
   }
 }
-
+const onClickMenu = () => {
+  scrollToComponent(6)
+}
 const handleWheel = (event: WheelEvent) => {
   // event.preventDefault()
   if (isMobile.value) {
@@ -510,10 +513,14 @@ onUnmounted(() => {
           color: #fff;
         }
       }
+      .menu{
+        color: white;
+        font-size: 16px;
+      }
     }
 
     .navbar-scrolled {
-      background-color: rgba(0, 0, 0, 0.8); /* 滚动后背景色 */
+      background-color: rgba(0, 0, 0, 1); /* 滚动后背景色 */
     }
     .navbar-scrolled-phone {
       background-color: rgba(0, 0, 0, 1); /* 滚动后背景色 */

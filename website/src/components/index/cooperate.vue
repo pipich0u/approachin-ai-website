@@ -220,9 +220,9 @@ const itemList = ref([
           .text {
             position: relative;
             font-family: MiSans;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 330;
-            line-height: 26px;
+            line-height: 22px;
             letter-spacing: 0.02em;
             text-align: left;
           }
@@ -318,9 +318,9 @@ const itemList = ref([
           .text {
             position: relative;
             font-family: MiSans;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 330;
-            line-height: 22px;
+            line-height: 20px;
             letter-spacing: 0.02em;
             text-align: left;
           }
@@ -385,7 +385,7 @@ const itemList = ref([
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          padding:200px 40px;
+          padding: 200px 40px;
           border-radius: 28px;
           .title {
             font-family: MiSans;
@@ -422,9 +422,9 @@ const itemList = ref([
   }
 }
 @media only screen and (max-height: 755px) {
-   .cpt_content {
+  .cpt_content {
     width: calc(100% - 100px);
-    height: calc(100vh - 150px);
+    // height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -443,9 +443,9 @@ const itemList = ref([
     overflow: hidden;
     h2 {
       font-family: MiSans;
-      font-size: 50px;
+      font-size: 46px;
       font-weight: 520;
-      line-height: 120px;
+      line-height: 80px;
       letter-spacing: 0.02em;
       text-align: center;
     }
@@ -453,13 +453,13 @@ const itemList = ref([
       width: 100%;
       height: calc(100% - 120px);
       display: flex;
-
+      // flex-direction: row !important;
       justify-content: center;
       align-items: center;
       .item {
-        width: 30%;
-        height: calc(100% - 50px);
-        margin: 0 10px;
+        width: 100%;
+        height: 300px;
+        margin: 10px 5px;
         position: relative;
         border-radius: 28px;
         // overflow: hidden;
@@ -473,27 +473,24 @@ const itemList = ref([
           user-select: none;
         }
         .desc {
-          width: calc(100% - 80px);
+          width: calc(100% - 60px);
           height: fit-content;
           display: flex;
           flex-direction: column;
           // justify-content: space-around;
           align-items: flex-start;
-          // position: absolute;
-          // top: 38%;
-          // left: 0;
-          padding: 0 40px;
-          // background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+          padding: 0 30px;
           border-radius: 28px;
+
           .title {
             font-family: MiSans;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 420;
-            line-height: 30px;
-            letter-spacing: 0.02em;
+            line-height: 26px;
+            // letter-spacing: 0.02em;
             text-align: left;
             position: relative;
-            margin-top: 40%;
+            margin-top: 30%;
             &::before {
               content: '';
               position: absolute;
@@ -508,9 +505,9 @@ const itemList = ref([
           .text {
             position: relative;
             font-family: MiSans;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 330;
-            line-height: 24px;
+            line-height: 22px;
             letter-spacing: 0.02em;
             text-align: left;
           }
