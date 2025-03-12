@@ -33,17 +33,17 @@ export default defineConfig({
     }
   },
 
-  build: {
-    chunkSizeWarningLimit: 1500,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          // vue vue-router合并打包
-          vue: ['vue', 'vue-router'],
-          lodash: ['lodash'],
-        }
-      },
-      external: ['element-plus/es/locale','xgplayer']
-    }
-  },
+  // build: {
+  //   chunkSizeWarningLimit: 1500,
+  //   rollupOptions: {
+  //     output: {
+  //       manualChunks: {
+  //         // vue vue-router合并打包
+  //         vue: ['vue', 'vue-router'],
+  //         lodash: ['lodash'],
+  //       }
+  //     },
+  //     external: ['element-plus/es/locale','xgplayer']
+  //   }
+  // },
 })

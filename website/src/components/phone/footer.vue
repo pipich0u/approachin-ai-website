@@ -20,7 +20,7 @@
       </div>
       <div class="we_address we">
         <div class="title">企业地址</div>
-        <div class="text">北京市海淀区优胜大厦D座12层</div>
+        <div class="text">北京市海淀区优盛大厦D座12层</div>
       </div>
       <div class="we_gzh we">
         <div class="title">微信公众号</div>
