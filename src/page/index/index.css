@@ -16,27 +16,23 @@
     overflow: hidden;
   }
 
-.section .title {
+/* .section .title {
   color: white;
   font-size: 3rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   opacity: 0;
-  /* transform: translateY(50px); */
+  transform: translateY(50px);
   transition: all 0.8s ease;
-}
+} */
 
-.section.active .title {
+/* .section.active .title {
   opacity: 1;
   transform: translateY(0);
-}
+} */
 .fp-watermark{
   display: none;
 }
-.section-1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1200');
-  background-size: cover;
-  background-position: center;
-}
+
 
 .section-2 {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.pexels.com/photos/2623675/pexels-photo-2623675.jpeg');

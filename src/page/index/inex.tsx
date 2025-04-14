@@ -2,8 +2,14 @@ import React, { useRef, useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import TopNav from './components/topNav';
 import './index.css';
-
-
+import PageIndex from './components/index/index'
+import PageProduct from './components/product/index'
+import PageTechnology from './components/technology/index'
+import PageKt from './components/KT/index'
+import PageInfo from './components/info/index'
+import PageContact from './components/contact/index'
+import PageCase from './components/case/index'
+import PageTeam from './components/team/index'
 
 interface FullpageApi {
     silentMoveTo: (section: number, slide?: number) => void;
@@ -50,32 +56,14 @@ export default function Index() {
                 render={() => {
                     return (
                         <ReactFullpage.Wrapper>
-                            <div className="section section-1">
-                                <div className="title">首页</div>
-                            </div>
-                            <div className="section section-2">
-                                <div className="slide slide-1">
-                                    <div>产品展示</div>
-                                </div>
-                                <div className="slide slide-2">
-                                    <div>产品特点</div>
-                                </div>
-                            </div>
-                            <div className="section section-3">
-                                <div className="title">技术优势</div>
-                            </div>
-                            <div className="section section-4">
-                                <div className="title">KTransformers</div>
-                            </div>
-                            <div className="section section-5">
-                                <div className="title">成功案例</div>
-                            </div>
-                            <div className="section section-6">
-                                <div className="title">新闻资讯</div>
-                            </div>
-                            <div className="section section-7">
-                                <div className="title">联系我们</div>
-                            </div>
+                            <PageIndex />
+                            <PageProduct />
+                            <PageTechnology />
+                            <PageKt />
+                            <PageCase />
+                            <PageInfo />
+                            <PageTeam />
+                            <PageContact />
                         </ReactFullpage.Wrapper>
                     );
                 }}

@@ -1,0 +1,61 @@
+.section-1 {
+    background:url('/src/assets/images/index.png');
+    background-size: cover;
+    background-position: center;
+    /* background: ; */
+    /* background:; */
+
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.title-top {
+    font-family: MiSans;
+    font-weight: 305;
+    font-size: 19.43px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    background: linear-gradient(269.87deg, #C2A5FF -10.1%, rgba(255, 255, 255, 0.8) 49.85%),
+        linear-gradient(89.87deg, #B2A6FF 0.11%, rgba(255, 255, 255, 0) 50.16%);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 设置文本填充颜色为透明 */
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+.title-center {
+    font-family: MiSans;
+    font-weight: 450;
+    font-size: 54px;
+    line-height: 64px;
+    letter-spacing: 2%;
+    text-align: center;
+    margin-top: 8px;
+    background: linear-gradient(269.87deg, #D0CCFF -10.1%, rgba(255, 255, 255, 0.8) 49.85%),
+        linear-gradient(90.25deg, #B4A8FF 0.22%, rgba(255, 255, 255, 0) 102.33%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 设置文本填充颜色为透明 */
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+.line{
+    padding: 25px 0;
+}
+.title-bottom {
+    font-family: MiSans;
+    font-weight: 305;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 2%;
+    text-align: center;
+    color: #FFFFFFB2;
+
+}
