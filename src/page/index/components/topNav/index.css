@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 1000px;
 }
 
 .nav-container {
@@ -19,7 +20,7 @@
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
-  gap: 48px;
+  gap: 28px;
   padding: 0 4px;
 }
 
@@ -68,5 +69,20 @@
 
   to {
     transform: scaleX(1);
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav-item {
+    color: #FFFFFF80;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    font-family: MiSans;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  
   }
 }

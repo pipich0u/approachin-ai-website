@@ -41,7 +41,7 @@ export default function Index() {
     };
 
     return (
-        <>
+        <div className="w-100 h-100 app">
             <TopNav onNavigate={handleNavigate} activeSection={activeSection} />
             <ReactFullpage
                 //@ts-ignore
@@ -71,6 +71,6 @@ export default function Index() {
                     enabled: false
                 }}
             />
-        </>
+        </div>
     );
 }
