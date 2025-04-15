@@ -3,6 +3,8 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    /* width: 100vw; */
+    padding: 0 !important;
 }
 
 .center-shadow {
@@ -22,7 +24,7 @@
 .product-box {
     box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 130px 98px;
     display: flex;
     justify-content: space-between;
@@ -90,21 +92,22 @@
 }
 
 .product-box-right {
-    width: 50%;
+    width: 44%;
     position: relative;
     min-width: 592px;
     /* overflow: hidden; */
 }
 
-.product-box-right-img{
+.product-box-right-img {
     position: absolute;
     width: 100%;
     height: 100%;
     right: -98px;
-    top: 69px;
+    top: 59px;
     overflow: hidden;
 }
-.product-box-right-img img{
+
+.product-box-right-img img {
     width: 100%;
 
 }

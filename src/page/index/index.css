@@ -14,7 +14,9 @@
 .app {
   min-width: 1000px;
 }
-
+.fp-overflow{
+  width: 100%;
+}
 .section {
   box-sizing: border-box;
   height: 100vh;

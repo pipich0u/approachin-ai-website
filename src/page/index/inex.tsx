@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 //@ts-ignore
 import ReactFullpage from '@fullpage/react-fullpage';
-import TopNav from './components/topNav';
+import TopNav from './components/topNav/index';
 import './index.css';
 import PageIndex from './components/index/index'
 import PageProduct from './components/product/index'
