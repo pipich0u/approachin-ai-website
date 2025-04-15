@@ -20,7 +20,7 @@ const TopNav: React.FC<TopNavProps> = ({ onNavigate, activeSection }) => {
   return (
     <nav className="top-nav">
       <div className="nav-container">
-        {navItems.map((item, idx) => (
+        {navItems.map((item) => (
           <div
             key={item.id}
             className={`nav-item ${activeSection === item.id ? 'active' : ''}`}
