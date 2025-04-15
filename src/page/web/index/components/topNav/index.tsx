@@ -24,7 +24,7 @@ const TopNav: React.FC<TopNavProps> = ({ onNavigate, activeSection }) => {
         <img src={logo} alt="" />
       </div>
       <div className="nav-container">
-        {navItems.map((item, idx) => (
+        {navItems.map((item) => (
           <div
             key={item.id}
             className={`nav-item ${activeSection === item.id ? 'active' : ''}`}

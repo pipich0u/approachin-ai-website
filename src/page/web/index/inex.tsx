@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
+//@ts-ignore
 import ReactFullpage from '@fullpage/react-fullpage';
 import TopNav from './components/topNav';
 import './index.css';
@@ -24,7 +25,6 @@ type ReactFullpage = {
 export default function Index() {
     const fullpageRef = useRef<ReactFullpage>(null);
     const [activeSection, setActiveSection] = useState(0);
-    const [fullpageApi, setFullpageApi] = useState<any>(null);
 
     const onLeave = (origin: any, destination: any, direction: string) => {
         // console.log(origin, destination, direction, 'ee');

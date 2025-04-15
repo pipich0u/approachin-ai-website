@@ -1,0 +1,14 @@
+.mobile-container {
+  width: 750px;
+  background-color: red;
+}
+
+.section {
+  padding: 20px;  /* 这里的 20px 会被自动转换为 rem */
+}
+
+.title123 {
+  font-size: 32px;  /* 这里的 32px 会被自动转换为 rem */
+  color: #333;
+  margin-bottom: 16px;  /* 这里的 16px 会被自动转换为 rem */
+} 
