@@ -1,0 +1,39 @@
+.section-6 {
+    background-color: black;
+}
+
+/* 滑动导航点样式 */
+.fp-slidesNav ul li a span {
+    background: white !important;
+}
+
+.fp-slidesNav ul li a.active span {
+    background: #ff0000 !important;
+}
+
+/* 自定义导航点样式 */
+#fp-nav ul li a span {
+    background: white !important;
+}
+
+#fp-nav ul li a.active span {
+    background: #ff0000 !important;
+}
+
+/* 水平滑动容器 */
+.slide {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.pexels.com/photos/31606459/pexels-photo-31606459.jpeg?auto=compress&cs=tinysrgb&w=1200');
+}
+
+.slide-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.pexels.com/photos/3727271/pexels-photo-3727271.jpeg?auto=compress&cs=tinysrgb&w=1200');
+}
