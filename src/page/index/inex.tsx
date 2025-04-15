@@ -27,7 +27,7 @@ export default function Index() {
     const [fullpageApi, setFullpageApi] = useState<any>(null);
 
     const onLeave = (origin: any, destination: any, direction: string) => {
-        console.log(origin, destination, direction, 'ee');
+        // console.log(origin, destination, direction, 'ee');
         const sections = document.querySelectorAll('.section');
         sections.forEach(section => section.classList.remove('active'));
         sections[destination.index].classList.add('active');
@@ -42,7 +42,11 @@ export default function Index() {
 
     return (
         <div className="w-100 h-100 app">
+            {/* {
+                activeSection !== 7 && <TopNav onNavigate={handleNavigate} activeSection={activeSection} />
+            } */}
             <TopNav onNavigate={handleNavigate} activeSection={activeSection} />
+
             <ReactFullpage
                 //@ts-ignore
                 ref={fullpageRef}

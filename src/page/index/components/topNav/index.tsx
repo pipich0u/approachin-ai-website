@@ -19,7 +19,7 @@ const TopNav: React.FC<TopNavProps> = ({ onNavigate, activeSection }) => {
   ];
 
   return (
-    <nav className="top-nav">
+    <nav className={`top-nav ${activeSection === 0 ? 'bg-0' : 'bg-1'}`}>
       <div className="logo">
         <img src={logo} alt="" />
       </div>

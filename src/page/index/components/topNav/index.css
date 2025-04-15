@@ -4,15 +4,21 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.6);
+
   padding: 20px 100px;
-  height: 28px;
+  height: 68px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-width: 1000px;
+  box-sizing: border-box;
 }
-
+.bg-1{
+  background: rgba(0, 0, 0, 0.6);
+}
+.bg-0{
+  background: rgba(0, 0, 0, 0);
+}
 .nav-container {
   max-width: 800px;
   width: fit-content;
@@ -52,7 +58,7 @@
   /* font-weight: bold; */
 }
 
-.nav-underline {
+/* .nav-underline {
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -60,7 +66,7 @@
   height: 2px;
   background-color: white;
   animation: slideIn 0.3s ease-in-out;
-}
+} */
 
 @keyframes slideIn {
   from {

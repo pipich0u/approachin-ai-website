@@ -16,7 +16,7 @@
     font-family: MiSans;
     font-weight: 305;
     font-size: 19.43px;
-    line-height: 100%;
+    /* line-height: 100%; */
     letter-spacing: 1%;
     background: linear-gradient(269.87deg, #C2A5FF -10.1%, rgba(255, 255, 255, 0.8) 49.85%),
         linear-gradient(89.87deg, #B2A6FF 0.11%, rgba(255, 255, 255, 0) 50.16%);
@@ -48,6 +48,9 @@
 }
 .line{
     padding: 25px 0;
+}
+.line img{
+    width: 80px;
 }
 .title-bottom {
     font-family: MiSans;
