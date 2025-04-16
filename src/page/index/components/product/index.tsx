@@ -1,6 +1,9 @@
 import './index.css'
-import line from '../../../../assets/images/line.png'
-import productImg from '../../../../assets/images/product.png'
+import line from '@/assets/images/line.png'
+import productImg from '@/assets/images/product.png'
+import useAnimate from '@/common/useAnimate'
+import { RefObject, useRef } from 'react';
+
 const productFeatures = [
     {
         title: '首创以存换算全系统推理架构',
@@ -18,9 +21,13 @@ const productFeatures = [
 ];
 
 export default function PageProduct() {
+    const elementRef = useRef<HTMLImageElement>(null)
+    useAnimate({ elementRef, direction: 'right' });
+
+
     return (
         <div className="section section-2">
-             <div className='center-shadow'></div>
+            <div className='center-shadow'></div>
             <div className='product-box'>
                 <div className='product-box-left'>
                     <div className='product-box-left-title'>
@@ -45,11 +52,11 @@ export default function PageProduct() {
                 </div>
                 <div className='product-box-right'>
                     <div className='product-box-right-img'>
-                        <img src={productImg} alt="" />
+                        <img src={productImg} alt="" ref={elementRef} />
                     </div>
                 </div>
             </div>
-           
+
         </div>
     );
 }
