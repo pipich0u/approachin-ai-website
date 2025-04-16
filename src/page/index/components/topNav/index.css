@@ -8,17 +8,20 @@
   padding: 20px 100px;
   height: 68px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   min-width: 1000px;
   box-sizing: border-box;
 }
-.bg-1{
+
+.bg-1 {
   background: rgba(0, 0, 0, 0.6);
 }
-.bg-0{
+
+.bg-0 {
   background: rgba(0, 0, 0, 0);
 }
+
 .nav-container {
   max-width: 800px;
   width: fit-content;
@@ -67,6 +70,11 @@
   background-color: white;
   animation: slideIn 0.3s ease-in-out;
 } */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
 @keyframes slideIn {
   from {
@@ -89,6 +97,6 @@
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 0%;
-  
+
   }
 }

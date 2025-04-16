@@ -41,7 +41,7 @@ export default function Index() {
     };
 
     return (
-        <div className="w-100 h-100 app">
+        <div className="w-100 h-100">
             {/* {
                 activeSection !== 7 && <TopNav onNavigate={handleNavigate} activeSection={activeSection} />
             } */}
@@ -51,12 +51,11 @@ export default function Index() {
                 //@ts-ignore
                 ref={fullpageRef}
                 licenseKey={''}
-                scrollingSpeed={1000}
-                navigation={false}
-                slidesNavigation={true}
+                scrollingSpeed={800}  // 设置一个较低的滚动速度，或者可以设为 0
+                navigation={false}    // 关闭导航（如果有）
+                slidesNavigation={false}  // 关闭 slide 导航
                 slidesNavPosition="bottom"
                 onLeave={onLeave}
-
                 render={() => {
                     return (
                         <ReactFullpage.Wrapper>

@@ -19,21 +19,23 @@ const TopNav: React.FC<TopNavProps> = ({ onNavigate, activeSection }) => {
   ];
 
   return (
-    <nav className={`top-nav ${activeSection === 0 ? 'bg-0' : 'bg-1'}`}>
-      <div className="logo">
-        <img src={logo} alt="" />
-      </div>
-      <div className="nav-container">
-        {navItems.map((item) => (
-          <div
-            key={item.id}
-            className={`nav-item ${activeSection === item.id ? 'active' : ''}`}
-            onClick={() => onNavigate(item.id)}
-          >
-            {item.title}
-            {activeSection === item.id && <div className="nav-underline" />}
-          </div>
-        ))}
+    <nav className={` top-nav ${activeSection === 0 ? 'bg-0' : 'bg-1'}`}>
+      <div className='app container'>
+        <div className="logo">
+          <img src={logo} alt="" />
+        </div>
+        <div className="nav-container">
+          {navItems.map((item) => (
+            <div
+              key={item.id}
+              className={`nav-item ${activeSection === item.id ? 'active' : ''}`}
+              onClick={() => onNavigate(item.id)}
+            >
+              {item.title}
+              {activeSection === item.id && <div className="nav-underline" />}
+            </div>
+          ))}
+        </div>
       </div>
     </nav>
   );

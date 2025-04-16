@@ -19,8 +19,8 @@ const productFeatures = [
 
 export default function PageProduct() {
     return (
-        <div className="section section-2 app">
-            <div className='center-shadow'></div>
+        <div className="section section-2">
+             <div className='center-shadow'></div>
             <div className='product-box'>
                 <div className='product-box-left'>
                     <div className='product-box-left-title'>
@@ -49,6 +49,7 @@ export default function PageProduct() {
                     </div>
                 </div>
             </div>
+           
         </div>
     );
 }
