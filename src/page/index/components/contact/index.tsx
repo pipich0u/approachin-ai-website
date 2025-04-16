@@ -2,13 +2,39 @@
 import './index.css'
 import logo from '../../../../assets/svg/b-logo.svg'
 import ewm from '../../../../assets/images/ewm.png'
-export default function PageContact() {
+
+interface ContactProps {
+    onNavigate: (index: number) => void;
+}
+export default function PageContact({ onNavigate }: ContactProps) {
     const open = () => {
         window.open('https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671')
     }
     const openIcp = () => {
         window.open('https://beian.miit.gov.cn/#/Integrated/index')
     }
+    const about = [
+        {
+            title: '趋境资讯',
+            id: 5
+        },
+        {
+            title: '合作案例',
+            id: 4
+        },
+        {
+            title: '技术方案',
+            id: 2
+        },
+        {
+            title: '行业介绍',
+            id: 2
+        },
+        {
+            title: '关于我们',
+            id: 6
+        },
+    ]
     return (
         <div className="section section-8">
             <div className='contact-box'>
@@ -22,11 +48,11 @@ export default function PageContact() {
                 <div className='contact-box-right'>
                     <div className='content-box-right-item'>
                         <div className='content-box-right-item-title'>关于我们</div>
-                        <div className='content-box-right-item-text'>趋境资讯</div>
-                        <div className='content-box-right-item-text'>合作案例</div>
-                        <div className='content-box-right-item-text'>技术方案</div>
-                        <div className='content-box-right-item-text'>行业介绍</div>
-                        <div className='content-box-right-item-text'>关于我们</div>
+                        {
+                            about.map((item, index) => {
+                                return <div className='content-box-right-item-text' key={index + item.id + ""} onClick={() => onNavigate(item.id)}>{item.title}</div>
+                            })
+                        }
                     </div>
                     <div className='content-box-right-item'>
                         <div className='content-box-right-item-title'>联系我们</div>

@@ -67,7 +67,7 @@ export default function Index() {
                             <PageCase />
                             <PageInfo />
                             <PageTeam />
-                            <PageContact />
+                            <PageContact onNavigate={handleNavigate} />
                         </ReactFullpage.Wrapper>
                     );
                 }}
