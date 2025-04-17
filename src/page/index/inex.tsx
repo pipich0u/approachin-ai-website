@@ -45,8 +45,6 @@ export default function Index() {
             {/* {
                 activeSection !== 7 && <TopNav onNavigate={handleNavigate} activeSection={activeSection} />
             } */}
-            <TopNav onNavigate={handleNavigate} activeSection={activeSection} />
-
             <ReactFullpage
                 //@ts-ignore
                 ref={fullpageRef}

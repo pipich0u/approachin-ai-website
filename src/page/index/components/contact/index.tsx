@@ -2,11 +2,13 @@
 import './index.css'
 import logo from '../../../../assets/svg/b-logo.svg'
 import ewm from '../../../../assets/images/ewm.png'
+import { useNavigate } from 'react-router-dom';
 
 interface ContactProps {
     onNavigate: (index: number) => void;
 }
-export default function PageContact({ onNavigate }: ContactProps) {
+export default function PageContact() {
+    const navigate =useNavigate();
     const open = () => {
         window.open('https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671')
     }
@@ -50,7 +52,7 @@ export default function PageContact({ onNavigate }: ContactProps) {
                         <div className='content-box-right-item-title'>关于我们</div>
                         {
                             about.map((item, index) => {
-                                return <div className='content-box-right-item-text' key={index + item.id + ""} onClick={() => onNavigate(item.id)}>{item.title}</div>
+                                return <div className='content-box-right-item-text' key={index + item.id + ""} >{item.title}</div>
                             })
                         }
                     </div>
