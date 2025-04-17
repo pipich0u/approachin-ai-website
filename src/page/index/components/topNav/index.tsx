@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
-import logo from '../../../../assets/images/logo.png'
+import logo from '@/assets/images/logo.png'
+import logo_black from '@/assets/svg/logo-black.svg'
 import { useNavigate } from 'react-router-dom';
 interface TopNavProps {
   // onNavigate: (index: number) => void;
@@ -10,7 +11,7 @@ interface TopNavProps {
 const TopNav: React.FC<TopNavProps> = ({ }) => {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = React.useState(0);
-  const onNavigate = (index: string,nb:number) => {
+  const onNavigate = (index: string, nb: number) => {
     navigate(index);
     setActiveSection(nb)
   };
@@ -24,17 +25,19 @@ const TopNav: React.FC<TopNavProps> = ({ }) => {
   ];
 
   return (
-    <nav className={`top-nav bg-1 ${activeSection === 0 ? '' : 'bg-1'} `}>
+    <nav className={`top-nav  ${activeSection !== 0 ? 'bg-0' : 'bg-1'} `}>
       <div className='app container'>
         <div className="logo">
-          <img src={logo} alt="" />
+          {
+            activeSection !== 0 ? <img src={logo_black} alt="" /> : <img src={logo} alt="" />
+          }
         </div>
         <div className="nav-container">
           {navItems.map((item) => (
             <div
               key={item.id}
-              className={`nav-item ${activeSection === item.id ? 'active' : ''}`}
-              onClick={() => onNavigate(item.path,item.id)}
+              className={`${activeSection !== 0 ? 'nav-items' : 'nav-item'} ${activeSection === item.id ? 'active' : ''}`}
+              onClick={() => onNavigate(item.path, item.id)}
             >
               {item.title}
               {activeSection === item.id && <div className="nav-underline" />}

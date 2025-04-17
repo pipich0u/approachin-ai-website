@@ -2,6 +2,10 @@
     height: 531px !important;
     background-color: #1A1A1A;
     padding-top: 63px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
     /* align-items: start; */
     /* justify-content: start; */
 }

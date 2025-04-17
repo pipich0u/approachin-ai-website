@@ -19,7 +19,8 @@
 }
 
 .bg-0 {
-  background: rgba(0, 0, 0, 0);
+  background: #fff;
+  color: black;
 }
 
 .nav-container {
@@ -43,7 +44,17 @@
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
-
+}
+.nav-items {
+  color: #00000080;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: MiSans;
+  font-weight: 380;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .logo img {
@@ -58,6 +69,16 @@
 
 .nav-item.active {
   color: #fff;
+  /* font-weight: bold; */
+}
+.nav-items:hover {
+  opacity: 0.8;
+  color: #000;
+  cursor: pointer;
+}
+
+.nav-items.active {
+  color: #000;
   /* font-weight: bold; */
 }
 

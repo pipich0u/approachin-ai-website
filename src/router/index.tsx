@@ -2,6 +2,7 @@ import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Index from "@/page/index/inex";
 import Layout from "@/layout";
 import TeamPage from "@/page/index/team/index";
+import InfoPage from "@/page/index/info/index";
 const _rooter: RouteObject[] = [
 
     {
@@ -26,7 +27,7 @@ const _rooter: RouteObject[] = [
             },
             {
                 path: "/qujinginfo",
-                element: <TeamPage />
+                element: <InfoPage />
             },
             {
                 path: "/weteam",
