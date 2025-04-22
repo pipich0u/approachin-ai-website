@@ -52,7 +52,7 @@ export default function PageContact() {
                         <div className='content-box-right-item-title'>关于我们</div>
                         {
                             about.map((item, index) => {
-                                return <div className='content-box-right-item-text' key={index + item.id + ""} >{item.title}</div>
+                                return <div className='content-box-right-item-text' key={index + Date() + ""} >{item.title}</div>
                             })
                         }
                     </div>

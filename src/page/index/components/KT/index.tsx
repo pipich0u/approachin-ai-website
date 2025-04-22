@@ -1,7 +1,8 @@
 
 import './index.css'
 import k from '@/assets/images/K.png'
-import vido from '@/assets/audio/VS.mov'
+import vido from '@/assets/audio/VS.mp4'
+
 export default function PageKt() {
 
 
@@ -36,7 +37,7 @@ export default function PageKt() {
                     </div>
                     <div className='kt-right'>
                         <video controls className='vido'>
-                            <source src={vido} type="video/quicktime" />
+                            <source src={vido} type="video/mp4" />
                         </video>
                     </div>
                 </div>
