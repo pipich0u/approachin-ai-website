@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 import logo from '@/assets/images/logo.png'
 import logo_black from '@/assets/svg/logo-black.svg'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 interface TopNavProps {
   // onNavigate: (index: number) => void;
   // activeSection: number;
@@ -23,7 +23,19 @@ const TopNav: React.FC<TopNavProps> = ({ }) => {
     { title: '趋境资讯', id: 4, path: '/qujinginfo' },
     { title: '团队介绍', id: 5, path: '/weteam' },
   ];
+  const location = useLocation();
 
+  useEffect(() => {
+    const path = location.pathname;
+    const matchedItem = navItems.find(item => item.path === path);
+
+    if (matchedItem) {
+      setActiveSection(matchedItem.id);
+      console.log(matchedItem.id);
+    } else {
+      setActiveSection(0); 
+    }
+  }, [location, navItems]);
   return (
     <nav className={`top-nav  ${activeSection !== 0 ? 'bg-0' : 'bg-1'} `}>
       <div className='app container'>

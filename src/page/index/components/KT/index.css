@@ -1,21 +1,34 @@
 .section-4 {
     background: #fff;
     min-width: 1000px;
-    padding: 100px !important;
+    padding: 50px !important;
 }
+.kt-box{
+    width: 100%;
+    padding:60px 100px ;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1440px;
 
+}
 .kt-container {
     width: 100%;
+    /* max-width: 1440px; */
     display: flex;
-    height: 100%;
+    /* height: 100%; */
     align-items: start;
 }
 
 .kt-left {
-    width: 50%;
+    width: 460px;
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin-right: 30px;
+    min-width: 312px;
 }
 
 .kt-left-title {
@@ -25,7 +38,7 @@
     line-height: 150%;
     letter-spacing: 2%;
     color: #000;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
     min-height: 120px;
 }
 
@@ -34,46 +47,80 @@
 }
 
 .kt-left-content {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex: 1;
-    /* gap: 55px; */
-    justify-content: space-evenly;
-    max-width: 65%;
+    gap: 22px;
+    /* max-width: 65%; */
 }
-
-
 
 .kt-left-content-item {
     font-family: MiSans;
-    font-weight: 380;
-    font-size: 18px;
-    line-height: 150%;
-    letter-spacing: 2%;
-
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
     color: #1A1A1A;
 }
 
+.kt-left-content-item-title {
+    font-family: MiSans;
+    font-weight: 520;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    color: #000;
+}
+
+.kt-left-content-item-content {
+    font-family: MiSans;
+    font-weight: 305;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    color: #666;
+    margin-top: 6px;
+}
+
+.ktbg-1 {
+    background-color: #F5F6FA;
+}
+
+.ktbg-2 {
+    background: #EDEFF7;
+}
+
+.ktbg-3 {
+    background: #E6E9F5;
+}
+
 .kt-right {
-    width: 50%;
-    height: 100%;
+    /* width: 50%; */
+    flex: 1;
+    height: 480px;
     display: flex;
     justify-content: center;
     align-items: center;
     /* padding: 0 100px; */
-    padding-top: 90px;
+    padding:85px 80px;
     box-sizing: border-box;
+    background-image: url(../../../../assets/images/ktbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow: hidden;
+    min-width: 418px;
 }
 
-.text-red {
-    color: #E63B3B;
-}
 
 .vido {
     box-sizing: border-box;
-    width: 90%;
-    height: 60%;
-    margin: 50px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* margin: 50px; */
+    border-radius: 16px;
     box-shadow: 12px 14px 40px 0px #0000001A;
     border: 2px solid #E2E2E2
 }

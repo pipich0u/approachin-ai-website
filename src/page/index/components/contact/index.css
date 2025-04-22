@@ -1,5 +1,5 @@
 .section-8 {
-    height: 531px !important;
+    height: 530px !important;
     background-color: #1A1A1A;
     padding-top: 63px;
     display: flex;
@@ -15,9 +15,10 @@
     padding: 0 100px;
     width: 100%;
     min-width: 1000px;
+    /* height: 100%; */
     display: flex;
     justify-content: space-between;
-    margin-top: 7px;
+    /* margin-top: 7px; */
 }
 
 .contact-box-left {
