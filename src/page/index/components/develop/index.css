@@ -6,13 +6,16 @@
 .develop {
   width: 100%;
   /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .develop-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0;
+  margin: 46px 0;
 }
 
 .dev-title {
@@ -92,6 +95,7 @@
 }
 .scroll2{
   overflow: hidden;
+  height: 320px;
 }
 .dev-item{
   position: absolute;
@@ -101,5 +105,9 @@
   bottom: 0;
 }
 .bottom{
-  bottom: 1px;
+  bottom: -4px;
+}
+.line_dev{
+  width: 2px;
+  height: 40px;
 }
