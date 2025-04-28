@@ -11,6 +11,7 @@ import PageInfo from './components/info/index'
 import PageContact from './components/contact/index'
 import PageCase from './components/case/index'
 import PageTeam from './components/team/index'
+import DevelopPage from './components/develop';
 
 interface FullpageApi {
     silentMoveTo: (section: number, slide?: number) => void;
@@ -26,7 +27,7 @@ export default function Index() {
     const fullpageRef = useRef<ReactFullpage>(null);
     const [activeSection, setActiveSection] = useState(0);
 
-    const onLeave = (origin: any, destination: any, direction: string) => {
+    const onLeave = (origin: any, destination: any, direction: string) => { 
         // console.log(origin, destination, direction, 'ee');
         const sections = document.querySelectorAll('.section');
         sections.forEach(section => section.classList.remove('active'));
@@ -42,9 +43,7 @@ export default function Index() {
 
     return (
         <div className="w-100 h-100">
-            {/* {
-                activeSection !== 7 && <TopNav onNavigate={handleNavigate} activeSection={activeSection} />
-            } */}
+            <TopNav onNavigate={handleNavigate} activeSection={activeSection} />
             <ReactFullpage
                 //@ts-ignore
                 ref={fullpageRef}
@@ -63,6 +62,7 @@ export default function Index() {
                             <PageKt />
                             <PageCase />
                             <PageInfo />
+                            <DevelopPage />
                             <PageTeam />
                             <PageContact onNavigate={handleNavigate} />
                         </ReactFullpage.Wrapper>

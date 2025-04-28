@@ -1,10 +1,111 @@
-.section-7 {
+.section-8 {
     background-color: black;
-    padding: 100px;
+    padding: 70px 100px;
 }
 
 .team-box {
     width: 100%;
     height: 100%;
     color: aliceblue;
+    box-sizing: border-box;
+}
+
+.team-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-1 {
+    font-family: MiSans;
+    font-weight: 520;
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    color: #fff;
+    margin-bottom: 46px;
+}
+
+.title-2 {
+    display: flex;
+    flex-wrap: wrap;
+    text-indent: 2em;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-family: MiSans;
+    font-weight: 330;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 2%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 80px;
+}
+
+.team-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 18px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    max-width: 908px;
+    height: 150px;
+    background: #1A1A1A;
+    padding: 30px 70px;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.line-team {
+    margin: 0 50px;
+}
+
+.item:first-child {
+    background: #6C3AE1 !important;
+}
+
+.item-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.item-name {
+    font-family: MiSans;
+    font-weight: 520;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    color: #fff;
+}
+
+.item-title {
+    font-family: MiSans;
+    font-weight: 330;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+ul li {
+    font-family: MiSans;
+    font-weight: 305;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 2%;
+    color: rgba(255, 255, 255, 0.8);
 }

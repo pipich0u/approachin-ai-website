@@ -4,6 +4,7 @@ import info_2 from '@/assets/images/info_2.png'
 import info_3 from '@/assets/images/info_3.png'
 import info_4 from '@/assets/images/info_4.png'
 import left from '@/assets/svg/left.svg'
+import TopNavs from "@/page/index/components/topNavs";
 export default function InfoPage() {
     const gopage = (url: string) => {
         window.open(url)
@@ -43,6 +44,7 @@ export default function InfoPage() {
     ]
     return (
         <div className='info'>
+            <TopNavs></TopNavs>
             <div className='info-nav'>
                 <div className='info-nav-title'>企业资讯</div>
                 <div className='info-nav-desc'>聚焦战略、市场等，全面覆盖</div>

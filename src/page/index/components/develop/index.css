@@ -1,0 +1,70 @@
+.section-7 {
+  background-color: black;
+  /* padding: 70px 100px; */
+}
+
+.develop {
+  width: 100%;
+  height: 100%;
+}
+
+.develop-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.dev-title {
+  font-family: MiSans;
+  font-weight: 520;
+  font-size: 40px;
+  line-height: 150%;
+  letter-spacing: 2%;
+  color: #fff;
+}
+
+.dev-desc {
+  font-family: MiSans;
+  font-weight: 330;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 2%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+}
+.dev-content{
+  /* display: flex; */
+  overflow: hidden;
+  overflow-x: scroll;
+  margin-top: 50px;
+  width: 100%;
+  height: 340px;
+  position: relative;
+}
+.dev-ox{
+  width: 8000px;
+  background:#ccc;
+  height: 30px;
+}
+/* 设置滚动条的整体样式 */
+.dev-content::-webkit-scrollbar {
+  width: 12px; /* 滚动条的宽度，可以根据需要调整 */
+  height: 10px; /* 滚动条的高度 */
+  background: transparent; /* 滚动条的背景颜色 */
+}
+
+/* 设置滚动条轨道（滚动条背景）的样式 */
+.dev-content::-webkit-scrollbar-track {
+  background: transparent; /* 轨道背景颜色 */
+}
+
+/* 设置滚动条滑块（滚动条本身）的样式 */
+.dev-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #242684 0%, #595FF9 21.68%, #8C90FF 47.63%, #595FF9 75.14%, #242684 99.06%); /* 渐变背景 */
+  border-radius: 6px; /* 滑块的圆角 */
+}
+.dev-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 设置为浅灰色背景 */
+}

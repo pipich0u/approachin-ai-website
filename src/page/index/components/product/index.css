@@ -6,7 +6,10 @@
     /* width: 100vw; */
     padding: 0 !important;
 }
-
+.section-2>.fp-overflow{
+    width: 100%;
+    max-width:100% ;
+}
 .center-shadow {
     width: 384px;
     height: 636px;
@@ -53,7 +56,7 @@
 }
 
 .line-pro {
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 .line-pro img {
@@ -105,7 +108,7 @@
     height: 100%;
     right: -98px;
     top: 59px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .product-box-right-img img {

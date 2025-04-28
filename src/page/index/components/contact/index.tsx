@@ -38,7 +38,7 @@ export default function PageContact() {
         },
     ]
     return (
-        <div className="section section-8">
+        <div className="section section-9">
             <div className='contact-box'>
                 <div className='contact-box-left'>
                     <img src={logo} alt="" />

@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Index from "@/page/index/inex";
 import Layout from "@/layout";
-import TeamPage from "@/page/index/team/index";
 import InfoPage from "@/page/index/info/index";
 const _rooter: RouteObject[] = [
 
@@ -13,26 +12,12 @@ const _rooter: RouteObject[] = [
                 path: "/",
                 element: <Index />,
             },
-            {
-                path: "/introduce",
-                element: <TeamPage />
-            },
-            {
-                path: "/technology",
-                element: <TeamPage />
-            },
-            {
-                path: "/cooperate",
-                element: <TeamPage />
-            },
+           
             {
                 path: "/qujinginfo",
                 element: <InfoPage />
             },
-            {
-                path: "/weteam",
-                element: <TeamPage />
-            },
+       
         ],
     },
     //   {
