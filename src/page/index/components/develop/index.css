@@ -5,7 +5,7 @@
 
 .develop {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .develop-top {
@@ -72,7 +72,7 @@
 .dev-content.scroll1::-webkit-scrollbar {
 
   width: 12px;
-  height: 10px;
+  height: 4px;
   background: transparent;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .dev-content.scroll1::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #242684;
 }
 .scroll2{
   overflow: hidden;
