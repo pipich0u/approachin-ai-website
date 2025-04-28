@@ -40,7 +40,25 @@ export default function DevelopPage() {
 
                 <div className='dev-content scroll1' ref={scroll1Ref}>
                     <div className='dev-ox'>
-                        <div className='dev-item top'>
+                        <div className='dev-item top' >
+                            <img src={dev_1} alt="" />
+                            <div className='text'>
+                                公司成立<br />
+                                种子轮融资：真知创投
+                            </div>
+                            <div className='dev-item-title'>2023年底</div>
+                            <img src={line} alt="" className='line_dev' />
+                        </div>
+                        <div className='dev-item top' style={{ marginLeft: "500px"}} >
+                            <img src={dev_1} alt="" />
+                            <div className='text'>
+                                公司成立<br />
+                                种子轮融资：真知创投
+                            </div>
+                            <div className='dev-item-title'>2023年底</div>
+                            <img src={line} alt="" className='line_dev' />
+                        </div>
+                        <div className='dev-item top' style={{ marginLeft: "980px"}} >
                             <img src={dev_1} alt="" />
                             <div className='text'>
                                 公司成立<br />
@@ -55,6 +73,28 @@ export default function DevelopPage() {
                 <div className='dev-content scroll2' ref={scroll2Ref}>
                     <div className='dev-ox'>
                         <div className='dev-item bottom' style={{ marginLeft: "244px" }}>
+                            <img src={line} alt="" className='line_dev'/>
+                            <div className='dev-item-title'>2024年7月</div>
+                            <div className='text'>
+                                首创“以存换算”技术<br />
+                                首创“全系统异构协同推理架构”技术<br />
+                                开源“Ktransformers”技术<br />
+                                可支持单卡运行千亿级大模型
+                            </div>
+                            <img src={dev_2} alt="" />
+                        </div>
+                        <div className='dev-item bottom' style={{ marginLeft: "750px" }}>
+                            <img src={line} alt="" className='line_dev'/>
+                            <div className='dev-item-title'>2024年7月</div>
+                            <div className='text'>
+                                首创“以存换算”技术<br />
+                                首创“全系统异构协同推理架构”技术<br />
+                                开源“Ktransformers”技术<br />
+                                可支持单卡运行千亿级大模型
+                            </div>
+                            <img src={dev_2} alt="" />
+                        </div>
+                        <div className='dev-item bottom' style={{ marginLeft: "1250px" }}>
                             <img src={line} alt="" className='line_dev'/>
                             <div className='dev-item-title'>2024年7月</div>
                             <div className='text'>

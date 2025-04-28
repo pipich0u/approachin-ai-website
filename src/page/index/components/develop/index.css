@@ -30,8 +30,8 @@
 .text {
   font-family: MiSans;
   font-weight: 330;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   letter-spacing: 2%;
   vertical-align: middle;
 
@@ -42,8 +42,8 @@
   color: #868AFF;
   font-family: MiSans;
   font-weight: 520;
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 24px;
+  line-height: 30px;
   letter-spacing: 2%;
 
 }
@@ -68,7 +68,7 @@
 
 .dev-ox {
   position: relative;
-  width: 8000px;
+  width: 2000px;
   height: 100%;
 }
 
@@ -105,7 +105,7 @@
   bottom: 0;
 }
 .bottom{
-  bottom: -4px;
+  bottom: 12px;
 }
 .line_dev{
   width: 2px;
