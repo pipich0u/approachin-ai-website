@@ -7,7 +7,14 @@
     flex-direction: column;
     min-width: 1000px;
 }
-
+.technology{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
 .technology-title {
     margin-top: 40px;
     display: flex;

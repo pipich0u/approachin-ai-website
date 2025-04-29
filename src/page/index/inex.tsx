@@ -60,10 +60,10 @@ export default function Index() {
                             <PageProduct />
                             <PageTechnology />
                             <PageKt />
-                            <PageCase />
+                            {/* <PageCase /> */}
                             <PageInfo />
                             <DevelopPage />
-                            <PageTeam />
+                            {/* <PageTeam /> */}
                             <PageContact onNavigate={handleNavigate} />
                         </ReactFullpage.Wrapper>
                     );
