@@ -20,10 +20,10 @@ const TopNavs: React.FC<TopNavProps> = ({ }) => {
     { title: '产品介绍', id: 1, path: '/' },
     { title: '技术方案', id: 2, path: '/' },
     { title: 'KTransformers', id: 3, path: '/' },
-    { title: '合作案例', id: 4, path: '/' },
+    // { title: '合作案例', id: 4, path: '/' },
     { title: '趋境资讯', id: 5, path: '/' },
-    { title: '团队介绍', id: 6, path: '/' },
-    { title: '团队介绍', id: 7, path: '/' }
+    // { title: '团队介绍', id: 6, path: '/' },
+    // { title: '团队介绍', id: 7, path: '/' }
   ];
 
   return (

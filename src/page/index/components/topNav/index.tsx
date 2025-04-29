@@ -21,8 +21,8 @@ const TopNav: React.FC<TopNavProps> = ({ onNavigate, activeSection }) => {
     { title: '技术方案', id: 2 },
     { title: 'KTransformers', id: 3 },
     // { title: '合作案例', id: 4 },
-    { title: '趋境资讯', id: 5 },
-    { title: '企业发展', id: 6 },
+    { title: '趋境资讯', id: 4 },
+    { title: '企业发展', id: 5 },
     // { title: '团队介绍', id: 7 },
   ];
 

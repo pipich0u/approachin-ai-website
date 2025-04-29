@@ -34,7 +34,7 @@ export default function PageInfo() {
                         </div>
                     </div>
                     <div className='info-right'>
-                        <div className='info-right-item' onClick={()=>window.open('https://mp.weixin.qq.com/s/yzq4c25YO8DD_oXUD1AvDQ')}>
+                        <div className='info-right-item' onClick={()=>window.open('https://mp.weixin.qq.com/s/bG2LdVJLxfGRWr3NBiKoLQ')}>
                             <div className='item-right ellipsis-2'>
                                 <div className='info-text-title ellipsis-2'>
                                     KTransformers 高效适配曦云C500，单卡异构推理...
