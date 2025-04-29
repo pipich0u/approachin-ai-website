@@ -4,6 +4,9 @@ import './index.css'
 import line from '@/assets/images/dev-line.png'
 import dev_1 from '@/assets/images/2023.png'
 import dev_2 from '@/assets/images/202407.png'
+import dev_3 from '@/assets/images/202409.png'
+import dev_4 from '@/assets/images/202410.png'
+import dev_5 from '@/assets/images/202502.png'
 
 export default function DevelopPage() {
     const scroll1Ref = useRef<HTMLDivElement>(null);
@@ -49,22 +52,23 @@ export default function DevelopPage() {
                             <div className='dev-item-title'>2023年底</div>
                             <img src={line} alt="" className='line_dev' />
                         </div>
-                        <div className='dev-item top' style={{ marginLeft: "500px"}} >
-                            <img src={dev_1} alt="" />
+                        <div className='dev-item top' style={{ marginLeft: "500px" }} >
+                            <img src={dev_3} alt="" />
                             <div className='text'>
-                                公司成立<br />
-                                种子轮融资：真知创投
+                                与长亭科技共同发布“长亭问津千亿大模型解决方案”<br />
+                                由此安全领域迈入千亿级大模型时代<br />
+                                高准确率、低延迟
                             </div>
-                            <div className='dev-item-title'>2023年底</div>
+                            <div className='dev-item-title'>2024年9月</div>
                             <img src={line} alt="" className='line_dev' />
                         </div>
-                        <div className='dev-item top' style={{ marginLeft: "980px"}} >
+                        <div className='dev-item top' style={{ marginLeft: "980px" }} >
                             <img src={dev_1} alt="" />
                             <div className='text'>
                                 公司成立<br />
                                 种子轮融资：真知创投
                             </div>
-                            <div className='dev-item-title'>2023年底</div>
+                            <div className='dev-item-title'>2025年1月</div>
                             <img src={line} alt="" className='line_dev' />
                         </div>
                     </div>
@@ -73,7 +77,7 @@ export default function DevelopPage() {
                 <div className='dev-content scroll2' ref={scroll2Ref}>
                     <div className='dev-ox'>
                         <div className='dev-item bottom' style={{ marginLeft: "244px" }}>
-                            <img src={line} alt="" className='line_dev'/>
+                            <img src={line} alt="" className='line_dev' />
                             <div className='dev-item-title'>2024年7月</div>
                             <div className='text'>
                                 首创“以存换算”技术<br />
@@ -84,26 +88,30 @@ export default function DevelopPage() {
                             <img src={dev_2} alt="" />
                         </div>
                         <div className='dev-item bottom' style={{ marginLeft: "750px" }}>
-                            <img src={line} alt="" className='line_dev'/>
-                            <div className='dev-item-title'>2024年7月</div>
+                            <img src={line} alt="" className='line_dev' />
+                            <div className='dev-item-title'>2024年10月</div>
                             <div className='text'>
-                                首创“以存换算”技术<br />
-                                首创“全系统异构协同推理架构”技术<br />
-                                开源“Ktransformers”技术<br />
-                                可支持单卡运行千亿级大模型
+                                首次发布产品：大模型知识推理一体机<br />
+                                「以存换算」「异构协同」技术赋能<br />
+                                支持千亿级别大模型
+                                开箱即用，推出简易应用平台<br />
+                                提供丰富API接口
+
                             </div>
-                            <img src={dev_2} alt="" />
+                            <img src={dev_4} alt="" />
                         </div>
-                        <div className='dev-item bottom' style={{ marginLeft: "1250px" }}>
-                            <img src={line} alt="" className='line_dev'/>
-                            <div className='dev-item-title'>2024年7月</div>
+                        <div className='dev-item bottom' style={{ marginLeft: "1250px", height: "300px" }}>
+                            <img src={line} alt="" className='line_dev' />
+                            <div className='dev-item-title'>2025年2月</div>
                             <div className='text'>
-                                首创“以存换算”技术<br />
-                                首创“全系统异构协同推理架构”技术<br />
-                                开源“Ktransformers”技术<br />
-                                可支持单卡运行千亿级大模型
+                                发布新版“KTransformers”0.2版<br />
+                                <span style={{color:'#868AFF'}}>
+                                    单个消费级GPU+CPU 本地部署DeepSeek-R1/V3671B大模型<br />
+                                </span>
+                                GitHub标星过万<br />
+                                国内外社区热榜第一
                             </div>
-                            <img src={dev_2} alt="" />
+                            <img src={dev_5} alt="" />
                         </div>
                     </div>
                 </div>
