@@ -65,8 +65,19 @@ export default function DevelopPage() {
                         <div className='dev-item top' style={{ marginLeft: "980px" }} >
                             <img src={dev_1} alt="" />
                             <div className='text'>
-                                公司成立<br />
-                                种子轮融资：真知创投
+                              天使轮融资
+                            </div>
+                            <div className='dev-item-title'>2025年1月</div>
+                            <img src={line} alt="" className='line_dev' />
+                        </div>
+                        <div className='dev-item top' style={{ marginLeft: "1480px" }} >
+                            {/* <img src={dev_1} alt="" /> */}
+                            <div className='text'>
+                                发布新产品“趋境AI 大模型推理软硬一体工作站”<br />
+                                液冷散热，安静无噪<br />
+                                单机部署DeepSeek 671B FP8精度，大模型部署门槛降低10倍<br />
+                                支持同时最高运行三个大模型<br />
+                                提供简易运维平台kLLM
                             </div>
                             <div className='dev-item-title'>2025年1月</div>
                             <img src={line} alt="" className='line_dev' />
@@ -96,7 +107,6 @@ export default function DevelopPage() {
                                 支持千亿级别大模型
                                 开箱即用，推出简易应用平台<br />
                                 提供丰富API接口
-
                             </div>
                             <img src={dev_4} alt="" />
                         </div>
@@ -105,7 +115,7 @@ export default function DevelopPage() {
                             <div className='dev-item-title'>2025年2月</div>
                             <div className='text'>
                                 发布新版“KTransformers”0.2版<br />
-                                <span style={{color:'#868AFF'}}>
+                                <span style={{ color: '#868AFF' }}>
                                     单个消费级GPU+CPU 本地部署DeepSeek-R1/V3671B大模型<br />
                                 </span>
                                 GitHub标星过万<br />
