@@ -6,11 +6,13 @@ import cctv from "@/assets/images/cctv.png"
 import one from "@/assets/images/1.png"
 import two from "@/assets/images/2.png"
 import three from "@/assets/images/3.jpg"
-
-export default function PageInfo() {
+interface indexProps {
+    id: string
+}
+export default function PageInfo({id}: indexProps) {
     // const navgitor = useNavigate()
     return (
-        <div className="mob-info">
+        <div className="mob-info" id={id}>
             <div className='mob-info-box'>
                 <div className="mob-info-title">
                     <div className='mob-info-title'>企业资讯</div>

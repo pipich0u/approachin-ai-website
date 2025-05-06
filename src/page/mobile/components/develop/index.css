@@ -1,0 +1,86 @@
+.mob-develop {
+  width: 100%;
+  box-sizing: border-box;
+  background: #000;
+  padding: 100px 65px;
+}
+
+.mob-develop-top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mob-develop-top-title {
+  font-family: MiSans;
+  font-weight: 520;
+  font-size: 40px;
+  line-height: 150%;
+  letter-spacing: 2%;
+  color: #fff;
+}
+
+.mob-develop-top-text {
+  font-family: MiSans;
+  font-weight: 330;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 2%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 10px;
+}
+
+.mob-develop-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.mob-develop-center {
+  width: 4px;
+  background: linear-gradient(180deg, #242684 0%, #595FF9 21.68%, #8C90FF 47.63%, #595FF9 75.14%, #242684 99.06%);
+  height: 1000px;
+  margin: 0 10px;
+}
+
+.mob-develop-item {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  /* width: 50%; */
+  height: 100%;
+}
+
+.mob-develop-years {
+  width: 49%;
+  color: #868AFF;
+  font-family: MiSans;
+  font-weight: 520;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 2%;
+}
+
+.mob-develop-item:first-child>.mob-develop-years {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mob-develop-content-item img {
+  width: 240px;
+  height: 140px;
+}
+
+.mob-develop-content-item-title {
+  width: 49%;
+  font-family: MiSans;
+  font-weight: 330;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 2%;
+  vertical-align: middle;
+  color: #A3A3A3;
+}

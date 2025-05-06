@@ -2,12 +2,14 @@
 import './index.css'
 import k from '@/assets/images/K.png'
 import vido from '@/assets/audio/VS.mp4'
-
-export default function PageKt() {
+interface indexProps {
+    id: string
+}
+export default function PageKt({id}:indexProps) {
 
 
     return (
-        <div className="mob-kt">
+        <div className="mob-kt" id={id}>
             <div className='mob-kt-box'>
                 <div className='mob-kt-left-title'>
                     <div className='mob-kt-left-title-top'>

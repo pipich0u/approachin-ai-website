@@ -1,10 +1,13 @@
 
 import './index.css'
 import line from '@/assets/images/line.png'
-export default function PageIndex() {
-   
+interface indexProps {
+    id: string
+}
+export default function PageIndex({ id }: indexProps) {
+
     return (
-        <div className="mob-index">
+        <div className="mob-index" id={id}>
             <div className="mob-title">
                 <div className='mob-title-top'>An accelerated, accessible, affordable approach to AI</div>
                 <div className='mob-title-center'>加速到来你的AI世界</div>

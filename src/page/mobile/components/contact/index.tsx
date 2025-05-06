@@ -4,8 +4,10 @@ import logo from '../../../../assets/svg/b-logo.svg'
 import ewm from '../../../../assets/images/ewm.png'
 import { useNavigate } from 'react-router-dom';
 
-
-export default function PageContact() {
+interface ContactProps {
+    onNavigate: (id: string) => void
+}
+export default function PageContact({onNavigate}: ContactProps) {
     // const navigate =useNavigate();
     const open = () => {
         window.open('https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671')
@@ -16,7 +18,7 @@ export default function PageContact() {
     const about = [
         {
             title: '趋境资讯',
-            id: 5
+            id: 'pageInfo'
         },
         // {
         //     title: '合作案例',
@@ -24,7 +26,7 @@ export default function PageContact() {
         // },
         {
             title: '技术方案',
-            id: 2
+            id: 'pageTechnology'
         },
         // {
         //     title: '行业介绍',
@@ -32,7 +34,7 @@ export default function PageContact() {
         // },
         {
             title: '关于我们',
-            id: 6
+            id: 'DevelopPage'
         },
     ]
     const map = 'https://map.baidu.com/search/%E5%8C%97%E4%BA%AC%E5%B8%82%E6%B5%B7%E6%B7%80%E5%8C%BA%E4%B8%9C%E5%8D%87%E5%A4%A7%E5%8E%A6ab%E5%BA%A7/@12951048.68,4838129.9350000005,20.17z?querytype=s&da_src=shareurl&wd=%E5%8C%97%E4%BA%AC%E5%B8%82%E6%B5%B7%E6%B7%80%E5%8C%BA%E4%B8%9C%E5%8D%87%E5%A4%A7%E5%8E%A6AB%E5%BA%A7&c=131&src=0&pn=0&sug=0&l=13&b=(12924003,4826192;12985443,4855344)&from=webmap&biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&device_ratio=1'
@@ -50,7 +52,7 @@ export default function PageContact() {
                         <div className='mob-content-box-right-item-title'>关于我们</div>
                         {
                             about.map((item, index) => {
-                                return <div className='mob-content-box-right-item-text' key={index + Date() + ""} >{item.title}</div>
+                                return <div className='mob-content-box-right-item-text' onClick={()=>{onNavigate(item.id)}} key={index + Date() + ""} >{item.title}</div>
                             })
                         }
                     </div>

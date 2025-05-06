@@ -3,7 +3,9 @@ import line from '@/assets/images/line.png'
 import productImg from '@/assets/images/mb-pro.png'
 import useAnimate from '@/common/useAnimate'
 import { RefObject, useRef } from 'react';
-
+interface indexProps {
+    id: string
+}
 const productFeatures = [
     {
         title: '首创以存换算全系统推理架构',
@@ -20,13 +22,13 @@ const productFeatures = [
 
 ];
 
-export default function PageProduct() {
+export default function PageProduct({id}:indexProps) {
     const elementRef = useRef<HTMLImageElement>(null)
     useAnimate({ elementRef, direction: 'right' });
 
 
     return (
-        <div className="mob-product">
+        <div className="mob-product" id={id}>
             <div className='mob-center-shadow'></div>
             <div className='mob-product-box'>
                 <div className='mob-product-box-left'>

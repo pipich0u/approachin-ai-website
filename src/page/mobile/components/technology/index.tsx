@@ -4,10 +4,15 @@ import up from '../../../../assets/images/up.png'
 import down from '../../../../assets/images/down.png'
 import qxt from '../../../../assets/images/qxt.png'
 import ychs from '../../../../assets/images/ychs.png'
-export default function PageTechnology() {
+
+
+interface indexProps {
+    id: string
+}
+export default function PageTechnology({id}:indexProps) {
 
     return (
-        <div className="mob-technology">
+        <div className="mob-technology" id={id}>
             <div className='mob-technology-box'>
                 <div className='mob-technology-title'>
                     <div className='mob-technology-title-1'>业界首创以存换算</div>
