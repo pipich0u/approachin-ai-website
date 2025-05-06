@@ -7,7 +7,7 @@ import dev_2 from '@/assets/images/202407.png'
 import dev_3 from '@/assets/images/202409.png'
 import dev_4 from '@/assets/images/202410.png'
 import dev_5 from '@/assets/images/202502.png'
-
+import dev_6 from '@/assets/images/dev_6.png'
 export default function DevelopPage() {
     const scroll1Ref = useRef<HTMLDivElement>(null);
     const scroll2Ref = useRef<HTMLDivElement>(null);
@@ -63,7 +63,7 @@ export default function DevelopPage() {
                             <img src={line} alt="" className='line_dev' />
                         </div>
                         <div className='dev-item top' style={{ marginLeft: "980px" }} >
-                            <img src={dev_1} alt="" />
+                            <img src={dev_6} alt="" style={{width: '170px'}} />
                             <div className='text'>
                               天使轮融资
                             </div>
