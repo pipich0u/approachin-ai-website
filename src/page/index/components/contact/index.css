@@ -5,18 +5,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     /* justify-content: center; */
     /* align-items: start; */
     /* justify-content: start; */
 }
 .section-9>.fp-overflow{
     overflow: auto;
+   
 }
 .contact-box {
     box-sizing: border-box;
     padding: 0 100px;
     width: 100%;
     min-width: 1000px;
+    max-width: 1440px;
     /* height: 100%; */
     display: flex;
     justify-content: space-between;
