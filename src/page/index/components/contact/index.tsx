@@ -50,7 +50,7 @@ export default function PageContact({onNavigate}:ContactProps) {
         <div className="section section-9">
             <div className='contact-box'>
                 <div className='contact-box-left'>
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="" className='canlogo'/>
                     <div className='contact-box-left-text'>
                     北京趋境科技成立于2023年底，专注大模型推理加速方案。其创始团队来自清华计算机系，成员多为硕博，毕业于知名院校，有丰富产品经验。公司基于首创架构推出“AI大模型推理软硬一体机”，通过协同多种设备释放异构算力，解决大模型落地难题。目前已与安全、教育、制造等行业企业合作，助推大模型业务升级。
                     </div>

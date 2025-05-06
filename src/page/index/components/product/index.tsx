@@ -11,7 +11,7 @@ const productFeatures = [
     },
     {
         title: '软硬一体交付 开箱即用',
-        texts: ['液冷无噪工作站、风冷服务器多种选择', 'kLLM 平台提供简易运维，硬件资源轻松分配，0 基础启停切换大模型','智问平台提供简易办公套件，内置AI搜索、对话大模型、知识库等功能模块提供丰富的API接口，支持上层应用调用']
+        texts: ['液冷无噪工作站、风冷服务器多种选择', 'kLLM 平台提供简易运维，硬件资源轻松分配，0 基础启停切换大模型', '智问平台提供简易办公套件，内置AI搜索、对话大模型、知识库等功能模块提供丰富的API接口，支持上层应用调用']
     },
     {
         title: '兼容国产 生态闭环 ',
@@ -31,8 +31,8 @@ export default function PageProduct() {
             <div className='product-box'>
                 <div className='product-box-left'>
                     <div className='product-box-left-title'>
-                        大模型知识<span>推理一体机</span><br />
-                        提供企业专属推理平台
+                        AI大模型推理软硬一体机<br />
+                        企业级私有化部署新范式
                     </div>
                     <div className='line-pro'> <img src={line} alt="" /> </div>
                     <div className='product-box-left-content'>

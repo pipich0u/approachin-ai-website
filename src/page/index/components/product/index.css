@@ -2,13 +2,17 @@
     background: #000;
     background-size: cover;
     background-position: center;
+    box-sizing: border-box;
     position: relative;
     /* width: 100vw; */
     padding: 0 !important;
 }
 .section-2>.fp-overflow{
     width: 100%;
+    height: 100%;
     max-width:100% ;
+    /* max-width: 1440px; */
+    box-sizing: border-box;
 }
 .center-shadow {
     width: 384px;
@@ -27,8 +31,9 @@
 .product-box {
     box-sizing: border-box;
     width: 100%;
+    /* height: 100%; */
     /* height: 100vh; */
-    padding: 110px 98px;
+    padding: 100px 98px;
     display: flex;
     justify-content: space-between;
     margin-top: 68px;

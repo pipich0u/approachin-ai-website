@@ -43,7 +43,7 @@ export default function DevelopPage() {
 
                 <div className='dev-content scroll1' ref={scroll1Ref}>
                     <div className='dev-ox'>
-                        <div className='dev-item top' >
+                        <div className='dev-item top'  style={{ marginLeft: "100px" }}>
                             <img src={dev_1} alt="" />
                             <div className='text'>
                                 公司成立<br />
@@ -52,7 +52,7 @@ export default function DevelopPage() {
                             <div className='dev-item-title'>2023年底</div>
                             <img src={line} alt="" className='line_dev' />
                         </div>
-                        <div className='dev-item top' style={{ marginLeft: "500px" }} >
+                        <div className='dev-item top' style={{ marginLeft: "800px" }} >
                             <img src={dev_3} alt="" />
                             <div className='text'>
                                 与长亭科技共同发布“长亭问津千亿大模型解决方案”<br />
@@ -62,7 +62,7 @@ export default function DevelopPage() {
                             <div className='dev-item-title'>2024年9月</div>
                             <img src={line} alt="" className='line_dev' />
                         </div>
-                        <div className='dev-item top' style={{ marginLeft: "980px" }} >
+                        <div className='dev-item top' style={{ marginLeft: "1580px" }} >
                             <img src={dev_6} alt="" style={{width: '170px'}} />
                             <div className='text'>
                               天使轮融资
@@ -70,7 +70,7 @@ export default function DevelopPage() {
                             <div className='dev-item-title'>2025年1月</div>
                             <img src={line} alt="" className='line_dev' />
                         </div>
-                        <div className='dev-item top' style={{ marginLeft: "1480px" }} >
+                        <div className='dev-item top' style={{ marginLeft: "2180px" }} >
                             {/* <img src={dev_1} alt="" /> */}
                             <div className='text'>
                                 发布新产品“趋境AI 大模型推理软硬一体工作站”<br />
@@ -79,15 +79,15 @@ export default function DevelopPage() {
                                 支持同时最高运行三个大模型<br />
                                 提供简易运维平台kLLM
                             </div>
-                            <div className='dev-item-title'>2025年1月</div>
+                            <div className='dev-item-title'>2025年3月</div>
                             <img src={line} alt="" className='line_dev' />
                         </div>
                     </div>
                 </div>
 
                 <div className='dev-content scroll2' ref={scroll2Ref}>
-                    <div className='dev-ox'>
-                        <div className='dev-item bottom' style={{ marginLeft: "244px" }}>
+                    <div className='dev-ox bottom-dev'>
+                        <div className='dev-item bottom' style={{ marginLeft: "444px" }}>
                             <img src={line} alt="" className='line_dev' />
                             <div className='dev-item-title'>2024年7月</div>
                             <div className='text'>
@@ -98,19 +98,19 @@ export default function DevelopPage() {
                             </div>
                             <img src={dev_2} alt="" />
                         </div>
-                        <div className='dev-item bottom' style={{ marginLeft: "750px" }}>
+                        <div className='dev-item bottom' style={{ marginLeft: "1150px" }}>
                             <img src={line} alt="" className='line_dev' />
                             <div className='dev-item-title'>2024年10月</div>
                             <div className='text'>
                                 首次发布产品：大模型知识推理一体机<br />
                                 「以存换算」「异构协同」技术赋能<br />
                                 支持千亿级别大模型
-                                开箱即用，推出简易应用平台<br />
+                                开箱即用，推出简易应用平台
                                 提供丰富API接口
                             </div>
                             <img src={dev_4} alt="" />
                         </div>
-                        <div className='dev-item bottom' style={{ marginLeft: "1250px", height: "300px" }}>
+                        <div className='dev-item bottom' style={{ marginLeft: "1850px", height: "300px" }}>
                             <img src={line} alt="" className='line_dev' />
                             <div className='dev-item-title'>2025年2月</div>
                             <div className='text'>
