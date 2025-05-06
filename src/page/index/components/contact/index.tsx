@@ -20,18 +20,18 @@ export default function PageContact() {
             title: '趋境资讯',
             id: 5
         },
-        {
-            title: '合作案例',
-            id: 4
-        },
+        // {
+        //     title: '合作案例',
+        //     id: 4
+        // },
         {
             title: '技术方案',
             id: 2
         },
-        {
-            title: '行业介绍',
-            id: 2
-        },
+        // {
+        //     title: '行业介绍',
+        //     id: 2
+        // },
         {
             title: '关于我们',
             id: 6
@@ -44,8 +44,7 @@ export default function PageContact() {
                 <div className='contact-box-left'>
                     <img src={logo} alt="" />
                     <div className='contact-box-left-text'>
-                        趋境科技专注大模型推理加速方案，<br />
-                        助企业低成本部署私有化大模型 。
+                    北京趋境科技成立于2023年底，专注大模型推理加速方案。其创始团队来自清华计算机系，成员多为硕博，毕业于知名院校，有丰富产品经验。公司基于首创架构推出“AI大模型推理软硬一体机”，通过协同多种设备释放异构算力，解决大模型落地难题。目前已与安全、教育、制造等行业企业合作，助推大模型业务升级。
                     </div>
                 </div>
                 <div className='contact-box-right'>

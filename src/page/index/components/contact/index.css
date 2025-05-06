@@ -38,6 +38,7 @@
     line-height: 22px;
     letter-spacing: 2%;
     margin-top: 23px;
+    max-width: 400px;
 }
 
 .contact-box-right {
