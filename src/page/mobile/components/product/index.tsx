@@ -1,6 +1,6 @@
 import './index.css'
 import line from '@/assets/images/line.png'
-import productImg from '@/assets/images/product.png'
+import productImg from '@/assets/images/mb-pro.png'
 import useAnimate from '@/common/useAnimate'
 import { RefObject, useRef } from 'react';
 
@@ -26,23 +26,23 @@ export default function PageProduct() {
 
 
     return (
-        <div className="section section-2">
-            <div className='center-shadow'></div>
-            <div className='product-box'>
-                <div className='product-box-left'>
-                    <div className='product-box-left-title'>
+        <div className="mob-product">
+            <div className='mob-center-shadow'></div>
+            <div className='mob-product-box'>
+                <div className='mob-product-box-left'>
+                    <div className='mob-product-box-left-title'>
                         大模型知识<span>推理一体机</span><br />
                         提供企业专属推理平台
                     </div>
-                    <div className='line-pro'> <img src={line} alt="" /> </div>
-                    <div className='product-box-left-content'>
+                    <div className='mob-line-pro'> <img src={line} alt="" /> </div>
+                    <div className='mob-product-box-left-content'>
                         {productFeatures.map((feature, index) => (
-                            <div key={index + ''} className='product-content-item'>
-                                <div className='product-content-item-title'>
+                            <div key={index + ''} className='mob-product-content-item'>
+                                <div className='mob-product-content-item-title'>
                                     {feature.title}
                                 </div>
                                 {feature.texts.map((text, textIndex) => (
-                                    <div key={textIndex + ''} className='product-content-item-text'>
+                                    <div key={textIndex + ''} className='mob-product-content-item-text'>
                                         {text}
                                     </div>
                                 ))}
@@ -50,13 +50,10 @@ export default function PageProduct() {
                         ))}
                     </div>
                 </div>
-                <div className='product-box-right'>
-                    <div className='product-box-right-img'>
-                        <img src={productImg} alt="" ref={elementRef} />
-                    </div>
+                <div className='mob-product-box-right'>
+                    <img src={productImg} alt="" ref={elementRef} />
                 </div>
             </div>
-
         </div>
     );
 }

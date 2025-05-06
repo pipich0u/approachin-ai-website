@@ -1,0 +1,107 @@
+.section-9 {
+    height: 530px !important;
+    background-color: #1A1A1A;
+    padding-top: 63px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* align-items: start; */
+    /* justify-content: start; */
+}
+
+.contact-box {
+    box-sizing: border-box;
+    padding: 0 100px;
+    width: 100%;
+    min-width: 1000px;
+    /* height: 100%; */
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 7px; */
+}
+
+.contact-box-left {
+    min-width: 290px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+.contact-box-left-text {
+    color: #fff;
+    font-family: MiSans;
+    font-weight: 250;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 2%;
+    margin-top: 23px;
+}
+
+.contact-box-right {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-box-right-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+.content-box-right-item-title {
+    font-family: MiSans;
+    font-weight: 520;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 6%;
+    color: white;
+    margin-bottom: 14px;
+}
+
+.content-box-right-item-text {
+    font-family: MiSans;
+    font-weight: 330;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 6%;
+    color: #FFFFFFB2;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.ewm {
+    margin-top: 16px;
+    width: 95px;
+    height: 95px;
+}
+
+.contact-icp {
+    flex: 1;
+    box-sizing: border-box;
+    margin:0  100px;
+    padding: 40px 0;
+    width: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #FFFFFF1A;
+    margin-top: 58px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icp-text {
+    font-family: MiSans;
+    font-weight: 250;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 2%;
+    color: #999;
+}
+.contact-icp-text span{
+    cursor: pointer;
+}

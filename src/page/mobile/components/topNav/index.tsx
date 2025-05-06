@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 import './index.css';
 import logo from '@/assets/images/logo.png'
 import logo_black from '@/assets/svg/logo-black.svg'
+import mb from '@/assets/svg/mb-nav.svg'
 import { useLocation, useNavigate } from 'react-router-dom';
-interface TopNavProps {
-  onNavigate: (index: number) => void;
-  activeSection: number;
-}
+// interface TopNavProps {
+//   onNavigate: (index: number) => void;
+//   activeSection: number;
+// }
 
-const TopNav: React.FC<TopNavProps> = ({ onNavigate, activeSection }) => {
+const TopNav: React.FC = () => {
   // const navigate = useNavigate();
   // const [activeSection, setActiveSection] = React.useState(0);
   // const onNavigate = (index: string, nb: number) => {
@@ -25,27 +26,18 @@ const TopNav: React.FC<TopNavProps> = ({ onNavigate, activeSection }) => {
     { title: '企业发展', id: 5 },
     // { title: '团队介绍', id: 7 },
   ];
-  useEffect(() => {
-    onNavigate(0)
-  }, [])
+  // useEffect(() => {
+  //   onNavigate(0)
+  // }, [])
 
   return (
-    <nav className={`top-nav bg-1 `}>
-      <div className='app container'>
-        <div className="logo">
+    <nav className={`mob-top-nav`}>
+      <div className='mob-nav-container'>
+        <div className="mob-logo">
           <img src={logo} alt="" />
         </div>
-        <div className="nav-container">
-          {navItems.map((item) => (
-            <div
-              key={item.id}
-              className={`nav-item ${activeSection === item.id ? 'active' : ''}`}
-              onClick={() => onNavigate(item.id)}
-            >
-              {item.title}
-              {activeSection === item.id && <div className="nav-underline" />}
-            </div>
-          ))}
+        <div className="mob-right">
+        <img src={mb} alt="" />
         </div>
       </div>
     </nav>

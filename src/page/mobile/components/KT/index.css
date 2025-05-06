@@ -1,0 +1,134 @@
+.mob-kt{
+    background: linear-gradient(180deg, #FFFFFF -4.57%, #F2F2F2 100%);
+    width: 100%;
+    box-sizing: border-box;
+    padding:100px 70px ;
+    padding-bottom: 0;
+}
+.mob-kt-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+}
+.mob-kt-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+    padding-bottom: 530px;
+}
+
+.mob-kt-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    /* margin-right: 30px; */
+    /* min-width: 312px; */
+}
+
+.mob-kt-left-title {
+    font-family: MiSans;
+    font-weight: 520;
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    color: #000;
+    margin-bottom: 60px;
+    min-height: 120px;
+}
+
+.mob-kt-left-title-bot {
+    user-select: none;
+}
+
+.mob-kt-left-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 22px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    /* max-width: 65%; */
+}
+
+.mob-kt-left-content-item {
+    width: 100%;
+    font-family: MiSans;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    color: #1A1A1A;
+}
+
+.mob-kt-left-content-item-title {
+    font-family: MiSans;
+    font-weight: 520;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    color: #000;
+}
+
+.mob-kt-left-content-item-content {
+    font-family: MiSans;
+    font-weight: 305;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    color: #666;
+    margin-top: 6px;
+}
+
+.mob-ktbg-1 {
+    background-color: #F5F6FA;
+}
+
+.mob-ktbg-2 {
+    background: #EDEFF7;
+}
+
+.mob-ktbg-3 {
+    background: #E6E9F5;
+}
+
+.mob-kt-right {
+    /* width: 50%; */
+    position: absolute;
+    bottom: 0;
+    left: -70px;
+    flex: 1;
+    height: 480px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0 100px; */
+    padding:85px 80px;
+    box-sizing: border-box;
+    background-image: url(../../../../assets/images/mbktbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-radius: 16px; */
+    overflow: hidden;
+    /* min-width: 418px; */
+    margin-top: 60px;
+}
+
+
+.vido {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* margin: 50px; */
+    border-radius: 16px;
+    box-shadow: 12px 14px 40px 0px #0000001A;
+    border: 2px solid #E2E2E2
+}

@@ -1,0 +1,110 @@
+.mob-product {
+    background: #000;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100vw;
+    height: 1874px;
+    padding: 0 !important;
+}
+
+.mob-center-shadow {
+    width: 384px;
+    height: 636px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000eff;
+    border-radius: 0px 0px 0px 0px;
+    opacity: 0.6;
+    filter: blur(433.5076904296875px);
+    /* z-index: 1; */
+}
+
+.mob-product-box {
+    box-sizing: border-box;
+    width: 100%;
+    /* height: fit-content; */
+    padding: 110px 98px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin-top: 68px; */
+}
+
+.mob-product-box .mob-product-box-left {
+    /* display: flex; */
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 400px;
+    /* height: 100%; */
+}
+
+.mob-product-box-left .mob-product-box-left-title {
+    font-family: MiSans;
+    font-weight: 450;
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    color: #fff;
+}
+
+.mob-product-box-left .mob-product-box-left-title span {
+    color: #959DFF;
+}
+
+.mob-line-pro {
+    margin-top: 50px;
+}
+
+.mob-line-pro img {
+    width: 80px;
+}
+
+.mob-product-box-left-content {
+    /* width: 50%; */
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+}
+
+.mob-product-content-item {
+    font-family: MiSans;
+}
+
+.mob-product-content-item-title {
+    font-weight: 450;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+
+.mob-product-content-item-text {
+    font-weight: 380;
+    font-size: 18px;
+    line-height: 147%;
+    letter-spacing: 0px;
+    color: #FFFFFFa1;
+
+}
+
+.mob-product-box-right {
+    width: 100%;
+    height: 650px;
+    position: relative;
+    margin-top: 150px;
+    /* overflow: hidden; */
+}
+
+.mob-product-box-right img {
+    position: absolute;
+    width: 130%;
+    height: 100%;
+    right: -98px;
+}
