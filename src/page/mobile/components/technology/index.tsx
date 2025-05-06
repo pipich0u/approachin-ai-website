@@ -17,7 +17,7 @@ export default function PageTechnology({id}:indexProps) {
                 <div className='mob-technology-title'>
                     <div className='mob-technology-title-1'>业界首创以存换算</div>
                     <div className='mob-technology-title-2'>全系统推理架构</div>
-                    <div className='mob-technology-title-3'>全系统协同优化，联动异构设备；突破显存限制，释放存算力</div>
+                    <div className='mob-technology-title-3'>全系统协同优化，联动异构设备<br /> 突破显存限制，释放存算力</div>
                 </div>
                 <div className='mob-technology-content'>
                     <div className='mob-technology-content-size'>

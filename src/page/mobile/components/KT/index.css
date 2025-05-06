@@ -1,5 +1,6 @@
 .mob-kt{
-    background: linear-gradient(180deg, #FFFFFF -4.57%, #F2F2F2 100%);
+    /* background: linear-gradient(180deg, #FFFFFF -4.57%, #F2F2F2 100%); */
+    background: #fff;
     width: 100%;
     box-sizing: border-box;
     padding:100px 70px ;
