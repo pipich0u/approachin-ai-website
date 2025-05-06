@@ -25,7 +25,9 @@ const TopNav: React.FC<TopNavProps> = ({ onNavigate, activeSection }) => {
     { title: '企业发展', id: 5 },
     // { title: '团队介绍', id: 7 },
   ];
-
+  useEffect(() => {
+    onNavigate(0)
+  }, [])
 
   return (
     <nav className={`top-nav  bg-1 `}>

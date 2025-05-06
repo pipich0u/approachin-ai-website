@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 //@ts-ignore
 import ReactFullpage from '@fullpage/react-fullpage';
 import TopNav from './components/topNav/index';
