@@ -2,7 +2,7 @@ import './index.css'
 import line from '@/assets/images/line.png'
 import productImg from '@/assets/images/product.png'
 import useAnimate from '@/common/useAnimate'
-import { RefObject, useRef } from 'react';
+import { Children, RefObject, useRef } from 'react';
 
 const productFeatures = [
     {
@@ -27,32 +27,34 @@ export default function PageProduct() {
 
     return (
         <div className="section section-2">
-            <div className='center-shadow'></div>
-            <div className='product-box'>
-                <div className='product-box-left'>
-                    <div className='product-box-left-title'>
-                        AI大模型推理软硬一体机<br />
-                        企业级私有化部署新范式
-                    </div>
-                    <div className='line-pro'> <img src={line} alt="" /> </div>
-                    <div className='product-box-left-content'>
-                        {productFeatures.map((feature, index) => (
-                            <div key={index + ''} className='product-content-item'>
-                                <div className='product-content-item-title'>
-                                    {feature.title}
-                                </div>
-                                {feature.texts.map((text, textIndex) => (
-                                    <div key={textIndex + ''} className='product-content-item-text'>
-                                        {text}
+            <div className='product-box-container-max'>
+                <div className='center-shadow'></div>
+                <div className='product-box'>
+                    <div className='product-box-left'>
+                        <div className='product-box-left-title'>
+                            AI大模型推理软硬一体机<br />
+                            企业级私有化部署新范式
+                        </div>
+                        <div className='line-pro'> <img src={line} alt="" /> </div>
+                        <div className='product-box-left-content'>
+                            {productFeatures.map((feature, index) => (
+                                <div key={index + ''} className='product-content-item'>
+                                    <div className='product-content-item-title'>
+                                        {feature.title}
                                     </div>
-                                ))}
-                            </div>
-                        ))}
+                                    {feature.texts.map((text, textIndex) => (
+                                        <div key={textIndex + ''} className='product-content-item-text'>
+                                            {text}
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
-                <div className='product-box-right'>
-                    <div className='product-box-right-img'>
-                        <img src={productImg} alt="" ref={elementRef} />
+                    <div className='product-box-right'>
+                        <div className='product-box-right-img'>
+                            <img src={productImg} alt="" ref={elementRef} />
+                        </div>
                     </div>
                 </div>
             </div>
