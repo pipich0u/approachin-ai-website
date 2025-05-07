@@ -38,7 +38,7 @@ export default function PageKt({id}:indexProps) {
                         </div>
                     </div>
                     <div className='mob-kt-right'>
-                        <video controls className='vido'>
+                        <video controls className='vido' disablePictureInPicture controlsList="nodownload noremoteplayback noplaybackrate">
                             <source src={vido} type="video/mp4" />
                         </video>
                     </div>
