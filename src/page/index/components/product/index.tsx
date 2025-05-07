@@ -26,7 +26,7 @@ export default function PageProduct() {
 
 
     return (
-        <div className="section section-2">
+        <div className="section section-2" id='1'>
             <div className='product-box-container-max'>
                 <div className='center-shadow'></div>
                 <div className='product-box'>

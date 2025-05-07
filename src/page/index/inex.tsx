@@ -12,6 +12,7 @@ import PageContact from './components/contact/index'
 import PageCase from './components/case/index'
 import PageTeam from './components/team/index'
 import DevelopPage from './components/develop';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 interface FullpageApi {
     silentMoveTo: (section: number, slide?: number) => void;
@@ -24,10 +25,13 @@ type ReactFullpage = {
     fullpageApi: FullpageApi
 }
 export default function Index() {
+    const navigate = useNavigate();
+    const [searchParams] = useSearchParams()
+    const navId = searchParams.get('id')
     const fullpageRef = useRef<ReactFullpage>(null);
     const [activeSection, setActiveSection] = useState(0);
-
-    const onLeave = (origin: any, destination: any, direction: string) => { 
+    const topNavRef = useRef<ReturnType<typeof TopNav>>(null)
+    const onLeave = (origin: any, destination: any, direction: string) => {
         // console.log(origin, destination, direction, 'ee');
         const sections = document.querySelectorAll('.section');
         sections.forEach(section => section.classList.remove('active'));
@@ -36,14 +40,21 @@ export default function Index() {
     };
 
     const handleNavigate = (index: number) => {
-        if (fullpageRef.current) {
-            fullpageRef.current.fullpageApi.silentMoveTo(index + 1);
-        }
+        fullpageRef.current.fullpageApi.silentMoveTo(index + 1);
+        // navigate('/#' + index)
+        // const a = document.createElement('a')
+        // a.href="#" + index
+        // a.click()
     };
-
+    useEffect(() => {
+        if (navId) {
+            topNavRef.current?.handleNavItemClick(navId)
+        }
+    }, [navId])
     return (
         <div className="w-100 h-100">
-            <TopNav onNavigate={handleNavigate} activeSection={activeSection} />
+            <TopNav ref={topNavRef} onNavigate={handleNavigate} activeSection={activeSection} />
+
             <ReactFullpage
                 //@ts-ignore
                 ref={fullpageRef}

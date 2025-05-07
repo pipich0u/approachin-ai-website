@@ -12,9 +12,7 @@ const TopNavs: React.FC<TopNavProps> = ({ }) => {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = React.useState(0);
   const onNavigate = (index: string, nb: number) => {
-    navigate(index);
-    window.scrollTo(0, 0);
-    // setActiveSection(nb)
+    navigate(index+'?id=' + nb);
   };
   const navItems = [
     { title: '首页', id: 0, path: '/' },
@@ -31,14 +29,15 @@ const TopNavs: React.FC<TopNavProps> = ({ }) => {
     <nav className={`top-nav  bg-0 `}>
       <div className='app container'>
         <div className="logo">
-          <img src={logo_black} alt="" />
+          <a href='/'>
+            <img src={logo_black} alt="" /></a>
         </div>
         <div className="nav-container">
           {navItems.map((item) => (
             <div
               key={item.id}
               className={`nav-items`}
-              onClick={() => onNavigate(item.path,item.id)}
+              onClick={() => onNavigate(item.path, item.id)}
             >
               {item.title}
               {activeSection === item.id && <div className="nav-underline" />}
