@@ -22,7 +22,7 @@
 .mob-title-top {
     font-family: MiSans;
     font-weight: 305;
-    font-size: 22.08px;
+    font-size: 26px;
     text-align: center;
     background: linear-gradient(269.87deg, #C2A5FF -10.1%, rgba(255, 255, 255, 0.8) 49.85%),
         linear-gradient(89.87deg, #B2A6FF 0.11%, rgba(255, 255, 255, 0) 50.16%);
@@ -38,7 +38,7 @@
 .mob-title-center {
     font-family: MiSans;
     font-weight: 450;
-    font-size: 61.37px;
+    font-size: 65px;
     line-height: 72.73px;
     letter-spacing: 2%;
     text-align: center;
@@ -61,13 +61,13 @@
 }
 
 .mob-line img {
-    width: 80px;
+    width: 100px;
 }
 
 .mob-title-bottom {
     font-family: MiSans;
     font-weight: 305;
-    font-size: 26px;
+    font-size: 30px;
     line-height: 40px;
     letter-spacing: 2%;
     text-align: center;

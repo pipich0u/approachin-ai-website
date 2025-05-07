@@ -37,7 +37,7 @@
     color: #fff;
     font-family: MiSans;
     font-weight: 250;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 22px;
     letter-spacing: 2%;
     margin-top: 23px;
@@ -73,16 +73,16 @@
 .mob-content-box-right-item-text {
     font-family: MiSans;
     font-weight: 330;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 130%;
     letter-spacing: 6%;
     color: #FFFFFFB2;
-    margin-top: 16px;
+    margin-top: 24px;
     cursor: pointer;
 }
 
 .mob-ewm {
-    margin-top: 16px;
+    margin-top: 24px;
     width: 100px;
     height: 100px;
 }

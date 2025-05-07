@@ -76,8 +76,8 @@ export default function DevelopPage({ id }: { id: string }) {
                         <div className='mob-develop-content-item-title'>
                             首次发布产品:大模型知识推理一体机<br />
                             「以存换算」「异构协同」技术赋能<br />
-                            支持千亿级别大模型
-                            开箱即用，推出简易应用平台
+                            支持千亿级别大模型<br />
+                            开箱即用，推出简易应用平台<br />
                             提供丰富API接口
                         </div>
                         <img src={dev_4} alt="" />

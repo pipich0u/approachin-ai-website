@@ -15,7 +15,7 @@
 .mob-develop-top-title {
   font-family: MiSans;
   font-weight: 520;
-  font-size: 40px;
+  font-size: 44px;
   line-height: 150%;
   letter-spacing: 2%;
   color: #fff;
@@ -24,7 +24,7 @@
 .mob-develop-top-text {
   font-family: MiSans;
   font-weight: 330;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 150%;
   letter-spacing: 2%;
   text-align: center;
@@ -100,7 +100,7 @@
   /* width: 49%; */
   font-family: MiSans;
   font-weight: 330;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
   letter-spacing: 2%;
   vertical-align: middle;

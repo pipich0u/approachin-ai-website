@@ -30,7 +30,7 @@
 .mob-technology-title-1 {
     font-family: MiSans;
     font-weight: 450;
-    font-size: 48px;
+    font-size: 52px;
     line-height: 62px;
     letter-spacing: 2%;
     text-align: center;
@@ -41,7 +41,7 @@
 .mob-technology-title-2 {
     font-family: MiSans;
     font-weight: 450;
-    font-size: 48px;
+    font-size: 52px;
     line-height: 62px;
     letter-spacing: 2%;
     text-align: center;
@@ -52,7 +52,7 @@
 .mob-technology-title-3 {
     font-family: MiSans;
     font-weight: 330;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 150%;
     letter-spacing: 2%;
     text-align: center;
@@ -107,7 +107,7 @@
 .mob-technology-content-item-title {
     font-family: MiSans;
     font-weight: 450;
-    font-size: 22px;
+    font-size: 26px;
     line-height: 150%;
     
     color: #fff;
@@ -157,7 +157,7 @@
 
 .mob-technology-content-show-item-title span {
     font-weight: 330;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 150%;
     letter-spacing: 2%;
     color: #FFFFFF80;
@@ -165,7 +165,7 @@
 
 .mob-technology-content-show-item-title div {
     font-weight: 380;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 150%;
     letter-spacing: 2%;
     color: #FFFFFFE5;
@@ -176,8 +176,8 @@
     margin-top: 37px;
     font-family: MiSans;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 22px;
+    line-height: 24px;
     letter-spacing: 2%;
     text-align: justify;
     color: #FFFFFF80;
