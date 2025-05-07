@@ -2,7 +2,7 @@
     width: 100%;
     background-color: #1A1A1A;
     padding: 0 80px;
-    padding-top: 63px;
+    padding-top: 140px;
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
@@ -29,8 +29,8 @@
 
 }
 .mob-contact-box-left img{
-    width: 190px;
-    height: 54px;
+    width: 281px;
+    height: 80px;
 }
 
 .mob-contact-box-left-text {
@@ -38,9 +38,10 @@
     font-family: MiSans;
     font-weight: 250;
     font-size: 24px;
-    line-height: 22px;
+    line-height: 40px;
     letter-spacing: 2%;
     margin-top: 23px;
+    text-align:justify;
 }
 
 .mob-contact-box-right {
@@ -49,8 +50,8 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    gap: 80px;
-    margin-top: 80px;
+    gap: 140px;
+    margin-top: 140px;
 }
 
 .mob-content-box-right-item {
@@ -63,7 +64,7 @@
 .mob-content-box-right-item-title {
     font-family: MiSans;
     font-weight: 520;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 130%;
     letter-spacing: 6%;
     color: white;
@@ -73,7 +74,7 @@
 .mob-content-box-right-item-text {
     font-family: MiSans;
     font-weight: 330;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 130%;
     letter-spacing: 6%;
     color: #FFFFFFB2;
@@ -92,7 +93,7 @@
     box-sizing: border-box;
     margin:0  100px;
     padding: 40px 0;
-    width: calc(100% - 200px);
+    width: 100%;
     display: flex;
     flex-direction: column;
     border-top: 1px solid #FFFFFF1A;
@@ -104,7 +105,7 @@
 .mob-contact-icp-text {
     font-family: MiSans;
     font-weight: 250;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 2%;
     color: #808080;

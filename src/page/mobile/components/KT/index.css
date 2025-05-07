@@ -3,7 +3,8 @@
     background: #fff;
     width: 100%;
     box-sizing: border-box;
-    padding:100px 70px ;
+    padding:0 70px ;
+    padding-top: 150px;
     padding-bottom: 0;
 }
 .mob-kt-box{
@@ -55,14 +56,14 @@
     flex: 1;
     gap: 22px;
     box-sizing: border-box;
-    padding: 0 30px;
+    /* padding: 0 30px; */
     /* max-width: 65%; */
 }
 
 .mob-kt-left-content-item {
     width: 100%;
     font-family: MiSans;
-    padding: 30px 20px;
+    padding: 30px 30px;
     box-sizing: border-box;
     border-radius: 16px;
     color: #1A1A1A;
@@ -71,7 +72,7 @@
 .mob-kt-left-content-item-title {
     font-family: MiSans;
     font-weight: 520;
-    font-size: 18px;
+    font-size: 28px;
     line-height: 150%;
     letter-spacing: 2%;
     color: #000;
@@ -80,7 +81,7 @@
 .mob-kt-left-content-item-content {
     font-family: MiSans;
     font-weight: 305;
-    font-size: 14px;
+    font-size: 24px;
     line-height: 150%;
     letter-spacing: 2%;
     color: #666;
@@ -113,7 +114,7 @@
     /* padding: 0 100px; */
     padding:85px 80px;
     box-sizing: border-box;
-    background-image: url(../../../../assets/images/mbktbg.png);
+    background-image: url(@/assets/images/mbktbg.png);
     background-repeat: no-repeat;
     background-size: cover;
     /* border-radius: 16px; */

@@ -129,7 +129,9 @@
 
   }
 }
-
+.mobile-menu-list{
+  margin-top: 100px;
+}
 .mobile-menu-drawer {
   position: fixed;
   right: 0;
@@ -173,7 +175,7 @@
   line-height: 130%;
   letter-spacing: 6%;
   text-align: left;
-  padding: 40px 80px;
+  padding: 30px 80px;
   /* 
   font-size: 38px;
   display: block; */

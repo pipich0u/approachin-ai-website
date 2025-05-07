@@ -39,8 +39,7 @@ export default function PageTechnology({id}:indexProps) {
                         </div>
                         <div className='mob-technology-content-item'>
                             <div className='mob-technology-content-item-title'>
-                                模型性能推理<br />
-                                大幅度提升
+                                模型性能推理大幅度提升
                             </div>
                             <img src={up} alt="" />
                         </div>

@@ -2,6 +2,7 @@
 import './index.css'
 import k from '@/assets/images/K.png'
 import vido from '@/assets/audio/VS.mp4'
+import cover from '@/assets/images/vidoCover.png'
 interface indexProps {
     id: string
 }
@@ -38,7 +39,7 @@ export default function PageKt({id}:indexProps) {
                         </div>
                     </div>
                     <div className='mob-kt-right'>
-                        <video controls className='vido' disablePictureInPicture controlsList="nodownload noremoteplayback noplaybackrate">
+                        <video controls className='vido'  poster={cover} disablePictureInPicture controlsList="nodownload noremoteplayback noplaybackrate">
                             <source src={vido} type="video/mp4" />
                         </video>
                     </div>

@@ -31,13 +31,11 @@ export default function DevelopPage({ id }: { id: string }) {
 
                     </div>
                     <div className='mob-develop-content-item'>
-                        <div className='mob-develop-content-item-title'>
-                            首创“以存换算”技术<br />
-                            首创“全系统异构协同推理架构”技术<br />
-                            开源“Ktransformers”技术<br />
-                            可支持单卡运行千亿级大模型
-                        </div>
                         <img src={dev_1} alt="" />
+                        <div className='mob-develop-content-item-title'>
+                            公司成立<br />
+                            种子轮融资：真知创投
+                        </div>
                     </div>
                 </div>
                 <div className='mob-develop-item'>
@@ -46,7 +44,7 @@ export default function DevelopPage({ id }: { id: string }) {
                             首创“以存换算”技术<br />
                             首创“全系统异构协同推理架构”技术<br />
                             开源“Ktransformers”技术<br />
-                            可支持单卡运行千亿级大模型
+                            支持单卡运行千亿级大模型
                         </div>
                         <img src={dev_2} alt="" />
                     </div>
@@ -75,7 +73,7 @@ export default function DevelopPage({ id }: { id: string }) {
                     <div className='mob-develop-content-item'>
                         <div className='mob-develop-content-item-title'>
                             首次发布产品:大模型知识推理一体机<br />
-                            「以存换算」「异构协同」技术赋能<br />
+                            「以存换算」「异构协同」<br />
                             支持千亿级别大模型<br />
                             开箱即用，推出简易应用平台<br />
                             提供丰富API接口
@@ -98,7 +96,7 @@ export default function DevelopPage({ id }: { id: string }) {
                         <div className='mob-develop-content-item-title'>
                             天使轮融资
                         </div>
-                        <img src={dev_6} alt="" style={{ height: '100%' }} />
+                        <img src={dev_6} alt="" style={{ height: '90%' }} />
                     </div>
 
 
