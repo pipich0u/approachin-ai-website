@@ -9,9 +9,9 @@ interface ContactProps {
 }
 export default function PageContact({onNavigate}: ContactProps) {
     // const navigate =useNavigate();
-    const open = () => {
-        window.open('https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671')
-    }
+    // const open = () => {
+    //     window.open('https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671')
+    // }
     const openIcp = () => {
         window.open('https://beian.miit.gov.cn/#/Integrated/index')
     }
@@ -45,7 +45,7 @@ export default function PageContact({onNavigate}: ContactProps) {
         //     id: 'DevelopPage'
         // },
     ]
-    const map = 'https://map.baidu.com/search/%E5%8C%97%E4%BA%AC%E5%B8%82%E6%B5%B7%E6%B7%80%E5%8C%BA%E4%B8%9C%E5%8D%87%E5%A4%A7%E5%8E%A6ab%E5%BA%A7/@12951048.68,4838129.9350000005,20.17z?querytype=s&da_src=shareurl&wd=%E5%8C%97%E4%BA%AC%E5%B8%82%E6%B5%B7%E6%B7%80%E5%8C%BA%E4%B8%9C%E5%8D%87%E5%A4%A7%E5%8E%A6AB%E5%BA%A7&c=131&src=0&pn=0&sug=0&l=13&b=(12924003,4826192;12985443,4855344)&from=webmap&biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&device_ratio=1'
+    // const map = 'https://map.baidu.com/search/%E5%8C%97%E4%BA%AC%E5%B8%82%E6%B5%B7%E6%B7%80%E5%8C%BA%E4%B8%9C%E5%8D%87%E5%A4%A7%E5%8E%A6ab%E5%BA%A7/@12951048.68,4838129.9350000005,20.17z?querytype=s&da_src=shareurl&wd=%E5%8C%97%E4%BA%AC%E5%B8%82%E6%B5%B7%E6%B7%80%E5%8C%BA%E4%B8%9C%E5%8D%87%E5%A4%A7%E5%8E%A6AB%E5%BA%A7&c=131&src=0&pn=0&sug=0&l=13&b=(12924003,4826192;12985443,4855344)&from=webmap&biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&device_ratio=1'
     return (
         <div className="mob-contact">
             <div className='mob-contact-box'>
@@ -67,7 +67,7 @@ export default function PageContact({onNavigate}: ContactProps) {
                     <div className='mob-content-box-right-item'>
                         <div className='mob-content-box-right-item-title'>联系我们</div>
                         <div className='mob-content-box-right-item-text'>邮箱：market@approaching.com</div>
-                        <div className='mob-content-box-right-item-text' onClick={() => window.open(map)}>地址：北京市海淀区东升大厦AB座</div>
+                        <div className='mob-content-box-right-item-text' >地址：北京市海淀区东升大厦AB座</div>
                     </div>
                     <div className='mob-content-box-right-item'>
                         <div className='mob-content-box-right-item-title'>关注我们</div>
