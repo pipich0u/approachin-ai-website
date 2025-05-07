@@ -1,62 +1,56 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './index.css';
 import logo from '@/assets/images/logo.png'
-import logo_black from '@/assets/svg/logo-black.svg'
 import mb from '@/assets/svg/mb-nav.svg'
-import { useLocation, useNavigate } from 'react-router-dom';
-// interface TopNavProps {
-//   onNavigate: (index: number) => void;
-//   activeSection: number;
-// }
+import close from '@/assets/svg/mob-close.svg'
+interface TopNavProps {
+  onNavigate: (index: string) => void;
+}
 
-const TopNav: React.FC = () => {
-  // const navigate = useNavigate();
-  // const [activeSection, setActiveSection] = React.useState(0);
-  // const onNavigate = (index: string, nb: number) => {
-  //   navigate(index);
-  //   setActiveSection(nb)
-  // };
+const TopNav = ({ onNavigate }: TopNavProps) => {
   const [isFirstOpenPage, setIsFirstOpenPage] = useState(true)
   const [openDrawer, setOpenDrawer] = useState(false)
-  const menuHrefListDefault = [{
-    title: '产品一',
-    href: '#'
-  }, {
-    title: '产品二',
-    href: '#mobile-product-introduce'
-  }, {
-    title: '产品三',
-    href: '#mobile-frmework'
-  }, {
-    title: '产品四',
-    href: '#mobile-ktransformers'
-  }, {
-    title: '产品无',
-    href: '#mobile-example'
-  }]
-  const navItems = [
-    { title: '首页', id: 0 },
-    { title: '产品介绍', id: 1 },
-    { title: '技术方案', id: 2 },
-    { title: 'KTransformers', id: 3 },
-    // { title: '合作案例', id: 4 },
-    { title: '趋境资讯', id: 4 },
-    { title: '企业发展', id: 5 },
-    // { title: '团队介绍', id: 7 },
-  ];
-  // useEffect(() => {
-  //   onNavigate(0)
-  // }, [])
-  const menuElement = () => !isFirstOpenPage ? <div className={'mobile-menu-drawer ' + (openDrawer ? '' : 'closing')}>
-    <div className="mobile-menu-list">
-      {
+  const menuHrefListDefault = [
+    {
+      title: '产品介绍',
+      href: 'pageProduct'
+    },
+    {
+      title: '技术方案',
+      href: 'pageTechnology'
+    },
+    {
+      title: 'KTransformers',
+      href: 'pageKt'
+    },
+    {
+      title: '趋境资讯',
+      href: 'pageInfo'
 
-        menuHrefListDefault.map(item => <a href={item.href} key={item.title} onClick={() => {
-          setOpenDrawer(false)
-        }} className="mobile-menu-item">{item.title}</a>)
-      }
+    },
+    {
+      title: '企业发展',
+      href: 'DevelopPage'
+    }
+  ]
+  const menuElement = () => openDrawer && (
+    <div className="mobile-menu-drawer">
+      <div className="mobile-menu-list">
+        {menuHrefListDefault.map((item) => (
+          <div
+            key={item.title}
+            onClick={() => {
+              setOpenDrawer(false);
+              onNavigate(item.href);
+            }}
+            className="mobile-menu-item"
+          >
+            {item.title}
+          </div>
+        ))}
+      </div>
     </div>
-  </div> : null
+  );
   return (
     <nav className={`mob-top-nav`}>
       <div className='mob-nav-container'>
@@ -64,9 +58,9 @@ const TopNav: React.FC = () => {
           <img src={logo} alt="" onClick={() => { scrollTo(0, 0) }} />
         </div>
         <div className="mob-right">
-          <img src={mb} alt="" onClick={() => {
-            setIsFirstOpenPage(false)
-            setOpenDrawer(!openDrawer)
+          <img src={openDrawer ? close : mb} alt="" onClick={() => {
+            setIsFirstOpenPage(false);
+            setOpenDrawer(!openDrawer);
           }} />
         </div>
       </div>

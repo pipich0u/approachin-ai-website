@@ -23,7 +23,7 @@ export default function MobileIndex() {
   return (
     <div className="mobile-container">
       {/* 假设 TopNav 接收 onNavigate 作为 props */}
-      <TopNav  />
+      <TopNav onNavigate={scrollToSection} />
 
       <PageIndex id="pageIndex" />
       <PageProduct id="pageProduct" />
