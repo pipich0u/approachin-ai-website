@@ -4,7 +4,7 @@ import line from '../../../../assets/images/line.png'
 export default function PageIndex() {
    
     return (
-        <div className="section section-1">
+        <div className="section section-1" id='0'>
             <div className="title">
                 <div className='title-top'>An accelerated, accessible, affordable approach to AI</div>
                 <div className='title-center'>加速到来你的AI世界</div>

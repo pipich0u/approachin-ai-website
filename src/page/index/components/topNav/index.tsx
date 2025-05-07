@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { createRef, forwardRef, useEffect, useImperativeHandle } from 'react';
 import './index.css';
 import logo from '@/assets/images/logo.png'
 import logo_black from '@/assets/svg/logo-black.svg'
@@ -8,7 +8,7 @@ interface TopNavProps {
   activeSection: number;
 }
 
-const TopNav: React.FC<TopNavProps> = ({ onNavigate, activeSection }) => {
+const TopNav = forwardRef(({ onNavigate, activeSection }: TopNavProps, ref) => {
   // const navigate = useNavigate();
   // const [activeSection, setActiveSection] = React.useState(0);
   // const onNavigate = (index: string, nb: number) => {
@@ -29,15 +29,27 @@ const TopNav: React.FC<TopNavProps> = ({ onNavigate, activeSection }) => {
     onNavigate(0)
   }, [])
 
+  useImperativeHandle(ref, () => {
+    return {
+      handleNavItemClick: (id: number) => {
+        console.log(id,'nav-id');
+        
+        (document.querySelector('#home-nav-' + id) as HTMLDivElement).click()
+      }
+    }
+  })
   return (
     <nav className={`top-nav bg-1 `}>
       <div className='app container'>
         <div className="logo">
-          <img src={logo} alt="" />
+          <a href="/">
+            <img src={logo} alt="" />
+          </a>
         </div>
         <div className="nav-container">
           {navItems.map((item) => (
             <div
+              id={'home-nav-' + item.id}
               key={item.id}
               className={`nav-item ${activeSection === item.id ? 'active' : ''}`}
               onClick={() => onNavigate(item.id)}
@@ -50,6 +62,6 @@ const TopNav: React.FC<TopNavProps> = ({ onNavigate, activeSection }) => {
       </div>
     </nav>
   );
-};
+})
 
 export default TopNav; 
