@@ -23,13 +23,17 @@ const productFeatures = [
 export default function PageProduct() {
     const elementRef = useRef<HTMLImageElement>(null)
     useAnimate({ elementRef, direction: 'right' });
-
-
+    const boxRef = useRef<HTMLDivElement>(null)
+    const [rig, setRig] = useState(0)
+    useEffect(() => {
+        const ele = boxRef.current?.getClientRects()[0]
+        setRig((window.innerWidth - ele?.width) / 2)
+    }, [])
     return (
         <div className="section section-2" id='1'>
             <div className='product-box-container-max'>
                 <div className='center-shadow'></div>
-                <div className='product-box'>
+                <div className='product-box' ref={boxRef}>
                     <div className='product-box-left'>
                         <div className='product-box-left-title'>
                             AI大模型推理软硬一体机<br />
@@ -52,7 +56,7 @@ export default function PageProduct() {
                         </div>
                     </div>
                     <div className='product-box-right'>
-                        <div className='product-box-right-img'>
+                        <div className='product-box-right-img' style={{right:`-${rig}px`}}>
                             <img src={productImg} alt="" ref={elementRef} />
                         </div>
                     </div>
