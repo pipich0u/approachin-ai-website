@@ -15,9 +15,14 @@ export default function MobileIndex() {
   // 滚动到指定组件
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  if (element) {
+    const navbarHeight = 60;
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: elementPosition - navbarHeight,
+      behavior: 'instant'
+    });
+  }
   };
 
   return (
