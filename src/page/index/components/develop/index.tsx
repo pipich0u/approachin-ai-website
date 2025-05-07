@@ -34,7 +34,7 @@ export default function DevelopPage() {
     }, []);
 
     return (
-        <div className="section section-7">
+        <div className="section section-7" id="5">
             <div className='develop'>
                 <div className='develop-top'>
                     <div className='dev-title'>企业发展</div>

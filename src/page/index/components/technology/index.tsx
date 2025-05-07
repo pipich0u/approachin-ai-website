@@ -7,7 +7,7 @@ import ychs from '../../../../assets/images/ychs.png'
 export default function PageTechnology() {
 
     return (
-        <div className="section section-3">
+        <div className="section section-3" id="2">
             <div className='technology'>
                 <div className='technology-title'>
                     <div className='technology-title-1'>业界首创 </div>

@@ -10,7 +10,7 @@ import three from "@/assets/images/3.jpg"
 export default function PageInfo() {
     const navgitor = useNavigate()
     return (
-        <div className="section section-6">
+        <div className="section section-6" id="4">
             <div className='info-box'>
                 <div className="info-title">
                     <div className='title-left'>企业资讯</div>

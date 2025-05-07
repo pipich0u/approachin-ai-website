@@ -34,10 +34,10 @@ const TopNav: React.FC = () => {
     <nav className={`mob-top-nav`}>
       <div className='mob-nav-container'>
         <div className="mob-logo">
-          <img src={logo} alt="" />
+          <img src={logo} alt="" onClick={() => { scrollTo(0, 0) }} />
         </div>
         <div className="mob-right">
-        <img src={mb} alt="" />
+          <img src={mb} alt="" />
         </div>
       </div>
     </nav>

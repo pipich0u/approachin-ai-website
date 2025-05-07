@@ -10,7 +10,7 @@ interface TopNavProps {
 
 const TopNavs: React.FC<TopNavProps> = ({ }) => {
   const navigate = useNavigate();
-  const [activeSection, setActiveSection] = React.useState(0);
+  const [activeSection, setActiveSection] = React.useState(4);
   const onNavigate = (index: string, nb: number) => {
     navigate(index+'?id=' + nb);
   };
@@ -20,8 +20,8 @@ const TopNavs: React.FC<TopNavProps> = ({ }) => {
     { title: '技术方案', id: 2, path: '/' },
     { title: 'KTransformers', id: 3, path: '/' },
     // { title: '合作案例', id: 4, path: '/' },
-    { title: '趋境资讯', id: 5, path: '/' },
-    // { title: '团队介绍', id: 6, path: '/' },
+    { title: '趋境资讯', id: 4, path: '/' },
+    { title: '企业发展', id: 5, path: '/' },
     // { title: '团队介绍', id: 7, path: '/' }
   ];
 
@@ -36,7 +36,7 @@ const TopNavs: React.FC<TopNavProps> = ({ }) => {
           {navItems.map((item) => (
             <div
               key={item.id}
-              className={`nav-items`}
+              className={`nav-items ${activeSection === item.id ? 'active' : ''}`}
               onClick={() => onNavigate(item.path, item.id)}
             >
               {item.title}
