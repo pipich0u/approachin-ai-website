@@ -98,7 +98,7 @@ export default function DevelopPage({ id }: { id: string }) {
                         <div className='mob-develop-content-item-title'>
                             天使轮融资
                         </div>
-                        <img src={dev_6} alt="" style={{height:'100%'}} />
+                        <img src={dev_6} alt="" style={{ height: '100%' }} />
                     </div>
 
 
@@ -113,7 +113,7 @@ export default function DevelopPage({ id }: { id: string }) {
                             </span>
                             国内外社区热榜第一
                         </div>
-                        <img src={dev_5} alt="" style={{height:'50px'}}/>
+                        <img src={dev_5} alt="" style={{ height: '50px' }} />
                     </div>
                     <div className='mob-develop-content-center'>
                     </div>
@@ -123,7 +123,7 @@ export default function DevelopPage({ id }: { id: string }) {
                 </div>
                 <div className='mob-develop-item'>
                     <div className='mob-develop-years'>
-                        2024年7月
+                        2025年3月
                     </div>
                     <div className='mob-develop-content-center'>
                     </div>
