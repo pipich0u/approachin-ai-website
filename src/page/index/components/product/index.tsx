@@ -2,7 +2,7 @@ import './index.css'
 import line from '@/assets/images/line.png'
 import productImg from '@/assets/images/product.png'
 import useAnimate from '@/common/useAnimate'
-import { Children, RefObject, useRef } from 'react';
+import { Children, RefObject, useEffect, useRef, useState } from 'react';
 
 const productFeatures = [
     {

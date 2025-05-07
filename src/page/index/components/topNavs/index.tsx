@@ -13,7 +13,8 @@ const TopNavs: React.FC<TopNavProps> = ({ }) => {
   const [activeSection, setActiveSection] = React.useState(0);
   const onNavigate = (index: string, nb: number) => {
     navigate(index);
-    setActiveSection(nb)
+    window.scrollTo(0, 0);
+    // setActiveSection(nb)
   };
   const navItems = [
     { title: '首页', id: 0, path: '/' },
