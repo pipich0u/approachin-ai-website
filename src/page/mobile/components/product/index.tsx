@@ -53,7 +53,7 @@ export default function PageProduct({id}:indexProps) {
                     </div>
                 </div>
                 <div className='mob-product-box-right'>
-                    <img src={productImg} alt="" ref={elementRef} />
+                    <img src={productImg} alt=""  />
                 </div>
             </div>
         </div>
