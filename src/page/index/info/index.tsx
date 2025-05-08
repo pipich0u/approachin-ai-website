@@ -39,8 +39,6 @@ export default function InfoPage() {
             img: info_4,
             url: "https://mp.weixin.qq.com/s/XnaPzCIywV6NECMmG6Qa8g"
         },
-
-
     ]
     return (
         <div className='info'>

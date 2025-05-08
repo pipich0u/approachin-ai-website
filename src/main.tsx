@@ -1,9 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import MobileDetect from 'mobile-detect'
-import Index from './page/index/inex'
 import MobileIndex from './page/mobile/index'
-import { BrowserRouter, RouterProvider, useRoutes } from 'react-router-dom'
+import { BrowserRouter, RouteObject, useRoutes } from 'react-router-dom'
 import router from './router'
 function DynamicRoutes({ router }: { router: RouteObject[] }) {
   const routes = useRoutes(router)

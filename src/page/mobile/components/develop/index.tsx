@@ -1,7 +1,5 @@
-import { useEffect, useRef } from 'react';
 import './index.css'
 
-import line from '@/assets/images/dev-line.png'
 import dev_1 from '@/assets/images/2023.png'
 import dev_2 from '@/assets/images/202407.png'
 import dev_3 from '@/assets/images/202409.png'
@@ -10,7 +8,6 @@ import dev_5 from '@/assets/images/202502.png'
 import dev_6 from '@/assets/images/dev_6.png'
 
 export default function DevelopPage({ id }: { id: string }) {
-
 
     return (
         <div className="mob-develop" id={id}>
@@ -98,8 +95,6 @@ export default function DevelopPage({ id }: { id: string }) {
                         </div>
                         <img src={dev_6} alt="" style={{ height: '90%' }} />
                     </div>
-
-
                 </div>
                 <div className='mob-develop-item'>
                     <div className='mob-develop-content-item'>

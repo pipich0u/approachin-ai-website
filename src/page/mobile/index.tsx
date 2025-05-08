@@ -1,5 +1,4 @@
 import './index.css';
-import { useEffect, useRef } from 'react';
 
 import TopNav from './components/topNav';
 import PageIndex from './components/index';
@@ -27,9 +26,7 @@ export default function MobileIndex() {
 
   return (
     <div className="mobile-container">
-      {/* 假设 TopNav 接收 onNavigate 作为 props */}
       <TopNav onNavigate={scrollToSection} />
-
       <PageIndex id="pageIndex" />
       <PageProduct id="pageProduct" />
       <PageTechnology id="pageTechnology" />

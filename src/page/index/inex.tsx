@@ -25,12 +25,13 @@ type ReactFullpage = {
     fullpageApi: FullpageApi
 }
 export default function Index() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [searchParams] = useSearchParams()
     const navId = searchParams.get('id')
     const fullpageRef = useRef<ReactFullpage>(null);
     const [activeSection, setActiveSection] = useState(0);
     const topNavRef = useRef<ReturnType<typeof TopNav>>(null)
+    // @ts-ignore
     const onLeave = (origin: any, destination: any, direction: string) => {
         // console.log(origin, destination, direction, 'ee');
         const sections = document.querySelectorAll('.section');
@@ -40,7 +41,7 @@ export default function Index() {
     };
 
     const handleNavigate = (index: number) => {
-        fullpageRef.current.fullpageApi.silentMoveTo(index + 1);
+        fullpageRef.current?.fullpageApi.silentMoveTo(index + 1);
         // navigate('/#' + index)
         // const a = document.createElement('a')
         // a.href="#" + index
@@ -48,6 +49,7 @@ export default function Index() {
     };
     useEffect(() => {
         if (navId) {
+            // @ts-ignore
             topNavRef.current?.handleNavItemClick(navId)
         }
     }, [navId])

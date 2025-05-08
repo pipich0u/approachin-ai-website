@@ -1,6 +1,5 @@
 
 import './index.css'
-import k from '@/assets/images/K.png'
 import vido from '@/assets/audio/VS.mp4'
 import cover from '@/assets/images/vidoCover.png'
 interface indexProps {
@@ -17,7 +16,6 @@ export default function PageKt({id}:indexProps) {
                         开源个人版高性能推理框架
                     </div>
                     <div className='mob-kt-left-title-bot'>
-                        {/* <img src={k} alt="" /> */}
                         KTransformers
                     </div>
                 </div>

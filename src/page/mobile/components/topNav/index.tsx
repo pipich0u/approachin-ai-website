@@ -8,7 +8,7 @@ interface TopNavProps {
 }
 
 const TopNav = ({ onNavigate }: TopNavProps) => {
-  const [isFirstOpenPage, setIsFirstOpenPage] = useState(true)
+  // const [isFirstOpenPage, setIsFirstOpenPage] = useState(true)
   const [openDrawer, setOpenDrawer] = useState(false)
   const menuHrefListDefault = [
     {
@@ -59,7 +59,7 @@ const TopNav = ({ onNavigate }: TopNavProps) => {
         </div>
         <div className="mob-right">
           <img src={openDrawer ? close : mb} alt="" onClick={() => {
-            setIsFirstOpenPage(false);
+            // setIsFirstOpenPage(false);
             setOpenDrawer(!openDrawer);
           }} />
         </div>

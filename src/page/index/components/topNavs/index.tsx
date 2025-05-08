@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './index.css';
-import logo from '@/assets/images/logo.png'
 import logo_black from '@/assets/svg/logo-black.svg'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 interface TopNavProps {
   // onNavigate: (index: number) => void;
   // activeSection: number;
@@ -12,7 +11,7 @@ const TopNavs: React.FC<TopNavProps> = ({ }) => {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = React.useState(4);
   const onNavigate = (index: string, nb: number) => {
-    navigate(index+'?id=' + nb);
+    navigate(index + '?id=' + nb);
   };
   const navItems = [
     { title: '首页', id: 0, path: '/' },

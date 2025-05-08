@@ -2,7 +2,7 @@ import './index.css'
 import line from '@/assets/images/line.png'
 import productImg from '@/assets/images/productImg-mob.png'
 import useAnimate from '@/common/useAnimate'
-import { RefObject, useRef } from 'react';
+import { useRef } from 'react';
 interface indexProps {
     id: string
 }
@@ -24,6 +24,7 @@ const productFeatures = [
 
 export default function PageProduct({ id }: indexProps) {
     const elementRef = useRef<HTMLImageElement>(null)
+    //@ts-ignore
     useAnimate({ elementRef, direction: 'right' });
 
 

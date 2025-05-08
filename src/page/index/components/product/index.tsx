@@ -2,7 +2,7 @@ import './index.css'
 import line from '@/assets/images/line.png'
 import productImg from '@/assets/images/product.png'
 import useAnimate from '@/common/useAnimate'
-import { Children, RefObject, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const productFeatures = [
     {
@@ -22,12 +22,13 @@ const productFeatures = [
 
 export default function PageProduct() {
     const elementRef = useRef<HTMLImageElement>(null)
+    //@ts-ignore
     useAnimate({ elementRef, direction: 'right' });
     const boxRef = useRef<HTMLDivElement>(null)
     const [rig, setRig] = useState(0)
     useEffect(() => {
         const ele = boxRef.current?.getClientRects()[0]
-        setRig((window.innerWidth - ele?.width) / 2)
+        setRig((window.innerWidth - ele!.width) / 2)
     }, [])
     return (
         <div className="section section-2" id='1'>
