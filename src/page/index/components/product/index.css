@@ -5,7 +5,7 @@
     box-sizing: border-box;
     position: relative;
     /* width: 100vw; */
-    padding: 0 !important;
+    padding: 0  100px!important;
 }
 .section-2>.fp-overflow{
     width: 100%;
@@ -43,7 +43,7 @@
     width: 100%;
     height: fit-content;
     /* height: 100vh; */
-    padding: 150px 98px 0;
+    padding: 150px 0 0;
     display: flex;
     justify-content: space-between;
     /* align-items:safe; */
