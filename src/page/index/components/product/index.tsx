@@ -24,12 +24,7 @@ export default function PageProduct() {
     const elementRef = useRef<HTMLImageElement>(null)
     //@ts-ignore
     useAnimate({ elementRef, direction: 'right' });
-    const boxRef = useRef<HTMLDivElement>(null)
-    const [rig, setRig] = useState(0)
-    useEffect(() => {
-        const ele = boxRef.current?.getClientRects()[0]
-        setRig((window.innerWidth - ele!.width) / 2)
-    }, [])
+
     return (
         <div className="section section-2" id='1'>
             <div className='product-box-container-max'>
@@ -57,7 +52,7 @@ export default function PageProduct() {
                         </div>
                     </div>
                     <div className='product-box-right'>
-                        <div className='product-box-right-img' style={{right:`-${rig}px`}}>
+                        <div className='product-box-right-img' >
                             <img src={productImg} alt="" ref={elementRef} />
                         </div>
                     </div>
