@@ -29,7 +29,7 @@ export default function PageProduct() {
         <div className="section section-2" id='1'>
             <div className='product-box-container-max'>
                 <div className='center-shadow'></div>
-                <div className='product-box' ref={boxRef}>
+                <div className='product-box'>
                     <div className='product-box-left'>
                         <div className='product-box-left-title'>
                             AI大模型推理软硬一体机<br />
