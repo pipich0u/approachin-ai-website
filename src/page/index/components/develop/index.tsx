@@ -62,15 +62,16 @@ export default function DevelopPage() {
                             <div className='dev-item-title'>2024年9月</div>
                             <img src={line} alt="" className='line_dev' />
                         </div>
-                        <div className='dev-item top' style={{ marginLeft: "1580px" }} >
+                        {/* <div className='dev-item top' style={{ marginLeft: "1580px" }} >
                             <img src={dev_6} alt="" style={{width: '170px'}} />
                             <div className='text'>
                               天使轮融资
                             </div>
                             <div className='dev-item-title'>2025年1月</div>
                             <img src={line} alt="" className='line_dev' />
-                        </div>
-                        <div className='dev-item top' style={{ marginLeft: "2180px" }} >
+                        </div> */}
+                        <div className='dev-item top' style={{ marginLeft: "1580px" }} >
+                            {/* 2180px */}
                             {/* <img src={dev_1} alt="" /> */}
                             <div className='text'>
                                 发布新产品“趋境AI 大模型推理软硬一体工作站”<br />

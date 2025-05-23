@@ -83,7 +83,7 @@ export default function DevelopPage({ id }: { id: string }) {
                         2024年10月
                     </div>
                 </div>
-                <div className='mob-develop-item'>
+                {/* <div className='mob-develop-item'>
                     <div className='mob-develop-years'>
                         2025年1月
                     </div>
@@ -95,7 +95,7 @@ export default function DevelopPage({ id }: { id: string }) {
                         </div>
                         <img src={dev_6} alt="" style={{ height: '90%' }} />
                     </div>
-                </div>
+                </div> */}
                 <div className='mob-develop-item'>
                     <div className='mob-develop-content-item'>
                         <div className='mob-develop-content-item-title'>
