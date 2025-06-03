@@ -8,10 +8,10 @@ export default function Layout() {
     return (
         <div className="layout">
             {/* <TopNav /> */}
-            <div className="layout-main">
+            <div className="layout-main ">
                 <Outlet />
                 <div className="layout-bottom">
-                    <PageContact onNavigate={() => navgite('/')} />
+                    {/* <PageContact onNavigate={() => navgite('/')} /> */}
                 </div>
             </div>
         </div>

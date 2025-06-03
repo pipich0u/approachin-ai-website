@@ -4,8 +4,8 @@ import logo from '@/assets/images/logo.png'
 import logo_black from '@/assets/svg/logo-black.svg'
 import { useLocation, useNavigate } from 'react-router-dom';
 interface TopNavProps {
-  onNavigate: (index: number) => void;
-  activeSection: number;
+  onNavigate: (index: string) => void;
+  activeSection: string;
 }
 
 const TopNav = forwardRef(({ onNavigate, activeSection }: TopNavProps, ref) => {
@@ -16,24 +16,24 @@ const TopNav = forwardRef(({ onNavigate, activeSection }: TopNavProps, ref) => {
   //   setActiveSection(nb)
   // };
   const navItems = [
-    { title: '首页', id: 0 },
-    { title: '产品介绍', id: 1 },
-    { title: '技术方案', id: 2 },
-    { title: 'KTransformers', id: 3 },
+    { title: '首页', id: 0, href: 'pageIndex' },
+    { title: '产品介绍', id: 1, href: 'pageProduct' },
+    { title: '技术方案', id: 2, href: 'pageTechnology' },
+    { title: 'KTransformers', id: 3, href: 'pageKt' },
     // { title: '合作案例', id: 4 },
-    { title: '趋境资讯', id: 4 },
-    { title: '企业发展', id: 5 },
+    { title: '趋境资讯', id: 4, href: 'pageInfo' },
+    { title: '企业发展', id: 5, href: 'DevelopPage' },
     // { title: '团队介绍', id: 7 },
   ];
   useEffect(() => {
-    onNavigate(0)
+    onNavigate('pageIndex')
   }, [])
 
   useImperativeHandle(ref, () => {
     return {
       handleNavItemClick: (id: number) => {
-        console.log(id,'nav-id');
-        
+        console.log(id, 'nav-id');
+
         (document.querySelector('#home-nav-' + id) as HTMLDivElement).click()
       }
     }
@@ -51,11 +51,11 @@ const TopNav = forwardRef(({ onNavigate, activeSection }: TopNavProps, ref) => {
             <div
               id={'home-nav-' + item.id}
               key={item.id}
-              className={`nav-item ${activeSection === item.id ? 'active' : ''}`}
-              onClick={() => onNavigate(item.id)}
+              className={`nav-item ${activeSection === item.href ? 'active' : ''}`}
+              onClick={() => onNavigate(item.href)}
             >
               {item.title}
-              {activeSection === item.id && <div className="nav-underline" />}
+              {activeSection === item.href && <div className="nav-underline" />}
             </div>
           ))}
         </div>

@@ -5,11 +5,13 @@ import info_3 from '@/assets/images/info_3.png'
 import info_4 from '@/assets/images/info_4.png'
 import left from '@/assets/svg/left.svg'
 import TopNavs from "@/page/index/components/topNavs";
+import PageContact from '@/page/index/components/contact'
+import { useNavigate } from 'react-router-dom'
 export default function InfoPage() {
     const gopage = (url: string) => {
         window.open(url)
     }
-
+    const navgite = useNavigate()
     const infolist = [
         {
             title: 'KTransformers 高效适配曦云C500，单卡异构推理DeepSeek R1',
@@ -73,6 +75,7 @@ export default function InfoPage() {
                     })
                 }
             </div>
+            <PageContact onNavigate={() => navgite('/')} />
         </div>
     )
 }

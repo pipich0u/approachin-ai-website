@@ -4,6 +4,9 @@ import productImg from '@/assets/images/product.png'
 import useAnimate from '@/common/useAnimate'
 import { useEffect, useRef, useState } from 'react';
 
+interface indexProps {
+    id: string
+}
 const productFeatures = [
     {
         title: '首创以存换算全系统推理架构',
@@ -20,45 +23,46 @@ const productFeatures = [
 
 ];
 
-export default function PageProduct() {
+export default function PageProduct({ id }: indexProps) {
     const elementRef = useRef<HTMLImageElement>(null)
     //@ts-ignore
     useAnimate({ elementRef, direction: 'right' });
 
     return (
-        <div className="section section-2" id='1'>
-            <div className='product-box-container-max'>
-                <div className='center-shadow'></div>
-                <div className='product-box'>
-                    <div className='product-box-left'>
-                        <div className='product-box-left-title'>
-                            AI大模型推理软硬一体机<br />
-                            企业级私有化部署新范式
-                        </div>
-                        <div className='line-pro'> <img src={line} alt="" /> </div>
-                        <div className='product-box-left-content'>
-                            {productFeatures.map((feature, index) => (
-                                <div key={index + ''} className='product-content-item'>
-                                    <div className='product-content-item-title'>
-                                        {feature.title}
-                                    </div>
-                                    {feature.texts.map((text, textIndex) => (
-                                        <div key={textIndex + ''} className='product-content-item-text'>
-                                            {text}
+        <div className="section section-2" id={id}>
+            <div className='fp-overflow'>
+                <div className='product-box-container-max'>
+                    <div className='center-shadow'></div>
+                    <div className='product-box'>
+                        <div className='product-box-left'>
+                            <div className='product-box-left-title'>
+                                AI大模型推理软硬一体机<br />
+                                企业级私有化部署新范式
+                            </div>
+                            <div className='line-pro'> <img src={line} alt="" /> </div>
+                            <div className='product-box-left-content'>
+                                {productFeatures.map((feature, index) => (
+                                    <div key={index + ''} className='product-content-item'>
+                                        <div className='product-content-item-title'>
+                                            {feature.title}
                                         </div>
-                                    ))}
-                                </div>
-                            ))}
+                                        {feature.texts.map((text, textIndex) => (
+                                            <div key={textIndex + ''} className='product-content-item-text'>
+                                                {text}
+                                            </div>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                    <div className='product-box-right'>
-                        <div className='product-box-right-img' >
-                            <img src={productImg} alt="" ref={elementRef} />
+                        <div className='product-box-right'>
+                            <div className='product-box-right-img' >
+                                <img src={productImg} alt="" ref={elementRef} />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     );
 }
