@@ -1,5 +1,5 @@
 .mob-index {
-    background: url('/src/assets/images/index.png');
+    background: url('@/assets/images/index.png');
     background-size: cover;
     background-position: 43%;
     box-sizing: border-box;
