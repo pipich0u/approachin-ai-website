@@ -69,10 +69,18 @@ export default function DevelopPage({ id }: { id: string }) {
                 <div className='mob-develop-item'>
                     <div className='mob-develop-content-item'>
                         <div className='mob-develop-content-item-title'>
-                            首次发布产品:大模型知识推理一体机<br />
-                            「以存换算」「异构协同」<br />
-                            支持千亿级别大模型<br />
-                            开箱即用,推出简易应用平台<br />
+                            <span style={{ textWrap: 'nowrap' }}>
+                                首次发布产品:<br />大模型知识推理一体机
+                            </span>
+                            <span style={{ textWrap: 'nowrap' }}>
+                                「以存换算」「异构协同」
+                            </span>
+                            <span style={{ textWrap: 'nowrap' }}>
+                                支持千亿级别大模型
+                            </span>
+                            <span style={{ textWrap: 'nowrap' }}>
+                                开箱即用,推出简易应用平台<br />
+                            </span>
                             提供丰富API接口
                         </div>
                         <img src={dev_4} alt="" />
@@ -99,9 +107,11 @@ export default function DevelopPage({ id }: { id: string }) {
                 <div className='mob-develop-item'>
                     <div className='mob-develop-content-item'>
                         <div className='mob-develop-content-item-title'>
-                            发布新版“KTransformers”0.2版<br />
+                            发布新版
+                            <br />
+                            “KTransformers”0.2版<br />
                             <span style={{ color: '#868AFF' }}>
-                                单个消费级GPU+CPU 本地部署DeepSeek-R1/V3671B大模型<br />
+                                单个消费级GPU+CPU <br /> 本地部署DeepSeek-R1/V3671B大模型<br />
                                 GitHub标星过万<br />
                             </span>
                             国内外社区热榜第一
