@@ -39,7 +39,8 @@ export default function DevelopPage({ id }: { id: string }) {
                     <div className='mob-develop-content-item'>
                         <div className='mob-develop-content-item-title'>
                             首创“以存换算”技术<br />
-                            首创“全系统异构协同推理架构”技术<br />
+                            首创“全系统异构协同<br />
+                            推理架构”技术<br />
                             开源“Ktransformers”技术<br />
                             支持单卡运行千亿级大模型
                         </div>
@@ -59,8 +60,12 @@ export default function DevelopPage({ id }: { id: string }) {
                     </div>
                     <div className='mob-develop-content-item'>
                         <div className='mob-develop-content-item-title'>
-                            与长亭科技共同发布“长亭问津千亿大模型解决方案”<br />
-                            由此安全领域迈入千亿级大模型时代<br />
+                            与长亭科技共同发布<br />
+                            <span style={{ textWrap: 'nowrap' }}>
+                                '长亭问津千亿大模型解决方案'<br />
+                            </span>
+                            由此安全领域<br />
+                            迈入千亿级大模型时代<br />
                             高准确率、低延迟
                         </div>
                         <img src={dev_3} alt="" />
