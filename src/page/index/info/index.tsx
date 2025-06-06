@@ -7,11 +7,15 @@ import left from '@/assets/svg/left.svg'
 import TopNavs from "@/page/index/components/topNavs";
 import PageContact from '@/page/index/components/contact'
 import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 export default function InfoPage() {
     const gopage = (url: string) => {
         window.open(url)
     }
     const navgite = useNavigate()
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     const infolist = [
         {
             title: 'KTransformers 高效适配曦云C500，单卡异构推理DeepSeek R1',

@@ -76,15 +76,16 @@ export default function DevelopPage({ id }: indexProps) {
                         </div> */}
                             <div className='dev-item top' style={{ marginLeft: "1580px" }} >
                                 {/* 2180px */}
-                                {/* <img src={dev_1} alt="" /> */}
+                                <img src={dev_5} alt="" />
                                 <div className='text'>
-                                    发布新产品“趋境AI 大模型推理软硬一体工作站”<br />
-                                    液冷散热，安静无噪<br />
-                                    单机部署DeepSeek 671B FP8精度，大模型部署门槛降低10倍<br />
-                                    支持同时最高运行三个大模型<br />
-                                    提供简易运维平台kLLM
+                                    发布新版“KTransformers”0.2版<br />
+                                    <span style={{ color: '#868AFF' }}>
+                                        单个消费级GPU+CPU 本地部署DeepSeek-R1/V3671B大模型<br />
+                                    </span>
+                                    GitHub标星过万<br />
+                                    国内外社区热榜第一
                                 </div>
-                                <div className='dev-item-title'>2025年3月</div>
+                                <div className='dev-item-title'>2025年2月</div>
                                 <img src={line} alt="" className='line_dev' />
                             </div>
                         </div>
@@ -117,16 +118,15 @@ export default function DevelopPage({ id }: indexProps) {
                             </div>
                             <div className='dev-item bottom' style={{ marginLeft: "1850px", height: "300px" }}>
                                 <img src={line} alt="" className='line_dev' />
-                                <div className='dev-item-title'>2025年2月</div>
+                                <div className='dev-item-title'>2025年3月</div>
                                 <div className='text'>
-                                    发布新版“KTransformers”0.2版<br />
-                                    <span style={{ color: '#868AFF' }}>
-                                        单个消费级GPU+CPU 本地部署DeepSeek-R1/V3671B大模型<br />
-                                    </span>
-                                    GitHub标星过万<br />
-                                    国内外社区热榜第一
+                                    发布新产品“趋境AI 大模型推理软硬一体工作站”<br />
+                                    液冷散热，安静无噪<br />
+                                    单机部署DeepSeek 671B FP8精度，大模型部署门槛降低10倍<br />
+                                    支持同时最高运行三个大模型<br />
+                                    提供简易运维平台kLLM
                                 </div>
-                                <img src={dev_5} alt="" />
+                                {/* <img src={dev_1} alt="" /> */}
                             </div>
                         </div>
                     </div>

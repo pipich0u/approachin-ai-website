@@ -16,7 +16,7 @@ export default function DevelopPage({ id }: { id: string }) {
                     企业发展
                 </div>
                 <div className='mob-develop-top-text'>
-                    以创新驱动为引擎，开辟增长新航道
+                    以创新驱动为引擎,开辟增长新航道
                 </div>
             </div>
             <div className='mob-develop-content'>
@@ -72,7 +72,7 @@ export default function DevelopPage({ id }: { id: string }) {
                             首次发布产品:大模型知识推理一体机<br />
                             「以存换算」「异构协同」<br />
                             支持千亿级别大模型<br />
-                            开箱即用，推出简易应用平台<br />
+                            开箱即用,推出简易应用平台<br />
                             提供丰富API接口
                         </div>
                         <img src={dev_4} alt="" />
@@ -123,8 +123,8 @@ export default function DevelopPage({ id }: { id: string }) {
                     <div className='mob-develop-content-item'>
                         <div className='mob-develop-content-item-title'>
                             发布新产品“趋境AI 大模型推理软硬一体工作站”
-                            液冷散热，安静无噪
-                            单机部署DeepSeek 671B FP8精度，大模型部署门槛降低10倍
+                            液冷散热,安静无噪
+                            单机部署DeepSeek 671B FP8精度,大模型部署门槛降低10倍
                             支持同时最高运行三个大模型
                             提供简易运维平台kLLM
                         </div>
