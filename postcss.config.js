@@ -1,14 +1,14 @@
 export default {
   plugins: {
-    // 'postcss-pxtorem': {
-    //   rootValue: 37.5, // 基准值，通常设置为设计稿宽度的 1/10
-    //   propList: ['*'], // 需要转换的属性，这里表示全部都转换
-    //   selectorBlackList: [], // 不需要转换的选择器
-    //   replace: true,
-    //   mediaQuery: false,
-    //   minPixelValue: 0,
-    //   exclude: /node_modules|src\/page\/(?!mobile)/  // 排除 node_modules 和非 mobile 目录
-    // },
+    'postcss-pxtorem': {
+      rootValue: 37.5, // 基准值，通常设置为设计稿宽度的 1/10
+      propList: ['*'], // 需要转换的属性，这里表示全部都转换
+      selectorBlackList: [], // 不需要转换的选择器
+      replace: true,
+      mediaQuery: false,
+      minPixelValue: 0,
+      exclude: /node_modules|src\/page\/(?!mobile)/  // 排除 node_modules 和非 mobile 目录
+    },
     "postcss-px-to-viewport": {
       //这里是设计稿宽度 自己修改
       unitToConvert: "px", // 要转化的单位
