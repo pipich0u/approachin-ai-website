@@ -21,7 +21,7 @@ export default function PageInfo({ id }: indexProps) {
                         <div className='title-left'>企业资讯</div>
                         <div className='title-right' onClick={() => { navgitor('/qujinginfo') }}>
                             查看全部
-                            <img src={rig} alt="" />
+                            <img src={rig} alt="" style={{ width: '27px', height: '27px' }} />
                         </div>
                     </div>
                     <div className='info-content'>
