@@ -24,9 +24,7 @@ export default function DevelopPage({ id }: { id: string }) {
                     <div className='mob-develop-years'>
                         2023年底
                     </div>
-                    <div className='mob-develop-content-center'>
-
-                    </div>
+                    <div className='mob-develop-content-center'></div>
                     <div className='mob-develop-content-item'>
                         <img src={dev_1} alt="" />
                         <div className='mob-develop-content-item-title'>
@@ -117,8 +115,8 @@ export default function DevelopPage({ id }: { id: string }) {
                             “KTransformers”0.2版<br />
                             <span style={{ color: '#868AFF' }}>
                                 单个消费级GPU+CPU <br /> 本地部署DeepSeek-R1/V3671B大模型<br />
-                                GitHub标星过万<br />
                             </span>
+                            GitHub标星过万<br />
                             国内外社区热榜第一
                         </div>
                         <img src={dev_5} alt="" style={{ height: '50px' }} />
