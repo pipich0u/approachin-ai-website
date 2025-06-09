@@ -108,7 +108,13 @@ export default function DevelopPage({ id }: { id: string }) {
                     </div>
                 </div> */}
                 <div className='mob-develop-item'>
+                    <div className='mob-develop-years'>
+                        2025年2月
+                    </div>
+                    <div className='mob-develop-content-center'>
+                    </div>
                     <div className='mob-develop-content-item'>
+
                         <div className='mob-develop-content-item-title'>
                             发布新版
                             <br />
@@ -121,18 +127,10 @@ export default function DevelopPage({ id }: { id: string }) {
                         </div>
                         <img src={dev_5} alt="" style={{ height: '50px' }} />
                     </div>
-                    <div className='mob-develop-content-center'>
-                    </div>
-                    <div className='mob-develop-years'>
-                        2025年2月
-                    </div>
+
                 </div>
                 <div className='mob-develop-item'>
-                    <div className='mob-develop-years'>
-                        2025年3月
-                    </div>
-                    <div className='mob-develop-content-center'>
-                    </div>
+
                     <div className='mob-develop-content-item'>
                         <div className='mob-develop-content-item-title'>
                             发布新产品“趋境AI 大模型推理软硬一体工作站”
@@ -142,6 +140,11 @@ export default function DevelopPage({ id }: { id: string }) {
                             提供简易运维平台kLLM
                         </div>
                         {/* <img src={dev_2} alt="" /> */}
+                    </div>
+                    <div className='mob-develop-content-center'>
+                    </div>
+                    <div className='mob-develop-years'>
+                        2025年3月
                     </div>
 
                 </div>
