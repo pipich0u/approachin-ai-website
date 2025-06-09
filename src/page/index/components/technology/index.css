@@ -129,6 +129,8 @@
 }
 
 .technology-content-show-item img {
+    width: 100%;
+    /* min-height: 123px; */
     margin-top: 20px;
     user-select: none;
 }

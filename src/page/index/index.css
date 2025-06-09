@@ -25,6 +25,7 @@
 .section {
   box-sizing: border-box;
   height: 100vh;
+  min-height: 825px;
   width: 100%;
   display: flex;
   justify-content: center;
