@@ -126,9 +126,9 @@
   bottom: 0;
 }
 
-.bottom {
-  bottom: 12px;
-}
+/* .bottom {
+  bottom: 2px;
+} */
 
 .line_dev {
   width: 2px;
