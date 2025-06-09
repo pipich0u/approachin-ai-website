@@ -116,7 +116,7 @@ export default function DevelopPage({ id }: indexProps) {
                                 </div>
                                 <img src={dev_4} alt="" />
                             </div>
-                            <div className='dev-item bottom' style={{ marginLeft: "1850px", height: "300px" }}>
+                            <div className='dev-item' style={{ marginLeft: "1850px", height: "300px",bottom:'40px' }}>
                                 <img src={line} alt="" className='line_dev' />
                                 <div className='dev-item-title'>2025年3月</div>
                                 <div className='text'>
