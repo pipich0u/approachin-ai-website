@@ -124,10 +124,10 @@
 }
 
 
-.vido {
+.mob-vido {
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+    width: 600px;
+    height: 330px;
     object-fit: cover;
     /* margin: 50px; */
     border-radius: 16px;

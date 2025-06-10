@@ -31,6 +31,10 @@ const TopNav = ({ onNavigate }: TopNavProps) => {
     {
       title: '企业发展',
       href: 'DevelopPage'
+    },
+    {
+      title: '团队介绍',
+      href: 'PageTeam'
     }
   ]
   const menuElement = () => openDrawer && (

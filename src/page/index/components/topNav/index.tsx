@@ -23,6 +23,7 @@ const TopNav = forwardRef(({ onNavigate, activeSection }: TopNavProps, ref) => {
     // { title: '合作案例', id: 4 },
     { title: '趋境资讯', id: 4, href: 'pageInfo' },
     { title: '企业发展', id: 5, href: 'DevelopPage' },
+    { title: '团队介绍', id: 6, href: 'PageTeam' },
     // { title: '团队介绍', id: 7 },
   ];
   useEffect(() => {

@@ -83,6 +83,16 @@
     margin-top: 16px;
     cursor: pointer;
 }
+.content-box-right-item-texts {
+    font-family: MiSans;
+    font-weight: 330;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 6%;
+    color: #FFFFFFB2;
+    margin-top: 16px;
+    cursor: pointer;
+}
 
 .content-box-right-item-text:hover {
     color: #FFFFFF;

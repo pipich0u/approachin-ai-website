@@ -39,7 +39,9 @@ export default function PageProduct({ id }: indexProps) {
                                 AI大模型推理软硬一体机<br />
                                 企业级私有化部署新范式
                             </div>
-                            <div className='line-pro'> <img src={line} alt="" /> </div>
+                            <div className='line-pro'>
+                                 {/* <img src={line} alt="" /> */}
+                                  </div>
                             <div className='product-box-left-content'>
                                 {productFeatures.map((feature, index) => (
                                     <div key={index + ''} className='product-content-item'>

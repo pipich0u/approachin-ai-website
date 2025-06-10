@@ -43,10 +43,10 @@ export default function Index() {
         const element = document.getElementById(sectionId);
         setActiveSection(sectionId);
         if (element) {
-            const navbarHeight = 60;
+            // const navbarHeight = 0;
             const elementPosition = element.getBoundingClientRect().top + window.scrollY;
             window.scrollTo({
-                top: elementPosition - navbarHeight,
+                top: elementPosition ,
                 behavior: 'instant'
             });
         }
@@ -59,7 +59,7 @@ export default function Index() {
         // { title: '合作案例', id: 4 },
         { title: '趋境资讯', id: 4, href: 'pageInfo' },
         { title: '企业发展', id: 5, href: 'DevelopPage' },
-        // { title: '团队介绍', id: 7 },
+        { title: '团队介绍', id: 6, href: 'PageTeam' },
     ];
     const handleNavigate = (index: number) => {
         fullpageRef.current?.fullpageApi.silentMoveTo(index + 1);
@@ -121,7 +121,7 @@ export default function Index() {
             {/* <PageCase /> */}
             <PageInfo id="pageInfo" />
             <DevelopPage id="DevelopPage" />
-            {/* <PageTeam /> */}
+            <PageTeam id="PageTeam"/>
             <PageContact onNavigate={scrollToSection} />
             {/* </ReactFullpage.Wrapper>
                     );

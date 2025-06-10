@@ -41,10 +41,10 @@ export default function PageContact({ onNavigate }: ContactProps) {
             title: '企业发展',
             id: 'DevelopPage'
         },
-        // {
-        //     title: '团队介绍',
-        //     id: 'DevelopPage'
-        // },
+        {
+            title: '团队介绍',
+            id: 'PageTeam'
+        },
     ]
     return (
         <div className="mob-contact">

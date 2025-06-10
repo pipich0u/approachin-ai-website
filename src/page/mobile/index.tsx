@@ -8,6 +8,7 @@ import PageKt from './components/KT';
 import PageContact from './components/contact';
 import PageInfo from './components/info';
 import DevelopPage from './components/develop';
+import PageTeam from './components/team';
 
 export default function MobileIndex() {
 
@@ -33,6 +34,7 @@ export default function MobileIndex() {
       <PageKt id="pageKt" />
       <PageInfo id="pageInfo" />
       <DevelopPage id="DevelopPage" />
+      <PageTeam id="PageTeam" />
       <PageContact onNavigate={scrollToSection} />
     </div>
   );

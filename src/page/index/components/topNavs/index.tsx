@@ -21,6 +21,7 @@ const TopNavs: React.FC<TopNavProps> = ({ }) => {
     // { title: '合作案例', id: 4, path: '/' },
     { title: '趋境资讯', id: 4, path: '/' },
     { title: '企业发展', id: 5, path: '/' },
+    { title: '团队介绍', id: 6, path: '/' },
     // { title: '团队介绍', id: 7, path: '/' }
   ];
 
