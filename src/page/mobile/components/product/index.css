@@ -97,14 +97,18 @@
 
 .mob-product-box-right {
     width: 100%;
-    height: 650px;
+    height: 600px;
     /* position: relative; */
-    margin-top: 150px;
+    /* padding-top: 150px; */
     /* overflow: hidden; */
+    background:url('@/assets/images/p-bg.png') no-repeat;
+    background-position: 50% 0%;
+    background-size:100% 100%;
 }
 
 .mob-product-box-right img {
     /* position: absolute; */
+    margin-top: 230px;
     width: 100%;
     /* height: 100%; */
     /* right: -98px; */
