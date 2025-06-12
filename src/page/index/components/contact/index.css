@@ -42,17 +42,17 @@
     color: #fff;
     font-family: MiSans;
     font-weight: 250;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 22px;
     letter-spacing: 2%;
     margin-top: 51px;
     max-width: 400px;
 }
 
 .contact-box-right {
-    width: 60%;
+    width: 50%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .content-box-right-item {
@@ -91,7 +91,7 @@
     letter-spacing: 6%;
     color: #FFFFFFB2;
     margin-top: 16px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .content-box-right-item-text:hover {
@@ -115,7 +115,7 @@
     flex: 1;
     box-sizing: border-box;
     margin: 0 100px;
-    padding: 40px 0;
+    padding: 30px 0;
     width: calc(100% - 200px);
     display: flex;
     flex-direction: column;

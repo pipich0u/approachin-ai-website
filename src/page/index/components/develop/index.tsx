@@ -48,7 +48,7 @@ export default function DevelopPage({ id }: indexProps) {
                     <div className='dev-content scroll1' ref={scroll1Ref}>
                         <div className='dev-ox'>
                             <div className='dev-item top' style={{ marginLeft: "100px" }}>
-                                <img src={dev_1} alt="" />
+                                <img src={dev_1} alt="" style={{width:'240px',height:'140px'}}/>
                                 <div className='text'>
                                     公司成立<br />
                                     种子轮融资：真知创投
@@ -57,7 +57,7 @@ export default function DevelopPage({ id }: indexProps) {
                                 <img src={line} alt="" className='line_dev' />
                             </div>
                             <div className='dev-item top' style={{ marginLeft: "800px" }} >
-                                <img src={dev_3} alt="" />
+                                <img src={dev_3} alt="" style={{width:'240px',height:'140px'}} />
                                 <div className='text'>
                                     与长亭科技共同发布“长亭问津千亿大模型解决方案”<br />
                                     由此安全领域迈入千亿级大模型时代<br />
@@ -76,7 +76,7 @@ export default function DevelopPage({ id }: indexProps) {
                         </div> */}
                             <div className='dev-item top' style={{ marginLeft: "1580px" }} >
                                 {/* 2180px */}
-                                <img src={dev_5} alt="" />
+                                <img src={dev_5} alt="" style={{width:'240px',height:'90px'}}/>
                                 <div className='text'>
                                     发布新版“KTransformers”0.2版<br />
                                     <span style={{ color: '#868AFF' }}>
@@ -102,7 +102,7 @@ export default function DevelopPage({ id }: indexProps) {
                                     开源“Ktransformers”技术<br />
                                     可支持单卡运行千亿级大模型
                                 </div>
-                                <img src={dev_2} alt="" />
+                                <img src={dev_2} alt="" style={{width:'240px',height:'140px'}} />
                             </div>
                             <div className='dev-item bottom' style={{ marginLeft: "1150px" }}>
                                 <img src={line} alt="" className='line_dev' />
@@ -114,7 +114,7 @@ export default function DevelopPage({ id }: indexProps) {
                                     开箱即用，推出简易应用平台
                                     提供丰富API接口
                                 </div>
-                                <img src={dev_4} alt="" />
+                                <img src={dev_4} alt="" style={{width:'240px',height:'140px'}}/>
                             </div>
                             <div className='dev-item bottom' style={{ marginLeft: "1850px", height: "300px" }}>
                                 <img src={line} alt="" className='line_dev' />

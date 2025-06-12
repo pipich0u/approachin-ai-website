@@ -31,7 +31,7 @@ export default function PageContact({ onNavigate }: ContactProps) {
                     <div className='contact-box-left'>
                         <img src={logo} alt="" className='canlogo' />
                         <div className='contact-box-left-text'>
-                            北京趋境科技成立于2023年底，专注大模型推理加速方案。其创始团队来自清华计算机系，成员多为硕博，毕业于知名院校，有丰富产品经验。公司基于首创架构推出“AI大模型推理软硬一体机”，通过协同多种设备释放异构算力，解决大模型落地难题。目前已与安全、教育、制造等行业企业合作，助推大模型业务升级。
+                            趋境科技成立于 2023 年底，专注大模型推理优化，助力企业低成本落地使用大模型，是大模型推理加速先行者。创始团队来自清华计算机系，成员多为硕博，毕业于知名院校，拥有丰富的技术和产品化经验。团队首创“以存换算”和“全系统异构协同推理”技术架构，开创大模型私有化部署新路径，将大模型推理门槛降低10倍，赋能企业低成本创新。基于创新技术架构发布的产品大模型推理一体机，实现软硬一体开箱即用，提供从硬件-推理引擎-大模型自动化运维平台-应用的全栈式解决方案，当前已在金融、安全、法律、医疗等领域落地使用。
                         </div>
                     </div>
                     <div className='contact-box-right'>
@@ -46,7 +46,7 @@ export default function PageContact({ onNavigate }: ContactProps) {
                         <div className='content-box-right-item'>
                             <div className='content-box-right-item-title'>联系我们</div>
                             <div className='content-box-right-item-texts'>邮箱：market@approaching.com</div>
-                            <div className='content-box-right-item-texts' onClick={() => window.open(map)}>地址：北京市海淀区东升大厦AB座</div>
+                            <div className='content-box-right-item-text' onClick={() => window.open(map)}>地址：北京市海淀区东升大厦AB座</div>
                         </div>
                         <div className='content-box-right-item'>
                             <div className='content-box-right-item-title'>关注我们</div>
