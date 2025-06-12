@@ -125,7 +125,7 @@ export default function DevelopPage({ id }: { id: string }) {
                             GitHub标星过万<br />
                             国内外社区热榜第一
                         </div>
-                        <img src={dev_5} alt="" style={{ height: '50px' }} />
+                        <img src={dev_5} alt="" style={{ height: '55px' }} />
                     </div>
 
                 </div>

@@ -76,7 +76,7 @@ export default function DevelopPage({ id }: indexProps) {
                         </div> */}
                             <div className='dev-item top' style={{ marginLeft: "1580px" }} >
                                 {/* 2180px */}
-                                <img src={dev_5} alt="" style={{width:'240px',height:'90px'}}/>
+                                <img src={dev_5} alt="" style={{width:'180px',height:'80px'}}/>
                                 <div className='text'>
                                     发布新版“KTransformers”0.2版<br />
                                     <span style={{ color: '#868AFF' }}>
