@@ -133,11 +133,12 @@ export default function DevelopPage({ id }: { id: string }) {
 
                     <div className='mob-develop-content-item'>
                         <div className='mob-develop-content-item-title'>
-                            发布新产品“趋境AI 大模型推理软硬一体工作站”
-                            液冷散热,安静无噪
-                            单机部署DeepSeek 671B FP8精度,大模型部署门槛降低10倍
-                            支持同时最高运行三个大模型
-                            提供简易运维平台kLLM
+                            <li>
+                                华为昇腾鲲鹏开发者大会合作发布鲲鹏+xPU解决方案，提供鲲鹏推理工作站、鲲鹏推理服务器等多样化的产品形态
+                            </li>
+                            <li>
+                                联想中国合作伙伴大会合作发布产品；联想AI大模型推训一体工作站；面向中小企业打造吸引众多企业在展区试用
+                            </li>
                         </div>
                         {/* <img src={dev_2} alt="" /> */}
                     </div>

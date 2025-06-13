@@ -26,7 +26,7 @@
     box-sizing: border-box;
     width: 100%;
     /* height: fit-content; */
-    padding: 110px 98px;
+    padding: 110px 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -77,11 +77,11 @@
 
 .mob-product-content-item-title {
     font-weight: 450;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 150%;
     letter-spacing: 2%;
     color: #FFFFFF;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     margin-top: 60px;
 }
 
@@ -91,8 +91,10 @@
     line-height: 147%;
     letter-spacing: 0px;
     color: #FFFFFFa1;
-    list-style: outside;
-    
+    /* list-style: outside; */
+    text-indent: -34px;
+    text-align: left;
+    list-style-position: outside;
 }
 
 .mob-product-box-right {

@@ -29,15 +29,15 @@ export default function PageTechnology({ id }: indexProps) {
                             </div>
                             <div className='technology-content-item'>
                                 <div className='technology-content-item-title'>
-                                    模型计算量<br />
+                                    模型部署成本<br />
                                     大幅度降低
                                 </div>
                                 <img src={down} alt="" />
                             </div>
                             <div className='technology-content-item'>
                                 <div className='technology-content-item-title'>
-                                    模型计算量<br />
-                                    大幅度降低
+                                    模型性能推理<br />
+                                    大幅度提升
                                 </div>
                                 <img src={up} alt="" />
                             </div>
@@ -46,7 +46,7 @@ export default function PageTechnology({ id }: indexProps) {
                             <div className='technology-content-show-item'>
                                 <div className='technology-content-show-item-title'>
                                     <span>大模型从死记硬背到融合推理</span>
-                                    <div>已存换算</div>
+                                    <div>以存换算</div>
                                 </div>
                                 <img src={qxt} alt="" style={{ margin: "35px 0" }} />
                                 <div className='technology-content-show-item-text'>面对新问题，融合历史与现场信息在线计算，复用历史结果，计算量降为十分之一 。</div>

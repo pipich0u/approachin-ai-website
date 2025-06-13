@@ -27,11 +27,11 @@ export default function PageKt({ id }: indexProps) {
                             <div className='kt-left-content'>
                                 <div className='kt-left-content-item ktbg-1'>
                                     <div className='kt-left-content-item-title'>校企联合</div>
-                                    <div className='kt-left-content-item-content'>趋境科技与清华大学共同合作开源</div>
+                                    <div className='kt-left-content-item-content'>趋境科技与清华大学 KVCache.AI 团队合作开源</div>
                                 </div>
                                 <div className='kt-left-content-item ktbg-2'>
                                     <div className='kt-left-content-item-title'>超强算力</div>
-                                    <div className='kt-left-content-item-content'>业界首个仅需单个消费级 GPU+CPU 即可在本地运行DeepSeek 671B 等千亿级别大模型，Prefill 最高达 286 tokens/s，Decode 最高达 40 tokens/s，最高超过 Llama.cpp 27 倍。</div>
+                                    <div className='kt-left-content-item-content'>业界首个仅需单个消费级 GPU+CPU 即可在本地运行DeepSeek 671B 等千亿级别大模型，Prefill 最高达 436 tokens/s，Decode 最高达 2140 tokens/s，最高超过 Llama.cpp 30 倍。</div>
                                 </div>
                                 <div className='kt-left-content-item ktbg-3'>
                                     <div className='kt-left-content-item-title'>推理飞跃</div>
