@@ -23,7 +23,7 @@ export default function PageContact({ onNavigate }: ContactProps) {
         { title: '企业发展', id: 5, href: 'DevelopPage' },
         { title: '团队介绍', id: 6, href: 'PageTeam' },
     ]
-    const map = 'https://map.baidu.com/search/%E4%BC%98%E7%9B%9B%E5%A4%A7%E5%8E%A6/@12951688.295,4837882.3,19z?querytype=s&da_src=shareurl&wd=%E4%BC%98%E7%9B%9B%E5%A4%A7%E5%8E%A6&c=131&src=0&pn=0&sug=0&l=20&b=(12951504.437093409,4837775.041253499;12951795.67046027,4837913.225418712)&from=webmap&biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&device_ratio=1'
+    const map = 'https://map.baidu.com/poi/%E4%BC%98%E7%9B%9B%E5%A4%A7%E5%8E%A6-D%E5%BA%A7/@12951705.819582434,4837827.921399237,19.34z?uid=9bec76784f71b6ff25d2bbdb&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl'
     return (
         <div className="section section-9">
             <div className='fp-overflow'>
