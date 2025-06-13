@@ -66,8 +66,8 @@ export default function PageContact({ onNavigate }: ContactProps) {
                     </div>
                     <div className='mob-content-box-right-item'>
                         <div className='mob-content-box-right-item-title'>联系我们</div>
-                        <div className='mob-content-box-right-item-text'>邮箱：market@approaching.com</div>
-                        <div className='mob-content-box-right-item-text' >地址：北京市海淀区东升大厦AB座</div>
+                        <div className='mob-content-box-right-item-text'>邮箱：quxin@approaching.ai</div>
+                        <div className='mob-content-box-right-item-text' >地址：北京市海淀区优盛大厦 D 座</div>
                     </div>
                     <div className='mob-content-box-right-item'>
                         <div className='mob-content-box-right-item-title'>关注我们</div>
