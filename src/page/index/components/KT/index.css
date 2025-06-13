@@ -63,7 +63,10 @@
     border-radius: 16px;
     color: #1A1A1A;
 }
-
+.kt-left-content-item-img{
+    width: 100%;
+    user-select: none;
+}
 .kt-left-content-item-title {
     font-family: MiSans;
     font-weight: 520;

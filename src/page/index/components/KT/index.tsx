@@ -2,7 +2,7 @@
 import './index.css'
 import k from '@/assets/images/K.png'
 import vido from '@/assets/audio/VS.mp4'
-
+import three from '@/assets/images/3.png'
 interface indexProps {
     id: string
 }
@@ -33,10 +33,11 @@ export default function PageKt({ id }: indexProps) {
                                     <div className='kt-left-content-item-title'>超强算力</div>
                                     <div className='kt-left-content-item-content'>业界首个仅需单个消费级 GPU+CPU 即可在本地运行DeepSeek 671B 等千亿级别大模型，Prefill 最高达 436 tokens/s，Decode 最高达 2140 tokens/s，最高超过 Llama.cpp 30 倍。</div>
                                 </div>
-                                <div className='kt-left-content-item ktbg-3'>
+                                <img src={three} alt="" className='kt-left-content-item-img' />
+                                {/* <div className='kt-left-content-item ktbg-3'>
                                     <div className='kt-left-content-item-title'>推理飞跃</div>
                                     <div className='kt-left-content-item-content'>业界首个仅需单个消费级GPU跑 1M超长上下文，Decode 速度最高达 16.91 tokens/s，超过 Llama.cpp 10 倍，同时维持接近满分的“大海捞针”的能力。</div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className='kt-right'>
