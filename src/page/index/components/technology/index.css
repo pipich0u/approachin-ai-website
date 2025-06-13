@@ -72,7 +72,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 .technology-content-item {
@@ -102,6 +102,8 @@
 
 .technology-content-item img {
     /* margin-left: 39px; */
+    width: 134px;
+    height: 54px;
     user-select: none;
 }
 
@@ -110,7 +112,7 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .technology-content-show-item {
