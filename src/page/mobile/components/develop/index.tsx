@@ -120,7 +120,7 @@ export default function DevelopPage({ id }: { id: string }) {
                             <br />
                             “KTransformers”0.2版<br />
                             <span style={{ color: '#868AFF' }}>
-                                单个消费级GPU+CPU <br /> 本地部署DeepSeek-R1/V3671B大模型<br />
+                                单个消费级GPU+CPU <br /> 本地部署DeepSeek-R1/V3 671B大模型<br />
                             </span>
                             GitHub标星过万<br />
                             国内外社区热榜第一
