@@ -39,11 +39,11 @@
     font-family: MiSans;
     font-weight: 450;
     font-size: 65px;
-    line-height: 72.73px;
+    line-height: 76px;
     letter-spacing: 2%;
     text-align: center;
 
-    margin-top: 8px;
+    margin-top: 14px;
     background: linear-gradient(269.87deg, #D0CCFF -10.1%, rgba(255, 255, 255, 0.8) 49.85%),
         linear-gradient(90.25deg, #B4A8FF 0.22%, rgba(255, 255, 255, 0) 102.33%);
 
@@ -68,7 +68,7 @@
     font-family: MiSans;
     font-weight: 305;
     font-size: 30px;
-    line-height: 40px;
+    line-height: 45px;
     letter-spacing: 2%;
     text-align: center;
     margin-top: 25px;
