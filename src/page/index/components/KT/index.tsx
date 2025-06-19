@@ -31,7 +31,7 @@ export default function PageKt({ id }: indexProps) {
                                 </div>
                                 <div className='kt-left-content-item ktbg-2'>
                                     <div className='kt-left-content-item-title'>超强算力</div>
-                                    <div className='kt-left-content-item-content'>业界首个仅需单个消费级 GPU+CPU 即可在本地运行DeepSeek 671B 等千亿级别大模型，Prefill 最高达 436 tokens/s，Decode 最高达 21 tokens/s，最高超过 Llama.cpp 30 倍。</div>
+                                    <div className='kt-left-content-item-content'>业界首个仅需单个消费级 GPU+CPU 即可在本地运行DeepSeek 671B 等千亿级别大模型，Prefill 最高达 436 tokens/s，Decode 最高达 40 tokens/s，最高超过 Llama.cpp 30 倍。</div>
                                 </div>
                                 <img src={three} alt="" className='kt-left-content-item-img' />
                                 {/* <div className='kt-left-content-item ktbg-3'>
