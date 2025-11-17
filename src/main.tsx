@@ -4,6 +4,8 @@ import MobileDetect from 'mobile-detect'
 import MobileIndex from './page/mobile/index'
 import { BrowserRouter, RouteObject, useRoutes } from 'react-router-dom'
 import router from './router'
+import './index.less'
+
 function DynamicRoutes({ router }: { router: RouteObject[] }) {
   const routes = useRoutes(router)
   return routes

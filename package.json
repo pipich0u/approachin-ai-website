@@ -12,14 +12,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.1.0",
     "@fullpage/react-fullpage": "^0.1.48",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@tailwindcss/vite": "^4.1.17",
     "@types/node": "^22.14.1",
+    "antd": "^5.28.1",
+    "classnames": "^2.5.1",
     "fullpage.js": "^4.0.35",
+    "less": "^4.4.2",
     "mobile-detect": "^1.4.5",
+    "postcss": "^8.5.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fullpage": "^0.1.19",
-    "react-router-dom": "^7.5.0"
+    "react-router-dom": "^7.5.0",
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

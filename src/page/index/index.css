@@ -1,3 +1,4 @@
+@import "tailwindcss";
 @font-face {
   font-family: "MiSans";
   src: url("/public/MiSans\ VF.ttf");

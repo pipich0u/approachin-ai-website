@@ -2,6 +2,7 @@ import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Index from "@/page/index/inex";
 import Layout from "@/layout";
 import InfoPage from "@/page/index/info/index";
+import ModelsRepository from "@/page/index/modelsNew/modelsRepostory";
 const _rooter: RouteObject[] = [
 
     {
@@ -16,6 +17,10 @@ const _rooter: RouteObject[] = [
             {
                 path: "/qujinginfo",
                 element: <InfoPage />
+            },
+            {
+                path: "/models",
+                element: <ModelsRepository />
             },
        
         ],
