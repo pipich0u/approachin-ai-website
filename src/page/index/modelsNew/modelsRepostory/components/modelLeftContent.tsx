@@ -25,7 +25,7 @@ const ModelLeftContent = ({ tabList, expandedMap, tabClass, getTabStyle, handleC
                         <div className={`model-content-left-tab flex flex-col justify-between mb-5 transition-all duration-300 
                                 ${isOpen ? 'max-h-full overflow-visible' : 'max-h-[150px] overflow-hidden'}`} key={item.id + '_' + index}>
                             <div className="flex justify-between items-center w-full mb-2">
-                                <div className="model-content-left-tab-item-title text-t !text-[12px] text-[#999999]">{item.title}</div>
+                                <div className="model-content-left-tab-item-title text-t text-[12px]! text-[#999999]">{item.title}</div>
                                 {item.items.length > 6 && <div className="model-content-left-tab-item-open cursor-pointer"
                                     onClick={() => toggleExpand(item.id)}>{isOpen ? '收起' : '展开'}</div>}
                             </div>

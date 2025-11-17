@@ -5,7 +5,7 @@ import { useModels } from '../hooks/useModels';
 import OfflineModel from './components/offlineModel';
 import ApiModal from './components/apiModal';
 const ModelsRepository = () => {
-    const { tabList, expandedMap, tabClass, getTabStyle, handleClickTab, clearTab, toggleExpand, showModal, handleOk, isModalOpen,isApiModalOpen,setIsApiModalOpen} = useModels();
+    const { tabList, expandedMap, tabClass, getTabStyle, handleClickTab, clearTab, toggleExpand, showModal, handleOk, isModalOpen,isApiModalOpen,setIsApiModalOpen,onSearch} = useModels();
     return <div className="model-repostory box-border w-full h-screen flex flex-col">
         <ModelHeader />
         <div className="model-content flex bg-[#FAFAFA] box-border w-full h-[calc(100%-80px)]">
@@ -18,7 +18,7 @@ const ModelsRepository = () => {
                 clear={clearTab}
                 toggleExpand={toggleExpand}
             />
-            <ModelRightContent showModal={showModal} openApi={()=>{setIsApiModalOpen(true)}} />
+            <ModelRightContent showModal={showModal} openApi={()=>{setIsApiModalOpen(true)}} onSearch={onSearch} />
             <OfflineModel isModalOpen={isModalOpen} handleOk={handleOk} />
             <ApiModal isModalOpen={isApiModalOpen} handleOk={()=>{setIsApiModalOpen(false)}} />
         </div>

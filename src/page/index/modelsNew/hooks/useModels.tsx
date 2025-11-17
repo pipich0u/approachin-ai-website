@@ -15,7 +15,9 @@ export const useModels = () => {
     const showModal = () => {
         setIsModalOpen(true);
     };
+    const onSearch=()=>{
 
+    }
     const handleOk = () => {
         setIsModalOpen(false);
     };
@@ -152,6 +154,7 @@ export const useModels = () => {
         clearTab,
         showModal,
         handleOk,
+        onSearch,
         toggleExpand,
     };
 }

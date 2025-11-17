@@ -9,12 +9,10 @@ import { useState } from 'react';
 interface ModelRightContentProps {
     showModal: () => void,
     openApi: () => void,
+    onSearch: (value: string) => void,
 }
 const ModelRightContent = (props: ModelRightContentProps) => {
-    const { showModal, openApi } = props;
-    const onSearch: SearchProps['onSearch'] = (value, _e, info) => {
-        console.log(info?.source, value);
-    }
+    const { showModal, openApi, onSearch } = props;
 
     const [arr, setArr] = useState<number[]>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
     const loadMore = () => {
