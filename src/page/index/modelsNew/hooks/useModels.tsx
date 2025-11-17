@@ -11,12 +11,11 @@ export const useModels = () => {
     const [expandedMap, setExpandedMap] = useState<Record<number, boolean>>({});
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isApiModalOpen, setIsApiModalOpen] = useState(false);
-
     const showModal = () => {
         setIsModalOpen(true);
     };
-    const onSearch=()=>{
-
+    const onSearch=(value: string)=>{
+        console.log('search value:', value);
     }
     const handleOk = () => {
         setIsModalOpen(false);

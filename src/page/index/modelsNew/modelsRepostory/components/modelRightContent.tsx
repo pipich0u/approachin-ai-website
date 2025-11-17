@@ -13,7 +13,6 @@ interface ModelRightContentProps {
 }
 const ModelRightContent = (props: ModelRightContentProps) => {
     const { showModal, openApi, onSearch } = props;
-
     const [arr, setArr] = useState<number[]>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
     const loadMore = () => {
         const newArr = [...arr];
@@ -32,7 +31,7 @@ const ModelRightContent = (props: ModelRightContentProps) => {
                 <div className='text-[#ccc]'>&nbsp;|&nbsp;134个</div>
             </div>
             <div>
-                <Search placeholder="输入模型名称" onSearch={onSearch} style={{ width: 329 }} />
+                <Search placeholder="输入模型名称" onSearch={(value)=>{onSearch(value)}}  style={{ width: 329 }} allowClear />
             </div>
         </div>
         <div className='overflow-y-auto h-[calc(100%-70px)] scrollbar'>
