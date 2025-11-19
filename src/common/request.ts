@@ -1,4 +1,3 @@
-// request.ts
 export interface RequestOptions extends RequestInit {
     params?: Record<string, any>;
 }

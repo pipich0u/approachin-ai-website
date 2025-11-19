@@ -31,7 +31,7 @@ const ModelRightContent = (props: ModelRightContentProps) => {
                 <div className='text-[#ccc]'>&nbsp;|&nbsp;134个</div>
             </div>
             <div>
-                <Search placeholder="输入模型名称" onSearch={(value)=>{onSearch(value)}}  style={{ width: 329 }} allowClear />
+                <Search placeholder="输入模型名称" onSearch={(value) => { onSearch(value) }} style={{ width: 329 }} allowClear />
             </div>
         </div>
         <div className='overflow-y-auto h-[calc(100%-70px)] scrollbar'>
@@ -94,7 +94,9 @@ const ModelRightContent = (props: ModelRightContentProps) => {
                     })
                 }
             </div>
-            <div className='flex items-center justify-center mt-8 text-[12px] font-[330] cursor-pointer text-[#666666]' onClick={loadMore}>展示更多</div>
+            <div className='flex items-center justify-center mt-8 text-[12px] font-[330]  text-[#666666]' >
+                <div className='cursor-pointer' onClick={loadMore}>展示更多</div>
+            </div>
         </div>
     </div>;
 }
