@@ -15,7 +15,7 @@ function buildQuery(params?: Record<string, any>) {
 
 export async function request<T = any>(
     url: string,
-    options: RequestOptions = {}
+    options: any = {}
 ): Promise<T> {
 
     const { params, headers, body, ...rest } = options;

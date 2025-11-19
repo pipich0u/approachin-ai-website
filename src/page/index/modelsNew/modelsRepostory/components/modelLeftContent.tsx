@@ -12,7 +12,6 @@ interface ModelLeftContentProps {
     toggleExpand: (id: number) => void,
 }
 const ModelLeftContent = memo(({ tabList, expandedMap, tabClass, getTabStyle, handleClickTab, clear, toggleExpand }: ModelLeftContentProps) => {
-    console.log(132);
     
     return <div className='model-content-left w-[280px] h-full px-5 py-5 bg-[#FFFFFF]'>
         <div className="flex items-center justify-between mb-3">

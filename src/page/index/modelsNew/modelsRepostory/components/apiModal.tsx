@@ -17,15 +17,15 @@ const ApiModal = (props: OfflineModelProps) => {
     const onChange = (e: RadioChangeEvent) => {
         setValue(e.target.value);
     };
-    const CodeElement = () => {
+    const CodeElement = (value: string) => {
         return <div>
             <div className='bg-[#F7F7F7] rounded-lg p-4 mb-2 text-[14px] mt-4 flex justify-between items-center relative'>
                 <pre className="whitespace-pre-wrap text-sm font-mono">
-                    curl -X POST "https://api.example.com/v1/models/model-id/generate" \
+                    {value}
                 </pre>
                 <div className=' absolute right-2 top-2'>
                     <Tooltip title="复制" color='#fff'>
-                        <CopyOutlined className='cursor-pointer' onClick={() => {textCopy('ollama run gpt-tts');}} />
+                        <CopyOutlined className='cursor-pointer' onClick={() => { textCopy('ollama run gpt-tts'); }} />
                     </Tooltip>
                 </div>
             </div>
@@ -119,9 +119,7 @@ const ApiModal = (props: OfflineModelProps) => {
             </div>
             <div className='model-code mb-8' >
                 <div className='text-[#323232] font-[550]'>示例代码</div>
-                <div>
-                    {CodeElement()}
-                </div>
+                <div>{CodeElement('curl -X POST "https://api.example.com/v1/models/model-id/generate"')}</div>
             </div>
         </div>
     </Modal>

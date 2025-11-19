@@ -22,6 +22,7 @@ const ModelRightContent = (props: ModelRightContentProps) => {
         }
         setArr(newArr);
     }
+
     const btnBase = 'flex items-center text-[12px] model-content-card-btn-item h-7 justify-center px-1'
 
     return <div className='flex-1 p-[18px] box-border w-[calc(100%-280px)] h-full'>
@@ -79,8 +80,6 @@ const ModelRightContent = (props: ModelRightContentProps) => {
                                     />
                                     <div>API参考</div>
                                 </Button>
-                                {/* <Dropdown menu={{ items: download }} placement="bottomRight"> */}
-                                {/* </Dropdown> */}
                                 <Button type='text' onClick={showModal} className={btnBase}>
                                     <IconFont
                                         className='model-content-card-btn-item-icon'

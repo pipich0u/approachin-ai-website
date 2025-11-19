@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Deep from '@/assets/svg/Deepseek.svg';
 import Qw from '@/assets/svg/qw.svg';
 import classNames from "classnames";
-import { getModels } from '@/common/api';
+import { getModels, modelExportApi } from '@/common/api';
 export const useModels = () => {
 
     const base = 'model-content-left-tab-item-btn w-[116px] h-[36px] rounded-[8px] flex justify-center items-center text-d text-[#7B7A85]'
@@ -99,6 +99,26 @@ export const useModels = () => {
         //     ]
         // },
     ])
+    const downloadModelInfo = async () => {
+        try {
+            const response = await modelExportApi(); 
+
+            const blob = new Blob([JSON.stringify(response, null, 2)], {
+                type: 'application/json'
+            });
+
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'model-metadata.json';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     const getModelsData = async () => {
         try {
@@ -166,5 +186,6 @@ export const useModels = () => {
         onSearch,
         toggleExpand,
         getModelsData,
+        downloadModelInfo,
     };
 }
