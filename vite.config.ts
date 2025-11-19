@@ -13,6 +13,14 @@ export default defineConfig({
     }
   },
   server: {
-    host:'0.0.0.0'
+    host: '0.0.0.0',
+    port: 5174,
+    proxy: {
+      "/api": {
+        target: "http://192.168.110.21:18000", // 目标服务器
+        changeOrigin: true, // 是否修改请求头中的 Origin 字段
+        rewrite: (path) => path.replace(/^\/api/, ""), // 重写路径
+      },
+    },
   }
 })

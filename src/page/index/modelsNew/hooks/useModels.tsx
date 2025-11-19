@@ -1,8 +1,9 @@
 import { modelTabColor } from '../index.config';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Deep from '@/assets/svg/Deepseek.svg';
 import Qw from '@/assets/svg/qw.svg';
 import classNames from "classnames";
+import { getModels } from '@/common/api';
 export const useModels = () => {
 
     const base = 'model-content-left-tab-item-btn w-[116px] h-[36px] rounded-[8px] flex justify-center items-center text-d text-[#7B7A85]'
@@ -14,7 +15,7 @@ export const useModels = () => {
     const showModal = () => {
         setIsModalOpen(true);
     };
-    const onSearch=(value: string)=>{
+    const onSearch = (value: string) => {
         console.log('search value:', value);
     }
     const handleOk = () => {
@@ -99,6 +100,15 @@ export const useModels = () => {
         // },
     ])
 
+    const getModelsData = async () => {
+        try {
+            const response = await getModels();
+            console.log('Models data:', response);
+        } catch (error) {
+            console.error('Error fetching models data:', error);
+        }
+    };
+
     const colorMap = modelTabColor.reduce((acc, cur) => {
         acc[cur.name] = cur;
         return acc;
@@ -155,5 +165,6 @@ export const useModels = () => {
         handleOk,
         onSearch,
         toggleExpand,
+        getModelsData,
     };
 }
