@@ -2,7 +2,9 @@ import { Button } from "antd";
 import '../index.less'
 import { IconFont } from "@/utils/antdUtils";
 import logo from '@/assets/svg/logo-black.svg';
-const ModelHeader = () => {
+import { memo } from "react";
+const ModelHeader = memo(() => {
+    // console.log('modelheader', props.xx);
 
     return <div className="model-header flex justify-between items-center py-[15px] px-5 h-20">
         <div className="model-logo">
@@ -19,6 +21,6 @@ const ModelHeader = () => {
             }}>导出模型信息</Button>
         </div>
     </div>;
-}
+})
 
 export default ModelHeader;

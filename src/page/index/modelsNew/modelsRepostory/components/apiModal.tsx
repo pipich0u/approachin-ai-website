@@ -1,7 +1,7 @@
 
 import { CopyOutlined } from '@ant-design/icons';
 import { textCopy } from '@/utils/transfrom';
-import { Button, Modal, Radio, RadioChangeEvent, Steps } from 'antd';
+import { Button, Modal, Radio, RadioChangeEvent, Steps, Tooltip } from 'antd';
 import { useState } from 'react';
 
 interface OfflineModelProps {
@@ -24,7 +24,9 @@ const ApiModal = (props: OfflineModelProps) => {
                     curl -X POST "https://api.example.com/v1/models/model-id/generate" \
                 </pre>
                 <div className=' absolute right-2 top-2'>
-                    <CopyOutlined className='cursor-pointer' onClick={() => textCopy('ollama run gpt-tts')} />
+                    <Tooltip title="复制" color='#fff'>
+                        <CopyOutlined className='cursor-pointer' onClick={() => {textCopy('ollama run gpt-tts');}} />
+                    </Tooltip>
                 </div>
             </div>
         </div>
@@ -60,21 +62,21 @@ const ApiModal = (props: OfflineModelProps) => {
                         options={[
                             {
                                 value: 1,
-                                className: 'option-1',
+                                className: 'option-1 mr-[30px]!',
                                 label: (
                                     <div>OpenAI</div>
                                 ),
                             },
                             {
                                 value: 2,
-                                className: 'option-2',
+                                className: 'option-2 mr-[30px]!',
                                 label: (
                                     <div>Ollama</div>
                                 ),
                             },
                             {
                                 value: 3,
-                                className: 'option-3',
+                                className: 'option-3 mr-[30px]!',
                                 label: (
                                     <div>Deepseek</div>
                                 ),
@@ -84,6 +86,31 @@ const ApiModal = (props: OfflineModelProps) => {
                                 className: 'option-4',
                                 label: (
                                     <div>通义千问</div>
+                                ),
+                            },
+                        ]}
+                    />
+                </div>
+            </div>
+            <div className='model-switch mb-8'>
+                <div className='text-[#323232] font-[550]'>选择调用方式</div>
+                <div className='text-[14px] text-[#333]'>
+                    <Radio.Group
+                        onChange={onChange}
+                        value={value}
+                        options={[
+                            {
+                                value: 1,
+                                className: 'option-1 mr-[30px]!',
+                                label: (
+                                    <div>Python</div>
+                                ),
+                            },
+                            {
+                                value: 2,
+                                className: 'option-2 ',
+                                label: (
+                                    <div>Curl</div>
                                 ),
                             },
                         ]}

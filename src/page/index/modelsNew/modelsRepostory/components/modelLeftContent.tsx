@@ -1,5 +1,6 @@
 import { ClearOutlined } from "@ant-design/icons";
 import '../index.less'
+import { memo } from "react";
 
 interface ModelLeftContentProps {
     tabList: any[],
@@ -10,8 +11,9 @@ interface ModelLeftContentProps {
     clear: () => void,
     toggleExpand: (id: number) => void,
 }
-const ModelLeftContent = ({ tabList, expandedMap, tabClass, getTabStyle, handleClickTab, clear, toggleExpand }: ModelLeftContentProps) => {
-
+const ModelLeftContent = memo(({ tabList, expandedMap, tabClass, getTabStyle, handleClickTab, clear, toggleExpand }: ModelLeftContentProps) => {
+    console.log(132);
+    
     return <div className='model-content-left w-[280px] h-full px-5 py-5 bg-[#FFFFFF]'>
         <div className="flex items-center justify-between mb-3">
             <div className="text-t text-[#313135]">模型筛选</div>
@@ -49,5 +51,5 @@ const ModelLeftContent = ({ tabList, expandedMap, tabClass, getTabStyle, handleC
             }
         </div>
     </div>;
-}
+})
 export default ModelLeftContent;
