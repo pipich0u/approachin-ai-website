@@ -7,17 +7,13 @@ interface ModelLeftContentProps {
     expandedMap: Record<number, boolean>,
     tabClass: (tab: any) => string,
     getTabStyle: (tab: any) => React.CSSProperties,
-    handleClickTab: (key:string,tab: any) => void,
+    handleClickTab: (key: string, tab: any) => void,
     clear: () => void,
     toggleExpand: (id: number) => void,
-    getFilterTags: () => void,
-    
-}
-const ModelLeftContent = memo(({ tabList, expandedMap, getFilterTags, tabClass, getTabStyle, handleClickTab, clear, toggleExpand }: ModelLeftContentProps) => {
 
-    useEffect(() => {
-        getFilterTags();
-    }, [])
+}
+const ModelLeftContent = memo(({ tabList, expandedMap, tabClass, getTabStyle, handleClickTab, clear, toggleExpand }: ModelLeftContentProps) => {
+
 
     return <div className='model-content-left w-[280px] h-full px-5 py-5 bg-[#FFFFFF]'>
         <div className="flex items-center justify-between mb-3">

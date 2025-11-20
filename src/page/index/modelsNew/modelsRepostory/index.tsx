@@ -8,13 +8,15 @@ import { useEffect, useState } from 'react';
 const ModelsRepository = () => {
     const { tabList, expandedMap, modelList, ModelStepName
         , getModelsData, getFilterTags, downloadModelInfo,
-        openApi, showModel,tabClass, getTabStyle, handleClickTab, clearTab,
-        toggleExpand, handleOk, isModalOpen, isApiModalOpen,apiModelName,
-        setIsApiModalOpen, onSearch,downloadBashInfo } = useModels();
+        openApi, showModel, tabClass, getTabStyle, handleClickTab, clearTab,
+        toggleExpand, handleOk, isModalOpen, isApiModalOpen, apiModelName,
+        setIsApiModalOpen, onSearch, downloadBashInfo, loadMore } = useModels();
 
     useEffect(() => {
         getModelsData();
+        getFilterTags();
     }, [])
+
     return <div className="model-repostory box-border w-full h-screen flex flex-col">
         <ModelHeader downloadModelInfo={downloadModelInfo} />
         <div className="model-content flex bg-[#FAFAFA] box-border w-full h-[calc(100%-80px)]">
@@ -26,10 +28,9 @@ const ModelsRepository = () => {
                 getTabStyle={getTabStyle}
                 handleClickTab={handleClickTab}
                 clear={clearTab}
-                getFilterTags={getFilterTags}
                 toggleExpand={toggleExpand}
             />
-            <ModelRightContent showModal={showModel} modelList={modelList} openApi={openApi} onSearch={onSearch} />
+            <ModelRightContent loadMore={loadMore} showModal={showModel} modelList={modelList} openApi={openApi} onSearch={onSearch} />
             <OfflineModel downloadBashInfo={downloadBashInfo} isModalOpen={isModalOpen} handleOk={handleOk} ModelStepName={ModelStepName} />
             <ApiModal isModalOpen={isApiModalOpen} handleOk={() => { setIsApiModalOpen(false) }} apiModelName={apiModelName} />
         </div>

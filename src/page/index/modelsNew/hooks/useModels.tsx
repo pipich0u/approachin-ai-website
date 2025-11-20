@@ -1,7 +1,6 @@
 import { modelTabColor } from '../index.config';
-import { useState } from "react";
-import Deep from '@/assets/svg/Deepseek.svg';
-import Qw from '@/assets/svg/qw.svg';
+import { useEffect, useState } from "react";
+
 import classNames from "classnames";
 import { getModels, modelExportApi, getModelApi, filterTagsApi, ModelStepInfoApi, searchModels } from '@/common/api';
 import { message } from 'antd';
@@ -25,23 +24,6 @@ export const useModels = () => {
         acc[cur.name] = cur;
         return acc;
     }, {} as Record<string, { color: string; bg: string }>);
-    const updateSearch = (value: string) => {
-        setFilters((prev: any) => ({
-            ...prev,
-            name: value ? { FUZZY: value } : undefined
-        }));
-    };
-
-    const onSearch = async (value: string) => {
-        updateSearch(value);
-        try {
-            const response = await searchModels(filters);
-            console.log(response);
-            setModelList(response.data.items);
-        } catch (err) {
-
-        }
-    }
 
 
     const handleOk = () => {
@@ -190,7 +172,28 @@ export const useModels = () => {
 
         return tabs;
     }
+
+    const onSearch = async (value: string) => {
+        console.log('search');
+
+        try {
+            const response = await searchModels({
+                ...filters,
+                name: value ? { FUZZY: value } : undefined
+            });
+            console.log(response);
+            setModelList(response.data.items);
+            setFilters((prev: any) => ({
+                ...prev,
+                name: value ? { FUZZY: value } : undefined
+            }));
+        } catch (err) {
+
+        }
+    }
+
     const handleClickTab = (key: string, tab: any) => {
+        console.log('click');
         setActiveBtn((prev) => {
             if (prev.includes(tab.id)) {
                 return prev.filter((i) => i !== tab.id);
@@ -199,6 +202,7 @@ export const useModels = () => {
         });
         toggleFilter(key, tab);
     };
+
     const toggleFilter = (category: string, item: any) => {
         setFilters((prev: any) => {
             const categoryData = prev[category] ?? {};
@@ -232,7 +236,6 @@ export const useModels = () => {
         });
     };
 
-    // 修改 leftSearchModels 接收 filters 参数
     const leftSearchModels = async (currentFilters?: any) => {
         try {
             const response = await searchModels(currentFilters || filters);
@@ -240,6 +243,10 @@ export const useModels = () => {
             setModelList(response.data.items);
         } catch (err) { }
     };
+
+    const loadMore = () => {
+
+    }
     return {
         tabList,
         activeBtn,
@@ -250,6 +257,7 @@ export const useModels = () => {
         apiModelName,
         isApiModalOpen,
         setIsApiModalOpen,
+        loadMore,
         tabClass,
         openApi,
         showModel,

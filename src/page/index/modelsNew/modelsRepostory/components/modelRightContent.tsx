@@ -1,28 +1,16 @@
 import { Button, Input, Tooltip } from 'antd';
-import type { GetProps } from 'antd';
 const { Search } = Input;
-import Deep from '@/assets/svg/Deepseek.svg';
-type SearchProps = GetProps<typeof Input.Search>;
 import '../index.less'
 import { IconFont } from '@/utils/antdUtils';
-import { useState } from 'react';
 interface ModelRightContentProps {
     showModal: (value: string) => void,
     openApi: (value: string) => void,
     onSearch: (value: string) => void,
     modelList: any[],
+    loadMore: () => void,
 }
 const ModelRightContent = (props: ModelRightContentProps) => {
-    const { showModal, openApi, onSearch, modelList } = props;
-    // const [arr, setArr] = useState<number[]>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-    const loadMore = () => {
-        // const newArr = [...arr];
-        // const len = newArr.length;
-        // for (let i = len + 1; i <= len + 12; i++) {
-        //     newArr.push(i);
-        // }
-        // setArr(newArr);
-    }
+    const { showModal, openApi, onSearch, modelList, loadMore } = props;
 
     const btnBase = 'flex items-center text-[12px] model-content-card-btn-item h-7 justify-center px-1'
 
@@ -33,7 +21,7 @@ const ModelRightContent = (props: ModelRightContentProps) => {
                 <div className='text-[#ccc]'>&nbsp;|&nbsp;134个</div>
             </div>
             <div>
-                <Search placeholder="输入模型名称" onSearch={(value) => { onSearch(value) }} style={{ width: 329 }} allowClear />
+                <Search placeholder="输入模型名称" onSearch={(value) => { onSearch(value); }} style={{ width: 329 }} allowClear />
             </div>
         </div>
         <div className='overflow-y-auto h-[calc(100%-70px)] scrollbar'>
