@@ -1,18 +1,24 @@
 import { ClearOutlined } from "@ant-design/icons";
 import '../index.less'
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
 interface ModelLeftContentProps {
     tabList: any[],
     expandedMap: Record<number, boolean>,
     tabClass: (tab: any) => string,
     getTabStyle: (tab: any) => React.CSSProperties,
-    handleClickTab: (tab: any) => void,
+    handleClickTab: (key:string,tab: any) => void,
     clear: () => void,
     toggleExpand: (id: number) => void,
-}
-const ModelLeftContent = memo(({ tabList, expandedMap, tabClass, getTabStyle, handleClickTab, clear, toggleExpand }: ModelLeftContentProps) => {
+    getFilterTags: () => void,
     
+}
+const ModelLeftContent = memo(({ tabList, expandedMap, getFilterTags, tabClass, getTabStyle, handleClickTab, clear, toggleExpand }: ModelLeftContentProps) => {
+
+    useEffect(() => {
+        getFilterTags();
+    }, [])
+
     return <div className='model-content-left w-[280px] h-full px-5 py-5 bg-[#FFFFFF]'>
         <div className="flex items-center justify-between mb-3">
             <div className="text-t text-[#313135]">模型筛选</div>
@@ -32,11 +38,11 @@ const ModelLeftContent = memo(({ tabList, expandedMap, tabClass, getTabStyle, ha
                             </div>
                             <div className="gap-2 w-full flex flex-wrap">
                                 {
-                                    item.items.map((tab:any, tabIndex: number) => {
+                                    item.items.map((tab: any, tabIndex: number) => {
                                         return <div className={tabClass(tab)}
                                             style={{ ...getTabStyle(tab) }}
                                             key={tab.id + '_' + tabIndex}
-                                            onClick={() => handleClickTab(tab)}
+                                            onClick={() => handleClickTab(item.category, tab)}
                                         >
                                             {tab.icon && <img src={tab.icon} alt="" className="w-[25px] mr-1 rounded-[50%]" />}
                                             <div>{tab.name}</div>

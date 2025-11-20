@@ -6,18 +6,19 @@ import { Button, Modal, Steps } from 'antd';
 interface OfflineModelProps {
     isModalOpen: boolean,
     handleOk: () => void,
-
+    ModelStepName: any,
+    downloadBashInfo: () => void,
 }
 
 const OfflineModel = (props: OfflineModelProps) => {
-    const { isModalOpen, handleOk } = props;
-
+    const { isModalOpen, handleOk, ModelStepName, downloadBashInfo } = props;
+    
     const CodeElement = () => {
         return <div>
             <div className='bg-[#F7F7F7] rounded-lg p-4 mb-2 text-[14px] mt-4 flex justify-between items-center'>
-                <div className='text-[#999]  font-[330] '>ollama run gpt-tts</div>
+                <div className='text-[#999]  font-[330] '>{ModelStepName?.download_command}</div>
                 <div>
-                    <CopyOutlined className='cursor-pointer' onClick={() => textCopy('ollama run gpt-tts')} />
+                    <CopyOutlined className='cursor-pointer' onClick={() => textCopy(ModelStepName?.download_command)} />
                 </div>
             </div>
         </div>
@@ -52,18 +53,22 @@ const OfflineModel = (props: OfflineModelProps) => {
                 items={[
                     {
                         title: <div className='text-[14px] font-[330] text-[#999]'>第一步</div>,
-                        description: <div className='text-[#333] font-[380]'>点击获取模型下载脚本，放到需要下载的文件夹</div>,
+                        description: <div className='text-[#333] font-[380] flex'>
+                            <div className='cursor-pointer text-[#6951FF]'  onClick={downloadBashInfo}>点击</div>
+                            获取模型下载脚本，放到需要下载的文件夹
+
+                        </div>,
                     },
                     {
                         title: <div className='text-[14px] font-[330] text-[#999]'>第二步</div>,
                         description: <div className='text-[#333] font-[380]'>
-                            <div> 打开模型下载未知的传输，粘贴一下命令并运行</div>
+                            <div> 打开模型下载位置的传输，粘贴一下命令并运行</div>
                             {CodeElement()}
                         </div>,
                     },
                     {
                         title: <div className='text-[14px] font-[330] text-[#999]'>第三步</div>,
-                        description: <div className='text-[#333] font-[380]'>后端提供文本信息</div>,
+                        description: <div className='text-[#333] font-[380]'>{ModelStepName?.update_command}</div>,
                     },
                 ]}
             />

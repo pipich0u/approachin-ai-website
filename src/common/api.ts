@@ -28,3 +28,31 @@ export const modelExportApi = async () => {
         method: 'GET',
     });
 }
+export const filterTagsApi = async () => {
+    return request('/api/model-metadata/filter_tags', {
+        method: 'GET',
+    });
+}
+
+export const ModelStepInfoApi = async (model_name: string) => {
+    return request('/api/model-metadata/download_tutorial', {
+        method: 'GET',
+        params: { model_name }
+    });
+}
+
+export const getModelApi = async (model_name: string) => {
+    return request('/api/model-metadata/api_tutorial', {
+        method: 'GET',
+        params: { model_name }
+    });
+}
+
+// export const downloadBashApi = async () => {
+//     return request('/api/model-metadata/download_script', {
+//         method: 'GET',
+//         headers:{
+//             'Content-Type': 'application/shellscript'
+//         }
+//     });
+// }
