@@ -16,12 +16,15 @@ export const useModels = () => {
     const [expandedMap, setExpandedMap] = useState<Record<number, boolean>>({});
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isApiModalOpen, setIsApiModalOpen] = useState(false);
-    const [modelList, setModelList] = useState([]);
+    const [modelList, setModelList] = useState<any>([]);
     const [ModelStepName, setModelStepName] = useState<setModelStepName>();
     const [apiModelName, setApiModelName] = useState();
     const [filters, setFilters] = useState<any>({});
-    const PAGE_SIZE = 12;
-    const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+    const [page, setPage] = useState({
+        current: 1,
+        pageSize: 20,
+        total: 0
+    });
 
     const colorMap = modelTabColor.reduce((acc, cur) => {
         acc[cur.name] = cur;
@@ -50,8 +53,10 @@ export const useModels = () => {
             link.click();
             document.body.removeChild(link);
             URL.revokeObjectURL(url);
+            message.success('模型数据导出成功');
         } catch (error) {
             console.error(error);
+            message.error('模型数据导出失败');
         }
     };
 
@@ -59,7 +64,12 @@ export const useModels = () => {
         try {
             const response = await getModels();
             setModelList(response.data.items);
-            setVisibleCount(PAGE_SIZE);
+            setPage((pre) => {
+                return {
+                    ...pre,
+                    total: response.data.pagination.total
+                }
+            })
         } catch (error) {
             console.error('Error fetching models data:', error);
         }
@@ -115,6 +125,7 @@ export const useModels = () => {
 
     const clearTab = () => {
         setActiveBtn([]);
+        getModelsData();
     }
     const toggleExpand = (id: number) => {
         setExpandedMap((prev) => ({
@@ -178,23 +189,11 @@ export const useModels = () => {
     }
 
     const onSearch = async (value: string) => {
-        console.log('search');
-
-        try {
-            const response = await searchModels({
-                ...filters,
-                name: value ? { FUZZY: value } : undefined
-            });
-            console.log(response);
-            setModelList(response.data.items);
-            setVisibleCount(PAGE_SIZE);
-            setFilters((prev: any) => ({
-                ...prev,
-                name: value ? { FUZZY: value } : undefined
-            }));
-        } catch (err) {
-
-        }
+        const newFilters = {
+            ...filters,
+            name: value ? { FUZZY: value } : undefined
+        };
+        leftSearchModels(newFilters, 1);
     }
 
     const handleClickTab = (key: string, tab: any) => {
@@ -235,27 +234,58 @@ export const useModels = () => {
 
             const newFilters = { ...prev, [category]: newCategoryData };
 
-            leftSearchModels(newFilters);
+            leftSearchModels(newFilters, 1);
 
             return newFilters;
         });
     };
 
-    const leftSearchModels = async (currentFilters?: any) => {
+    const leftSearchModels = async (currentFilters?: any, pageNum: number = 1) => {
+        const params = {
+            page: pageNum,
+            perPage: 20,
+            ...currentFilters ?? filters
+        };
+
         try {
-            const response = await searchModels(currentFilters || filters);
-            console.log(response);
-            setModelList(response.data.items);
-            setVisibleCount(PAGE_SIZE);
-        } catch (err) { }
+            const response = await searchModels(params);
+
+            if (pageNum === 1) {
+                // 第一页直接覆盖
+                setModelList(response.data.items);
+            } else {
+                // 后续页追加
+                setModelList((prev: any) => [...prev, ...response.data.items]);
+            }
+
+            const pg = response.data.pagination;
+            setPage({
+                current: pg.page,
+                pageSize: pg.perPage,
+                total: pg.total
+            });
+
+            setFilters(currentFilters ?? filters); // 更新当前筛选
+
+        } catch (err) {
+            console.error('leftSearchModels error:', err);
+        }
     };
 
+
     const loadMore = () => {
-        setVisibleCount((prev) => prev + PAGE_SIZE);
-    }
+        const nextPage = page.current + 1;
+        const maxPage = Math.ceil(page.total / page.pageSize);
+
+        if (nextPage > maxPage) return; 
+
+        leftSearchModels(filters, nextPage); 
+    };
+
 
 
     return {
+        page,
         tabList,
         activeBtn,
         expandedMap,
@@ -264,7 +294,6 @@ export const useModels = () => {
         isModalOpen,
         apiModelName,
         isApiModalOpen,
-        visibleCount,
         setIsApiModalOpen,
         loadMore,
         tabClass,

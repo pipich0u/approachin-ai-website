@@ -7,10 +7,10 @@ import ApiModal from './components/apiModal';
 import { useEffect, useState } from 'react';
 const ModelsRepository = () => {
     const { tabList, expandedMap, modelList, ModelStepName
-        , getModelsData, getFilterTags, downloadModelInfo,
+        , getModelsData, getFilterTags, downloadModelInfo,page,
         openApi, showModel, tabClass, getTabStyle, handleClickTab, clearTab,
         toggleExpand, handleOk, isModalOpen, isApiModalOpen, apiModelName,
-        setIsApiModalOpen, onSearch, downloadBashInfo, loadMore, visibleCount } = useModels();
+        setIsApiModalOpen, onSearch, downloadBashInfo, loadMore, } = useModels();
 
     useEffect(() => {
         getModelsData();
@@ -30,7 +30,7 @@ const ModelsRepository = () => {
                 clear={clearTab}
                 toggleExpand={toggleExpand}
             />
-            <ModelRightContent visibleCount={visibleCount} loadMore={loadMore} showModal={showModel} modelList={modelList} openApi={openApi} onSearch={onSearch} />
+            <ModelRightContent page={page} loadMore={loadMore} showModal={showModel} modelList={modelList} openApi={openApi} onSearch={onSearch} />
             <OfflineModel downloadBashInfo={downloadBashInfo} isModalOpen={isModalOpen} handleOk={handleOk} ModelStepName={ModelStepName} />
             <ApiModal isModalOpen={isApiModalOpen} handleOk={() => { setIsApiModalOpen(false) }} apiModelName={apiModelName} />
         </div>
