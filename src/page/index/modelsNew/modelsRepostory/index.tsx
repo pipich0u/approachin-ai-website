@@ -10,7 +10,7 @@ const ModelsRepository = () => {
         , getModelsData, getFilterTags, downloadModelInfo,
         openApi, showModel, tabClass, getTabStyle, handleClickTab, clearTab,
         toggleExpand, handleOk, isModalOpen, isApiModalOpen, apiModelName,
-        setIsApiModalOpen, onSearch, downloadBashInfo, loadMore } = useModels();
+        setIsApiModalOpen, onSearch, downloadBashInfo, loadMore, visibleCount } = useModels();
 
     useEffect(() => {
         getModelsData();
@@ -30,7 +30,7 @@ const ModelsRepository = () => {
                 clear={clearTab}
                 toggleExpand={toggleExpand}
             />
-            <ModelRightContent loadMore={loadMore} showModal={showModel} modelList={modelList} openApi={openApi} onSearch={onSearch} />
+            <ModelRightContent visibleCount={visibleCount} loadMore={loadMore} showModal={showModel} modelList={modelList} openApi={openApi} onSearch={onSearch} />
             <OfflineModel downloadBashInfo={downloadBashInfo} isModalOpen={isModalOpen} handleOk={handleOk} ModelStepName={ModelStepName} />
             <ApiModal isModalOpen={isApiModalOpen} handleOk={() => { setIsApiModalOpen(false) }} apiModelName={apiModelName} />
         </div>

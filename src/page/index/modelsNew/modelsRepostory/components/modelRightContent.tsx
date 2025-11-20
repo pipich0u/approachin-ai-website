@@ -8,9 +8,10 @@ interface ModelRightContentProps {
     onSearch: (value: string) => void,
     modelList: any[],
     loadMore: () => void,
+    visibleCount: number,
 }
 const ModelRightContent = (props: ModelRightContentProps) => {
-    const { showModal, openApi, onSearch, modelList, loadMore } = props;
+    const { showModal, openApi, onSearch, modelList, loadMore, visibleCount } = props;
 
     const btnBase = 'flex items-center text-[12px] model-content-card-btn-item h-7 justify-center px-1'
 
@@ -27,7 +28,7 @@ const ModelRightContent = (props: ModelRightContentProps) => {
         <div className='overflow-y-auto h-[calc(100%-70px)] scrollbar'>
             <div className='flex flex-wrap gap-5'>
                 {
-                    modelList.map((item) => {
+                    modelList.slice(0, visibleCount).map((item) => {
                         return <div key={item.id} className='model-content-right-card flex flex-col justify-between w-[385px] h-[200px] rounded-[10px] p-3'>
                             <div className='flex h-[50px]'>
                                 <img src={item.icon} alt="" style={{ width: "50px", height: '50px', marginRight: '10px' }} />

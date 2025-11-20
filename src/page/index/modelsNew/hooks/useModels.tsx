@@ -20,6 +20,9 @@ export const useModels = () => {
     const [ModelStepName, setModelStepName] = useState<setModelStepName>();
     const [apiModelName, setApiModelName] = useState();
     const [filters, setFilters] = useState<any>({});
+    const PAGE_SIZE = 12;
+    const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+
     const colorMap = modelTabColor.reduce((acc, cur) => {
         acc[cur.name] = cur;
         return acc;
@@ -56,6 +59,7 @@ export const useModels = () => {
         try {
             const response = await getModels();
             setModelList(response.data.items);
+            setVisibleCount(PAGE_SIZE);
         } catch (error) {
             console.error('Error fetching models data:', error);
         }
@@ -183,6 +187,7 @@ export const useModels = () => {
             });
             console.log(response);
             setModelList(response.data.items);
+            setVisibleCount(PAGE_SIZE);
             setFilters((prev: any) => ({
                 ...prev,
                 name: value ? { FUZZY: value } : undefined
@@ -241,12 +246,15 @@ export const useModels = () => {
             const response = await searchModels(currentFilters || filters);
             console.log(response);
             setModelList(response.data.items);
+            setVisibleCount(PAGE_SIZE);
         } catch (err) { }
     };
 
     const loadMore = () => {
-
+        setVisibleCount((prev) => prev + PAGE_SIZE);
     }
+
+
     return {
         tabList,
         activeBtn,
@@ -256,6 +264,7 @@ export const useModels = () => {
         isModalOpen,
         apiModelName,
         isApiModalOpen,
+        visibleCount,
         setIsApiModalOpen,
         loadMore,
         tabClass,
