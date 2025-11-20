@@ -1,6 +1,5 @@
 import { modelTabColor } from '../index.config';
 import { useEffect, useState } from "react";
-
 import classNames from "classnames";
 import { getModels, modelExportApi, getModelApi, filterTagsApi, ModelStepInfoApi, searchModels } from '@/common/api';
 import { message } from 'antd';
@@ -20,6 +19,7 @@ export const useModels = () => {
     const [ModelStepName, setModelStepName] = useState<setModelStepName>();
     const [apiModelName, setApiModelName] = useState();
     const [filters, setFilters] = useState<any>({});
+    const [tabList, setTabList] = useState<any[]>([])
     const [page, setPage] = useState({
         current: 1,
         pageSize: 20,
@@ -35,7 +35,6 @@ export const useModels = () => {
     const handleOk = () => {
         setIsModalOpen(false);
     };
-    const [tabList, setTabList] = useState<any[]>([])
 
     const downloadModelInfo = async () => {
         try {
@@ -74,6 +73,7 @@ export const useModels = () => {
             console.error('Error fetching models data:', error);
         }
     };
+
     const getFilterTags = async () => {
         try {
             const response = await filterTagsApi();
@@ -93,6 +93,7 @@ export const useModels = () => {
 
         }
     }
+
     const openApi = async (value: string) => {
         setIsApiModalOpen(true)
         try {
@@ -112,6 +113,7 @@ export const useModels = () => {
             }
         );
     };
+
     const getTabStyle = (tab: any) => {
         if (!tab.type) return {};
 
@@ -127,21 +129,19 @@ export const useModels = () => {
         setActiveBtn([]);
         getModelsData();
     }
+
     const toggleExpand = (id: number) => {
         setExpandedMap((prev) => ({
             ...prev,
             [id]: !prev[id]
         }));
     };
+
     const downloadBashInfo = () => {
-        try {
-
-            window.open(location.origin + '/api/model-metadata/download_script');
-            message.success('下载模型脚本成功');
-        } catch (error) {
-
-        }
+        window.open(location.origin + '/api/model-metadata/download_script');
+        message.success('下载模型脚本成功');
     }
+
     function convertNewFilterDataToTabs(data: Record<string, any>) {
         let idCounter = 1;
         const tabs: any[] = [];
@@ -272,17 +272,14 @@ export const useModels = () => {
         }
     };
 
-
     const loadMore = () => {
         const nextPage = page.current + 1;
         const maxPage = Math.ceil(page.total / page.pageSize);
 
-        if (nextPage > maxPage) return; 
+        if (nextPage > maxPage) return;
 
-        leftSearchModels(filters, nextPage); 
+        leftSearchModels(filters, nextPage);
     };
-
-
 
     return {
         page,
