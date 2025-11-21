@@ -105,3 +105,15 @@
   white-space: normal;
   /* 允许文本换行 */
 }
+.ellipsis-1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  /* 限制为2行 */
+  overflow: hidden;
+  /* 超出的文本隐藏 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+  white-space: normal;
+  /* 允许文本换行 */
+}

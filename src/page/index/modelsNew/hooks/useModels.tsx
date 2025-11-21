@@ -1,8 +1,9 @@
 import { modelTabColor } from '../index.config';
 import { useEffect, useState } from "react";
 import classNames from "classnames";
-import { getModels, modelExportApi, getModelApi, filterTagsApi, ModelStepInfoApi, searchModels } from '@/common/api';
+import { getModels, modelExportApi, getModelApi, filterTagsApi, ModelStepInfoApi, searchModels, getVersion } from '@/common/api';
 import { message } from 'antd';
+
 interface setModelStepName {
     download_command: string;
     update_command: string;
@@ -20,6 +21,7 @@ export const useModels = () => {
     const [apiModelName, setApiModelName] = useState();
     const [filters, setFilters] = useState<any>({});
     const [tabList, setTabList] = useState<any[]>([])
+    const [version, setVersion] = useState<string>('');
     const [page, setPage] = useState({
         current: 1,
         pageSize: 20,
@@ -61,7 +63,7 @@ export const useModels = () => {
 
     const getModelsData = async () => {
         try {
-            const response = await getModels();
+            const response = await getModels({ page: 1, pageSize: 20 });
             setModelList(response.data.items);
             setPage((pre) => {
                 return {
@@ -73,6 +75,14 @@ export const useModels = () => {
             console.error('Error fetching models data:', error);
         }
     };
+    const getVersionData = async () => {
+        try {
+            const response = await getVersion();
+            setVersion(response.data.version);
+        } catch (error) {
+            console.error('Error fetching version data:', error);
+        }
+    }
 
     const getFilterTags = async () => {
         try {
@@ -243,12 +253,15 @@ export const useModels = () => {
     const leftSearchModels = async (currentFilters?: any, pageNum: number = 1) => {
         const params = {
             page: pageNum,
-            perPage: 20,
+            pageSize: 20,
+        };
+        const body = {
             ...currentFilters ?? filters
         };
 
+
         try {
-            const response = await searchModels(params);
+            const response = await searchModels(body, params);
 
             if (pageNum === 1) {
                 // 第一页直接覆盖
@@ -291,6 +304,7 @@ export const useModels = () => {
         isModalOpen,
         apiModelName,
         isApiModalOpen,
+        version,
         setIsApiModalOpen,
         loadMore,
         tabClass,
@@ -303,6 +317,7 @@ export const useModels = () => {
         onSearch,
         toggleExpand,
         getModelsData,
+        getVersionData,
         getFilterTags,
         downloadModelInfo,
         downloadBashInfo,

@@ -6,11 +6,11 @@ import { memo } from "react";
 
 interface ModelHeaderProps {
     downloadModelInfo: () => void,
+    version: string
 }
 
 
-const ModelHeader = memo(({ downloadModelInfo }: ModelHeaderProps) => {
-
+const ModelHeader = memo(({ downloadModelInfo, version }: ModelHeaderProps) => {
     return <div className="model-header flex justify-between items-center py-[15px] px-5 h-20">
         <div className="model-logo w-[280px]">
             <img src={logo} alt="" className="w-28 h-8" />
@@ -20,7 +20,7 @@ const ModelHeader = memo(({ downloadModelInfo }: ModelHeaderProps) => {
                 <div className="flex items-center">
                     <div className="text-h text-[#313135] mr-1 font-[450]">模型仓库</div>
                     <div className="text-[12px] text-[#313135] font-[305]">
-                        V3.0
+                        {version }
                     </div>
                 </div>
                 <div className="text-d text-[#C8C8D0]">模型仓库汇集多种AI模型，一站式支持模型管理与应用集成</div>

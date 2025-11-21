@@ -9,17 +9,18 @@ interface SearchModelParams {
     source?: { MULTI_EQUAL: string[] };
 }
 
-export const getModels = async () => {
+export const getModels = async (params:{page:number,pageSize:number}) => {
     return request('/api/model-metadata', {
         method: 'POST',
-        body: {}
+        params: params
     });
 }
 
-export const searchModels = async (params: SearchModelParams) => {
+export const searchModels = async (body: SearchModelParams,params:{page:number,pageSize:number}) => {
     return request('/api/model-metadata', {
         method: 'POST',
-        body: params
+        body: body,
+        params: params
     });
 };
 
@@ -48,11 +49,8 @@ export const getModelApi = async (model_name: string) => {
     });
 }
 
-// export const downloadBashApi = async () => {
-//     return request('/api/model-metadata/download_script', {
-//         method: 'GET',
-//         headers:{
-//             'Content-Type': 'application/shellscript'
-//         }
-//     });
-// }
+export const getVersion = async () => {
+    return request('/api/model-metadata/version', {
+        method: 'GET',
+    });
+}

@@ -6,19 +6,20 @@ import OfflineModel from './components/offlineModel';
 import ApiModal from './components/apiModal';
 import { useEffect, useState } from 'react';
 const ModelsRepository = () => {
-    const { tabList, expandedMap, modelList, ModelStepName
-        , getModelsData, getFilterTags, downloadModelInfo,page,
-        openApi, showModel, tabClass, getTabStyle, handleClickTab, clearTab,
-        toggleExpand, handleOk, isModalOpen, isApiModalOpen, apiModelName,
-        setIsApiModalOpen, onSearch, downloadBashInfo, loadMore, } = useModels();
+    const { tabList, expandedMap, modelList, ModelStepName, getModelsData,
+        getFilterTags, downloadModelInfo, page, openApi, showModel, tabClass,
+        getTabStyle, handleClickTab, clearTab, toggleExpand, handleOk, isModalOpen,
+        isApiModalOpen, apiModelName, setIsApiModalOpen, onSearch, downloadBashInfo,
+        loadMore, version, getVersionData } = useModels();
 
     useEffect(() => {
         getModelsData();
         getFilterTags();
+        getVersionData();
     }, [])
 
     return <div className="model-repostory box-border w-full h-screen flex flex-col">
-        <ModelHeader downloadModelInfo={downloadModelInfo} />
+        <ModelHeader version={version} downloadModelInfo={downloadModelInfo} />
         <div className="model-content flex bg-[#FAFAFA] box-border w-full h-[calc(100%-80px)]">
             <ModelLeftContent
                 tabList={tabList}

@@ -38,7 +38,9 @@ const ModelRightContent = (props: ModelRightContentProps) => {
                                     <img src={item.icon} alt="" style={{ width: "50px", height: '50px', marginRight: '10px' }} />
                                     <div className='flex flex-col w-full'>
                                         <div className='flex justify-between items-center  w-full mb-2'>
-                                            <div className='text-[#313135] font-[550]'>{item.name}</div>
+                                            <Tooltip color='#fff' title={item.name}>
+                                                <div className='text-[#313135] font-[550] ellipsis-1'>{item.name}</div>
+                                            </Tooltip>
                                         </div>
                                         <div className='flex gap-1.5'>
                                             {item.tags.map((tag: string) => <div key={tag} className='model-content-card-tag'>{tag}</div>)}
@@ -52,7 +54,7 @@ const ModelRightContent = (props: ModelRightContentProps) => {
                                 </Tooltip>
                                 <div className='font-light pb-2.5 px-2 text-[12px] flex justify-between items-center text-[#B3B2B2]'>
                                     <div>{item.family}</div>
-                                    <div>2024-05-08更新</div>
+                                    <div>{item.last_updated_time}更新</div>
                                 </div>
                                 <div className='model-content-card-btn flex justify-between items-center px-2 py-1 mt-1'>
                                     <Button type='text' className={btnBase} onClick={() => { window.open(item.modelscope_url) }}>

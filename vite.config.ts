@@ -21,6 +21,10 @@ export default defineConfig({
         changeOrigin: true, // 是否修改请求头中的 Origin 字段
         rewrite: (path) => path.replace(/^\/api/, ""), // 重写路径
       },
+      "/static": {
+        target: "http://192.168.110.21:18000",
+        changeOrigin: true,
+      }
     },
   }
 })
