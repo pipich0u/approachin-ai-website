@@ -2,12 +2,12 @@ import React from 'react';
 import './index.css';
 import logo_black from '@/assets/svg/logo-black.svg'
 import { useNavigate } from 'react-router-dom';
-interface TopNavProps {
-  // onNavigate: (index: number) => void;
-  // activeSection: number;
-}
+// interface TopNavProps {
+//   // onNavigate: (index: number) => void;
+//   // activeSection: number;
+// }
 
-const TopNavs: React.FC<TopNavProps> = ({ }) => {
+const TopNavs = () => {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = React.useState(4);
   const onNavigate = (index: string, nb: number) => {

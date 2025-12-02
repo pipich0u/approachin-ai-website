@@ -79,7 +79,7 @@ export default function InfoPage() {
                     })
                 }
             </div>
-            <PageContact onNavigate={() => navgite('/')} />
+            <PageContact  />
         </div>
     )
 }

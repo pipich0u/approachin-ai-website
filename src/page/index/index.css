@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @font-face {
   font-family: "MiSans";
   src: url("/public/MiSans\ VF.ttf");
@@ -37,61 +38,7 @@
   min-width: 1000px;
 }
 
-/* .section .title {
-  color: white;
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease;
-} */
 
-/* .section.active .title {
-  opacity: 1;
-  transform: translateY(0);
-} */
-.fp-watermark {
-  display: none;
-}
-
-
-
-
-/* 滑动导航点样式 */
-.fp-slidesNav ul li a span {
-  background: white !important;
-}
-
-.fp-slidesNav ul li a.active span {
-  background: #ff0000 !important;
-}
-
-/* 自定义导航点样式 */
-#fp-nav ul li a span {
-  background: white !important;
-}
-
-#fp-nav ul li a.active span {
-  background: #ff0000 !important;
-}
-
-/* 水平滑动容器 */
-.slide {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-}
-
-.slide-1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.pexels.com/photos/31606459/pexels-photo-31606459.jpeg?auto=compress&cs=tinysrgb&w=1200');
-}
-
-.slide-2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.pexels.com/photos/3727271/pexels-photo-3727271.jpeg?auto=compress&cs=tinysrgb&w=1200');
-}
 
 .ellipsis-2 {
   display: -webkit-box;
@@ -105,6 +52,7 @@
   white-space: normal;
   /* 允许文本换行 */
 }
+
 .ellipsis-1 {
   display: -webkit-box;
   -webkit-box-orient: vertical;

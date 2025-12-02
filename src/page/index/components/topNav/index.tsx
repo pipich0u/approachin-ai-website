@@ -4,11 +4,11 @@ import logo from '@/assets/images/logo.png'
 import logo_black from '@/assets/svg/logo-black.svg'
 import { useLocation, useNavigate } from 'react-router-dom';
 interface TopNavProps {
-  onNavigate: (index: string) => void;
+  // onNavigate: (index: string) => void;
   activeSection: string;
 }
 
-const TopNav = forwardRef(({ onNavigate, activeSection }: TopNavProps, ref) => {
+const TopNav = forwardRef(({ activeSection }: TopNavProps, ref) => {
   // const navigate = useNavigate();
   // const [activeSection, setActiveSection] = React.useState(0);
   // const onNavigate = (index: string, nb: number) => {
@@ -27,7 +27,7 @@ const TopNav = forwardRef(({ onNavigate, activeSection }: TopNavProps, ref) => {
     // { title: '团队介绍', id: 7 },
   ];
   useEffect(() => {
-    onNavigate('pageIndex')
+    // onNavigate('pageIndex')
   }, [])
 
   useImperativeHandle(ref, () => {
@@ -53,7 +53,7 @@ const TopNav = forwardRef(({ onNavigate, activeSection }: TopNavProps, ref) => {
               id={'home-nav-' + item.id}
               key={item.id}
               className={`nav-item ${activeSection === item.href ? 'active' : ''}`}
-              onClick={() => onNavigate(item.href)}
+              // onClick={() => onNavigate(item.href)}
             >
               {item.title}
               {activeSection === item.href && <div className="nav-underline" />}
