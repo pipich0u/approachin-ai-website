@@ -1,10 +1,30 @@
 .section-1 {
-    background:url('/src/assets/images/index.png');
+    background: url('/src/assets/images/img/index_bg.png');
     background-size: cover;
     background-position: center;
-    /* background: ; */
-    /* background:; */
+    font-family: MiSans !important;
 }
+.floating-left {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 800px; /* 可自行调整 */
+    transform: translate(-60%, -50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-right {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    width: 1200px; /* 可自行调整 */
+    transform: translate(60%, -50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+
 
 .title {
     /* text-align: center; */
@@ -14,51 +34,29 @@
     justify-content: center;
     height: 100vh;
     box-sizing: border-box;
-    padding-bottom: 200px;
+    padding-bottom: 70px;
 }
 
 .title-top {
     font-family: MiSans;
-    font-weight: 305;
-    font-size: 19.43px;
-    /* line-height: 100%; */
-    letter-spacing: 1%;
-    background: linear-gradient(269.87deg, #C2A5FF -10.1%, rgba(255, 255, 255, 0.8) 49.85%),
-        linear-gradient(89.87deg, #B2A6FF 0.11%, rgba(255, 255, 255, 0) 50.16%);
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    /* 设置文本填充颜色为透明 */
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    animation: tracking-in-expand 1s  ease-in-out both;
-}
-
-.title-center {
-    font-family: MiSans;
-    font-weight: 450;
-    font-size: 54px;
-    line-height: 64px;
+    font-weight: 520;
+    font-style: Semibold;
+    font-size: 56px;
+    line-height: 150%;
     letter-spacing: 2%;
     text-align: center;
-    margin-top: 8px;
-    background: linear-gradient(269.87deg, #D0CCFF -10.1%, rgba(255, 255, 255, 0.8) 49.85%),
-        linear-gradient(90.25deg, #B4A8FF 0.22%, rgba(255, 255, 255, 0) 102.33%);
+}
 
-    -webkit-background-clip: text;
-    background-clip: text;
+.title-desc {
+    font-family: MiSans;
+    font-weight: 305;
+    font-style: Normal;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    text-align: center;
+}
 
-    /* 设置文本填充颜色为透明 */
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    animation: tracking-in-expand 1s  ease-in-out both;
-}
-.line{
-    padding: 25px 0;
-}
-.line img{
-    width: 80px;
-}
 .title-bottom {
     font-family: MiSans;
     font-weight: 305;
@@ -69,13 +67,78 @@
     color: #FFFFFFB2;
 
 }
-@keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em; /* 字母间距从负值开始 */
-      opacity: 0; /* 初始透明度为0 */
-    }
-    100% {
-      letter-spacing: normal; /* 字母间距恢复正常 */
-      opacity: 1; /* 最终透明度为1 */
-    }
-  }
+
+.index-bottom {
+    background: #ffffff72;
+    border: 0.89px solid #FFFFFFCC;
+    backdrop-filter: blur(18px);
+}
+
+.index-line {
+    border: 0.89px solid #806BFF33;
+}
+
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 0 0 2px #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #fff;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+    right: 30px;
+}
+
+.animated-button .arr-2 {
+    left: -25%;
+}
+
+.animated-button .bt-text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(10px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+    right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+    left: 30px;
+}
+
+.animated-button:hover .bt-text {
+    transform: translateX(36px);
+}
+
+.animated-button:hover svg {
+    fill: #fff;
+}
+
+.animated-button:active {
+    scale: 0.95;
+}
