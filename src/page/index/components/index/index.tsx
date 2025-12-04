@@ -3,14 +3,18 @@ import { motion } from 'motion/react';
 import { initialLoadProps } from '../../motionConfig'
 import img1 from '@/assets/images/img/index_left.png'
 import img2 from '@/assets/images/img/index_rig.png'
+import { useState } from 'react';
 
-interface indexProps {
-    id: string
-}
-
-export default function PageIndex({ id }: indexProps) {
+export default function PageIndex() {
+    const [showContent, setShowContent] = useState(false);
     return (
-        <div className="section section-1 relative overflow-hidden" id={id}>
+        <div className="section section-1 relative overflow-hidden">
+            <motion.div
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 0 }}
+                transition={{ duration: 1.5, ease: 'easeInOut' }}
+                onAnimationComplete={() => setShowContent(true)} // 动画完成后显示文字
+            />
             <motion.img
                 src={img1}
                 alt=""
@@ -43,7 +47,7 @@ export default function PageIndex({ id }: indexProps) {
 
 
             {/* ===== 内容区域 ===== */}
-            <div className='fp-overflow relative z-10'>
+           { showContent && <div className='fp-overflow relative z-10'>
                 <div className="title">
                     <motion.div {...initialLoadProps} className='title-top text-[#1B1D22] flex'>
                         全栈智算引擎·普惠<div className='text-[#4F4CFF]'>高效AI</div>
@@ -102,7 +106,7 @@ export default function PageIndex({ id }: indexProps) {
                     </motion.div>
                 </div>
 
-            </div>
+            </div>}
 
         </div>
     );

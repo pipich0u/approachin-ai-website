@@ -70,7 +70,7 @@ export default function Index() {
         <div className="w-100 h-100" >
             <ReactLenis root />
             <div>
-{/* 
+                {/* 
                 <motion.div
                     {...initialLoadProps}
                     style={{
@@ -104,13 +104,13 @@ export default function Index() {
                     </motion.div>
                 </motion.div> */}
                 <TopNavs />
-                <PageIndex id="pageIndex" />
-                <PageProduct id="pageProduct" />
-                <PageTechnology id="pageTechnology" />
-                <PageKt id="pageKt" />
-                <PageInfo id="pageInfo" />
-                <DevelopPage id="DevelopPage" />
-                <PageTeam id="PageTeam" />
+                <PageIndex />
+                <PageProduct/>
+                <PageTechnology />
+                <PageKt />
+                <PageInfo />
+                <DevelopPage />
+                <PageTeam />
                 <PageContact />
             </div>
         </div >

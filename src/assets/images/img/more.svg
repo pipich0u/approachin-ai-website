@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_hoverarrow_black_48</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
+        <rect id="path-3" x="0" y="0" width="20.5714286" height="20.5714286"></rect>
+        <rect id="path-5" x="0" y="0" width="24" height="24"></rect>
+        <rect id="path-7" x="0" y="0" width="20.5714286" height="20.5714286"></rect>
+    </defs>
+    <g id="icon_hoverarrow_black_48" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="箭头-黑色备份" transform="translate(0, 24)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="path-1"></g>
+            <g id="编组-23" mask="url(#mask-2)">
+                <g transform="translate(1.7143, 1.7143)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="path-1" stroke="none" fill="none"></g>
+                    <g id="编组" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" mask="url(#mask-4)">
+                        <g transform="translate(-1.8571, -1.8571)">
+                            <g transform="translate(12.1429, 12.1429) rotate(-45) translate(-12.1429, -12.1429)translate(3.0515, 4.0616)">
+                                <polyline id="路径" stroke="#2450FF" stroke-width="1.8" transform="translate(10.1015, 8.0812) rotate(45) translate(-10.1015, -8.0812)" points="4.38723973 2.36693464 15.8158112 2.36693464 15.8158112 13.7955061"></polyline>
+                                <line x1="-2.48689958e-14" y1="8.08122036" x2="18.1827458" y2="8.08122036" id="路径-2" stroke="#2450FF" stroke-width="1.8" stroke-linejoin="round"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="箭头-黑色备份-3" transform="translate(24, 0)">
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"></use>
+            </mask>
+            <g id="path-1"></g>
+            <g id="编组-23" mask="url(#mask-6)">
+                <g transform="translate(1.7143, 1.7143)">
+                    <mask id="mask-8" fill="white">
+                        <use xlink:href="#path-7"></use>
+                    </mask>
+                    <g id="path-1" stroke="none" fill="none"></g>
+                    <g id="编组" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" mask="url(#mask-8)">
+                        <g transform="translate(-1.8571, -1.8571)">
+                            <g transform="translate(12.1429, 12.1429) rotate(-45) translate(-12.1429, -12.1429)translate(3.0515, 4.0616)">
+                                <polyline id="路径" stroke="#091221" stroke-width="1.8" transform="translate(10.1015, 8.0812) rotate(45) translate(-10.1015, -8.0812)" points="4.38723973 2.36693464 15.8158112 2.36693464 15.8158112 13.7955061"></polyline>
+                                <line x1="-2.48689958e-14" y1="8.08122036" x2="18.1827458" y2="8.08122036" id="路径-2" stroke="#091221" stroke-width="1.8" stroke-linejoin="round"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
