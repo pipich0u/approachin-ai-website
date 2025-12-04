@@ -19,7 +19,7 @@ export const defaultViewport = {
 
 // 初始加载动画配置
 export const initialLoadVariants = {
-  initial: { x: 100, y: 100, opacity: 0 },
+  initial: { x: 0, y: 100, opacity: 0 },
   animate: { x: 0, y: 0, opacity: 1 },
 };
 

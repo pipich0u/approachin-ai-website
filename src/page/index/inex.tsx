@@ -16,6 +16,7 @@ import { ReactLenis, useLenis } from 'lenis/react'
 import type { LenisRef } from 'lenis/react';
 import { motion } from "motion/react"
 import { initialLoadProps, scrollInViewSpringProps } from './motionConfig'
+import TopNavs from './components/topNavs';
 // import * as motion from "motion/react-client"
 
 
@@ -65,12 +66,11 @@ export default function Index() {
         };
     }, []);
 
-
-
     return (
-        <div className="w-100 h-100 " >
+        <div className="w-100 h-100" >
             <ReactLenis root />
             <div>
+{/* 
                 <motion.div
                     {...initialLoadProps}
                     style={{
@@ -102,17 +102,17 @@ export default function Index() {
                     <motion.div {...scrollInViewSpringProps} className='w-20 h-20 bg-amber-600'>
                         box1
                     </motion.div>
-                </motion.div>
-            <TopNav ref={topNavRef} activeSection={activeSection} />
-            <PageIndex id="pageIndex" />
-            <PageProduct id="pageProduct" />
-            <PageTechnology id="pageTechnology" />
-            <PageKt id="pageKt" />
-            <PageInfo id="pageInfo" />
-            <DevelopPage id="DevelopPage" />
-            <PageTeam id="PageTeam" />
-            <PageContact />
-        </div>
+                </motion.div> */}
+                <TopNavs />
+                <PageIndex id="pageIndex" />
+                <PageProduct id="pageProduct" />
+                <PageTechnology id="pageTechnology" />
+                <PageKt id="pageKt" />
+                <PageInfo id="pageInfo" />
+                <DevelopPage id="DevelopPage" />
+                <PageTeam id="PageTeam" />
+                <PageContact />
+            </div>
         </div >
     );
 }

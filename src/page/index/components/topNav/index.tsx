@@ -3,42 +3,28 @@ import './index.css';
 import logo from '@/assets/images/logo.png'
 import logo_black from '@/assets/svg/logo-black.svg'
 import { useLocation, useNavigate } from 'react-router-dom';
-interface TopNavProps {
-  // onNavigate: (index: string) => void;
-  activeSection: string;
-}
 
-const TopNav = forwardRef(({ activeSection }: TopNavProps, ref) => {
-  // const navigate = useNavigate();
-  // const [activeSection, setActiveSection] = React.useState(0);
+const TopNav = () => {
+  const navigate = useNavigate();
+
   // const onNavigate = (index: string, nb: number) => {
   //   navigate(index);
   //   setActiveSection(nb)
   // };
   const navItems = [
-    { title: '首页', id: 0, href: 'pageIndex' },
-    { title: '产品介绍', id: 1, href: 'pageProduct' },
-    { title: '技术方案', id: 2, href: 'pageTechnology' },
-    { title: 'KTransformers', id: 3, href: 'pageKt' },
-    // { title: '合作案例', id: 4 },
-    { title: '趋境资讯', id: 4, href: 'pageInfo' },
-    { title: '企业发展', id: 5, href: 'DevelopPage' },
-    { title: '团队介绍', id: 6, href: 'PageTeam' },
-    // { title: '团队介绍', id: 7 },
+    { title: '解决方案', id: 0, isSelected:true, href: 'pageIndex' },
+    { title: '开源社区', id: 1, isSelected:true, href: 'pageProduct' },
+    { title: '模型仓库', id: 2, isSelected:false, href: 'pageTechnology' },
+    { title: '客户案例', id: 3, isSelected:false, href: 'pageKt' },
+    { title: '生态合作', id: 4, isSelected:false, href: 'pageInfo' },
+    { title: '趋境咨询', id: 5, isSelected:false, href: 'DevelopPage' },
+    { title: '关于我们', id: 6, isSelected:true, href: 'PageTeam' },
   ];
   useEffect(() => {
     // onNavigate('pageIndex')
   }, [])
 
-  useImperativeHandle(ref, () => {
-    return {
-      handleNavItemClick: (id: number) => {
-        console.log(id, 'nav-id');
 
-        (document.querySelector('#home-nav-' + id) as HTMLDivElement).click()
-      }
-    }
-  })
   return (
     <nav className={`top-nav bg-1 `}>
       <div className='app container'>
@@ -52,17 +38,17 @@ const TopNav = forwardRef(({ activeSection }: TopNavProps, ref) => {
             <div
               id={'home-nav-' + item.id}
               key={item.id}
-              className={`nav-item ${activeSection === item.href ? 'active' : ''}`}
+             
               // onClick={() => onNavigate(item.href)}
             >
               {item.title}
-              {activeSection === item.href && <div className="nav-underline" />}
+              {<div className="nav-underline" />}
             </div>
           ))}
         </div>
       </div>
     </nav>
   );
-})
+}
 
 export default TopNav; 
