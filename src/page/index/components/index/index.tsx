@@ -4,6 +4,7 @@ import { initialLoadProps } from '../../motionConfig'
 import img1 from '@/assets/images/img/index_left.png'
 import img2 from '@/assets/images/img/index_rig.png'
 import { useState } from 'react';
+import Btn from '../btn/Btn';
 
 export default function PageIndex() {
     const [showContent, setShowContent] = useState(false);
@@ -47,7 +48,7 @@ export default function PageIndex() {
 
 
             {/* ===== 内容区域 ===== */}
-           { showContent && <div className='fp-overflow relative z-10'>
+            {showContent && <div className='fp-overflow relative z-10'>
                 <div className="title">
                     <motion.div {...initialLoadProps} className='title-top text-[#1B1D22] flex'>
                         全栈智算引擎·普惠<div className='text-[#4F4CFF]'>高效AI</div>
@@ -56,17 +57,7 @@ export default function PageIndex() {
                     <motion.div {...initialLoadProps} className='title-desc text-[#484848]'>
                         为企业级用户的 AI 落地提供从算力破局到价值交付的全链路解决方案
                     </motion.div>
-
-                    <motion.button {...initialLoadProps} className='animated-button w-[180px] mt-8 h-11 rounded-lg bg-[#806BFF] '>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
-                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
-                        </svg>
-                        <span className="text-white font-[380] bt-text">立即咨询</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
-                            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
-                        </svg>
-                    </motion.button>
-
+                    <Btn fill='#fff' animated={initialLoadProps} classNames="w-[180px] mt-8 h-11 rounded-lg bg-[#806BFF]" text="立即咨询" />
                     {/* 你原来的数据统计条 */}
                     <motion.div {...initialLoadProps} className='index-bottom bottom-35 absolute flex py-[19px] px-12 mt-20 w-[1070px] h-20 rounded-[10px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
                         <div className='flex items-center gap-2'>

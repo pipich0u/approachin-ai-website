@@ -1,56 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>icon_hoverarrow_black_48</title>
-    <defs>
-        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
-        <rect id="path-3" x="0" y="0" width="20.5714286" height="20.5714286"></rect>
-        <rect id="path-5" x="0" y="0" width="24" height="24"></rect>
-        <rect id="path-7" x="0" y="0" width="20.5714286" height="20.5714286"></rect>
-    </defs>
-    <g id="icon_hoverarrow_black_48" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
-        <g id="箭头-黑色备份" transform="translate(0, 24)">
-            <mask id="mask-2" fill="white">
-                <use xlink:href="#path-1"></use>
-            </mask>
-            <g id="path-1"></g>
-            <g id="编组-23" mask="url(#mask-2)">
-                <g transform="translate(1.7143, 1.7143)">
-                    <mask id="mask-4" fill="white">
-                        <use xlink:href="#path-3"></use>
-                    </mask>
-                    <g id="path-1" stroke="none" fill="none"></g>
-                    <g id="编组" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" mask="url(#mask-4)">
-                        <g transform="translate(-1.8571, -1.8571)">
-                            <g transform="translate(12.1429, 12.1429) rotate(-45) translate(-12.1429, -12.1429)translate(3.0515, 4.0616)">
-                                <polyline id="路径" stroke="#2450FF" stroke-width="1.8" transform="translate(10.1015, 8.0812) rotate(45) translate(-10.1015, -8.0812)" points="4.38723973 2.36693464 15.8158112 2.36693464 15.8158112 13.7955061"></polyline>
-                                <line x1="-2.48689958e-14" y1="8.08122036" x2="18.1827458" y2="8.08122036" id="路径-2" stroke="#2450FF" stroke-width="1.8" stroke-linejoin="round"></line>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-        <g id="箭头-黑色备份-3" transform="translate(24, 0)">
-            <mask id="mask-6" fill="white">
-                <use xlink:href="#path-5"></use>
-            </mask>
-            <g id="path-1"></g>
-            <g id="编组-23" mask="url(#mask-6)">
-                <g transform="translate(1.7143, 1.7143)">
-                    <mask id="mask-8" fill="white">
-                        <use xlink:href="#path-7"></use>
-                    </mask>
-                    <g id="path-1" stroke="none" fill="none"></g>
-                    <g id="编组" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" mask="url(#mask-8)">
-                        <g transform="translate(-1.8571, -1.8571)">
-                            <g transform="translate(12.1429, 12.1429) rotate(-45) translate(-12.1429, -12.1429)translate(3.0515, 4.0616)">
-                                <polyline id="路径" stroke="#091221" stroke-width="1.8" transform="translate(10.1015, 8.0812) rotate(45) translate(-10.1015, -8.0812)" points="4.38723973 2.36693464 15.8158112 2.36693464 15.8158112 13.7955061"></polyline>
-                                <line x1="-2.48689958e-14" y1="8.08122036" x2="18.1827458" y2="8.08122036" id="路径-2" stroke="#091221" stroke-width="1.8" stroke-linejoin="round"></line>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_11100_15240)">
+<mask id="mask0_11100_15240" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="24" width="24" height="24">
+<path d="M24 24H0V48H24V24Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_11100_15240)">
+<mask id="mask1_11100_15240" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="25" width="22" height="22">
+<path d="M21.7861 26.2144V45.7856H2.21484V26.2144H21.7861Z" fill="white" stroke="url(#paint0_linear_11100_15240)"/>
+</mask>
+<g mask="url(#mask1_11100_15240)">
+<path d="M7 29.5713H18.4286V40.9999" stroke="url(#paint1_linear_11100_15240)" stroke-width="1.8"/>
+<path d="M5.57422 42.4285L18.4314 29.5713" stroke="url(#paint2_linear_11100_15240)" stroke-width="1.8" stroke-linejoin="round"/>
+</g>
+</g>
+<mask id="mask2_11100_15240" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="24" y="0" width="24" height="24">
+<path d="M48 0H24V24H48V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_11100_15240)">
+<mask id="mask3_11100_15240" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="25" y="1" width="22" height="22">
+<path d="M46.2863 1.71436H25.7148V22.2858H46.2863V1.71436Z" fill="white"/>
+</mask>
+<g mask="url(#mask3_11100_15240)">
+<path d="M31 5.57129H42.4286V16.9999" stroke="#091221" stroke-width="1.8"/>
+<path d="M29.5742 18.4285L42.4314 5.57132" stroke="#091221" stroke-width="1.8" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_11100_15240" x1="30.6052" y1="62.5052" x2="-3.77126" y2="56.3491" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8310FE"/>
+<stop offset="1" stop-color="#4A3EFF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_11100_15240" x1="23.0502" y1="50.0107" x2="3.95217" y2="46.5906" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8310FE"/>
+<stop offset="1" stop-color="#4A3EFF"/>
+</linearGradient>
+<linearGradient id="paint2_linear_11100_15240" x1="24.8953" y1="25.6366" x2="16.7612" y2="21.3248" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8310FE"/>
+<stop offset="1" stop-color="#4A3EFF"/>
+</linearGradient>
+<clipPath id="clip0_11100_15240">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
 </svg>

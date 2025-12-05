@@ -5,7 +5,7 @@ import TopNav from './components/topNav/index';
 import './index.css';
 import PageIndex from './components/index/index'
 import PageProduct from './components/product/index'
-import PageKt from './components/KT/index'
+import PageTab from './components/tab/index'
 import PageInfo from './components/info/index'
 import PageContact from './components/contact/index'
 import DevelopPage from './components/develop';
@@ -68,44 +68,11 @@ export default function Index() {
         <div className="w-100 h-100" >
             <ReactLenis root />
             <div>
-                {/* 
-                <motion.div
-                    {...initialLoadProps}
-                    style={{
-                        height: '100vh',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: '2rem',
-                    }}
-                >
-                    Hello World
-                </motion.div>
-                <motion.div
-                    {...scrollInViewSpringProps}
-                    className='h-[200px] my-[50px] bg-amber-200 flex items-center justify-around'
-                >
-                    <motion.div {...scrollInViewSpringProps} className='w-20 h-20 bg-amber-600'>
-                        box1
-                    </motion.div>
-                    <motion.div {...scrollInViewSpringProps} className='w-20 h-20 bg-amber-600'>
-                        box1
-                    </motion.div>
-                    <motion.div {...scrollInViewSpringProps} className='w-20 h-20 bg-amber-600'>
-                        box1
-                    </motion.div>
-                    <motion.div {...scrollInViewSpringProps} className='w-20 h-20 bg-amber-600'>
-                        box1
-                    </motion.div>
-                    <motion.div {...scrollInViewSpringProps} className='w-20 h-20 bg-amber-600'>
-                        box1
-                    </motion.div>
-                </motion.div> */}
                 <TopNavs />
                 <PageIndex />
                 <PageProduct />
                 <PageQuestion />
-                <PageKt />
+                <PageTab />
                 <PageInfo />
                 <DevelopPage />
                 <PageConsult />
