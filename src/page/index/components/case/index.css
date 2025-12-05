@@ -29,11 +29,13 @@
   position: relative;
   max-width: 1440px;
   overflow: hidden;
+  padding: 0px 20px;
 }
 
 .case-scroll-container {
   width: 100%;
   overflow: hidden;
+
 }
 
 .case-scroll-track {
@@ -42,7 +44,6 @@
   gap: 60px;
   width: fit-content;
   height: 68px;
-  padding: 20px 0;
   animation: scroll-infinite 70s linear infinite;
 }
 
@@ -51,12 +52,12 @@
 }
 
 @keyframes scroll-infinite {
-  0% {
+  from {
     transform: translateX(0);
   }
 
-  100% {
-    transform: translateX(-50%);
+  to {
+    transform: translateX(calc(-100% / 2));
   }
 }
 

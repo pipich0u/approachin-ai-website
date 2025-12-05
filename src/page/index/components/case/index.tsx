@@ -1,4 +1,3 @@
-
 import './index.css'
 import image1 from '@/assets/images/image_1.png'
 import image2 from '@/assets/images/image_2.png'

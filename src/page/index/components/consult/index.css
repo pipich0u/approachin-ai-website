@@ -28,6 +28,86 @@
     letter-spacing: 2%;
 }
 
+
+.consult-button {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    padding: 0px 32px;
+    background-color: #FFFFFFE5;
+    color: #333;
+    gap: 8px;
+    border-radius: 16px;
+    cursor: pointer;
+    margin-top: 32px;
+    width: 394px;
+    height: 62px;
+    box-shadow: 0px 4px 20px 0px #00539F0F;
+    border: 6px solid #00000006;
+    /* border-color: transparent; */
+}
+
+.consult-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #6C3AE1;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.consult-button .arr-1 {
+    right: 140px;
+}
+
+.consult-button .arr-2 {
+    left: -25%;
+}
+
+.consult-button .bt-text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-20px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    font-weight: 450;
+    font-style: Demibold;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
+
+.consult-button:hover {
+    /* box-shadow: 0 0 0 12px transparent; */
+    color: #6C3AE1;
+}
+
+.consult-button:hover .arr-1 {
+    right: -25%;
+}
+
+.consult-button:hover .arr-2 {
+    left: 140px;
+}
+
+.consult-button:hover .bt-text {
+    transform: translateX(36px);
+}
+
+.consult-button:hover svg {
+    fill: #6C3AE1;
+}
+
+.consult-button:active {
+    scale: 0.95;
+}
+
+
+/* 
 .consult-button {
     display: flex;
     align-items: center;
@@ -53,7 +133,6 @@
 }
 
 .consult-svg {
-    /* padding-top: 5px; */
     height: 100%;
     width: fit-content;
     display: flex;
@@ -67,9 +146,6 @@
 
 .consult-button:hover {
     border: 8px solid #FFFFFF33;
-    /* background:
-        radial-gradient(63.55% 57.74% at 50% 82.37%, rgba(135, 97, 225, 0) 0%, rgba(135, 97, 225, 0.14) 100%); */
-
 }
 
 .consult-button:active {
@@ -109,4 +185,4 @@
     100% {
         transform: scale3d(1, 1, 1);
     }
-}
+} */
