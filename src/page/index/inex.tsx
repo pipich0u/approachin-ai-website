@@ -5,11 +5,9 @@ import TopNav from './components/topNav/index';
 import './index.css';
 import PageIndex from './components/index/index'
 import PageProduct from './components/product/index'
-import PageTechnology from './components/technology/index'
 import PageKt from './components/KT/index'
 import PageInfo from './components/info/index'
 import PageContact from './components/contact/index'
-import PageTeam from './components/team/index'
 import DevelopPage from './components/develop';
 import { useSearchParams } from 'react-router-dom';
 import { ReactLenis, useLenis } from 'lenis/react'
@@ -17,14 +15,14 @@ import type { LenisRef } from 'lenis/react';
 import { motion } from "motion/react"
 import { initialLoadProps, scrollInViewSpringProps } from './motionConfig'
 import TopNavs from './components/topNavs';
-// import * as motion from "motion/react-client"
+import PageQuestion from './components/question/index';
+import PageConsult from './components/consult/index';
 
 
 export default function Index() {
     // const navigate = useNavigate();
     const [searchParams] = useSearchParams()
     // const lenisRef = useRef<LenisRef>(null)
-    // const navId = searchParams.get('id')
     const [activeSection, setActiveSection] = useState('');
     const topNavRef = useRef<ReturnType<typeof TopNav>>(null)
     const scrollBoxRef = useRef<HTMLDivElement>(null);
@@ -105,12 +103,12 @@ export default function Index() {
                 </motion.div> */}
                 <TopNavs />
                 <PageIndex />
-                <PageProduct/>
-                <PageTechnology />
+                <PageProduct />
+                <PageQuestion />
                 <PageKt />
                 <PageInfo />
                 <DevelopPage />
-                <PageTeam />
+                <PageConsult />
                 <PageContact />
             </div>
         </div >

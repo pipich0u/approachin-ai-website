@@ -1,7 +1,7 @@
 .section-9 {
-    height: 530px !important;
-    background-color: #1A1A1A;
-    padding-top: 53px;
+    height: 600px !important;
+    background-color: #FAFCFF;
+    padding: 53px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +31,7 @@
 
 .contact-box-left {
     min-width: 290px;
-    width: 40%;
+    width: 10%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -53,7 +53,7 @@
 }
 
 .contact-box-right {
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
 }
@@ -72,34 +72,23 @@
     font-size: 18px;
     line-height: 130%;
     letter-spacing: 6%;
-    color: white;
+    color: #333333;
     margin-bottom: 14px;
 }
 
-.content-box-right-item-text {
+.content-item-text {
     font-family: MiSans;
     font-weight: 330;
     font-size: 14px;
     line-height: 130%;
     letter-spacing: 6%;
-    color: #FFFFFFB2;
+    color: #33333399;
     margin-top: 16px;
     cursor: pointer;
 }
 
-.content-box-right-item-texts {
-    font-family: MiSans;
-    font-weight: 330;
-    font-size: 14px;
-    line-height: 130%;
-    letter-spacing: 6%;
-    color: #FFFFFFB2;
-    margin-top: 16px;
-    /* cursor: pointer; */
-}
-
-.content-box-right-item-text:hover {
-    color: #FFFFFF;
+.content-item-text:hover {
+    color: #333;
 }
 
 .ewm {
@@ -111,19 +100,19 @@
 .canlogo {
     width: 190px;
     height: 54px;
-    position: absolute;
-    top: -20px;
+    /* position: absolute;
+    top: -20px; */
 }
 
 .contact-icp {
     flex: 1;
     box-sizing: border-box;
     margin: 0 100px;
-    padding: 30px 0;
+    padding: 40px 0;
     width: calc(100% - 200px);
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #FFFFFF1A;
+    border-top: .3px solid #33333330;
     margin-top: 58px;
     align-items: center;
     justify-content: center;
@@ -140,4 +129,23 @@
 
 .contact-icp-text span {
     cursor: pointer;
+}
+
+.contact-box-left-up {
+    width: 250px;
+    gap: 40px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.contact-box-left-up-items {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.up-item-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
 }
