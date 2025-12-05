@@ -1,8 +1,9 @@
 .qt-container {
     height: 411px;
     width: 100%;
-    background: linear-gradient(180deg, rgba(248, 245, 255, 0) 0%, #F8F5FF 100%);
-
+    /* background: linear-gradient(180deg, rgba(248, 245, 255, 0) 0%, #F8F5FF 100%); */
+    position: relative;
+    overflow: hidden;
 }
 
 .qt-title {
@@ -20,4 +21,24 @@
     text-align: center;
     color: #434343;
     padding-top: 20px;
+}
+
+
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
 }
