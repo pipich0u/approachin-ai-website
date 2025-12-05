@@ -17,6 +17,7 @@ import { initialLoadProps, scrollInViewSpringProps } from './motionConfig'
 import TopNavs from './components/topNavs';
 import PageQuestion from './components/question/index';
 import PageConsult from './components/consult/index';
+import PageCase from './components/case';
 
 
 export default function Index() {
@@ -73,8 +74,9 @@ export default function Index() {
                 <PageProduct />
                 <PageQuestion />
                 <PageTab />
-                <PageInfo />
-                <DevelopPage />
+                <PageCase />
+                {/* <PageInfo /> */}
+                {/* <DevelopPage /> */}
                 <PageConsult />
                 <PageContact />
             </div>

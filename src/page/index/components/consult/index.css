@@ -67,6 +67,9 @@
 
 .consult-button:hover {
     border: 8px solid #FFFFFF33;
+    /* background:
+        radial-gradient(63.55% 57.74% at 50% 82.37%, rgba(135, 97, 225, 0) 0%, rgba(135, 97, 225, 0.14) 100%); */
+
 }
 
 .consult-button:active {

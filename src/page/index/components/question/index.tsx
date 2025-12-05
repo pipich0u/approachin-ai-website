@@ -1,12 +1,13 @@
 
 import './index.css'
 import audio from '@/assets/audio/audio.mp4'
-
+import { motion } from "motion/react";
+import { scrollInViewSpringProps } from "../../motionConfig";
 export default function PageQuestion() {
 
     return (
         <div className='qt-container'>
-            <div className='qt-title'>AI落地是否还在为此烦恼？
+            <motion.div {...scrollInViewSpringProps} className='qt-title'>AI落地是否还在为此烦恼？
                 <video
                     className="video-bg"
                     autoPlay
@@ -16,7 +17,7 @@ export default function PageQuestion() {
                 >
                     <source src={audio} type="video/mp4" />
                 </video>
-            </div>
+            </motion.div>
         </div>
     );
 }

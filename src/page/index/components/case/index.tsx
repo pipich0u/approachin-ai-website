@@ -12,28 +12,28 @@ import image9 from '@/assets/images/image_9.png'
 import image10 from '@/assets/images/image_10.png'
 import image11 from '@/assets/images/image_11.png'
 import image12 from '@/assets/images/image_12.png'
-
+import { motion } from "motion/react";
+import { scrollInViewSpringProps } from "../../motionConfig";
 export default function PageCase() {
     const images = [image1, image2, image3, image4, image6, image5, image7, image8, image9, image10, image11, image12]
+
     return (
-        <div className="section section-5">
-            <div className='case'>
-                <div className='case-title'>
-                    <div className='case-title-1'>合作案例</div>
-                    <div className='case-title-2'>剖析成功案例，解锁发展密码</div>
-                </div>
-                <div className='case-content '>
-                    <div className='case-content-item'>
-                        {
-                            images.map((item, index) => {
-                                return (
-                                    <img src={item} alt="" key={index} className='item-img'/>
-                                )
-                            })
-                        }
+        <div className='case'>
+            <motion.div {...scrollInViewSpringProps} className='case-title'>更多客户</motion.div>
+            <motion.div className='case-content' {...scrollInViewSpringProps}>
+                <div className='case-scroll-container'>
+                    <div className='case-scroll-track'>
+                        {images.map((item, index) => (
+                            <img src={item} alt="" key={`original-${index}`} className='item-img' />
+                        ))}
+                        {images.map((item, index) => (
+                            <img src={item} alt="" key={`duplicate-${index}`} className='item-img' />
+                        ))}
                     </div>
                 </div>
-            </div>
+                <div className='case-mask-left'></div>
+                <div className='case-mask-right'></div>
+            </motion.div>
         </div>
     );
 }
