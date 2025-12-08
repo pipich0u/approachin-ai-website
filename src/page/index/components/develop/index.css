@@ -48,6 +48,7 @@
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid rgba(51, 51, 51, 0.10);
+  cursor: pointer;
 }
 
 .dep-tab-item-title {
@@ -58,6 +59,8 @@
   line-height: 150%;
   letter-spacing: 0%;
   color: #333;
+  white-space: pre-line;
+  transition: color 0.3s ease;
 }
 
 .dep-tab-item-desc {
@@ -68,4 +71,38 @@
   font-weight: 380;
   line-height: 150%;
   margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.dep-tab-items:nth-child(1).dep-active {
+  width: 610px;
+  background: url(/src/assets/images/img/dep_tab1.png) no-repeat;
+  background-size: cover;
+  transition: width 0.3s ease;
+}
+
+.dep-tab-items:nth-child(2).dep-active {
+  width: 610px;
+  background: url(/src/assets/images/img/dep_tab3.png) no-repeat;
+  background-size: cover;
+  transition: width 0.3s ease;
+}
+
+.dep-tab-items:nth-child(3).dep-active {
+  width: 610px;
+  background: url(/src/assets/images/img/dep_tab2.png) no-repeat;
+  background-size: cover;
+  transition: width 0.3s ease;
+}
+
+.dep-tab-items.dep-active .dep-tab-item-title {
+  color: #fff;
+}
+
+.dep-tab-items.dep-active .dep-tab-item-desc{
+  color: #fff;
+}
+
+.dep-tab-items.dep-active .dep-tab-item-icon>span {
+  display: none;
 }
