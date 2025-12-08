@@ -143,3 +143,111 @@
 .source-cont-btn:active {
     scale: 0.95;
 }
+
+
+
+/* models */
+.models {
+    height: 260px;
+    width: 100%;
+    border-top: 1px solid #C5BCFF;
+    border-bottom: 1px solid #C5BCFF;
+    display: flex;
+    justify-content: center;
+}
+
+.models-container {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 200px;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-left: 1px solid #C5BCFF;
+    border-right: 1px solid #C5BCFF;
+}
+
+.models-center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.models-title {
+    color: #1B1D22;
+    font-weight: 550;
+    font-style: Semibold;
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    text-align: center;
+
+}
+
+.models-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 30px;
+    width: 294px;
+    height: 62px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 16px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    background: radial-gradient(115.93% 115.93% at 81.07% 50%, rgba(27, 18, 94, 0.00) 0%, #988AFF 100%), #000;
+    border: 6px solid #E0E0E0;
+    margin-top: 30px;
+}
+
+.models-btn svg {
+    position: absolute;
+    width: 24px;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.models-btn .arr-1 {
+    right: 70px;
+}
+
+.models-btn .arr-2 {
+    left: -25%;
+}
+
+.models-btn .bt-text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(55px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.models-btn:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+
+}
+
+.models-btn:hover .arr-1 {
+    right: -25%;
+}
+
+.models-btn:hover .arr-2 {
+    left: 70px;
+}
+
+.models-btn:hover .bt-text {
+    transform: translateX(75px);
+}
+
+.models-btn:active {
+    scale: 0.95;
+}
