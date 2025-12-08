@@ -6,7 +6,7 @@ import './index.css';
 import PageIndex from './components/index/index'
 import PageProduct from './components/product/index'
 import PageTab from './components/tab/index'
-import PageInfo from './components/info/index'
+import PageCooperate from './components/PageCooperate/index'
 import PageContact from './components/contact/index'
 import DevelopPage from './components/develop';
 import { useSearchParams } from 'react-router-dom';
@@ -68,15 +68,15 @@ export default function Index() {
     return (
         <div className="w-100 h-100" >
             <ReactLenis root />
-            <div>
+            <div className='flex items-center flex-col'>
                 <TopNavs />
                 <PageIndex />
                 <PageProduct />
                 <PageQuestion />
                 <PageTab />
                 <PageCase />
-                {/* <PageInfo /> */}
-                {/* <DevelopPage /> */}
+                <PageCooperate />
+                <DevelopPage />
                 <PageConsult />
                 <PageContact />
             </div>
