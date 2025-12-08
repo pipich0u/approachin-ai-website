@@ -1,0 +1,145 @@
+.source-box {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: MiSans;
+}
+
+.source-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 90px 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.source-title {
+    color: #1B1D22;
+    font-weight: 520;
+    font-style: Semibold;
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    text-align: center;
+}
+
+.source-content {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.source-cont-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 62px 65px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    width: 600px;
+    height: 422px;
+}
+
+.source-cont-left {
+    background: #F1F9FD;
+}
+
+.source_img1 {
+    position: absolute;
+    bottom: -50%;
+    right: -30%;
+}
+
+.source_img2 {
+    position: absolute;
+    bottom: 30px;
+    right: 32px;
+}
+
+.source-cont-rig {
+    background: #F9F5FE;
+}
+
+.sou-cont-title {
+    color: #000;
+    font-weight: 450;
+    font-style: Demibold;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+
+.sou-cont-desc {
+    color: #979B9E;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 380;
+    line-height: 150%;
+    margin-top: 12px;
+}
+
+
+.source-cont-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 30px;
+    width: 152px;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.source-cont-btn svg {
+    position: absolute;
+    width: 24px;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.source-cont-btn .arr-1 {
+    right: 27px;
+}
+
+.source-cont-btn .arr-2 {
+    left: -25%;
+}
+
+.source-cont-btn .bt-text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(0px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.source-cont-btn:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+
+}
+
+.source-cont-btn:hover .arr-1 {
+    right: -25%;
+}
+
+.source-cont-btn:hover .arr-2 {
+    left: 27px;
+}
+
+.source-cont-btn:hover .bt-text {
+    transform: translateX(30px);
+}
+
+.source-cont-btn:active {
+    scale: 0.95;
+}
