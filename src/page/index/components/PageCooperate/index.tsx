@@ -70,7 +70,7 @@ export default function PageCooperate() {
                             </svg>
                         </motion.button>
                     </div>
-                    <motion.div className='cpa-content-rig' {...scrollInViewSpringProps} >
+                    <div className='cpa-content-rig' >
                         <div className='circle-container'>
                             <div className='circle-out'>
                                 {outerImages.map((img, index) => {
@@ -109,7 +109,7 @@ export default function PageCooperate() {
                                 })}
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </div>

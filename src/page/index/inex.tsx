@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 //@ts-ignore
 import ReactFullpage from '@fullpage/react-fullpage';
-import TopNav from './components/topNav/index';
+// import TopNav from './components/topNav/index';
 import './index.css';
 import PageIndex from './components/index/index'
 import PageProduct from './components/product/index'
@@ -9,23 +9,16 @@ import PageTab from './components/tab/index'
 import PageCooperate from './components/PageCooperate/index'
 import PageContact from './components/contact/index'
 import DevelopPage from './components/develop';
-import { useSearchParams } from 'react-router-dom';
-import { ReactLenis, useLenis } from 'lenis/react'
-import type { LenisRef } from 'lenis/react';
-import { motion } from "motion/react"
-import { initialLoadProps, scrollInViewSpringProps } from './motionConfig'
+import { ReactLenis } from 'lenis/react'
 import TopNavs from './components/topNavs';
 import PageQuestion from './components/question/index';
 import PageConsult from './components/consult/index';
 import PageCase from './components/case';
+import SourcePage from './components/source';
 
 
 export default function Index() {
-    // const navigate = useNavigate();
-    const [searchParams] = useSearchParams()
-    // const lenisRef = useRef<LenisRef>(null)
-    const [activeSection, setActiveSection] = useState('');
-    const topNavRef = useRef<ReturnType<typeof TopNav>>(null)
+
     const scrollBoxRef = useRef<HTMLDivElement>(null);
 
     // const lenis = useLenis((lenis) => {
@@ -76,6 +69,7 @@ export default function Index() {
                 <PageTab />
                 <PageCase />
                 <PageCooperate />
+                <SourcePage />
                 <DevelopPage />
                 <PageConsult />
                 <PageContact />
