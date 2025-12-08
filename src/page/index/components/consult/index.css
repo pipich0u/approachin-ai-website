@@ -60,7 +60,7 @@
 }
 
 .consult-button .arr-1 {
-    right: 140px;
+    right: 130px;
 }
 
 .consult-button .arr-2 {
@@ -70,7 +70,7 @@
 .consult-button .bt-text {
     position: relative;
     z-index: 1;
-    transform: translateX(-20px);
+    transform: translateX(-10px);
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
     font-weight: 450;
     font-style: Demibold;
@@ -87,15 +87,15 @@
 }
 
 .consult-button:hover .arr-1 {
-    right: -25%;
+    right: -23%;
 }
 
 .consult-button:hover .arr-2 {
-    left: 140px;
+    left: 130px;
 }
 
 .consult-button:hover .bt-text {
-    transform: translateX(36px);
+    transform: translateX(30px);
 }
 
 .consult-button:hover svg {
