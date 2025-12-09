@@ -31,7 +31,9 @@
   overflow: hidden;
   padding: 0px 20px;
 }
-
+.case-content{
+  padding: 0 110px;
+}
 .case-scroll-container {
   width: 100%;
   overflow: hidden;
@@ -69,7 +71,7 @@
 
 .case-mask-left {
   position: absolute;
-  left: 0;
+  left: 110px;
   top: 0;
   width: 200px;
   height: 100%;
@@ -80,7 +82,7 @@
 
 .case-mask-right {
   position: absolute;
-  right: 0;
+  right: 110px;
   top: 0;
   width: 200px;
   height: 100%;
