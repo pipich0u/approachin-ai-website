@@ -166,6 +166,8 @@
     overflow: hidden;
     border-left: 1px solid #C5BCFF;
     border-right: 1px solid #C5BCFF;
+    background: url(/src/assets/images/img/models_bg.png) no-repeat center;
+    background-size: cover;
 }
 
 .models-center {
@@ -175,6 +177,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .models-title {
@@ -186,6 +189,50 @@
     letter-spacing: 2%;
     text-align: center;
 
+}
+
+.models-center .img{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius:4px ;
+    animation: floatAnim ease-in-out infinite;
+}
+
+.models-center .img-1 {
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+
+.models-center .img-2 {
+    animation-duration: 5.5s;
+    animation-delay: 0.8s;
+}
+
+.models-center .img-3 {
+    animation-duration: 4.8s;
+    animation-delay: 1.5s;
+}
+
+.models-center .img-4 {
+    animation-duration: 5.2s;
+    animation-delay: 0.5s;
+}
+
+.models-center .img-5 {
+    animation-duration: 6s;
+    animation-delay: 1.2s;
+}
+
+.models-center .img-6 {
+    animation-duration: 4.5s;
+    animation-delay: 2s;
+}
+
+@keyframes floatAnim {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
 }
 
 .models-btn {

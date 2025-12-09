@@ -88,7 +88,7 @@ export default function PageContact() {
                         <div className='content-box-right-item'>
                             <div className='content-box-right-item-title'>联系我们</div>
                             <div className='content-item-text'>邮箱：quxin@approaching.ai</div>
-                            <div className='content-item-text' onClick={() => window.open(map)}>地址：北京市海淀区优盛大厦 D 座</div>
+                            <div className='content-item-text' onClick={() => window.open(map)}>地址：北京市海淀区学清嘉创大厦 C 座</div>
                         </div>
                         <div className='content-box-right-item'>
                             <div className='content-box-right-item-title'>关注我们</div>
