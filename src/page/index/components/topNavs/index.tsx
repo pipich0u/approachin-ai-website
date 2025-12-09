@@ -24,17 +24,70 @@ const TopNavs = () => {
     if (!item.isSelected) navigate(item.path + '?id=' + item.id);
   };
 
-  const dropdownMenu = {
-    items: [
-      {
-        key: '1',
-        label: (
-          <div className="text-[12px]">
-            暂无内容
-          </div>
-        ),
-      },
-    ],
+  // 根据 id 获取不同的下拉菜单内容
+  const getDropdownMenu = (id: number) => {
+    switch (id) {
+      case 0: // 解决方案
+        return {
+          items: [
+            {
+              key: '1',
+              label: <div className="text-[13px] py-[3px] px-[8px]">A·Spark 便携工作站</div>,
+            },
+            {
+              key: '2',
+              label: <div className="text-[13px] py-[3px] px-[8px]">大模型推理一体机</div>,
+            },
+            {
+              key: '3',
+              label: <div className="text-[13px] py-[3px] px-[8px]">推理引擎·KLLM</div>,
+            },
+            {
+              key: '4',
+              label: <div className="text-[13px] py-[3px] px-[8px]">推理服务平台·AMaaS</div>,
+            },
+            {
+              key: '5',
+              label: <div className="text-[13px] py-[3px] px-[8px]">专属推理云·AMVaaS</div>,
+            },
+          ],
+        };
+      case 1: // 开源社区
+        return {
+          items: [
+            {
+              key: '1',
+              label: <div className="text-[13px] py-[3px] px-[8px]">KTransformers</div>,
+            },
+            {
+              key: '2',
+              label: <div className="text-[13px] py-[3px] px-[8px]">Mooncake</div>,
+            },
+          ],
+        };
+      case 6: // 关于我们
+        return {
+          items: [
+            {
+              key: '1',
+              label: <div className="text-[13px] py-[3px] px-[8px]">公司简介</div>,
+            },
+            {
+              key: '2',
+              label: <div className="text-[13px] py-[3px] px-[8px]">联系我们</div>,
+            },
+          ],
+        };
+      default:
+        return {
+          items: [
+            {
+              key: '1',
+              label: <div className="text-[13px] py-[3px] px-[8px]">暂无内容</div>,
+            },
+          ],
+        };
+    }
   };
 
   return (
@@ -68,8 +121,8 @@ const TopNavs = () => {
               <Dropdown
                 key={item.id}
                 trigger={['hover']}
-                menu={dropdownMenu}
-                placement="bottomLeft"
+                menu={getDropdownMenu(item.id)}
+                placement="bottomCenter"
               >
                 <div
                   className="navbar-item cursor-pointer flex items-center"
@@ -78,7 +131,7 @@ const TopNavs = () => {
                 >
                   {item.title}
                   <DownOutlined
-                    className={`ml-1 transition-all duration-300 ${
+                    className={`ml-1 transition-all duration-800 ${
                       hoverId === item.id ? 'rotate-180' : 'rotate-0'
                     }`}
                   />
