@@ -32,7 +32,7 @@ export default function PageContact() {
         { title: 'Ktransformer', id: 1, href: '/' },
         { title: 'Mooncake', id: 2, href: '/' },
     ]
-    const map = 'https://map.baidu.com/poi/%E4%BC%98%E7%9B%9B%E5%A4%A7%E5%8E%A6-D%E5%BA%A7/@12951705.819582434,4837827.921399237,19.34z?uid=9bec76784f71b6ff25d2bbdb&info_merge=1&isBizPoi=false&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl'
+    const map = 'https://map.baidu.com/search/%E5%AD%A6%E6%B8%85%E5%98%89%E5%88%9B%E5%A4%A7%E5%8E%A6c/@12953146.105,4841086.12,19z?querytype=s&da_src=shareurl&wd=%E5%AD%A6%E6%B8%85%E5%98%89%E5%88%9B%E5%A4%A7%E5%8E%A6C&c=131&src=0&pn=0&sug=0&l=19&b=(12952691.125755528,4840923.8293437995;12953651.125755528,4841379.3293437995)&from=webmap&biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&device_ratio=1'
     return (
         <div className="section section-9">
             <div className='fp-overflow'>
