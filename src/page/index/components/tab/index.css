@@ -244,7 +244,7 @@
 }
 
 .tab-cont-left-btn:hover .bt-text {
-    transform: translateX(30px);
+    transform: translateX(15px);
 }
 
 .tab-cont-left-btn:hover svg {

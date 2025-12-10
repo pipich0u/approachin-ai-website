@@ -32,23 +32,23 @@ const TopNavs = () => {
           items: [
             {
               key: '1',
-              label: <div className="text-[13px] py-[3px] px-[8px]">A·Spark 便携工作站</div>,
+              label: <div className="text-[13px] py-[3px] px-2">A·Spark 便携工作站</div>,
             },
             {
               key: '2',
-              label: <div className="text-[13px] py-[3px] px-[8px]">大模型推理一体机</div>,
+              label: <div className="text-[13px] py-[3px] px-2">大模型推理一体机</div>,
             },
             {
               key: '3',
-              label: <div className="text-[13px] py-[3px] px-[8px]">推理引擎·KLLM</div>,
+              label: <div className="text-[13px] py-[3px] px-2">推理引擎·KLLM</div>,
             },
             {
               key: '4',
-              label: <div className="text-[13px] py-[3px] px-[8px]">推理服务平台·AMaaS</div>,
+              label: <div className="text-[13px] py-[3px] px-2">推理服务平台·AMaaS</div>,
             },
             {
               key: '5',
-              label: <div className="text-[13px] py-[3px] px-[8px]">专属推理云·AMVaaS</div>,
+              label: <div className="text-[13px] py-[3px] px-2">专属推理云·AMVaaS</div>,
             },
           ],
         };
@@ -57,11 +57,11 @@ const TopNavs = () => {
           items: [
             {
               key: '1',
-              label: <div className="text-[13px] py-[3px] px-[8px]">KTransformers</div>,
+              label: <div className="text-[13px] py-[3px] px-2">KTransformers</div>,
             },
             {
               key: '2',
-              label: <div className="text-[13px] py-[3px] px-[8px]">Mooncake</div>,
+              label: <div className="text-[13px] py-[3px] px-2">Mooncake</div>,
             },
           ],
         };
@@ -70,11 +70,11 @@ const TopNavs = () => {
           items: [
             {
               key: '1',
-              label: <div className="text-[13px] py-[3px] px-[8px]">公司简介</div>,
+              label: <div className="text-[13px] py-[3px] px-2">公司简介</div>,
             },
             {
               key: '2',
-              label: <div className="text-[13px] py-[3px] px-[8px]">联系我们</div>,
+              label: <div className="text-[13px] py-[3px] px-2">联系我们</div>,
             },
           ],
         };
@@ -83,7 +83,7 @@ const TopNavs = () => {
           items: [
             {
               key: '1',
-              label: <div className="text-[13px] py-[3px] px-[8px]">暂无内容</div>,
+              label: <div className="text-[13px] py-[3px] px-2">暂无内容</div>,
             },
           ],
         };
