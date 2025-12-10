@@ -155,3 +155,14 @@
     position: relative;
     overflow: hidden;
 }
+
+.carousel-slides {
+    display: flex;
+    width: 300%; /* 3个页面 */
+    height: 100%;
+}
+
+.carousel-slides > .section {
+    width: 33.333%; /* 每个页面占1/3 */
+    flex-shrink: 0;
+}

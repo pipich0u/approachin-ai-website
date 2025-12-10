@@ -1,7 +1,7 @@
 
 import './index.css'
-import logo from '../../../../assets/svg/logo-black.svg'
-import ewm from '../../../../assets/images/ewm.png'
+import logo from '@/assets/svg/logo-black.svg'
+import ewm from '@/assets/images/ewm.png'
 import { useNavigate } from 'react-router-dom';
 
 // interface ContactProps {
