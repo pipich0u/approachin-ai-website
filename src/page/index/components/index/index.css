@@ -4,6 +4,12 @@
     background-position: center;
     font-family: MiSans !important;
 }
+.section-2{
+    background: #E9E8FA;
+}
+.section-3{
+    background: #E9E8FA;
+}
 .floating-left {
     position: absolute;
     left: 0;
@@ -141,4 +147,11 @@
 
 .animated-button:active {
     scale: 0.95;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
