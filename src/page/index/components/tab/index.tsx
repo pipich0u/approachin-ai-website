@@ -67,7 +67,7 @@ export default function PageTab() {
                     <motion.div
                         className="tab-underline"
                         animate={{ left: underline.left, width: underline.width }}
-                        transition={{ type: "spring", stiffness: 300, damping: 26 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
                     />
                 </motion.div>
 

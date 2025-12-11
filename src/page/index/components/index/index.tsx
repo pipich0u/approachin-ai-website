@@ -9,10 +9,11 @@ export default function PageIndex() {
     const [showContent, setShowContent] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [progress, setProgress] = useState(0);
+    const [isMouseInCarousel, setIsMouseInCarousel] = useState(false);
 
-    // 轮播自动切换逻辑
+    // 轮播自动切换逻辑 - 鼠标在轮播容器内时暂停
     useEffect(() => {
-        if (!showContent) return;
+        if (!showContent || isMouseInCarousel) return;
 
         const interval = setInterval(() => {
             setProgress((prev) => {
@@ -22,7 +23,7 @@ export default function PageIndex() {
         }, 100);
 
         return () => clearInterval(interval);
-    }, [showContent]);
+    }, [showContent, isMouseInCarousel]);
 
     // 监听进度，触发页面切换
     useEffect(() => {
@@ -44,7 +45,11 @@ export default function PageIndex() {
     };
 
     return (
-        <div className="carousel-wrapper">
+        <div
+            className="carousel-wrapper"
+            onMouseEnter={() => setIsMouseInCarousel(true)}
+            onMouseLeave={() => setIsMouseInCarousel(false)}
+        >
             {/* 横向排列的三个页面容器 */}
             <div
                 className="carousel-slides"
@@ -54,7 +59,7 @@ export default function PageIndex() {
                 }}
             >
                 {/* Section 1 */}
-                <div className="section section-1">
+                <div className="section-1 overflow-hidden">
                     <motion.div
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 0 }}
@@ -91,7 +96,7 @@ export default function PageIndex() {
                         }}
                     />
 
-                    {showContent && <div className='fp-overflow relative z-10'>
+                    {showContent && <div className='relative z-10 w-full h-full flex flex-col '>
                         <div className="title">
                             <motion.div {...initialLoadProps} className='title-top text-[#1B1D22] flex'>
                                 全栈智算引擎·普惠<div className='text-[#4F4CFF]'>高效AI</div>
@@ -101,7 +106,7 @@ export default function PageIndex() {
                                 为企业级用户的 AI 落地提供从算力破局到价值交付的全链路解决方案
                             </motion.div>
 
-                            <motion.button {...initialLoadProps} className='animated-button w-[180px] mt-8 h-11 rounded-lg bg-[#806BFF] '>
+                            <motion.button {...initialLoadProps} className='animated-button  w-[180px] mt-8 h-11 rounded-lg bg-[#806BFF] '>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
                                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
                                 </svg>
@@ -111,36 +116,36 @@ export default function PageIndex() {
                                 </svg>
                             </motion.button>
 
-                            <motion.div {...initialLoadProps} className='index-bottom bottom-35 absolute flex py-[19px] px-12 mt-20 w-[1070px] h-20 rounded-[10px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
-                                <div className='flex items-center gap-2'>
+                            <motion.div {...initialLoadProps} className='index-bottom bottom-15 absolute flex py-[19px] px-12 mt-20 w-[1070px] h-20 rounded-[10px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
+                                <div className='index-bottom-item flex items-center gap-2'>
                                     <div className='text-[#333] text-2xl font-[520]'>10倍</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
                                         <div>顶尖模型</div> <div>门槛降低</div>
                                     </div>
                                 </div>
                                 <div className='index-line w-px mx-10.5'></div>
-                                <div className='flex items-center gap-2'>
+                                <div className='index-bottom-item flex items-center gap-2'>
                                     <div className='text-[#333] text-2xl font-[520]'>150%</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
                                         <div>模型推理</div><div>性能提升</div>
                                     </div>
                                 </div>
                                 <div className='index-line w-px mx-10.5'></div>
-                                <div className='flex items-center gap-2'>
+                                <div className='index-bottom-item flex items-center gap-2'>
                                     <div className='text-[#333] text-2xl font-[520]'>小时级</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
                                         <div>开箱插电</div> <div>应用上线</div>
                                     </div>
                                 </div>
                                 <div className='index-line w-px mx-10.5'></div>
-                                <div className='flex items-center gap-2'>
+                                <div className='index-bottom-item flex items-center gap-2'>
                                     <div className='text-[#333] text-2xl font-[520]'>80%</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
                                         <div>算力资源</div> <div>利用力达</div>
                                     </div>
                                 </div>
                                 <div className='index-line w-px mx-10.5'></div>
-                                <div className='flex items-center gap-2'>
+                                <div className='index-bottom-item flex items-center gap-2'>
                                     <div className='text-[#333] text-2xl font-[520]'>80%</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
                                         <div>AI应用Task</div> <div>成本降低</div>
@@ -152,7 +157,7 @@ export default function PageIndex() {
                 </div>
 
                 {/* Section 2 */}
-                <div className="section section-2">
+                <div className="section-2">
                     <div className='fp-overflow relative z-10'>
                         <div className="title">
                             <div className='title-top text-[#1B1D22] flex'>
@@ -166,7 +171,7 @@ export default function PageIndex() {
                 </div>
 
                 {/* Section 3 */}
-                <div className="section section-3">
+                <div className="section-3">
                     <div className='fp-overflow relative z-10'>
                         <div className="title">
                             <div className='title-top text-[#1B1D22] flex'>

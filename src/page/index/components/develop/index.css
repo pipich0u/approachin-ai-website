@@ -74,32 +74,34 @@
   transition: color 0.3s ease;
 }
 
+.dep-tab-items {
+  transition: width 0.8s ease;
+}
+
 .dep-tab-items:nth-child(1).dep-active {
   width: 610px;
   background: url(/src/assets/images/img/dep_tab1.png) no-repeat;
   background-size: cover;
-  transition: width 0.3s ease;
+
 }
 
 .dep-tab-items:nth-child(2).dep-active {
   width: 610px;
   background: url(/src/assets/images/img/dep_tab3.png) no-repeat;
   background-size: cover;
-  transition: width 0.3s ease;
 }
 
 .dep-tab-items:nth-child(3).dep-active {
   width: 610px;
   background: url(/src/assets/images/img/dep_tab2.png) no-repeat;
   background-size: cover;
-  transition: width 0.3s ease;
 }
 
 .dep-tab-items.dep-active .dep-tab-item-title {
   color: #fff;
 }
 
-.dep-tab-items.dep-active .dep-tab-item-desc{
+.dep-tab-items.dep-active .dep-tab-item-desc {
   color: #fff;
 }
 

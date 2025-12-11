@@ -5,38 +5,88 @@
   src: url("/public/MiSans\ VF.ttf");
 }
 
+/* 主容器 - 响应式宽度 */
 .w-100 {
   width: 100%;
+
   min-width: 1440px;
   user-select: none;
 }
+
+/* @media (min-width: 768px) {
+  .w-100 {
+    min-width: 768px;
+  }
+} */
 
 .h-100 {
   /* height: 100%; */
 }
 
+/* 内容容器 - 最大宽度限制 */
 .app {
   max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
+@media (min-width: 1024px) {
+  .app {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .app {
+    padding: 0 60px;
+  }
+}
+
+/* 全屏区域内容容器 */
 .fp-overflow {
   max-width: 1440px;
   width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
   /* height: 100%; */
   /* overflow: auto; */
 }
 
+@media (min-width: 1024px) {
+  .fp-overflow {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .fp-overflow {
+    padding: 0 60px;
+  }
+}
+
+/* Section 容器 - 响应式高度和宽度 */
 .section {
   box-sizing: border-box;
   /* height: 100vh; */
-  min-height: 825px;
+  min-height: 600px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   /* overflow: hidden; */
-  min-width: 1000px;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    min-height: 700px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section {
+    min-height: 825px;
+  }
 }
 
 

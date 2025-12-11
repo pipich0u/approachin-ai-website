@@ -3,18 +3,24 @@
     background-size: cover;
     background-position: center;
     font-family: MiSans !important;
+    width: 100%;
 }
-.section-2{
+
+.section-2 {
+    width: 100%;
     background: #E9E8FA;
 }
-.section-3{
+
+.section-3 {
+    width: 100%;
     background: #E9E8FA;
 }
+
 .floating-left {
     position: absolute;
     left: 0;
     top: 30%;
-    width: 800px; /* 可自行调整 */
+    width: 800px;
     transform: translate(-60%, -50%);
     pointer-events: none;
     z-index: 1;
@@ -24,12 +30,11 @@
     position: absolute;
     right: 0;
     top: 30%;
-    width: 1200px; /* 可自行调整 */
+    width: 1200px;
     transform: translate(60%, -50%);
     pointer-events: none;
     z-index: 1;
 }
-
 
 
 .title {
@@ -38,9 +43,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 400px;
     box-sizing: border-box;
-    padding-bottom: 70px;
 }
 
 .title-top {
@@ -51,6 +55,7 @@
     line-height: 150%;
     letter-spacing: 2%;
     text-align: center;
+    margin-top: 160px;
 }
 
 .title-desc {
@@ -84,6 +89,19 @@
     border: 0.89px solid #806BFF33;
 }
 
+/* @media (max-width: 1200px) {
+    .index-bottom {
+        width: 800px;
+
+    }
+    .index-bottom-item {
+        
+    }
+    .index-line{
+        margin: 0 10px;
+    }
+} */
+
 .animated-button {
     position: relative;
     display: flex;
@@ -92,7 +110,7 @@
     padding: 16px 36px;
     border: 4px solid;
     border-color: transparent;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     box-shadow: 0 0 0 2px #ffffff;
     cursor: pointer;
@@ -151,18 +169,20 @@
 
 .carousel-wrapper {
     width: 100%;
-    height: 100vh;
+    height: 600px;
     position: relative;
     overflow: hidden;
 }
 
 .carousel-slides {
     display: flex;
-    width: 300%; /* 3个页面 */
+    width: 300%;
+    /* 3个页面 */
     height: 100%;
 }
 
-.carousel-slides > .section {
-    width: 33.333%; /* 每个页面占1/3 */
+.carousel-slides>.section {
+    width: 33.333%;
+    /* 每个页面占1/3 */
     flex-shrink: 0;
 }

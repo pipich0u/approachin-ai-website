@@ -90,7 +90,7 @@ export default function PageProduct() {
                         <div>引擎技术底座</div>
                     </motion.div>
                 </div>
-                <div className='flex gap-2.5'>
+                <div className='flex gap-5'>
                     <motion.div {...scrollInViewSpringProps} className='product-items product-4 p-[30px] w-[480px] h-[200px] rounded-[20px] '>
                         <div className='ml-2.5'>
                             <div className='text-[#333] font-[520] text-[18px] leading-[150%]'>{productFeatures[4].title}</div>

@@ -14,7 +14,7 @@ export const fadeInUpTransition: Transition = {
 
 export const defaultViewport = {
   once: false,
-  amount: 0.5,
+  amount: 0.1,  // 元素进入视口 30% 时触发动画
 };
 
 // 初始加载动画配置

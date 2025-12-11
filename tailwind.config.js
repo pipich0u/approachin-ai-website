@@ -5,6 +5,15 @@ export default {
   },
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    // 响应式断点配置（基于1440px设计稿）
+    screens: {
+      'sm': '640px',   // 小屏设备
+      'md': '768px',   // 平板竖屏
+      'lg': '1024px',  // 平板横屏/小笔记本
+      'xl': '1280px',  // 标准笔记本
+      '2xl': '1440px', // 标准桌面（设计稿基准）
+      '3xl': '1920px', // 大屏显示器
+    },
     extend: {
       colors: {
         theme: 'var(--color-primary)',
@@ -32,6 +41,13 @@ export default {
           '100%': { transform: 'scale(1.6)', opacity: '0' },
         },
       },
+      // 容器最大宽度配置
+      maxWidth: {
+        'container': '1440px',
+      },
+      spacing: {
+        '10.5': '42px',
+      }
     },
   },
   plugins: [],
