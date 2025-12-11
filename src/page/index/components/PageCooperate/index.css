@@ -4,6 +4,7 @@
     justify-content: center;
     background: #fafafa;
 }
+
 .cpa-container {
     padding-left: 148px;
     padding-right: 124px;
@@ -77,26 +78,6 @@
     position: relative;
 }
 
-.circle-out {
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    border: 1px dashed #DEDEDE;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.circle-in {
-    width: 238.233px;
-    height: 238.233px;
-    border-radius: 50%;
-    border: 1px dashed #DEDEDE;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 .circle-item-wrapper {
     position: absolute;
@@ -110,7 +91,7 @@
     border-radius: 50%;
     width: 100%;
     height: 100%;
-    border: 1px solid #DEDEDE;
+    border: 1px dashed #DEDEDE;
     position: absolute;
     top: 0;
     left: 0;
@@ -121,7 +102,7 @@
     width: 238.233px;
     height: 238.233px;
     border-radius: 50%;
-    border: 1px solid #DEDEDE;
+    border: 1px dashed #DEDEDE;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -148,10 +129,12 @@
 .circle-container:hover .circle-item {
     animation-play-state: running;
 }
+
 .big {
     width: 54px;
     height: 54px;
 }
+
 .circle-in .circle-item {
     animation: counter-rotate-reverse 50s linear infinite paused;
 }
@@ -160,6 +143,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -169,6 +153,7 @@
     from {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+
     to {
         transform: translate(-50%, -50%) rotate(-360deg);
     }
@@ -178,6 +163,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(-360deg);
     }
@@ -187,6 +173,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
