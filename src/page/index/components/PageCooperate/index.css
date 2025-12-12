@@ -95,7 +95,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    animation: rotate-outer 50s linear infinite paused;
+    animation: rotate-outer 50s linear infinite running;
 }
 
 .circle-in {
@@ -107,15 +107,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: rotate-inner 50s linear infinite paused;
+    animation: rotate-inner 50s linear infinite running;
 }
 
 .circle-container:hover .circle-out {
-    animation-play-state: running;
+    animation-play-state: paused
 }
-
 .circle-container:hover .circle-in {
-    animation-play-state: running;
+    animation-play-state: paused;
 }
 
 .circle-item {
@@ -123,11 +122,11 @@
     height: 46px;
     object-fit: contain;
     display: block;
-    animation: counter-rotate 50s linear infinite paused;
+    animation: counter-rotate 50s linear infinite running;
 }
 
 .circle-container:hover .circle-item {
-    animation-play-state: running;
+    animation-play-state: paused;
 }
 
 .big {
@@ -136,7 +135,7 @@
 }
 
 .circle-in .circle-item {
-    animation: counter-rotate-reverse 50s linear infinite paused;
+    animation: counter-rotate-reverse 50s linear infinite running;
 }
 
 @keyframes rotate-outer {

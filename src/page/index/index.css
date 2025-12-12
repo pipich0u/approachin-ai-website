@@ -30,7 +30,7 @@
   padding: 0 20px;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .app {
     padding: 0 40px;
   }
@@ -40,7 +40,7 @@
   .app {
     padding: 0 60px;
   }
-}
+} */
 
 /* 全屏区域内容容器 */
 .fp-overflow {
@@ -52,7 +52,7 @@
   /* overflow: auto; */
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .fp-overflow {
     padding: 0 40px;
   }
@@ -62,7 +62,7 @@
   .fp-overflow {
     padding: 0 60px;
   }
-}
+} */
 
 /* Section 容器 - 响应式高度和宽度 */
 .section {
@@ -77,7 +77,7 @@
   /* overflow: hidden; */
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .section {
     min-height: 700px;
   }
@@ -87,7 +87,7 @@
   .section {
     min-height: 825px;
   }
-}
+} */
 
 
 
