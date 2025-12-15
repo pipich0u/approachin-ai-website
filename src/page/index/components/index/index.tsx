@@ -12,30 +12,30 @@ export default function PageIndex() {
     const [isMouseInCarousel, setIsMouseInCarousel] = useState(false);
 
     // 轮播自动切换逻辑 - 鼠标在轮播容器内时暂停
-    // useEffect(() => {
-    //     if (!showContent || isMouseInCarousel) return;
+    useEffect(() => {
+        if (!showContent || isMouseInCarousel) return;
 
-    //     const interval = setInterval(() => {
-    //         setProgress((prev) => {
-    //             const newProgress = prev + (100 / 80); // 8秒 = 8000ms, 每100ms增加1.25%
-    //             return newProgress > 100 ? 100 : newProgress;
-    //         });
-    //     }, 100);
+        const interval = setInterval(() => {
+            setProgress((prev) => {
+                const newProgress = prev + (100 / 80); // 8秒 = 8000ms, 每100ms增加1.25%
+                return newProgress > 100 ? 100 : newProgress;
+            });
+        }, 100);
 
-    //     return () => clearInterval(interval);
-    // }, [showContent, isMouseInCarousel]);
+        return () => clearInterval(interval);
+    }, [showContent, isMouseInCarousel]);
 
-    // // 监听进度，触发页面切换
-    // useEffect(() => {
-    //     if (progress >= 100) {
-    //         const timer = setTimeout(() => {
-    //             setCurrentSlide((current) => (current + 1) % 3);
-    //             setProgress(0);
-    //         }, 50);
+    // 监听进度，触发页面切换
+    useEffect(() => {
+        if (progress >= 100) {
+            const timer = setTimeout(() => {
+                setCurrentSlide((current) => (current + 1) % 3);
+                setProgress(0);
+            }, 50);
 
-    //         return () => clearTimeout(timer);
-    //     }
-    // }, [progress]);
+            return () => clearTimeout(timer);
+        }
+    }, [progress]);
 
     // 手动切换轮播
     const handleSlideChange = (index: number) => {
