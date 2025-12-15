@@ -17,6 +17,7 @@
   background: #FFFFFFB8;
   backdrop-filter: blur(80px);
 }
+
 .navbar-container {
   max-width: 800px;
   width: fit-content;
@@ -93,3 +94,19 @@
   }
 }
 
+.navbar-btn {
+  border-radius: 8px;
+  background: #6524FF;
+  display: inline-flex;
+  padding: 6px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 112px;
+  height: 36px;
+  color: #fff;
+}
+.navbar-btn:hover {
+  background: #6524FF !important;
+  color: #fff;
+}

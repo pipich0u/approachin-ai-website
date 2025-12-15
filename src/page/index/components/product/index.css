@@ -5,7 +5,7 @@
 }
 
 .product-items {
-    border: 1px solid #F2F2F2
+    border: 1px solid #EFEFEF;
 }
 
 .product-1 {
@@ -21,27 +21,55 @@
 }
 
 .product-4 {
-    background: url('/src/assets/images/img/product_3.png') no-repeat right;
+    background: url('/src/assets/images/img/product_4.png') no-repeat right;
+    background-color: white;
 }
 
 .more {
     position: relative;
+    border: 1px solid #878787;
+    border-radius: 6px;
+    color: #878787;
+    display: flex;
+    padding: 6px 18px;
+    justify-content: center;
+    align-items: center;
 }
 
-.more::after {
-    content: "";
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    right: 0;
-    top: 45%;
-    transform: translateY(-50%);
-    background-image: url(/src/assets/images/img/more.svg);
-    background-size: 2.8rem 2.8rem;
-    background-position: right 0 top 0;
-    background-repeat: no-repeat;
-    transition: all .3s ease-out;
+.more:hover {
+    cursor: pointer;
+    border: 1px solid #4500F5;
+    background: linear-gradient(280deg, #8310FE -46.27%, #4A3EFF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+.product-items-tag {
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    font-family: MiSans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 380;
+    line-height: 150%;
+    border-radius: 4px;
+}
+
+.tag1 {
+    background: linear-gradient(90deg, rgba(69, 0, 245, 0.10) 0%, rgba(205, 105, 255, 0.10) 100%);
+}
+
+.tag2 {
+    background: linear-gradient(90deg, rgba(0, 102, 245, 0.10) 0%, rgba(162, 156, 255, 0.10) 100%);
+}
+
+.tag3 {
+    background: linear-gradient(90deg, rgba(69, 0, 245, 0.70) 0%, rgba(205, 105, 255, 0.70) 100%);
+}
+
 
 .more:hover {
     cursor: pointer;

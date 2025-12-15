@@ -7,7 +7,10 @@ export default function PageQuestion() {
 
     return (
         <div className='qt-container'>
-            <motion.div {...scrollInViewSpringProps} className='qt-title'>AI落地是否还在为此烦恼？
+            <motion.div {...scrollInViewSpringProps} className='qt-content'>
+                <div className='qt-title'>
+                    AI落地是否还在为此烦恼？
+                </div>
                 <video
                     className="video-bg"
                     autoPlay

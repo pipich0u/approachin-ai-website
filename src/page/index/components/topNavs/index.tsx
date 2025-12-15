@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './index.css';
 import logo_black from '@/assets/svg/logo-black.svg';
 import { useNavigate } from 'react-router-dom';
-import { Dropdown } from 'antd';
+import { Button, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 
 const TopNavs = () => {
@@ -94,50 +94,49 @@ const TopNavs = () => {
     <nav className="bg-1 navbar">
       <div className="app w-full flex justify-between">
 
-        <div className="logo">
+        <div className="logo flex items-center">
           <img src={logo_black} alt="" />
-        </div>
+          <div className="navbar-container ml-[100px]">
+            {navItems.map((item) => {
 
-        <div className="navbar-container">
-          {navItems.map((item) => {
+              // 非下拉 — 点击跳转
+              if (!item.isSelected) {
+                return (
+                  <div
+                    key={item.id}
+                    className="navbar-item cursor-pointer"
+                    onClick={() => onNavigate(item)}
+                  >
+                    {item.title}
+                  </div>
+                );
+              }
 
-            // 非下拉 — 点击跳转
-            if (!item.isSelected) {
+              // 下拉菜单项
               return (
-                <div
+                <Dropdown
                   key={item.id}
-                  className="navbar-item cursor-pointer"
-                  onClick={() => onNavigate(item)}
+                  trigger={['hover']}
+                  menu={getDropdownMenu(item.id)}
+                  placement="bottomCenter"
                 >
-                  {item.title}
-                </div>
-              );
-            }
-
-            // 下拉菜单项
-            return (
-              <Dropdown
-                key={item.id}
-                trigger={['hover']}
-                menu={getDropdownMenu(item.id)}
-                placement="bottomCenter"
-              >
-                <div
-                  className="navbar-item cursor-pointer flex items-center"
-                  onMouseEnter={() => setHoverId(item.id)}
-                  onMouseLeave={() => setHoverId(null)}
-                >
-                  {item.title}
-                  <DownOutlined
-                    className={`ml-1 transition-all duration-800
+                  <div
+                    className="navbar-item cursor-pointer flex items-center"
+                    onMouseEnter={() => setHoverId(item.id)}
+                    onMouseLeave={() => setHoverId(null)}
+                  >
+                    {item.title}
+                    <DownOutlined
+                      className={`ml-1 transition-all duration-800
                        ${hoverId === item.id ? 'rotate-180' : 'rotate-0'}`}
-                  />
-                </div>
-              </Dropdown>
-            );
-          })}
+                    />
+                  </div>
+                </Dropdown>
+              );
+            })}
+          </div>
         </div>
-
+        <Button className='navbar-btn' type='primary'>免费下载</Button>
       </div>
     </nav>
   );

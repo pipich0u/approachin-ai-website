@@ -38,7 +38,7 @@ const SourcePage = () => {
                     </div>
                     <div className='source-cont-item source-cont-rig'>
                         <motion.div {...scrollInViewSpringProps} className='source-cont-item-top'>
-                            <div className="sou-cont-title">合作伙伴</div>
+                            <div className="sou-cont-title">生态合作</div>
                             <div className="sou-cont-desc">描述文本描述文本描述文本描述文本描述文本描述文本描述文本描述文本描述文本</div>
                         </motion.div>
                         <div className='source-cont-left-bot'>
