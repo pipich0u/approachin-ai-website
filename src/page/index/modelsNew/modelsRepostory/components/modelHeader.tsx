@@ -3,6 +3,7 @@ import '../index.less'
 import { IconFont } from "@/utils/antdUtils";
 import logo from '@/assets/svg/logo-black.svg';
 import { memo } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface ModelHeaderProps {
     downloadModelInfo: () => void,
@@ -11,8 +12,9 @@ interface ModelHeaderProps {
 
 
 const ModelHeader = memo(({ downloadModelInfo, version }: ModelHeaderProps) => {
+    const navigate = useNavigate();
     return <div className="model-header flex justify-between items-center py-[15px] px-5 h-20">
-        <div className="model-logo w-[280px]">
+        <div className="model-logo w-[280px] cursor-pointer" onClick={()=>navigate('/')}>
             <img src={logo} alt="" className="w-28 h-8" />
         </div>
         <div className="flex justify-between items-center flex-1">
@@ -20,7 +22,7 @@ const ModelHeader = memo(({ downloadModelInfo, version }: ModelHeaderProps) => {
                 <div className="flex items-center">
                     <div className="text-h text-[#313135] mr-1 font-[450]">模型仓库</div>
                     <div className="text-[12px] text-[#313135] font-[305]">
-                        {version }
+                        {version}
                     </div>
                 </div>
                 <div className="text-d text-[#C8C8D0]">模型仓库汇集多种AI模型，一站式支持模型管理与应用集成</div>

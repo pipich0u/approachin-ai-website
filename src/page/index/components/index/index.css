@@ -1,9 +1,11 @@
 .section-1 {
+    /* background: linear-gradient(180deg, rgba(250, 250, 250, 0.00) 0%, #FAFAFA 100%); */
     background: url('/src/assets/images/img/index_bg.png');
     background-size: cover;
     background-position: center;
     font-family: MiSans !important;
     width: 100%;
+    height: 800px;
 }
 
 .section-2 {
@@ -16,7 +18,7 @@
     background: #E9E8FA;
 }
 
-.floating-left {
+/* .floating-left {
     position: absolute;
     left: 0;
     top: 30%;
@@ -34,8 +36,27 @@
     transform: translate(60%, -50%);
     pointer-events: none;
     z-index: 1;
+} */
+
+.carousel-wrapper {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
 }
 
+.carousel-slides {
+    display: flex;
+    width: 300%;
+    /* 3个页面 */
+    height: 100%;
+}
+
+.carousel-slides>.section {
+    width: 33.333%;
+    /* 每个页面占1/3 */
+    flex-shrink: 0;
+}
 
 .title {
     /* text-align: center; */
@@ -43,7 +64,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 400px;
+    height: 600px;
     box-sizing: border-box;
 }
 
@@ -79,9 +100,17 @@
 
 }
 
+.title-top-text {
+    background: linear-gradient(256deg, #4E74FF -3.3%, #A557FE 105.24%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .index-bottom {
     background: #ffffff72;
     border: 0.89px solid #FFFFFFCC;
+    box-shadow: 0 4.538px 34.037px 0 rgba(38, 0, 162, 0.20);
     backdrop-filter: blur(18px);
 }
 
@@ -108,7 +137,7 @@
     align-items: center;
     gap: 4px;
     padding: 16px 36px;
-    border: 4px solid;
+    /* border: 4px solid; */
     border-color: transparent;
     font-size: 14px;
     font-weight: 600;
@@ -116,6 +145,8 @@
     cursor: pointer;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 8px;
+    background: linear-gradient(90deg, #4E74FF 0%, #7F49FF 100%);
 }
 
 .animated-button svg {
@@ -144,7 +175,6 @@
 .animated-button:hover {
     box-shadow: 0 0 0 12px transparent;
     color: #212121;
-    border-radius: 12px;
 }
 
 .animated-button:hover .arr-1 {
@@ -165,24 +195,4 @@
 
 .animated-button:active {
     scale: 0.95;
-}
-
-.carousel-wrapper {
-    width: 100%;
-    height: 600px;
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel-slides {
-    display: flex;
-    width: 300%;
-    /* 3个页面 */
-    height: 100%;
-}
-
-.carousel-slides>.section {
-    width: 33.333%;
-    /* 每个页面占1/3 */
-    flex-shrink: 0;
 }

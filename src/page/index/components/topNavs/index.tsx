@@ -13,7 +13,7 @@ const TopNavs = () => {
   const navItems = [
     { title: '解决方案', id: 0, isSelected: true, path: '/' },
     { title: '开源社区', id: 1, isSelected: true, path: '/' },
-    { title: '模型仓库', id: 2, isSelected: false, path: '/' },
+    { title: '模型仓库', id: 2, isSelected: false, path: '/models' },
     { title: '客户案例', id: 3, isSelected: false, path: '/' },
     { title: '生态合作', id: 4, isSelected: false, path: '/' },
     { title: '趋境咨询', id: 5, isSelected: false, path: '/' },
@@ -21,7 +21,7 @@ const TopNavs = () => {
   ];
 
   const onNavigate = (item: any) => {
-    if (!item.isSelected) navigate(item.path + '?id=' + item.id);
+    if (!item.isSelected) navigate(item.path);
   };
 
   // 根据 id 获取不同的下拉菜单内容
@@ -95,9 +95,7 @@ const TopNavs = () => {
       <div className="app w-full flex justify-between">
 
         <div className="logo">
-          <a href="/">
-            <img src={logo_black} alt="" />
-          </a>
+          <img src={logo_black} alt="" />
         </div>
 
         <div className="navbar-container">
@@ -131,9 +129,8 @@ const TopNavs = () => {
                 >
                   {item.title}
                   <DownOutlined
-                    className={`ml-1 transition-all duration-800 ${
-                      hoverId === item.id ? 'rotate-180' : 'rotate-0'
-                    }`}
+                    className={`ml-1 transition-all duration-800
+                       ${hoverId === item.id ? 'rotate-180' : 'rotate-0'}`}
                   />
                 </div>
               </Dropdown>

@@ -12,30 +12,30 @@ export default function PageIndex() {
     const [isMouseInCarousel, setIsMouseInCarousel] = useState(false);
 
     // 轮播自动切换逻辑 - 鼠标在轮播容器内时暂停
-    useEffect(() => {
-        if (!showContent || isMouseInCarousel) return;
+    // useEffect(() => {
+    //     if (!showContent || isMouseInCarousel) return;
 
-        const interval = setInterval(() => {
-            setProgress((prev) => {
-                const newProgress = prev + (100 / 80); // 8秒 = 8000ms, 每100ms增加1.25%
-                return newProgress > 100 ? 100 : newProgress;
-            });
-        }, 100);
+    //     const interval = setInterval(() => {
+    //         setProgress((prev) => {
+    //             const newProgress = prev + (100 / 80); // 8秒 = 8000ms, 每100ms增加1.25%
+    //             return newProgress > 100 ? 100 : newProgress;
+    //         });
+    //     }, 100);
 
-        return () => clearInterval(interval);
-    }, [showContent, isMouseInCarousel]);
+    //     return () => clearInterval(interval);
+    // }, [showContent, isMouseInCarousel]);
 
-    // 监听进度，触发页面切换
-    useEffect(() => {
-        if (progress >= 100) {
-            const timer = setTimeout(() => {
-                setCurrentSlide((current) => (current + 1) % 3);
-                setProgress(0);
-            }, 50);
+    // // 监听进度，触发页面切换
+    // useEffect(() => {
+    //     if (progress >= 100) {
+    //         const timer = setTimeout(() => {
+    //             setCurrentSlide((current) => (current + 1) % 3);
+    //             setProgress(0);
+    //         }, 50);
 
-            return () => clearTimeout(timer);
-        }
-    }, [progress]);
+    //         return () => clearTimeout(timer);
+    //     }
+    // }, [progress]);
 
     // 手动切换轮播
     const handleSlideChange = (index: number) => {
@@ -66,7 +66,7 @@ export default function PageIndex() {
                         transition={{ duration: 1.5, ease: 'easeInOut' }}
                         onAnimationComplete={() => setShowContent(true)}
                     />
-                    <motion.img
+                    {/* <motion.img
                         src={img1}
                         alt=""
                         className="floating-left"
@@ -94,12 +94,12 @@ export default function PageIndex() {
                             repeat: Infinity,
                             ease: "easeInOut",
                         }}
-                    />
+                    /> */}
 
                     {showContent && <div className='relative z-10 w-full h-full flex flex-col '>
                         <div className="title">
                             <motion.div {...initialLoadProps} className='title-top text-[#1B1D22] flex'>
-                                全栈智算引擎·普惠<div className='text-[#4F4CFF]'>高效AI</div>
+                                全栈智算引擎·普惠<div className='title-top-text'>高效AI</div>
                             </motion.div>
 
                             <motion.div {...initialLoadProps} className='title-desc text-[#484848]'>
@@ -116,7 +116,7 @@ export default function PageIndex() {
                                 </svg>
                             </motion.button>
 
-                            <motion.div {...initialLoadProps} className='index-bottom bottom-15 absolute flex py-[19px] px-12 mt-20 w-[1070px] h-20 rounded-[10px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
+                            <motion.div {...initialLoadProps} className='index-bottom flex py-[19px] px-12 mt-20 w-[1070px] h-20 rounded-[20px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
                                 <div className='index-bottom-item flex items-center gap-2'>
                                     <div className='text-[#333] text-2xl font-[520]'>10倍</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
@@ -161,7 +161,7 @@ export default function PageIndex() {
                     <div className='fp-overflow relative z-10'>
                         <div className="title">
                             <div className='title-top text-[#1B1D22] flex'>
-                                稳定可靠服务·<div className='text-[#4F4CFF]'>全天守护</div>
+                                稳定可靠服务·<div className='title-top-text'>全天守护</div>
                             </div>
                             <div className='title-desc text-[#484848]'>
                                 7x24小时专业技术支持，99.9%可用性保障，让您的AI应用持续稳定运行
@@ -175,7 +175,7 @@ export default function PageIndex() {
                     <div className='fp-overflow relative z-10'>
                         <div className="title">
                             <div className='title-top text-[#1B1D22] flex'>
-                                极速开发部署·<div className='text-[#4F4CFF]'>降本增效</div>
+                                极速开发部署·<div className='title-top-text'>降本增效</div>
                             </div>
                             <div className='title-desc text-[#484848]'>
                                 从开发到上线分钟级完成，大幅降低成本，显著提升效率，助力业务快速增长

@@ -30,7 +30,7 @@ export default function PageCase() {
                         ))}
                     </div>
                 </div>
-                <div className='case-mask-left'></div>
+                <div className='case-mask-left'></div> 
                 <div className='case-mask-right'></div>
             </motion.div>
         </div>
