@@ -1,0 +1,37 @@
+.floatbtn1 {
+    border-radius: 20px;
+    background: linear-gradient(156deg, #4E74FF -7.06%, #7F49FF 114.58%), #6C3AE1 !important;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.20);
+    display: flex;
+    width: 40px;
+    height: 73px;
+    /* padding: 12px 4px; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+.ant-float-btn-content{
+    width: 40px;
+}
+.floatbtn1 .ant-float-btn-body {
+    background: transparent !important;
+}
+
+.floatbtn2 {
+    border-radius: 20px;
+    background: #FFF !important;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.13);
+    display: flex;
+    width: 40px;
+    height: 73px;
+    padding: 12px 4px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.floatbtn2 .ant-float-btn-body {
+    background: transparent !important;
+}
