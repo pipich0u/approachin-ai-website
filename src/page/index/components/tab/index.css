@@ -3,6 +3,7 @@
     background: linear-gradient(180deg, #FFF 0%, #F8F5FF 100%);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .tab-container {

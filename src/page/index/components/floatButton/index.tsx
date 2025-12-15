@@ -16,9 +16,8 @@ const FloatBtnEle: React.FC = () => (
         <FloatButton.Group
             trigger="click"
             style={{ insetInlineEnd: 24 }}
-            icon={<QuestionCircleOutlined  />}
+            icon={<QuestionCircleOutlined />}
         >
-
             <FloatButton
                 style={{ bottom: 208 }}
                 className='floatbtn1'
