@@ -29,27 +29,44 @@ export default function DevelopPage() {
         <div className='develop-box'>
             <div className='dep-container'>
                 <motion.div className="dep-title" {...scrollInViewSpringProps}>为什么选择趋境科技</motion.div>
-                <div className='dep-tabbox' onMouseLeave={() => setActiveIndex(0)} >
+                <motion.div     {...scrollInViewSpringProps} className='dep-tabbox' onMouseLeave={() => setActiveIndex(0)} >
                     {
                         depList.map((item, index) =>
-                            <motion.div
-                                key={index}
-                                {...scrollInViewSpringProps}
-                                className={`dep-tab-items ${activeIndex === index ? 'dep-active' : ''}`}
-                                onMouseEnter={() => setActiveIndex(index)}
-                            >
-                                <div className='dep-tab-item-icon'>
-                                    <IconFont type={item.icon} />
-                                </div>
-                                <div className='dep-tab-item-content'>
-                                    <div className="dep-tab-item-title">{item.name}</div>
-                                    <div className="dep-tab-item-desc">{item.desc}</div>
-                                </div>
-                                {<div className={`more w-24 h-[33px] text-[14px] font-[380] ${activeIndex === index ? 'more-active' : 'more-active-no'}`} >了解更多</div>}
-                            </motion.div>
+                            <>
+                                <motion.div
+                                    key={index}
+
+                                    className={`dep-tab-items ${activeIndex === index ? 'hidden!' : ''}`}
+                                    onMouseEnter={() => setActiveIndex(index)}
+                                >
+                                    <div className='dep-tab-item-icon'>
+                                        <IconFont type={item.icon} />
+                                    </div>
+                                    <div className='dep-tab-item-content'>
+                                        <div className="dep-tab-item-title">{item.name}</div>
+                                        <div className="dep-tab-item-desc">{item.desc}</div>
+                                    </div>
+                                    {<div className={`more w-24 h-[33px] text-[14px] font-[380] ${activeIndex === index ? 'more-active' : 'more-active-no'}`} >了解更多</div>}
+                                </motion.div>
+                                <motion.div
+                                    key={`active-${index}`}
+                                    // {...scrollInViewSpringProps}
+                                    className={`dep-tab-items ${activeIndex === index ? 'dep-active' : 'hidden!'}`}
+                                    onMouseEnter={() => setActiveIndex(index)}
+                                >
+                                    <div className='dep-tab-item-icon'>
+                                        <IconFont type={item.icon} />
+                                    </div>
+                                    <div className='dep-tab-item-content'>
+                                        <div className="dep-tab-item-title">{item.name}</div>
+                                        <div className="dep-tab-item-desc">{item.desc}</div>
+                                    </div>
+                                    {<div className={`more w-24 h-[33px] text-[14px] font-[380] ${activeIndex === index ? 'more-active' : 'more-active-no'}`} >了解更多</div>}
+                                </motion.div>
+                            </>
                         )
                     }
-                </div >
+                </motion.div >
             </div >
         </div >
     );

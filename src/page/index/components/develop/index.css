@@ -80,23 +80,37 @@
   transition: width 0.8s ease;
 }
 
-.dep-tab-items:nth-child(1).dep-active {
-  width: 610px;
+.dep-tab-items:nth-child(2).dep-active {
   background: url(/src/assets/images/img/dep_tab1.png) no-repeat;
   background-size: cover;
-
+  width: 610px;
+  display: flex !important;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.dep-tab-items:nth-child(2).dep-active {
-  width: 610px;
+.dep-tab-items:nth-child(4).dep-active {
   background: url(/src/assets/images/img/dep_tab3.png) no-repeat;
   background-size: cover;
+  width: 610px;
+  display: flex !important;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.dep-tab-items:nth-child(3).dep-active {
-  width: 610px;
+.dep-tab-items:nth-child(6).dep-active {
   background: url(/src/assets/images/img/dep_tab2.png) no-repeat;
   background-size: cover;
+  width: 610px;
+  display: flex !important;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .dep-tab-items.dep-active .dep-tab-item-title {
