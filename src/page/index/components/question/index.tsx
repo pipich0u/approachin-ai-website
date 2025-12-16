@@ -1,15 +1,14 @@
 
 import './index.css'
 import { motion } from "motion/react";
-import { scrollInViewSpringProps } from "../../../../utils/motionConfig";
+import { scrollInViewSpringProps } from "@/utils/motionConfig";
+import { pageQuestionList } from '@/page/textConfig';
 export default function PageQuestion() {
 
     return (
         <div className='qt-container'>
             <motion.div {...scrollInViewSpringProps} className='qt-content'>
-                <div className='qt-title'>
-                    AI落地是否还在为此烦恼？
-                </div>
+                <div className='qt-title'>{pageQuestionList.title}</div>
                 {/* <video
                     className="video-bg"
                     autoPlay

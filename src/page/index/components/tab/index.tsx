@@ -3,19 +3,9 @@ import { motion } from "motion/react";
 import { useState, useRef, useEffect } from "react";
 import { scrollInViewSpringProps } from "../../../../utils/motionConfig";
 import { IconFont } from "@/utils/antdUtils";
-import { div } from "motion/react-client";
+import { PageTabList } from '@/page/textConfig';
 
 export default function PageTab() {
-    const tablist = [
-        { name: "低门槛启动", id: 0, icon: 'tab1' },
-        { name: "高并发高吞吐", id: 1, icon: 'tab2' },
-        { name: "ISV联合共创", id: 2, icon: 'tab3' },
-        { name: "AI开发环境敏捷交付", id: 3, icon: 'tab4' },
-        { name: "精准资源管理", id: 4, icon: 'tab5' },
-        { name: "超低TTFT", id: 5, icon: 'tab6' },
-        { name: "更多场景", id: 6, icon: 'tab7' }
-    ]
-
     const [active, setActive] = useState(0);
     const [direction, setDirection] = useState(1);
     const navRef = useRef<HTMLDivElement>(null);
@@ -51,12 +41,12 @@ export default function PageTab() {
         <div className="tab-page">
             <div className="tab-container">
                 <motion.div {...scrollInViewSpringProps} className="tab-title">
-                    行业领先的场景化解决方案
+                    {PageTabList.title}
                 </motion.div>
 
                 <div className="tab-box">
                     <motion.div {...scrollInViewSpringProps} className="tab-nav" ref={navRef}>
-                        {tablist.map((item) => (
+                        {PageTabList.tablist.map((item) => (
                             <div
                                 key={item.id}
                                 className={`tab-item ${active === item.id ? "active" : ""}`}
@@ -84,8 +74,8 @@ export default function PageTab() {
                         >
                             <div className="tab-cont-left">
                                 <div className="tab-cont-left-top">
-                                    <div className="tab-cont-left-name">{tablist[active].name}</div>
-                                    <div className="tab-cont-left-desc">依托趋境科技推理一体机解决方案，实现单 4090D 工作站实现 6 个模型混合推理，成本降低 85% 某海外投资机构</div>
+                                    <div className="tab-cont-left-name">{PageTabList.tablist[active].name}</div>
+                                    <div className="tab-cont-left-desc">{PageTabList.tablist[active].desc}</div>
                                 </div>
                                 <motion.button className='tab-cont-left-btn'>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
@@ -98,40 +88,26 @@ export default function PageTab() {
                                 </motion.button>
                             </div>
                             <div className="tab-cont-right">
-                                <div className="tab-cont-right-box border-b border-solid border-[#0000001A]">
-                                    <div className="tab-cont-right-box-title">客户痛点</div>
-                                    <div className="tab-cont-right-box-list mt-2.5">
-                                        <div className="tab-cont-rig-li">
-                                            <IconFont type={`icon-no`} style={{ fontSize: '20px', color: '#333' }} className="mr-1"></IconFont>
-                                            <div className="tab-cont-rig-li-text">数据不能上云，私有部署算力数百万起步</div>
-                                        </div>
-                                        <div className="tab-cont-rig-li">
-                                            <IconFont type={`icon-no`} style={{ fontSize: '20px', color: '#333' }} className="mr-1"></IconFont>
-                                            <div className="tab-cont-rig-li-text">缺少 AI 人才，部署调试运维等技术门槛高</div>
-                                        </div>
-                                        <div className="tab-cont-rig-li">
-                                            <IconFont type={`icon-no`} style={{ fontSize: '20px', color: '#333' }} className="mr-1"></IconFont>
-                                            <div className="tab-cont-rig-li-text">AI 场景复杂，4 个业务场景需要 6 个模型混合推理</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="tab-cont-right-box">
-                                    <div className="tab-cont-right-box-title">趋境价值</div>
-                                    <div className="tab-cont-right-box-list mt-2.5">
-                                        <div className="tab-cont-rig-li">
-                                            <IconFont type={`icon-dui`} style={{ fontSize: '20px', color: '#6C3AE1' }} className="mr-1"></IconFont>
-                                            <div className="tab-cont-rig-li-texts">单 4090D 工作站实现 6 个模型混合推理，成本降低 85%</div>
-                                        </div>
-                                        <div className="tab-cont-rig-li">
-                                            <IconFont type={`icon-dui`} style={{ fontSize: '20px', color: '#6C3AE1' }} className="mr-1"></IconFont>
-                                            <div className="tab-cont-rig-li-texts">支撑 4 个场景/台，满足首 Token 延迟 和 decode 速度要求</div>
-                                        </div>
-                                        <div className="tab-cont-rig-li">
-                                            <IconFont type={`icon-dui`} style={{ fontSize: '20px', color: '#6C3AE1' }} className="mr-1"></IconFont>
-                                            <div className="tab-cont-rig-li-texts">AMaaS 管理平台屏蔽技术复杂性，客户只需关注业务自身</div>
-                                        </div>
-                                    </div>
-                                </div>
+                                {
+                                    PageTabList.tablist[active].info.map((items, indexs) => {
+                                        return (
+                                            <div className="tab-cont-right-box" key={indexs}>
+                                                <div className="tab-cont-right-box-title">{items.title}</div>
+                                                <div className="tab-cont-right-box-list mt-2.5">
+                                                    {
+                                                        items.content.map((i) => {
+                                                            return <div className="tab-cont-rig-li">
+                                                                <IconFont type={items.icon} style={{ fontSize: '20px', color: '#333' }} className="mr-1"></IconFont>
+                                                                <div className="tab-cont-rig-li-text">{i}</div>
+                                                            </div>
+                                                        })
+                                                    }
+
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
                             </div>
                         </motion.div>
                     </motion.div>
