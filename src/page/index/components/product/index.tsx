@@ -1,8 +1,7 @@
 import './index.css'
-import productImg from '@/assets/images/img/product_kllm.png'
 import { motion } from 'motion/react';
 import { scrollInViewSpringProps } from '@/utils/motionConfig'
-import { productFeatures } from '@/page/textConfig';
+import { productFeatures, productTitle } from '@/page/textConfig';
 
 export default function PageProduct() {
 
@@ -14,7 +13,7 @@ export default function PageProduct() {
 
     return (
         <div className="product-container h-[1030px] bg-[#FAFAFA] flex flex-col items-center pt-[90px] pb-5 px-[100px]">
-            <motion.div {...scrollInViewSpringProps} className='text-[#1B1D22] font-[540] text-[40px] leading-[150%] tracking-[2%] text-center'>模型价值即服务的产品理念</motion.div>
+            <motion.div {...scrollInViewSpringProps} className='text-[#1B1D22] font-[540] text-[40px] leading-[150%] tracking-[2%] text-center'>{productTitle}</motion.div>
             <div className='flex items-center gap-5 mt-[60px]'>
                 <motion.div {...scrollInViewSpringProps} className='product-items product-1 w-[400px] h-[500px] rounded-[20px] '>
                     <div className='mt-72 px-10'>

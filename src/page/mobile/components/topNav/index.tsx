@@ -2,66 +2,12 @@ import { useState } from 'react';
 import './index.css';
 import logo from '@/assets/svg/logo-black.svg'
 import { IconFont } from '@/utils/antdUtils';
-
+import {menuHrefListDefault} from '@/page/textConfig';
 const TopNav = () => {
   // const [isFirstOpenPage, setIsFirstOpenPage] = useState(true)
   const [openDrawer, setOpenDrawer] = useState(false)
   const [isClosing, setIsClosing] = useState(false)
   const [expandedMenus, setExpandedMenus] = useState<Set<string>>(new Set())
-
-  const menuHrefListDefault = [
-    {
-      title: '解决方案',
-      href: 'pageProduct',
-      isSelected: true,
-      subItems: [
-        { title: 'A·Spark 便携工作站', href: 'aiInference' },
-        { title: '大模型推理一体机', href: 'edgeComputing' },
-        { title: '推理引擎·KLLM', href: 'smartScheduling' },
-        { title: '推理服务平台·AMaaS', href: 'smartScheduling' },
-        { title: '专属推理云·AMVaaS', href: 'smartScheduling' },
-      ]
-    },
-    {
-      title: '开源社区',
-      href: 'pageTechnology',
-      isSelected: true,
-      subItems: [
-        { title: 'KTransformers', href: 'KTransformers' },
-        { title: 'Mooncake', href: 'Mooncake' }
-      ]
-    },
-    {
-      title: '模型仓库',
-      href: 'pageKt',
-      isSelected: false
-    },
-    {
-      title: '客户案例',
-      href: 'pageInfo',
-      isSelected: false
-    },
-    {
-      title: '生态合作',
-      href: 'DevelopPage',
-      isSelected: false
-    },
-    {
-      title: '趋境资讯',
-      href: 'PageTeam',
-      isSelected: false
-    },
-    {
-      title: '关于我们',
-      href: 'PageTeam',
-      isSelected: true,
-      subItems: [
-        { title: '公司简介', href: 'about' },
-        { title: '团队介绍', href: 'team' },
-        { title: '联系我们', href: 'contact' }
-      ]
-    },
-  ]
 
   const toggleSubmenu = (title: string) => {
     const newExpanded = new Set(expandedMenus)

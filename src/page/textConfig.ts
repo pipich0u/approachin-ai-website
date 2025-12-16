@@ -1,3 +1,73 @@
+const menuHrefListDefault = [
+    {
+      title: '解决方案',
+      href: 'pageProduct',
+      isSelected: true,
+      subItems: [
+        { title: 'A·Spark 便携工作站', href: 'aiInference' },
+        { title: '大模型推理一体机', href: 'edgeComputing' },
+        { title: '推理引擎·KLLM', href: 'smartScheduling' },
+        { title: '推理服务平台·AMaaS', href: 'smartScheduling' },
+        { title: '专属推理云·AMVaaS', href: 'smartScheduling' },
+      ]
+    },
+    {
+      title: '开源社区',
+      href: 'pageTechnology',
+      isSelected: true,
+      subItems: [
+        { title: 'KTransformers', href: 'KTransformers' },
+        { title: 'Mooncake', href: 'Mooncake' }
+      ]
+    },
+    {
+      title: '模型仓库',
+      href: 'pageKt',
+      isSelected: false
+    },
+    {
+      title: '客户案例',
+      href: 'pageInfo',
+      isSelected: false
+    },
+    {
+      title: '生态合作',
+      href: 'DevelopPage',
+      isSelected: false
+    },
+    {
+      title: '趋境资讯',
+      href: 'PageTeam',
+      isSelected: false
+    },
+    {
+      title: '关于我们',
+      href: 'PageTeam',
+      isSelected: true,
+      subItems: [
+        { title: '公司简介', href: 'about' },
+        { title: '团队介绍', href: 'team' },
+        { title: '联系我们', href: 'contact' }
+      ]
+    },
+  ]
+
+const indexPageList=[
+    {
+        title:'全栈智算引擎·普惠',
+        color:'高效AI',
+        desc:'为企业级用户的 AI 落地提供从算力破局到价值交付的全链路解决方案',
+        ask:'立即咨询',
+        list:[
+            { item:'10倍', desc:['顶尖模型','门槛降低'] },
+            { item:'150%', desc:['模型推理','性能提升'] },
+            { item:'小时级', desc:['开箱插电','应用上线'] },
+            { item:'80%', desc:['算力资源','利用力达'] },
+            { item:'80%', desc:['AI应用Task','成本降低'] },
+        ]
+    }
+]
+
 const productFeatures = [
     {
         title: 'A·Spark 便携工作站',
@@ -30,11 +100,13 @@ const productFeatures = [
         tag: ['高SLA', '国产化兼容', 'PD分离', '以存换算']
     },
 ];
-
-
+const productTitle='模型价值即服务的产品理念'
 
 
 
 export {
-    productFeatures
+    productTitle,
+    productFeatures,
+    menuHrefListDefault,
+    indexPageList
 }

@@ -35,7 +35,6 @@ export default function DevelopPage() {
                             <>
                                 <motion.div
                                     key={index}
-
                                     className={`dep-tab-items ${activeIndex === index ? 'hidden!' : ''}`}
                                     onMouseEnter={() => setActiveIndex(index)}
                                 >

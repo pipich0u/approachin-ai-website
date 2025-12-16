@@ -2,6 +2,7 @@ import './index.css'
 import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig'
 import { useState, useEffect } from 'react';
+import {indexPageList} from '@/page/textConfig';
 
 export default function PageIndex() {
     const [showContent, setShowContent] = useState(false);
@@ -10,30 +11,30 @@ export default function PageIndex() {
     const [isMouseInCarousel, setIsMouseInCarousel] = useState(false);
 
     // 轮播自动切换逻辑 - 鼠标在轮播容器内时暂停
-    // useEffect(() => {
-    //     if (!showContent || isMouseInCarousel) return;
+    useEffect(() => {
+        if (!showContent || isMouseInCarousel) return;
 
-    //     const interval = setInterval(() => {
-    //         setProgress((prev) => {
-    //             const newProgress = prev + (100 / 80); // 8秒 = 8000ms, 每100ms增加1.25%
-    //             return newProgress > 100 ? 100 : newProgress;
-    //         });
-    //     }, 100);
+        const interval = setInterval(() => {
+            setProgress((prev) => {
+                const newProgress = prev + (100 / 80); // 8秒 = 8000ms, 每100ms增加1.25%
+                return newProgress > 100 ? 100 : newProgress;
+            });
+        }, 100);
 
-    //     return () => clearInterval(interval);
-    // }, [showContent, isMouseInCarousel]);
+        return () => clearInterval(interval);
+    }, [showContent, isMouseInCarousel]);
 
-    // // 监听进度，触发页面切换
-    // useEffect(() => {
-    //     if (progress >= 100) {
-    //         const timer = setTimeout(() => {
-    //             setCurrentSlide((current) => (current + 1) % 3);
-    //             setProgress(0);
-    //         }, 50);
+    // 监听进度，触发页面切换
+    useEffect(() => {
+        if (progress >= 100) {
+            const timer = setTimeout(() => {
+                setCurrentSlide((current) => (current + 1) % 3);
+                setProgress(0);
+            }, 50);
 
-    //         return () => clearTimeout(timer);
-    //     }
-    // }, [progress]);
+            return () => clearTimeout(timer);
+        }
+    }, [progress]);
 
     // 手动切换轮播
     const handleSlideChange = (index: number) => {
@@ -68,50 +69,50 @@ export default function PageIndex() {
                     {showContent && <div className='relative z-10 w-full h-full flex flex-col '>
                         <div className="title">
                             <motion.div {...initialLoadProps} className='title-top text-[#1B1D22] flex'>
-                                全栈智算引擎·普惠<div className='title-top-text'>高效AI</div>
+                                {indexPageList[0].title}<div className='title-top-text'>{indexPageList[0].color}</div>
                             </motion.div>
 
                             <motion.div {...initialLoadProps} className='title-desc text-[#484848]'>
-                                为企业级用户的 AI 落地提供从算力破局到价值交付的全链路解决方案
+                                {indexPageList[0].desc}
                             </motion.div>
 
                             <motion.button {...initialLoadProps} className='animated-button  w-[180px] mt-8 h-11 rounded-lg bg-[#806BFF] '>
-                                <span className="text-white font-[380] bt-text">立即咨询</span>
+                                <span className="text-white font-[380] bt-text">{indexPageList[0].ask}</span>
                             </motion.button>
 
                             <motion.div {...initialLoadProps} className='index-bottom flex py-[19px] px-12 mt-20 w-[1070px] h-20 rounded-[20px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
                                 <div className='index-bottom-item flex items-center gap-2'>
-                                    <div className='text-[#333] text-2xl font-[520]'>10倍</div>
+                                    <div className='text-[#333] text-2xl font-[520]'>{indexPageList[0].list[0].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
-                                        <div>顶尖模型</div> <div>门槛降低</div>
+                                        <div>{indexPageList[0].list[0].desc[0]}</div> <div>{indexPageList[0].list[0].desc[1]}</div>
                                     </div>
                                 </div>
                                 <div className='index-line w-px mx-10.5'></div>
                                 <div className='index-bottom-item flex items-center gap-2'>
-                                    <div className='text-[#333] text-2xl font-[520]'>150%</div>
+                                    <div className='text-[#333] text-2xl font-[520]'>{indexPageList[0].list[1].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
-                                        <div>模型推理</div><div>性能提升</div>
+                                        <div>{indexPageList[0].list[1].desc[0]}</div><div>{indexPageList[0].list[1].desc[1]}</div>
                                     </div>
                                 </div>
                                 <div className='index-line w-px mx-10.5'></div>
                                 <div className='index-bottom-item flex items-center gap-2'>
-                                    <div className='text-[#333] text-2xl font-[520]'>小时级</div>
+                                    <div className='text-[#333] text-2xl font-[520]'>{indexPageList[0].list[2].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
-                                        <div>开箱插电</div> <div>应用上线</div>
+                                        <div>{indexPageList[0].list[2].desc[0]}</div> <div>{indexPageList[0].list[2].desc[1]}</div>
                                     </div>
                                 </div>
                                 <div className='index-line w-px mx-10.5'></div>
                                 <div className='index-bottom-item flex items-center gap-2'>
-                                    <div className='text-[#333] text-2xl font-[520]'>80%</div>
+                                    <div className='text-[#333] text-2xl font-[520]'>{indexPageList[0].list[3].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
-                                        <div>算力资源</div> <div>利用力达</div>
+                                        <div>{indexPageList[0].list[3].desc[0]}</div> <div>{indexPageList[0].list[3].desc[1]}</div>
                                     </div>
                                 </div>
                                 <div className='index-line w-px mx-10.5'></div>
                                 <div className='index-bottom-item flex items-center gap-2'>
-                                    <div className='text-[#333] text-2xl font-[520]'>80%</div>
+                                    <div className='text-[#333] text-2xl font-[520]'>{indexPageList[0].list[4].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
-                                        <div>AI应用Task</div> <div>成本降低</div>
+                                        <div>{indexPageList[0].list[4].desc[0]}</div> <div>{indexPageList[0].list[4].desc[1]}</div>
                                     </div>
                                 </div>
                             </motion.div>

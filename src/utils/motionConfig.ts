@@ -8,7 +8,7 @@ export const fadeInUpVariants = {
 };
 
 export const fadeInUpTransition: Transition = {
-  duration: 0.6,
+  duration: 0.5,
   ease: 'easeOut',
 };
 

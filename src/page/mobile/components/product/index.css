@@ -4,8 +4,9 @@
     background-position: center;
     position: relative;
     width: 100vw;
-    height: 1874px;
-    padding: 0 !important;
+    height: fit-content;
+    padding: 10px 0 !important;
+    box-sizing: border-box;
 }
 
 .mob-product-title {
@@ -26,10 +27,14 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
+    gap: 20px;
 }
 
 .mob-product-items {
     border-radius: 20px;
+    padding: 50px;
+    width: 690px;
+    background-color: white;
 }
 
 .mob-product-1 {
@@ -41,77 +46,79 @@
 }
 
 .mob-product-3 {
-    background: url('/src/assets/images/img/product_3.png') no-repeat center;
+    background: url('/src/assets/images/img/product_3.png') no-repeat right;
+    background-color: white;
 }
 
 .mob-product-4 {
+
     background: url('/src/assets/images/img/product_4.png') no-repeat right;
     background-color: white;
 }
+
 .mob-product-1,
 .mob-product-2 {
-    width: 690px;
+
     height: 826px;
     background-color: white;
     background-size: cover;
     padding: 50px 65px;
 }
 
-.mob-product-items-content {
-    margin-top: 400px;
-    padding: 0 2.5rem;
+.mob-product-3,
+.mob-product-4 {
+    height: 390px;
 }
 
-.mob-product-tag {
+.mob-product-3-content {
     display: flex;
-    padding: 2px 8px;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+.mob-product-items-content {
+    padding-top: 400px;
+    /* padding: 0 2.5rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.mob-product-tags {
+    display: flex;
     align-items: center;
     font-family: MiSans;
-    font-size: 10px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 380;
     line-height: 150%;
-    border-radius: 4px;
+    gap: 6.604px;
 }
 
 .mob-product-items-tag {
-    /* Base tag styles - specific colors defined in tag1, tag2, tag3 */
+    border-radius: 6px;
+    padding: 2px 16px;
 }
 
-.mob-tag1 {
-    color: #6133CC;
-}
-
-.mob-tag2 {
-    color: #334FCC;
-}
-
-.mob-tag3 {
-    color: white;
-}
-.tag1 {
-    background: linear-gradient(90deg, rgba(69, 0, 245, 0.10) 0%, rgba(205, 105, 255, 0.10) 100%);
-}
-
-.tag2 {
-    background: linear-gradient(90deg, rgba(0, 102, 245, 0.10) 0%, rgba(162, 156, 255, 0.10) 100%);
-}
-
-.tag3 {
-    background: linear-gradient(90deg, rgba(69, 0, 245, 0.70) 0%, rgba(205, 105, 255, 0.70) 100%);
-}
 .mob-product-items-title {
     color: #333;
+    font-family: MiSans;
+    font-size: 30px;
+    font-style: normal;
     font-weight: 520;
-    margin-top: 1rem;
-    font-size: 18px;
     line-height: 150%;
+    margin-top: 20px;
 }
 
 .mob-product-items-desc {
     color: #666;
-    font-size: 14px;
+    text-align: justify;
+    font-family: MiSans;
+    font-size: 23.114px;
+    font-style: normal;
     font-weight: 330;
     line-height: 150%;
 }
@@ -133,36 +140,45 @@
 }
 
 .mob-product-more {
-    width: 6rem;
-    height: 33px;
-    font-size: 14px;
+    width: 150px;
+    height: 52px;
+    border: #1B1D22 1px solid;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 6.604px;
+    font-size: 22px;
+    font-style: normal;
     font-weight: 380;
+    line-height: 150%;
+    color: #333;
 }
 
-.mob-product-3 {
-    padding: 30px;
-    width: 400px;
-    height: 15rem;
-}
-
-.mob-product-3-content {
-    margin-top: 1rem;
-}
-
-.mob-product-4 {
-    padding: 30px;
-    width: 610px;
-    height: 260px;
+.mob-product-more:hover {
+    color: #6133CC;
+    border: #6133CC 1px solid;
+    cursor: pointer;
 }
 
 .mob-product-tags {
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    margin-top: 1.25rem;
 }
 
-.mob-product-4-content {
-    margin-left: 0.625rem;
-    margin-top: 15px;
+.mob-tag1 {
+    color: #6133CC;
+    background: linear-gradient(90deg, rgba(69, 0, 245, 0.10) 0%, rgba(205, 105, 255, 0.10) 100%);
+}
+
+.mob-tag2 {
+    color: #334FCC;
+    background: linear-gradient(90deg, rgba(0, 102, 245, 0.10) 0%, rgba(162, 156, 255, 0.10) 100%);
+}
+
+.mob-tag3 {
+    color: white;
+    background: linear-gradient(90deg, rgba(69, 0, 245, 0.70) 0%, rgba(205, 105, 255, 0.70) 100%);
 }
