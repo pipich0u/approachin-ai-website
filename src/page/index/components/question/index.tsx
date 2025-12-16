@@ -2,7 +2,7 @@
 import './index.css'
 import audio from '@/assets/audio/audio.mp4'
 import { motion } from "motion/react";
-import { scrollInViewSpringProps } from "../../motionConfig";
+import { scrollInViewSpringProps } from "../../../../utils/motionConfig";
 export default function PageQuestion() {
 
     return (

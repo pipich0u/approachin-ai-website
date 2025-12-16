@@ -3,7 +3,7 @@ import './index.css'
 import { IconFont } from '@/utils/antdUtils';
 
 import { motion } from "motion/react"
-import { scrollInViewSpringProps } from '../../motionConfig'
+import { scrollInViewSpringProps } from '../../../../utils/motionConfig'
 export default function DevelopPage() {
     const [activeIndex, setActiveIndex] = useState(0);
 

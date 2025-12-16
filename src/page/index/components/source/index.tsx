@@ -8,7 +8,7 @@ import leftImg3 from '@/assets/images/img/models_left3.png'
 import rigImg1 from '@/assets/images/img/models_rig1.png'
 import rigImg2 from '@/assets/images/img/models_rig2.png'
 
-import { scrollInViewSpringProps } from "../../motionConfig";
+import { scrollInViewSpringProps } from "../../../../utils/motionConfig";
 
 
 

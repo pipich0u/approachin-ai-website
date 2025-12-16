@@ -1,7 +1,7 @@
 import './index.css'
 import productImg from '@/assets/images/img/product_kllm.png'
 import { motion } from 'motion/react';
-import { scrollInViewSpringProps } from '../../motionConfig'
+import { scrollInViewSpringProps } from '../../../../utils/motionConfig'
 
 const productFeatures = [
     {

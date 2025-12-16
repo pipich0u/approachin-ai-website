@@ -27,15 +27,15 @@ export default function MobileIndex() {
 
   return (
     <div className="mobile-container">
-      <TopNav onNavigate={scrollToSection} />
-      <PageIndex id="pageIndex" />
-      <PageProduct id="pageProduct" />
-      <PageTechnology id="pageTechnology" />
-      <PageKt id="pageKt" />
-      <PageInfo id="pageInfo" />
-      <DevelopPage id="DevelopPage" />
-      <PageTeam id="PageTeam" />
-      <PageContact onNavigate={scrollToSection} />
+      <TopNav />
+      <PageIndex />
+      <PageProduct />
+      <PageTechnology />
+      <PageKt />
+      <PageInfo />
+      <DevelopPage />
+      <PageTeam />
+      <PageContact />
     </div>
   );
 }

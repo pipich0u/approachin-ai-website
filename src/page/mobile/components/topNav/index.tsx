@@ -2,11 +2,8 @@ import { useState } from 'react';
 import './index.css';
 import logo from '@/assets/svg/logo-black.svg'
 import { IconFont } from '@/utils/antdUtils';
-interface TopNavProps {
-  onNavigate: (index: string) => void;
-}
 
-const TopNav = ({ onNavigate }: TopNavProps) => {
+const TopNav = () => {
   // const [isFirstOpenPage, setIsFirstOpenPage] = useState(true)
   const [openDrawer, setOpenDrawer] = useState(false)
   const [isClosing, setIsClosing] = useState(false)
@@ -76,13 +73,12 @@ const TopNav = ({ onNavigate }: TopNavProps) => {
     setExpandedMenus(newExpanded)
   }
 
-  const handleClose = (callback?: () => void) => {
+  const handleClose = () => {
     setIsClosing(true);
     setTimeout(() => {
       setOpenDrawer(false);
       setIsClosing(false);
-      callback?.();
-    }, 300); // 匹配 CSS 动画时长
+    }, 300);
   };
 
   const menuElement = () => (openDrawer || isClosing) && (
@@ -96,7 +92,7 @@ const TopNav = ({ onNavigate }: TopNavProps) => {
                 if (item.isSelected && item.subItems) {
                   toggleSubmenu(item.title);
                 } else {
-                  handleClose(() => onNavigate(item.href));
+                  handleClose();
                 }
               }}
             >
@@ -115,7 +111,7 @@ const TopNav = ({ onNavigate }: TopNavProps) => {
                     key={subItem.title}
                     className="mobile-submenu-item"
                     onClick={() => {
-                      handleClose(() => onNavigate(subItem.href));
+                      handleClose();
                     }}
                   >
                     {subItem.title}

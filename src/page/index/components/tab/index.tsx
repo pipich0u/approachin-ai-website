@@ -1,7 +1,7 @@
 import "./index.css";
 import { motion } from "motion/react";
 import { useState, useRef, useEffect } from "react";
-import { scrollInViewSpringProps } from "../../motionConfig";
+import { scrollInViewSpringProps } from "../../../../utils/motionConfig";
 import { IconFont } from "@/utils/antdUtils";
 import { div } from "motion/react-client";
 

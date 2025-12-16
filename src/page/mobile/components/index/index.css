@@ -1,93 +1,111 @@
 .mob-index {
-    background: url('@/assets/images/img/mb_index_bg.png') lightgray 50% / cover no-repeat;
+    background: url('@/assets/images/img/mb_index_bg.png') #FDF6FC 50% / cover no-repeat;
     background-size: cover;
-    /* background-position: 43%; */
-    box-sizing: border-box;
     width: 100%;
-    height: 100%;
+    height: 900px;
     padding: 0 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 180px;
 }
 
 .mob-title {
-    /* text-align: center; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
-    box-sizing: border-box;
-    padding-bottom: 180px ; 
 }
 
 .mob-title-top {
-    font-family: MiSans;
-    font-weight: 305;
-    font-size: 26px;
+    color: #1B1D22;
     text-align: center;
-    background: linear-gradient(269.87deg, #C2A5FF -10.1%, rgba(255, 255, 255, 0.8) 49.85%),
-        linear-gradient(89.87deg, #B2A6FF 0.11%, rgba(255, 255, 255, 0) 50.16%);
-    -webkit-background-clip: text;
-    background-clip: text;
+    font-family: MiSans;
+    font-size: 54px;
+    font-weight: 520;
+    line-height: 150%;
+    display: flex;
+    margin-top: 1.25rem;
+}
 
-    /* 设置文本填充颜色为透明 */
+.mob-title-top-color {
+    background: linear-gradient(269.87deg, #4E74FF 0%, #A557FE 100%);
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    animation: tracking-in-expand 1s ease-in-out both;
+    background-clip: text;
 }
 
 .mob-title-center {
-    font-family: MiSans;
-    font-weight: 450;
-    font-size: 65px;
-    line-height: 76px;
-    letter-spacing: 2%;
+    color: #484848;
     text-align: center;
-
-    margin-top: 14px;
-    background: linear-gradient(269.87deg, #D0CCFF -10.1%, rgba(255, 255, 255, 0.8) 49.85%),
-        linear-gradient(90.25deg, #B4A8FF 0.22%, rgba(255, 255, 255, 0) 102.33%);
-
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    /* 设置文本填充颜色为透明 */
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    animation: tracking-in-expand 1s ease-in-out both;
-}
-
-.mob-line {
-    padding: 25px 0;
-}
-
-.mob-line img {
-    width: 100px;
-}
-
-.mob-title-bottom {
     font-family: MiSans;
+    font-size: 24px;
     font-weight: 305;
-    font-size: 30px;
-    line-height: 45px;
-    letter-spacing: 2%;
-    text-align: center;
-    margin-top: 25px;
-    color: #FFFFFFB2;
-
+    line-height: 150%;
+    letter-spacing: 0.48px;
+    opacity: 0.6;
 }
 
-@keyframes tracking-in-expand {
-    0% {
-        letter-spacing: -0.5em;
-        /* 字母间距从负值开始 */
-        opacity: 0;
-        /* 初始透明度为0 */
-    }
+.mob-title-btn {
+    width: 168px;
+    height: 50px;
+    margin-top: 2rem;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #4E74FF 0%, #7F49FF 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    padding: 10px 44px;
+}
 
-    100% {
-        letter-spacing: normal;
-        /* 字母间距恢复正常 */
-        opacity: 1;
-        /* 最终透明度为1 */
-    }
+.mob-title-btn:active {
+    transform: scale(0.95);
+}
+
+.mob-title-btn span {
+    color: white;
+    font-weight: 450;
+    font-size: 20px;
+}
+
+.mob-index-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 2.5rem;
+    padding: 35px;
+    gap: 30px;
+    width: 670px;
+    height: 217px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0 4px 40px 0 rgba(22, 2, 202, 0.06);
+    backdrop-filter: blur(8.9px);
+    border-radius: 18px;
+}
+
+.mob-index-bottom-item {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.mob-index-bottom-number {
+    color: #333;
+    font-size: 37px;
+    font-weight: 550;
+}
+
+.mob-index-bottom-text {
+    color: #484848;
+    display: flex;
+    flex-direction: column;
+    font-weight: 305;
+    font-size: 17px;
 }

@@ -12,7 +12,7 @@ import image10 from '@/assets/images/image_10.png'
 import image11 from '@/assets/images/image_11.png'
 import image12 from '@/assets/images/image_12.png'
 import { motion } from "motion/react";
-import { scrollInViewSpringProps } from "../../motionConfig";
+import { scrollInViewSpringProps } from "../../../../utils/motionConfig";
 export default function PageCase() {
     const images = [image1, image2, image3, image4, image6, image5, image7, image8, image9, image10, image11, image12]
 

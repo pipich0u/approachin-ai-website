@@ -1,6 +1,6 @@
 import './index.css'
 import { motion } from 'motion/react';
-import { initialLoadProps } from '../../motionConfig'
+import { initialLoadProps } from '@/utils/motionConfig'
 import img1 from '@/assets/images/img/index_left.png'
 import img2 from '@/assets/images/img/index_rig.png'
 import { useState, useEffect } from 'react';

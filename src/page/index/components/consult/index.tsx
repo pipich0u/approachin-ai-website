@@ -1,7 +1,7 @@
 
 import './index.css'
 import { motion } from "motion/react"
-import { scrollInViewSpringProps } from '../../motionConfig'
+import { scrollInViewSpringProps } from '../../../../utils/motionConfig'
 
 export default function PageConsult() {
 

@@ -2,7 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 import './index.css'
 import { motion } from "motion/react"
-import { scrollInViewSpringProps } from '../../motionConfig'
+import { scrollInViewSpringProps } from '../../../../utils/motionConfig'
 import circleOut1 from '@/assets/images/img/circle_out1.png'
 import circleOut2 from '@/assets/images/img/circle_out2.png'
 import circleOut3 from '@/assets/images/img/circle_out3.png'
