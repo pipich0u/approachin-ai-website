@@ -1,7 +1,7 @@
 .mob-index {
-    background: url('@/assets/images/index.png');
+    background: url('@/assets/images/img/mb_index_bg.png') lightgray 50% / cover no-repeat;
     background-size: cover;
-    background-position: 43%;
+    /* background-position: 43%; */
     box-sizing: border-box;
     width: 100%;
     height: 100%;

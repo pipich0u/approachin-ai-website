@@ -15,15 +15,14 @@ export default function DevelopPage() {
         },
         {
             name: '创新方案理念\n引领行业变革',
-            desc: '区别于传统以 token 为核心的算力解决方案，趋境科技首创 "业务 SLO 为导向的模型价值即服务" 核心理念。以更贴合实际业务需求的优化逻辑，为客户创造差异化价值。',
+            desc: '区别于传统以 token 为核心的算力解决方案，趋境科技首创 “业务 SLO 为导向的模型价值即服务” 核心理念。',
             icon: 'icon-dep_tab2',
         },
         {
             name: '繁荣软硬生态\n释放协同价值',
-            desc: '依托 KTransformers 与 Mooncake 两大开源社区，趋境与国内外主流硬件厂商、大模型厂商及推理优化技术社区建立密切的的合作生态，第一时间将行业前沿技术转化为客户可感知的技术红利。',
+            desc: '依托 KTransformers 与 Mooncake 两大开源社区，趋境与国内外主流硬件厂商、大模型厂商及推理优化技术社区建立密切的的合作生态。',
             icon: 'icon-dep_tap3',
         },
-
     ]
 
     return (
@@ -46,10 +45,10 @@ export default function DevelopPage() {
                                     <div className="dep-tab-item-title">{item.name}</div>
                                     <div className="dep-tab-item-desc">{item.desc}</div>
                                 </div>
+                                {<div className={`more w-24 h-[33px] text-[14px] font-[380] ${activeIndex === index ? 'hidden!' : 'flex'}`} >了解更多</div>}
                             </motion.div>
                         )
                     }
-
                 </div >
             </div >
         </div >

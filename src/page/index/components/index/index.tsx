@@ -160,10 +160,10 @@ export default function PageIndex() {
                 <div className="section-2">
                     <div className='fp-overflow relative z-10'>
                         <div className="title">
-                            <div className='title-top text-[#1B1D22] flex'>
+                            <div className='title-top text-[#fbfbfb] flex'>
                                 稳定可靠服务·<div className='title-top-text'>全天守护</div>
                             </div>
-                            <div className='title-desc text-[#484848]'>
+                            <div className='title-desc text-[#c3c3c3]'>
                                 7x24小时专业技术支持，99.9%可用性保障，让您的AI应用持续稳定运行
                             </div>
                         </div>

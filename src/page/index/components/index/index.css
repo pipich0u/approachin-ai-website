@@ -11,11 +11,18 @@
 .section-2 {
     width: 100%;
     background: #E9E8FA;
+    background: url('/src/assets/images/index.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
 .section-3 {
     width: 100%;
     background: #E9E8FA;
+    background: url('/src/assets/images/ktbg.png');
+    background-size: cover;
+    background-position: center;
 }
 
 /* .floating-left {
