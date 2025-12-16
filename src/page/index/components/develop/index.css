@@ -110,3 +110,13 @@
 .dep-tab-items.dep-active .dep-tab-item-icon>span {
   display: none;
 }
+
+.more-active {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.more-active-no {
+  border: 1px solid #333;
+  color: #333;
+}

@@ -1,7 +1,7 @@
 .qt-container {
     height: 411px;
     width: 100%;
-    /* background: linear-gradient(180deg, rgba(248, 245, 255, 0) 0%, #F8F5FF 100%); */
+    background: url(/src/assets/images/img/question_bg.png) no-repeat center;
     position: relative;
     overflow: hidden;
 }

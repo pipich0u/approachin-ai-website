@@ -27,9 +27,9 @@
 
 .more {
     position: relative;
-    border: 1px solid #878787;
+    border: 1px solid #222222;
     border-radius: 6px;
-    color: #878787;
+    color: #222;
     display: flex;
     padding: 6px 18px;
     justify-content: center;

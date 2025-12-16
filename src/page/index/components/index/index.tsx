@@ -1,8 +1,6 @@
 import './index.css'
 import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig'
-import img1 from '@/assets/images/img/index_left.png'
-import img2 from '@/assets/images/img/index_rig.png'
 import { useState, useEffect } from 'react';
 
 export default function PageIndex() {
@@ -12,30 +10,30 @@ export default function PageIndex() {
     const [isMouseInCarousel, setIsMouseInCarousel] = useState(false);
 
     // 轮播自动切换逻辑 - 鼠标在轮播容器内时暂停
-    useEffect(() => {
-        if (!showContent || isMouseInCarousel) return;
+    // useEffect(() => {
+    //     if (!showContent || isMouseInCarousel) return;
 
-        const interval = setInterval(() => {
-            setProgress((prev) => {
-                const newProgress = prev + (100 / 80); // 8秒 = 8000ms, 每100ms增加1.25%
-                return newProgress > 100 ? 100 : newProgress;
-            });
-        }, 100);
+    //     const interval = setInterval(() => {
+    //         setProgress((prev) => {
+    //             const newProgress = prev + (100 / 80); // 8秒 = 8000ms, 每100ms增加1.25%
+    //             return newProgress > 100 ? 100 : newProgress;
+    //         });
+    //     }, 100);
 
-        return () => clearInterval(interval);
-    }, [showContent, isMouseInCarousel]);
+    //     return () => clearInterval(interval);
+    // }, [showContent, isMouseInCarousel]);
 
-    // 监听进度，触发页面切换
-    useEffect(() => {
-        if (progress >= 100) {
-            const timer = setTimeout(() => {
-                setCurrentSlide((current) => (current + 1) % 3);
-                setProgress(0);
-            }, 50);
+    // // 监听进度，触发页面切换
+    // useEffect(() => {
+    //     if (progress >= 100) {
+    //         const timer = setTimeout(() => {
+    //             setCurrentSlide((current) => (current + 1) % 3);
+    //             setProgress(0);
+    //         }, 50);
 
-            return () => clearTimeout(timer);
-        }
-    }, [progress]);
+    //         return () => clearTimeout(timer);
+    //     }
+    // }, [progress]);
 
     // 手动切换轮播
     const handleSlideChange = (index: number) => {
@@ -66,35 +64,6 @@ export default function PageIndex() {
                         transition={{ duration: 1.5, ease: 'easeInOut' }}
                         onAnimationComplete={() => setShowContent(true)}
                     />
-                    {/* <motion.img
-                        src={img1}
-                        alt=""
-                        className="floating-left"
-                        animate={{
-                            x: [-100, -300, -200, -300, -100],
-                            y: [50, -80, 60, -80, 50],
-                        }}
-                        transition={{
-                            duration: 10,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                        }}
-                    />
-
-                    <motion.img
-                        src={img2}
-                        alt=""
-                        className="floating-right"
-                        animate={{
-                            x: [100, 300, 200, 300, 100],
-                            y: [-50, 80, -60, 80, -50],
-                        }}
-                        transition={{
-                            duration: 10,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                        }}
-                    /> */}
 
                     {showContent && <div className='relative z-10 w-full h-full flex flex-col '>
                         <div className="title">
@@ -107,13 +76,7 @@ export default function PageIndex() {
                             </motion.div>
 
                             <motion.button {...initialLoadProps} className='animated-button  w-[180px] mt-8 h-11 rounded-lg bg-[#806BFF] '>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
-                                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
-                                </svg>
                                 <span className="text-white font-[380] bt-text">立即咨询</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
-                                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
-                                </svg>
                             </motion.button>
 
                             <motion.div {...initialLoadProps} className='index-bottom flex py-[19px] px-12 mt-20 w-[1070px] h-20 rounded-[20px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>

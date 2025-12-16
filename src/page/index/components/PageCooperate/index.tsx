@@ -52,18 +52,13 @@ export default function PageCooperate() {
                 <div className='cpa-content'>
                     <div className='cpa-content-left' >
                         <motion.div  {...scrollInViewSpringProps} className='cpa-ct-left-title'>
-                            标题XXXX
+                            开放兼容・智算赋能
                         </motion.div>
                         <motion.div  {...scrollInViewSpringProps} className='cpa-ct-left-desc'>
-                            正在布局云、边、端上的全领域大模型推理集群和推理加速，助力提升大模型应用在各行业中
-                            的经济效益。AMD 中国与无问芯穹达成战略合作，未来双方将密切合作推动商用AI应用的性能
-                            提高，并推进相关生态系统建设。
+                            全栈智算引擎激发生态核心潜能，普惠高效 AI 拓宽价值增长边界，开放兼容拥抱全球硬软伙伴，引领 AI Infra 技术革新，加速智能应用规模化落地，精准服务客户核心所需。
                         </motion.div>
 
-                        <motion.button {...scrollInViewSpringProps} className='cpa-ct-left-btn w-[184px] mt-8 h-11 rounded-lg bg-[#806BFF] '>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
-                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
-                            </svg>
+                        <motion.button {...scrollInViewSpringProps} className='cpa-ct-left-btn w-[184px] mt-8 h-11'>
                             <span className="text-white font-[380] bt-text">成为合作伙伴</span>
                             <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
                                 <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>

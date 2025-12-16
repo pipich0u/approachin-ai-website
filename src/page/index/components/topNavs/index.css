@@ -79,6 +79,10 @@
   }
 }
 
+.ant-dropdown-menu {
+  padding: 10px !important;
+}
+
 @media (max-width: 1000px) {
   .nav-item {
     color: #FFFFFF80;
@@ -106,6 +110,7 @@
   height: 36px;
   color: #fff;
 }
+
 .navbar-btn:hover {
   background: #6524FF !important;
   color: #fff;

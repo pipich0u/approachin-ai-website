@@ -13,13 +13,13 @@ import { QuestionCircleOutlined } from '@ant-design/icons';
 const FloatBtnEle: React.FC = () => (
 
     <>
-        <FloatButton.Group
+        {/* <FloatButton.Group
             trigger="click"
             style={{ insetInlineEnd: 24 }}
             icon={<QuestionCircleOutlined />}
-        >
+        > */}
             <FloatButton
-                style={{ bottom: 208 }}
+                style={{ bottom: 148 }}
                 className='floatbtn1'
                 tooltip={{
                     color: '#fff',
@@ -54,7 +54,7 @@ const FloatBtnEle: React.FC = () => (
                 </div>}
             />
             <FloatButton
-                style={{ bottom: 128 }}
+                style={{ bottom: 68 }}
                 tooltip={<div>Documents</div>}
                 icon={<div className='flex flex-col items-center bg-none'>
                     <img src={btn2} alt="咨询" style={{ fontSize: '24px' }} />
@@ -62,7 +62,7 @@ const FloatBtnEle: React.FC = () => (
                 </div>}
                 className='floatbtn2'
             />
-        </FloatButton.Group>
+        {/* </FloatButton.Group> */}
     </>
 );
 
