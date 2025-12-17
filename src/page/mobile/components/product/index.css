@@ -47,12 +47,13 @@
 
 .mob-product-3 {
     background: url('/src/assets/images/img/product_3.png') no-repeat right;
+    background-size: 50%;
     background-color: white;
 }
 
 .mob-product-4 {
-
-    background: url('/src/assets/images/img/product_4.png') no-repeat right;
+    background: url('/src/assets/images/img/product_4.png') no-repeat right 70%;
+    background-size: 65%;
     background-color: white;
 }
 
@@ -121,6 +122,7 @@
     font-style: normal;
     font-weight: 330;
     line-height: 150%;
+    letter-spacing: 0.8px;
 }
 
 .mob-product-desc-half {
@@ -128,7 +130,7 @@
 }
 
 .mob-product-desc-60 {
-    width: 60%;
+    width: 50%;
 }
 
 .mob-product-more-wrapper {
@@ -140,7 +142,7 @@
 }
 
 .mob-product-more {
-    width: 150px;
+    width: fit-content;
     height: 52px;
     border: #1B1D22 1px solid;
     border-radius: 10px;

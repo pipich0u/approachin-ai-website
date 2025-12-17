@@ -3,8 +3,8 @@ import './index.css';
 import TopNav from './components/topNav';
 import PageIndex from './components/index';
 import PageProduct from './components/product';
-import PageTechnology from './components/technology';
-import PageKt from './components/KT';
+import PageQuestion from './components/question';
+import PageTab from './components/tab';
 import PageContact from './components/contact';
 import PageInfo from './components/info';
 import DevelopPage from './components/develop';
@@ -30,8 +30,8 @@ export default function MobileIndex() {
       <TopNav />
       <PageIndex />
       <PageProduct />
-      <PageTechnology />
-      <PageKt />
+      <PageQuestion />
+      <PageTab />
       <PageInfo />
       <DevelopPage />
       <PageTeam />
