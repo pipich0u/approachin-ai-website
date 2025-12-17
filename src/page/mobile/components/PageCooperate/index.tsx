@@ -2,7 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 import './index.css'
 import { motion } from "motion/react"
-import { scrollInViewSpringProps } from '../../../../utils/motionConfig'
+import { scrollInViewSpringProps } from '@/utils/motionConfig'
 import circleOut1 from '@/assets/images/img/circle_out1.png'
 import circleOut2 from '@/assets/images/img/circle_out2.png'
 import circleOut3 from '@/assets/images/img/circle_out3.png'
@@ -26,7 +26,7 @@ import circleIn7 from '@/assets/images/img/circle_in7.png'
 import { cooperateList } from '@/page/textConfig';
 
 export default function PageCooperate() {
-    const navgitor = useNavigate()
+    // const navgitor = useNavigate()
 
     const outerImages = [
         circleOut1, circleOut2, circleOut3, circleOut4, circleOut5, circleOut6,
@@ -45,67 +45,65 @@ export default function PageCooperate() {
     }
 
     return (
-        <div className='cpa-box'>
-            <div className="cpa-container">
-                <motion.div className='cpa-title' {...scrollInViewSpringProps}>
-                    {cooperateList.title}
+        <div className='mob-cpa-box'>
+            <div className="mob-cpa-container">
+                <motion.div className='mob-cpa-title' {...scrollInViewSpringProps}>
+                    {cooperateList.mbTitle}
                 </motion.div>
-                <div className='cpa-content'>
-                    <div className='cpa-content-left' >
-                        <motion.div  {...scrollInViewSpringProps} className='cpa-ct-left-title'>
-                            {cooperateList.info}
-                        </motion.div>
-                        <motion.div  {...scrollInViewSpringProps} className='cpa-ct-left-desc'>
-                            {cooperateList.desc}
-                        </motion.div>
-
-                        <motion.button {...scrollInViewSpringProps} className='cpa-ct-left-btn w-[184px] mt-8 h-11'>
-                            <span className="text-white font-[380] bt-text">{cooperateList.btn}</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
-                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
-                            </svg>
-                        </motion.button>
-                    </div>
-                    <div className='cpa-content-rig' >
-                        <div className='circle-container'>
-                            <div className='circle-out'>
+                <div className='mob-cpa-content'>
+                    <div className='mob-cpa-content-circle' >
+                        <div className='mob-circle-container'>
+                            <div className='mob-circle-out'>
                                 {outerImages.map((img, index) => {
                                     const pos = getCirclePosition(index, outerImages.length, 200)
                                     return (
                                         <div
                                             key={`out-${index}`}
-                                            className='circle-item-wrapper circle-item-outer'
+                                            className='mob-circle-item-wrapper mob-circle-item-outer'
                                             style={{
                                                 left: `calc(50% + ${pos.x}px)`,
                                                 top: `calc(50% + ${pos.y}px)`,
                                                 '--angle': `${pos.angleDeg}deg`
                                             } as React.CSSProperties}
                                         >
-                                            <img src={img} alt={`outer-${index}`} className='circle-item' />
+                                            <img src={img} alt={`outer-${index}`} className='mob-circle-item' />
                                         </div>
                                     )
                                 })}
                             </div>
-                            <div className='circle-in'>
+                            <div className='mob-circle-in'>
                                 {innerImages.map((img, index) => {
                                     const pos = getCirclePosition(index, innerImages.length, 119)
                                     return (
                                         <div
                                             key={`in-${index}`}
-                                            className='circle-item-wrapper circle-item-inner big'
+                                            className='mob-circle-item-wrapper mob-circle-item-inner mob-big'
                                             style={{
                                                 left: `calc(50% + ${pos.x}px)`,
                                                 top: `calc(50% + ${pos.y}px)`,
                                                 '--angle': `${pos.angleDeg}deg`
                                             } as React.CSSProperties}
                                         >
-                                            <img src={img} alt={`inner-${index}`} className='circle-item big' />
+                                            <img src={img} alt={`inner-${index}`} className='mob-circle-item mob-big' />
                                         </div>
                                     )
                                 })}
                             </div>
                         </div>
                     </div>
+                    <div className='mob-cpa-content-bottom' >
+                        <motion.div  {...scrollInViewSpringProps} className='mob-cpa-ct-bt-desc'>
+                          {cooperateList.mbDesc}
+                        </motion.div>
+
+                        <motion.button {...scrollInViewSpringProps} className='mob-cpa-ct-bt-btn'>
+                            <span className="mob-bt-text">{cooperateList.btn}</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="mob-arr-1" viewBox="0 0 24 24">
+                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
+                            </svg>
+                        </motion.button>
+                    </div>
+
                 </div>
             </div>
         </div>

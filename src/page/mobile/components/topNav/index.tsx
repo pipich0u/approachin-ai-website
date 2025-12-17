@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './index.css';
 import logo from '@/assets/svg/logo-black.svg'
 import { IconFont } from '@/utils/antdUtils';
-import {menuHrefListDefault} from '@/page/textConfig';
+import {mobMenuHrefListDefault} from '@/page/textConfig';
 const TopNav = () => {
   // const [isFirstOpenPage, setIsFirstOpenPage] = useState(true)
   const [openDrawer, setOpenDrawer] = useState(false)
@@ -30,7 +30,7 @@ const TopNav = () => {
   const menuElement = () => (openDrawer || isClosing) && (
     <div className={`mobile-menu-drawer ${isClosing ? 'closing' : ''}`}>
       <div className="mobile-menu-list">
-        {menuHrefListDefault.map((item) => (
+        {mobMenuHrefListDefault.map((item) => (
           <div key={item.title} className="mobile-menu-item-wrapper">
             <div
               className="mobile-menu-item"

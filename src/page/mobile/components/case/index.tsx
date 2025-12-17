@@ -17,21 +17,21 @@ export default function PageCase() {
     const images = [image1, image2, image3, image4, image6, image5, image7, image8, image9, image10, image11, image12]
 
     return (
-        <div className='case'>
-            <motion.div {...scrollInViewSpringProps} className='case-title'>更多客户</motion.div>
-            <motion.div className='case-content' {...scrollInViewSpringProps}>
-                <div className='case-scroll-container'>
-                    <div className='case-scroll-track'>
+        <div className='mob-case'>
+            <motion.div {...scrollInViewSpringProps} className='mob-case-title'>更多客户</motion.div>
+            <motion.div className='mob-case-content' {...scrollInViewSpringProps}>
+                <div className='mob-case-scroll-container'>
+                    <div className='mob-case-scroll-track'>
                         {images.map((item, index) => (
-                            <img src={item} alt="" key={`original-${index}`} className='item-img' />
+                            <img src={item} alt="" key={`mob-original-${index}`} className='mob-item-img' />
                         ))}
                         {images.map((item, index) => (
-                            <img src={item} alt="" key={`duplicate-${index}`} className='item-img' />
+                            <img src={item} alt="" key={`mob-duplicate-${index}`} className='mob-item-img' />
                         ))}
                     </div>
                 </div>
-                <div className='case-mask-left'></div> 
-                <div className='case-mask-right'></div>
+                <div className='mob-case-mask-left'></div> 
+                <div className='mob-case-mask-right'></div>
             </motion.div>
         </div>
     );

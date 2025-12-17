@@ -1,0 +1,237 @@
+.mob-cpa-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, #F6F5FF 0%, rgba(246, 245, 255, 0.00) 100%);
+}
+
+.mob-cpa-container {
+    padding: 70px 130px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    font-family: MiSans;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mob-cpa-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 520;
+    font-style: Semibold;
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: 0.8px;
+    color: #1B1D22;
+}
+
+.mob-cpa-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mob-cpa-content-bottom {
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.mob-cpa-ct-bt-desc {
+    font-weight: 305;
+    font-style: Normal;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    color: #000;
+    margin-top: 70px;
+    opacity: 0.6 !important;
+}
+
+.mob-cpa-content-circle {
+    width: 450px;
+    height: 450px;
+    padding: 25px;
+}
+
+.mob-circle-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 60px;
+}
+
+
+.mob-circle-item-wrapper {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    margin-top: -23px;
+}
+
+.mob-circle-out {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed #DEDEDE;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: mob-rotate-outer 50s linear infinite running;
+}
+
+.mob-circle-in {
+    width: 238.233px;
+    height: 238.233px;
+    border-radius: 50%;
+    border: 1px dashed #DEDEDE;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: mob-rotate-inner 50s linear infinite running;
+}
+
+/* .mob-circle-container:hover .mob-circle-out {
+    animation-play-state: paused
+}
+
+.mob-circle-container:hover .mob-circle-in {
+    animation-play-state: paused;
+} */
+
+.mob-circle-item {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    display: block;
+    animation: mob-counter-rotate 50s linear infinite running;
+}
+
+/* .mob-circle-container:hover .mob-circle-item {
+    animation-play-state: paused;
+} */
+
+.mob-big {
+    width: 54px;
+    height: 54px;
+}
+
+.mob-circle-in .mob-circle-item {
+    animation: mob-counter-rotate-reverse 50s linear infinite running;
+}
+
+@keyframes mob-rotate-outer {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes mob-rotate-inner {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes mob-counter-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes mob-counter-rotate-reverse {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mob-cpa-ct-bt-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px 30px;
+    border-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 0 0 2px #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    margin-top: 32px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #4E74FF 0%, #7F49FF 100%);
+    width: fit-content;
+    height: 56px;
+}
+
+.mob-cpa-ct-bt-btn svg {
+    /* position: absolute; */
+    width: 24px;
+    fill: #fff;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mob-cpa-ct-bt-btn .mob-arr-1 {
+    right: 25px;
+}
+
+.mob-cpa-ct-bt-btn .mob-arr-2 {
+    left: -25%;
+}
+
+.mob-bt-text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(5px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    color: white;
+    font-weight: 380;
+}
+
+/* .mob-cpa-ct-bt-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(250deg, #6c3ed9, #0f37d7);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 0;
+}
+
+.mob-cpa-ct-bt-btn:hover::before {
+    opacity: 1;
+} */
+
+.mob-cpa-ct-bt-btn:active {
+    scale: 0.95;
+}

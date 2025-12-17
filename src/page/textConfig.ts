@@ -51,6 +51,54 @@ export const menuHrefListDefault = [
         ]
     },
 ]
+export const mobMenuHrefListDefault = [
+    {
+        title: '解决方案',
+        href: 'pageProduct',
+        isSelected: true,
+        subItems: [
+            { title: 'A·Spark 便携工作站', href: 'aiInference' },
+            { title: '大模型推理一体机', href: 'edgeComputing' },
+            { title: '推理引擎·KLLM', href: 'smartScheduling' },
+            { title: '推理服务平台·AMaaS', href: 'smartScheduling' },
+            { title: '专属推理云·AMVaaS', href: 'smartScheduling' },
+        ]
+    },
+    {
+        title: '开源社区',
+        href: 'pageTechnology',
+        isSelected: true,
+        subItems: [
+            { title: 'KTransformers', href: 'KTransformers' },
+            { title: 'Mooncake', href: 'Mooncake' }
+        ]
+    },
+    {
+        title: '客户案例',
+        href: 'pageInfo',
+        isSelected: false
+    },
+    {
+        title: '生态合作',
+        href: 'DevelopPage',
+        isSelected: false
+    },
+    {
+        title: '趋境资讯',
+        href: 'PageTeam',
+        isSelected: false
+    },
+    {
+        title: '关于我们',
+        href: 'PageTeam',
+        isSelected: true,
+        subItems: [
+            { title: '公司简介', href: 'about' },
+            { title: '团队介绍', href: 'team' },
+            { title: '联系我们', href: 'contact' }
+        ]
+    },
+]
 
 export const indexPageList = [
     {
@@ -201,4 +249,13 @@ export const PageTabList = {
                 content: ['单 4090D 工作站实现 6 个模型混合推理，成本降低 85%', '支撑 4 个场景/台，满足首 Token 延迟 和 decode 速度要求', 'AMaaS 管理平台屏蔽技术复杂性，客户只需关注业务自身']
             }]
         }]
+}
+
+export const cooperateList = {
+    title: '开放兼容的软硬件合作生态',
+    mbTitle: "行业领先的场景化解决方案",
+    info: '开放兼容・智算赋能',
+    desc: '全栈智算引擎激发生态核心潜能，普惠高效 AI 拓宽价值增长边界，开放兼容拥抱全球硬软伙伴，引领 AI Infra 技术革新，加速智能应用规模化落地，精准服务客户核心所需。',
+    mbDesc: '正在布局云、边、端上的全领域大模型推理集群和推理加速，助力提升大模型应用在各行业中的经济效益。AMD 中国与无问芯穹达成战略合作，未来双方将密切合作推动商用AI应用的性能提高，并推进相关生态系统建设。',
+    btn: '成为合作伙伴',
 }

@@ -5,7 +5,7 @@
     position: relative;
     width: 100vw;
     height: fit-content;
-    padding: 10px 0 !important;
+    padding: 20px 0 !important;
     box-sizing: border-box;
 }
 
@@ -46,14 +46,14 @@
 }
 
 .mob-product-3 {
-    background: url('/src/assets/images/img/product_3.png') no-repeat right;
+    background: url('/src/assets/images/img/product_3.png') no-repeat right 80%;
     background-size: 50%;
     background-color: white;
 }
 
 .mob-product-4 {
-    background: url('/src/assets/images/img/product_4.png') no-repeat right 70%;
-    background-size: 65%;
+    background: url('/src/assets/images/img/product_4.png') no-repeat right bottom;
+    background-size: 55%;
     background-color: white;
 }
 
