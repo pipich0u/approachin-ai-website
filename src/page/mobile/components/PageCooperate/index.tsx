@@ -37,13 +37,6 @@ export default function PageCooperate() {
         circleIn1, circleIn2, circleIn3, circleIn4, circleIn5, circleIn6, circleIn7
     ]
 
-    const getCirclePosition = (index: number, total: number, radius: number) => {
-        const angle = (index / total) * 2 * Math.PI
-        const x = Math.cos(angle) * radius
-        const y = Math.sin(angle) * radius
-        return { x, y, angleDeg: (index / total) * 360 }
-    }
-
     return (
         <div className='mob-cpa-box'>
             <div className="mob-cpa-container">
@@ -54,40 +47,24 @@ export default function PageCooperate() {
                     <div className='mob-cpa-content-circle' >
                         <div className='mob-circle-container'>
                             <div className='mob-circle-out'>
-                                {outerImages.map((img, index) => {
-                                    const pos = getCirclePosition(index, outerImages.length, 200)
-                                    return (
-                                        <div
-                                            key={`out-${index}`}
-                                            className='mob-circle-item-wrapper mob-circle-item-outer'
-                                            style={{
-                                                left: `calc(50% + ${pos.x}px)`,
-                                                top: `calc(50% + ${pos.y}px)`,
-                                                '--angle': `${pos.angleDeg}deg`
-                                            } as React.CSSProperties}
-                                        >
-                                            <img src={img} alt={`outer-${index}`} className='mob-circle-item' />
-                                        </div>
-                                    )
-                                })}
+                                {outerImages.map((img, index) => (
+                                    <div
+                                        key={`out-${index}`}
+                                        className='mob-circle-item-wrapper mob-circle-item-outer'
+                                    >
+                                        <img src={img} alt={`outer-${index}`} className='mob-circle-item' />
+                                    </div>
+                                ))}
                             </div>
                             <div className='mob-circle-in'>
-                                {innerImages.map((img, index) => {
-                                    const pos = getCirclePosition(index, innerImages.length, 119)
-                                    return (
-                                        <div
-                                            key={`in-${index}`}
-                                            className='mob-circle-item-wrapper mob-circle-item-inner mob-big'
-                                            style={{
-                                                left: `calc(50% + ${pos.x}px)`,
-                                                top: `calc(50% + ${pos.y}px)`,
-                                                '--angle': `${pos.angleDeg}deg`
-                                            } as React.CSSProperties}
-                                        >
-                                            <img src={img} alt={`inner-${index}`} className='mob-circle-item mob-big' />
-                                        </div>
-                                    )
-                                })}
+                                {innerImages.map((img, index) => (
+                                    <div
+                                        key={`in-${index}`}
+                                        className='mob-circle-item-wrapper mob-circle-item-inner mob-big'
+                                    >
+                                        <img src={img} alt={`inner-${index}`} className='mob-circle-item mob-big' />
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>

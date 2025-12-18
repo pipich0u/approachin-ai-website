@@ -14,7 +14,13 @@ export const fadeInUpTransition: Transition = {
 
 export const defaultViewport = {
   once: false,
-  amount: 0.1,  // 元素进入视口 30% 时触发动画
+  amount: 0.2,  // 元素进入视口 20% 时触发动画
+};
+
+// 只播放一次的视口配置
+export const onceViewport = {
+  once: true,
+  amount: 0.2,  // 元素进入视口 20% 时触发动画
 };
 
 // 初始加载动画配置
@@ -53,5 +59,19 @@ export const springScrollTransition: Transition = {
 export const scrollInViewSpringProps = {
   ...fadeInUpVariants,
   viewport: defaultViewport,
+  transition: springScrollTransition,
+};
+
+// 组合配置 - 只播放一次的滚动进入视口
+export const scrollInViewOnceProps = {
+  ...fadeInUpVariants,
+  viewport: onceViewport,
+  transition: fadeInUpTransition,
+};
+
+// 滚动进入视口 - Spring 版本（只播放一次）
+export const scrollInViewSpringOnceProps = {
+  ...fadeInUpVariants,
+  viewport: onceViewport,
   transition: springScrollTransition,
 };

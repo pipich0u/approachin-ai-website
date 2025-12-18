@@ -63,7 +63,7 @@ export default function PageProduct() {
                             }
                         </div>
                         <div className='mob-product-items-title'>{productFeatures[2].title}</div>
-                        <div className='mob-product-items-desc mob-product-desc-half'>{productFeatures[2].desc}</div>
+                        <div className='mob-product-items-desc  mob-product-desc-60'>{productFeatures[2].desc}</div>
                         <div className='mob-product-more-wrapper-small'>
                             {infoIcon()}
                         </div>
@@ -80,7 +80,7 @@ export default function PageProduct() {
                                 }
                             </div>
                             <div className='mob-product-items-title'>{productFeatures[3].title}</div>
-                            <div className='mob-product-items-desc mob-product-desc-half'>{productFeatures[3].desc}</div>
+                            <div className='mob-product-items-desc  mob-product-desc-60'>{productFeatures[3].desc}</div>
                         </div>
                         <div className='mob-product-more-wrapper-small'>
                             {infoIcon()}
@@ -101,7 +101,7 @@ export default function PageProduct() {
                             <div className='mob-product-items-title'>{productFeatures[4].title}</div>
                             <div className='mob-product-items-desc mob-product-desc-60'>{productFeatures[4].desc}</div>
                         </div>
-                        <div className='mob-product-more-wrapper'>
+                        <div className='mob-product-more-wrapper-small'>
                             {infoIcon()}
                         </div>
                     </div>

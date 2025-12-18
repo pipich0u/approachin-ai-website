@@ -8,15 +8,25 @@ const TopNav = () => {
   const [openDrawer, setOpenDrawer] = useState(false)
   const [isClosing, setIsClosing] = useState(false)
   const [expandedMenus, setExpandedMenus] = useState<Set<string>>(new Set())
+  const [closingMenus, setClosingMenus] = useState<Set<string>>(new Set())
 
   const toggleSubmenu = (title: string) => {
-    const newExpanded = new Set(expandedMenus)
-    if (newExpanded.has(title)) {
-      newExpanded.delete(title)
+    if (expandedMenus.has(title)) {
+      // 开始关闭动画
+      setClosingMenus(new Set(closingMenus).add(title))
+      setTimeout(() => {
+        const newExpanded = new Set(expandedMenus)
+        newExpanded.delete(title)
+        setExpandedMenus(newExpanded)
+        const newClosing = new Set(closingMenus)
+        newClosing.delete(title)
+        setClosingMenus(newClosing)
+      }, 300) // 匹配动画时长
     } else {
+      const newExpanded = new Set(expandedMenus)
       newExpanded.add(title)
+      setExpandedMenus(newExpanded)
     }
-    setExpandedMenus(newExpanded)
   }
 
   const handleClose = () => {
@@ -50,8 +60,8 @@ const TopNav = () => {
                 />
               )}
             </div>
-            {item.isSelected && item.subItems && expandedMenus.has(item.title) && (
-              <div className="mobile-submenu">
+            {item.isSelected && item.subItems && (expandedMenus.has(item.title) || closingMenus.has(item.title)) && (
+              <div className={`mobile-submenu ${closingMenus.has(item.title) ? 'closing' : ''}`}>
                 {item.subItems.map((subItem) => (
                   <div
                     key={subItem.title}

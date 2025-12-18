@@ -187,11 +187,11 @@
   line-height: 130%;
   letter-spacing: 6%;
   text-align: left;
-  padding: 30px 80px;
+  padding: 30px 40px;
   color: #333;
   text-decoration: none;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -213,12 +213,16 @@
   animation: submenuExpand 0.3s ease-out forwards;
 }
 
+.mobile-submenu.closing {
+  animation: submenuCollapse 0.3s ease-out forwards;
+}
+
 .mobile-submenu-item {
   font-family: MiSans;
   font-weight: 350;
   font-size: 32px;
   line-height: 130%;
-  padding: 25px 80px 25px 120px;
+  padding: 25px 80px 25px 80px;
   color: #666;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -237,6 +241,17 @@
   100% {
     max-height: 500px;
     opacity: 1;
+  }
+}
+
+@keyframes submenuCollapse {
+  0% {
+    max-height: 500px;
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    opacity: 0;
   }
 }
 
