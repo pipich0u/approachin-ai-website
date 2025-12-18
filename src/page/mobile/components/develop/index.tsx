@@ -1,157 +1,36 @@
 import './index.css'
-
-import dev_1 from '@/assets/images/2023.png'
-import dev_2 from '@/assets/images/202407.png'
-import dev_3 from '@/assets/images/202409.png'
-import dev_4 from '@/assets/images/202410.png'
-import dev_5 from '@/assets/images/202502.png'
-import dev_6 from '@/assets/images/dev_6.png'
-
-export default function DevelopPage({ id }: { id: string }) {
-
+import { IconFont } from '@/utils/antdUtils';
+import { depList } from '@/page/textConfig';
+import { motion } from "motion/react"
+import { scrollInViewSpringProps } from '@/utils/motionConfig'
+export default function DevelopPage() {
     return (
-        <div className="mob-develop" id={id}>
-            <div className='mob-develop-top'>
-                <div className='mob-develop-top-title'>
-                    企业发展
-                </div>
-                <div className='mob-develop-top-text'>
-                    以创新驱动为引擎,开辟增长新航道
-                </div>
-            </div>
-            <div className='mob-develop-content'>
-                <div className='mob-develop-item'>
-                    <div className='mob-develop-years'>
-                        2023年底
-                    </div>
-                    <div className='mob-develop-content-center'></div>
-                    <div className='mob-develop-content-item'>
-                        <img src={dev_1} alt="" />
-                        <div className='mob-develop-content-item-title'>
-                            公司成立<br />
-                            种子轮融资：真知创投
-                        </div>
-                    </div>
-                </div>
-                <div className='mob-develop-item'>
-                    <div className='mob-develop-content-item'>
-                        <div className='mob-develop-content-item-title'>
-                            首创“以存换算”技术<br />
-                            首创“全系统异构协同<br />
-                            推理架构”技术<br />
-                            开源“Ktransformers”技术<br />
-                            支持单卡运行千亿级大模型
-                        </div>
-                        <img src={dev_2} alt="" />
-                    </div>
-                    <div className='mob-develop-content-center'>
-                    </div>
-                    <div className='mob-develop-years'>
-                        2024年7月
-                    </div>
-                </div>
-                <div className='mob-develop-item'>
-                    <div className='mob-develop-years'>
-                        2024年9月
-                    </div>
-                    <div className='mob-develop-content-center'>
-                    </div>
-                    <div className='mob-develop-content-item'>
-                        <div className='mob-develop-content-item-title'>
-                            与长亭科技共同发布<br />
-                            <span style={{ textWrap: 'nowrap' }}>
-                                '长亭问津千亿大模型解决方案'<br />
-                            </span>
-                            由此安全领域<br />
-                            迈入千亿级大模型时代<br />
-                            高准确率、低延迟
-                        </div>
-                        <img src={dev_3} alt="" />
-                    </div>
-                </div>
-                <div className='mob-develop-item'>
-                    <div className='mob-develop-content-item'>
-                        <div className='mob-develop-content-item-title'>
-                            <span style={{ textWrap: 'nowrap' }}>
-                                首次发布产品:<br />大模型知识推理一体机
-                            </span>
-                            <span style={{ textWrap: 'nowrap' }}>
-                                「以存换算」「异构协同」
-                            </span>
-                            <span style={{ textWrap: 'nowrap' }}>
-                                支持千亿级别大模型
-                            </span>
-                            <span style={{ textWrap: 'nowrap' }}>
-                                开箱即用,推出简易应用平台<br />
-                            </span>
-                            提供丰富API接口
-                        </div>
-                        <img src={dev_4} alt="" />
-                    </div>
-                    <div className='mob-develop-content-center'>
-                    </div>
-                    <div className='mob-develop-years'>
-                        2024年10月
-                    </div>
-                </div>
-                {/* <div className='mob-develop-item'>
-                    <div className='mob-develop-years'>
-                        2025年1月
-                    </div>
-                    <div className='mob-develop-content-center'>
-                    </div>
-                    <div className='mob-develop-content-item'>
-                        <div className='mob-develop-content-item-title'>
-                            天使轮融资
-                        </div>
-                        <img src={dev_6} alt="" style={{ height: '90%' }} />
-                    </div>
-                </div> */}
-                <div className='mob-develop-item'>
-                    <div className='mob-develop-years'>
-                        2025年2月
-                    </div>
-                    <div className='mob-develop-content-center'>
-                    </div>
-                    <div className='mob-develop-content-item'>
-
-                        <div className='mob-develop-content-item-title'>
-                            发布新版
-                            <br />
-                            “KTransformers”0.2版<br />
-                            <span style={{ color: '#868AFF' }}>
-                                单个消费级GPU+CPU <br /> 本地部署DeepSeek-R1/V3 671B大模型<br />
-                            </span>
-                            GitHub标星过万<br />
-                            国内外社区热榜第一
-                        </div>
-                        <img src={dev_5} alt="" style={{ height: '55px' }} />
-                    </div>
-
-                </div>
-                <div className='mob-develop-item'>
-
-                    <div className='mob-develop-content-item'>
-                        <div className='mob-develop-content-item-title'>
-                            <li>
-                                华为昇腾鲲鹏开发者大会合作发布鲲鹏+xPU解决方案，提供鲲鹏推理工作站、鲲鹏推理服务器等多样化的产品形态
-                            </li>
-                            <li>
-                                联想中国合作伙伴大会合作发布产品；联想AI大模型推训一体工作站；面向中小企业打造吸引众多企业在展区试用
-                            </li>
-                        </div>
-                        {/* <img src={dev_2} alt="" /> */}
-                    </div>
-                    <div className='mob-develop-content-center'>
-                    </div>
-                    <div className='mob-develop-years'>
-                        2025年3月
-                    </div>
-
-                </div>
-                <div className='mob-develop-center'>
-                </div>
-            </div>
-        </div>
+        <div className='mob-develop-box'>
+            <div className='mob-dep-container'>
+                <motion.div className="mob-dep-title" {...scrollInViewSpringProps}>{depList.title}</motion.div>
+                <motion.div {...scrollInViewSpringProps} className='mob-dep-tabbox'>
+                    {
+                        depList.list.map((item, index) =>
+                            <>
+                                <motion.div
+                                    key={`active-${index}`}
+                                    {...scrollInViewSpringProps}
+                                    className={`mob-dep-tab-items`}
+                                >
+                                    <div className='mob-dep-tab-item-icon'>
+                                        <IconFont type={item.icon} />
+                                    </div>
+                                    <div className='mob-dep-tab-item-content'>
+                                        <div className="mob-dep-tab-item-title">{item.name}</div>
+                                        <div className="mob-dep-tab-item-desc">{item.desc}</div>
+                                    </div>
+                                    {<div className={`mob-dev-more`} >了解更多</div>}
+                                </motion.div>
+                            </>
+                        )
+                    }
+                </motion.div >
+            </div >
+        </div >
     );
 }

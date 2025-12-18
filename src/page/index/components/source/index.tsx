@@ -7,8 +7,8 @@ import leftImg2 from '@/assets/images/img/models_left2.png'
 import leftImg3 from '@/assets/images/img/models_left3.png'
 import rigImg1 from '@/assets/images/img/models_rig1.png'
 import rigImg2 from '@/assets/images/img/models_rig2.png'
-
-import { scrollInViewSpringProps } from "../../../../utils/motionConfig";
+import { sourceList,modelList } from '@/page/textConfig';
+import { scrollInViewSpringProps } from "@/utils/motionConfig";
 
 
 
@@ -16,19 +16,19 @@ const SourcePage = () => {
     return <>
         <div className='source-box'>
             <div className="source-container">
-                <motion.div {...scrollInViewSpringProps} className="source-title">繁荣的趋境开源社区</motion.div>
+                <motion.div {...scrollInViewSpringProps} className="source-title">{sourceList.title}</motion.div>
                 <div className="source-content">
                     <div className='source-cont-item source-cont-left'>
                         <motion.div {...scrollInViewSpringProps} className='source-cont-item-top'>
-                            <div className="sou-cont-title">开发者社区</div>
-                            <div className="sou-cont-desc">描述文本描述文本描述文本描述文本描述文本描述文本描述文本描述文本描述文本</div>
+                            <div className="sou-cont-title">{sourceList.list[0].title}</div>
+                            <div className="sou-cont-desc">{sourceList.list[0].desc}</div>
                         </motion.div>
                         <div className='source-cont-left-bot'>
                             <motion.button className='source-cont-btn border border-[#008FE1] border-solid' {...scrollInViewSpringProps}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24" fill='#008FE1'>
                                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
                                 </svg>
-                                <span className="text-[#008FE1] font-[380] bt-text">了解详情</span>
+                                <span className="text-[#008FE1] font-[380] bt-text">{sourceList.list[0].btn}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24" fill='#008FE1'>
                                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
                                 </svg>
@@ -38,15 +38,15 @@ const SourcePage = () => {
                     </div>
                     <div className='source-cont-item source-cont-rig'>
                         <motion.div {...scrollInViewSpringProps} className='source-cont-item-top'>
-                            <div className="sou-cont-title">生态合作</div>
-                            <div className="sou-cont-desc">描述文本描述文本描述文本描述文本描述文本描述文本描述文本描述文本描述文本</div>
+                            <div className="sou-cont-title">{sourceList.list[1].title}</div>
+                            <div className="sou-cont-desc">{sourceList.list[1].desc}</div>
                         </motion.div>
                         <div className='source-cont-left-bot'>
                             <motion.button {...scrollInViewSpringProps} className='source-cont-btn border border-[#6951FF] border-solid'>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24" fill='#6951FF'>
                                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
                                 </svg>
-                                <span className="text-[#6951FF] font-[380] bt-text">了解详情</span>
+                                <span className="text-[#6951FF] font-[380] bt-text">{sourceList.list[1].btn}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24" fill='#6951FF'>
                                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
                                 </svg>
@@ -60,9 +60,9 @@ const SourcePage = () => {
         <div className='models'>
             <div className='models-container'>
                 <div className='models-center'>
-                    <div className="models-title">一键解锁 AI 管理与集成新范式！</div>
+                    <div className="models-title">{modelList.title}</div>
                     <motion.button {...scrollInViewSpringProps} className='models-btn'>
-                        <span className="text-white font-[380] bt-text">前往模型仓库</span>
+                        <span className="text-white font-[380] bt-text">{modelList.btn}</span>
                         <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24" fill='#fff'>
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
                         </svg>

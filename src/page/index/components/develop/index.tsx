@@ -1,37 +1,19 @@
 import { useState } from 'react';
 import './index.css'
 import { IconFont } from '@/utils/antdUtils';
-
+import { depList } from '@/page/textConfig';
 import { motion } from "motion/react"
-import { scrollInViewSpringProps } from '../../../../utils/motionConfig'
+import { scrollInViewSpringProps } from '@/utils/motionConfig'
 export default function DevelopPage() {
     const [activeIndex, setActiveIndex] = useState(0);
-
-    const depList = [
-        {
-            name: '顶尖技术团队\n筑牢核心壁垒',
-            desc: '核心技术团队源自清华大学计算机系高性能计算所，十余名博士骨干，沉淀十余年高性能优化技术经验，构建起国际顶尖的技术实力。',
-            icon: 'icon-dep_tap1',
-        },
-        {
-            name: '创新方案理念\n引领行业变革',
-            desc: '区别于传统以 token 为核心的算力解决方案，趋境科技首创 “业务 SLO 为导向的模型价值即服务” 核心理念。',
-            icon: 'icon-dep_tab2',
-        },
-        {
-            name: '繁荣软硬生态\n释放协同价值',
-            desc: '依托 KTransformers 与 Mooncake 两大开源社区，趋境与国内外主流硬件厂商、大模型厂商及推理优化技术社区建立密切的的合作生态。',
-            icon: 'icon-dep_tap3',
-        },
-    ]
 
     return (
         <div className='develop-box'>
             <div className='dep-container'>
-                <motion.div className="dep-title" {...scrollInViewSpringProps}>为什么选择趋境科技</motion.div>
-                <motion.div     {...scrollInViewSpringProps} className='dep-tabbox' onMouseLeave={() => setActiveIndex(0)} >
+                <motion.div className="dep-title" {...scrollInViewSpringProps}>{depList.title}</motion.div>
+                <motion.div {...scrollInViewSpringProps} className='dep-tabbox' onMouseLeave={() => setActiveIndex(0)} >
                     {
-                        depList.map((item, index) =>
+                        depList.list.map((item, index) =>
                             <>
                                 <motion.div
                                     key={index}

@@ -8,9 +8,9 @@ import PageTab from './components/tab';
 import PageContact from './components/contact';
 import PageCase from './components/case';
 import DevelopPage from './components/develop';
-import PageTeam from './components/team';
+import PageConsult from './components/consult';
 import PageCooperate from './components/PageCooperate';
-
+import SourcePage from './components/source';
 export default function MobileIndex() {
 
   // 滚动到指定组件
@@ -35,8 +35,9 @@ export default function MobileIndex() {
       <PageTab />
       <PageCase />
       <PageCooperate />
+      <SourcePage />
       <DevelopPage />
-      <PageTeam />
+      <PageConsult />
       <PageContact />
     </div>
   );

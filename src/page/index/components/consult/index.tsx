@@ -1,14 +1,15 @@
 
 import './index.css'
 import { motion } from "motion/react"
-import { scrollInViewSpringProps } from '../../../../utils/motionConfig'
+import { scrollInViewSpringProps } from '@/utils/motionConfig'
+import { consultList } from '@/page/textConfig'
 
 export default function PageConsult() {
 
     return (
         <div className='consult-container'>
-            <motion.div {...scrollInViewSpringProps} className='consult-title'>助力AI进入普惠时代！</motion.div>
-            <motion.div {...scrollInViewSpringProps} className='consult-desc'>为企业级用户的 AI 落地提供从算力破局到价值交付的全链路解决方案</motion.div>
+            <motion.div {...scrollInViewSpringProps} className='consult-title'>{consultList.title}</motion.div>
+            <motion.div {...scrollInViewSpringProps} className='consult-desc'>{consultList.desc}</motion.div>
 
             {/* <motion.button {...scrollInViewSpringProps} className="consult-button">
                 <span className="consult-text">立即咨询</span>
@@ -28,7 +29,7 @@ export default function PageConsult() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
                 </svg>
-                <span className="text-[#6C3AE1] bt-text">立即咨询</span>
+                <span className="text-[#6C3AE1] bt-text">{consultList.btn}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
                 </svg>
