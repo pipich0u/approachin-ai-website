@@ -12,14 +12,14 @@ import image10 from '@/assets/images/image_10.png'
 import image11 from '@/assets/images/image_11.png'
 import image12 from '@/assets/images/image_12.png'
 import { motion } from "motion/react";
-import { scrollInViewSpringProps } from "@/utils/motionConfig";
+import { scrollInViewSpringOnceProps } from "@/utils/motionConfig";
 export default function PageCase() {
     const images = [image1, image2, image3, image4, image6, image5, image7, image8, image9, image10, image11, image12]
 
     return (
         <div className='mob-case'>
-            <motion.div {...scrollInViewSpringProps} className='mob-case-title'>更多客户</motion.div>
-            <motion.div className='mob-case-content' {...scrollInViewSpringProps}>
+            <motion.div {...scrollInViewSpringOnceProps} className='mob-case-title'>更多客户</motion.div>
+            <motion.div className='mob-case-content' {...scrollInViewSpringOnceProps}>
                 <div className='mob-case-scroll-container'>
                     <div className='mob-case-scroll-track'>
                         {images.map((item, index) => (

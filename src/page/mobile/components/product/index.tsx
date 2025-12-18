@@ -3,7 +3,7 @@ import useAnimate from '@/common/useAnimate'
 import { useRef } from 'react';
 import { productFeatures, productTitle } from '@/page/textConfig';
 import { motion } from 'motion/react';
-import { initialLoadProps, scrollInViewSpringProps } from '@/utils/motionConfig';
+import { initialLoadProps, scrollInViewSpringOnceProps } from '@/utils/motionConfig';
 
 export default function PageProduct() {
     const elementRef = useRef<HTMLImageElement>(null)
@@ -37,7 +37,7 @@ export default function PageProduct() {
                         </div>
                     </div>
                 </motion.div>
-                <motion.div {...scrollInViewSpringProps} className='mob-product-items mob-product-2'>
+                <motion.div {...scrollInViewSpringOnceProps} className='mob-product-items mob-product-2'>
                     <div className='mob-product-items-content'>
                         <div className='mob-product-tags'>
                             {
@@ -87,7 +87,7 @@ export default function PageProduct() {
                         </div>
                     </div>
                 </motion.div>
-                <motion.div {...scrollInViewSpringProps} className='mob-product-items mob-product-4'>
+                <motion.div {...scrollInViewSpringOnceProps} className='mob-product-items mob-product-4'>
                     <div className='mob-product-3-content'>
                         <div>
                             <div className='mob-product-tags'>
@@ -106,7 +106,7 @@ export default function PageProduct() {
                         </div>
                     </div>
                 </motion.div>
-                <motion.div {...scrollInViewSpringProps} className='mob-product-items mob-product-4'>
+                <motion.div {...scrollInViewSpringOnceProps} className='mob-product-items mob-product-4'>
                     <div className='mob-product-3-content'>
                         <div>
                             <div className='mob-product-tags'>

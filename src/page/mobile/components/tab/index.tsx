@@ -1,7 +1,7 @@
 import "./index.css";
 import { motion } from "motion/react";
 import { useState, useRef, useEffect } from "react";
-import { scrollInViewSpringProps } from "../../../../utils/motionConfig";
+import { scrollInViewSpringOnceProps } from "@/utils/motionConfig";
 import { IconFont } from "@/utils/antdUtils";
 import { PageTabList } from '@/page/textConfig';
 
@@ -40,12 +40,12 @@ export default function PageTab() {
     return (
         <div className="mob-tab-page">
             <div className="mob-tab-container">
-                <motion.div {...scrollInViewSpringProps} className="mob-tab-title">
+                <motion.div {...scrollInViewSpringOnceProps} className="mob-tab-title">
                     {PageTabList.title}
                 </motion.div>
 
                 <div className="mob-tab-box">
-                    <motion.div {...scrollInViewSpringProps} className="mob-tab-nav-box">
+                    <motion.div {...scrollInViewSpringOnceProps} className="mob-tab-nav-box">
                         <div className="mob-tab-nav" ref={navRef}>
                             {PageTabList.tablist.map((item) => (
                                 <div
@@ -65,7 +65,7 @@ export default function PageTab() {
                         </div>
                     </motion.div>
 
-                    <motion.div {...scrollInViewSpringProps} className="mob-tab-cont">
+                    <motion.div {...scrollInViewSpringOnceProps} className="mob-tab-cont">
                         <motion.div
                             key={active}
                             initial={{ opacity: 0, x: direction * 50 }}

@@ -2,7 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 import './index.css'
 import { motion } from "motion/react"
-import { scrollInViewSpringProps } from '@/utils/motionConfig'
+import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import circleOut1 from '@/assets/images/img/circle_out1.png'
 import circleOut2 from '@/assets/images/img/circle_out2.png'
 import circleOut3 from '@/assets/images/img/circle_out3.png'
@@ -40,7 +40,7 @@ export default function PageCooperate() {
     return (
         <div className='mob-cpa-box'>
             <div className="mob-cpa-container">
-                <motion.div className='mob-cpa-title' {...scrollInViewSpringProps}>
+                <motion.div className='mob-cpa-title' {...scrollInViewSpringOnceProps}>
                     {cooperateList.mbTitle}
                 </motion.div>
                 <div className='mob-cpa-content'>
@@ -69,11 +69,11 @@ export default function PageCooperate() {
                         </div>
                     </div>
                     <div className='mob-cpa-content-bottom' >
-                        <motion.div  {...scrollInViewSpringProps} className='mob-cpa-ct-bt-desc'>
+                        <motion.div  {...scrollInViewSpringOnceProps} className='mob-cpa-ct-bt-desc'>
                           {cooperateList.mbDesc}
                         </motion.div>
 
-                        <motion.button {...scrollInViewSpringProps} className='mob-cpa-ct-bt-btn'>
+                        <motion.button {...scrollInViewSpringOnceProps} className='mob-cpa-ct-bt-btn'>
                             <span className="mob-bt-text">{cooperateList.btn}</span>
                             <svg xmlns="http://www.w3.org/2000/svg" className="mob-arr-1" viewBox="0 0 24 24">
                                 <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './index.css';
 import logo from '@/assets/svg/logo-black.svg'
 import { IconFont } from '@/utils/antdUtils';
-import {mobMenuHrefListDefault} from '@/page/textConfig';
+import { mobMenuHrefListDefault } from '@/page/textConfig';
 const TopNav = () => {
   // const [isFirstOpenPage, setIsFirstOpenPage] = useState(true)
   const [openDrawer, setOpenDrawer] = useState(false)

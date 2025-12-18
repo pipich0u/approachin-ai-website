@@ -2,19 +2,19 @@ import './index.css'
 import { IconFont } from '@/utils/antdUtils';
 import { depList } from '@/page/textConfig';
 import { motion } from "motion/react"
-import { scrollInViewSpringProps } from '@/utils/motionConfig'
+import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 export default function DevelopPage() {
     return (
         <div className='mob-develop-box'>
             <div className='mob-dep-container'>
-                <motion.div className="mob-dep-title" {...scrollInViewSpringProps}>{depList.title}</motion.div>
-                <motion.div {...scrollInViewSpringProps} className='mob-dep-tabbox'>
+                <motion.div className="mob-dep-title" {...scrollInViewSpringOnceProps}>{depList.title}</motion.div>
+                <motion.div {...scrollInViewSpringOnceProps} className='mob-dep-tabbox'>
                     {
                         depList.list.map((item, index) =>
                             <>
                                 <motion.div
                                     key={`active-${index}`}
-                                    {...scrollInViewSpringProps}
+                                    {...scrollInViewSpringOnceProps}
                                     className={`mob-dep-tab-items`}
                                 >
                                     <div className='mob-dep-tab-item-icon'>
