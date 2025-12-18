@@ -50,10 +50,10 @@
   height: 68px;
   animation: scroll-infinite 70s linear infinite;
 }
-
+/* 
 .mob-case-scroll-track:hover {
   animation-play-state: paused;
-}
+} */
 
 @keyframes scroll-infinite {
   from {
