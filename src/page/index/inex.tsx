@@ -74,7 +74,7 @@ export default function Index() {
                 <DevelopPage />
                 <PageConsult />
                 <PageContact />
-                <FloatBtnEle/>
+                {/* <FloatBtnEle/> */}
             </div>
         </div >
     );

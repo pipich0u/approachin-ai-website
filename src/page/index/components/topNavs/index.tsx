@@ -4,7 +4,7 @@ import logo_black from '@/assets/svg/logo-black.svg';
 import { useNavigate } from 'react-router-dom';
 import { Button, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
-import {menuHrefListDefault} from '@/page/textConfig';
+import { menuHrefListDefault } from '@/page/textConfig';
 const TopNavs = () => {
   const navigate = useNavigate();
 
@@ -37,7 +37,7 @@ const TopNavs = () => {
       <div className="app w-full flex justify-between">
 
         <div className="logo flex items-center">
-          <img src={logo_black} alt="" />
+          <img src={logo_black} alt="" className=' cursor-pointer ' onClick={() => navigate('/')} />
           <div className="navbar-container ml-[100px]">
             {menuHrefListDefault.map((item, index) => {
 

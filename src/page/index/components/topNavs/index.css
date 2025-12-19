@@ -39,13 +39,11 @@
   font-style: Medium;
   font-size: 13px;
   line-height: 100%;
-  letter-spacing: 0%;
-
 }
 
 
 .navbar-items {
-  color: #00000080;
+  color: #2D3039;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;

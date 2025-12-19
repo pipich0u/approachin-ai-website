@@ -22,7 +22,7 @@ export const menuHrefListDefault = [
     },
     {
         title: '模型仓库',
-        href: 'pageKt',
+        href: 'models',
         isSelected: false
     },
     {
@@ -32,7 +32,7 @@ export const menuHrefListDefault = [
     },
     {
         title: '生态合作',
-        href: 'DevelopPage',
+        href: 'cooperate',
         isSelected: false
     },
     {
@@ -80,7 +80,7 @@ export const mobMenuHrefListDefault = [
     },
     {
         title: '生态合作',
-        href: 'DevelopPage',
+        href: 'cooperate',
         isSelected: false
     },
     {

@@ -1,34 +1,33 @@
-import React, { createRef, forwardRef, useEffect, useImperativeHandle } from 'react';
+import { useEffect } from 'react';
 import './index.css';
 import logo from '@/assets/images/logo.png'
 import logo_black from '@/assets/svg/logo-black.svg'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const TopNav = () => {
   const navigate = useNavigate();
 
-  // const onNavigate = (index: string, nb: number) => {
-  //   navigate(index);
-  //   setActiveSection(nb)
-  // };
+  const onNavigate = (index: string) => {
+    navigate(index);
+  };
   const navItems = [
-    { title: '解决方案', id: 0, isSelected:true, href: 'pageIndex' },
-    { title: '开源社区', id: 1, isSelected:true, href: 'pageProduct' },
-    { title: '模型仓库', id: 2, isSelected:false, href: 'pageTechnology' },
-    { title: '客户案例', id: 3, isSelected:false, href: 'pageKt' },
-    { title: '生态合作', id: 4, isSelected:false, href: 'pageInfo' },
-    { title: '趋境咨询', id: 5, isSelected:false, href: 'DevelopPage' },
-    { title: '关于我们', id: 6, isSelected:true, href: 'PageTeam' },
+    { title: '解决方案', id: 0, isSelected: true, href: 'pageIndex' },
+    { title: '开源社区', id: 1, isSelected: true, href: 'pageProduct' },
+    { title: '模型仓库', id: 2, isSelected: false, href: '/models' },
+    { title: '客户案例', id: 3, isSelected: false, href: 'pageKt' },
+    { title: '生态合作', id: 4, isSelected: false, href: '/cooperate' },
+    { title: '趋境咨询', id: 5, isSelected: false, href: 'DevelopPage' },
+    { title: '关于我们', id: 6, isSelected: true, href: 'PageTeam' },
   ];
+
   useEffect(() => {
     // onNavigate('pageIndex')
   }, [])
 
-
   return (
     <nav className={`top-nav bg-1 `}>
       <div className='app container'>
-        <div className="logo">
+        <div className="logo" onClick={() => onNavigate('/')} >
           <a href="/">
             <img src={logo} alt="" />
           </a>
@@ -38,8 +37,7 @@ const TopNav = () => {
             <div
               id={'home-nav-' + item.id}
               key={item.id}
-             
-              // onClick={() => onNavigate(item.href)}
+              onClick={() => onNavigate(item.href)}
             >
               {item.title}
               {<div className="nav-underline" />}
