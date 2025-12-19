@@ -1,0 +1,124 @@
+.step-container {
+    width: 100%;
+    padding: 50px 0;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.step-title {
+    color: #1B1D22;
+    text-align: center;
+    font-family: MiSans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 520;
+    line-height: 150%;
+    letter-spacing: 0.8px;
+    margin-bottom: 10px;
+}
+
+.step-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: fit-content;
+}
+
+.step-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: fit-content;
+}
+.step-items:last-child{
+    padding-top: 40px;
+}
+.step-linebox {
+    position: absolute;
+    right: -75px;
+    top: 40px;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+}
+
+.step-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    font-family: MiSans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 520;
+    line-height: 150%;
+    opacity: 0.9;
+    max-width: 208px;
+}
+
+.step-line {
+    /* border: 2px solid #DCD6FF; */
+    width: 120px;
+    height: 2px;
+    background: #DCD6FF;
+    position: relative;
+}
+
+.step-icon-line {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+
+.step-btn {
+    display: inline-flex;
+    padding: 10px 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #806BFF;
+    gap: 4px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    margin-top: 10px;
+}
+
+.step-btn:active {
+    scale: 0.95;
+    transition: all 0.1s ease-in-out;
+}
+
+.step-btn-text {
+    color: #FFF;
+    font-family: MiSans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 380;
+    line-height: 150%;
+    /* 24px */
+}
+
+.step-btn .arr-1 {
+    width: 24px;
+    height: 24px;
+    fill: #FFFFFF;
+}

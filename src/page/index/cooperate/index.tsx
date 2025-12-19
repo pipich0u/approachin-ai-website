@@ -6,6 +6,8 @@ import CooperateSystem from './components/system'
 import CooperateBuddy from './components/buddy'
 import CooperateCarousel from './components/carousel'
 import CooperateStep from './components/step'
+import PageConsult from '../components/consult'
+import PageContact from '../components/contact'
 
 export default function CooperatePage() {
     return <>
@@ -18,6 +20,8 @@ export default function CooperatePage() {
                 <CooperateBuddy />
                 <CooperateCarousel />
                 <CooperateStep />
+                <PageConsult />
+                <PageContact />
             </div>
         </div >
     </>
