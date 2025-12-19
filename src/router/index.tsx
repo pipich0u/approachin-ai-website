@@ -3,6 +3,7 @@ import Index from "@/page/index/inex";
 import Layout from "@/layout";
 import InfoPage from "@/page/index/info/index";
 import ModelsRepository from "@/page/index/modelsNew/modelsRepostory";
+import CooperatePage from "@/page/index/cooperate";
 const _rooter: RouteObject[] = [
 
     {
@@ -21,6 +22,10 @@ const _rooter: RouteObject[] = [
             {
                 path: "/models",
                 element: <ModelsRepository />
+            },
+            {
+                path: "/cooperate",
+                element: <CooperatePage />
             },
        
         ],
