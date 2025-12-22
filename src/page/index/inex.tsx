@@ -15,7 +15,7 @@ import PageQuestion from './components/question/index';
 import PageConsult from './components/consult/index';
 import PageCase from './components/case';
 import SourcePage from './components/source';
-import FloatBtnEle from './components/floatButton';
+// import FloatBtnEle from './components/floatButton';
 
 
 export default function Index() {
