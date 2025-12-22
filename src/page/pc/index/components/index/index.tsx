@@ -2,7 +2,7 @@ import './index.css'
 import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig'
 import { useState, useEffect } from 'react';
-import {indexPageList} from '@/page/textConfig';
+import { indexPageList } from '@/page/textConfig';
 
 export default function PageIndex() {
     const [showContent, setShowContent] = useState(false);
@@ -66,7 +66,7 @@ export default function PageIndex() {
                         onAnimationComplete={() => setShowContent(true)}
                     />
 
-                    {showContent && <div className='relative z-10 w-full h-full flex flex-col '>
+                    {showContent && <div className='relative z-10 w-full mt-15 flex flex-col '>
                         <div className="title">
                             <motion.div {...initialLoadProps} className='title-top text-[#1B1D22] flex'>
                                 {indexPageList[0].title}<div className='title-top-text'>{indexPageList[0].color}</div>
@@ -80,37 +80,37 @@ export default function PageIndex() {
                                 <span className="text-white font-[380] bt-text">{indexPageList[0].ask}</span>
                             </motion.button>
 
-                            <motion.div {...initialLoadProps} className='index-bottom flex py-[19px] px-12 mt-20 w-[1070px] h-20 rounded-[20px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
+                            <motion.div {...initialLoadProps} className='index-bottom flex justify-between py-[45px] px-12 mt-28 w-[1210px] h-[130px] rounded-[20px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
                                 <div className='index-bottom-item flex items-center gap-2'>
-                                    <div className='text-[#333] text-2xl font-[520]'>{indexPageList[0].list[0].item}</div>
+                                    <div className='text-[#333] text-4xl font-[520]'>{indexPageList[0].list[0].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
                                         <div>{indexPageList[0].list[0].desc[0]}</div> <div>{indexPageList[0].list[0].desc[1]}</div>
                                     </div>
                                 </div>
-                                <div className='index-line w-px mx-10.5'></div>
+                                <div className='index-line w-px mx-9'></div>
                                 <div className='index-bottom-item flex items-center gap-2'>
-                                    <div className='text-[#333] text-2xl font-[520]'>{indexPageList[0].list[1].item}</div>
+                                    <div className='text-[#333] text-4xl font-[520]'>{indexPageList[0].list[1].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
                                         <div>{indexPageList[0].list[1].desc[0]}</div><div>{indexPageList[0].list[1].desc[1]}</div>
                                     </div>
                                 </div>
-                                <div className='index-line w-px mx-10.5'></div>
+                                <div className='index-line w-px mx-9'></div>
                                 <div className='index-bottom-item flex items-center gap-2'>
-                                    <div className='text-[#333] text-2xl font-[520]'>{indexPageList[0].list[2].item}</div>
+                                    <div className='text-[#333] text-4xl font-[520]'>{indexPageList[0].list[2].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
                                         <div>{indexPageList[0].list[2].desc[0]}</div> <div>{indexPageList[0].list[2].desc[1]}</div>
                                     </div>
                                 </div>
-                                <div className='index-line w-px mx-10.5'></div>
+                                <div className='index-line w-px mx-9'></div>
                                 <div className='index-bottom-item flex items-center gap-2'>
-                                    <div className='text-[#333] text-2xl font-[520]'>{indexPageList[0].list[3].item}</div>
+                                    <div className='text-[#333] text-4xl font-[520]'>{indexPageList[0].list[3].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
                                         <div>{indexPageList[0].list[3].desc[0]}</div> <div>{indexPageList[0].list[3].desc[1]}</div>
                                     </div>
                                 </div>
-                                <div className='index-line w-px mx-10.5'></div>
+                                <div className='index-line w-px mx-9'></div>
                                 <div className='index-bottom-item flex items-center gap-2'>
-                                    <div className='text-[#333] text-2xl font-[520]'>{indexPageList[0].list[4].item}</div>
+                                    <div className='text-[#333] text-4xl font-[520]'>{indexPageList[0].list[4].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
                                         <div>{indexPageList[0].list[4].desc[0]}</div> <div>{indexPageList[0].list[4].desc[1]}</div>
                                     </div>
