@@ -9,14 +9,14 @@ interface SearchModelParams {
     source?: { MULTI_EQUAL: string[] };
 }
 
-export const getModels = async (params:{page:number,pageSize:number}) => {
+export const getModels = async (params: { page: number, pageSize: number }) => {
     return request('/api/model-metadata', {
         method: 'POST',
         params: params
     });
 }
 
-export const searchModels = async (body: SearchModelParams,params:{page:number,pageSize:number}) => {
+export const searchModels = async (body: SearchModelParams, params: { page: number, pageSize: number }) => {
     return request('/api/model-metadata', {
         method: 'POST',
         body: body,
@@ -51,6 +51,12 @@ export const getModelApi = async (model_name: string) => {
 
 export const getVersion = async () => {
     return request('/api/model-metadata/version', {
+        method: 'GET',
+    });
+}
+
+export const getGitSource = async (org: string, repo: string, perPage: number, page: number) => {
+    return request(`https://api.github.com/repos/${org}/${repo}/contributors?per_page=${perPage}&page=${page}`, {
         method: 'GET',
     });
 }
