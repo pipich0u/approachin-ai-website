@@ -9,6 +9,11 @@
     background: url(/src/assets/images/img/consult-bg.png) no-repeat 100% 100%;
     background-size: cover;
 }
+.cpa-bg {
+
+    background: url(/src/assets/images/img/cpa_bg.png) no-repeat 100% 100%;
+    background-size: cover;
+}
 
 .consult-title {
     font-weight: 520;

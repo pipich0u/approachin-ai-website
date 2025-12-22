@@ -25,7 +25,7 @@ export default function CooperatePage() {
                 <CooperateBuddy />
                 <CooperateCarousel />
                 <CooperateStep />
-                <PageConsult />
+                <PageConsult name="cpa-bg" />
                 <PageContact />
             </div>
         </div >

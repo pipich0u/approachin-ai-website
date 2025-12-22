@@ -4,10 +4,14 @@ import { motion } from "motion/react"
 import { scrollInViewSpringProps } from '@/utils/motionConfig'
 import { consultList } from '@/page/textConfig'
 
-export default function PageConsult() {
+interface Props {
+    name?: string
+}
+
+export default function PageConsult({ name }: Props) {
 
     return (
-        <div className='consult-container'>
+        <div className={`consult-container ${name}`}>
             <motion.div {...scrollInViewSpringProps} className='consult-title'>{consultList.title}</motion.div>
             <motion.div {...scrollInViewSpringProps} className='consult-desc'>{consultList.desc}</motion.div>
 
