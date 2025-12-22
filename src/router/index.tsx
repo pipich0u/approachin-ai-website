@@ -1,13 +1,14 @@
 import type { RouteObject } from "react-router-dom"
-import Index from "@/page/index/inex"
-import Layout from "@/layout"
-import ModelsRepository from "@/page/index/modelsNew/modelsRepostory"
-import CooperatePage from "@/page/index/cooperate"
-import { KT } from "@/page/index/KT"
+import Index from "@/page/pc/index/inex"
+import Layout from "@/page/pc/index"
+import ModelsRepository from "@/page/pc/modelsNew/modelsRepostory"
+import CooperatePage from "@/page/pc/cooperate"
+import { KT } from "@/page/pc/KT"
 
 // mobile
-import MobileIndex from "@/page/mobile"
+import MobileIndex from "@/page/mobile/index/index.tsx"
 import { MobileKT } from "@/page/mobile/KT"
+import MobileLayout from "@/page/mobile/index.tsx"
 // import MobileLayout from "@/layout/mobile"
 // import MobileIndex from "@/page/mobile"
 // import MobileModels from "@/page/mobile/models"
@@ -19,12 +20,12 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
         return [
             {
                 path: "/",
-                element: <MobileIndex />,
+                element: <MobileLayout />,
                 children: [
-                    //       {
-                    //         index: true,
-                    //         element: <MobileIndex />,
-                    //       },
+                    {
+                        index: true,
+                        element: <MobileIndex />,
+                    },
                     {
                         path: "ktransformers",
                         element: <MobileKT />,

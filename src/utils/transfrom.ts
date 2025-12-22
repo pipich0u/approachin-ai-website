@@ -17,3 +17,10 @@ export const textCopy = (text: string) => {
     // 复制
     document.execCommand("copy", true);
 };
+
+export function track(event: string, data?: Record<string, any>) {
+  if (!import.meta.env.PROD) return
+  if (!(window as any).umami) return
+
+  ;(window as any).umami.track(event, data)
+}
