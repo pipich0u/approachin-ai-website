@@ -22,7 +22,7 @@ const TopNavs = () => {
         key: `${index}`,
         label: (
           <div
-            className="text-[13px] "
+            className="text-[16px] "
             onClick={() => onNavigate(subItem.href)}
           >
             {subItem.title}

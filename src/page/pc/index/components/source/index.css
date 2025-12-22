@@ -39,12 +39,12 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 40px;
-    border-radius: 18px;
     overflow: hidden;
     position: relative;
     width: 600px;
     height: 422px;
-
+    border-radius: 18px;
+    box-shadow: 0 4px 30px 0 rgba(32, 0, 59, 0.06);
 }
 
 .source-cont-left {

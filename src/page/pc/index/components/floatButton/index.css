@@ -11,6 +11,9 @@
     align-items: center;
     gap: 4px;
 }
+.ant-tooltip-inner{
+    border-radius: 8px !important;
+}
 .ant-float-btn-content{
     width: 40px;
 }
