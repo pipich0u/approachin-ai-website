@@ -9,11 +9,6 @@ import { KT } from "@/page/pc/KT"
 import MobileIndex from "@/page/mobile/index/index.tsx"
 import { MobileKT } from "@/page/mobile/KT"
 import MobileLayout from "@/page/mobile/index.tsx"
-// import MobileLayout from "@/layout/mobile"
-// import MobileIndex from "@/page/mobile"
-// import MobileModels from "@/page/mobile/models"
-// import MobileCooperate from "@/page/mobile/cooperate"
-// import MobileKT from "@/page/mobile/KT"
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
     if (isMobile) {
@@ -30,10 +25,6 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                         path: "ktransformers",
                         element: <MobileKT />,
                     },
-                    //       {
-                    //         path: "models",
-                    //         element: <MobileModels />,
-                    //       },
                     //       {
                     //         path: "cooperate",
                     //         element: <MobileCooperate />,
