@@ -12,7 +12,7 @@
     gap: 4px;
 }
 .ant-tooltip-inner{
-    border-radius: 8px !important;
+    border-radius: 10px !important;
 }
 .ant-float-btn-content{
     width: 40px;
