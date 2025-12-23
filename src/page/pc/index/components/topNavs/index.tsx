@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { menuHrefListDefault } from '@/page/textConfig';
+import { IconFont } from '@/utils/antdUtils';
 const TopNavs = () => {
   const navigate = useNavigate();
 
@@ -22,7 +23,7 @@ const TopNavs = () => {
         key: `${index}`,
         label: (
           <div
-            className="text-[14px] "
+            className="text-[14px] flex items-center justify-center"
             onClick={() => onNavigate(subItem.href)}
           >
             {subItem.title}
@@ -68,8 +69,8 @@ const TopNavs = () => {
                     onMouseLeave={() => setHoverIndex(null)}
                   >
                     {item.title}
-                    <DownOutlined
-                      className={`ml-1 transition-all duration-800
+                    <IconFont type='icon-down-s'
+                      className={`ml-1 transition-all duration-800 text-[20px]!
                        ${hoverIndex === index ? 'rotate-180' : 'rotate-0'}`}
                     />
                   </div>

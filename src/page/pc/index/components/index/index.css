@@ -189,3 +189,6 @@
 .animated-button:active {
     scale: 0.95;
 }
+.ant-dropdown-menu-item{
+    padding:6 0!important;
+}

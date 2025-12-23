@@ -4,6 +4,7 @@ import Layout from "@/page/pc/index"
 import ModelsRepository from "@/page/pc/modelsNew/modelsRepostory"
 import CooperatePage from "@/page/pc/cooperate"
 import { KT } from "@/KT/mob-KT"
+import { MoonCake } from "@/page/pc/moonCake"
 
 // mobile
 import MobileIndex from "@/page/mobile/index/index.tsx"
@@ -46,6 +47,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                 {
                     path: "ktransformers",
                     element: <KT />,
+                },
+                {
+                    path: "mooncake",
+                    element: <MoonCake />,
                 },
                 {
                     path: "models",

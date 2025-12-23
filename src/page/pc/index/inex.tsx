@@ -63,7 +63,7 @@ export default function Index() {
         <div className="w-100 h-100" >
             <ReactLenis root />
             <div className='flex items-center flex-col bg-[#fafafa]'>
-                <TopNavs />
+                {/* <TopNavs /> */}
                 <PageIndex />
                 <PageProduct />
                 <PageQuestion />

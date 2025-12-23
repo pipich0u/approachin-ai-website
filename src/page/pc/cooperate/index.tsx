@@ -27,7 +27,7 @@ export default function CooperatePage() {
         <div className="w-100 h-100" >
             <ReactLenis root />
             <div className='cooperate-page-content'>
-                <TopNavs />
+                {/* <TopNavs /> */}
                 <CooperateBanner />
                 <CooperateSystem />
                 <CooperateBuddy />
