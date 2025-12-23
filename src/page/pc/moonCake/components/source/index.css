@@ -1,0 +1,88 @@
+.moon-source-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 80px 0;
+}
+
+.moon-source-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.moon-source-title {
+    color: #1B1D22;
+    text-align: center;
+    font-family: MiSans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 520;
+    line-height: 150%;
+    letter-spacing: 0.8px;
+}
+
+.moon-source-desc {
+    color: #000;
+    text-align: justify;
+    font-family: MiSans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 380;
+    line-height: 150%;
+    opacity: 0.4;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.moon-source-bottom {
+    display: grid;
+    grid-template-columns: repeat(16, 60px);
+    gap: 10px;
+    max-width: 1200px;
+}
+
+.contributor-item {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.contributor-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contributor-avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contributor-name {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.contributor-item:hover .contributor-name {
+    opacity: 1;
+}

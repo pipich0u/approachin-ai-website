@@ -55,8 +55,16 @@ export const getVersion = async () => {
     });
 }
 
-export const getGitSource = async (org: string, repo: string, perPage: number, page: number) => {
-    return request(`https://api.github.com/repos/${org}/${repo}/contributors?per_page=${perPage}&page=${page}`, {
+export const getGitSource = async (org: string, repo: string, perPage: number = 100, page: number = 1) => {
+    return request(`https://api.github.com/repos/${org}/${repo}/contributors`, {
         method: 'GET',
+        params: {
+            per_page: Math.min(perPage, 100), // GitHub API 最大支持 100
+            page: page
+        },
+        headers: {
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'approaching-ai-app'
+        }
     });
 }
