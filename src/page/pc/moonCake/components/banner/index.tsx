@@ -20,12 +20,12 @@ export const MoonBanner = () => {
                     <IconFont type="icon-qxz" className='mo-btn-icon' />
                     <span className='mo-btn-text'>免费下载</span>
                 </button>
-                <button className='mo-con-btn'>
-                    <IconFont type="icon-qxz" className='mo-btn-icon' />
+                <button className='mo-con-btn' onClick={() => window.open('https://github.com/kvcache-ai/Mooncake')}>
+                    <IconFont type="icon-github" className='mo-btn-icon' />
                     <span className='mo-btn-text'>Github</span>
                 </button>
                 <button className='mo-con-btn'>
-                    <IconFont type="icon-qxz" className='mo-btn-icon' />
+                    <IconFont type="icon-model" className='mo-btn-icon' />
                     <span className='mo-btn-text'>模型对比</span>
                 </button>
             </div>

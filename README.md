@@ -1,54 +1,48 @@
-# React + TypeScript + Vite
+# Approaching AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一个现代化的 AI 产品展示网站，基于 React + TypeScript + Vite 构建，展示 KTransformers、Mooncake 等 AI 开源项目。
 
-Currently, two official plugins are available:
+## 项目简介
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Approaching AI 是一个响应式 Web 应用，提供完整的 PC 端和移动端体验，用于展示和推广先进的 AI 基础设施项目。
 
-## Expanding the ESLint configuration
+### 主要功能
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **首页展示** - 产品介绍、案例展示、技术咨询
+- **KTransformers** - 高性能推理引擎展示页
+- **Mooncake** - KV Cache 解决方案展示页
+- **模型仓库** - AI 模型展示与管理
+- **商务合作** - 合作流程与联系方式
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 快速开始
+
+### 安装依赖
+
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 开发运行
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+pnpm dev 
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
+```
+
+### 构建部署
+
+```bash
+# 生产构建
+pnpm build
+
+# 预览构建结果
+pnpm preview
+```
+
+# 快捷提交代码
+```bash
+pnpm push
 ```

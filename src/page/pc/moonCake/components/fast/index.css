@@ -1,8 +1,16 @@
 .moon-fast-container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #FFF 0%, #FBFAFF 100%);
+}
+
+.moon-fast-content {
+    width: 100%;
     max-width: 1440px;
     height: 846px;
-    background: linear-gradient(180deg, #FFF 0%, #FBFAFF 100%);
 }
 
 .mo-fa-nav {
@@ -37,7 +45,7 @@
     display: flex;
     width: 1220px;
     height: 500px;
-    margin: 40px auto 0;
+    margin: 60px auto 0;
     gap: 0;
     border-radius: 20px;
     background: #FFF;
