@@ -9,9 +9,9 @@ export const MoonFast = () => {
     const videoRef = useRef<HTMLVideoElement>(null)
 
     const tabs = [
-        { id: 0, label: '安装 Transfer Engine', videoUrl: 'https://example.com/video1.mp4' },
-        { id: 1, label: '启动 Mooncake Store', videoUrl: 'https://example.com/video2.mp4' },
-        { id: 2, label: 'vLLM 集成示例', videoUrl: 'https://example.com/video3.mp4' }
+        { id: 0, label: '安装 Transfer Engine', videoUrl: 'https://vjs.zencdn.net/v/oceans.mp4' },
+        { id: 1, label: '启动 Mooncake Store', videoUrl: 'https://www.w3schools.com/html/movie.mp4' },
+        { id: 2, label: 'vLLM 集成示例', videoUrl: 'https://media.w3.org/2010/05/sintel/trailer.mp4' }
     ]
 
     const togglePlay = () => {

@@ -16,11 +16,7 @@ export const MoonSource = ({ list }: MoonSourceProps) => {
         <motion.div {...scrollInViewSpringOnceProps} className='moon-source-bottom'>
             {list.map((contributor) => (
                 <div key={contributor.id} className='contributor-item' title={contributor.login}>
-                    <img
-                        src={contributor.avatar_url}
-                        alt={contributor.login}
-                        className='contributor-avatar'
-                    />
+                    <img src={contributor.avatar_url} alt={contributor.login} className='contributor-avatar' />
                     <span className='contributor-name'>{contributor.login}</span>
                 </div>
             ))}
