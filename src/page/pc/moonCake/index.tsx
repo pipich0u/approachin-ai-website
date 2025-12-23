@@ -16,25 +16,25 @@ export const MoonCake = () => {
         const fetchData = async () => {
             const org = 'kvcache-ai';
             const repo = 'Mooncake';
-            const allContributors: any[] = [];
-            let page = 1;
-            let hasMore = true;
 
-            // 循环获取所有分页数据
-            while (hasMore) {
-                const res = await getGitSource(org, repo, 100, page);
-                if (res && res.length > 0) {
-                    allContributors.push(...res);
-                    page++;
-                    // 如果返回的数量少于100，说明已经是最后一页了
-                    if (res.length < 100) {
-                        hasMore = false;
-                    }
-                } else {
-                    hasMore = false;
+            try {
+                const [page1, page2] = await Promise.all([
+                    getGitSource(org, repo, 100, 1),
+                    getGitSource(org, repo, 100, 2)
+                ]);
+
+                const allContributors = [];
+                if (page1 && page1.length > 0) {
+                    allContributors.push(...page1);
                 }
+                if (page2 && page2.length > 0) {
+                    allContributors.push(...page2);
+                }
+
+                setList(allContributors);
+            } catch (error) {
+                console.error('获取贡献者数据失败:', error);
             }
-            setList(allContributors);
         };
 
         fetchData();

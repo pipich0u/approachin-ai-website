@@ -1,35 +1,11 @@
 import './index.css'
 import { motion } from 'motion/react'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
-import step1 from '@/assets/images/img/moon-step1.png'
-import step2 from '@/assets/images/img/moon-step2.png'
-import step3 from '@/assets/images/img/moon-step3.png'
-import step4 from '@/assets/images/img/moon-step4.png'
 import stepLine from '@/assets/images/img/step-line.png'
+import { MoonStepList } from '../../textConfig'
 
 export const MoonStep = () => {
-    const stepList = [
-        {
-            title: 'Feb 25, 2025',
-            desc: '荣获 FAST 2025 Best Paper Award',
-            img: step1
-        },
-        {
-            title: 'Nov 28, 2024',
-            desc: 'Transfer Engine 正式开源',
-            img: step2
-        },
-        {
-            title: 'Jul 20, 2025',
-            desc: '支持Kimi K2在128×H200部署',
-            img: step3
-        },
-        {
-            title: 'Sept 10, 2025',
-            desc: 'SGLang HiCache集成发布',
-            img: step4
-        },
-    ]
+
 
     // 计算每个圆点的透明度，从100%逐渐降低到30%
     const getCircleOpacity = (index: number) => {
@@ -39,7 +15,7 @@ export const MoonStep = () => {
 
     return <div className='moon-step-container'>
         <div className='moon-step-content'>
-            {stepList.map((item, index) => (
+            {MoonStepList.map((item, index) => (
                 <motion.div
                     key={index}
                     {...scrollInViewSpringOnceProps}
@@ -50,7 +26,7 @@ export const MoonStep = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <circle cx="12" cy="12" r="12" fill="#3D00CC" opacity={getCircleOpacity(index)} />
                             </svg>
-                            {index < stepList.length - 1 && (
+                            {index < MoonStepList.length - 1 && (
                                 <img src={stepLine} alt="step line" className='moon-step-line' />
                             )}
                         </div>

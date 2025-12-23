@@ -2,17 +2,11 @@ import './index.css'
 import { motion } from 'motion/react'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import { useState, useRef } from 'react'
-
+import { moonFastList } from '../../textConfig'
 export const MoonFast = () => {
     const [activeTab, setActiveTab] = useState(0)
     const [isPlaying, setIsPlaying] = useState(false)
     const videoRef = useRef<HTMLVideoElement>(null)
-
-    const tabs = [
-        { id: 0, label: '安装 Transfer Engine', videoUrl: 'https://vjs.zencdn.net/v/oceans.mp4' },
-        { id: 1, label: '启动 Mooncake Store', videoUrl: 'https://www.w3schools.com/html/movie.mp4' },
-        { id: 2, label: 'vLLM 集成示例', videoUrl: 'https://media.w3.org/2010/05/sintel/trailer.mp4' }
-    ]
 
     const togglePlay = () => {
         if (videoRef.current) {
@@ -32,21 +26,21 @@ export const MoonFast = () => {
     return <div className='moon-fast-container'>
         <div className='moon-fast-content'>
             <motion.div {...scrollInViewSpringOnceProps} className='mo-fa-nav'>
-                <div className='mo-fa-title'>快速开始</div>
-                <div className='mo-fa-desc'>Mooncake 吞吐量提升效果</div>
+                <div className='mo-fa-title'>{moonFastList.title}</div>
+                <div className='mo-fa-desc'>{moonFastList.desc}</div>
             </motion.div >
             <div className='mo-fa-tabbox'>
                 <div className='mo-fa-tab-left'>
-                    {tabs.map((tab) => (
+                    {moonFastList.tab.map((tabs) => (
                         <div
-                            key={tab.id}
-                            className={`mo-fa-tab-item ${activeTab === tab.id ? 'active' : ''}`}
+                            key={tabs.id}
+                            className={`mo-fa-tab-item ${activeTab === tabs.id ? 'active' : ''}`}
                             onClick={() => {
-                                setActiveTab(tab.id)
+                                setActiveTab(tabs.id)
                                 setIsPlaying(false)
                             }}
                         >
-                            <div>{tab.label}</div>
+                            <div>{tabs.label}</div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M2.00014 13.0003L2 11.0004H18.1719L14.2222 7.05068L15.6364 5.63647L22.0004 12.0004L15.6364 18.3644L14.2222 16.9501L18.172 13.0004L2.00014 13.0003Z" fill="#6C3AE1" />
                             </svg>
@@ -58,7 +52,7 @@ export const MoonFast = () => {
                         ref={videoRef}
                         key={activeTab}
                         className='mo-fa-video'
-                        src={tabs[activeTab].videoUrl}
+                        src={moonFastList.tab[activeTab].videoUrl}
                         onPlay={() => setIsPlaying(true)}
                         onPause={() => setIsPlaying(false)}
                         controls
