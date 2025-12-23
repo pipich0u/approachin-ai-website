@@ -1,4 +1,3 @@
-import ReactLenis from 'lenis/react'
 import './index.css'
 import TopNavs from '../index/components/topNavs'
 import CooperateBanner from './components/banner'
@@ -25,7 +24,6 @@ export default function CooperatePage() {
     }, [])
     return <>
         <div className="w-100 h-100" >
-            <ReactLenis root />
             <div className='cooperate-page-content'>
                 {/* <TopNavs /> */}
                 <CooperateBanner />

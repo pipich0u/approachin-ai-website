@@ -1,0 +1,111 @@
+.moon-fast-container {
+    width: 100%;
+    max-width: 1440px;
+    height: 846px;
+    background: linear-gradient(180deg, #FFF 0%, #FBFAFF 100%);
+}
+
+.mo-fa-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.mo-fa-title {
+    color: #1B1D22;
+    text-align: center;
+    font-family: MiSans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 150%;
+    letter-spacing: 0.8px;
+}
+
+.mo-fa-desc {
+    color: #666;
+    text-align: justify;
+    font-family: MiSans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 305;
+    line-height: 150%;
+}
+
+.mo-fa-tabbox {
+    display: flex;
+    width: 1220px;
+    height: 500px;
+    margin: 40px auto 0;
+    gap: 0;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0 4px 40px 0 rgba(74, 0, 139, 0.06);
+    overflow: hidden;
+}
+
+.mo-fa-tab-left {
+    width: 420px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.mo-fa-tab-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #333;
+    font-family: MiSans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 380;
+    line-height: 150%;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 67px 77px 74px 68px;
+}
+
+.mo-fa-tab-item:hover {
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.mo-fa-tab-item.active {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.mo-fa-tab-right {
+    width: 800px;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.mo-fa-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mo-fa-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mo-fa-play-button:hover {
+    opacity: 0.8;
+}

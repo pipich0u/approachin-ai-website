@@ -9,8 +9,6 @@ import PageTab from './components/tab/index'
 import PageCooperate from './components/PageCooperate/index'
 import PageContact from './components/contact/index'
 import DevelopPage from './components/develop';
-import { ReactLenis } from 'lenis/react'
-import TopNavs from './components/topNavs';
 import PageQuestion from './components/question/index';
 import PageConsult from './components/consult/index';
 import PageCase from './components/case';
@@ -61,7 +59,6 @@ export default function Index() {
 
     return (
         <div className="w-100 h-100" >
-            <ReactLenis root />
             <div className='flex items-center flex-col bg-[#fafafa]'>
                 {/* <TopNavs /> */}
                 <PageIndex />
