@@ -53,7 +53,7 @@ export const MoonFast = () => {
                         </div>
                     ))}
                 </div>
-                <div className='mo-fa-tab-right' onClick={handleVideoClick}>
+                <div className='mo-fa-tab-right'>
                     <video
                         ref={videoRef}
                         key={activeTab}
@@ -61,14 +61,15 @@ export const MoonFast = () => {
                         src={tabs[activeTab].videoUrl}
                         onPlay={() => setIsPlaying(true)}
                         onPause={() => setIsPlaying(false)}
+                        controls
                     >
                         您的浏览器不支持视频播放
                     </video>
                     {!isPlaying && (
-                        <div className='mo-fa-play-button'>
+                        <div className='mo-fa-play-button' onClick={handleVideoClick}>
                             <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                                <circle cx="40" cy="40" r="40" fill="rgba(255, 255, 255, 0.9)" />
-                                <path d="M32 25L57 40L32 55V25Z" fill="#1B1D22" />
+                                <circle cx="40" cy="40" r="39" fill="rgba(0, 0, 0, 0.5)" stroke="white" strokeWidth="2" />
+                                <path d="M32 25L57 40L32 55V25Z" fill="white" />
                             </svg>
                         </div>
                     )}
