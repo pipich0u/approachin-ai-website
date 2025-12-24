@@ -37,7 +37,7 @@ export const menuHrefListDefault = [
     },
     {
         title: '趋境资讯',
-        href: 'PageTeam',
+        href: 'PageTeam', 
         isSelected: false
     },
     {
@@ -45,14 +45,14 @@ export const menuHrefListDefault = [
         href: 'PageTeam',
         isSelected: true,
         subItems: [
-            { title: '公司简介', href: 'about' },
-            { title: '团队介绍', href: 'team' },
-            { title: '联系我们', href: 'contact' }
+            { title: '联系我们', href: 'contact' },
+            { title: '企业介绍', href: 'about' },
+            { title: '企业资讯', href: 'info' },
         ]
     },
 ]
 export const mobMenuHrefListDefault = [
-    {
+    { 
         title: '解决方案',
         href: 'pageProduct',
         isSelected: true,

@@ -1,7 +1,6 @@
 .section-9 {
     height: 500px !important;
     background-color: #FAFCFF;
-    padding: 53px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,8 +11,9 @@
 }
 
 .contact-container {
-
+    width: 100%;
     max-width: 1440px;
+    padding: 0 120px;
 }
 
 .section-9>.fp-overflow {
@@ -35,12 +35,13 @@
 }
 
 .contact-box-left {
-    min-width: 260px;
+    min-width: 380px;
     width: 10%;
     display: flex;
     flex-direction: column;
     align-items: start;
     position: relative;
+    margin-right: 150px;
 }
 
 .contact-box-left-text {
@@ -63,7 +64,7 @@
     margin-left: 120px;
     display: flex;
     /* justify-content: space-between; */
-    gap: 70px;
+    gap: 60px;
 }
 
 .content-box-right-item {
@@ -104,9 +105,8 @@
 }
 
 .ewm {
-    margin-top: 16px;
-    width: 95px !important;
-    height: 95px !important;
+    width: 100px !important;
+    height: 100px !important;
 }
 
 .canlogo {
@@ -144,8 +144,8 @@
 }
 
 .contact-box-left-up {
-    width: 250px;
-    gap: 40px;
+    width: 385px;
+    gap: 24px;
     display: flex;
     margin-top: 30px;
 }
@@ -161,4 +161,23 @@
     width: 48px;
     height: 48px;
     border-radius: 8px;
+}
+
+.contact-user{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.contact-user-text {
+    color: rgba(51, 51, 51, 0.60);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: MiSans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 330;
+    line-height: 130%;
+    letter-spacing: 0.84px;
 }
