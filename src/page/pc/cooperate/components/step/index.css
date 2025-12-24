@@ -45,7 +45,7 @@
 }
 
 .step-items:last-child {
-    padding-top: 40px;
+    padding-top: 25px;
 }
 
 .step-linebox {
@@ -101,6 +101,7 @@
     gap: 4px;
     cursor: pointer;
     transition: all 0.1s ease-in-out;
+    margin-top: 20px;
 }
 
 .step-btn:active {

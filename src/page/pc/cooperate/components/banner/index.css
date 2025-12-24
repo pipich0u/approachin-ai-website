@@ -7,7 +7,16 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    justify-content: center;
+}
+
+.banner-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
     justify-content: space-between;
+    max-width: 1440px;
 }
 
 .banner-title {
