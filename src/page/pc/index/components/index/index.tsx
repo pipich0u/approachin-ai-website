@@ -76,7 +76,7 @@ export default function PageIndex() {
                                 {indexPageList[0].desc}
                             </motion.div>
 
-                            <motion.button {...initialLoadProps} className='animated-button  w-[180px] mt-8 h-11 rounded-lg bg-[#806BFF] '>
+                            <motion.button {...initialLoadProps} className='animated-button w-[180px] mt-8 h-11 rounded-lg bg-[#806BFF] '>
                                 <span className="text-white font-[380] bt-text">{indexPageList[0].ask}</span>
                             </motion.button>
 
@@ -122,7 +122,7 @@ export default function PageIndex() {
 
                 {/* Section 2 */}
                 <div className="section-2">
-                    <div className='fp-overflow relative z-10'>
+                    <div className='relative z-10'>
                         <div className="title">
                             <div className='title-top text-[#fbfbfb] flex'>
                                 稳定可靠服务·<div className='title-top-text'>全天守护</div>
@@ -136,7 +136,7 @@ export default function PageIndex() {
 
                 {/* Section 3 */}
                 <div className="section-3">
-                    <div className='fp-overflow relative z-10'>
+                    <div className='relative z-10'>
                         <div className="title">
                             <div className='title-top text-[#1B1D22] flex'>
                                 极速开发部署·<div className='title-top-text'>降本增效</div>
