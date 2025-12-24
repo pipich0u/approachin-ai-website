@@ -3,7 +3,7 @@ import './index.css'
 import logo from '@/assets/svg/logo-black.svg'
 import ewm from '@/assets/images/ewm.png'
 import { useNavigate } from 'react-router-dom';
-
+import { menuHrefListDefault } from '@/page/textConfig';
 // interface ContactProps {
 //     // onNavigate: (index: string) => void;
 // }
@@ -28,15 +28,11 @@ export default function PageContact() {
         { title: 'Mooncake', id: 3, href: '/' },
         { title: 'Mooncake', id: 4, href: '/' },
     ]
-    const openSource = [
-        { title: 'Ktransformer', id: 1, href: '/' },
-        { title: 'Mooncake', id: 2, href: '/' },
-    ]
+    const openSource = menuHrefListDefault[1].subItems || []
     const map = 'https://map.baidu.com/search/%E5%AD%A6%E6%B8%85%E5%98%89%E5%88%9B%E5%A4%A7%E5%8E%A6c/@12953146.105,4841086.12,19z?querytype=s&da_src=shareurl&wd=%E5%AD%A6%E6%B8%85%E5%98%89%E5%88%9B%E5%A4%A7%E5%8E%A6C&c=131&src=0&pn=0&sug=0&l=19&b=(12952691.125755528,4840923.8293437995;12953651.125755528,4841379.3293437995)&from=webmap&biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&device_ratio=1'
     return (
         <div className="section section-9">
             <div className='contact-container'>
-
                 <div className='contact-box'>
                     <div className='contact-box-left'>
                         <img src={logo} alt="" className='canlogo' />
@@ -103,8 +99,7 @@ export default function PageContact() {
                         <span onClick={openIcp} style={{ marginLeft: '10px' }}>京ICP备2024077296号-1</span>
                     </div>
                     <div className='contact-icp-text' style={{ marginTop: '6px' }}>Copyright © 趋境科技 2025 版权所有</div>
-                </div>
-
+                </div> 
             </div>
         </div>
     );

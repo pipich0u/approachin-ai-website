@@ -1,32 +1,29 @@
 import './index.css'
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
-
+import { carouselList } from '../../textConfig'
+import logo1 from '@/assets/images/img/guo_logo.png'
+import logo2 from '@/assets/images/img/zhipu_logo.png'
+import logo3 from '@/assets/images/img/changting_logo.png'
+import card_bg1 from '@/assets/images/img/carousel1.png'
+import card_bg2 from '@/assets/images/img/carousel2.png'
+import card_bg3 from '@/assets/images/img/carousel3.png'
 // 轮播数据
 const carouselData = [
     {
-        id: 1,
-        title: '合作伙伴 1',
-        desc: '优秀合作伙伴介绍文案',
-        image: '/images/partner1.png'
+        ...carouselList.carouselData[0],
+        image: card_bg1,
+        logo: logo1,
     },
     {
-        id: 2,
-        title: '合作伙伴 2',
-        desc: '优秀合作伙伴介绍文案',
-        image: '/images/partner2.png'
+        ...carouselList.carouselData[1],
+        image: card_bg2,
+        logo: logo2,
     },
     {
-        id: 3,
-        title: '合作伙伴 3',
-        desc: '优秀合作伙伴介绍文案',
-        image: '/images/partner3.png'
-    },
-    {
-        id: 4,
-        title: '合作伙伴 4',
-        desc: '优秀合作伙伴介绍文案',
-        image: '/images/partner4.png'
+        ...carouselList.carouselData[2],
+        image: card_bg3,
+        logo: logo3
     }
 ];
 
@@ -76,22 +73,20 @@ export default function CooperateCarousel() {
     return (
         <div className='carousel-container'>
             <div className="carousel-content">
-                <div className="carousel-con-title">优秀伙伴展示</div>
+                <div className="carousel-con-title">{carouselList.title}</div>
                 <div className="carousel-con-box">
                     {/* 左侧遮罩 */}
                     <div className="carousel-mask carousel-mask-left"></div>
 
                     {/* 卡片容器 */}
                     <div className="carousel-cards-wrapper"
-                         onMouseEnter={() => setIsAutoPlay(false)}
-                         onMouseLeave={() => setIsAutoPlay(true)}>
+                        onMouseEnter={() => setIsAutoPlay(false)}
+                        onMouseLeave={() => setIsAutoPlay(true)}>
                         <AnimatePresence initial={false} mode="popLayout">
                             {visibleCards.map((card) => {
                                 const centerWidth = 500;
                                 const sideWidth = 450;
                                 const gap = 30;
-
-                                // 计算位置：左边卡片、中间卡片、右边卡片
                                 let x = 0;
                                 if (card.position === -1) {
                                     x = -(centerWidth / 2 + gap + sideWidth / 2);
@@ -108,29 +103,25 @@ export default function CooperateCarousel() {
                                             height: card.position === 0 ? 300 : 270
                                         }}
                                         initial={{
-                                            x: card.position > 0 ? (centerWidth + gap + sideWidth) : card.position < 0 ? -(centerWidth + gap + sideWidth) : x,
-                                            opacity: 0
-                                        }}
-                                        animate={{
-                                            x,
-                                            opacity: card.position === 0 ? 1 : 0.5,
-                                            zIndex: card.position === 0 ? 3 : 1
+                                            x: card.position > 0 ? (centerWidth + gap + sideWidth)
+                                                : card.position < 0 ? -(centerWidth + gap + sideWidth) : x,
                                         }}
                                         exit={{
-                                            x: card.position > 0 ? (centerWidth + gap + sideWidth) : -(centerWidth + gap + sideWidth),
-                                            opacity: 0
+                                            x: card.position > 0 ? (centerWidth + gap + sideWidth)
+                                                : -(centerWidth + gap + sideWidth),
                                         }}
-                                        transition={{
-                                            duration: 0.7,
-                                            ease: [0.25, 0.46, 0.45, 0.94]
-                                        }}
+                                        animate={{ x, zIndex: card.position === 0 ? 3 : 1 }}
+                                        transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
                                         onClick={() => handleCardClick(card.cardIndex)}
                                     >
                                         <div className="carousel-card-image">
-                                            {/* <img src={card.image} alt={card.title} /> */}
+                                            <img src={card.image} alt={card.title} />
+                                            <div className='carousel-card-logo'>
+                                                <img src={card.logo} alt="" />
+                                            </div>
                                         </div>
                                         <div className="carousel-card-info">
-                                            <h3>{card.title}</h3>
+                                            <div className='carousel-card-info-title'>{card.title}</div>
                                             <p>{card.desc}</p>
                                         </div>
                                     </motion.div>

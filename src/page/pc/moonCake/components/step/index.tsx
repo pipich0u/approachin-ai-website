@@ -14,19 +14,16 @@ export const MoonStep = () => {
     }
 
     return <div className='moon-step-container'>
+        <div className='moon-step-title'>{MoonStepList.title}</div>
         <div className='moon-step-content'>
-            {MoonStepList.map((item, index) => (
-                <motion.div
-                    key={index}
-                    {...scrollInViewSpringOnceProps}
-                    className='moon-step-items'
-                >
+            {MoonStepList.list.map((item, index) => (
+                <motion.div key={index} {...scrollInViewSpringOnceProps} className='moon-step-items'>
                     <div className='moon-step-items-left'>
                         <div className='moon-step-icon-line-wrapper'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <circle cx="12" cy="12" r="12" fill="#3D00CC" opacity={getCircleOpacity(index)} />
                             </svg>
-                            {index < MoonStepList.length - 1 && (
+                            {index < MoonStepList.list.length - 1 && (
                                 <img src={stepLine} alt="step line" className='moon-step-line' />
                             )}
                         </div>

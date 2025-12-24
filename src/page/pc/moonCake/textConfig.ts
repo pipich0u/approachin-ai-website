@@ -43,7 +43,9 @@ export const MoonSourceList = {
     title: '开源社区',
     desc: '众多开发者、用户和社区成员共同构建繁荣生态'
 }
-export const MoonStepList = [
+export const MoonStepList = {
+    title:'最新动态',
+    list:[
     {
         title: 'Feb 25, 2025',
         desc: '荣获 FAST 2025 Best Paper Award',
@@ -65,3 +67,4 @@ export const MoonStepList = [
         img: step4
     },
 ]
+}
