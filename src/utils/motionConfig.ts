@@ -13,7 +13,8 @@ export const fadeInUpTransition: Transition = {
 };
 
 export const defaultViewport = {
-  once: false,
+  // once: false,
+  once: true,
   amount: 0.2,  // 元素进入视口 20% 时触发动画
 };
 

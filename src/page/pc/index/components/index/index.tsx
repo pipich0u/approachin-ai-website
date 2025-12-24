@@ -67,7 +67,7 @@ export default function PageIndex() {
                     />
 
                     {showContent && <div className='relative z-10 w-full mt-15 flex flex-col '>
-                        <div className="title">
+                        <div className="flex items-center flex-col">
                             <motion.div {...initialLoadProps} className='title-top text-[#1B1D22] flex'>
                                 {indexPageList[0].title}<div className='title-top-text'>{indexPageList[0].color}</div>
                             </motion.div>
@@ -76,7 +76,7 @@ export default function PageIndex() {
                                 {indexPageList[0].desc}
                             </motion.div>
 
-                            <motion.button {...initialLoadProps} className='animated-button w-[180px] mt-8 h-11 rounded-lg bg-[#806BFF] '>
+                            <motion.button {...initialLoadProps} className='animated-button w-[180px] rounded-lg bg-[#806BFF] '>
                                 <span className="text-white font-[380] bt-text">{indexPageList[0].ask}</span>
                             </motion.button>
 

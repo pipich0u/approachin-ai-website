@@ -40,3 +40,30 @@ export const carouselList = {
         }
     ]
 }
+
+export const stepList = {
+    title: '共赴产业智能化的星辰大海',
+    btnText: '加入合作',
+    steps: [
+        {
+            step: '第一步',
+            desc: '选择伙伴类型或合作计划'
+        },
+        {
+            step: '第二步',
+            desc: '填写和提交申请'
+        },
+        {
+            step: '第三步',
+            desc: '合作沟通与资质审核等'
+        },
+        {
+            step: '第四步',
+            desc: '签署协议，成为合作伙伴'
+        },
+        {
+            step: '第五步',
+            desc: '合作达成后，通过联合推广资源提升曝光，助力快速增长'
+        }
+    ]
+}
