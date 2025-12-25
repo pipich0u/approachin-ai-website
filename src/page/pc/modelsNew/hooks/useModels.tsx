@@ -178,9 +178,8 @@ export const useModels = () => {
                     }
 
                     if (type === "MULTI_RANGE") {
-                        const match = tag.filter_value?.match(/\((\d+),\s*(\d+)\)/);
-                        if (match) {
-                            itemData.num = [Number(match[1]), Number(match[2])];
+                        if (Array.isArray(tag.filter_value) && tag.filter_value.length === 2) {
+                            itemData.num = tag.filter_value;
                         } else if (tag.num) {
                             itemData.num = tag.num;
                         } else {

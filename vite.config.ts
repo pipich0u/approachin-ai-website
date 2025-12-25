@@ -17,12 +17,12 @@ export default defineConfig({
     port: 5174,
     proxy: {
       "/api": {
-        target: "http://192.168.110.21:18000", // 目标服务器
+        target: "http://test.approaching-ai.com/api", // 目标服务器
         changeOrigin: true, // 是否修改请求头中的 Origin 字段
         rewrite: (path) => path.replace(/^\/api/, ""), // 重写路径
       },
       "/static": {
-        target: "http://192.168.110.21:18000",
+        target: "http://test.approaching-ai.com/api",
         changeOrigin: true,
       }
     },

@@ -60,6 +60,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     path: "cooperate",
                     element: <CooperatePage />,
                 },
+                {
+                    path: "machine",
+                    element: <CooperatePage />,
+                },
             ],
         },
     ]

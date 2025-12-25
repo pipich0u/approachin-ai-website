@@ -6,10 +6,11 @@ import ReactLenis from 'lenis/react'
 export default function Layout() {
   const location = useLocation()
   const shouldShowTopNavs = location.pathname !== '/models'
+  const shouldUseLenis = location.pathname !== '/models'
 
   return (
     <div className="layout">
-      <ReactLenis root />
+      {shouldUseLenis && <ReactLenis root />}
       <div className="layout-main">
         {shouldShowTopNavs && <TopNavs />}
         <div>
