@@ -18,7 +18,7 @@ const OfflineModel = (props: OfflineModelProps) => {
             <div className='bg-[#F7F7F7] rounded-lg p-4 mb-2 text-[14px] mt-4 flex justify-between items-center'>
                 <div className='text-[#999]  font-[330] ' dangerouslySetInnerHTML={{ __html: ModelStepName?.download_command }}></div>
                 <div>
-                    <CopyOutlined className='cursor-pointer' onClick={() => textCopy(ModelStepName?.download_command)} />
+                    <CopyOutlined className='cursor-pointer' onClick={() => textCopy(ModelStepName?.download_command?.replace(/<br\s*\/?>/gi, '\n'))} />
                 </div>
             </div>
         </div>
