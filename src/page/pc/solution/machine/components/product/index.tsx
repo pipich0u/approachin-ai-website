@@ -1,10 +1,11 @@
 import './index.css'
 import { motion } from 'motion/react'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
-import { MachineIndex } from './components/index'
 
 export const MachinePage = () => {
     return <div className='machin-page'>
-        <MachineIndex />
+        <div className='machin-container'>
+            
+        </div>
     </div>
 }

@@ -1,0 +1,19 @@
+.machin-index-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(/src/assets/images/img/mc_bg.png) no-repeat center / cover,
+        linear-gradient(163deg, rgba(255, 255, 255, 0.00) 11.56%, #FFF 84.98%), linear-gradient(218deg, #B9ADFC -6.31%, #FAF9FF 53.11%, #DDD8FD 93.48%);
+    padding-top: 80px;
+    height: 600px;
+    box-sizing: border-box;
+}
+.mc-in-content{
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
