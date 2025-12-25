@@ -16,7 +16,7 @@ const OfflineModel = (props: OfflineModelProps) => {
     const CodeElement = () => {
         return <div>
             <div className='bg-[#F7F7F7] rounded-lg p-4 mb-2 text-[14px] mt-4 flex justify-between items-center'>
-                <div className='text-[#999]  font-[330] '>{ModelStepName?.download_command}</div>
+                <div className='text-[#999]  font-[330] ' dangerouslySetInnerHTML={{ __html: ModelStepName?.download_command }}></div>
                 <div>
                     <CopyOutlined className='cursor-pointer' onClick={() => textCopy(ModelStepName?.download_command)} />
                 </div>
@@ -68,7 +68,7 @@ const OfflineModel = (props: OfflineModelProps) => {
                     },
                     {
                         title: <div className='text-[14px] font-[330] text-[#999]'>第三步</div>,
-                        description: <div className='text-[#333] font-[380]'>{ModelStepName?.update_command}</div>,
+                        description: <div className='text-[#333] font-[380]' dangerouslySetInnerHTML={{ __html: ModelStepName?.update_command }}></div>,
                     },
                 ]}
             />
