@@ -39,26 +39,29 @@ export const useModels = () => {
     };
 
     const downloadModelInfo = async () => {
-        try {
-            const response = await modelExportApi();
+        window.open(location.origin + '/api/model-metadata/export');
+        message.success('模型数据导出成功');
+        // try {
+        //     console.log(123);
+        //     const response = await modelExportApi();
 
-            const blob = new Blob([JSON.stringify(response, null, 2)], {
-                type: 'application/json'
-            });
+        //     const blob = new Blob([response], {
+        //         type: 'text/yaml;charset=utf-8',
+        //     });
 
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'model-metadata.json';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            URL.revokeObjectURL(url);
-            message.success('模型数据导出成功');
-        } catch (error) {
-            console.error(error);
-            message.error('模型数据导出失败');
-        }
+        //     const url = URL.createObjectURL(blob);
+        //     const link = document.createElement('a');
+        //     link.href = url;
+        //     link.download = 'model-metadata.yaml';
+        //     document.body.appendChild(link);
+        //     link.click();
+        //     document.body.removeChild(link);
+        //     URL.revokeObjectURL(url);
+        //     message.success('模型数据导出成功');
+        // } catch (error) {
+        //     console.error(error);
+        //     message.error('模型数据导出失败');
+        // }
     };
 
     const getModelsData = async () => {
