@@ -1,6 +1,4 @@
 import './index.css'
-import { motion } from 'motion/react'
-import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import { MachineIndex } from './components/index'
 import { MachineProduct } from './components/product'
 import { MachineAmaas } from './components/amaas'
