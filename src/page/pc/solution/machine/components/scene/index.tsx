@@ -2,9 +2,9 @@ import './index.css'
 import { motion } from 'motion/react'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 
-export const MachinePage = () => {
-    return <div className='machin-page'>
-        <div className='machin-container'>
+export const MachineScene = () => {
+    return <div className='scene-container'>
+        <div className='scene-content'>
             
         </div>
     </div>
