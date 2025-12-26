@@ -46,7 +46,7 @@ export const menuHrefListDefault = [
         isSelected: true,
         subItems: [
             { title: '联系我们', href: 'contact' },
-            { title: '企业介绍', href: 'about' },
+            { title: '企业介绍', href: 'introduction' },
             { title: '企业资讯', href: 'info' },
         ]
     },

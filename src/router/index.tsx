@@ -5,12 +5,14 @@ import ModelsRepository from "@/page/pc/modelsNew/modelsRepostory"
 import CooperatePage from "@/page/pc/cooperate"
 import { KT } from "@/KT/mob-KT"
 import { MoonCake } from "@/page/pc/moonCake"
+import { IntroductionPage } from "@/page/pc/about/introduction"
 
 // mobile
 import MobileIndex from "@/page/mobile/index/index.tsx"
 import { MobileKT } from "@/KT/KT"
 import MobileLayout from "@/page/mobile/index.tsx"
 import { MachinePage } from "@/page/pc/solution/machine"
+
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
     if (isMobile) {
@@ -64,6 +66,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                 {
                     path: "machine",
                     element: <MachinePage />,
+                },
+                {
+                    path: "introduction",
+                    element: <IntroductionPage />,
                 },
             ],
         },
