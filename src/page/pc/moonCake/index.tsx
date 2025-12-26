@@ -7,6 +7,7 @@ import './index.css'
 import { getGitSource } from '@/common/api'
 import { MoonStep } from './components/step'
 import { MoonSource } from './components/source'
+import PageConsult from '../index/components/consult'
 
 
 export const MoonCake = () => {
@@ -46,6 +47,7 @@ export const MoonCake = () => {
             <MoonFast />
             <MoonStep />
             <MoonSource list={list} />
+            <PageConsult />
             <PageContact />
         </div>
     </>

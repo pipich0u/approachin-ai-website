@@ -235,6 +235,10 @@
 .cpa-ct-left-btn:hover::before {
     opacity: 1;
 }
+
+.cpa-ct-left-btn:active {
+    scale: 0.95;
+}
 /* .cpa-ct-left-btn:hover {
     box-shadow: 0 0 0 12px transparent;
     color: #212121;
@@ -256,7 +260,3 @@
 .cpa-ct-left-btn:hover svg {
     fill: #fff;
 } */
-
-.cpa-ct-left-btn:active {
-    scale: 0.95;
-}
