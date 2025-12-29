@@ -12,24 +12,26 @@ export const IntroductionIndex = () => {
                 <span className="text-white font-[380] bt-text">{introductionList.btnText}</span>
             </motion.button>
         </div>
-        <div className='in-idx-company'>
-            <div className="in-idx-company-size in-idx-company-name">{introductionList.companyName}</div>
-            <div className="in-idx-company-title in-idx-company-size">{introductionList.companyTitle}</div>
-            <div className="in-idx-company-content">这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。
-                <br /><br />
-                这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。
-                <br /><br />
-                这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。
-            </div>
-            <div className="in-idx-company-data">
-                {
-                    introductionList.companyData.map((item, index) => (
-                        <div key={index} className="in-idx-company-data-item">
-                            <div className="in-idx-company-data-item-num">{item.num}</div>
-                            <div className="in-idx-company-data-item-title">{item.title}</div>
-                        </div>
-                    ))
-                }
+        <div className='in-idx-company-box'>
+            <div className='in-idx-company'>
+                <div className="in-idx-company-size in-idx-company-name">{introductionList.companyName}</div>
+                <div className="in-idx-company-title in-idx-company-size">{introductionList.companyTitle}</div>
+                <div className="in-idx-company-content">这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。
+                    <br /><br />
+                    这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。
+                    <br /><br />
+                    这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。
+                </div>
+                <div className="in-idx-company-data">
+                    {
+                        introductionList.companyData.map((item, index) => (
+                            <div key={index} className="in-idx-company-data-item">
+                                <div className="in-idx-company-data-item-num">{item.num}</div>
+                                <div className="in-idx-company-data-item-title">{item.title}</div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     </div>
