@@ -1,0 +1,139 @@
+.introduction-index-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0;
+    align-items: center;
+}
+
+.in-idx-content {
+    width: 100%;
+    /* max-width: 1440px; */
+    height: 610px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(/src/assets/images/img/introduction_bg.png) 50% / cover no-repeat;
+    background-size: 100% 610px;
+}
+
+.in-idx-content-title {
+    display: flex;
+    align-items: center;
+    color: #1A1A1A;
+    text-align: center;
+    font-family: MiSans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 520;
+    line-height: 150%;
+    letter-spacing: 0.96px;
+}
+
+.in-idx-content-title-color {
+    background: linear-gradient(256deg, #4E74FF -3.3%, #A557FE 105.24%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.in-idx-content-btn {
+    padding: 10px 44px;
+    box-shadow: none;
+}
+
+.in-idx-company {
+    width: 1240px;
+    height: 584px;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(20px);
+    background: url(/src/assets/images/img/transparent_logo_bg.png) no-repeat right 20px bottom 12px;
+}
+
+.in-idx-company::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    padding: 2px;
+    background: linear-gradient(180deg, #B4A8FF -8.57%, rgba(125, 104, 255, 0.387857) 34.86%, rgba(125, 104, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.in-idx-company-size {
+    font-family: MiSans;
+    font-size: 40px;
+    font-weight: 520;
+    line-height: 150%;
+    letter-spacing: 0.8px;
+    width: fit-content;
+}
+
+.in-idx-company-name {
+    display: inline-block;
+    background: linear-gradient(256deg, #4E74FF -3.3%, #A557FE 105.24%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.in-idx-company-content {
+    color: #808080;
+    text-align: justify;
+    font-family: MiSans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 330;
+    line-height: 180%;
+    letter-spacing: 0.32px;
+}
+
+.in-idx-company-data {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.in-idx-company-data-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.in-idx-company-data-item-num {
+    color: #6C19FE;
+    text-align: justify;
+    font-family: MiSans;
+    font-size: 29.528px;
+    font-style: normal;
+    font-weight: 520;
+    line-height: 180%;
+    letter-spacing: 0.591px;
+}
+
+.in-idx-company-data-item-title {
+    color: #808080;
+    text-align: justify;
+    font-family: MiSans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 330;
+    line-height: 180%;
+    letter-spacing: 0.32px;
+}
