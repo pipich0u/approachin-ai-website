@@ -5,15 +5,15 @@ import { introductionList } from '../../textConfig'
 export const IntroductionIndex = () => {
     return <div className='introduction-index-container'>
         <div className='in-idx-content'>
-            <div className="in-idx-content-title">
+            <motion.div {...initialLoadProps} className="in-idx-content-title">
                 {introductionList.title}<div className='in-idx-content-title-color'>{introductionList.titleColor}</div>
-            </div>
+            </motion.div>
             <motion.button {...initialLoadProps} className='in-idx-content-btn  animated-button'>
                 <span className="text-white font-[380] bt-text">{introductionList.btnText}</span>
             </motion.button>
         </div>
         <div className='in-idx-company-box'>
-            <div className='in-idx-company'>
+            <motion.div {...initialLoadProps} className='in-idx-company'>
                 <div className="in-idx-company-size in-idx-company-name">{introductionList.companyName}</div>
                 <div className="in-idx-company-title in-idx-company-size">{introductionList.companyTitle}</div>
                 <div className="in-idx-company-content">这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。这段内容暂为占位，待进一步完善和补充具体的信息。它可能涉及到某个重要的主题、事件或者观点，但目前尚未明确其确切的方向和细节。
@@ -32,7 +32,7 @@ export const IntroductionIndex = () => {
                         ))
                     }
                 </div>
-            </div>
+            </motion.div>
         </div>
     </div>
 }

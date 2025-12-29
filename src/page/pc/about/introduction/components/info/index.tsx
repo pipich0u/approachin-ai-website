@@ -1,14 +1,15 @@
 import './index.css'
 import { IconFont } from '@/utils/antdUtils'
 import { infoList } from '../../textConfig'
-
+import { motion } from 'motion/react'
+import { scrollInViewOnceProps } from '@/utils/motionConfig'
 export const IntroductionInfo = () => {
 
     return <div className='introduction-info-container'>
-        <div className='in-info-title'>企业资讯</div>
+        <motion.div {...scrollInViewOnceProps} className='in-info-title'>企业资讯</motion.div>
         <div className='in-info-content'>
             {infoList.map((item, index) => (
-                <div key={index}>
+                <motion.div {...scrollInViewOnceProps} key={index}>
                     <div className="in-info-item">
                         <div className='in-info-item-left'>
                             <div className='in-info-item-content'>
@@ -25,7 +26,7 @@ export const IntroductionInfo = () => {
                         </div>
                     </div>
                     {index < infoList.length - 1 && <div className='in-info-line' />}
-                </div>
+                </motion.div>
             ))}
         </div>
     </div>
