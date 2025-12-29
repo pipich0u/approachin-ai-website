@@ -65,7 +65,7 @@ export const IntroductionInfo = () => {
                     </div>
                     <div className='in-info-item-time'>
                         <div>2025-02-27</div>
-                        <div>查看详情<IconFont type='icon-up-s' className='detail-icon' /></div>
+                        <div className=' cursor-pointer'>查看详情<IconFont type='icon-up-s' className='detail-icon' /></div>
                     </div>
                 </div>
                 <div className='in-info-item-rig'>
