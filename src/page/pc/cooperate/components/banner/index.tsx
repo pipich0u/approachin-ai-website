@@ -1,7 +1,8 @@
 import './index.css'
 import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig'
-import banner from '@/assets/images/img/banner_bg.png'
+// import banner from '@/assets/images/img/banner_bg.png'
+
 import { bannerText } from '../../textConfig'
 export default function CooperateBanner() {
     return <>
@@ -17,7 +18,7 @@ export default function CooperateBanner() {
                         </svg>
                     </button>
                 </motion.div>
-                <motion.img src={banner} className='banner-right-img' {...initialLoadProps} />
+                {/* <motion.img src={banner} className='banner-right-img' {...initialLoadProps} /> */}
             </div>
         </div>
     </>
