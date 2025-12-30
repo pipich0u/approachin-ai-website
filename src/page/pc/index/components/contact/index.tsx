@@ -4,16 +4,11 @@ import logo from '@/assets/svg/logo-black.svg'
 import ewm from '@/assets/images/ewm.png'
 import { useNavigate } from 'react-router-dom';
 import { menuHrefListDefault } from '@/page/textConfig';
+import { getCopyrightYear } from '@/utils/transfrom';
 // interface ContactProps {
 //     // onNavigate: (index: string) => void;
 // }
 export default function PageContact() {
-    // 自动更新版权年限
-    const getCopyrightYear = (startYear: number): string => {
-        const currentYear = new Date().getFullYear()
-        return startYear === currentYear ? `${startYear}` : `${startYear}-${currentYear}`
-    }
-
     const open = () => {
         window.open('https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671')
     }

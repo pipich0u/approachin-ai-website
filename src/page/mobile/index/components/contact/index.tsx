@@ -5,6 +5,7 @@ import ewm from '@/assets/images/ewm.png'
 import { mobMenuHrefListDefault } from '@/page/textConfig';
 import { useState } from 'react';
 import { IconFont } from '@/utils/antdUtils';
+import { getCopyrightYear } from '@/utils/transfrom';
 
 export default function PageContact() {
     const [expandedMenus, setExpandedMenus] = useState<Set<string>>(new Set())
@@ -113,7 +114,7 @@ export default function PageContact() {
                             <span onClick={open}>京公网安备11010802044671号</span>
                             <span onClick={openIcp} style={{ marginLeft: '10px' }}>京ICP备2024077296号-1</span>
                         </div>
-                        <div className='mob-contact-icp-text' style={{ marginTop: '6px' }}>Copyright © 趋境科技 2025 版权所有</div>
+                        <div className='mob-contact-icp-text' style={{ marginTop: '6px' }}>Copyright © 趋境科技 {getCopyrightYear(2024)} 版权所有</div>
                     </div>
                 </div>
             </div>
