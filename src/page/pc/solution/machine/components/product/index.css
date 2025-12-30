@@ -47,6 +47,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+    transition: all 0.3s ease;
 }
 
 .product-box-item:hover {
@@ -75,11 +76,12 @@
 }
 
 .product-box-item:nth-child(1) {
-    background: linear-gradient(270deg, rgba(232, 234, 241, 0.00) 75%, #E8EAF1 100%), url(/src/assets/images/img/pro1.png) bottom right / 80% 80% no-repeat;
+    background: url(/src/assets/images/img/pro1.png) bottom right / 70% 70% no-repeat, #E8EAF1;
+
 }
 
 .product-box-item:nth-child(2) {
-    background: linear-gradient(270deg, rgba(232, 234, 241, 0.00) 75%, #E8EAF1 100%), url(/src/assets/images/img/pro2.png) bottom right / 80% 80% no-repeat;
+    background: url(/src/assets/images/img/pro2.png) bottom right / 80% 80% no-repeat, #F1F2F9;
 }
 
 .product-box-item-btn {
