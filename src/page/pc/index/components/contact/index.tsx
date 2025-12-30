@@ -8,6 +8,12 @@ import { menuHrefListDefault } from '@/page/textConfig';
 //     // onNavigate: (index: string) => void;
 // }
 export default function PageContact() {
+    // 自动更新版权年限
+    const getCopyrightYear = (startYear: number): string => {
+        const currentYear = new Date().getFullYear()
+        return startYear === currentYear ? `${startYear}` : `${startYear}-${currentYear}`
+    }
+
     const open = () => {
         window.open('https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671')
     }
@@ -103,7 +109,7 @@ export default function PageContact() {
                         <span onClick={open}>京公网安备11010802044671号</span>
                         <span onClick={openIcp} style={{ marginLeft: '10px' }}>京ICP备2024077296号-1</span>
                     </div>
-                    <div className='contact-icp-text' style={{ marginTop: '6px' }}>Copyright © 趋境科技 2025 版权所有</div>
+                    <div className='contact-icp-text' style={{ marginTop: '6px' }}>Copyright © 趋境科技 {getCopyrightYear(2024)} 版权所有</div>
                 </div>
             </div>
         </div>
