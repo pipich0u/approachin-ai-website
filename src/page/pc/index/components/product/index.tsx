@@ -2,12 +2,23 @@ import './index.css'
 import { motion } from 'motion/react';
 import { scrollInViewSpringProps } from '@/utils/motionConfig'
 import { productFeatures, productTitle } from '@/page/textConfig';
+import { useEffect } from 'react';
+import { trackPageView, trackProductClick } from '@/utils/umami';
 
 export default function PageProduct() {
+    // 跟踪页面浏览
+    useEffect(() => {
+        trackPageView('产品页面', { section: 'products' });
+    }, []);
 
-    const infoIcon = (path?: string) => {
+    const infoIcon = (productName: string, productType: string) => {
         return (
-            <div className='more w-24 h-[33px] text-[14px] font-[380]' >了解更多</div>
+            <div
+                className='more w-24 h-[33px] text-[14px] font-[380] cursor-pointer'
+                onClick={() => trackProductClick(productName, productType)}
+            >
+                了解更多
+            </div>
         )
     }
 
@@ -27,7 +38,7 @@ export default function PageProduct() {
                         <div className='text-[#333] font-[520] mt-4 text-[18px] leading-[150%]'>{productFeatures[0].title}</div>
                         <div className='text-[14px] text-[#666] font-[330] leading-[150%]'>{productFeatures[0].desc}</div>
                         <div className='mt-10'>
-                            {infoIcon()}
+                            {infoIcon(productFeatures[0].title, productFeatures[0].tag.join(','))}
                         </div>
                     </div>
                 </motion.div>
@@ -43,7 +54,7 @@ export default function PageProduct() {
                         <div className='text-[#333] font-[520] mt-4 text-[18px] leading-[150%]'>{productFeatures[1].title}</div>
                         <div className='text-[14px] text-[#666] font-[330] leading-[150%]'>{productFeatures[1].desc}</div>
                         <div className='mt-10'>
-                            {infoIcon()}
+                            {infoIcon(productFeatures[1].title, productFeatures[1].tag.join(','))}
                         </div>
                     </div>
                 </motion.div>
@@ -60,7 +71,7 @@ export default function PageProduct() {
                             <div className='text-[#333] font-[520] text-[18px] leading-[150%]'>{productFeatures[2].title}</div>
                             <div className='text-[14px] text-[#666] font-[330] leading-[150%] w-[50%]'>{productFeatures[2].desc}</div>
                             <div className='mt-5'>
-                                {infoIcon()}
+                                {infoIcon(productFeatures[2].title, productFeatures[2].tag.join(','))}
                             </div>
                         </div>
                     </motion.div>
@@ -76,7 +87,7 @@ export default function PageProduct() {
                             <div className='text-[#333] font-[520] text-[18px] leading-[150%]'>{productFeatures[3].title}</div>
                             <div className='text-[14px] text-[#666] font-[330] leading-[150%] w-[50%]'>{productFeatures[3].desc}</div>
                             <div className='mt-5'>
-                                {infoIcon()}
+                                {infoIcon(productFeatures[3].title, productFeatures[3].tag.join(','))}
                             </div>
                         </div>
                     </motion.div>
@@ -105,7 +116,7 @@ export default function PageProduct() {
                             <div className='text-[#333] font-[520] text-[18px] leading-[150%]'>{productFeatures[4].title}</div>
                             <div className='text-[14px] text-[#666] font-[330] leading-[150%] w-[60%]'>{productFeatures[4].desc}</div>
                             <div className='mt-10'>
-                                {infoIcon()}
+                                {infoIcon(productFeatures[4].title, 'KLLM,' + productFeatures[4].tag.join(','))}
                             </div>
                         </div>
                     </motion.div>
@@ -122,7 +133,7 @@ export default function PageProduct() {
                             <div className='text-[#333] font-[520] text-[18px] leading-[150%]'>{productFeatures[5].title}</div>
                             <div className='text-[14px] text-[#666] font-[330] leading-[150%] w-[60%]'>{productFeatures[5].desc}</div>
                             <div className='mt-10'>
-                                {infoIcon()}
+                                {infoIcon(productFeatures[5].title, 'KLLM,' + productFeatures[5].tag.join(','))}
                             </div>
                         </div>
                     </motion.div>

@@ -3,12 +3,18 @@ import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig'
 import { useState, useEffect } from 'react';
 import { indexPageList } from '@/page/textConfig';
+import { trackPageView, trackButtonClick, trackCarouselChange } from '@/utils/umami';
 
 export default function PageIndex() {
     const [showContent, setShowContent] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [progress, setProgress] = useState(0);
     const [isMouseInCarousel, setIsMouseInCarousel] = useState(false);
+
+    // 跟踪页面浏览
+    useEffect(() => {
+        trackPageView('首页轮播', { section: 'hero' });
+    }, []);
 
     // 轮播自动切换逻辑 - 鼠标在轮播容器内时暂停
     useEffect(() => {
@@ -28,19 +34,24 @@ export default function PageIndex() {
     useEffect(() => {
         if (progress >= 100) {
             const timer = setTimeout(() => {
-                setCurrentSlide((current) => (current + 1) % 3);
+                const nextSlide = (currentSlide + 1) % 3;
+                setCurrentSlide(nextSlide);
                 setProgress(0);
+                // 跟踪自动轮播切换
+                trackCarouselChange(nextSlide, `自动切换到第${nextSlide + 1}屏`);
             }, 50);
 
             return () => clearTimeout(timer);
         }
-    }, [progress]);
+    }, [progress, currentSlide]);
 
     // 手动切换轮播
     const handleSlideChange = (index: number) => {
         if (index === currentSlide) return;
         setCurrentSlide(index);
         setProgress(0);
+        // 跟踪手动轮播切换
+        trackCarouselChange(index, `手动切换到第${index + 1}屏`);
     };
 
     return (
@@ -76,7 +87,11 @@ export default function PageIndex() {
                                 {indexPageList[0].desc}
                             </motion.div>
 
-                            <motion.button {...initialLoadProps} className='animated-button w-[180px] rounded-lg bg-[#806BFF] '>
+                            <motion.button
+                                {...initialLoadProps}
+                                className='animated-button w-[180px] rounded-lg bg-[#806BFF] '
+                                onClick={() => trackButtonClick(indexPageList[0].ask, '首页第1屏', { slideIndex: 0 })}
+                            >
                                 <span className="text-white font-[380] bt-text">{indexPageList[0].ask}</span>
                             </motion.button>
 
