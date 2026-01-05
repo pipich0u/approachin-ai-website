@@ -37,8 +37,6 @@ export default function PageIndex() {
                 const nextSlide = (currentSlide + 1) % 3;
                 setCurrentSlide(nextSlide);
                 setProgress(0);
-                // 跟踪自动轮播切换
-                trackCarouselChange(nextSlide, `自动切换到第${nextSlide + 1}屏`);
             }, 50);
 
             return () => clearTimeout(timer);
@@ -50,7 +48,7 @@ export default function PageIndex() {
         if (index === currentSlide) return;
         setCurrentSlide(index);
         setProgress(0);
-        // 跟踪手动轮播切换
+        // 只跟踪用户手动切换
         trackCarouselChange(index, `手动切换到第${index + 1}屏`);
     };
 
