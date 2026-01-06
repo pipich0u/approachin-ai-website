@@ -4,12 +4,16 @@ import { initialLoadProps } from '@/utils/motionConfig'
 import { useState, useEffect } from 'react';
 import { indexPageList } from '@/page/textConfig';
 import { trackPageView, trackButtonClick, trackCarouselChange } from '@/utils/umami';
+import { useExposureTracking } from '@/hooks/useExposureTracking';
 
 export default function PageIndex() {
     const [showContent, setShowContent] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [progress, setProgress] = useState(0);
     const [isMouseInCarousel, setIsMouseInCarousel] = useState(false);
+
+    // 曝光埋点
+    const exposureRef = useExposureTracking('首页轮播区域', '首页', { section: 'hero' });
 
     // 跟踪页面浏览
     useEffect(() => {
@@ -54,6 +58,7 @@ export default function PageIndex() {
 
     return (
         <div
+            ref={exposureRef}
             className="carousel-wrapper"
             onMouseEnter={() => setIsMouseInCarousel(true)}
             onMouseLeave={() => setIsMouseInCarousel(false)}

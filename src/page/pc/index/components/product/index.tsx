@@ -4,8 +4,12 @@ import { scrollInViewSpringProps } from '@/utils/motionConfig'
 import { productFeatures, productTitle } from '@/page/textConfig';
 import { useEffect } from 'react';
 import { trackPageView, trackProductClick } from '@/utils/umami';
+import { useExposureTracking } from '@/hooks/useExposureTracking';
 
 export default function PageProduct() {
+    // 曝光埋点
+    const exposureRef = useExposureTracking('产品展示区域', '首页', { section: 'products' });
+
     // 跟踪页面浏览
     useEffect(() => {
         trackPageView('产品页面', { section: 'products' });
@@ -23,7 +27,7 @@ export default function PageProduct() {
     }
 
     return (
-        <div className="product-container h-[1030px] bg-[#FAFAFA] flex flex-col items-center pt-[90px] pb-5 px-[100px]">
+        <div ref={exposureRef} className="product-container h-[1030px] bg-[#FAFAFA] flex flex-col items-center pt-[90px] pb-5 px-[100px]">
             <motion.div {...scrollInViewSpringProps} className='text-[#1B1D22] font-[540] text-[38px] leading-[150%] tracking-[2%] text-center'>{productTitle}</motion.div>
             <div className='flex items-center gap-5 mt-[60px]'>
                 <motion.div {...scrollInViewSpringProps} className='product-items product-1 w-[400px] h-[500px] rounded-[20px] '>

@@ -93,3 +93,17 @@ export const trackHover = (elementName: string, location: string) => {
     location,
   });
 };
+
+/**
+ * 跟踪元素曝光事件
+ * @param elementName 元素名称
+ * @param location 位置
+ * @param extraData 额外数据（可选）
+ */
+export const trackExposure = (elementName: string, location: string, extraData?: Record<string, any>) => {
+  trackEvent('element-exposure', {
+    element: elementName,
+    location,
+    ...extraData,
+  });
+};

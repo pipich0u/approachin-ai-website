@@ -8,12 +8,14 @@ import { getGitSource } from '@/common/api'
 import { MoonStep } from './components/step'
 import { MoonSource } from './components/source'
 import PageConsult from '../index/components/consult'
+import { trackPageView } from '@/utils/umami'
 
 
 export const MoonCake = () => {
     const [list, setList] = useState<any[]>([])
     useEffect(() => {
         window.scrollTo(0, 0)
+        trackPageView('MoonCake产品页面')
         const fetchData = async () => {
             const org = 'kvcache-ai';
             const repo = 'Mooncake';

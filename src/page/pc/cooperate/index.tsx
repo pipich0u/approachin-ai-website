@@ -9,10 +9,13 @@ import PageConsult from '../index/components/consult'
 import PageContact from '../index/components/contact'
 import { useEffect } from 'react'
 import { getGitSource } from '@/common/api';
+import { trackPageView } from '@/utils/umami';
+
 export default function CooperatePage() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
+        trackPageView('合作伙伴页面')
         const fetchData = async () => {
             const org = 'kvcache-ai';
             const repo = 'ktransformers';

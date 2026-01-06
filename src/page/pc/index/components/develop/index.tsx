@@ -27,7 +27,7 @@ export default function DevelopPage() {
                                         <div className="dep-tab-item-title">{item.name}</div>
                                         <div className="dep-tab-item-desc">{item.desc}</div>
                                     </div>
-                                    {<div className={`more w-24 h-[33px] text-[14px] font-[380] ${activeIndex === index ? 'more-active' : 'more-active-no'}`} >了解更多</div>}
+                                    {<div className={`dep-more w-24 h-[33px] text-[14px] font-[380] ${activeIndex === index ? 'more-active' : 'more-active-no'}`} >了解更多</div>}
                                 </motion.div>
                                 <motion.div
                                     key={`active-${index}`}
@@ -36,13 +36,13 @@ export default function DevelopPage() {
                                     onMouseEnter={() => setActiveIndex(index)}
                                 >
                                     <div className='dep-tab-item-icon'>
-                                        <IconFont type={item.icon} />
+                                        <IconFont type={item.icon} /> 
                                     </div>
                                     <div className='dep-tab-item-content'>
                                         <div className="dep-tab-item-title">{item.name}</div>
                                         <div className="dep-tab-item-desc">{item.desc}</div>
                                     </div>
-                                    {<div className={`more w-24 h-[33px] text-[14px] font-[380] ${activeIndex === index ? 'more-active' : 'more-active-no'}`} >了解更多</div>}
+                                    {<div className={`dep-more w-24 h-[33px] text-[14px] font-[380] ${activeIndex === index ? 'more-active' : 'more-active-no'}`} >了解更多</div>}
                                 </motion.div>
                             </>
                         )

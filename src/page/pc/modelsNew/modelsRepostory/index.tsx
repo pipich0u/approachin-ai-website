@@ -5,6 +5,8 @@ import { useModels } from '../hooks/useModels';
 import OfflineModel from './components/offlineModel';
 import ApiModal from './components/apiModal';
 import { useEffect, useState } from 'react';
+import { trackPageView } from '@/utils/umami';
+
 const ModelsRepository = () => {
     const { tabList, expandedMap, modelList, ModelStepName, getModelsData,
         getFilterTags, downloadModelInfo, page, openApi, showModel, tabClass,
@@ -13,6 +15,7 @@ const ModelsRepository = () => {
         loadMore, version, getVersionData } = useModels();
 
     useEffect(() => {
+        trackPageView('模型仓库页面');
         getModelsData();
         getFilterTags();
         getVersionData();
