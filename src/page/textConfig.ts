@@ -45,8 +45,8 @@ export const menuHrefListDefault = [
         href: 'PageTeam',
         isSelected: true,
         subItems: [
+            { title: '企业介绍', href: 'introduction' },
             { title: '联系我们', href: 'contact' },
-            { title: '企业介绍', href: 'introduction' }
         ]
     },
 ]
