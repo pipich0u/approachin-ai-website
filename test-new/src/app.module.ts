@@ -1,24 +1,99 @@
-import { Module } from '@nestjs/common';
+import { Module, MiddlewareConsumer, NestModule } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { APP_FILTER, APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CatModule } from './cat/cat.module';
+
+// 配置
+import appConfig from './config/app.config';
+
+// 模块
+import { LoggerModule } from './modules/logger/logger.module';
+
+// 中间件
+import { LoggerMiddleware } from './common/middleware/logger.middleware';
+
+// 过滤器
+import { HttpExceptionFilter } from './common/filters/http-exception.filter';
+
+// 拦截器
+import { TransformInterceptor } from './common/interceptors/transform.interceptor';
+import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
+import { TimeoutInterceptor } from './common/interceptors/timeout.interceptor';
+
+// 管道
+import { ValidationPipe } from './common/pipes/validation.pipe';
+
+// 日志服务
+import { CustomLoggerService } from './modules/logger/logger.service';
+
 // import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [CatModule,
+  imports: [
+    // 配置模块
+    ConfigModule.forRoot({
+      isGlobal: true,
+      load: [appConfig],
+      envFilePath: ['.env.local', '.env'],
+    }),
+
+    // 日志模块
+    LoggerModule,
+
+    // 业务模块
+    CatModule,
+
+    // 数据库模块（暂时注释）
     // TypeOrmModule.forRoot({
-    //   type: 'mysql',           // 数据库类型
-    //   host: 'localhost',       // 服务器地址
-    //   port: 3943,              // 端口
-    //   username: '',        // 用户名
-    //   password: '', // 密码
-    //   database: '',     // 数据库名
-    //   entities: [__dirname + '/**/*.entity{.ts,.js}'],  // 实体路径
-    //   synchronize: true,       // 开发环境自动同步（生产环境关闭）
-    //   logging: true,           // 打印 SQL 日志
+    //   type: 'mysql',
+    //   host: 'localhost',
+    //   port: 3943,
+    //   username: '',
+    //   password: '',
+    //   database: '',
+    //   entities: [__dirname + '/**/*.entity{.ts,.js}'],
+    //   synchronize: true,
+    //   logging: true,
     // }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    CustomLoggerService,
+
+    // 全局异常过滤器
+    {
+      provide: APP_FILTER,
+      useClass: HttpExceptionFilter,
+    },
+
+    // 全局拦截器（按顺序执行）
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: LoggingInterceptor,
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useFactory: () => new TimeoutInterceptor(30000),
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: TransformInterceptor,
+    },
+
+    // 全局验证管道
+    {
+      provide: APP_PIPE,
+      useClass: ValidationPipe,
+    },
+  ],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    // 应用全局中间件
+    consumer.apply(LoggerMiddleware).forRoutes('*');
+  }
+}

@@ -1,0 +1,85 @@
+/**
+ * HTTP状态码常量
+ */
+export const HTTP_STATUS = {
+  // 成功
+  OK: 200,
+  CREATED: 201,
+  ACCEPTED: 202,
+  NO_CONTENT: 204,
+
+  // 客户端错误
+  BAD_REQUEST: 400,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  METHOD_NOT_ALLOWED: 405,
+  CONFLICT: 409,
+  UNPROCESSABLE_ENTITY: 422,
+  TOO_MANY_REQUESTS: 429,
+
+  // 服务器错误
+  INTERNAL_SERVER_ERROR: 500,
+  NOT_IMPLEMENTED: 501,
+  BAD_GATEWAY: 502,
+  SERVICE_UNAVAILABLE: 503,
+  GATEWAY_TIMEOUT: 504,
+} as const;
+
+/**
+ * 业务状态码常量
+ */
+export const BUSINESS_CODE = {
+  // 成功
+  SUCCESS: 200,
+
+  // 客户端错误 (1000-1999)
+  PARAM_ERROR: 1001, // 参数错误
+  VALIDATION_ERROR: 1002, // 验证失败
+  RESOURCE_NOT_FOUND: 1003, // 资源不存在
+  RESOURCE_ALREADY_EXISTS: 1004, // 资源已存在
+
+  // 认证授权错误 (2000-2999)
+  UNAUTHORIZED: 2001, // 未认证
+  TOKEN_EXPIRED: 2002, // Token过期
+  TOKEN_INVALID: 2003, // Token无效
+  FORBIDDEN: 2004, // 无权限
+  ACCOUNT_DISABLED: 2005, // 账号被禁用
+  PASSWORD_ERROR: 2006, // 密码错误
+
+  // 业务逻辑错误 (3000-3999)
+  BUSINESS_ERROR: 3001, // 业务错误
+  OPERATION_FAILED: 3002, // 操作失败
+  DATA_CONFLICT: 3003, // 数据冲突
+
+  // 系统错误 (5000-5999)
+  INTERNAL_ERROR: 5001, // 系统内部错误
+  SERVICE_UNAVAILABLE: 5002, // 服务不可用
+  TIMEOUT: 5003, // 超时
+  DATABASE_ERROR: 5004, // 数据库错误
+  EXTERNAL_API_ERROR: 5005, // 外部API错误
+} as const;
+
+/**
+ * 错误消息映射
+ */
+export const ERROR_MESSAGES = {
+  [BUSINESS_CODE.PARAM_ERROR]: '参数错误',
+  [BUSINESS_CODE.VALIDATION_ERROR]: '数据验证失败',
+  [BUSINESS_CODE.RESOURCE_NOT_FOUND]: '资源不存在',
+  [BUSINESS_CODE.RESOURCE_ALREADY_EXISTS]: '资源已存在',
+  [BUSINESS_CODE.UNAUTHORIZED]: '请先登录',
+  [BUSINESS_CODE.TOKEN_EXPIRED]: '登录已过期，请重新登录',
+  [BUSINESS_CODE.TOKEN_INVALID]: '无效的凭证',
+  [BUSINESS_CODE.FORBIDDEN]: '无权限访问',
+  [BUSINESS_CODE.ACCOUNT_DISABLED]: '账号已被禁用',
+  [BUSINESS_CODE.PASSWORD_ERROR]: '密码错误',
+  [BUSINESS_CODE.BUSINESS_ERROR]: '业务处理失败',
+  [BUSINESS_CODE.OPERATION_FAILED]: '操作失败',
+  [BUSINESS_CODE.DATA_CONFLICT]: '数据冲突',
+  [BUSINESS_CODE.INTERNAL_ERROR]: '系统内部错误',
+  [BUSINESS_CODE.SERVICE_UNAVAILABLE]: '服务暂时不可用',
+  [BUSINESS_CODE.TIMEOUT]: '请求超时',
+  [BUSINESS_CODE.DATABASE_ERROR]: '数据库错误',
+  [BUSINESS_CODE.EXTERNAL_API_ERROR]: '外部服务错误',
+} as const;

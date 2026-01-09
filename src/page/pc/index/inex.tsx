@@ -13,6 +13,7 @@ import PageQuestion from './components/question/index';
 import PageConsult from './components/consult/index';
 import PageCase from './components/case';
 import SourcePage from './components/source';
+import { getCats } from '@/common/api';
 // import FloatBtnEle from './components/floatButton';
 
 
@@ -29,6 +30,7 @@ export default function Index() {
     // })
 
     useEffect(() => {
+        getNestCats()
         const scrollbox = scrollBoxRef.current;
         if (!scrollbox) return;
 
@@ -57,6 +59,14 @@ export default function Index() {
         };
     }, []);
 
+    const getNestCats = async () => {
+        try {
+            const res = await getCats();
+            console.log('Cats from NestJS:', res);
+        } catch (error) {
+            console.error('Error fetching cats:', error);
+        }
+    }
     return (
         <div className="w-100 h-100" >
             <div className='flex items-center flex-col bg-[#fafafa]'>

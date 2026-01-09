@@ -16,11 +16,14 @@ export class Cat {
 
     @Column()
     link: string
-
+    
     @Column({ type: 'decimal', precision: 12, scale: 2, nullable: true })
     // 类型为 decimal 
     // precision: 总位数
     // scale: 小数点后位数
     price: number;
+
+    
+    @Column()
     mount: string
 }

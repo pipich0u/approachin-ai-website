@@ -29,12 +29,16 @@ export default defineConfig(({ mode }) => {
   },
   server: {
     host: '0.0.0.0',
-    port: 5174,
+    port: 1234,
     proxy: {
       "/api": {
         target: "http://test.approaching-ai.com/api",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+      "/nest": {
+        target: "http://localhost:3210",
+        changeOrigin: true,
       },
       "/static": {
         target: "http://test.approaching-ai.com/api",

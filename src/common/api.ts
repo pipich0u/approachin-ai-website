@@ -54,6 +54,11 @@ export const getVersion = async () => {
         method: 'GET',
     });
 }
+export const getCats = async () => {
+    return request('/nest/cat', {
+        method: 'GET',
+    });
+}
 
 export const getGitSource = async (org: string, repo: string, perPage: number = 100, page: number = 1) => {
     return request(`https://api.github.com/repos/${org}/${repo}/contributors`, {

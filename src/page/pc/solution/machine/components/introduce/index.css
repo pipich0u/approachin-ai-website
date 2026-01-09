@@ -9,7 +9,7 @@
 
 .mc-introduce-content {
     width: 100%;
-    max-width: 1440px;
+    min-width: 1440px;
     height: 744px;
     padding: 40px 100px;
 }
