@@ -1,7 +1,7 @@
 export const menuHrefListDefault = [
     {
         title: '解决方案',
-        href: 'pageProduct',
+        href: '/',
         isSelected: true,
         subItems: [
             { title: 'A·Spark 便携工作站', href: 'aiInference' },
@@ -37,12 +37,12 @@ export const menuHrefListDefault = [
     },
     {
         title: '趋境资讯',
-        href: 'PageTeam', 
+        href: 'information', 
         isSelected: false
     },
     {
         title: '关于我们',
-        href: 'PageTeam',
+        href: 'about',
         isSelected: true,
         subItems: [
             { title: '企业介绍', href: 'introduction' },
