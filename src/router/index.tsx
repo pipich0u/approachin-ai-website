@@ -12,6 +12,7 @@ import MobileIndex from "@/page/mobile/index/index.tsx"
 import { MobileKT } from "@/KT/KT"
 import MobileLayout from "@/page/mobile/index.tsx"
 import { MachinePage } from "@/page/pc/solution/machine"
+import { AMaaSPage } from "@/page/pc/solution/AMaaS"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -53,7 +54,7 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                 },
                 {
                     path: "amaas",
-                    element: <KT />,
+                    element: <AMaaSPage />,
                 },
                 {
                     path: "mooncake",
