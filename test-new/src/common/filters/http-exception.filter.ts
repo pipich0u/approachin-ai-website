@@ -58,6 +58,11 @@ export class HttpExceptionFilter implements ExceptionFilter {
           }
           code = BUSINESS_CODE.VALIDATION_ERROR as number;
         }
+        // 处理其他对象类型的异常响应
+        else {
+          message = exception.message || JSON.stringify(exceptionResponse);
+          code = httpStatus;
+        }
       } else if (typeof exceptionResponse === 'string') {
         message = exceptionResponse;
       }
@@ -75,11 +80,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
     // 记录错误日志
     const stack = exception instanceof Error ? exception.stack : undefined;
-    this.logger.error(
-      `${request.method} ${request.url} - ${httpStatus} - ${message}`,
-      stack,
-    );
-
+    this.logger.error(`${request.method} ${request.url} - ${httpStatus} - ${message}`, stack);
     // 发送响应
     response.status(httpStatus).json(errorResponse);
   }

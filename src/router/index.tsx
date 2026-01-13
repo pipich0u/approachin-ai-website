@@ -52,6 +52,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     element: <KT />,
                 },
                 {
+                    path: "amaas",
+                    element: <KT />,
+                },
+                {
                     path: "mooncake",
                     element: <MoonCake />,
                 },

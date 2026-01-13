@@ -30,6 +30,7 @@ import { ValidationPipe } from './common/pipes/validation.pipe';
 import { CustomLoggerService } from './modules/logger/logger.service';
 
 // import { TypeOrmModule } from '@nestjs/typeorm';
+import { InfoModule } from './info/info.module';
 
 @Module({
   imports: [
@@ -46,7 +47,9 @@ import { CustomLoggerService } from './modules/logger/logger.service';
     // 业务模块
     CatModule,
 
-    // 数据库模块（暂时注释）
+    InfoModule,
+
+    // 数据库模块
     // TypeOrmModule.forRoot({
     //   type: 'mysql',
     //   host: 'localhost',

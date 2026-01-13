@@ -180,4 +180,5 @@
     font-weight: 330;
     line-height: 130%;
     letter-spacing: 0.84px;
+    user-select: text;
 }
