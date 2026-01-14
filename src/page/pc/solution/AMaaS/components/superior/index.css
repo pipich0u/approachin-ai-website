@@ -96,6 +96,7 @@
     width: 4px;
     height: 49px;
     background-color: #4500D0E3;
+    transition: all 0.3s ease-in-out;
 }
 
 /* .sup-active::after {
