@@ -1,7 +1,7 @@
 import './index.css'
 import { useEffect } from 'react'
 import { trackPageView } from '@/utils/umami'
-import { AMaaSIndex } from './components/index'
+import { AMaaSIndex } from './components/index/index'
 import { AMaaSIntroduce } from './components/introduce'
 import { AMaaSRelation } from './components/relation'
 import { AMaasSuperior } from './components/superior'

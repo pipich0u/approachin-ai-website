@@ -1,9 +1,10 @@
 export const menuHrefListDefault = [
     {
-        title: '解决方案',
+        title: '产品介绍',
         href: '/',
         isSelected: true,
         subItems: [
+            { title: '解决方案', href: 'solution' },
             { title: 'A·Spark 便携工作站', href: 'aiInference' },
             { title: '大模型推理一体机', href: 'machine' },
             { title: '推理引擎·KLLM', href: 'smartScheduling' },
@@ -37,7 +38,7 @@ export const menuHrefListDefault = [
     },
     {
         title: '趋境资讯',
-        href: 'information', 
+        href: 'information',
         isSelected: false
     },
     {
@@ -51,7 +52,7 @@ export const menuHrefListDefault = [
     },
 ]
 export const mobMenuHrefListDefault = [
-    { 
+    {
         title: '解决方案',
         href: 'pageProduct',
         isSelected: true,

@@ -286,14 +286,15 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-top: 8px;
 }
-
+ 
 .amaas-related-li {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 290px;
-    height: 30px;
+    height: 30px; 
     background: #F2F2F4;
     color: #59595A;
     font-size: 14px;

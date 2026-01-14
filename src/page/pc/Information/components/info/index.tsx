@@ -18,7 +18,7 @@ export const InformationInfo = () => {
                             </div>
                             <div className='in-info-item-time'>
                                 <div>{item.date}</div>
-                                <div className='cursor-pointer'>查看详情<IconFont type='icon-up-s' className='detail-icon' /></div>
+                                <div className='cursor-pointer' onClick={()=>window.open(item.link)}>查看详情<IconFont type='icon-up-s' className='detail-icon' /></div>
                             </div>
                         </div>
                         <div className='in-info-item-rig'>

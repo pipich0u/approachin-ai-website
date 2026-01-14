@@ -54,14 +54,9 @@ export const AMaasSuperior = () => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setInView(entry.isIntersecting)
-            },
-            {
-                threshold: 0.3, // 30% 可见就算进入
-            }
+            }, { threshold: 0.3 }
         )
-
         observer.observe(containerRef.current)
-
         return () => observer.disconnect()
     }, [])
 
@@ -77,29 +72,20 @@ export const AMaasSuperior = () => {
     }, [inView, hovering, activeTab])
 
     return (
-        <div
-            ref={containerRef}
-            className='amaas-superior-container'
-        >
+        <div ref={containerRef} className='amaas-superior-container' >
             <div className='amaas-sup-content'>
                 <div className="amaas-sup-title">AMaaS产品优势</div>
-
                 <div className='amaas-sup-box'>
                     <div className='amaas-sup-tab'>
                         <div className='amaas-sup-nav'>
-                            <div
-                                className='sup-active'
+                            <div className='sup-active'
                                 style={{
-                                    top:
-                                        tabItems.findIndex(item => item.id === activeTab) * 55 + 'px'
+                                    top: tabItems.findIndex(item => item.id === activeTab) * 55 + 'px'
                                 }}
                             />
                             {tabItems.map(item => (
-                                <div
-                                    key={item.id}
-                                    className={`amaas-sup-tab-items ${item.id === activeTab ? 'item-active' : ''
-                                        }`}
-                                    onClick={() => setActiveTab(item.id)}
+                                <div key={item.id} onClick={() => setActiveTab(item.id)}
+                                    className={`amaas-sup-tab-items ${item.id === activeTab ? 'item-active' : ''}`}
                                     onMouseEnter={() => setHovering(true)}
                                     onMouseLeave={() => setHovering(false)}
                                 >

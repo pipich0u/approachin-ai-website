@@ -1,5 +1,5 @@
 import './index.css'
-import { MachineIndex } from './components/index'
+import { MachineIndex } from './components/index/index'
 import { MachineProduct } from './components/product'
 import { MachineAmaas } from './components/amaas'
 import { MachineIntroduce } from './components/introduce'

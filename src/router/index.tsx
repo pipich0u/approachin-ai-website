@@ -11,9 +11,10 @@ import { IntroductionPage } from "@/page/pc/about/introduction"
 import MobileIndex from "@/page/mobile/index/index.tsx"
 import { MobileKT } from "@/KT/KT"
 import MobileLayout from "@/page/mobile/index.tsx"
-import { MachinePage } from "@/page/pc/solution/machine"
-import { AMaaSPage } from "@/page/pc/solution/AMaaS"
+import { MachinePage } from "@/page/pc/product/machine"
+import { AMaaSPage } from "@/page/pc/product/AMaaS"
 import { InformationPage } from "@/page/pc/Information"
+import { SolutionPage } from "@/page/pc/product/solution"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -72,6 +73,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                 {
                     path: "machine",
                     element: <MachinePage />,
+                },
+                {
+                    path: "solution",
+                    element: <SolutionPage />,
                 },
                 {
                     path: "introduction",
