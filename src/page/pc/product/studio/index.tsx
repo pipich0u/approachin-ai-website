@@ -1,3 +1,5 @@
+import PageConsult from '../../index/components/consult'
+import PageContact from '../../index/components/contact'
 import { StudioCarousel } from './components/carousel'
 import { StudioIndex } from './components/index'
 import { StudioLink } from './components/link'
@@ -11,5 +13,7 @@ export const StudioPage = () => {
         <StudioLink />
         <StudioTab />
         <StudioCarousel />
+        <PageConsult />
+        <PageContact />
     </div>
 }

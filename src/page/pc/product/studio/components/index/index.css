@@ -1,26 +1,25 @@
 .studio-index-container {
     width: 100%;
     height: 560px;
-    font-family: MiSans;
-    box-sizing: border-box;
-    font-style: normal;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: MiSans;
+    font-style: normal;
     background: linear-gradient(45deg, #F3F5FE 76.3%, #E7E8FC 100%);
-
 }
 
 .studio-index-content {
     width: 100%;
     height: 100%;
     max-width: 1440px;
-    background: url(/src/assets/images/img/studio_bg.png) no-repeat right;
-    background-size: contain;
-    padding: 0 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 100px;
+    background: url(/src/assets/images/img/studio_bg.png) no-repeat right;
+    background-size: contain;
 }
 
 .studio-index-title {
@@ -33,11 +32,11 @@
 }
 
 .studio-index-desc {
+    width: 718px;
     color: #323334;
     font-size: 20px;
     font-weight: 305;
     line-height: 150%;
-    width: 718px;
     letter-spacing: 0.4px;
     margin-top: 13px;
 }
@@ -48,16 +47,15 @@
     margin-top: 50px;
 }
 
-.studio-index-btnbox>.studio-btn {
+.studio-index-btnbox > .studio-btn {
     background: #333 !important;
 }
 
-.studio-index-btnbox>.studio-btn::before {
+.studio-index-btnbox > .studio-btn::before {
     background: #333 !important;
 }
 
-
-.studio-index-btnbox>.animated-button {
+.studio-index-btnbox > .animated-button {
     font-size: 16px;
     font-weight: 380;
 }
