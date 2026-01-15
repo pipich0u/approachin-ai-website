@@ -15,6 +15,7 @@ import { MachinePage } from "@/page/pc/product/machine"
 import { AMaaSPage } from "@/page/pc/product/AMaaS"
 import { InformationPage } from "@/page/pc/Information"
 import { SolutionPage } from "@/page/pc/product/solution"
+import { StudioPage } from "@/page/pc/product/studio"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -77,6 +78,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                 {
                     path: "solution",
                     element: <SolutionPage />,
+                },
+                {
+                    path: "studio",
+                    element: <StudioPage />,
                 },
                 {
                     path: "introduction",

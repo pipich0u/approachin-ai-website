@@ -5,7 +5,8 @@ export const menuHrefListDefault = [
         isSelected: true,
         subItems: [
             { title: '解决方案', href: 'solution' },
-            { title: 'A·Spark 便携工作站', href: 'aiInference' },
+            { title: 'AI·Studio一站式', href: 'studio' },
+            { title: 'AI·Spark 便携工作站', href: 'aiInference' },
             { title: '大模型推理一体机', href: 'machine' },
             { title: '推理引擎·KLLM', href: 'smartScheduling' },
             { title: '推理服务平台·AMaaS', href: 'amaas' },
