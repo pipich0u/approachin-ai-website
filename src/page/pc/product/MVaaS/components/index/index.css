@@ -1,0 +1,82 @@
+
+.mvaas-index-container {
+    width: 100%;
+    height: 590px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    box-sizing: border-box;
+    background: linear-gradient(360deg, rgba(237, 241, 255, 0) 0%, #EDF1FF 100%);
+    font-family: MiSans;
+    font-style: normal;
+}
+
+.mvaas-index-content {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mvaas-index-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.mvaas-index-right img {
+    width: 530px;
+    height: 394px;
+}
+
+.mvaas-index-title {
+    color: #333;
+    font-size: 58px;
+    font-weight: 520;
+    line-height: 150%;
+    letter-spacing: 1.16px;
+}
+
+.mvaas-index-nav {
+    display: flex;
+    width: 557px;
+    height: 54px;
+    padding: 10px 44px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0 0 10px 0 rgba(0, 66, 123, 0.06);
+    color: #333;
+    font-family: MiSans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 380;
+    line-height: 150%;
+}
+
+.mvaas-index-desc {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.mvaas-index-desc-items {
+    color: #31365F;
+    font-family: MiSans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 305;
+    line-height: 150%;
+    letter-spacing: 0.36px;
+}
+
+.mvaas-index-btn {
+    margin-top: 42px;
+    font-size: 16px;
+}
