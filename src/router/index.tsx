@@ -16,6 +16,7 @@ import { AMaaSPage } from "@/page/pc/product/AMaaS"
 import { InformationPage } from "@/page/pc/Information"
 import { SolutionPage } from "@/page/pc/product/solution"
 import { StudioPage } from "@/page/pc/product/studio"
+import { MVaaSPage } from "@/page/pc/product/MVaaS"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -62,6 +63,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                 {
                     path: "mooncake",
                     element: <MoonCake />,
+                },
+                {
+                    path: "mvaas",
+                    element: <MVaaSPage />,
                 },
                 {
                     path: "models",

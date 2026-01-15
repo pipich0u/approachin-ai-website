@@ -6,11 +6,11 @@ export const menuHrefListDefault = [
         subItems: [
             { title: '解决方案', href: 'solution' },
             { title: 'AI·Studio一站式', href: 'studio' },
-            { title: 'AI·Spark 便携工作站', href: 'aiInference' },
+            { title: 'AI·Spark 便携工作站', href: 'spark' },
             { title: '大模型推理一体机', href: 'machine' },
-            { title: '推理引擎·KLLM', href: 'smartScheduling' },
+            { title: '推理引擎·KLLM', href: 'kllm' },
             { title: '推理服务平台·AMaaS', href: 'amaas' },
-            { title: '专属推理云·AMVaaS', href: 'smartScheduling' },
+            { title: '专属推理云·AMVaaS', href: 'mvaas' },
         ]
     },
     {
