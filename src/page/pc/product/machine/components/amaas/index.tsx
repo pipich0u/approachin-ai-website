@@ -9,7 +9,7 @@ export const MachineAmaas = () => {
             <motion.div className="amaas-con-title" {...scrollInViewSpringOnceProps}>{machinAmaas.title}</motion.div>
             <div className='amaas-con-box'>
                 <div className="amaas-con-box-left">
-                    <motion.div className="amaas-con-box-title" {...scrollInViewSpringOnceProps}>{machinAmaas.amaas}</motion.div>
+                    <motion.div className="amaas-con-box-title" {...scrollInViewSpringOnceProps}>{machinAmaas.platform}</motion.div>
                     <motion.div className="amaas-con-box-list" {...scrollInViewSpringOnceProps}>
                         {
                             machinAmaas.list.map((item, index) => {

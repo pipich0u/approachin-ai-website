@@ -2,26 +2,11 @@ import './index.css'
 import { motion, AnimatePresence } from 'motion/react'
 import amaas from '@/assets/images/img/amaas.png'
 import { useEffect, useRef, useState } from 'react'
+import { amaasTextConfig } from '../../textConfig'
 
 export const AMaasSuperior = () => {
-
-    const tabItems = [
-        {
-            id: 'tab1',
-            label: '多卡异构，软件定义AI Infr',
-            desc: '兼容主流国产、非国产硬件，CPU+GPU、GPU+GPU异构推理',
-        },
-        {
-            id: 'tab2',
-            label: '极致的推理性能',
-            desc: '自研企业级KLLM推理引擎，并发、吞吐、TTFT等性能跃升',
-        },
-        {
-            id: 'tab3',
-            label: '模型天级更新',
-            desc: '天级完成各厂商新发布模型的适配及上线',
-        }
-    ]
+    const { superior } = amaasTextConfig;
+    const tabItems = superior.tabItems;
 
     const [activeTab, setActiveTab] = useState(tabItems[0].id)
     const [inView, setInView] = useState(false)
@@ -74,7 +59,7 @@ export const AMaasSuperior = () => {
     return (
         <div ref={containerRef} className='amaas-superior-container' >
             <div className='amaas-sup-content'>
-                <div className="amaas-sup-title">AMaaS产品优势</div>
+                <div className="amaas-sup-title">{superior.title}</div>
                 <div className='amaas-sup-box'>
                     <div className='amaas-sup-tab'>
                         <div className='amaas-sup-nav'>

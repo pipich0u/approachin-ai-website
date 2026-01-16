@@ -16,7 +16,7 @@ export const MachineProduct = () => {
                                 <div className='product-box-item-desc'>{item.desc}</div>
                             </div>
                             <Button type='link' className="product-box-item-btn">
-                                <span className="product-box-item-btn-text">了解详情</span>
+                                <span className="product-box-item-btn-text">{machinProduct.buttonText}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
                                     <path d="M3.50014 13.0001L3.5 11.0002H16.6719L12.7222 7.05044L14.1364 5.63623L20.5004 12.0002L14.1364 18.3642L12.7222 16.9499L16.672 13.0002L3.50014 13.0001Z" fill="#806BFF" />
                                 </svg>

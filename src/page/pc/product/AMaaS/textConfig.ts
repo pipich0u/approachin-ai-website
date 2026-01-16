@@ -1,4 +1,5 @@
 export const amaasTextConfig = {
+    pageName: 'AMaaS页面',
     index: {
         title: 'AMaaS',
         subtitle: '一站式大模型服务平台',
@@ -104,5 +105,29 @@ export const amaasTextConfig = {
                 items: ['模型仓库', 'KLLM', '一体机']
             }
         }
+    },
+    superior: {
+        title: 'AMaaS产品优势',
+        tabItems: [
+            {
+                id: 'tab1',
+                label: '多卡异构，软件定义AI Infr',
+                desc: '兼容主流国产、非国产硬件，CPU+GPU、GPU+GPU异构推理'
+            },
+            {
+                id: 'tab2',
+                label: '极致的推理性能',
+                desc: '自研企业级KLLM推理引擎，并发、吞吐、TTFT等性能跃升'
+            },
+            {
+                id: 'tab3',
+                label: '模型天级更新',
+                desc: '天级完成各厂商新发布模型的适配及上线'
+            }
+        ]
+    },
+    testimony: {
+        title: '客户证言',
+        description: '将企业用户算力与技术起步门槛降低10倍'
     }
 }

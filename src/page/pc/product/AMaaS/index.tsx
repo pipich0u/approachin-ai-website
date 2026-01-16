@@ -8,10 +8,11 @@ import { AMaasSuperior } from './components/superior'
 import { AMaasTestimony } from './components/testimony'
 import PageConsult from '../../index/components/consult'
 import PageContact from '../../index/components/contact'
+import { amaasTextConfig } from './textConfig'
 
 export const AMaaSPage = () => {
     useEffect(() => {
-        trackPageView('AMaaS页面')
+        trackPageView(amaasTextConfig.pageName)
     }, [])
 
     return <div className='amaas-page'>

@@ -4,10 +4,10 @@ import './index.css'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
 import { PageTabList } from '@/page/textConfig'
 import { useState } from 'react'
+import { solutionTextConfig } from '../../textConfig'
 
 export const SolutionTab = () => {
-
-    const tabs = ['低门槛启动', '高并发高吞吐', '资源精细化管理', 'ISV联合共创', '超低TTFT', 'AI开发环境一体交付']
+    const { tab } = solutionTextConfig;
     const [activeTab, setActiveTab] = useState(0)
     return <div className='solution-tab-container'>
         <div className='solution-tab-content'>
@@ -22,7 +22,7 @@ export const SolutionTab = () => {
             </motion.div>
             <motion.div className='solution-tabpanel' {...scrollInViewOnceProps}>
                 <div className='solution-tabpanel-top'>
-                    <div className='solution-tabpanel-title'>某海外投资机构</div>
+                    <div className='solution-tabpanel-title'>{tab.caseTitle}</div>
                     <div className='solution-tabpanel-desc'>
                         {PageTabList.tablist[activeTab].desc}
                     </div>
