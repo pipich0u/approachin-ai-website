@@ -27,7 +27,7 @@ export const MVaaSIndex = () => {
                 </motion.button>
             </div>
             <div className='mvaas-index-right'>
-                <img src={mvaas} alt="" />
+                <img src={mvaas} alt="" className='selectNone'/>
             </div>
         </div>
     </div>

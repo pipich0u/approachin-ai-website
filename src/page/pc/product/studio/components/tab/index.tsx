@@ -93,7 +93,7 @@ export const StudioTab = () => {
                             </div>
                         </div>
                         <div className='studio-cont-box-right'>
-                            <img src={tabimg} alt="Tab Image" />
+                            <img src={tabimg} alt="Tab Image" className='selectNone' />
                         </div>
                     </motion.div>
                 </motion.div>

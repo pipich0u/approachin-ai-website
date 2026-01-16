@@ -13,7 +13,7 @@ export const StudioLink = () => {
                 </svg>
             </div>
             <div className='studio-link-box'>
-                <img src={studioLink} alt="" />
+                <img src={studioLink} alt="" className='selectNone' />
             </div>
         </div>
     </div>

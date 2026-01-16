@@ -11,10 +11,10 @@ export const MVaaSChatBot = () => {
                     <div className='mvaas-chatbot-title'>以CahtBot为主的AI应用</div>
                     <div className='mvaas-chatbot-desc'>SLO需求单一且稳定，将GPU堆至某一水平线即可满足需求</div>
                 </div>
-                <img src={imgtop} alt="" className='mvaas-chatbot-topnav-topimg' />
+                <img src={imgtop} alt="" className='mvaas-chatbot-topnav-topimg selectNone' />
             </div>
             <div className='mvaas-chatbot-box mt-4'>
-                <img src={imgbottom} alt="" className='mvaas-chatbot-bottom-img' />
+                <img src={imgbottom} alt="" className='mvaas-chatbot-bottom-img selectNone' />
                 <div className='mvaas-chatbot-bottom'>
                     <div className='mvaas-chatbot-title'>多智能体协作的真实AI业务</div>
                     <div className='mvaas-chatbot-desc mvaas-bottom-desc'>

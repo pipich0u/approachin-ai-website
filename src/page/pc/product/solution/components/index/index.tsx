@@ -28,7 +28,7 @@ export const SolutionIndex = () => {
                 {
                     arr.map((item, idx) => (
                         <div className='solution-index-bottom-items'>
-                            <img src={inter} alt="" />
+                            <img src={inter} alt="" className='selectNone' />
                         </div>
                     ))
                 }

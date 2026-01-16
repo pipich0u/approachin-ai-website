@@ -22,7 +22,7 @@ export const MachineAmaas = () => {
                     </motion.div>
                 </div>
                 <motion.div {...scrollInViewSpringOnceProps} className="amaas-con-box-rig">
-                    <img src={img} alt="" />
+                    <img src={img} alt="" className='selectNone'/>
                 </motion.div>
             </div>
         </div>
