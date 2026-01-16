@@ -1,5 +1,7 @@
+import { motion } from 'motion/react'
 import { IconFont } from '@/utils/antdUtils'
 import './index.css'
+import { scrollInViewOnceProps } from '@/utils/motionConfig'
 import { amaasTextConfig } from '../../textConfig'
 
 export const AMaaSIntroduce = () => {
@@ -7,12 +9,12 @@ export const AMaaSIntroduce = () => {
 
     return <div className='amaas-introduce-container'>
         <div className="amaas-in-content">
-            <div className="amaas-in-title">
+            <motion.div className="amaas-in-title" {...scrollInViewOnceProps}>
                 {introduce.title}
-            </div>
+            </motion.div>
             <div className="amaas-in-box">
                 {introduce.items.map((item, index) => (
-                    <div key={index} className="amaas-in-item">
+                    <motion.div key={index} className="amaas-in-item" {...scrollInViewOnceProps}>
                         <div className='amaas-in-item-title'>
                             {item.title}
                         </div>
@@ -28,7 +30,7 @@ export const AMaaSIntroduce = () => {
                             ))}
                         </div>
                         <div className='amaas-in-item-img'></div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

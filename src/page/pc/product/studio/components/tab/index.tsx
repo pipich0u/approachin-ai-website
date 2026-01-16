@@ -41,7 +41,7 @@ export const StudioTab = () => {
 
     return <div className='studio-tab-container'>
         <div className='studio-tab-content'>
-            <div className='studio-tab-title'>产品能力</div>
+            <motion.div {...scrollInViewSpringProps} className='studio-tab-title'>产品能力</motion.div>
             <div className='studio-tab-box'>
                 <motion.div {...scrollInViewSpringProps} className='studio-tabbar' ref={navRef}>
                     {StudioTabList.tablist.map((item) => (

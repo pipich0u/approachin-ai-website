@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import './index.css'
 import studio_carousel from '@/assets/images/img/studio_carousel.png'
-
+import { scrollInViewOnceProps } from '@/utils/motionConfig'
 const carouselData = [
     {
         id: 0,
@@ -51,7 +51,7 @@ export const StudioCarousel = () => {
 
     return <div className='studio-carousel-container'>
         <div className='studio-carousel-content'>
-            <div className='studio-carousel-title'>应用场景</div>
+            <motion.div {...scrollInViewOnceProps} className='studio-carousel-title'>应用场景</motion.div>
             <div className='studio-carousel-box'>
                 <div className='studio-carousel-arrow studio-carousel-arrow-left' onClick={handlePrev}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -63,7 +63,7 @@ export const StudioCarousel = () => {
                         <path d="M13.1716 11.9993L8.2218 7.0496L9.636 5.6354L16 11.9993L9.636 18.3633L8.2218 16.9491L13.1716 11.9993Z" fill="#B5B5B5" />
                     </svg>
                 </div>
-                <div className='studio-carousel-list'>
+                <motion.div {...scrollInViewOnceProps} className='studio-carousel-list'>
                     {displayItems.map((item) => {
                         const isActive = item.position === 'center';
                         return (
@@ -137,7 +137,7 @@ export const StudioCarousel = () => {
                             </motion.div>
                         );
                     })}
-                </div>
+                </motion.div>
             </div>
         </div>
     </div>

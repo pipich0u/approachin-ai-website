@@ -1,14 +1,17 @@
+import { motion } from 'motion/react'
 import { IconFont } from '@/utils/antdUtils'
 import './index.css'
+import { scrollInViewOnceProps } from '@/utils/motionConfig'
 import { PageTabList } from '@/page/textConfig'
 import { useState } from 'react'
+
 export const SolutionTab = () => {
 
     const tabs = ['低门槛启动', '高并发高吞吐', '资源精细化管理', 'ISV联合共创', '超低TTFT', 'AI开发环境一体交付']
     const [activeTab, setActiveTab] = useState(0)
     return <div className='solution-tab-container'>
         <div className='solution-tab-content'>
-            <div className='solution-tabnav'>
+            <motion.div className='solution-tabnav' {...scrollInViewOnceProps}>
                 {
                     PageTabList.tablist.map((item, idx) => (
                         <div className={`solution-tabnav-item ${activeTab === idx ? 'solution-item-active' : ''}`} key={idx} onClick={() => setActiveTab(idx)}>
@@ -16,8 +19,8 @@ export const SolutionTab = () => {
                         </div>
                     ))
                 }
-            </div>
-            <div className='solution-tabpanel'>
+            </motion.div>
+            <motion.div className='solution-tabpanel' {...scrollInViewOnceProps}>
                 <div className='solution-tabpanel-top'>
                     <div className='solution-tabpanel-title'>某海外投资机构</div>
                     <div className='solution-tabpanel-desc'>
@@ -43,7 +46,7 @@ export const SolutionTab = () => {
                         })
                     }
                 </div>
-            </div>
+            </motion.div>
         </div>
     </div>
 }

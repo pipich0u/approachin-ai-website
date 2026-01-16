@@ -1,60 +1,63 @@
+/* ========== 容器布局 ========== */
 .introduction-index-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    font-family: MiSans;
+    font-style: normal;
 }
 
-.in-idx-content {
+.introduction-idx-company-box {
+    height: 450px;
+}
+
+/* ========== 顶部内容区域 ========== */
+.introduction-idx-content {
     width: 100%;
-    /* max-width: 1440px; */
     height: 610px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(/src/assets/images/img/introduction_bg.png) 50% / cover no-repeat;
+    background: url(/src/assets/images/img/introduction_bg_about.png) 50% / cover no-repeat;
     background-size: 100% 610px;
 }
 
-.in-idx-content-title {
+.introduction-idx-content-title {
     display: flex;
     align-items: center;
-    color: #1A1A1A;
+    color: #FFF;
     text-align: center;
-    font-family: MiSans;
     font-size: 48px;
-    font-style: normal;
     font-weight: 520;
     line-height: 150%;
     letter-spacing: 0.96px;
     margin-top: 138px;
 }
 
-.in-idx-content-title-color {
-    background: linear-gradient(256deg, #4E74FF -3.3%, #A557FE 105.24%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.introduction-idx-content-title-color {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 520;
+    line-height: 150%;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    margin-left: 8px;
 }
 
-
-.in-idx-content-btn {
+.introduction-idx-content-btn {
     padding: 10px 44px;
     box-shadow: none;
 }
 
-.in-idx-company-box {
-    height: 450px;
-}
-
-.in-idx-company {
+/* ========== 公司介绍卡片 ========== */
+.introduction-idx-company {
     width: 1240px;
     height: 584px;
     padding: 70px;
     position: absolute;
     top: -190px;
-    /* left: 50%; */
     display: flex;
     flex-direction: column;
     border-radius: 30px;
@@ -63,7 +66,7 @@
     backdrop-filter: blur(20px);
 }
 
-.in-idx-company::before {
+.introduction-idx-company::before {
     content: '';
     position: absolute;
     top: 0;
@@ -80,8 +83,7 @@
     pointer-events: none;
 }
 
-.in-idx-company-size {
-    font-family: MiSans;
+.introduction-idx-company-size {
     font-size: 40px;
     font-weight: 520;
     line-height: 150%;
@@ -89,7 +91,7 @@
     width: fit-content;
 }
 
-.in-idx-company-name {
+.introduction-idx-company-name {
     display: inline-block;
     background: linear-gradient(256deg, #4E74FF -3.3%, #A557FE 105.24%);
     background-clip: text;
@@ -97,49 +99,44 @@
     -webkit-text-fill-color: transparent;
 }
 
-.in-idx-company-content {
+.introduction-idx-company-content {
     color: #808080;
     text-align: justify;
-    font-family: MiSans;
     font-size: 16px;
-    font-style: normal;
     font-weight: 330;
     line-height: 180%;
     letter-spacing: 0.32px;
     margin-top: 28px;
 }
 
-.in-idx-company-data {
+/* ========== 公司数据展示 ========== */
+.introduction-idx-company-data {
     display: flex;
     align-items: center;
     gap: 80px;
     margin-top: 40px;
 }
 
-.in-idx-company-data-item {
+.introduction-idx-company-data-item {
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
 }
 
-.in-idx-company-data-item-num {
+.introduction-idx-company-data-item-num {
     color: #6C19FE;
     text-align: justify;
-    font-family: MiSans;
     font-size: 29.528px;
-    font-style: normal;
     font-weight: 520;
     line-height: 180%;
     letter-spacing: 0.591px;
 }
 
-.in-idx-company-data-item-title {
+.introduction-idx-company-data-item-title {
     color: #808080;
     text-align: justify;
-    font-family: MiSans;
     font-size: 16px;
-    font-style: normal;
     font-weight: 330;
     line-height: 180%;
     letter-spacing: 0.32px;

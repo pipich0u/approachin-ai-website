@@ -1,7 +1,7 @@
 
 export const introductionList = {
-    title: '全栈智算引擎·普惠',
-    titleColor: '高效AI',
+    title: '趋境科技',
+    titleColor: 'Approaching.ai',
     btnText: '联系我们',
     companyName: '趋境科技',
     companyTitle: '国际顶尖 AI 推理优化技术团队',

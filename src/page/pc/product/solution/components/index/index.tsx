@@ -10,10 +10,10 @@ export const SolutionIndex = () => {
     return <div className='solution-index-container'>
         <div className='solution-index-content'>
             <div className='solution-index-inner'>
-                <div className='solution-index-title'>解决方案</div>
-                <div className='solution-index-desc'>
+                <motion.div {...initialLoadProps} className='solution-index-title'>解决方案</motion.div>
+                <motion.div {...initialLoadProps} className='solution-index-desc'>
                     趋境科技依托丰富的经验，深入理解多种实际应月用场景，提供一系列成熟且易于实施的解决方案，为更加多元化的企业网络安全体系建设保驾护航。
-                </div>
+                </motion.div>
                 <motion.button
                     {...initialLoadProps}
                     className='animated-button w-[150px] rounded-lg bg-[#806BFF] mt-10!'
@@ -24,7 +24,7 @@ export const SolutionIndex = () => {
             </div>
         </div>
         <div className='solution-index-bottom'>
-            <div className='solution-index-bottom-inner'>
+            <motion.div {...initialLoadProps} className='solution-index-bottom-inner'>
                 {
                     arr.map((item, idx) => (
                         <div className='solution-index-bottom-items'>
@@ -32,8 +32,7 @@ export const SolutionIndex = () => {
                         </div>
                     ))
                 }
-
-            </div>
+            </motion.div>
         </div>
     </div>
 } 

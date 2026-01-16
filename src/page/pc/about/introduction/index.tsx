@@ -1,6 +1,6 @@
 import PageContact from '../../index/components/contact'
 import { IntroductionIndex } from './components/index'
-import { IntroductionInfo } from './components/info'
+import { IntroductionStep } from './components/step'
 import './index.css'
 import { useEffect } from 'react'
 import { trackPageView } from '@/utils/umami'
@@ -12,7 +12,7 @@ export const IntroductionPage = () => {
 
     return <div className='introduction-page'>
         <IntroductionIndex />
-        <IntroductionInfo />
+        <IntroductionStep />
         <PageContact />
     </div>
 }
