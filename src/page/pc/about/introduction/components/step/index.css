@@ -23,7 +23,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 48px;
     width: 100%;
 }
 
@@ -63,11 +63,11 @@
 }
 
 .introduction-step-img-title {
-    color: #333;
-    font-size: 18px;
+    color: #6C19FE;
+    font-size: 30px;
     font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 0.36px;
+    line-height: 40px;
+    letter-spacing: 0.6px;
     text-align: right;
 }
 
@@ -99,11 +99,11 @@
 }
 
 .introduction-step-date {
-    color: #A07AFF;
-    font-size: 14px;
-    font-weight: 450;
-    line-height: 150%;
-    letter-spacing: 0.28px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 520;
+    line-height: 40px;
+    letter-spacing: 0.48px;
 }
 
 .introduction-step-desc {

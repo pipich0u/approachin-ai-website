@@ -8,7 +8,7 @@ export default function CooperateBanner() {
     return <>
         <div className='banner-container'>
             <div className='banner-box'>
-                <motion.div {...initialLoadProps}>
+                <motion.div {...initialLoadProps} className='banner-left-content'>
                     <div className='banner-title'>{bannerText.title}</div>
                     <div className='banner-desc'>{bannerText.desc}</div>
                     <button className='banner-btn'>

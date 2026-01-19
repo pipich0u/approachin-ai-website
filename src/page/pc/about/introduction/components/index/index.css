@@ -107,6 +107,7 @@
     line-height: 180%;
     letter-spacing: 0.32px;
     margin-top: 28px;
+    text-indent: 2em;
 }
 
 /* ========== 公司数据展示 ========== */
@@ -114,7 +115,7 @@
     display: flex;
     align-items: center;
     gap: 80px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .introduction-idx-company-data-item {

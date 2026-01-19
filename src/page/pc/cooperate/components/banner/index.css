@@ -22,6 +22,9 @@
     background-size: 700px auto;
 }
 
+.banner-left-content{
+    margin-left: 50px;
+}
 .banner-title {
     color: #1B1D22;
     text-align: center;

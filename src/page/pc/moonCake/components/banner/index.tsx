@@ -16,18 +16,18 @@ export const MoonBanner = () => {
             <div className='mo-con-title'>{moonBannerList.title}</div>
             <div className='mo-con-desc'>{moonBannerList.desc}</div>
             <div className='mo-con-btnbox'>
-                <button className='mo-con-btn mo-btn-down'>
+                <button className='mo-con-btn mo-btn-down' onClick={()=>window.open('https://kvcache-ai.github.io/Mooncake/index.html')}>
                     <IconFont type="icon-qxz" className='mo-btn-icon' />
                     <span className='mo-btn-text'>{moonBannerList.btn1}</span>
                 </button>
-                <button className='mo-con-btn' onClick={() => window.open('https://github.com/kvcache-ai/Mooncake')}>
+                {/* <button className='mo-con-btn' onClick={() => window.open('https://github.com/kvcache-ai/Mooncake')}>
                     <IconFont type="icon-github" className='mo-btn-icon' />
                     <span className='mo-btn-text'>{moonBannerList.btn2}</span>
                 </button>
                 <button className='mo-con-btn'>
                     <IconFont type="icon-model" className='mo-btn-icon' />
                     <span className='mo-btn-text'>{moonBannerList.btn3}</span>
-                </button>
+                </button> */}
             </div>
         </motion.div >
     </div>

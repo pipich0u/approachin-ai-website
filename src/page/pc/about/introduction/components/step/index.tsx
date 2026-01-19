@@ -28,7 +28,11 @@ export const IntroductionStep = () => {
                         <div className='introduction-step-icon'>{stepIcon}</div>
                         <div className='introduction-step-right'>
                             <div className='introduction-step-date'>{item.date}</div>
-                            <div className='introduction-step-desc'>{item.desc}</div>
+                            <div className='introduction-step-desc'>{
+                                item.desc.map((descItem, descIndex) => (
+                                    <div key={descIndex} className='introduction-step-desc-item'>{descItem}</div>
+                                ))
+                            }</div>
                         </div>
                     </motion.div>
                 ))}
