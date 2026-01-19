@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './index.css';
 import logo_black from '@/assets/svg/logo-black.svg';
 import { useNavigate } from 'react-router-dom';
-import { Button, Dropdown } from 'antd';
+import { Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { menuHrefListDefault } from '@/page/textConfig';
 import { IconFont } from '@/utils/antdUtils';
@@ -37,7 +37,7 @@ const TopNavs = () => {
     <nav className="bg-1 navbar">
       <div className="app w-full flex justify-between">
 
-        <div className="logo flex items-center">
+        <div className="logo flex items-center justify-between w-full">
           <img src={logo_black} alt="" className=' cursor-pointer ' onClick={() => navigate('/')} />
           <div className="navbar-container ml-[100px]">
             {menuHrefListDefault.map((item, index) => {
@@ -79,7 +79,7 @@ const TopNavs = () => {
             })}
           </div>
         </div>
-        <Button className='navbar-btn' type='primary'>免费下载</Button>
+        {/* <Button className='navbar-btn' type='primary'>免费下载</Button> */}
       </div>
     </nav>
   );

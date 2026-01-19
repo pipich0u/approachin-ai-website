@@ -3,4 +3,5 @@
     align-items: center;
     flex-direction: column;
     background: #fff;
+    min-width: 1440px;
 }

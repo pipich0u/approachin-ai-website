@@ -8,7 +8,7 @@ export const moonBannerList = {
     tag: '趋境科技旗下开源项目',
     title: 'Mooncake 大模型推理框架',
     desc: '由趋境科技与清华大学 KVCache.AI 团队联合开源的高性能异构推理框架，业界首创全系统推理架构，让大模型在更低算力、更灵活的硬件架构上高效运行。',
-    btn1: '免费下载',
+    btn1: '前往下载',
     btn2: 'Github',
     btn3: '模型对比'
 }

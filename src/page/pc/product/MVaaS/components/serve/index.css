@@ -1,0 +1,151 @@
+.mvaas-serve-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FAFAFA;
+    font-family: MiSans;
+    font-style: normal;
+}
+
+.mvaas-serve-content {
+    padding: 90px 100px;
+    width: 100%;
+    height: 610px;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mvaas-serve-title {
+    margin-bottom: 63px;
+    color: #333;
+    font-size: 38px;
+    font-weight: 450;
+    line-height: 150%;
+    letter-spacing: 0.76px;
+}
+
+.mvaas-serve-box {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.mvaas-serve-item {
+    width: 610px;
+    height: 100%;
+}
+
+.mvaas-serve-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+.mvaas-serve-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 33px;
+}
+
+.mvaas-serve-top-title {
+    color: #333;
+    font-size: 24px;
+    font-weight: 380;
+    line-height: 150%;
+    letter-spacing: 0.48px;
+}
+
+.mvaas-serve-top-desc {
+    color: #484848;
+    font-size: 14px;
+    font-weight: 305;
+    line-height: 150%;
+    letter-spacing: 0.28px;
+    margin-top: 9px;
+}
+
+.mvaas-serve-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mvaas-serve-bottom-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 113px;
+    position: relative;
+}
+
+.mvaas-serve-bottom-items:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60px;
+    background: #E8E8E8;
+}
+
+.mvaas-serve-bottom-items-icon {
+    margin-bottom: 12px;
+}
+
+.mvaas-serve-bottom-items-title {
+    color: #333;
+    font-size: 16px;
+    font-weight: 380;
+    line-height: 150%;
+    letter-spacing: 0.32px;
+}
+
+.mvaas-serve-bottom-items-desc {
+    color: #484848;
+    font-size: 14px;
+    font-weight: 305;
+    line-height: 150%;
+    letter-spacing: 0.28px;
+    opacity: 0.9;
+}
+
+.mvaas-serve-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mvaas-serve-right-items {
+    width: 100%;
+    height: 140px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 37px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mvaas-serve-right-items-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.mvaas-serve-btn{
+    padding: 0;
+}

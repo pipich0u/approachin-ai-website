@@ -1,0 +1,67 @@
+.mvaas-chatbot-container {
+    width: 100%;
+    height: 768px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, #FEFEFE 100%),
+        url(/src/assets/images/img/scene_bg.png) lightgray 0px -14.365px / 100% 102.59% no-repeat;
+}
+
+.mvaas-chatbot-content {
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    padding: 120px 140px 60px;
+}
+
+.mvaas-chatbot-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.mvaas-chatbot-topnav-topimg {
+    width: 390px;
+    height: 176px;
+}
+
+.mvaas-chatbot-bottom-img {
+    width: 612px;
+    height: 396px;
+}
+
+.mvaas-chatbot-title {
+    margin-top: 8px;
+    margin-bottom: 19px;
+    color: #333;
+    font-size: 26.597px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 150%;
+    letter-spacing: 0.532px;
+}
+
+.mvaas-chatbot-desc {
+    color: #5A5A5A;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 380;
+    line-height: 150%;
+    letter-spacing: 0.36px;
+}
+
+.mvaas-bottom-desc {
+    text-align: right;
+}
+
+.mvaas-chatbot-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+}

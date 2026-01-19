@@ -1,14 +1,16 @@
 export const menuHrefListDefault = [
     {
-        title: '解决方案',
-        href: 'pageProduct',
+        title: '产品介绍',
+        href: '/',
         isSelected: true,
         subItems: [
-            { title: 'A·Spark 便携工作站', href: 'aiInference' },
+            { title: '解决方案', href: 'solution' },
+            { title: 'AI·Studio一站式', href: 'studio' },
+            { title: 'AI·Spark 便携工作站', href: 'spark' },
             { title: '大模型推理一体机', href: 'machine' },
-            { title: '推理引擎·KLLM', href: 'smartScheduling' },
-            { title: '推理服务平台·AMaaS', href: 'smartScheduling' },
-            { title: '专属推理云·AMVaaS', href: 'smartScheduling' },
+            { title: '推理引擎·KLLM', href: 'kllm' },
+            { title: '推理服务平台·AMaaS', href: 'amaas' },
+            { title: '专属推理云·AMVaaS', href: 'mvaas' },
         ]
     },
     {
@@ -37,12 +39,12 @@ export const menuHrefListDefault = [
     },
     {
         title: '趋境资讯',
-        href: 'PageTeam', 
+        href: 'information',
         isSelected: false
     },
     {
         title: '关于我们',
-        href: 'PageTeam',
+        href: 'about',
         isSelected: true,
         subItems: [
             { title: '企业介绍', href: 'introduction' },
@@ -51,7 +53,7 @@ export const menuHrefListDefault = [
     },
 ]
 export const mobMenuHrefListDefault = [
-    { 
+    {
         title: '解决方案',
         href: 'pageProduct',
         isSelected: true,
@@ -264,12 +266,12 @@ export const sourceList = {
     list: [
         {
             title: '开发者社区',
-            desc: '描述文本描述文本描述文本描述文本描述文本描述文本描述文本描述文本描述文本',
+            desc: '全球 TOP 推理引擎，首创 GPU+CPU 异构计算技术，击穿千亿/万亿大参数模型部署算力门槛，多家主流大模型首选推理引擎，获国际顶级系统会议 SOSP 论文',
             btn: '了解详情'
         },
         {
             title: '生态合作',
-            desc: '描述文本描述文本描述文本描述文本描述文本描述文本描述文本描述文本描述文本',
+            desc: '业界分布式推理事实标准，以 KVCache 为核心大幅提升大模型推理吞吐量与成本效率，获 2025 USENIX FAST 最佳论文',
             btn: '了解详情'
         },
     ]

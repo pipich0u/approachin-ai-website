@@ -11,7 +11,13 @@ import { IntroductionPage } from "@/page/pc/about/introduction"
 import MobileIndex from "@/page/mobile/index/index.tsx"
 import { MobileKT } from "@/KT/KT"
 import MobileLayout from "@/page/mobile/index.tsx"
-import { MachinePage } from "@/page/pc/solution/machine"
+import { MachinePage } from "@/page/pc/product/machine"
+import { AMaaSPage } from "@/page/pc/product/AMaaS"
+import { InformationPage } from "@/page/pc/Information"
+import { SolutionPage } from "@/page/pc/product/solution"
+import { StudioPage } from "@/page/pc/product/studio"
+import { MVaaSPage } from "@/page/pc/product/MVaaS"
+import { KLLMPage } from "@/page/pc/product/KLLM"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -48,28 +54,56 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     element: <Index />,
                 },
                 {
-                    path: "ktransformers",
-                    element: <KT />,
-                },
-                {
-                    path: "mooncake",
-                    element: <MoonCake />,
-                },
-                {
-                    path: "models",
-                    element: <ModelsRepository />,
+                    path: "amaas",
+                    element: <AMaaSPage />,
                 },
                 {
                     path: "cooperate",
                     element: <CooperatePage />,
                 },
                 {
+                    path: "ktransformers",
+                    element: <KT />,
+                },
+                {
+                    path: "kllm",
+                    element: <KLLMPage />,
+                },
+                {
+                    path: "mooncake",
+                    element: <MoonCake />,
+                },
+                {
+                    path: "mvaas",
+                    element: <MVaaSPage />,
+                },
+                {
+                    path: "models",
+                    element: <ModelsRepository />,
+                },
+                {
                     path: "machine",
                     element: <MachinePage />,
+                },
+                { 
+                    path: "solution",
+                    element: <SolutionPage />,
+                },
+                {
+                    path: "studio",
+                    element: <StudioPage />,
+                },
+                {
+                    path: "spark",
+                    element: <StudioPage />,
                 },
                 {
                     path: "introduction",
                     element: <IntroductionPage />,
+                },
+                {
+                    path: "information",
+                    element: <InformationPage />,
                 },
             ],
         },

@@ -1,0 +1,132 @@
+.solution-tab-container {
+    width: 100%;
+    height: 780px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #ECF2FF 70%, #FAFCFF 100%);
+    font-family: MiSans;
+    font-style: normal;
+}
+
+.solution-tab-content {
+    max-width: 1440px;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solution-tabnav {
+    width: 310px;
+    height: 600px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.04);
+    padding: 20px;
+    gap: 20px;
+}
+
+.solution-tabpanel {
+    width: 900px;
+    height: 600px;
+    padding: 40px;
+    border-radius: 14px;
+    background: #FFF;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-tabnav-item {
+    gap: 10px;
+    width: 270px;
+    height: 77px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.solution-tabnav-item:hover {
+    background: #F7F7F7;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.solution-item-active {
+    background: #F7F7F7;
+}
+
+.solution-tabpanel-top {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #CCC;
+}
+
+.solution-tabpanel-title {
+    font-size: 24px;
+    font-weight: 520;
+    line-height: 150%;
+    letter-spacing: 0.48px;
+    background: linear-gradient(96deg, #6951FF -32.94%, #206EFF 147.78%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.solution-tabpanel-desc {
+    color: #666;
+    font-size: 18px;
+    font-weight: 305;
+    line-height: 150%;
+    letter-spacing: 0.36px;
+    margin-top: 10px;
+}
+
+.solution-tabpanel-bottom {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.solution-tabpanel-box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.solution-tabpanel-box-title {
+    color: #333;
+    font-size: 22px;
+    font-weight: 450;
+    line-height: 150%;
+    letter-spacing: 0.44px;
+}
+
+.solution-tabpanel-box-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.solution-tabpanel-box-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.solution-tabpanel-box-list-item-text {
+    color: #808080;
+    font-size: 16px;
+    font-weight: 330;
+    line-height: 180%;
+    opacity: 0.9;
+}

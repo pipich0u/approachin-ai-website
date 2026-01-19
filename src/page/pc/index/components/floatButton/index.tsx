@@ -29,7 +29,7 @@ const FloatBtnEle: React.FC = () => (
                             <img src={phone} alt="" style={{ fontSize: '20px', width: '20px', height: '20px' }} />
                             <div className='flex flex-col ml-2.5'>
                                 <div className='font-[450] text-[#1a1a1a]'>联系我们</div>
-                                <div className='text-[#6C3AE1] text-[14px] font-[330]'>123-123-12345</div>
+                                <div className='text-[#6C3AE1] text-[14px] font-[330]'>166-0152-6267</div>
                             </div>
                         </div>
                         <div className='flex items-start'>
