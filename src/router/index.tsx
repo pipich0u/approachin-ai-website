@@ -17,6 +17,7 @@ import { InformationPage } from "@/page/pc/Information"
 import { SolutionPage } from "@/page/pc/product/solution"
 import { StudioPage } from "@/page/pc/product/studio"
 import { MVaaSPage } from "@/page/pc/product/MVaaS"
+import { KLLMPage } from "@/page/pc/product/KLLM"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -66,7 +67,7 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                 },
                 {
                     path: "kllm",
-                    element: <KT />,
+                    element: <KLLMPage />,
                 },
                 {
                     path: "mooncake",
