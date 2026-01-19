@@ -4,7 +4,6 @@ import { APP_FILTER, APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CatModule } from './cat/cat.module';
 
 // 配置
 import appConfig from './config/app.config';
@@ -45,8 +44,6 @@ import { InfoModule } from './info/info.module';
     LoggerModule,
 
     // 业务模块
-    CatModule,
-
     InfoModule,
 
     // 数据库模块
