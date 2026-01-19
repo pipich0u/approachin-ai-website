@@ -53,12 +53,20 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     element: <Index />,
                 },
                 {
+                    path: "amaas",
+                    element: <AMaaSPage />,
+                },
+                {
+                    path: "cooperate",
+                    element: <CooperatePage />,
+                },
+                {
                     path: "ktransformers",
                     element: <KT />,
                 },
                 {
-                    path: "amaas",
-                    element: <AMaaSPage />,
+                    path: "kllm",
+                    element: <KT />,
                 },
                 {
                     path: "mooncake",
@@ -73,19 +81,19 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     element: <ModelsRepository />,
                 },
                 {
-                    path: "cooperate",
-                    element: <CooperatePage />,
-                },
-                {
                     path: "machine",
                     element: <MachinePage />,
                 },
-                {
+                { 
                     path: "solution",
                     element: <SolutionPage />,
                 },
                 {
                     path: "studio",
+                    element: <StudioPage />,
+                },
+                {
+                    path: "spark",
                     element: <StudioPage />,
                 },
                 {

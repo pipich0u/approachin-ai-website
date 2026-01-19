@@ -30,7 +30,7 @@ export default function Index() {
     // })
 
     useEffect(() => {
-        getNestCats()
+        // getNestCats()
         const scrollbox = scrollBoxRef.current;
         if (!scrollbox) return;
 
