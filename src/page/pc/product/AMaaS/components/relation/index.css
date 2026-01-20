@@ -140,7 +140,7 @@
     width: 190px;
 }
 
-.amaas-rel-feater-1 > .amaas-item-feater-info > .feater-info-li {
+.amaas-rel-feater-1>.amaas-item-feater-info>.feater-info-li {
     width: 83px;
 }
 
@@ -210,6 +210,11 @@
     gap: 20px;
     border-radius: 8px;
     background: #FFF;
+}
+
+.amaas-resource-layer img {
+    max-height: 44px;
+    max-width: 85px;
 }
 
 /* 右侧边栏标题和描述 */
@@ -288,13 +293,13 @@
     gap: 8px;
     margin-top: 8px;
 }
- 
+
 .amaas-related-li {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 290px;
-    height: 30px; 
+    height: 30px;
     background: #F2F2F4;
     color: #59595A;
     font-size: 14px;

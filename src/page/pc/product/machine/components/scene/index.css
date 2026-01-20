@@ -107,7 +107,6 @@
     padding-right: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .scene-panel-rig {
@@ -124,6 +123,7 @@
     font-weight: 450;
     line-height: 150%;
     letter-spacing: 0.56px;
+    margin-bottom: 20px;
 }
 
 .scene-panel-description {
@@ -133,7 +133,7 @@
     font-weight: 305;
     line-height: 170%;
     letter-spacing: 0.36px;
-    margin-bottom: 13px;
+    margin-bottom: 20px;
 }
 
 .scene-panel-features {

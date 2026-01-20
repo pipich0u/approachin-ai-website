@@ -70,11 +70,15 @@ export const machineTextConfig = {
             {
                 title: '灵启桌面级AI工作站',
                 desc: '趋境✖️智谱联合发布，桌面级百亿参数工作站',
-                btn: '了解更多'
+                btn: '了解更多',
+                herf:'',
+                open:'https://item.jd.com/10203585691430.html'
             }, {
                 title: '企业级推理一体机',
                 desc: '软硬一体深度优化，云下享受云上体验',
-                btn: '了解更多'
+                btn: '了解更多',
+                herf:'/contact',
+                open:''
             }
         ]
     },

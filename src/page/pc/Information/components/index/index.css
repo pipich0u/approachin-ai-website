@@ -9,18 +9,18 @@
 .in-idx-content {
     width: 100%;
     /* max-width: 1440px; */
-    height: 610px;
+    height: 540px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: url(/src/assets/images/img/introduction_bg.png) 50% / cover no-repeat;
-    background-size: 100% 610px;
+    background-size: 100% 540px;
 }
 
 .in-idx-content-title {
     display: flex;
     align-items: center;
-    color: #1A1A1A;
+    color: #FAFBFD;
     text-align: center;
     font-family: MiSans;
     font-size: 48px;
@@ -28,7 +28,7 @@
     font-weight: 520;
     line-height: 150%;
     letter-spacing: 0.96px;
-    margin-top: 138px;
+    margin-top: 170px;
 }
 
 .in-idx-content-title-color {

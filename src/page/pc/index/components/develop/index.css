@@ -47,7 +47,7 @@
   padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   border: 1px solid rgba(51, 51, 51, 0.10);
   cursor: pointer;
   background: #FFF;
@@ -91,7 +91,7 @@
 }
 
 .dep-active>.dep-tab-item-content {
-  width: 390px;
+  width: 100%;
 }
 
 .dep-tab-items:nth-child(4).dep-active {

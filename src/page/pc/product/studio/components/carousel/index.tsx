@@ -107,20 +107,6 @@ export const StudioCarousel = () => {
                                                 {item.desc}
                                             </motion.div>
 
-                                            <motion.div
-                                                key={`learn-${item.id}`}
-                                                className='studio-carousel-learn'
-                                                initial={{ opacity: 0, y: 10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 10 }}
-                                                transition={{ duration: 0.3, delay: 0.1, ease: "easeOut" }}
-                                            >
-                                                <div className='studio-carousel-learn-text'>了解详情</div>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                                    <path d="M3.50014 13.0001L3.5 11.0002H16.6719L12.7222 7.05044L14.1364 5.63623L20.5004 12.0002L14.1364 18.3642L12.7222 16.9499L16.672 13.0002L3.50014 13.0001Z" />
-                                                </svg>
-                                            </motion.div>
-
                                             <motion.img
                                                 key={`img-${item.id}`}
                                                 src={item.img}

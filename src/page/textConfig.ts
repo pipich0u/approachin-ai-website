@@ -5,12 +5,12 @@ export const menuHrefListDefault = [
         isSelected: true,
         subItems: [
             { title: '解决方案', href: 'solution' },
-            { title: 'AI·Studio一站式', href: 'studio' },
-            { title: 'AI·Spark 便携工作站', href: 'spark' },
+            { title: 'KLLM企业级推理引擎', href: 'kllm' },
             { title: '大模型推理一体机', href: 'machine' },
-            { title: '推理引擎·KLLM', href: 'kllm' },
-            { title: '推理服务平台·AMaaS', href: 'amaas' },
-            { title: '专属推理云·AMVaaS', href: 'mvaas' },
+            { title: '模型即服务平台·AMaaS', href: 'amaas' },
+            { title: '模型价值即服务平台·MVaaS平台', href: 'mvaas' },
+            { title: 'AI Studio 开发平台', href: 'studio' },
+            { title: 'AI·Spark 便携工作站', href: 'spark' },
         ]
     },
     {

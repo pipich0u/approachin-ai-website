@@ -5,7 +5,7 @@
   right: 0;
   z-index: 100;
   padding: 20px 75px;
-  height: 80px;
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
 }
 
 .navbar-item {
-  color: #2D3039;
+  color: #333;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
@@ -55,8 +55,8 @@
 }
 
 .logo img {
-  width: 114px;
-  height: 34px;
+  width: 111px;
+  height: 32px;
 }
 
 

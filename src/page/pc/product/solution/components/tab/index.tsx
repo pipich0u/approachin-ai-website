@@ -35,7 +35,7 @@ export const SolutionTab = () => {
                                 <div className='solution-tabpanel-box-list'>
                                     {
                                         PageTabList.tablist[activeTab].info[index].content.map((contentItem, contentIdx) => {
-                                            return <div className='solution-tabpanel-box-list-item'>
+                                            return <div className='solution-tabpanel-box-list-item' key={contentIdx + 'key'}>
                                                 <IconFont type={items.icon} style={{ fontSize: '20px', color: '#333' }} className="mr-1"></IconFont>
                                                 <div className="solution-tabpanel-box-list-item-text">{contentItem}</div>
                                             </div>

@@ -126,7 +126,7 @@ export const AMaaSRelation = () => {
                         </div>
                         <div className='amaas-resource-layer'>
                             {resourceLogos.map((logo, idx) => (
-                                <img key={idx} src={logo.src} alt={logo.alt} />
+                                <img key={idx} src={logo.src} alt={logo.alt} className={`${logo.alt == 'intel' ? "w-[38px]" : ''}`} />
                             ))}
                         </div>
                     </div>
