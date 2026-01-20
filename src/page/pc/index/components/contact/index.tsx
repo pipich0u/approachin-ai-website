@@ -20,13 +20,13 @@ export default function PageContact() {
     const openSource = menuHrefListDefault[1].subItems || []
     const info = [
         {
-            title: '模型仓库',
-            href: 'models',
+            title: '解决方案',
+            href: 'solution',
             isSelected: false
         },
         {
-            title: '客户案例',
-            href: 'pageInfo',
+            title: '模型仓库',
+            href: 'models',
             isSelected: false
         },
         {
@@ -36,7 +36,7 @@ export default function PageContact() {
         },
         {
             title: '趋境资讯',
-            href: 'PageTeam',
+            href: 'information',
             isSelected: false
         },
     ]
