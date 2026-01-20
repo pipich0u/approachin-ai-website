@@ -4,13 +4,12 @@ export const menuHrefListDefault = [
         href: '/',
         isSelected: true,
         subItems: [
-            { title: '解决方案', href: 'solution' },
-            { title: 'KLLM企业级推理引擎', href: 'kllm' },
+            { title: '灵启·AI小盒子', href: 'spark' },
+            { title: 'AI Studio 便携工作站', href: 'studio' },
             { title: '大模型推理一体机', href: 'machine' },
-            { title: '模型即服务平台·AMaaS', href: 'amaas' },
-            { title: '模型价值即服务平台·MVaaS平台', href: 'mvaas' },
-            { title: 'AI Studio 开发平台', href: 'studio' },
-            { title: 'AI·Spark 便携工作站', href: 'spark' },
+            { title: 'KLLM 推理引擎', href: 'kllm' },
+            { title: 'AMaaS 平台', href: 'amaas' },
+            { title: 'MVaaS 平台', href: 'mvaas' },
         ]
     },
     {
@@ -23,15 +22,20 @@ export const menuHrefListDefault = [
         ]
     },
     {
+        title: '解决方案',
+        href: 'solution',
+        isSelected: false
+    },
+    {
         title: '模型仓库',
         href: 'models',
         isSelected: false
     },
-    {
-        title: '客户案例',
-        href: 'pageInfo',
-        isSelected: false
-    },
+    // {
+    //     title: '客户案例',
+    //     href: 'pageInfo',
+    //     isSelected: false
+    // },
     {
         title: '生态合作',
         href: 'cooperate',
@@ -54,15 +58,16 @@ export const menuHrefListDefault = [
 ]
 export const mobMenuHrefListDefault = [
     {
-        title: '解决方案',
-        href: 'pageProduct',
+        title: '产品介绍',
+        href: '/',
         isSelected: true,
         subItems: [
-            { title: 'A·Spark 便携工作站', href: 'aiInference' },
-            { title: '大模型推理一体机', href: 'edgeComputing' },
-            { title: '推理引擎·KLLM', href: 'smartScheduling' },
-            { title: '推理服务平台·AMaaS', href: 'smartScheduling' },
-            { title: '专属推理云·AMVaaS', href: 'smartScheduling' },
+            { title: '灵启·AI小盒子', href: 'spark' },
+            { title: 'AI Studio 便携工作站', href: 'studio' },
+            { title: '大模型推理一体机', href: 'machine' },
+            { title: 'KLLM 推理引擎', href: 'kllm' },
+            { title: 'AMaaS 平台', href: 'amaas' },
+            { title: 'MVaaS 平台', href: 'mvaas' },
         ]
     },
     {
@@ -70,15 +75,20 @@ export const mobMenuHrefListDefault = [
         href: 'pageTechnology',
         isSelected: true,
         subItems: [
-            { title: 'KTransformers', href: 'KTransformers' },
-            { title: 'Mooncake', href: 'Mooncake' }
+            { title: 'KTransformers', href: 'ktransformers' },
+            { title: 'Mooncake', href: 'mooncake' }
         ]
     },
     {
-        title: '客户案例',
-        href: 'pageInfo',
+        title: '解决方案',
+        href: 'solution',
         isSelected: false
     },
+    // {
+    //     title: '客户案例',
+    //     href: 'pageInfo',
+    //     isSelected: false
+    // },
     {
         title: '生态合作',
         href: 'cooperate',
@@ -91,11 +101,10 @@ export const mobMenuHrefListDefault = [
     },
     {
         title: '关于我们',
-        href: 'PageTeam',
+        href: 'about',
         isSelected: true,
         subItems: [
             { title: '公司简介', href: 'about' },
-            { title: '团队介绍', href: 'team' },
             { title: '联系我们', href: 'contact' }
         ]
     },
