@@ -1,8 +1,8 @@
-export const studioTextConfig = {
+export const  studioTextConfig = {
     pageName: 'AI-Studio页面',
     index: {
         title: 'AI-Studio',
-        desc: '一站式机器学习 / 深度学习 / 大模型 AI 平台，以 K8s 为底座，覆盖数据接入、Notebook 开发、拖拉拽式任务流编排、分布式训练、超参搜索、大模型微调与推理、LLMOps、模型应用商店等全链路能力。',
+        desc: '一站式机器学习 / 深度学习 / 大模型 AI 平台，以 K8s 为底座，覆盖数据接入、Notebook 开发、拖拽式任务流编排、分布式训练、超参搜索、大模型微调与推理、LLMOps、模型应用商店等全链路能力。',
         buttons: [
             { text: '立即咨询', className: 'bg-[#806BFF]' },
             { text: '产品文档', className: 'studio-btn bg-[#333]' }
@@ -19,7 +19,7 @@ export const studioTextConfig = {
     },
     carousel: {
         title: '应用场景',
-        buttonText: '了解详情',
+        imageName: 'studio_carousel',
         data: [
             {
                 id: 0,

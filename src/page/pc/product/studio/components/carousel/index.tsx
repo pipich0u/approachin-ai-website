@@ -1,31 +1,43 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import './index.css'
-import studio_carousel from '@/assets/images/img/studio_carousel.png'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
-const carouselData = [
-    {
-        id: 0,
-        title: '训练场景',
-        desc: 'AI任务稳定运行，训练效率跟随卡数线性变化，趋境自研高性能引擎为千亿大模型的训练保驾护航。',
-        img: studio_carousel
-    },
-    {
-        id: 1,
-        title: '多框架开发场景',
-        desc: '兼容 Python/Java/C++ 及 PyTorch/TensorFlow 等主流框架，集成 Jupyter/VSCode 等在线 IDE，一键完成数据处理、模型调试与代码管理。',
-        img: studio_carousel
-    },
-    {
-        id: 2,
-        title: '镜像与资源管理场景',
-        desc: '提供 Web Shell 在线镜像构建能力，预置 GPU / 推理等基础镜像，支持 K8s 资源弹性调度，降低 AI 环境部署与运维成本。',
-        img: studio_carousel
-    }
-]
+import { studioTextConfig } from '../../textConfig'
+import studio_carousel from '@/assets/images/img/studio_carousel.png'
 
-export const StudioCarousel = () => {
+interface CarouselItem {
+    id: number
+    title: string
+    desc: string
+}
+
+interface CarouselConfig {
+    title: string
+    imageName?: string
+    data: CarouselItem[]
+}
+
+interface StudioCarouselProps {
+    config?: CarouselConfig
+}
+
+// 图片映射表
+const imageMap: Record<string, string> = {
+    'studio_carousel': studio_carousel
+}
+
+export const StudioCarousel = ({ config = studioTextConfig.carousel }: StudioCarouselProps) => {
     const [activeIndex, setActiveIndex] = useState(1);
+
+    // 根据配置的 imageName 获取图片
+    const carouselImage = useMemo(() => {
+        return config.imageName ? imageMap[config.imageName] : studio_carousel
+    }, [config.imageName])
+
+    const carouselData = useMemo(() =>
+        config.data.map(item => ({ ...item, img: carouselImage })),
+        [config.data, carouselImage]
+    )
 
     const handlePrev = () => {
         setActiveIndex((prev) => (prev === 0 ? carouselData.length - 1 : prev - 1));
@@ -51,7 +63,7 @@ export const StudioCarousel = () => {
 
     return <div className='studio-carousel-container'>
         <div className='studio-carousel-content'>
-            <motion.div {...scrollInViewOnceProps} className='studio-carousel-title'>应用场景</motion.div>
+            <motion.div {...scrollInViewOnceProps} className='studio-carousel-title'>{config.title}</motion.div>
             <div className='studio-carousel-box'>
                 <div className='studio-carousel-arrow studio-carousel-arrow-left' onClick={handlePrev}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

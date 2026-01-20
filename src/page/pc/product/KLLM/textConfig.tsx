@@ -1,4 +1,3 @@
-
 export const advantagesText = {
     title: '产品优势',
     advantagesList: [
@@ -31,5 +30,27 @@ export const advantagesText = {
                 '稳定性：早期拒绝策略、弹性伸缩、缓存一致性保障'
             ]
         },
+    ]
+}
+
+export const carouselText = {
+    title: '应用行业场景',
+    imageName: 'studio_carousel',
+    data: [
+        {
+            id: 0,
+            title: '单机资源下的极致性能',
+            desc: 'AI任务稳定运行，训练效率跟随卡数线性变化，趋境自研高性能引擎为千亿大模型的训练保驾护航。'
+        },
+        {
+            id: 1,
+            title: '超大规模分布式集群',
+            desc: '依托 PD 分离、全局 KVCache 调度等核心技术实现节点间资源解耦与故障容错，支撑集群规模化稳定部署和高效协同'
+        },
+        {
+            id: 2,
+            title: '日均万亿token服务',
+            desc: '提供 Web Shell 在线镜像构建能力，预置 GPU / 推理等基础镜像，支持 K8s 资源弹性调度，降低 AI 环境部署与运维成本。'
+        }
     ]
 }
