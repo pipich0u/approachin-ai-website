@@ -1,12 +1,14 @@
 import './index.css'
 import { studioTextConfig } from '../../textConfig'
+import { motion } from 'motion/react'
+import { initialLoadProps } from '@/utils/motionConfig'
 
 export const StudioIndex = () => {
 
     return <div className='studio-index-container'>
         <div className='studio-index-content'>
-            <div className='studio-index-title'>{studioTextConfig.index.title}</div>
-            <div className='studio-index-desc'>{studioTextConfig.index.desc}</div>
+            <motion.div {...initialLoadProps} className='studio-index-title'>{studioTextConfig.index.title}</motion.div>
+            <motion.div {...initialLoadProps} className='studio-index-desc'>{studioTextConfig.index.desc}</motion.div>
             <div className='studio-index-btnbox'>
                 {/* <motion.button {...initialLoadProps}
                     className='animated-button w-[150px] rounded-lg bg-[#806BFF]'

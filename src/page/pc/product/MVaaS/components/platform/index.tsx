@@ -28,12 +28,12 @@ export const MVaaSPlatform = () => {
 
     return <div className='mvaas-platform-container'>
         <div className='mvaas-platform-content'>
-            <div className='mvaas-platform-title'>{platform.title}</div>
+            <motion.div {...scrollInViewOnceProps} className='mvaas-platform-title'>{platform.title}</motion.div>
             <div className='mvaas-platform-box'>
-                <div className='mvaas-platform-item'>
+                <motion.div {...scrollInViewOnceProps} className='mvaas-platform-item'>
                     <img src={platfromImg} alt="" className='selectNone' />
-                </div>
-                <div className='mvaas-platform-item'>
+                </motion.div>
+                <motion.div {...scrollInViewOnceProps} className='mvaas-platform-item'>
                     <Collapse
                         defaultActiveKey={['3']}
                         className='mvaas-platform-collapse'
@@ -48,7 +48,7 @@ export const MVaaSPlatform = () => {
                     >
                         <span className="text-white font-[380] w-full">{platform.buttonText}</span>
                     </motion.button>
-                </div>
+                </motion.div>
             </div>
         </div>
     </div>

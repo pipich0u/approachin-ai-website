@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import amaas from '@/assets/images/img/amaas.png'
 import { useEffect, useRef, useState } from 'react'
 import { amaasTextConfig } from '../../textConfig'
+import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 
 export const AMaasSuperior = () => {
     const { superior } = amaasTextConfig;
@@ -59,7 +60,7 @@ export const AMaasSuperior = () => {
     return (
         <div ref={containerRef} className='amaas-superior-container' >
             <div className='amaas-sup-content'>
-                <div className="amaas-sup-title">{superior.title}</div>
+                <motion.div {...scrollInViewSpringOnceProps} className="amaas-sup-title">{superior.title}</motion.div>
                 <div className='amaas-sup-box'>
                     <div className='amaas-sup-tab'>
                         <div className='amaas-sup-nav'>

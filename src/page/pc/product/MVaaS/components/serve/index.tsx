@@ -16,9 +16,9 @@ export const MVaaSServe = () => {
     </svg>
     return <div className='mvaas-serve-container'>
         <div className='mvaas-serve-content'>
-            <div className='mvaas-serve-title'>{serve.title}</div>
+            <motion.div {...scrollInViewOnceProps} className='mvaas-serve-title'>{serve.title}</motion.div>
             <div className='mvaas-serve-box'>
-                <div className='mvaas-serve-item mvaas-serve-left'>
+                <motion.div {...scrollInViewOnceProps} className='mvaas-serve-item mvaas-serve-left'>
                     <div className='mvaas-serve-top'>
                         <div className='mvaas-serve-top-title'>{serve.cooperation.title}</div>
                         <div className='mvaas-serve-top-desc'>{serve.cooperation.desc}</div>
@@ -32,22 +32,20 @@ export const MVaaSServe = () => {
                             </div>
                         ))}
                     </div>
-                </div>
-                <div className='mvaas-serve-item mvaas-serve-right'>
+                </motion.div>
+                <motion.div {...scrollInViewOnceProps} className='mvaas-serve-item mvaas-serve-right'>
                     {serve.privatization.map((item, idx) => (
                         <div key={idx} className='mvaas-serve-right-items'>
                             <div className='mvaas-serve-right-items-text'>
                                 <div className='mvaas-serve-top-title'>{item.title}</div>
                                 <div className='mvaas-serve-top-desc'>{item.desc}</div>
                             </div>
-                            <motion.button {...scrollInViewOnceProps}
-                                className='animated-button w-[124px] rounded-lg mvaas-serve-btn'
-                            >
+                            <button className='animated-button w-[124px] rounded-lg mvaas-serve-btn'>
                                 <span className="text-white font-[380] bt-text">{item.buttonText}</span>
-                            </motion.button>
+                            </button>
                         </div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
     </div>

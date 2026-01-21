@@ -1,5 +1,5 @@
-import { motion } from 'motion/react'
 import './index.css'
+import { motion } from 'motion/react'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
 import powerImg from '@/assets/images/img/mvaas_power.png'
 import { mvaasTextConfig } from '../../textConfig'
