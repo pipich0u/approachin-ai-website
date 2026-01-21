@@ -1,7 +1,4 @@
 import { useEffect, useRef } from 'react';
-//@ts-ignore
-import ReactFullpage from '@fullpage/react-fullpage';
-// import TopNav from './components/topNav/index';
 import './index.css';
 import PageIndex from './components/index/index'
 import PageProduct from './components/product/index'
@@ -13,24 +10,13 @@ import PageQuestion from './components/question/index';
 import PageConsult from './components/consult/index';
 import PageCase from './components/case';
 import SourcePage from './components/source';
-import { getCats } from '@/common/api';
-// import FloatBtnEle from './components/floatButton';
 
 
 export default function Index() {
 
     const scrollBoxRef = useRef<HTMLDivElement>(null);
 
-    // const lenis = useLenis((lenis) => {
-    //     lenis.options = {
-    //         duration: 1.2,
-    //         easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    //         smoothWheel: true,
-    //     }
-    // })
-
     useEffect(() => {
-        // getNestCats()
         const scrollbox = scrollBoxRef.current;
         if (!scrollbox) return;
 
@@ -58,15 +44,6 @@ export default function Index() {
             window.removeEventListener("resize", resizeBody);
         };
     }, []);
-
-    const getNestCats = async () => {
-        try {
-            const res = await getCats();
-            console.log('Cats from NestJS:', res);
-        } catch (error) {
-            console.error('Error fetching cats:', error);
-        }
-    }
     return (
         <div className="w-100 h-100" >
             <div className='flex items-center flex-col bg-[#fafafa]'>
