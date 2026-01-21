@@ -50,7 +50,7 @@ export default function PageContact() {
                         <div className='contact-box-left-up'>
                             <img src={ewm} alt="" className='ewm' />
                             <div className='contact-user'>
-                                <div className='contact-user-text'>电话：166-0152-6267</div>
+                                {/* <div className='contact-user-text'>电话：166-0152-6267</div> */}
                                 <div className='contact-user-text'>邮箱：quxin@approaching.ai</div>
                                 <div className='contact-user-text'>地址：北京市海淀区学清嘉创大厦C座</div>
                             </div>

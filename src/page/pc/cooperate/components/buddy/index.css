@@ -32,10 +32,15 @@
     width: 136px;
     height: 80px;
     border-radius: 12px;
-    background: #FFF;
+    /* background: #FFF; */
     box-shadow: 0 4px 20px 0 rgba(32, 0, 106, 0.07);
 }
 
+.buddy-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 .buddy-con-scroll {
     width: 100%;
@@ -57,31 +62,51 @@
     gap: 20px;
 }
 
+.buddy-scroll-track:hover {
+    animation-play-state: paused;
+}
+
 .buddy-scroll-track {
     display: flex;
     align-items: center;
     gap: 30px;
     width: fit-content;
     height: 90px;
-    animation: scroll-infinite 70s linear infinite;
+    animation: scroll-infinite 100s linear infinite;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
 }
+
+/* .buddy-scroll-track {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: fit-content;
+    height: 90px;
+    animation: scroll-infinite 70s linear infinite;
+} */
 
 .buddy-backup {
-    animation: scroll-infinite 70s linear infinite reverse;
+    animation: scroll-back 100s linear infinite;
 }
 
-.buddy-scroll-track:hover {
-    animation-play-state: paused;
-}
-
-@keyframes scroll-infinite {
+@keyframes scroll-back {
     from {
-        transform:translate3d(-50%, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
+        transform: translateX(-50%);
     }
 
     to {
-        transform: translate3d(-50%, 0, 0);
-        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes scroll-infinite {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
     }
 }

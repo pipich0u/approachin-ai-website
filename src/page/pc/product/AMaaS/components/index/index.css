@@ -6,9 +6,12 @@
     background-size: contain;
     font-family: MiSans;
     display: flex;
-    background: url(/src/assets/images/img/amaas_in_bg.png) no-repeat right center;
     align-items: center;
     justify-content: center;
+    background: url(/src/assets/images/img/amaas_in_bg.png);
+    background-size: auto 100%;
+    background-position: 45%;
+    background-repeat: no-repeat;
 }
 
 .amaas-index-content {

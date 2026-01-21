@@ -1,6 +1,6 @@
 import './index.css'
 import { motion } from 'motion/react';
-import icon from '@/assets/images/img/step-icon.svg'
+import icon from '@/assets/svg/step-icon.svg'
 import step1 from '@/assets/images/img/step1.png'
 import step2 from '@/assets/images/img/step2.png'
 import step3 from '@/assets/images/img/step3.png'

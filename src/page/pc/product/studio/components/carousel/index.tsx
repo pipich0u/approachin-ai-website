@@ -61,7 +61,7 @@ export const StudioCarousel = ({ config = studioTextConfig.carousel }: StudioCar
 
     const displayItems = getDisplayItems();
 
-    return <div className='studio-carousel-container'>
+    return <div className='studio-carousel-container' style={{backgroundColor:'#F8F8FC'}}>  
         <div className='studio-carousel-content'>
             <motion.div {...scrollInViewOnceProps} className='studio-carousel-title'>{config.title}</motion.div>
             <div className='studio-carousel-box'>

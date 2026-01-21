@@ -1,8 +1,8 @@
 import './index.css'
 import { motion } from 'motion/react'
-import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
+import { initialLoadProps, scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import itemImg from '@/assets/images/img/mc_in_item1.png'
-import { machinIntroduce } from '../../textConfig'
+import { machinIntroduce, MachinList } from '../../textConfig'
 
 export const MachineIntroduce = () => {
     return <div className='mc-introduce-container'>

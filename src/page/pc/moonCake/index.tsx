@@ -46,7 +46,7 @@ export const MoonCake = () => {
         <div className='cake-container'>
             <MoonBanner />
             <MoonInfluence />
-            <MoonFast />
+            {/* <MoonFast /> */}
             <MoonStep />
             <MoonSource list={list} />
             <PageConsult />

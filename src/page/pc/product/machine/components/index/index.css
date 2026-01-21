@@ -4,11 +4,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(/src/assets/images/img/mc_bg.png) no-repeat center / cover,
-        linear-gradient(163deg, rgba(255, 255, 255, 0.00) 11.56%, #FFF 84.98%), linear-gradient(218deg, #B9ADFC -6.31%, #FAF9FF 53.11%, #DDD8FD 93.48%);
-    padding-top: 80px;
     height: 600px;
     box-sizing: border-box;
+    background: url(/src/assets/images/img/mc_bg.png);
+    background-size: auto 100%;
+    background-position: 45%;
+    background-repeat: no-repeat;
 }
 
 .mc-in-content {
@@ -50,8 +51,13 @@
 
 .mc-in-bottom-box {
     display: flex;
-    margin-top: 80px;
+    padding: 80px 0;
     gap: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #DBE8F3 0%, #FFF 100%);
 }
 
 .mc-in-item {

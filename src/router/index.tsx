@@ -19,6 +19,7 @@ import { StudioPage } from "@/page/pc/product/studio"
 import { MVaaSPage } from "@/page/pc/product/MVaaS"
 import { KLLMPage } from "@/page/pc/product/KLLM"
 import { SparkPage } from "@/page/pc/product/spark"
+import { ContactPage } from "@/page/pc/about/contact"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -61,6 +62,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                 {
                     path: "cooperate",
                     element: <CooperatePage />,
+                },
+                {
+                    path: "contact",
+                    element: <ContactPage />,
                 },
                 {
                     path: "ktransformers",

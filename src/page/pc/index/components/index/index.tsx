@@ -5,13 +5,14 @@ import { useState, useEffect } from 'react';
 import { indexPageList } from '@/page/textConfig';
 import { trackPageView, trackButtonClick, trackCarouselChange } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';
+import { useNavigate } from 'react-router-dom';
 
 export default function PageIndex() {
     const [showContent, setShowContent] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [progress, setProgress] = useState(0);
     const [isMouseInCarousel, setIsMouseInCarousel] = useState(false);
-
+    const navigator = useNavigate()
     // 曝光埋点
     const exposureRef = useExposureTracking('首页轮播区域', '首页', { section: 'hero' });
 
@@ -93,7 +94,10 @@ export default function PageIndex() {
                             <motion.button
                                 {...initialLoadProps}
                                 className='animated-button w-[180px] rounded-lg bg-[#806BFF] '
-                                onClick={() => trackButtonClick(indexPageList[0].ask, '首页第1屏', { slideIndex: 0 })}
+                                onClick={() => {
+                                    trackButtonClick(indexPageList[0].ask, '首页第1屏', { slideIndex: 0 });
+                                    navigator('/contact');
+                                }}
                             >
                                 <span className="text-white font-[380] bt-text">{indexPageList[0].ask}</span>
                             </motion.button>

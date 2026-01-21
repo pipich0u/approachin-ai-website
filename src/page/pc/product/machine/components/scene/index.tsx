@@ -29,7 +29,7 @@ export const MachineScene = () => {
                                     transition={{
                                         type: 'spring',
                                         stiffness: 500,
-                                        damping: 30,
+                                        damping: 35,
                                     }}
                                 />
                             )}

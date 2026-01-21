@@ -4,8 +4,10 @@ import { initialLoadProps } from '@/utils/motionConfig'
 import { trackButtonClick } from '@/utils/umami'
 import inter from '@/assets/images/img/intel-logo.png'
 import { solutionTextConfig } from '../../textConfig'
+import { useNavigate } from 'react-router-dom'
 
 export const SolutionIndex = () => {
+    const navigate = useNavigate();
     const { index } = solutionTextConfig;
     const arr = [1, 2, 3, 4, 5, 6]
 
@@ -19,7 +21,7 @@ export const SolutionIndex = () => {
                 <motion.button
                     {...initialLoadProps}
                     className='animated-button w-[150px] rounded-lg bg-[#806BFF] mt-10!'
-                // onClick={() => trackButtonClick(index.buttonText, 'AMaaS第1屏', { slideIndex: 0 })}
+                    onClick={() => navigate('/contact')}
                 >
                     <span className="text-white font-[380] bt-text">{index.buttonText}</span>
                 </motion.button>

@@ -46,10 +46,11 @@
 .case-scroll-track {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
   width: fit-content;
-  height: 68px;
-  animation: scroll-infinite 70s linear infinite;
+  height: 80px;
+  animation: scroll-infinite 150s linear infinite;
+  margin-top: 10px;
 }
 
 .case-scroll-track:hover {
@@ -66,10 +67,10 @@
   }
 }
 
-.item-img {
-  max-width: 100px;
-  width: 100px;
-  max-height: 20px;
+.case-scroll-track>.item-img {
+  max-width: 190px;
+  width: 190px;
+  max-height: 70px;
   flex-shrink: 0;
 }
 

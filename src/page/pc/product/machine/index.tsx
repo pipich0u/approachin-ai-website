@@ -9,6 +9,7 @@ import PageConsult from '@/page/pc/index/components/consult'
 import { useEffect } from 'react'
 import { trackPageView } from '@/utils/umami'
 import { machineTextConfig } from './textConfig'
+import { MachineCompare } from './components/compare'
 
 export const MachinePage = () => {
     useEffect(() => {
@@ -19,6 +20,7 @@ export const MachinePage = () => {
         <MachineIndex />
         <MachineIntroduce />
         <MachineAmaas />
+        <MachineCompare />
         <MachineProduct />
         <MachineScene />
         <PageConsult />

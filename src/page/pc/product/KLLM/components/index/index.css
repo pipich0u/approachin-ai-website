@@ -1,17 +1,52 @@
-.kllm-index-container{
+.kllm-index-container {
     width: 100%;
     display: flex;
     height: 600px;
     flex-direction: column;
-    /* justify-content: center; */
-    padding: 0px 160px;
-
+    justify-content: center;
+    align-items: center;
+    background: url(/src/assets/images/img/kllm_in_bg.png);
+    background-size: auto 100%;
+    background-position: 48%;
+    background-repeat: no-repeat;
+    font-style: normal;
 }
-.kllm-index-content{
+
+.kllm-index-content {
     width: 100%;
     height: 100%;
-    background: #f5f5f5;
     max-width: 1440px;
-    background: url('/src/assets/images/img/kllm_bg.png') no-repeat center ;
-    background-size: cover;
+    padding: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kllm-index-title {
+    color: #333;
+    font-family: Inter;
+    font-size: 50.039px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1.001px;
+}
+
+.kllm-index-desc {
+    color: #323334;
+    font-family: MiSans;
+    font-size: 20px;
+    font-weight: 305;
+    line-height: 150%;
+    letter-spacing: 0.4px;
+    margin-top: 6px;
+}
+
+.kllm-index-list {
+    color: #666;
+    font-family: MiSans;
+    font-size: 20px;
+    font-weight: 305;
+    line-height: 150%;
+    letter-spacing: 0.4px;
+    margin-top: 34px;
 }

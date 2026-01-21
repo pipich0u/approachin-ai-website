@@ -7,7 +7,11 @@
     box-sizing: border-box;
     font-family: MiSans;
     font-style: normal;
-    background: linear-gradient(90deg, #F3F5FE 76.3%, #E9E7FC 77%);
+    /* background: linear-gradient(90deg, #F3F5FE 76.3%, #E9E7FC 77%); */
+    background: url(/src/assets/images/img/studio_bg.png);
+    background-size: auto 100%;
+    background-position: 45%;
+    background-repeat: no-repeat;
 }
 
 .studio-index-content {
@@ -18,8 +22,6 @@
     flex-direction: column;
     justify-content: center;
     padding: 0 100px;
-    background: url(/src/assets/images/img/studio_bg.png) no-repeat right;
-    background-size: contain;
 }
 
 .studio-index-title {
@@ -32,7 +34,7 @@
 }
 
 .studio-index-desc {
-    width: 718px;
+    width: 712px;
     color: #323334;
     font-size: 20px;
     font-weight: 305;
@@ -47,15 +49,15 @@
     margin-top: 50px;
 }
 
-.studio-index-btnbox > .studio-btn {
+.studio-index-btnbox>.studio-btn {
     background: #333 !important;
 }
 
-.studio-index-btnbox > .studio-btn::before {
+.studio-index-btnbox>.studio-btn::before {
     background: #333 !important;
 }
 
-.studio-index-btnbox > .animated-button {
+.studio-index-btnbox>.animated-button {
     font-size: 16px;
     font-weight: 380;
 }
