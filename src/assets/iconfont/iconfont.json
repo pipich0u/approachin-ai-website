@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "46716801",
+      "name": "tab-f",
+      "font_class": "tab-f",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "46716804",
+      "name": "tab-d",
+      "font_class": "tab-d",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "46716805",
+      "name": "tab-c",
+      "font_class": "tab-c",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "46716806",
+      "name": "tab-e",
+      "font_class": "tab-e",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "46716807",
+      "name": "tab-a",
+      "font_class": "tab-a",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "46716808",
+      "name": "tab-b",
+      "font_class": "tab-b",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
       "icon_id": "46427643",
       "name": "github",
       "font_class": "github",

@@ -50,7 +50,7 @@ export const StudioTab = () => {
                             className={`studio-tab-item ${active === item.id ? "active" : ""}`}
                             onClick={() => handleTabClick(item.id)}
                         >
-                            <IconFont type={`icon-${item.icon}`} style={{ fontSize: '18px' }} className="mr-1"></IconFont>
+                            <IconFont type={`icon-${item.icon}`} style={{ fontSize: '18px' }} className="mr-2.5"></IconFont>
                             {item.name}
                         </div>
                     ))}

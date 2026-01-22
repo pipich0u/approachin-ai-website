@@ -43,7 +43,7 @@ export const  studioTextConfig = {
 export const StudioTabList = {
     tablist: [
         {
-            name: "数据管理", id: 0, icon: 'tab2',
+            name: "数据管理", id: 0, icon: 'tab-a',
             desc: '支持图/文/音/多模态/大模型多种类型标注功能，用户管理，工作任务分发，项目组权限控制',
             info: [{
                 title: '对接模型市场，支持自动化标注',
@@ -56,7 +56,7 @@ export const StudioTabList = {
             btn: '立即咨询'
         },
         {
-            name: "在线开发", id: 1, icon: 'tab1',
+            name: "在线开发", id: 1, icon: 'tab-b',
             desc: '支持多租户 / 多实例管理，浏览器即可在线交互开发调试，无需安装三方控件；',
             info: [{
                 title: '兼容 VSCode、Jupyter、Matlab、RStudio 等多类在线 IDE，支持环境保存与定期清理续期；',
@@ -77,7 +77,7 @@ export const StudioTabList = {
             btn: '立即咨询'
         },
         {
-            name: "模型训练", id: 2, icon: 'tab5',
+            name: "模型训练", id: 2, icon: 'tab-c',
             desc: '支持多训练加速框架，多模型全流程训练评估，兼容 RDMA 与多 GPU',
             info: [{
                 title: '支持tfjob/pytorch/paddlejob/mindspore/mxnet等分布式训练框架',
@@ -98,7 +98,7 @@ export const StudioTabList = {
             btn: '立即咨询'
         },
         {
-            name: "流程自动化", id: 3, icon: 'tab6',
+            name: "流程自动化", id: 3, icon: 'tab-d',
             desc: '',
             info: [{
                 title: '数据导入，数据预处理，超参搜索，模型训练，模型评估，模型压缩，模型注册，服务上线全',
@@ -110,7 +110,7 @@ export const StudioTabList = {
             btn: '立即咨询'
         },
         {
-            name: "推理服务", id: 4, icon: 'tab3',
+            name: "推理服务", id: 4, icon: 'tab-e',
             desc: '',
             info: [{
                 title: '开源大模型的部署，vllm/ollama/mindie/xinference等多种部署形式',
@@ -125,7 +125,7 @@ export const StudioTabList = {
             btn: '立即咨询'
         },
         {
-            name: "模型市场", id: 5, icon: 'tab4',
+            name: "模型市场", id: 5, icon: 'tab-f',
             desc: '支持图/文/音/多模态/大模型多种类型标注功能，用户管理，工作任务分发，项目组权限控制',
             info: [{
                 title: '定义标准模型应用开发框架，对接mlops平台实现模型的一键部署/开发/微调',
