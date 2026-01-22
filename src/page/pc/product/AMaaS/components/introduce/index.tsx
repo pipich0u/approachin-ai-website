@@ -18,9 +18,9 @@ export const AMaaSIntroduce = () => {
                         <div className='amaas-in-item-title'>
                             {item.title}
                         </div>
-                        <div className='amaas-in-item-desc'>
+                        {/* <div className='amaas-in-item-desc'>
                             {item.description}
-                        </div>
+                        </div> */}
                         <div className='amaas-in-item-list'>
                             {item.features.map((feature, idx) => (
                                 <div key={idx} className='amaas-in-item-list-li'>

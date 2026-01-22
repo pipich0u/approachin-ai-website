@@ -3,9 +3,10 @@ import './index.css'
 import { initialLoadProps } from '@/utils/motionConfig'
 import { trackPageView, trackButtonClick, trackCarouselChange } from '@/utils/umami';
 import { amaasTextConfig } from '../../textConfig';
+import { useNavigate } from 'react-router-dom';
 export const AMaaSIndex = () => {
     const { index } = amaasTextConfig;
-
+    const navigate = useNavigate()
     return <div className='amaas-index-container'>
         <div className='amaas-index-content'>
             <motion.div className='amaas-index-title' {...initialLoadProps}>
@@ -22,7 +23,7 @@ export const AMaaSIndex = () => {
             <motion.button
                 {...initialLoadProps}
                 className='animated-button w-[180px] rounded-lg bg-[#806BFF] '
-                onClick={() => trackButtonClick(index.buttonText, 'AMaaS第1屏', { slideIndex: 0 })}
+                onClick={() => { trackButtonClick(index.buttonText, 'AMaaS第1屏', { slideIndex: 0 }); navigate('/contact') }}
             >
                 <span className="text-white font-[380] bt-text">{index.buttonText}</span>
             </motion.button>

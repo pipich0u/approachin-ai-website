@@ -27,6 +27,7 @@
     font-weight: 450;
     line-height: 150%;
     letter-spacing: 0.76px;
+    margin-bottom: 53px;
 }
 
 .amaas-in-box {
@@ -36,7 +37,7 @@
 
 .amaas-in-item {
     width: 295px;
-    height: 500px;
+    height: 430px;
     border-radius: 20px;
     background: #FFF;
     display: flex;

@@ -1,10 +1,10 @@
 import './index.css'
 import { useEffect } from 'react'
 import { trackPageView } from '@/utils/umami'
-import { SolutionIndex } from './components/index'
+import { SolutionIndex } from './components/index/index'
 import { SolutionTab } from './components/tab'
-import PageConsult from '../../index/components/consult'
-import PageContact from '../../index/components/contact'
+import PageConsult from '../index/components/consult'
+import PageContact from '../index/components/contact'
 import { solutionTextConfig } from './textConfig'
 
 export const SolutionPage = () => {
