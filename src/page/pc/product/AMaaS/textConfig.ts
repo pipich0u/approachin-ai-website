@@ -128,6 +128,44 @@ export const amaasTextConfig = {
     },
     testimony: {
         title: '客户证言',
-        description: '将企业用户算力与技术起步门槛降低10倍'
+        description: '将企业用户算力与技术起步门槛降低10倍',
+        list: [
+            {
+                icon: 1,
+                desc: '一站式AI开发基座，共同打造“航空+低空经济”双场景AI方案',
+                link: '',
+                btn: '查看详情'
+            },
+            {
+                icon: 2,
+                desc: 'AI诊断房屋健康，AI一体机助力“好房子”建设',
+                link: '',
+                btn: '查看详情'
+            },
+            {
+                icon: 3,
+                desc: '交通枢纽协同治理，赋能空间决策智能化',
+                link: '',
+                btn: '查看详情'
+            },
+            {
+                icon: 4,
+                desc: '联合破局质检痛点，共创行业智能化新标杆',
+                link: '',
+                btn: '查看详情'
+            },
+            {
+                icon: 5,
+                desc: 'AI一体机助力金融领域应用高效落地',
+                link: '',
+                btn: '查看详情'
+            },
+            {
+                icon: 6,
+                desc: '辅助商业地产租售策略决策，赋能资管智能化转型',
+                link: '',
+                btn: '查看详情'
+            },
+        ]
     }
 }

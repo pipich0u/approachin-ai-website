@@ -28,7 +28,6 @@ export default function MobileIndex() {
 
   return (
     <div className="mobile-container">
-      <TopNav />
       <PageIndex />
       <PageProduct />
       <PageQuestion />

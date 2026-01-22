@@ -69,8 +69,35 @@
     background: #FFF;
     width: 360px;
     height: 200px;
+    padding: 24px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.testimony-items-icon img{
+    /* width: 170px; */
+    height: 21px;
+}
+
+.testimony-items-desc {
+    color: #666;
+    font-size: 16px;
+    font-weight: 380;
+    line-height: 150%;
+}
+
+.testimony-items-link {
+    margin-bottom: 14px;
+    cursor: pointer;
+    color: #6C3AE1;
+    font-size: 16px;
+    font-weight: 330;
+    line-height: 150%;
+    letter-spacing: 0.32px;
+    display: flex;
+    align-items: center;
+}
 
 .testimony-scroll-track:hover {
     animation-play-state: paused;

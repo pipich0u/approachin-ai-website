@@ -4,10 +4,12 @@
     display: flex;
     align-items: center;
     padding: 162px 177px;
-    background: url(/src/assets/images/img/moon_bg.png) no-repeat right, linear-gradient(180deg, #C2E6FB 0%, #F9F9FB 100%);
-    background-size: contain;
     font-family: MiSans;
     justify-content: center;
+    background: url(/src/assets/images/img/moon_bg.png);
+    background-size: auto 100%;
+    background-position: 51%;
+    background-repeat: no-repeat;
 }
 
 .mo-ban-con {

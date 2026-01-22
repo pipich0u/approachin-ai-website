@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import PageContact from '../index/components/contact'
 import { MoonBanner } from './components/banner'
-import { MoonFast } from './components/fast'
+// import { MoonFast } from './components/fast'
 import { MoonInfluence } from './components/influence'
 import './index.css'
 import { getGitSource } from '@/common/api'

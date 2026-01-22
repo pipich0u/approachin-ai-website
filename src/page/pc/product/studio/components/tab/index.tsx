@@ -45,11 +45,8 @@ export const StudioTab = () => {
             <div className='studio-tab-box'>
                 <motion.div {...scrollInViewSpringProps} className='studio-tabbar' ref={navRef}>
                     {StudioTabList.tablist.map((item) => (
-                        <div
-                            key={item.id}
-                            className={`studio-tab-item ${active === item.id ? "active" : ""}`}
-                            onClick={() => handleTabClick(item.id)}
-                        >
+                        <div key={item.id} onClick={() => handleTabClick(item.id)}
+                            className={`studio-tab-item ${active === item.id ? "active" : ""}`}>
                             <IconFont type={`icon-${item.icon}`} style={{ fontSize: '18px' }} className="mr-2.5"></IconFont>
                             {item.name}
                         </div>

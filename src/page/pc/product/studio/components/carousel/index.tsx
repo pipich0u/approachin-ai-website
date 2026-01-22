@@ -61,7 +61,7 @@ export const StudioCarousel = ({ config = studioTextConfig.carousel }: StudioCar
 
     const displayItems = getDisplayItems();
 
-    return <div className='studio-carousel-container' style={{backgroundColor:'#F8F8FC'}}>  
+    return <div className='studio-carousel-container' style={{ backgroundColor: '#F8F8FC' }}>
         <div className='studio-carousel-content'>
             <motion.div {...scrollInViewOnceProps} className='studio-carousel-title'>{config.title}</motion.div>
             <div className='studio-carousel-box'>
@@ -97,9 +97,7 @@ export const StudioCarousel = ({ config = studioTextConfig.carousel }: StudioCar
                             >
                                 <motion.div
                                     className='studio-carousel-list-item-title'
-                                    animate={{
-                                        scale: isActive ? 1 : 0.95
-                                    }}
+                                    animate={{ scale: isActive ? 1 : 0.95 }}
                                     transition={{ duration: 0.3 }}
                                 >
                                     {item.title}

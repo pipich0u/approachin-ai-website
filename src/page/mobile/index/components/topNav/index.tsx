@@ -3,12 +3,14 @@ import './index.css';
 import logo from '@/assets/svg/logo-black.svg'
 import { IconFont } from '@/utils/antdUtils';
 import { mobMenuHrefListDefault } from '@/page/textConfig';
+import { useNavigate } from 'react-router-dom';
 const TopNav = () => {
   // const [isFirstOpenPage, setIsFirstOpenPage] = useState(true)
   const [openDrawer, setOpenDrawer] = useState(false)
   const [isClosing, setIsClosing] = useState(false)
   const [expandedMenus, setExpandedMenus] = useState<Set<string>>(new Set())
   const [closingMenus, setClosingMenus] = useState<Set<string>>(new Set())
+  const navigate = useNavigate()
 
   const toggleSubmenu = (title: string) => {
     if (expandedMenus.has(title)) {
@@ -48,6 +50,7 @@ const TopNav = () => {
                 if (item.isSelected && item.subItems) {
                   toggleSubmenu(item.title);
                 } else {
+                  navigate(item.href);
                   handleClose();
                 }
               }}
@@ -68,6 +71,7 @@ const TopNav = () => {
                     className="mobile-submenu-item"
                     onClick={() => {
                       handleClose();
+                      navigate(subItem.href);
                     }}
                   >
                     {subItem.title}
