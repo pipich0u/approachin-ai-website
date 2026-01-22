@@ -27,8 +27,8 @@ export const SolutionIndex = () => {
                 </motion.button>
             </div>
         </div>
-        <div className='solution-index-bottom'>
-            <motion.div {...initialLoadProps} className='solution-index-bottom-inner'>
+        {/* <div className='solution-index-bottom'> */}
+            {/* <motion.div {...initialLoadProps} className='solution-index-bottom-inner'>
                 {
                     arr.map((item, idx) => (
                         <div className='solution-index-bottom-items'>
@@ -36,7 +36,7 @@ export const SolutionIndex = () => {
                         </div>
                     ))
                 }
-            </motion.div>
-        </div>
+            </motion.div> */}
+        {/* </div> */}
     </div>
 } 

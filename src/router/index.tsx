@@ -67,10 +67,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     path: "contact",
                     element: <ContactPage />,
                 },
-                {
-                    path: "ktransformers",
-                    element: <KT />,
-                },
+                // {
+                //     path: "ktransformers",
+                //     element: <KT />,
+                // },
                 {
                     path: "kllm",
                     element: <KLLMPage />,
@@ -79,10 +79,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     path: "mooncake",
                     element: <MoonCake />,
                 },
-                {
-                    path: "mvaas",
-                    element: <MVaaSPage />,
-                },
+                // {
+                //     path: "mvaas",
+                //     element: <MVaaSPage />,
+                // },
                 {
                     path: "models",
                     element: <ModelsRepository />,

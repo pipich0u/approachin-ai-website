@@ -9,7 +9,7 @@ export const menuHrefListDefault = [
             { title: '大模型推理一体机', href: 'machine' },
             { title: 'KLLM 推理引擎', href: 'kllm' },
             { title: 'AMaaS 平台', href: 'amaas' },
-            { title: 'MVaaS 平台', href: 'mvaas' },
+            // { title: 'MVaaS 平台', href: 'mvaas' },
         ]
     },
     {
@@ -17,7 +17,7 @@ export const menuHrefListDefault = [
         href: 'pageTechnology',
         isSelected: true,
         subItems: [
-            { title: 'KTransformers', href: 'ktransformers' },
+            // { title: 'KTransformers', href: 'ktransformers' },
             { title: 'Mooncake', href: 'mooncake' }
         ]
     },
@@ -31,11 +31,6 @@ export const menuHrefListDefault = [
         href: 'models',
         isSelected: false
     },
-    // {
-    //     title: '客户案例',
-    //     href: 'pageInfo',
-    //     isSelected: false
-    // },
     {
         title: '生态合作',
         href: 'cooperate',
@@ -67,7 +62,7 @@ export const mobMenuHrefListDefault = [
             { title: '大模型推理一体机', href: 'machine' },
             { title: 'KLLM 推理引擎', href: 'kllm' },
             { title: 'AMaaS 平台', href: 'amaas' },
-            { title: 'MVaaS 平台', href: 'mvaas' },
+            // { title: 'MVaaS 平台', href: 'mvaas' },
         ]
     },
     {
@@ -75,7 +70,7 @@ export const mobMenuHrefListDefault = [
         href: 'pageTechnology',
         isSelected: true,
         subItems: [
-            { title: 'KTransformers', href: 'ktransformers' },
+            // { title: 'KTransformers', href: 'ktransformers' },
             { title: 'Mooncake', href: 'mooncake' }
         ]
     },
@@ -84,11 +79,6 @@ export const mobMenuHrefListDefault = [
         href: 'solution',
         isSelected: false
     },
-    // {
-    //     title: '客户案例',
-    //     href: 'pageInfo',
-    //     isSelected: false
-    // },
     {
         title: '生态合作',
         href: 'cooperate',
@@ -96,7 +86,7 @@ export const mobMenuHrefListDefault = [
     },
     {
         title: '趋境资讯',
-        href: 'PageTeam',
+        href: 'information',
         isSelected: false
     },
     {
@@ -104,7 +94,7 @@ export const mobMenuHrefListDefault = [
         href: 'about',
         isSelected: true,
         subItems: [
-            { title: '公司简介', href: 'about' },
+            { title: '企业介绍', href: 'introduction' },
             { title: '联系我们', href: 'contact' }
         ]
     },

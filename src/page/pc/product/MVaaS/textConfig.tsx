@@ -32,21 +32,21 @@ export const mvaasTextConfig = {
                 key: '1',
                 label: '洞察罗盘',
                 features: [
-                    '实时SLO感知',
-                    '集群资源计算',
-                    '自动扩缩容稳定SLO'
+                    '业务SLO可视',
+                    '集群资源可视',
+                    '算力运行策略管理'
                 ]
             },
             {
                 key: '2',
                 label: '策略蓝图',
                 features: [
-                    '实时SLO感知',
-                    '集群资源计算',
-                    '自动扩缩容稳定SLO'
+                    '最佳工程实践模板',
+                    '丰富的硬件、模型数据',
+                    '真实业务场景优化方案'
                 ]
             },
-            {
+            { 
                 key: '3',
                 label: '自主决策',
                 features: [
