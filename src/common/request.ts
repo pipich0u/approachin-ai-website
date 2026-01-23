@@ -2,6 +2,12 @@ export interface RequestOptions extends RequestInit {
     params?: Record<string, any>;
 }
 
+export interface ResData<T = any>{
+    code: number;
+    message: string;
+    data: T;
+}
+
 function buildQuery(params?: Record<string, any>) {
     if (!params) return '';
     const query = new URLSearchParams();
@@ -16,7 +22,7 @@ function buildQuery(params?: Record<string, any>) {
 export async function request<T = any>(
     url: string,
     options: any = {}
-): Promise<T> {
+): Promise<ResData<T>> {
 
     const { params, headers, body, ...rest } = options;
 
@@ -62,5 +68,5 @@ export async function request<T = any>(
         throw new Error(`Request failed: ${res.status} - ${text}`);
     }
 
-    return res.json() as Promise<T>;
+    return res.json() as Promise<ResData<T>>;
 }

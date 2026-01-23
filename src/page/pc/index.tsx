@@ -5,7 +5,7 @@ import './index.css'
 import ReactLenis from 'lenis/react'
 export default function Layout() {
   const location = useLocation()
-  const shouldShowTopNavs = location.pathname !== '/models'
+  const shouldShowTopNavs = location.pathname !== '/models' && location.pathname !== '/admin_qujing_backend'
   const shouldUseLenis = location.pathname !== '/models'
 
   return (
@@ -15,9 +15,9 @@ export default function Layout() {
         {shouldShowTopNavs && <TopNavs />}
         <div>
           <Outlet />
-          <FloatBtnEle />
+          {shouldShowTopNavs && <FloatBtnEle />}
         </div>
       </div>
     </div>
-  ) 
+  )
 }

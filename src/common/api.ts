@@ -1,4 +1,5 @@
-import { request } from './request';
+import { FormSubmitResponse } from '@/types/form';
+import { request, ResData } from './request';
 interface SearchModelParams {
     name?: { FUZZY: string };
     family?: { MULTI_EQUAL: string[] };
@@ -68,3 +69,16 @@ export const getGitSource = async (org: string, repo: string, perPage: number = 
         }
     });
 }
+
+export const SubmitFormData = async (data:FormSubmitResponse) => {
+    return request<{ success: boolean }>('/nest/info', {
+        method: 'POST',
+        body: data
+    });
+}
+
+// export const GetFormData = async () => {
+//     return request('/nest/info', {
+//         method: 'GET',
+//     });
+// }

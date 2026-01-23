@@ -2,12 +2,21 @@ import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
 import { AppModule } from './app.module';
 import { CustomLoggerService } from './modules/logger/logger.service';
+import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   // 创建应用实例，使用自定义日志服务
   const app = await NestFactory.create(AppModule, {
     bufferLogs: true,
   });
+  
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,            // 自动移除 DTO 中未声明的字段
+      forbidNonWhitelisted: true, // 传多字段直接报错
+      transform: true,            // 自动类型转换（id string → number）
+    }),
+  );
 
   // 获取配置服务
   const configService = app.get(ConfigService);

@@ -10,7 +10,6 @@ export default registerAs('app', () => ({
   corsOrigins: process.env.CORS_ORIGINS?.split(',') || [
     'http://localhost:1234',
     'http://localhost:3000',
-    'http://localhost:8080',
   ],
   requestTimeout: parseInt(process.env.REQUEST_TIMEOUT || '30000', 10),
   isDevelopment: process.env.NODE_ENV === 'development',

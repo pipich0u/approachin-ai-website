@@ -1,34 +1,62 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  ParseIntPipe,
+} from '@nestjs/common';
 import { InfoService } from './info.service';
 import { CreateInfoDto } from './dto/create-info.dto';
 import { UpdateInfoDto } from './dto/update-info.dto';
+import { Info } from './entities/info.entity';
 
 @Controller('info')
 export class InfoController {
-  constructor(private readonly infoService: InfoService) {}
+  constructor(private readonly infoService: InfoService) { }
 
+  // 提交表单
   @Post()
-  create(@Body() createInfoDto: CreateInfoDto) {
-    return this.infoService.create(createInfoDto);
+  async create(
+    @Body() createInfoDto: CreateInfoDto,
+  ): Promise<{ success: true }> {
+    await this.infoService.create(createInfoDto);
+    return { success: true };
   }
 
+  // 查询全部
   @Get()
-  findAll() {
+  findAll(): Promise<Info[]> {
     return this.infoService.findAll();
   }
 
+  // 查询单条
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.infoService.findOne(+id);
+  findOne(
+    @Param('id', ParseIntPipe) id: number,
+  ) {
+    return this.infoService.findOne(id);
   }
 
+  // 更新
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateInfoDto: UpdateInfoDto) {
-    return this.infoService.update(+id, updateInfoDto);
+  update(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() updateInfoDto: UpdateInfoDto,
+  ) {
+    return this.infoService.update(id, updateInfoDto);
   }
 
+  // 删除
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.infoService.remove(+id);
+  remove(
+    @Param('id', ParseIntPipe) id: number,
+  ) {
+    return this.infoService.remove(id);
   }
+
+
 }
+

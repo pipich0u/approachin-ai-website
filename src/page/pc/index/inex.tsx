@@ -44,6 +44,7 @@ export default function Index() {
             window.removeEventListener("resize", resizeBody);
         };
     }, []);
+
     return (
         <div className="w-100 h-100" >
             <div className='flex items-center flex-col bg-[#fafafa]'>

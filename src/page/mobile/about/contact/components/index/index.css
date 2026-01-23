@@ -1,48 +1,65 @@
-.contact-in-container {
+.mob-contact-in-container {
     width: 100%;
-    height: 700px;
+    height: 1800px;
     display: flex;
-    padding: 50px 0;
+    padding: 100px 0;
     font-family: MiSans;
     font-style: normal;
     background: #F7FAFC;
-    background-size: auto 100%;
-    background-position: 48%;
-    background-repeat: no-repeat;
     flex-direction: column;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
 }
 
-.contact-in-content {
-    padding: 0 100px;
-    /* max-width: 1440px; */
+.mob-contact-in-content {
+    padding: 0 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
-.ct-in-ct-title {
+.mob-ct-in-ct-title {
     color: #333;
     font-size: 40px;
     font-weight: 450;
     line-height: 150%;
     letter-spacing: 0.8px;
+    margin-top: 100px;
 }
 
-.ct-in-ct-desc {
+.mob-ct-in-ct-desc {
     color: #808080;
-    font-size: 20px;
+    font-size: 27px;
     font-weight: 330;
     line-height: 180%;
-    letter-spacing: 0.4px;
-    margin-top: 4px;
+    letter-spacing: 0.54px;
     margin-bottom: 30px;
+    margin-top: 4px;
 }
 
-.ct-in-checkbox {
-    color: #808080;
-    font-size: 14px;
+.mob-ct-in-checkbox {
+    color: #B3B3B3;
+    font-size: 18px;
     font-weight: 305;
     line-height: 150%;
     letter-spacing: 0.28px;
+}
+
+.mob-ct-in-flex {
+    display: flex;
+    width: 530px;
+    gap: 10px;
+}
+
+.mob-contact-in-button {
+    width: 100% !important;
+}
+
+.mob-contact-in-image {
+    width: 605.978px;
+    height: 588.558px;
+    aspect-ratio: 605.98/588.56;
+    margin-top: 10px;
 }

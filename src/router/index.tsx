@@ -21,6 +21,7 @@ import { KLLMPage } from "@/page/pc/product/KLLM"
 import { SparkPage } from "@/page/pc/product/spark"
 import { ContactPage } from "@/page/pc/about/contact"
 import { MobContactPage } from "@/page/mobile/about/contact"
+import AdminPage from "@/admin"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -112,6 +113,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     path: "information",
                     element: <InformationPage />,
                 },
+                {
+                    path: 'admin_qujing_backend',
+                    element: <AdminPage />
+                }
             ],
         },
     ]

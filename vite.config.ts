@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => {
   },
   server: {
     host: '0.0.0.0',
-    port: 7210,
+    port: 8255,
     proxy: {
       "/api": {
         target: "http://test.approaching-ai.com/api",

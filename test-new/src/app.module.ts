@@ -28,7 +28,7 @@ import { ValidationPipe } from './common/pipes/validation.pipe';
 // 日志服务
 import { CustomLoggerService } from './modules/logger/logger.service';
 
-// import { TypeOrmModule } from '@nestjs/typeorm';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { InfoModule } from './info/info.module';
 
 @Module({
@@ -47,17 +47,17 @@ import { InfoModule } from './info/info.module';
     InfoModule,
 
     // 数据库模块
-    // TypeOrmModule.forRoot({
-    //   type: 'mysql',
-    //   host: 'localhost',
-    //   port: 3943,
-    //   username: '',
-    //   password: '',
-    //   database: '',
-    //   entities: [__dirname + '/**/*.entity{.ts,.js}'],
-    //   synchronize: true,
-    //   logging: true,
-    // }),
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: '123456',
+      database: 'contact_dev',
+      entities: [],
+      autoLoadEntities: true,
+      synchronize: true,
+    }),
   ],
   controllers: [AppController],
   providers: [

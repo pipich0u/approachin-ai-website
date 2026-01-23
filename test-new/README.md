@@ -150,56 +150,6 @@ findAll(@Query() pagination: PaginationDto) {
 }
 ```
 
-## 🧪 API 测试示例
-
-```bash
-# 获取所有猫咪（分页）
-curl http://localhost:3210/api/cat?page=1&limit=10
-
-# 获取单个猫咪
-curl http://localhost:3210/api/cat/1
-
-# 创建猫咪
-curl -X POST http://localhost:3210/api/cat \
-  -H "Content-Type: application/json" \
-  -d '{"name":"小花","age":2,"breed":"英短","color":"蓝色"}'
-
-# 更新猫咪
-curl -X PATCH http://localhost:3210/api/cat/1 \
-  -H "Content-Type: application/json" \
-  -d '{"age":3}'
-
-# 删除猫咪
-curl -X DELETE http://localhost:3210/api/cat/1
-```
-
-### 错误响应示例
-
-```bash
-# 参数验证失败
-curl -X POST http://localhost:3210/api/cat \
-  -H "Content-Type: application/json" \
-  -d '{"name":"","age":-1}'
-
-# 返回:
-# {
-#   "code": 1002,
-#   "message": "名称不能为空; 年龄不能小于0",
-#   "timestamp": 1234567890,
-#   "path": "/api/cat"
-# }
-
-# 资源不存在
-curl http://localhost:3210/api/cat/999
-
-# 返回:
-# {
-#   "code": 1003,
-#   "message": "ID为 999 的猫咪不存在",
-#   "timestamp": 1234567890,
-#   "path": "/api/cat/999"
-# }
-```
 
 ## 🔧 环境变量说明
 
