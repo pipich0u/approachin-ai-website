@@ -5,6 +5,7 @@ import { IconFont } from '@/utils/antdUtils';
 import { motion } from 'motion/react';
 import { scrollInViewOnceProps } from '@/utils/motionConfig';
 import { mvaasTextConfig } from '../../textConfig';
+import { trackButtonClick } from '@/utils/umami';
 
 export const MVaaSPlatform = () => {
     const { platform } = mvaasTextConfig;
@@ -44,7 +45,7 @@ export const MVaaSPlatform = () => {
                     />
                     <motion.button {...scrollInViewOnceProps}
                         className='animated-button w-[100px] rounded-lg mvaas-platform-btn'
-                    // onClick={() => trackButtonClick(index.buttonText, 'AMaaS第1屏', { slideIndex: 0 })}
+                        onClick={() => trackButtonClick(platform.buttonText, 'MVaaS平台智能调度')}
                     >
                         <span className="text-white font-[380] w-full">{platform.buttonText}</span>
                     </motion.button>

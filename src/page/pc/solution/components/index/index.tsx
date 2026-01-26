@@ -21,7 +21,10 @@ export const SolutionIndex = () => {
                 <motion.button
                     {...initialLoadProps}
                     className='animated-button w-[150px] rounded-lg bg-[#806BFF] mt-10!'
-                    onClick={() => navigate('/contact')}
+                    onClick={() => {
+                        trackButtonClick(index.buttonText, 'Solution首屏');
+                        navigate('/contact');
+                    }}
                 >
                     <span className="text-white font-[380] bt-text">{index.buttonText}</span>
                 </motion.button>

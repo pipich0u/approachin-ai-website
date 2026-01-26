@@ -4,6 +4,8 @@ import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import { machinProduct } from '../../textConfig'
 import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
+import { trackButtonClick } from '@/utils/umami'
+
 export const MachineProduct = () => {
     const navigator = useNavigate()
     return <div className='product-container'>
@@ -18,6 +20,7 @@ export const MachineProduct = () => {
                                 <div className='product-box-item-desc'>{item.desc}</div>
                             </div>
                             <Button type='link' className="product-box-item-btn" onClick={() => {
+                                trackButtonClick(machinProduct.buttonText, `Machine产品-${item.title}`);
                                 if (item.open) { window.open(item.open) }
                                 else {
                                     navigator(item.herf)

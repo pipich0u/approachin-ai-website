@@ -9,7 +9,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     bufferLogs: true,
   });
-  
+
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,            // 自动移除 DTO 中未声明的字段
@@ -39,7 +39,7 @@ async function bootstrap() {
   app.setGlobalPrefix('nest');
 
   // 获取端口配置
-  const port = configService.get<number>('app.port') || 3210;
+  const port = 3210;
   const appName = configService.get<string>('app.name') || 'approaching-ai-backend';
   const env = configService.get<string>('app.env') || 'development';
 

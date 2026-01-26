@@ -3,6 +3,7 @@ import './index.css'
 import mvaas from '@/assets/images/img/mvaas_index.png'
 import { initialLoadProps } from '@/utils/motionConfig'
 import { mvaasTextConfig } from '../../textConfig'
+import { trackButtonClick } from '@/utils/umami'
 
 export const MVaaSIndex = () => {
     const { index } = mvaasTextConfig;
@@ -22,7 +23,7 @@ export const MVaaSIndex = () => {
                 </motion.div>
                 <motion.button {...initialLoadProps}
                     className='animated-button w-[150px] rounded-lg mvaas-index-btn'
-                // onClick={() => trackButtonClick(index.buttonText, 'AMaaS第1屏', { slideIndex: 0 })}
+                    onClick={() => trackButtonClick(index.buttonText, 'MVaaS首屏')}
                 >
                     <span className="text-white font-[380] bt-text">{index.buttonText}</span>
                 </motion.button>

@@ -4,13 +4,14 @@ import { Repository } from 'typeorm';
 import { Info } from './entities/info.entity';
 import { CreateInfoDto } from './dto/create-info.dto';
 import { UpdateInfoDto } from './dto/update-info.dto';
+import { PageResult } from 'src/common/vo/pageResult';
 
 @Injectable()
 export class InfoService {
   constructor(
     @InjectRepository(Info)
     private readonly infoRepository: Repository<Info>,
-  ) {}
+  ) { }
 
   // 创建（表单提交）
   async create(createInfoDto: CreateInfoDto) {
@@ -27,6 +28,8 @@ export class InfoService {
       order: {
         createTime: 'DESC',
       },
+      // skip: 0,
+      // take: 100,
     });
   }
 
@@ -43,6 +46,15 @@ export class InfoService {
     return info;
   }
 
+  // 分页查询
+  async findPage(page: number, pageSize: number,) {
+    const [infos, total] = await this.infoRepository.findAndCount({
+      skip: (page - 1) * pageSize,
+      take: pageSize,
+      // order: {
+    })
+    return new PageResult( infos, total, page, pageSize );
+  }
   // 更新
   async update(id: number, updateInfoDto: UpdateInfoDto): Promise<Info> {
     const info = await this.findOne(id);
@@ -61,5 +73,5 @@ export class InfoService {
     }
   }
 
-  
+
 }

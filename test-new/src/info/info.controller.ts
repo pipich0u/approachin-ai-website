@@ -7,6 +7,7 @@ import {
   Param,
   Delete,
   ParseIntPipe,
+  Query,
 } from '@nestjs/common';
 import { InfoService } from './info.service';
 import { CreateInfoDto } from './dto/create-info.dto';
@@ -32,6 +33,15 @@ export class InfoController {
     return this.infoService.findAll();
   }
 
+  // 分页查询
+  @Get('page')
+  findPage(
+    @Query('page', ParseIntPipe) page: number,
+    @Query('pageSize', ParseIntPipe) pageSize: number,
+  ) {
+    return this.infoService.findPage(page, pageSize);
+  }
+
   // 查询单条
   @Get(':id')
   findOne(
@@ -39,6 +49,7 @@ export class InfoController {
   ) {
     return this.infoService.findOne(id);
   }
+  
 
   // 更新
   @Patch(':id')

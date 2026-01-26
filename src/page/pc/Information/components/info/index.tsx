@@ -3,6 +3,8 @@ import { IconFont } from '@/utils/antdUtils'
 import { infoList } from '../../textConfig'
 import { motion } from 'motion/react'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
+import { trackButtonClick } from '@/utils/umami'
+
 export const InformationInfo = () => {
 
     return <div className='information-info-container'>
@@ -18,7 +20,10 @@ export const InformationInfo = () => {
                             </div>
                             <div className='in-info-item-time'>
                                 <div>{item.date}</div>
-                                <div className='cursor-pointer' onClick={()=>window.open(item.link)}>查看详情<IconFont type='icon-up-s' className='detail-icon' /></div>
+                                <div className='cursor-pointer' onClick={() => {
+                                    trackButtonClick('查看详情', `Information资讯-${item.title}`);
+                                    window.open(item.link);
+                                }}>查看详情<IconFont type='icon-up-s' className='detail-icon' /></div>
                             </div>
                         </div>
                         <div className='in-info-item-rig'>

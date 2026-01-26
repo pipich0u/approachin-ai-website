@@ -5,6 +5,7 @@ import { StudioTabList, studioTextConfig } from '../../textConfig'
 import { IconFont } from '@/utils/antdUtils'
 import { useEffect, useRef, useState } from 'react'
 import tabimg from '@/assets/images/img/studio_tabrig.png'
+import { trackEvent } from '@/utils/umami'
 
 export const StudioTab = () => {
     const [active, setActive] = useState(0);
@@ -15,6 +16,11 @@ export const StudioTab = () => {
     const handleTabClick = (id: number) => {
         setDirection(id > active ? 1 : -1);
         setActive(id);
+        trackEvent('tab-switch', {
+            tabName: StudioTabList.tablist[id].name,
+            tabId: id,
+            location: 'Studio产品能力'
+        });
     };
 
     useEffect(() => {

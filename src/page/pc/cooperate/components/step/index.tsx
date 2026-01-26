@@ -8,6 +8,7 @@ import step4 from '@/assets/images/img/step4.png'
 import step5 from '@/assets/images/img/step5.png'
 import { scrollInViewSpringProps } from '@/utils/motionConfig';
 import { stepList } from '../../textConfig';
+import { trackButtonClick } from '@/utils/umami';
 
 export default function CooperateStep() {
 
@@ -82,7 +83,7 @@ export default function CooperateStep() {
                         </div>
                     </div>
                 </motion.div>
-                <motion.button className='step-btn' {...scrollInViewSpringProps}>
+                <motion.button className='step-btn' {...scrollInViewSpringProps} onClick={() => trackButtonClick(stepList.btnText, 'Cooperate合作流程')}>
                     <span className="step-btn-text">{stepList.btnText}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
                         <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>

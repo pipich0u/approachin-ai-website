@@ -4,6 +4,7 @@ import './index.css'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
 import { studioTextConfig } from '../../textConfig'
 import studio_carousel from '@/assets/images/img/studio_carousel.png'
+import { trackCarouselChange } from '@/utils/umami'
 
 interface CarouselItem {
     id: number
@@ -40,11 +41,19 @@ export const StudioCarousel = ({ config = studioTextConfig.carousel }: StudioCar
     )
 
     const handlePrev = () => {
-        setActiveIndex((prev) => (prev === 0 ? carouselData.length - 1 : prev - 1));
+        setActiveIndex((prev) => {
+            const newIndex = prev === 0 ? carouselData.length - 1 : prev - 1;
+            trackCarouselChange(newIndex, carouselData[newIndex].title);
+            return newIndex;
+        });
     };
 
     const handleNext = () => {
-        setActiveIndex((prev) => (prev === carouselData.length - 1 ? 0 : prev + 1));
+        setActiveIndex((prev) => {
+            const newIndex = prev === carouselData.length - 1 ? 0 : prev + 1;
+            trackCarouselChange(newIndex, carouselData[newIndex].title);
+            return newIndex;
+        });
     };
 
     // 获取要显示的三个项：前一个、当前、后一个

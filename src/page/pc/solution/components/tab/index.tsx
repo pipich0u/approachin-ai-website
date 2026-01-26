@@ -4,6 +4,7 @@ import { scrollInViewOnceProps } from '@/utils/motionConfig'
 import { useState } from 'react'
 import { solutionTextConfig } from '../../textConfig'
 import { IconFont } from '@/utils/antdUtils'
+import { trackEvent } from '@/utils/umami'
 
 export const SolutionTab = () => {
 
@@ -32,6 +33,11 @@ export const SolutionTab = () => {
                             key={idx}
                             onClick={() => {
                                 setActiveTab(idx)
+                                trackEvent('tab-switch', {
+                                    tabName: item.label,
+                                    tabId: idx,
+                                    location: 'Solution解决方案'
+                                });
                                 if (item.child) {
                                     handleSelectToggle()
                                     setTitle(item.label)

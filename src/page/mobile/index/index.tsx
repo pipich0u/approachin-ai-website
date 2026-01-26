@@ -11,7 +11,13 @@ import DevelopPage from './components/develop';
 import PageConsult from './components/consult';
 import PageCooperate from './components/PageCooperate';
 import SourcePage from './components/source';
+import { useEffect } from 'react';
+import { trackPageView } from '@/utils/umami';
+
 export default function MobileIndex() {
+  useEffect(() => {
+    trackPageView('移动端首页')
+  }, [])
 
   // 滚动到指定组件
   const scrollToSection = (sectionId: string) => {

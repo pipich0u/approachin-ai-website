@@ -1,3 +1,7 @@
+export const kllmTextConfig = {
+    pageName: 'KLLM页面'
+}
+
 export const advantagesText = {
     title: '产品优势',
     advantagesList: [

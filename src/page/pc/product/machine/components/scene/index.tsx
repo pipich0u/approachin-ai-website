@@ -4,12 +4,25 @@ import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import { useState } from 'react'
 import img from '@/assets/images/img/scene_rig.png'
 import { machineTextConfig } from '../../textConfig'
+import { trackEvent } from '@/utils/umami'
 
 export const MachineScene = () => {
     const { scene } = machineTextConfig;
     const tabItems = scene.tabItems;
     const [activeTab, setActiveTab] = useState(tabItems[0].id)
     const currentTab = tabItems.find(item => item.id === activeTab)
+
+    const handleTabClick = (id: typeof activeTab) => {
+        setActiveTab(id);
+        const tab = tabItems.find(item => item.id === id);
+        if (tab) {
+            trackEvent('tab-switch', {
+                tabName: tab.label,
+                tabId: id,
+                location: 'Machine应用场景'
+            });
+        }
+    }
 
     return <div className='scene-container'>
         <div className='scene-content'>
@@ -20,7 +33,7 @@ export const MachineScene = () => {
                         <div
                             key={item.id}
                             className={`scene-tab-item ${activeTab === item.id ? 'active' : ''}`}
-                            onClick={() => setActiveTab(item.id)}
+                            onClick={() => handleTabClick(item.id)}
                         >
                             {activeTab === item.id && (
                                 <motion.div

@@ -8,6 +8,8 @@ import logo3 from '@/assets/images/img/changting_logo.png'
 import card_bg1 from '@/assets/images/img/carousel1.png'
 import card_bg2 from '@/assets/images/img/carousel2.png'
 import card_bg3 from '@/assets/images/img/carousel3.png'
+import { trackCarouselChange } from '@/utils/umami';
+
 // 轮播数据
 const carouselData = [
     {
@@ -44,6 +46,7 @@ export default function CooperateCarousel() {
 
     const handleDotClick = (index: number) => {
         setCurrentIndex(index);
+        trackCarouselChange(index, carouselData[index].title);
         setIsAutoPlay(false);
         setTimeout(() => setIsAutoPlay(true), 5000);
     };
@@ -51,6 +54,7 @@ export default function CooperateCarousel() {
     // 点击卡片切换到中间
     const handleCardClick = (index: number) => {
         setCurrentIndex(index);
+        trackCarouselChange(index, carouselData[index].title);
         setIsAutoPlay(false);
         setTimeout(() => setIsAutoPlay(true), 5000);
     };
