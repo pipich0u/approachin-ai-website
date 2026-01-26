@@ -1,6 +1,5 @@
 import PageContact from '@/page/mobile/index/components/contact/index';
 import { MobIntroductionIndex } from './components/index'
-// import { MobIntroductionStep } from './components/step'
 import './index.css'
 import { useEffect } from 'react'
 import { trackPageView } from '@/utils/umami'

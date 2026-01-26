@@ -63,3 +63,10 @@
 .mob-in-info-item-content-img {
     width: 100%;
 }
+.mob-in-idx-content-btn{
+    padding: 10px 44px;
+    box-shadow: none;
+    width: 163px;
+    height: 54px;
+    font-size: 16px;
+}
