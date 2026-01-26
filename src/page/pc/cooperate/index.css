@@ -3,5 +3,6 @@
     align-items: center;
     flex-direction: column;
     background: #fff;
+    padding-top: 64px;
     min-width: 1440px;
 }

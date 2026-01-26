@@ -1,4 +1,4 @@
-export const  studioTextConfig = {
+export const studioTextConfig = {
     pageName: 'AI-Studio页面',
     index: {
         title: 'AI-Studio',
@@ -24,17 +24,20 @@ export const  studioTextConfig = {
             {
                 id: 0,
                 title: '训练场景',
-                desc: 'AI任务稳定运行，训练效率跟随卡数线性变化，趋境自研高性能引擎为千亿大模型的训练保驾护航。'
+                desc: 'AI任务稳定运行，训练效率跟随卡数线性变化，趋境自研高性能引擎为千亿大模型的训练保驾护航。',
+                img:"/src/assets/images/img/studio1.png"
             },
             {
                 id: 1,
                 title: '多框架开发场景',
-                desc: '兼容 Python/Java/C++ 及 PyTorch/TensorFlow 等主流框架，集成 Jupyter/VSCode 等在线 IDE，一键完成数据处理、模型调试与代码管理。'
+                desc: '兼容 Python/Java/C++ 及 PyTorch/TensorFlow 等主流框架，集成 Jupyter/VSCode 等在线 IDE，一键完成数据处理、模型调试与代码管理。',
+                img:"/src/assets/images/img/studio2.png"
             },
             {
                 id: 2,
                 title: '镜像与资源管理场景',
-                desc: '提供 Web Shell 在线镜像构建能力，预置 GPU / 推理等基础镜像，支持 K8s 资源弹性调度，降低 AI 环境部署与运维成本。'
+                desc: '提供 Web Shell 在线镜像构建能力，预置 GPU / 推理等基础镜像，支持 K8s 资源弹性调度，降低 AI 环境部署与运维成本。',
+                img:"/src/assets/images/img/studio3.png"
             }
         ]
     }
@@ -53,7 +56,8 @@ export const StudioTabList = {
                 content: '文本分类，文本翻译，命名实体识别，阅读理解，问答，摘要提取...'
             }
             ],
-            btn: '立即咨询'
+            btn: '立即咨询',
+            img: '/src/assets/images/img/tab1.png'
         },
         {
             name: "在线开发", id: 1, icon: 'tab-b',
@@ -74,7 +78,8 @@ export const StudioTabList = {
                 title: '提供 Web Shell 在线镜像构建能力，预置 Notebook、推理、GPU、Python 等基础镜像',
                 content: ''
             }],
-            btn: '立即咨询'
+            btn: '立即咨询',
+            img: '/src/assets/images/img/tab2.png'
         },
         {
             name: "模型训练", id: 2, icon: 'tab-c',
@@ -95,7 +100,8 @@ export const StudioTabList = {
                 title: '支持RDMA网址，支持IB/roce底层，国产gpu卡，不同gpu厂商/卡型选择',
                 content: ''
             }],
-            btn: '立即咨询'
+            btn: '立即咨询',
+            img: '/src/assets/images/img/tab3.png'
         },
         {
             name: "流程自动化", id: 3, icon: 'tab-d',
@@ -107,7 +113,8 @@ export const StudioTabList = {
                 title: '便捷的拖拉拽方式，支持单任务和pipeline整体等多种调试运行方式',
                 content: ''
             }],
-            btn: '立即咨询'
+            btn: '立即咨询',
+            img: '/src/assets/images/img/tab4.png'
         },
         {
             name: "推理服务", id: 4, icon: 'tab-e',
@@ -122,7 +129,8 @@ export const StudioTabList = {
                 title: '支持大模型网关：秘钥匹配，限速，黑白名单，token限额，统计监控，有效期设定等',
                 content: ''
             }],
-            btn: '立即咨询'
+            btn: '立即咨询',
+            img: '/src/assets/images/img/tab5.png'
         },
         {
             name: "模型市场", id: 5, icon: 'tab-f',
@@ -134,7 +142,8 @@ export const StudioTabList = {
                 title: '系统自带通用模型数量400+，覆盖绝大数行业场景，根据需求可以自行扩充',
                 content: ''
             }],
-            btn: '立即咨询'
+            btn: '立即咨询',
+            img: '/src/assets/images/img/tab6.png'
         },
     ]
 }

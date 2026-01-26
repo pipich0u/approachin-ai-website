@@ -113,6 +113,20 @@ export const indexPageList = [
             { item: '80%', desc: ['算力资源', '利用力达'] },
             { item: '80%', desc: ['AI应用Task', '成本降低'] },
         ]
+    },
+
+]
+
+export const bannerList = [
+    {
+        title: ['趋境科技受邀参与 AIGC 开发者大会', '获评“AI行业最具影响力企业Top10”'],
+        ask: '了解详情',
+        link: "https://mp.weixin.qq.com/s/HiO8FzBI6vWv5BdxNnVPNw"
+    },
+    {
+        title: ['KTransformers 与 Mooncake 入选', '2025 清华最受师生关注十大亮点成果'],
+        ask: '了解详情',
+        link: "https://mp.weixin.qq.com/s/RTfcAeq2__NgrPsjEY7YSg"
     }
 ]
 

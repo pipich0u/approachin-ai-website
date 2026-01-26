@@ -2,13 +2,13 @@ import './index.css'
 import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig'
 import { useState, useEffect } from 'react';
-import { indexPageList } from '@/page/textConfig';
+import { indexPageList,bannerList } from '@/page/textConfig';
 import { trackPageView, trackButtonClick, trackCarouselChange } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';
 import { useNavigate } from 'react-router-dom';
 
 export default function PageIndex() {
-    const [showContent, setShowContent] = useState(false);
+    const [showContent, setShowContent] = useState(true);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [progress, setProgress] = useState(0);
     const [isMouseInCarousel, setIsMouseInCarousel] = useState(false);
@@ -21,32 +21,32 @@ export default function PageIndex() {
         trackPageView('首页轮播', { section: 'hero' });
     }, []);
 
-    // // 轮播自动切换逻辑 - 鼠标在轮播容器内时暂停
-    // useEffect(() => {
-    //     if (!showContent || isMouseInCarousel) return;
+    // 轮播自动切换逻辑 - 鼠标在轮播容器内时暂停
+    useEffect(() => {
+        if (!showContent || isMouseInCarousel) return;
 
-    //     const interval = setInterval(() => {
-    //         setProgress((prev) => {
-    //             const newProgress = prev + (100 / 80); // 8秒 = 8000ms, 每100ms增加1.25%
-    //             return newProgress > 100 ? 100 : newProgress;
-    //         });
-    //     }, 100);
+        const interval = setInterval(() => {
+            setProgress((prev) => {
+                const newProgress = prev + (100 / 80); // 8秒 = 8000ms, 每100ms增加1.25%
+                return newProgress > 100 ? 100 : newProgress;
+            });
+        }, 100);
 
-    //     return () => clearInterval(interval);
-    // }, [showContent, isMouseInCarousel]);
+        return () => clearInterval(interval);
+    }, [showContent, isMouseInCarousel]);
 
-    // // 监听进度，触发页面切换
-    // useEffect(() => {
-    //     if (progress >= 100) {
-    //         const timer = setTimeout(() => {
-    //             const nextSlide = (currentSlide + 1) % 3;
-    //             setCurrentSlide(nextSlide);
-    //             setProgress(0);
-    //         }, 50);
+    // 监听进度，触发页面切换
+    useEffect(() => {
+        if (progress >= 100) {
+            const timer = setTimeout(() => {
+                const nextSlide = (currentSlide + 1) % 3;
+                setCurrentSlide(nextSlide);
+                setProgress(0);
+            }, 50);
 
-    //         return () => clearTimeout(timer);
-    //     }
-    // }, [progress, currentSlide]);
+            return () => clearTimeout(timer);
+        }
+    }, [progress, currentSlide]);
 
     // 手动切换轮播
     const handleSlideChange = (index: number) => {
@@ -68,20 +68,20 @@ export default function PageIndex() {
             <div
                 className="carousel-slides"
                 style={{
-                    // transform: `translateX(-${currentSlide * 33.333}%)`,
+                    transform: `translateX(-${currentSlide * 33.333}%)`,
                     transition: 'transform 0.6s ease-in-out'
                 }}
             >
                 {/* Section 1 */}
                 <div className="section-1 overflow-hidden">
-                    {/* <motion.div
+                    <motion.div
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 0 }}
                         transition={{ duration: 1.5, ease: 'easeInOut' }}
                         onAnimationComplete={() => setShowContent(true)}
-                    /> */}
+                    />
 
-                    {!showContent && <div className='relative z-10 w-full mt-15 flex flex-col '>
+                    {<div className='relative z-10 w-full mt-15 flex flex-col '>
                         <div className="flex items-center flex-col">
                             <motion.div {...initialLoadProps} className='title-top text-[#1B1D22] flex'>
                                 {indexPageList[0].title}<div className='title-top-text'>{indexPageList[0].color}</div>
@@ -91,8 +91,7 @@ export default function PageIndex() {
                                 {indexPageList[0].desc}
                             </motion.div>
 
-                            <motion.button
-                                {...initialLoadProps}
+                            <motion.button {...initialLoadProps}
                                 className='animated-button w-[180px] rounded-lg bg-[#806BFF] '
                                 onClick={() => {
                                     trackButtonClick(indexPageList[0].ask, '首页第1屏', { slideIndex: 0 });
@@ -143,32 +142,46 @@ export default function PageIndex() {
                 </div>
 
                 {/* Section 2 */}
-                {/* <div className="section-2">
+                <div className="section-2">
                     <div className='relative z-10'>
                         <div className="title">
-                            <div className='title-top text-[#fbfbfb] flex'>
-                                稳定可靠服务·<div className='title-top-text'>全天守护</div>
+                            <div className='title-top text-white flex text-[48px]! mb-[18px]'>
+                                {bannerList[0].title[0]} <br />
+                                {bannerList[0].title[1]}
                             </div>
-                            <div className='title-desc text-[#c3c3c3]'>
-                                7x24小时专业技术支持，99.9%可用性保障，让您的AI应用持续稳定运行
-                            </div>
+                            <motion.button {...initialLoadProps}
+                                className='animated-button w-[152px] shadow-none! rounded-lg bg-[#806BFF] '
+                                onClick={() => {
+                                    trackButtonClick(bannerList[0].ask, '首页第2屏', { slideIndex: 0 });
+                                    window.open(bannerList[0].link,'_blank');
+                                }}
+                                >
+                                <span className="text-white font-[380] bt-text">{bannerList[0].ask}</span>
+                            </motion.button>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
                 {/* Section 3 */}
-                {/* <div className="section-3">
+                <div className="section-3">
                     <div className='relative z-10'>
                         <div className="title">
-                            <div className='title-top text-[#1B1D22] flex'>
-                                极速开发部署·<div className='title-top-text'>降本增效</div>
+                            <div className='title-top text-white flex text-[48px]! mb-[18px]'>
+                                {bannerList[1].title[0]} <br />
+                                {bannerList[1].title[1]}
                             </div>
-                            <div className='title-desc text-[#484848]'>
-                                从开发到上线分钟级完成，大幅降低成本，显著提升效率，助力业务快速增长
-                            </div>
+                            <motion.button {...initialLoadProps}
+                                className='animated-button w-[152px] shadow-none! rounded-lg bg-[#806BFF] '
+                                onClick={() => {
+                                    window.open(bannerList[1].link,'_blank');
+                                    trackButtonClick(bannerList[1].ask, '首页第3屏', { slideIndex: 1 });
+                                }}
+                            >
+                                <span className="text-white font-[380] bt-text">{bannerList[1].ask}</span>
+                            </motion.button>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
 
             {/* 轮播指示器 - 固定在底部 */}

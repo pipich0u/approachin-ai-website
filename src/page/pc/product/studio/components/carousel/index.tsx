@@ -10,6 +10,7 @@ interface CarouselItem {
     id: number
     title: string
     desc: string
+    img: string
 }
 
 interface CarouselConfig {
@@ -36,7 +37,7 @@ export const StudioCarousel = ({ config = studioTextConfig.carousel }: StudioCar
     }, [config.imageName])
 
     const carouselData = useMemo(() =>
-        config.data.map(item => ({ ...item, img: carouselImage })),
+        config.data.map(item => ({ ...item })),
         [config.data, carouselImage]
     )
 

@@ -44,22 +44,26 @@ export const carouselText = {
         {
             id: 0,
             title: '单机资源下的极致性能',
-            desc: '通过混合精度量化、异构推理等场景优化技术，最大化单机算力利用率，实现单点推理性能的突破性提升'
+            desc: '通过混合精度量化、异构推理等场景优化技术，最大化单机算力利用率，实现单点推理性能的突破性提升',
+                img:"/src/assets/images/img/studio1.png"
         },
         {
             id: 1,
             title: '超大规模分布式集群',
-            desc: '依托 PD 分离、全局 KVCache 调度等核心技术实现节点间资源解耦与故障容错，支撑集群规模化稳定部署和高效协同'
+            desc: '依托 PD 分离、全局 KVCache 调度等核心技术实现节点间资源解耦与故障容错，支撑集群规模化稳定部署和高效协同',
+                img:"/src/assets/images/img/studio1.png"
         },
         {
             id: 2,
             title: '日均万亿token服务',
-            desc: '通过 KVCache 高复用、批处理优化与流量智能调度，大幅提升有效请求处理能力，实现海量 token 的低成本、高吞吐处理'
+            desc: '通过 KVCache 高复用、批处理优化与流量智能调度，大幅提升有效请求处理能力，实现海量 token 的低成本、高吞吐处理',
+                img:"/src/assets/images/img/studio1.png"
         },
         {
             id: 3,
             title: '金融级的TTFT要求',
-            desc: '凭借前缀缓存复用、PD分离、零拷贝通信与最优节点智能调度算法，严控首 token 响应延迟，保障 TTFT 指标在金融 SLO 约束下达标率 99.9%+'
+            desc: '凭借前缀缓存复用、PD分离、零拷贝通信与最优节点智能调度算法，严控首 token 响应延迟，保障 TTFT 指标在金融 SLO 约束下达标率 99.9%+',
+                img:"/src/assets/images/img/studio1.png"
         },
     ] 
 }
