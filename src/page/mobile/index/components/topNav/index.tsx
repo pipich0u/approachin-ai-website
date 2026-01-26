@@ -4,6 +4,8 @@ import logo from '@/assets/svg/logo-black.svg'
 import { IconFont } from '@/utils/antdUtils';
 import { mobMenuHrefListDefault } from '@/page/textConfig';
 import { useNavigate } from 'react-router-dom';
+import { trackButtonClick } from '@/utils/umami';
+
 const TopNav = () => {
   // const [isFirstOpenPage, setIsFirstOpenPage] = useState(true)
   const [openDrawer, setOpenDrawer] = useState(false)
@@ -48,8 +50,10 @@ const TopNav = () => {
               className="mobile-menu-item"
               onClick={() => {
                 if (item.isSelected && item.subItems) {
+                  trackButtonClick(`移动端菜单-${item.title}`, '移动端顶部导航', { action: '展开子菜单' });
                   toggleSubmenu(item.title);
                 } else {
+                  trackButtonClick(`移动端菜单-${item.title}`, '移动端顶部导航', { href: item.href });
                   navigate(item.href);
                   handleClose();
                 }

@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import { scrollInViewSpringOnceProps } from "@/utils/motionConfig";
 import { IconFont } from "@/utils/antdUtils";
 import { PageTabList } from '@/page/textConfig';
+import { trackButtonClick } from '@/utils/umami';
+import { useExposureTracking } from '@/hooks/useExposureTracking';
 
 export default function PageTab() {
     const [active, setActive] = useState(0);
@@ -11,7 +13,12 @@ export default function PageTab() {
     const navRef = useRef<HTMLDivElement>(null);
     const [underline, setUnderline] = useState({ left: 0, width: 0 });
 
+    // 曝光埋点 - 移动端首页Tab区域
+    const exposureRef = useExposureTracking('Tab切换区域', '移动端首页', { section: 'tab' });
+
     const handleTabClick = (id: number) => {
+        const tabName = PageTabList.tablist[id].name;
+        trackButtonClick(`移动端Tab切换-${tabName}`, '移动端首页Tab区域', { tabId: id, tabName });
         setDirection(id > active ? 1 : -1);
         setActive(id);
     };
@@ -38,7 +45,7 @@ export default function PageTab() {
     }, [active]);
 
     return (
-        <div className="mob-tab-page">
+        <div className="mob-tab-page" ref={exposureRef}>
             <div className="mob-tab-container">
                 <motion.div {...scrollInViewSpringOnceProps} className="mob-tab-title">
                     {PageTabList.title}

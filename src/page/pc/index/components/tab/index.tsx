@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import { scrollInViewSpringProps } from "../../../../../utils/motionConfig";
 import { IconFont } from "@/utils/antdUtils";
 import { PageTabList } from '@/page/textConfig';
+import { trackButtonClick } from '@/utils/umami';
+import { useExposureTracking } from '@/hooks/useExposureTracking';
 
 export default function PageTab() {
     const [active, setActive] = useState(0);
@@ -11,7 +13,12 @@ export default function PageTab() {
     const navRef = useRef<HTMLDivElement>(null);
     const [underline, setUnderline] = useState({ left: 0, width: 0 });
 
+    // 曝光埋点 - 首页Tab区域
+    const exposureRef = useExposureTracking('Tab切换区域', '首页', { section: 'tab' });
+
     const handleTabClick = (id: number) => {
+        const tabName = PageTabList.tablist[id].name;
+        trackButtonClick(`Tab切换-${tabName}`, '首页Tab区域', { tabId: id, tabName });
         setDirection(id > active ? 1 : -1);
         setActive(id);
     };
@@ -38,7 +45,7 @@ export default function PageTab() {
     }, [active]);
 
     return (
-        <div className="tab-page">
+        <div className="tab-page" ref={exposureRef}>
             <div className="tab-container">
                 <motion.div {...scrollInViewSpringProps} className="tab-title">
                     {PageTabList.title}
@@ -77,7 +84,13 @@ export default function PageTab() {
                                     <div className="tab-cont-left-name">{PageTabList.tablist[active].name}</div>
                                     <div className="tab-cont-left-desc">{PageTabList.tablist[active].desc}</div>
                                 </div>
-                                <motion.button className='tab-cont-left-btn'>
+                                <motion.button
+                                    className='tab-cont-left-btn'
+                                    onClick={() => {
+                                        const tabName = PageTabList.tablist[active].name;
+                                        trackButtonClick(`了解详情-${tabName}`, '首页Tab区域', { tabId: active, tabName });
+                                    }}
+                                >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
                                         <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
                                     </svg>

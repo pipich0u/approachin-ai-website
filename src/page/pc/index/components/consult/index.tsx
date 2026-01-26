@@ -4,15 +4,21 @@ import { motion } from "motion/react"
 import { scrollInViewSpringProps } from '@/utils/motionConfig'
 import { consultList } from '@/page/textConfig'
 import { useNavigate } from 'react-router-dom'
+import { trackButtonClick } from '@/utils/umami';
+import { useExposureTracking } from '@/hooks/useExposureTracking';
 
 interface Props {
     name?: string
 }
 
 export default function PageConsult({ name }: Props) {
-    const navigator=useNavigate()
+    const navigator = useNavigate();
+
+    // 曝光埋点 - 咨询区域（根据name区分不同页面）
+    const exposureRef = useExposureTracking('咨询区域', name || '首页', { section: 'consult', name });
+
     return (
-        <div className={`consult-container ${name}`}>
+        <div className={`consult-container ${name}`} ref={exposureRef}>
             <motion.div {...scrollInViewSpringProps} className='consult-title'>{consultList.title}</motion.div>
             <motion.div {...scrollInViewSpringProps} className='consult-desc'>{consultList.desc}</motion.div>
 
@@ -30,7 +36,10 @@ export default function PageConsult({ name }: Props) {
                     </svg>
                 </span>
             </motion.button> */}
-            <motion.button {...scrollInViewSpringProps} className='consult-button' onClick={()=>navigator('/contact')}>
+            <motion.button {...scrollInViewSpringProps} className='consult-button' onClick={() => {
+                trackButtonClick('立即咨询', `${name || '首页'}咨询区域`, { href: '/contact', from: name || '首页' });
+                navigator('/contact');
+            }}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" ></path>
                 </svg>

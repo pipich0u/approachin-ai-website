@@ -4,8 +4,12 @@ import amaas from '@/assets/images/img/amaas.png'
 import { useEffect, useRef, useState } from 'react'
 import { amaasTextConfig } from '../../textConfig'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
+import { trackButtonClick } from '@/utils/umami'
+import { useExposureTracking } from '@/hooks/useExposureTracking'
 
 export const AMaasSuperior = () => {
+    // 曝光埋点 - AMaaS产品优势区域
+    const exposureRef = useExposureTracking('产品优势区域', 'AMaaS产品页', { section: 'superior' });
     const { superior } = amaasTextConfig;
     const tabItems = superior.tabItems;
 
@@ -58,7 +62,12 @@ export const AMaasSuperior = () => {
     }, [inView, hovering, activeTab])
 
     return (
-        <div ref={containerRef} className='amaas-superior-container' >
+        <div ref={(el) => {
+            containerRef.current = el;
+            if (el && exposureRef) {
+                (exposureRef as React.RefCallback<HTMLDivElement>)(el);
+            }
+        }} className='amaas-superior-container' >
             <div className='amaas-sup-content'>
                 <motion.div {...scrollInViewSpringOnceProps} className="amaas-sup-title">{superior.title}</motion.div>
                 <div className='amaas-sup-box'>
@@ -70,7 +79,10 @@ export const AMaasSuperior = () => {
                                 }}
                             />
                             {tabItems.map(item => (
-                                <div key={item.id} onClick={() => setActiveTab(item.id)}
+                                <div key={item.id} onClick={() => {
+                                    trackButtonClick(`产品优势Tab-${item.label}`, 'AMaaS产品页优势区域', { tabId: item.id, tabLabel: item.label });
+                                    setActiveTab(item.id);
+                                }}
                                     className={`amaas-sup-tab-items ${item.id === activeTab ? 'item-active' : ''}`}
                                     onMouseEnter={() => setHovering(true)}
                                     onMouseLeave={() => setHovering(false)}

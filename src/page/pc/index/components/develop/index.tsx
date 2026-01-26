@@ -5,11 +5,18 @@ import { IconFont } from '@/utils/antdUtils';
 import { depList } from '@/page/textConfig';
 import { motion } from "motion/react"
 import { scrollInViewSpringProps } from '@/utils/motionConfig'
+import { trackButtonClick, trackHover } from '@/utils/umami';
+import { useExposureTracking } from '@/hooks/useExposureTracking';
+
 export default function DevelopPage() {
     const [activeIndex, setActiveIndex] = useState(0);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    // 曝光埋点 - 首页发展历程区域
+    const exposureRef = useExposureTracking('发展历程区域', '首页', { section: 'develop' });
+
     return (
-        <div className='develop-box'>
+        <div className='develop-box' ref={exposureRef}>
             <div className='dep-container'>
                 <motion.div className="dep-title" {...scrollInViewSpringProps}>{depList.title}</motion.div>
                 <motion.div {...scrollInViewSpringProps} className='dep-tabbox' onMouseLeave={() => setActiveIndex(0)} >
@@ -18,7 +25,10 @@ export default function DevelopPage() {
                             <>
                                 <motion.div key={index}
                                     className={`dep-tab-items ${activeIndex === index ? 'hidden!' : ''}`}
-                                    onMouseEnter={() => setActiveIndex(index)}
+                                    onMouseEnter={() => {
+                                        trackHover(`发展历程-${item.name}`, '首页发展历程区域');
+                                        setActiveIndex(index);
+                                    }}
                                 >
                                     <div className='dep-tab-item-icon'>
                                         <IconFont type={item.icon} />
@@ -31,9 +41,15 @@ export default function DevelopPage() {
                                 </motion.div >
                                 <motion.div key={`active-${index}`}
                                     // {...scrollInViewSpringProps}
-                                    onClick={() => navigate('/introduction')}
+                                    onClick={() => {
+                                        trackButtonClick(`了解更多-${item.name}`, '首页发展历程区域', { href: '/introduction', itemName: item.name });
+                                        navigate('/introduction');
+                                    }}
                                     className={`dep-tab-items ${activeIndex === index ? 'dep-active' : 'hidden!'}`}
-                                    onMouseEnter={() => setActiveIndex(index)}
+                                    onMouseEnter={() => {
+                                        trackHover(`发展历程-${item.name}`, '首页发展历程区域');
+                                        setActiveIndex(index);
+                                    }}
                                 >
                                     <div className='dep-tab-item-icon'>
                                         <IconFont type={item.icon} />

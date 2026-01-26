@@ -8,13 +8,17 @@ import msg from '@/assets/svg/message.svg'
 import wechat from '@/assets/svg/wechat.svg'
 import ewm from '@/assets/images/img/ewmfl.png'
 import { useNavigate } from 'react-router-dom';
+import { trackButtonClick } from '@/utils/umami';
 
 const FloatBtnEle: React.FC = () => {
     const navigator = useNavigate()
     return <>
         <FloatButton
             style={{ bottom: 148 }}
-            onClick={() => navigator('/contact')}
+            onClick={() => {
+                trackButtonClick('悬浮按钮-咨询', '页面悬浮按钮', { href: '/contact' });
+                navigator('/contact');
+            }}
             className='floatbtn1'
             icon={<div className='flex flex-col items-center bg-none'>
                 <img src={btn1} alt="咨询" style={{ fontSize: '24px' }} />

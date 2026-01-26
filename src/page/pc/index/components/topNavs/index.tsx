@@ -6,13 +6,18 @@ import { Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { menuHrefListDefault } from '@/page/textConfig';
 import { IconFont } from '@/utils/antdUtils';
+import { trackButtonClick } from '@/utils/umami';
+
 const TopNavs = () => {
   const navigate = useNavigate();
 
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
-  const onNavigate = (href: string) => {
+  const onNavigate = (href: string, title?: string) => {
     // 根据 href 进行路由跳转或锚点定位
+    if (title) {
+      trackButtonClick(`顶部导航-${title}`, '页面顶部导航栏', { href, title });
+    }
     navigate(`/${href}`);
   };
 
@@ -24,7 +29,7 @@ const TopNavs = () => {
         label: (
           <div
             className="text-[14px] flex items-center justify-center"
-            onClick={() => onNavigate(subItem.href)}
+            onClick={() => onNavigate(subItem.href, subItem.title)}
           >
             {subItem.title}
           </div>
@@ -38,7 +43,10 @@ const TopNavs = () => {
       <div className="app w-full flex justify-between">
 
         <div className="logo flex items-center justify-between w-full">
-          <img src={logo_black} alt="" className=' cursor-pointer ' onClick={() => navigate('/')} />
+          <img src={logo_black} alt="" className=' cursor-pointer ' onClick={() => {
+            trackButtonClick('Logo点击', '页面顶部导航栏', { href: '/' });
+            navigate('/');
+          }} />
           <div className="navbar-container ml-[100px]">
             {menuHrefListDefault.map((item, index) => {
 
@@ -48,7 +56,7 @@ const TopNavs = () => {
                   <div
                     key={index}
                     className="navbar-item cursor-pointer"
-                    onClick={() => onNavigate(item.href)}
+                    onClick={() => onNavigate(item.href, item.title)}
                   >
                     {item.title}
                   </div>

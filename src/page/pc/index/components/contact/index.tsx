@@ -5,15 +5,21 @@ import ewm from '@/assets/images/ewm.png'
 import { useNavigate } from 'react-router-dom';
 import { menuHrefListDefault } from '@/page/textConfig';
 import { getCopyrightYear } from '@/utils/transfrom';
+import { trackButtonClick } from '@/utils/umami';
+
 // interface ContactProps {
 //     // onNavigate: (index: string) => void;
 // }
 export default function PageContact() {
+    const navigate = useNavigate();
+
     const open = () => {
-        window.open('https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671')
+        trackButtonClick('底部链接-公安备案', '页面底部联系区域', { url: 'https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671' });
+        window.open('https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671');
     }
     const openIcp = () => {
-        window.open('https://beian.miit.gov.cn/#/Integrated/index')
+        trackButtonClick('底部链接-ICP备案', '页面底部联系区域', { url: 'https://beian.miit.gov.cn/#/Integrated/index' });
+        window.open('https://beian.miit.gov.cn/#/Integrated/index');
     }
     const about = menuHrefListDefault[6].subItems || []
     const fix = menuHrefListDefault[0].subItems || []
@@ -62,7 +68,10 @@ export default function PageContact() {
                             {
                                 fix.map((item, index) => {
                                     return <div className='content-item-text'
-                                        // onClick={() => onNavigate(item.href)} 
+                                        onClick={() => {
+                                            trackButtonClick(`底部链接-${item.title}`, '页面底部联系区域', { href: item.href, title: item.title });
+                                            navigate(item.href);
+                                        }}
                                         key={index + Date() + ""} >{item.title}</div>
                                 })
                             }
@@ -72,7 +81,10 @@ export default function PageContact() {
                             {
                                 openSource.map((item, index) => {
                                     return <div className='content-item-text'
-                                        // onClick={() => onNavigate(item.href)} 
+                                        onClick={() => {
+                                            trackButtonClick(`底部链接-${item.title}`, '页面底部联系区域', { href: item.href, title: item.title });
+                                            navigate(item.href);
+                                        }}
                                         key={index + Date() + ""} >{item.title}</div>
                                 })
                             }
@@ -82,7 +94,10 @@ export default function PageContact() {
                             {
                                 info.map((item, index) => {
                                     return <div className='content-item-text'
-                                        // onClick={() => onNavigate(item.href)} 
+                                        onClick={() => {
+                                            trackButtonClick(`底部链接-${item.title}`, '页面底部联系区域', { href: item.href, title: item.title });
+                                            navigate(`/${item.href}`);
+                                        }}
                                         key={index + Date() + ""} >{item.title}</div>
                                 })
                             }
@@ -92,7 +107,10 @@ export default function PageContact() {
                             {
                                 about.map((item, index) => {
                                     return <div className='content-item-text'
-                                        // onClick={() => onNavigate(item.href)} 
+                                        onClick={() => {
+                                            trackButtonClick(`底部链接-${item.title}`, '页面底部联系区域', { href: item.href, title: item.title });
+                                            navigate(item.href);
+                                        }}
                                         key={index + Date() + ""} >{item.title}</div>
                                 })
                             }
