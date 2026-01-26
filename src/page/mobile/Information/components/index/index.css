@@ -1,0 +1,44 @@
+.mob-information-index-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-family: MiSans;
+}
+
+.mob-in-idx-content {
+    width: 100%;
+    /* max-width: 1440px; */
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(/src/assets/images/mob/mob_bg_in.png) no-repeat;
+    background-position: 20% center;
+    background-size: 100%;
+}
+
+.mob-in-idx-content-title {
+    display: flex;
+    align-items: center;
+    color: #FAFBFD;
+    font-size: 48px;
+    font-weight: 520;
+    line-height: 150%;
+    letter-spacing: 0.96px;
+    margin-top: 170px;
+}
+
+.mob-in-idx-content-title-color {
+    background: linear-gradient(256deg, #4E74FF -3.3%, #A557FE 105.24%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.mob-in-idx-content-btn {
+    padding: 10px 44px;
+    box-shadow: none;
+}

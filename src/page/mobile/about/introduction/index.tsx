@@ -4,6 +4,7 @@ import { MobIntroductionIndex } from './components/index'
 import './index.css'
 import { useEffect } from 'react'
 import { trackPageView } from '@/utils/umami'
+import PageConsult from '../../index/components/consult';
 
 export const MobIntroductionPage = () => {
     useEffect(() => {
@@ -12,6 +13,7 @@ export const MobIntroductionPage = () => {
 
     return <div className='mob-introduction-page'>
         <MobIntroductionIndex />
+        <PageConsult />
         <PageContact />
     </div>
 }

@@ -23,6 +23,7 @@ import { ContactPage } from "@/page/pc/about/contact"
 import { MobContactPage } from "@/page/mobile/about/contact"
 import AdminPage from "@/admin"
 import { MobIntroductionPage } from "@/page/mobile/about/introduction"
+import { MobInformationPage } from "@/page/mobile/Information"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -47,6 +48,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     {
                         path: "introduction",
                         element: <MobIntroductionPage />,
+                    },
+                    {
+                        path: "information",
+                        element: <MobInformationPage />,
                     },
                 ],
             },
