@@ -1,5 +1,5 @@
 /* ========== 容器布局 ========== */
-.introduction-index-container {
+.mob-introduction-index-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -7,76 +7,82 @@
     position: relative;
     font-family: MiSans;
     font-style: normal;
+    box-sizing: border-box;
 }
 
-.introduction-idx-company-box {
-    height: 920px;
+.mob-introduction-idx-company-box {
+    height: 1194px;
     width: 100%;
     position: relative;
 }
 
 /* ========== 顶部内容区域 ========== */
-.introduction-idx-content {
+.mob-introduction-idx-content {
     width: 100%;
     height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(/src/assets/images/img/introduction_bg_about.png) 50% / cover no-repeat;
-    background-size: 100% 800px;
+    background: url(/src/assets/images/img/introduction_bg_about.png) no-repeat;
+    background-position: center top;
+    background-size: 200% 800px;
+    padding-top: 160px;
 }
 
-.introduction-idx-content-title {
-    display: flex;
-    align-items: center;
+.mob-introduction-idx-content-title {
     color: #FFF;
-    text-align: center;
-    font-size: 48px;
+    font-size: 40.031px;
     font-weight: 520;
     line-height: 150%;
-    letter-spacing: 0.96px;
-    margin-top: 138px;
+    letter-spacing: 0.801px;
+    display: flex;
+
 }
 
-.introduction-idx-content-title-color {
-    font-size: 48px;
-    font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 0.96px;
+.mob-introduction-idx-content-title-color {
     text-transform: uppercase;
     margin-left: 8px;
 }
 
-.introduction-idx-content-btn {
+.mob-introduction-idx-content-btn {
     padding: 10px 44px;
+    width: 163px;
+    height: 56px;
     box-shadow: none;
 }
 
-.introduction-idx-company-team {
+.mob-introduction-btn-text {
+    font-size: 16px;
+    color: white;
+    font-weight: 380;
+}
+
+.mob-introduction-idx-company-team {
     display: flex;
-    width: 648px;
+    width: 400px;
     justify-content: space-between;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 /* ========== 公司介绍卡片 ========== */
-.introduction-idx-company {
-    width: 1240px;
-    height: 1254px;
-    padding: 70px;
+.mob-introduction-idx-company {
+    width: 670px;
+    height: 1554px;
+    padding: 60px;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    position: absolute;
-    top: -270px;
+    top: -340px;
     display: flex;
     flex-direction: column;
     border-radius: 30px;
-    background: url(/src/assets/images/img/transparent_logo_bg.png) no-repeat right 70px top 549px, rgba(255, 255, 255, 0.80);
+    background: url(/src/assets/images/img/transparent_logo_bg.png) no-repeat right 20px bottom 50px, rgba(255, 255, 255, 0.80);
+    
     backdrop-filter: blur(20px);
 }
 
-.introduction-idx-company::before {
+.mob-introduction-idx-company::before {
     content: '';
     position: absolute;
     top: 0;
@@ -93,15 +99,15 @@
     pointer-events: none;
 }
 
-.introduction-idx-company-size {
-    font-size: 40px;
+.mob-introduction-idx-company-size {
+    font-size: 32px;
     font-weight: 520;
     line-height: 150%;
     letter-spacing: 0.8px;
     width: fit-content;
 }
 
-.introduction-idx-company-name {
+.mob-introduction-idx-company-name {
     display: inline-block;
     background: linear-gradient(256deg, #4E74FF -3.3%, #A557FE 105.24%);
     background-clip: text;
@@ -109,23 +115,33 @@
     -webkit-text-fill-color: transparent;
 }
 
-.introduction-idx-company-title {
+.mob-introduction-idx-company-title {
     margin-bottom: 28px;
 }
 
-.introduction-idx-company-content {
+.mob-introduction-idx-company-content {
     color: #666;
     font-size: 16px;
-    font-weight: 330;
+    font-weight: 380;
     line-height: 180%;
     letter-spacing: 0.32px;
 }
 
-.indent {
+.mob-introduction-bold-text {
+    color: #4D4D4D;
+    font-weight: 520;
+}
+
+.mob-introduction-indent {
     text-indent: 2em;
 }
 
-.introduction-idx-company-data-item {
+.mob-introduction-mb-3 {
+    margin-bottom: 0.75rem;
+}
+
+/* ========== 公司数据展示 ========== */
+.mob-introduction-idx-company-data-item {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -133,7 +149,7 @@
     position: relative;
 }
 
-.introduction-idx-company-data-item:not(:last-child)::after {
+.mob-introduction-idx-company-data-item:not(:last-child)::after {
     content: '';
     position: absolute;
     right: -100px;
@@ -143,8 +159,8 @@
     background: rgba(255, 255, 255, 0.3);
 }
 
-.introduction-idx-company-data-item-num {
-    color: #fff;
+.mob-introduction-idx-company-data-item-num {
+    color: #6C19FE;
     text-align: justify;
     font-size: 29.528px;
     font-weight: 520;
@@ -152,8 +168,8 @@
     letter-spacing: 0.591px;
 }
 
-.introduction-idx-company-data-item-title {
-    color: #fff;
+.mob-introduction-idx-company-data-item-title {
+    color: #808080;
     text-align: justify;
     font-size: 16px;
     font-weight: 330;
@@ -161,14 +177,15 @@
     letter-spacing: 0.32px;
 }
 
-.introduction-idx-company-desc {
+/* ========== 解决方案与认可区域 ========== */
+.mob-introduction-idx-company-desc {
     display: flex;
     flex-direction: column;
-    width: 590px;
+    width: 100%;
     margin-top: 58px;
 }
 
-.introduction-idx-company-desc-btn {
+.mob-introduction-idx-company-desc-btn {
     width: 84px;
     height: 32px;
     border-radius: 6px;
@@ -181,7 +198,7 @@
     margin-bottom: 14px;
 }
 
-.introduction-idx-company-desc-btn::before {
+.mob-introduction-idx-company-desc-btn::before {
     content: '核心产品';
     background: url(/src/assets/images/img/introduction_btn.png) lightgray 50% / cover no-repeat;
     background-clip: text;
@@ -191,15 +208,10 @@
     -webkit-text-fill-color: transparent;
 }
 
-.introduction-idx-company-desc-title {
-    color: #333;
-    font-size: 28px;
-    font-weight: 450;
+.mob-introduction-idx-company-desc-title {
+    color: #6031D2;
+    font-size: 20px;
+    font-weight: 520;
     line-height: 150%;
 }
 
-.introduction-idx-company-desc-rig {
-    margin-left: auto;
-    text-align: right;
-    align-items: end;
-}

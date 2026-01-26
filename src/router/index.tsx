@@ -22,6 +22,7 @@ import { SparkPage } from "@/page/pc/product/spark"
 import { ContactPage } from "@/page/pc/about/contact"
 import { MobContactPage } from "@/page/mobile/about/contact"
 import AdminPage from "@/admin"
+import { MobIntroductionPage } from "@/page/mobile/about/introduction"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -42,6 +43,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     {
                         path: "contact",
                         element: <MobContactPage />,
+                    },
+                    {
+                        path: "introduction",
+                        element: <MobIntroductionPage />,
                     },
                 ],
             },

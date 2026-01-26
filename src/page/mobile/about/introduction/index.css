@@ -1,0 +1,7 @@
+.mob-introduction-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px ;
+    align-items: center;
+}

@@ -1,0 +1,120 @@
+/* ========== 容器布局 ========== */
+.mob-introduction-step-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+    font-family: MiSans;
+    font-style: normal;
+}
+
+.mob-introduction-step-content {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ========== 时间轴主线 ========== */
+.mob-introduction-step-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+}
+
+.mob-introduction-step-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #A07AFF 0%, rgba(160, 122, 255, 0.3) 100%);
+}
+
+/* ========== 步骤项 ========== */
+.mob-introduction-step-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ========== 左侧图片 ========== */
+.mob-introduction-step-left {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.mob-introduction-step-img-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mob-introduction-step-img-title {
+    color: #6C19FE;
+    font-size: 30px;
+    font-weight: 520;
+    line-height: 40px;
+    letter-spacing: 0.6px;
+    text-align: right;
+}
+
+.mob-introduction-step-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== 中间图标 ========== */
+.mob-introduction-step-icon {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* ========== 右侧文字内容 ========== */
+.mob-introduction-step-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 20px;
+}
+
+.mob-introduction-step-date {
+    color: #333;
+    font-size: 24px;
+    font-weight: 520;
+    line-height: 40px;
+    letter-spacing: 0.48px;
+}
+
+.mob-introduction-step-desc {
+    color: #666;
+    font-size: 14px;
+    font-weight: 330;
+    line-height: 180%;
+    letter-spacing: 0.28px;
+    text-align: justify;
+}
+
+.mob-introduction-step-desc-item {
+    display: block;
+}

@@ -6,6 +6,8 @@
     width: 100%;
     box-sizing: border-box;
     height: fit-content;
+    font-family: MiSans;
+    font-style: normal;
 }
 
 .mob-contact-container {
@@ -33,13 +35,9 @@
 
 .mob-contact-box-left-text {
     color: #fff;
-    font-family: MiSans;
     font-weight: 250;
     font-size: 14px;
     line-height: 26px;
-    font-family: MiSans;
-    text-align: justify;
-
     letter-spacing: 2%;
     margin-top: 51px;
     max-width: 400px;
@@ -74,9 +72,7 @@
 
 .mob-content-box-item-title {
     color: #636363;
-    font-family: MiSans;
     font-size: 24px;
-    font-style: normal;
     font-weight: 330;
     line-height: 100%;
     /* 24px */
@@ -141,9 +137,7 @@
 
 .mob-content-us-title {
     color: #353535;
-    font-family: MiSans;
     font-size: 24px;
-    font-style: normal;
     font-weight: 450;
     line-height: 130%;
     letter-spacing: 1.44px;
@@ -151,9 +145,7 @@
 
 .mob-content-us-text {
     color: #353535;
-    font-family: MiSans;
     font-size: 24px;
-    font-style: normal;
     font-weight: 330;
     line-height: 130%;
     letter-spacing: 1.44px;
@@ -161,9 +153,7 @@
 
 .mob-content-item-text {
     color: #636363;
-    font-family: MiSans;
     font-size: 24px;
-    font-style: normal;
     font-weight: 330;
     line-height: 100%;
     padding: 30px 20px;
@@ -175,12 +165,6 @@
 
 .mob-content-item-text:hover {
     color: #333;
-}
-
-.mob-ewm {
-    margin-top: 10px;
-    width: 95px !important;
-    height: 95px !important;
 }
 
 .mob-canlogo {
@@ -204,14 +188,12 @@
 }
 
 .mob-contact-icp-text {
-    color: #808080;
-    text-align: center;
-    font-family: MiSans;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 250;
-    line-height: 22px;
-    letter-spacing: 0.28px;
+    color: #B2B2B2;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 16px;
+    font-weight: 330;
+    line-height: 130%;
+    letter-spacing: 0.96px;
 }
 
 .mob-contact-icp-text span {
@@ -222,9 +204,10 @@
     width: 100%;
     gap: 40px;
     display: flex;
-    align-items: start;
+    align-items: center;
     position: relative;
     margin-top: 34px;
+    justify-content: center;
 }
 
 .mob-contact-box-items {
@@ -234,12 +217,18 @@
     align-items: center;
 }
 
+.mob-ewm {
+    margin-top: 10px;
+    width: 150px !important;
+    height: 150px !important;
+}
+
+
 .mob-up-item-box {
     width: 100%;
-    height: 140px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #C8C8C8;
 }

@@ -4,7 +4,7 @@ export const menuHrefListDefault = [
         href: '/',
         isSelected: true,
         subItems: [
-            { title: '灵启·AI小盒子', href: 'spark' },
+            // { title: '灵启·AI小盒子', href: 'spark' },
             { title: 'AI Studio 便携工作站', href: 'studio' },
             { title: '大模型推理一体机', href: 'machine' },
             { title: 'KLLM 推理引擎', href: 'kllm' },
@@ -57,7 +57,7 @@ export const mobMenuHrefListDefault = [
         href: '/',
         isSelected: true,
         subItems: [
-            { title: '灵启·AI小盒子', href: 'spark' },
+            // { title: '灵启·AI小盒子', href: 'spark' },
             { title: 'AI Studio 便携工作站', href: 'studio' },
             { title: '大模型推理一体机', href: 'machine' },
             { title: 'KLLM 推理引擎', href: 'kllm' },

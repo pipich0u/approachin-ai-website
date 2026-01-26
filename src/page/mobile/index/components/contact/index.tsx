@@ -1,7 +1,7 @@
 
 import './index.css'
 // import logo from '@/assets/svg/logo-black.svg'
-import ewm from '@/assets/images/ewm.png'
+import ewm from '@/assets/images/gzh.png'
 import { mobMenuHrefListDefault } from '@/page/textConfig';
 import { useState } from 'react';
 import { IconFont } from '@/utils/antdUtils';
@@ -91,21 +91,9 @@ export default function PageContact() {
                     </div>
                     <div className='mob-contact-box-img'>
                         <div className='mob-contact-box-items'>
-                            <div className='mob-up-item-box'></div>
-                            {/* <div className='mob-content-item-text'>趋境科技</div> */}
-                        </div>
-                        <div className='mob-contact-box-items'>
-                            <div className='mob-up-item-box'></div>
-                            {/* <div className='mob-content-item-text'>趋境科技</div> */}
-                        </div>
-                        <div className='mob-contact-box-items'>
-                            <div className='mob-up-item-box'></div>
-                            {/* <div className='mob-content-item-text'>趋境科技</div> */}
-                        </div>
-                        <div className='mob-contact-box-items'>
                             <div className='mob-up-item-box'>
-                                <div className='mob-content-box-item-title'>关注我们</div>
                                 <img src={ewm} alt="" className='mob-ewm' />
+                                <div className='mob-content-box-item-title'>企业公众号</div>
                             </div>
                         </div>
                     </div>
