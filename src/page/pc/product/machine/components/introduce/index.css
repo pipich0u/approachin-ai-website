@@ -10,12 +10,11 @@
 .mc-introduce-content {
     width: 100%;
     min-width: 1440px;
-    height: 944px;
-    padding: 40px 100px;
+    height: 744px;
+    padding: 60px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .mc-introduce-title {
@@ -45,11 +44,13 @@
     display: flex;
     padding: 35px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .mc-introduce-box-item-left {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .mc-introduce-box-item-title {
@@ -70,6 +71,17 @@
     line-height: 200%;
     margin-top: 14px;
 }
+
+.mc-introduce-box-item-rig {
+    width: 250px;
+    /* min-width: 240px; */
+    /* height: 163px; */
+}
+
+.mc-introduce-box-item-rig img {
+    width: 100%;
+}
+
 
 .mc-introduce-box-item-list li {
     list-style-position: inside;

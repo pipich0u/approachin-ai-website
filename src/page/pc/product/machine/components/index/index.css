@@ -51,7 +51,7 @@
 
 .mc-in-bottom-box {
     display: flex;
-    padding: 80px 0;
+    padding-top: 80px;
     gap: 60px;
     width: 100%;
     display: flex;
