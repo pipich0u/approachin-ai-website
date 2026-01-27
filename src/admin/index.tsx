@@ -5,6 +5,7 @@ import { Layout, Menu, theme } from 'antd';
 import './index.css'
 const { Header, Content, Footer, Sider } = Layout;
 import logo from '@/assets/svg/b-logo.svg'
+import { TableContent } from './components/tableContact';
 type MenuItem = Required<MenuProps>['items'][number];
 
 function getItem(
@@ -60,12 +61,7 @@ const AdminPage: React.FC = () => {
     const renderContent = () => {
         switch (selectedKey) {
             case '1':
-                return (
-                    <div>
-                        <h2 className="text-xl font-bold mb-4">咨询客户管理</h2>
-                        <p>这里是咨询客户的内容...</p>
-                    </div>
-                );
+                return <TableContent />
             // 未来可以添加更多case
             // case '2':
             //     return <OtherComponent />;
@@ -96,8 +92,8 @@ const AdminPage: React.FC = () => {
                 <Content style={{ margin: ' 16px' }}>
                     <div
                         style={{
-                            padding: 24,
-                            minHeight: 700,
+                            padding: 20,
+                            minHeight: 730,
                             background: '#fff',
                             borderRadius: borderRadiusLG,
                         }}
