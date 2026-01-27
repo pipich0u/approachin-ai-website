@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Form, message } from 'antd';
-import { SubmitFormData } from '@/common/api';
+import { SubmitFormData } from '@/service/modelStore';
 
 export const useContactForm = () => {
     const [form] = Form.useForm();

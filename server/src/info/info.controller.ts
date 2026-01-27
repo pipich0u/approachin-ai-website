@@ -8,6 +8,7 @@ import {
   Delete,
   ParseIntPipe,
   Query,
+  BadRequestException,
 } from '@nestjs/common';
 import { InfoService } from './info.service';
 import { CreateInfoDto } from './dto/create-info.dto';
@@ -49,7 +50,7 @@ export class InfoController {
   ) {
     return this.infoService.findOne(id);
   }
-  
+
 
   // 更新
   @Patch(':id')
@@ -68,6 +69,15 @@ export class InfoController {
     return this.infoService.remove(id);
   }
 
-
+  // 批量删除
+  @Post('remove')
+  removeMultiple(
+    @Body('ids') ids: number[],
+  ) {
+    if (!ids || ids.length === 0) {
+      throw new BadRequestException('ids 不能为空');
+    }
+    return this.infoService.removeMultiple(ids);
+  }
 }
 

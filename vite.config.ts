@@ -36,7 +36,7 @@ export default defineConfig(({ mode }) => {
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
-      "/nest": {
+      "/v2": {
         target: "http://localhost:3210",
         changeOrigin: true,
       },

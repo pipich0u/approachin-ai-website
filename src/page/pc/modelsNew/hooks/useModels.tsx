@@ -1,7 +1,7 @@
 import { modelTabColor } from '../index.config';
 import { useEffect, useState } from "react";
 import classNames from "classnames";
-import { getModels, modelExportApi, getModelApi, filterTagsApi, ModelStepInfoApi, searchModels, getVersion } from '@/common/api';
+import { getModels, modelExportApi, getModelApi, filterTagsApi, ModelStepInfoApi, searchModels, getVersion } from '@/service/modelStore';
 import { message } from 'antd';
 
 interface setModelStepName {

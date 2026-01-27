@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Repository, In } from 'typeorm';
 import { Info } from './entities/info.entity';
 import { CreateInfoDto } from './dto/create-info.dto';
 import { UpdateInfoDto } from './dto/update-info.dto';
@@ -53,7 +53,7 @@ export class InfoService {
       take: pageSize,
       // order: {
     })
-    return new PageResult( infos, total, page, pageSize );
+    return new PageResult(infos, total, page, pageSize);
   }
   // 更新
   async update(id: number, updateInfoDto: UpdateInfoDto): Promise<Info> {
@@ -73,5 +73,11 @@ export class InfoService {
     }
   }
 
+  //批量删除
+  async removeMultiple(ids: number[]) {
+    return this.infoRepository.delete({
+      id: In(ids),
+    });
+  }
 
 }

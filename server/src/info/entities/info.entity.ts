@@ -26,6 +26,9 @@ export class Info {
   @Column({ nullable: true, type: 'text' })
   description?: string;
 
+  @Column({ nullable: true, type: 'text' })
+  remark?: string;
+
   @Column({ type: 'boolean', default: false })
   contact: boolean;
 

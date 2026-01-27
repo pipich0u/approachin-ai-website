@@ -8,7 +8,7 @@ import CooperateStep from './components/step'
 import PageConsult from '../index/components/consult'
 import PageContact from '../index/components/contact'
 import { useEffect } from 'react'
-import { getGitSource } from '@/common/api';
+import { getGitSource } from '@/service/modelStore';
 import { trackPageView } from '@/utils/umami';
 
 export default function CooperatePage() {

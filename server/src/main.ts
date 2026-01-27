@@ -36,7 +36,7 @@ async function bootstrap() {
   });
 
   // 设置全局路由前缀
-  app.setGlobalPrefix('nest');
+  app.setGlobalPrefix('/v2');
 
   // 获取端口配置
   const port = 3210;

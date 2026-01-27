@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
-
+import { Modal } from 'antd';
 
 interface ModalComponentProps {
-    isModalOpen: boolean;
-    showModal: () => void;
-    handleOk: () => void;
-    handleCancel: () => void;
-    isEditMode: boolean;
+  open: boolean;
+  isEditMode: boolean;
+  data: any;
+  onOk: () => void;
+  onCancel: () => void;
 }
 
-
-const ModalComponent = ({isModalOpen, showModal, handleOk, handleCancel, isEditMode}:ModalComponentProps) => {
-
-    return (
-        <>
-            {/* <Button type="primary" onClick={showModal}>
-                Open Modal
-            </Button> */}
-            <Modal
-                title={isEditMode ? '编辑备注' : '详细信息'}
-                closable={{ 'aria-label': 'Custom Close Button' }}
-                open={isModalOpen}
-                onOk={handleOk}
-                onCancel={handleCancel}
-            >
-                {isEditMode ? (
-                    <div>
-                        {/* 编辑模式内容 */}
-                        <p>这里是编辑备注的内容...</p>
-                    </div>
-                ) : (
-                    <div>
-                        {/* 查看模式内容 */}
-                        <p>这里是详细信息的内容...</p>
-                    </div>
-                )}
-            </Modal>
-        </>
-    );
+const ModalComponent = ({
+  open,
+  isEditMode,
+  data,
+  onOk,
+  onCancel,
+}: ModalComponentProps) => {
+  return (
+    <Modal
+      title={isEditMode ? '编辑备注' : '详细信息'}
+      open={open}
+      onOk={onOk}
+      onCancel={onCancel}
+    >
+      {isEditMode ? (
+        <div>
+          <p>编辑模式</p>
+          <p>当前备注：{data?.remark ?? '-'}</p>
+          {/* 这里后面可以直接放 Form */}
+        </div>
+      ) : (
+        <div>
+          <p><b>姓名：</b>{data?.name}</p>
+          <p><b>电话：</b>{data?.phone}</p>
+          <p><b>邮箱：</b>{data?.email}</p>
+          <p><b>简介：</b>{data?.description}</p>
+          <p><b>备注：</b>{data?.remark}</p>
+        </div>
+      )}
+    </Modal>
+  );
 };
 
 export default ModalComponent;

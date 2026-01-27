@@ -5,7 +5,7 @@ import { Layout, Menu, theme } from 'antd';
 import './index.css'
 const { Header, Content, Footer, Sider } = Layout;
 import logo from '@/assets/svg/b-logo.svg'
-import { TableContent } from './components/tableContact';
+import TableContent from './components/tableContact';
 type MenuItem = Required<MenuProps>['items'][number];
 
 function getItem(

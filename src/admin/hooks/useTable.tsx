@@ -1,31 +1,53 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
+export interface TableRowData {
+  id: number;
+  name?: string;
+  phone?: string;
+  email?: string;
+  description?: string;
+  remark?: string;
+  contacted?: boolean;
+  createTime?: number;
+}
 
 export const useTable = () => {
+  /** Modal 状态 */
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isEditMode, setIsEditMode] = useState(false);
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isEditMode, setIsEditMode] = useState(false);
+  /** 当前行数据 */
+  const [currentRow, setCurrentRow] = useState<TableRowData | null>(null);
 
-    const showModal = () => {
-        setIsModalOpen(true);
-    };
+  /** 打开查看 */
+  const openDetail = (row: TableRowData) => {
+    setCurrentRow(row);
+    setIsEditMode(false);
+    setIsModalOpen(true);
+  };
 
-    const handleOk = () => {
-        setIsModalOpen(false);
-    };
+  /** 打开编辑 */
+  const openEdit = (row: TableRowData) => {
+    setCurrentRow(row);
+    setIsEditMode(true);
+    setIsModalOpen(true);
+  };
 
-    const handleCancel = () => {
-        setIsModalOpen(false);
-    };
+  /** 关闭 */
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentRow(null);
+  };
 
+  return {
+    /** state */
+    isModalOpen,
+    isEditMode,
+    currentRow,
 
-
-
-    return {
-        isEditMode,
-        isModalOpen,
-        showModal,
-        handleOk,
-        handleCancel,
-        setIsEditMode,
-    }
-}
+    /** actions */
+    openDetail,
+    openEdit,
+    closeModal,
+  };
+};
