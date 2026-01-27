@@ -34,27 +34,27 @@ export const machineTextConfig = {
             {
                 title: '异构推理',
                 items: ['GPU+CPU异构推理', '算力门槛降低10倍', '让671B放到办公桌上',],
-                img: "/src/assets/images/img/machine1.png"
+                img: "/src/assets/images/mob/mob-machine1.png"
             },
             {
                 title: '以存换算',
                 items: ['将推理中间结果存储在内存或磁盘', '避免重复计算，计算量降低 10倍', '用户请求延迟降低10倍',],
-                img: "/src/assets/images/img/machine2.png"
+                img: "/src/assets/images/mob/mob-machine2.png"
             },
             {
                 title: 'PD分离',
                 items: ['基于算力特征搭配GPU，优化总体成本', 'P/D分离，集群并发量提升5倍', '12节点既支持万级并发',],
-                img: "/src/assets/images/img/machine3.png"
+                img: "/src/assets/images/mob/mob-machine3.png"
             },
             {
                 title: '多样场景',
                 items: ['桌面级小盒子百亿模型流畅跑', '企业级服务器单4090跑千亿模型', '支持弹性扩容至大规模集群',],
-                img: "/src/assets/images/img/machine4.png"
+                img: "/src/assets/images/mob/mob-machine4.png"
             },
         ]
     },
     amaas: {
-        title: '智能化运维，大幅降低运维成本',
+        title: '智能化运维，大幅降低运维成本', 
         platform: 'AMaaS平台',
         list: [{
             title: '模型仓库内置数十主流模型',

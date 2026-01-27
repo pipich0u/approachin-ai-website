@@ -37,7 +37,9 @@
     padding: 40px 50px;
     border-radius: 20px;
     border: 1px solid #E6E6E6;
-    background: #FFF;
+    background: url(/src/assets/images/mob/mob-machine-ams-bg.png) no-repeat ;
+    background-position: top center;
+    background-size: cover;
 }
 
 .mob-amaas-con-box-left {
