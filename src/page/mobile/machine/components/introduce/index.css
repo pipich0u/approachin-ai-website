@@ -5,13 +5,15 @@
     align-items: center;
     background: #FFF;
     box-sizing: border-box;
+
+    font-family: MiSans;
+    font-style: normal;
 }
 
 .mob-mc-introduce-content {
     width: 100%;
-    min-width: 1440px;
-    height: 744px;
-    padding: 60px 100px;
+    /* height: 744px; */
+    padding: 60px 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,13 +21,11 @@
 
 .mob-mc-introduce-title {
     color: #333;
-    text-align: center;
-    font-family: MiSans;
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 450;
+    font-size: 40px;
+    font-weight: 520;
     line-height: 150%;
-    letter-spacing: 0.76px;
+    letter-spacing: 0.8px;
+    text-align: center;
 }
 
 .mob-mc-introduce-box {
@@ -33,18 +33,19 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .mob-mc-introduce-box-item {
-    width: 610px;
-    height: 230px;
+    width: 100%;
+    height: 685px;
     border-radius: 20px;
-    background: #F6F5FF;
+    background: #F7FBFF;
     display: flex;
-    padding: 35px;
+    flex-direction: column;
+    padding: 45px 50px;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .mob-mc-introduce-box-item-left {
@@ -55,25 +56,20 @@
 
 .mob-mc-introduce-box-item-title {
     color: #000;
-    font-family: MiSans;
-    font-size: 28px;
-    font-style: normal;
+    font-size: 32px;
     font-weight: 450;
     line-height: 150%;
 }
 
 .mob-mc-introduce-box-item-list {
     color: #59595A;
-    font-family: MiSans;
-    font-size: 14px;
-    font-style: normal;
+    font-size: 27px;
     font-weight: 305;
     line-height: 200%;
-    margin-top: 14px;
 }
 
 .mob-mc-introduce-box-item-rig {
-    width: 250px;
+    width: 100%;
     /* min-width: 240px; */
     /* height: 163px; */
 }

@@ -4,14 +4,14 @@ import { MobMachineProduct } from './components/product'
 import { MobMachineAmaas } from './components/amaas'
 import { MobMachineIntroduce } from './components/introduce'
 import { MobMachineScene } from './components/scene'
-import PageContact from '@/page/pc/index/components/contact'
-import PageConsult from '@/page/pc/index/components/consult'
+import PageContact from '@/page/mobile/index/components/contact'
+import PageConsult from '@/page/mobile/index/components/consult'
 import { useEffect } from 'react'
 import { trackPageView } from '@/utils/umami'
 
 import { MobMachineCompare } from './components/compare'
 
-export const MachinePage = () => {
+export const MobMachinePage = () => {
     useEffect(() => {
         trackPageView('移动端-一体机页面')
     }, [])
@@ -22,7 +22,7 @@ export const MachinePage = () => {
         <MobMachineAmaas />
         <MobMachineCompare />
         <MobMachineProduct />
-        <MobMachineScene />
+        {/* <MobMachineScene /> */}
         <PageConsult />
         <PageContact />
     </div>

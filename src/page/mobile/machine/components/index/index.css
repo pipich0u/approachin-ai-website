@@ -3,13 +3,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 600px;
+    height: 750px;
     box-sizing: border-box;
     background: url(/src/assets/images/img/mc_bg.png);
     background-size: auto 100%;
-    background-position: 45%;
+    background-position: 52%;
     background-repeat: no-repeat;
+    font-family: MiSans;
+    font-style: normal;
 }
 
 .mob-mc-in-content {
@@ -18,7 +19,8 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 20px 100px;
+    padding: 0px 50px;
+    margin-top: 70px;
 }
 
 .mob-mc-in-top-box {
@@ -30,31 +32,27 @@
 
 .mob-mc-in-title {
     color: #1B1D22;
-    font-family: MiSans;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 520;
+    font-size: 40px;
+    font-weight: 550;
     line-height: 150%;
-    letter-spacing: 0.96px;
+    letter-spacing: 0.8px;
 }
 
 .mob-mc-in-desc {
     color: #484848;
-    font-family: MiSans;
-    font-size: 24px;
-    font-style: normal;
+    font-size: 27px;
     font-weight: 305;
     line-height: 150%;
-    letter-spacing: 0.48px;
-    width: 690px;
+    letter-spacing: 0.54px;
 }
 
 .mob-mc-in-bottom-box {
     display: flex;
-    padding-top: 80px;
-    gap: 60px;
+    padding: 20px 0;
+    gap: 10px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background: linear-gradient(180deg, #DBE8F3 0%, #FFF 100%);
@@ -62,22 +60,25 @@
 
 .mob-mc-in-item {
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 265px;
+    /* padding: 19px 70.5px; */
+    justify-content: center;
+    align-items: center;
+    width: 325px;
+    height: 80px;
+    border-radius: 6px;
+    border: 1px solid #FFF;
+    background: linear-gradient(0deg, rgba(224, 231, 235, 0.00) 0%, #E0E7EB 100%), rgba(255, 255, 255, 0.34);
+    box-shadow: 0 0 30px 0 #B2CEE5;
 }
 
 .mob-mc-in-item-title {
+    color: #000;
+    font-size: 28px;
+    font-weight: 550;
+    line-height: 150%;
+    letter-spacing: 0.56px;
     display: flex;
     align-items: center;
-    color: #000;
-    font-family: MiSans;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 150%;
-    letter-spacing: 0.48px;
-    margin-bottom: 6px;
 }
 
 .mob-mc-in-item-title-color {
@@ -85,29 +86,17 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: MiSans;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 520;
+    font-size: 28px;
+    font-weight: 550;
     line-height: 150%;
     letter-spacing: 0.64px;
     margin-left: 5px;
 }
 
-.mob-mc-in-item-desc {
-    color: #59595A;
-    text-align: justify;
-    font-family: MiSans;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 305;
-    line-height: 170%;
-    letter-spacing: 0.28px;
-}
 
 .mob-mc-in-btn {
-    width: 180px;
-    height: 44px;
+    width: 184px;
+    height: 56px;
     border-radius: 8px;
     background: linear-gradient(90deg, #4E74FF 0%, #7F49FF 100%), #806BFF;
     display: flex;
@@ -115,9 +104,7 @@
     justify-content: center;
     align-items: center;
     gap: 4px;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     cursor: pointer;
-    overflow: hidden;
     margin-top: 34px;
     position: relative;
 }
@@ -134,11 +121,10 @@
 }
 
 .mob-mc-in-btn .mob-mc-bt-text {
-    color: #fff;
-    font-weight: 450;
-    z-index: 1;
-    transform: translateX(5px);
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 380;
+    line-height: 150%;
 }
 
 .mob-mc-in-btn::before {

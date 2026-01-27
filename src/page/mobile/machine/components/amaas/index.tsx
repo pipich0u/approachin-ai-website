@@ -2,11 +2,13 @@ import './index.css'
 import { motion } from 'motion/react'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import { machinAmaas } from '@/page/pc/product/machine/textConfig'
-import img from '@/assets/images/img/machine-rig.png'
+import img1 from '@/assets/images/mob/mob-am1.png'
+import img2 from '@/assets/images/mob/mob-am2.png'
+import img3 from '@/assets/images/mob/mob-am3.png'
 export const MobMachineAmaas = () => {
     return <div className='mob-amaas-container'>
         <div className='mob-amaas-content'>
-            <motion.div className="mob-amaas-con-title" {...scrollInViewSpringOnceProps}>{machinAmaas.title}</motion.div>
+            <motion.div className="mob-amaas-con-title" {...scrollInViewSpringOnceProps}>智能化运维 <br />大幅降低运维成本</motion.div>
             <div className='mob-amaas-con-box'>
                 <div className="mob-amaas-con-box-left">
                     <motion.div className="mob-amaas-con-box-title" {...scrollInViewSpringOnceProps}>{machinAmaas.platform}</motion.div>
@@ -22,7 +24,9 @@ export const MobMachineAmaas = () => {
                     </motion.div>
                 </div>
                 <motion.div {...scrollInViewSpringOnceProps} className="mob-amaas-con-box-rig">
-                    <img src={img} alt="" className='selectNone'/>
+                    <img src={img1} alt="" className='selectNone' />
+                    <img src={img2} alt="" className='selectNone' />
+                    <img src={img3} alt="" className='selectNone' />
                 </motion.div>
             </div>
         </div>

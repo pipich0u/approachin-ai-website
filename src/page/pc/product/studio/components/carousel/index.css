@@ -125,12 +125,12 @@
 }
 
 .studio-carousel-list-item-active .studio-carousel-list-item-img {
-    width: 760px;
+    width: 644px;
     height: 380px;
     border-radius: 20px;
-    margin-top: 15px;
+    margin-top: 25px;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .studio-carousel-learn {

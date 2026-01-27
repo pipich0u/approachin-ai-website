@@ -65,7 +65,7 @@ export const AMaasSuperior = () => {
         <div ref={(el) => {
             containerRef.current = el;
             if (el && exposureRef) {
-                (exposureRef as React.RefCallback<HTMLDivElement>)(el);
+                // (exposureRef as React.RefCallback<HTMLDivElement>)(el);
             }
         }} className='amaas-superior-container' >
             <div className='amaas-sup-content'>

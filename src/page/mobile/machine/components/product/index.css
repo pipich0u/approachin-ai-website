@@ -5,13 +5,14 @@
     align-items: center;
     background: #FFF;
     box-sizing: border-box;
+    font-family: MiSans;
+    font-style: normal;
 }
 
 .mob-product-content {
     width: 100%;
-    max-width: 1440px;
-    height: 614px;
-    padding: 60px 100px;
+    /* height: 614px; */
+    padding: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,26 +20,24 @@
 }
 
 .mob-product-title {
-    color: #1B1D22;
+    color: #434343;
     text-align: center;
-    font-family: MiSans;
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 450;
+    font-size: 40px;
+    font-weight: 520;
     line-height: 150%;
-    letter-spacing: 0.76px;
+    letter-spacing: 0.8px;
 }
 
 .mob-product-box {
     display: flex;
-    gap: 20px;
+    gap: 28px;
     margin-top: 50px;
 }
 
 .mob-product-box-item {
     width: 610px;
-    height: 366px;
-    border-radius: 20px;
+    height: 460px;
+    border-radius: 8px;
     background: #E8EAF1;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.06);
     overflow: hidden;
@@ -57,22 +56,19 @@
 
 .mob-product-box-item-title {
     color: #000;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 380;
+    font-size: 32px;
+    font-weight: 450;
     line-height: 150%;
-    letter-spacing: 0.56px;
+    letter-spacing: 0.64px;
 }
 
 .mob-product-box-item-desc {
     color: #484848;
-    font-size: 18px;
-    font-style: normal;
+    font-size: 24px;
     font-weight: 305;
     line-height: 150%;
-    letter-spacing: 0.36px;
-    opacity: 0.9;
-    margin-top: 4px;
+    letter-spacing: 0.48px;
+    margin-top: 10px;
 }
 
 .mob-product-box-item:nth-child(1) {
@@ -87,13 +83,14 @@
 .mob-product-box-item-btn {
     display: flex;
     align-items: center;
-    width: 100px;
+    width: 140px;
     height: 44px;
-    padding: 10px 0px;
+    padding: 10px 10px;
+    background: #806BFF;
 }
 
 .mob-product-box-item-btn-text {
-    color: #806BFF;
+    color: #fff;
     font-size: 16px;
     font-style: normal;
     font-weight: 380;
@@ -101,7 +98,6 @@
 }
 
 .mob-product-box-item-btn .arr-1 {
-    fill: #806BFF;
-    width: 20px;
+    width: 24px;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }

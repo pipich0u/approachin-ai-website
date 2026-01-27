@@ -133,37 +133,37 @@ export const amaasTextConfig = {
             {
                 icon: 1,
                 desc: '一站式AI开发基座，共同打造“航空+低空经济”双场景AI方案',
-                link: '',
+                link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247485368&idx=1&sn=4d30e977474fd5b751901add672dc11f&chksm=c1d04d67f6a7c471083d8364e83ffc32ecaebaaf8e46395cedd4e3d868bef88b61b791e1e92c&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'
             },
             {
                 icon: 2,
                 desc: 'AI诊断房屋健康，AI一体机助力“好房子”建设',
-                link: '',
+                link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247485147&idx=1&sn=4b09c5895fe878957e17b64c3f05b4c6&chksm=c1d04c04f6a7c5128d76479d837d154b613a8971e8af9a51ff99515ff20612c3584eda9d2475&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'
             },
             {
                 icon: 3,
                 desc: '交通枢纽协同治理，赋能空间决策智能化',
-                link: '',
+                link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247485125&idx=1&sn=00fabd8c327383cf67470d93aea658d4&chksm=c1d04c1af6a7c50cffe61312c53d905fc09aee6669b0ac64bc358e6ca83508d922a612db10c3&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'
             },
             {
                 icon: 4,
                 desc: '联合破局质检痛点，共创行业智能化新标杆',
-                link: '',
+                link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247484974&idx=1&sn=d87fcfb8f3698e7e73634112d5cc9661&chksm=c1d04cf1f6a7c5e740c5087c4092f44b275bbdca75d7110590071e547239866fae8ac72525fd&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'
             },
             {
                 icon: 5,
                 desc: 'AI一体机助力金融领域应用高效落地',
-                link: '',
+                link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247484827&idx=1&sn=5a22d363d5ce7f0a98e995eb9e10ec65&chksm=c1d04f44f6a7c6528b01678ba15cd5abb8b49d21686cc7fc5e1af94106af3cac8d7d4160c70f&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'
             },
             {
                 icon: 6,
                 desc: '辅助商业地产租售策略决策，赋能资管智能化转型',
-                link: '',
+                link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247485287&idx=1&sn=63acb35754f05b275d5a471a3454f3b9&chksm=c1d04db8f6a7c4aeb582ca153840d42ced816b2a9fed851dcd20e447c64bdb2b56ca8d569c82&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'
             },
         ]
