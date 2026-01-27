@@ -1,4 +1,4 @@
-.product-container {
+.mob-product-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-.product-content {
+.mob-product-content {
     width: 100%;
     max-width: 1440px;
     height: 614px;
@@ -18,7 +18,7 @@
 
 }
 
-.product-title {
+.mob-product-title {
     color: #1B1D22;
     text-align: center;
     font-family: MiSans;
@@ -29,13 +29,13 @@
     letter-spacing: 0.76px;
 }
 
-.product-box {
+.mob-product-box {
     display: flex;
     gap: 20px;
     margin-top: 50px;
 }
 
-.product-box-item {
+.mob-product-box-item {
     width: 610px;
     height: 366px;
     border-radius: 20px;
@@ -50,12 +50,12 @@
     transition: all 0.3s ease;
 }
 
-.product-box-item:hover {
+.mob-product-box-item:hover {
     transform: translateY(-2px);
     transition: all 0.3s ease;
 }
 
-.product-box-item-title {
+.mob-product-box-item-title {
     color: #000;
     font-size: 28px;
     font-style: normal;
@@ -64,7 +64,7 @@
     letter-spacing: 0.56px;
 }
 
-.product-box-item-desc {
+.mob-product-box-item-desc {
     color: #484848;
     font-size: 18px;
     font-style: normal;
@@ -75,16 +75,16 @@
     margin-top: 4px;
 }
 
-.product-box-item:nth-child(1) {
+.mob-product-box-item:nth-child(1) {
     background: url(/src/assets/images/img/pro1.png) bottom right / 70% 70% no-repeat, #E8EAF1;
 
 }
 
-.product-box-item:nth-child(2) {
+.mob-product-box-item:nth-child(2) {
     background: url(/src/assets/images/img/pro2.png) bottom right / 80% 80% no-repeat, #F1F2F9;
 }
 
-.product-box-item-btn {
+.mob-product-box-item-btn {
     display: flex;
     align-items: center;
     width: 100px;
@@ -92,7 +92,7 @@
     padding: 10px 0px;
 }
 
-.product-box-item-btn-text {
+.mob-product-box-item-btn-text {
     color: #806BFF;
     font-size: 16px;
     font-style: normal;
@@ -100,7 +100,7 @@
     line-height: 150%;
 }
 
-.product-box-item-btn .arr-1 {
+.mob-product-box-item-btn .arr-1 {
     fill: #806BFF;
     width: 20px;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);

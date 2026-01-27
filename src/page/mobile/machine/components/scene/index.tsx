@@ -24,20 +24,20 @@ export const MobMachineScene = () => {
         }
     }
 
-    return <div className='scene-container'>
-        <div className='scene-content'>
-            <motion.div {...scrollInViewSpringOnceProps} className="scene-title">{scene.title}</motion.div>
-            <div className="scene-tab-box">
-                <motion.div {...scrollInViewSpringOnceProps} className="scene-tab-nav">
+    return <div className='mob-scene-container'>
+        <div className='mob-scene-content'>
+            <motion.div {...scrollInViewSpringOnceProps} className="mob-scene-title">{scene.title}</motion.div>
+            <div className="mob-scene-tab-box">
+                <motion.div {...scrollInViewSpringOnceProps} className="mob-scene-tab-nav">
                     {tabItems.map((item) => (
                         <div
                             key={item.id}
-                            className={`scene-tab-item ${activeTab === item.id ? 'active' : ''}`}
+                            className={`mob-scene-tab-item ${activeTab === item.id ? 'active' : ''}`}
                             onClick={() => handleTabClick(item.id)}
                         >
                             {activeTab === item.id && (
                                 <motion.div
-                                    className="scene-tab-bg"
+                                    className="mob-scene-tab-bg"
                                     layoutId="activeTab"
                                     transition={{
                                         type: 'spring',
@@ -46,31 +46,31 @@ export const MobMachineScene = () => {
                                     }}
                                 />
                             )}
-                            <span className="scene-tab-label">{item.label}</span>
+                            <span className="mob-scene-tab-label">{item.label}</span>
                         </div>
                     ))}
                 </motion.div>
-                <div className="scene-tab-content">
+                <div className="mob-scene-tab-content">
                     <motion.div
                         key={activeTab}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="scene-tab-panel"
+                        className="mob-scene-tab-panel"
                     >
-                        <div className='scene-panel-left'>
-                            <div className="scene-panel-title">{currentTab?.label}</div>
-                            <div className="scene-panel-description">{currentTab?.desc}</div>
-                            <div className="scene-panel-features">
+                        <div className='mob-scene-panel-left'>
+                            <div className="mob-scene-panel-title">{currentTab?.label}</div>
+                            <div className="mob-scene-panel-description">{currentTab?.desc}</div>
+                            <div className="mob-scene-panel-features">
                                 {currentTab?.features.map((feature, index) => (
-                                    <li key={index} className="scene-feature-item">
+                                    <li key={index} className="mob-scene-feature-item">
                                         {feature}
                                     </li>
                                 ))}
                             </div>
                         </div>
-                        <div className='scene-panel-rig'>
+                        <div className='mob-scene-panel-rig'>
                             <img src={img} alt="" />
                         </div>
                     </motion.div>

@@ -4,18 +4,18 @@ import { initialLoadProps, scrollInViewSpringOnceProps } from '@/utils/motionCon
 import { machinIntroduce } from '@/page/pc/product/machine/textConfig'
 
 export const MobMachineIntroduce = () => {
-    return <div className='mc-introduce-container'>
-        <div className='mc-introduce-content'>
-            <motion.div {...scrollInViewSpringOnceProps} className='mc-introduce-title'>
+    return <div className='mob-mc-introduce-container'>
+        <div className='mob-mc-introduce-content'>
+            <motion.div {...scrollInViewSpringOnceProps} className='mob-mc-introduce-title'>
                 {machinIntroduce.title1}<br />{machinIntroduce.title2}
             </motion.div>
-            <div className="mc-introduce-box">
+            <div className="mob-mc-introduce-box">
                 {
                     machinIntroduce.list.map((item, index) => {
-                        return <motion.div {...scrollInViewSpringOnceProps} className='mc-introduce-box-item' key={index}>
-                            <div className='mc-introduce-box-item-left'>
-                                <div className="mc-introduce-box-item-title">{item.title}</div>
-                                <div className="mc-introduce-box-item-list">
+                        return <motion.div {...scrollInViewSpringOnceProps} className='mob-mc-introduce-box-item' key={index}>
+                            <div className='mob-mc-introduce-box-item-left'>
+                                <div className="mob-mc-introduce-box-item-title">{item.title}</div>
+                                <div className="mob-mc-introduce-box-item-list">
                                     {
                                         item.items.map((it, idx) => {
                                             return <li key={idx + index}>{it}</li>
@@ -23,7 +23,7 @@ export const MobMachineIntroduce = () => {
                                     }
                                 </div>
                             </div>
-                            <div className='mc-introduce-box-item-rig'>
+                            <div className='mob-mc-introduce-box-item-rig'>
                                 <img src={item.img} alt="" />
                             </div>
                         </motion.div>
