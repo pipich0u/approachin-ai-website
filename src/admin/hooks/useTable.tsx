@@ -49,5 +49,6 @@ export const useTable = () => {
     openDetail,
     openEdit,
     closeModal,
+    setIsModalOpen
   };
 };

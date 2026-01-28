@@ -71,7 +71,7 @@ export const getGitSource = async (org: string, repo: string, perPage: number = 
 }
 
 export const SubmitFormData = async (data:FormSubmitResponse) => {
-    return request<{ success: boolean }>('/nest/info', {
+    return request<{ success: boolean }>('/v2/info', {
         method: 'POST',
         body: data
     });

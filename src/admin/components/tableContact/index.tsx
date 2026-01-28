@@ -42,6 +42,7 @@ const TableContent: React.FC = () => {
         openDetail,
         openEdit,
         closeModal,
+        setIsModalOpen
     } = useTable();
 
     // 分页获取数据
@@ -49,8 +50,6 @@ const TableContent: React.FC = () => {
         setLoading(true);
         try {
             const res = await getPage({ page, pageSize });
-            console.log(res.data.data);
-
             const list = res.data.data.map((item: any) => ({
                 ...item,
                 key: item.id,
@@ -83,7 +82,7 @@ const TableContent: React.FC = () => {
             setLoading(false);
         }
     };
-    
+
     const columns: TableColumnsType<DataType> = [
         { title: '姓名', dataIndex: 'name' },
         { title: '电话', dataIndex: 'phone' },
@@ -94,6 +93,9 @@ const TableContent: React.FC = () => {
             title: '时间',
             dataIndex: 'createTime',
             render: (t) => (t ? new Date(t).toLocaleString() : '-'),
+            sorter: (a, b) =>
+                new Date(a.createTime || 0).getTime() -
+                new Date(b.createTime || 0).getTime(),
         },
         {
             title: '是否已联系',
@@ -104,6 +106,7 @@ const TableContent: React.FC = () => {
                     checked={record.contact}
                     checkedChildren={<CheckOutlined />}
                     unCheckedChildren={<CloseOutlined />}
+                    onChange={()=>message.info('请在编辑中修改！')}
                 />
             ),
         },
@@ -145,6 +148,15 @@ const TableContent: React.FC = () => {
 
         exportTable(exportData, '客户信息.xlsx');
     };
+
+    const handleOk = async (id: number, values?: { remark: string; contact: boolean }) => {
+        if (values) {
+            await updateItem(id, values)
+            message.success('更新成功')
+            fetchTableData()
+        }
+        setIsModalOpen(false)
+    }
 
     return (
         <div className="admin-table-page">
@@ -195,7 +207,7 @@ const TableContent: React.FC = () => {
                 open={isModalOpen}
                 isEditMode={isEditMode}
                 data={currentRow}
-                onOk={closeModal}
+                onOk={handleOk}
                 onCancel={closeModal}
             />
         </div >
