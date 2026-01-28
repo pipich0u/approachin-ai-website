@@ -4,7 +4,7 @@ import { scrollInViewOnceProps } from '@/utils/motionConfig'
 import { amaasTextConfig } from '../../textConfig'
 import { IconFont } from '@/utils/antdUtils'
 
-export const AMaasTestimony = () => {
+export const MobAMaasTestimony = () => {
 
     const { testimony } = amaasTextConfig;
 

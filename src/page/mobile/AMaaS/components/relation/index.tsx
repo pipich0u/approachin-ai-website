@@ -21,7 +21,7 @@ import feiteng from '@/assets/images/img/feiteng_logo.png'
 import { amaasTextConfig } from '../../textConfig'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
 
-export const AMaaSRelation = () => {
+export const MobAMaaSRelation = () => {
     const { relation } = amaasTextConfig;
     const inferenceEngines = [
         { src: sgl, alt: 'sgl' },

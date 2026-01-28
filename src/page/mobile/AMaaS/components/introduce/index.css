@@ -1,22 +1,23 @@
 .mob-amaas-introduce-container {
     width: 100%;
-    height: 700px;
+    /* height: 700px; */
     display: flex;
     align-self: center;
     justify-content: center;
     font-family: MiSans;
     box-sizing: border-box;
-    background: url(/src/assets/images/img/scene_bg.png) no-repeat center bottom;
+    /* background: url(/src/assets/images/img/scene_bg.png) no-repeat center bottom; */
     background-size: 100% 60%;
+    background: linear-gradient(180deg, #FEFEFE 2.11%, #D3D8FE 100%);
 }
 
 .mob-amaas-in-content {
-    max-width: 1440px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 45px 100px;
+    padding: 45px 65px;
 }
 
 .mob-amaas-in-title {
@@ -27,31 +28,47 @@
     font-weight: 450;
     line-height: 150%;
     letter-spacing: 0.76px;
-    margin-bottom: 53px;
+    padding: 20px 0;
+}
+
+.mob-amaas-in-desc {
+    color: #333;
+    font-size: 27px;
+    font-weight: 305;
+    line-height: 150%;
+    letter-spacing: 0.54px;
+    display: flex;
+    margin-bottom: 64px;
+}
+
+.mob-amaas-in-desc-line {
+    color: #DBDBDB;
 }
 
 .mob-amaas-in-box {
     display: flex;
+    flex-direction: column;
+    padding: 0 56px;
     gap: 20px;
 }
 
 .mob-amaas-in-item {
-    width: 295px;
-    height: 430px;
+    width: 640px;
+    /* height: 728px; */
     border-radius: 20px;
     background: #FFF;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px;
+    padding: 50px;
 }
 
 .mob-amaas-in-item-title {
     color: #000;
-    font-size: 24px;
-    font-style: normal;
+    font-size: 32px;
     font-weight: 450;
     line-height: 150%;
+    margin-bottom: 16px;
 }
 
 .mob-amaas-in-item-desc {
@@ -65,22 +82,21 @@
 }
 
 .mob-amaas-in-item-list {
-    margin-top: 10px;
     color: #59595A;
-    font-size: 14px;
-    font-style: normal;
+    font-size: 24px;
     font-weight: 305;
     line-height: 200%;
+    margin-bottom: 31px;
 }
 
-.mob-amaas-in-item-list-li{
+.mob-amaas-in-item-list-li {
     display: flex;
     gap: 4px;
 }
 
 .mob-amaas-in-item-img {
-    width: 235px;
-    height: 200px;
+    width: 100%;
+    /* height: 200px; */
     border-radius: 12px;
     background: #F2F2F2;
 }

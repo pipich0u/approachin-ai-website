@@ -1,16 +1,16 @@
 import { motion } from 'motion/react'
 import './index.css'
 import { initialLoadProps } from '@/utils/motionConfig'
-import { trackPageView, trackButtonClick, trackCarouselChange } from '@/utils/umami';
+import { trackButtonClick } from '@/utils/umami';
 import { amaasTextConfig } from '../../textConfig';
 import { useNavigate } from 'react-router-dom';
-export const AMaaSIndex = () => {
+export const MobAMaaSIndex = () => {
     const { index } = amaasTextConfig;
     const navigate = useNavigate()
     return <div className='mob-amaas-index-container'>
         <div className='mob-amaas-index-content'>
             <motion.div className='mob-amaas-index-title' {...initialLoadProps}>
-                {index.title}<br />{index.subtitle}
+                {index.title} {index.subtitle}
             </motion.div>
             <motion.div className='mob-amaas-index-desc'  {...initialLoadProps}>
                 {index.features.map((feature, idx) => (
@@ -20,13 +20,16 @@ export const AMaaSIndex = () => {
                     </div>
                 ))}
             </motion.div>
-            <motion.button
-                {...initialLoadProps}
-                className='animated-button w-[180px] rounded-lg bg-[#806BFF] '
-                onClick={() => { trackButtonClick(index.buttonText, 'AMaaS第1屏', { slideIndex: 0 }); navigate('/contact') }}
-            >
-                <span className="text-white font-[380] bt-text">{index.buttonText}</span>
-            </motion.button>
         </div>
+            <div className='mob-amaas-index-box'>
+                <motion.button
+                    {...initialLoadProps}
+                    className='animated-button mob-amaas-index-box-btn rounded-lg bg-[#806BFF] '
+                    onClick={() => { trackButtonClick(index.buttonText, 'AMaaS第1屏', { slideIndex: 0 }); navigate('/contact') }}
+                >
+                    <span className="text-white font-[380] bt-text">{index.buttonText}</span>
+                </motion.button>
+
+            </div>
     </div>
 }

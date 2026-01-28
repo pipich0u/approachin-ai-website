@@ -4,7 +4,7 @@ import './index.css'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
 import { amaasTextConfig } from '../../textConfig'
 
-export const AMaaSIntroduce = () => {
+export const MobAMaaSIntroduce = () => {
     const { introduce } = amaasTextConfig;
 
     return <div className='mob-amaas-introduce-container'>
@@ -12,6 +12,10 @@ export const AMaaSIntroduce = () => {
             <motion.div className="mob-amaas-in-title" {...scrollInViewOnceProps}>
                 {introduce.title}
             </motion.div>
+            <motion.div className="mob-amaas-in-desc" {...scrollInViewOnceProps}>
+                云原生一站式机器学习<div className="mob-amaas-in-desc-line">｜</div>深度学习<div className="mob-amaas-in-desc-line">｜</div>大模型AI平台
+            </motion.div>
+
             <div className="mob-amaas-in-box">
                 {introduce.items.map((item, index) => (
                     <motion.div key={index} className="mob-amaas-in-item" {...scrollInViewOnceProps}>
@@ -24,7 +28,7 @@ export const AMaaSIntroduce = () => {
                         <div className='mob-amaas-in-item-list'>
                             {item.features.map((feature, idx) => (
                                 <div key={idx} className='mob-amaas-in-item-list-li'>
-                                    <IconFont style={{ fontSize: '24px', color: '#02Dc52' }} type='icon-dui'></IconFont>
+                                    <IconFont style={{ fontSize: '18px', color: '#02Dc52' }} type='icon-dui'></IconFont>
                                     <div>{feature}</div>
                                 </div>
                             ))}

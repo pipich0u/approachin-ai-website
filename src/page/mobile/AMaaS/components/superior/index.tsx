@@ -7,7 +7,7 @@ import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import { trackButtonClick } from '@/utils/umami'
 import { useExposureTracking } from '@/hooks/useExposureTracking'
 
-export const AMaasSuperior = () => {
+export const MobAMaasSuperior = () => {
     // 曝光埋点 - AMaaS产品优势区域
     const exposureRef = useExposureTracking('产品优势区域', 'AMaaS产品页', { section: 'superior' });
     const { superior } = amaasTextConfig;

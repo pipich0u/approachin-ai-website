@@ -1,42 +1,57 @@
 .mob-amaas-index-container {
     width: 100%;
-    height: 520px;
+    height: 880px;
     box-sizing: border-box;
-    padding-left: 100px;
     background-size: contain;
     font-family: MiSans;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(/src/assets/images/img/amaas_in_bg.png);
-    background-size: auto 100%;
-    background-position: 45%;
-    background-repeat: no-repeat;
+    background: #DFEAFF;
+
 }
 
 .mob-amaas-index-content {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
-    max-width: 1440px;
     justify-content: center;
-    /* padding: 0 100px; */
+    padding: 180px 85px;
+    padding-bottom: 0px;
+}
+
+.mob-amaas-index-box {
+    background: url(/src/assets/images/mob/mob-amaas-bg.png);
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 700px;
+    padding: 0px 85px;
+    display: flex;
+    justify-content: center;
 }
 
 .mob-amaas-index-title {
     color: #1B1D22;
-    font-weight: 520;
-    font-style: Semibold;
     font-size: 40px;
+    font-weight: 520;
     line-height: 150%;
-    letter-spacing: 2%;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
 }
 
 .mob-amaas-index-desc {
     display: flex;
     margin-top: 12px;
     color: #666;
+    font-size: 20px;
+    font-weight: 305;
+    line-height: 150%;
+    letter-spacing: 0.4px;
 }
 
 .mob-amaas-index-desc-text {
@@ -52,4 +67,20 @@
     padding: 0 8px;
     display: flex;
     align-items: center;
+    font-size: 18px;
+}
+
+.mob-amaas-index-box-btn {
+    width: 153px;
+    height: 48px;
+    margin-top: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 150%;
+    box-shadow: none;
+    border-radius: 8px;
 }

@@ -1,26 +1,26 @@
 import './index.css'
 import { useEffect } from 'react'
 import { trackPageView } from '@/utils/umami'
-import { AMaaSIndex } from './components/index/index'
-import { AMaaSIntroduce } from './components/introduce'
-import { AMaaSRelation } from './components/relation'
-import { AMaasSuperior } from './components/superior'
-import { AMaasTestimony } from './components/testimony'
+import { MobAMaaSIndex } from './components/index/index'
+import { MobAMaaSIntroduce } from './components/introduce'
+import { MobAMaaSRelation } from './components/relation'
+import { MobAMaasSuperior } from './components/superior'
+import { MobAMaasTestimony } from './components/testimony'
 import PageConsult from '../index/components/consult'
 import PageContact from '../index/components/contact'
 import { amaasTextConfig } from './textConfig'
 
-export const AMaaSPage = () => {
+export const MobAMaaSPage = () => {
     useEffect(() => {
         trackPageView(amaasTextConfig.pageName)
     }, [])
 
     return <div className='mob-amaas-page'>
-        <AMaaSIndex />
-        <AMaaSIntroduce />
-        <AMaaSRelation />
-        <AMaasSuperior />
-        <AMaasTestimony />
+        <MobAMaaSIndex />
+        <MobAMaaSIntroduce />
+        <MobAMaaSRelation />
+        {/* <MobAMaasSuperior />
+        <MobAMaasTestimony /> */}
         <PageConsult />
         <PageContact />
     </div>
