@@ -21,7 +21,8 @@ export const amaasTextConfig = {
                     '多卡异构管理',
                     '运维管理可视化',
                     '开箱即用'
-                ]
+                ],
+                img:'/src/assets/images/img/amaas_nav1.png'
             },
             {
                 title: '全球TOP推理引擎',
@@ -30,7 +31,8 @@ export const amaasTextConfig = {
                     '单机极致性能',
                     '多机分布式推理',
                     '国产卡深度优化'
-                ]
+                ],
+                img:'/src/assets/images/img/amaas_nav2.png'
             },
             {
                 title: '内置各类大模型',
@@ -39,7 +41,8 @@ export const amaasTextConfig = {
                     '新模型天级更新',
                     '内置数十种主流模型',
                     '多模型并行运行'
-                ]
+                ],
+                img:'/src/assets/images/img/amaas_nav3.png'
             },
             {
                 title: '内置办公辅助系统',
@@ -48,7 +51,8 @@ export const amaasTextConfig = {
                     'RAG 知识库',
                     '智能搜索',
                     '文案辅助'
-                ]
+                ],
+                img:'/src/assets/images/img/amaas_nav4.png'
             }
         ]
     },

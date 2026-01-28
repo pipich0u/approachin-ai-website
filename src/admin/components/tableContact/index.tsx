@@ -46,8 +46,8 @@ const TableContent: React.FC = () => {
     } = useTable();
 
     // 分页获取数据
-    const fetchTableData = async () => {
-        setLoading(true);
+    const fetchTableData = async (silent = false) => {
+        if (!silent) setLoading(true)
         try {
             const res = await getPage({ page, pageSize });
             const list = res.data.data.map((item: any) => ({
@@ -60,13 +60,28 @@ const TableContent: React.FC = () => {
         } catch (e) {
             message.error('数据加载失败');
         } finally {
-            setLoading(false);
+            if (!silent) setLoading(false)
         }
     };
 
     useEffect(() => {
-        fetchTableData();
-    }, [page, pageSize]);
+        let timer: number
+        let cancelled = false
+
+        const loop = async () => {
+            if (cancelled) return
+            await fetchTableData(true)
+            timer = window.setTimeout(loop, 5000)
+        }
+
+        loop()
+
+        return () => {
+            cancelled = true
+            clearTimeout(timer)
+        }
+    }, [page, pageSize])
+
 
     // 删除
     const handleDelete = async (ids: number[]) => {
@@ -106,7 +121,7 @@ const TableContent: React.FC = () => {
                     checked={record.contact}
                     checkedChildren={<CheckOutlined />}
                     unCheckedChildren={<CloseOutlined />}
-                    onChange={()=>message.info('请在编辑中修改！')}
+                    onChange={() => message.info('请在编辑中修改！')}
                 />
             ),
         },
@@ -118,15 +133,10 @@ const TableContent: React.FC = () => {
                     <Button type="link" onClick={() => openEdit(record)}>
                         编辑
                     </Button>
-
                     <Button type="link" onClick={() => openDetail(record)}>
                         详情
                     </Button>
-                    <Button
-                        type="link"
-                        danger
-                        onClick={() => handleDelete([record.id])}
-                    >
+                    <Button type="link" danger onClick={() => handleDelete([record.id])}>
                         删除
                     </Button>
                 </div>
@@ -160,7 +170,6 @@ const TableContent: React.FC = () => {
 
     return (
         <div className="admin-table-page">
-            {/* 顶部操作栏 */}
             <div style={{
                 marginBottom: 16,
                 display: 'flex',
@@ -171,10 +180,8 @@ const TableContent: React.FC = () => {
                     onClick={handleExport}>
                     导出
                 </Button>
-                <Button
-                    danger
+                <Button danger loading={loading}
                     disabled={selectedRowKeys.length === 0}
-                    loading={loading}
                     onClick={() =>
                         handleDelete(selectedRowKeys as number[])
                     }>
@@ -182,7 +189,6 @@ const TableContent: React.FC = () => {
                 </Button>
             </div>
 
-            {/* 表格 */}
             <Table<DataType>
                 rowSelection={{
                     selectedRowKeys,

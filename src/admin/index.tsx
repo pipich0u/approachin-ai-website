@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import { SolutionOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { ConfigProvider, Layout, Menu, theme } from 'antd';
 import './index.css'
 const { Header, Content, Footer, Sider } = Layout;
 import logo from '@/assets/svg/b-logo.svg'
+import { useNavigate } from 'react-router-dom';
 import TableContent from './components/tableContact';
 type MenuItem = Required<MenuProps>['items'][number];
 import zhCN from 'antd/locale/zh_CN'
@@ -39,6 +40,7 @@ const AdminPage: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [selectedKey, setSelectedKey] = useState('1');
+    const navigate=useNavigate();
     const {
         token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
@@ -75,8 +77,8 @@ const AdminPage: React.FC = () => {
         <ConfigProvider locale={zhCN}>
             <Layout style={{ minHeight: '100vh' }}>
                 <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-                    <div className="p-4" >
-                        <img src={logo} alt="" />
+                    <div className="p-4 cursor-pointer" >
+                        <img src={logo} alt="" onClick={()=>navigate('/')}/>
                     </div>
 
                     <Menu
