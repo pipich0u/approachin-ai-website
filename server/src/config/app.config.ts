@@ -1,5 +1,6 @@
 import { registerAs } from '@nestjs/config';
 
+
 /**
  * 应用配置
  */
@@ -12,3 +13,4 @@ export default registerAs('app', () => ({
   isDevelopment: process.env.NODE_ENV === 'development',
   isProduction: process.env.NODE_ENV === 'production',
 }));
+

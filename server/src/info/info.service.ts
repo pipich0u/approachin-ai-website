@@ -5,12 +5,13 @@ import { Info } from './entities/info.entity';
 import { CreateInfoDto } from './dto/create-info.dto';
 import { UpdateInfoDto } from './dto/update-info.dto';
 import { PageResult } from 'src/common/vo/pageResult';
-
+import { FeishuBotService } from '../feishu-bot/feishu-bot.service';
 @Injectable()
 export class InfoService {
   constructor(
     @InjectRepository(Info)
     private readonly infoRepository: Repository<Info>,
+    private readonly feishuBotService: FeishuBotService,
   ) { }
 
   // 创建（表单提交）
@@ -20,6 +21,16 @@ export class InfoService {
     });
 
     await this.infoRepository.save(info);
+    await this.feishuBotService.sendTextMessage(
+      `【📩 新表单提交】
+
+👤 姓名：${info.name}
+📞 电话：${info.phone}
+📧 邮箱：${info.email}
+🏢 公司：${info.company ?? '无'}
+📝 内容：
+${info.description ?? '无'}`
+    );
   }
 
   // 查询全部
