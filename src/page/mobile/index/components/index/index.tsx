@@ -3,8 +3,9 @@ import './index.css'
 import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig';
 import { indexPageList } from '@/page/textConfig';
+import { useNavigate } from 'react-router-dom';
 export default function PageIndex() {
-
+    const navgiate = useNavigate()
     return (
         <div className="mob-index">
             <div className="mob-title">
@@ -12,7 +13,7 @@ export default function PageIndex() {
                 <motion.div {...initialLoadProps} className='mob-title-center'>
                     {indexPageList[0].desc.slice(0, 15)}<br />{indexPageList[0].desc.slice(15)}
                 </motion.div>
-                <motion.button {...initialLoadProps} className='mob-title-btn'>
+                <motion.button {...initialLoadProps} className='mob-title-btn' onClick={()=>navgiate('/contact')}>
                     <span>{indexPageList[0].ask}</span>
                 </motion.button>
                 <motion.div {...initialLoadProps} className='mob-index-bottom'>

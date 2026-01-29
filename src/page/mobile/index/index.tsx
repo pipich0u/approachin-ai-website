@@ -19,18 +19,6 @@ export default function MobileIndex() {
     trackPageView('移动端首页')
   }, [])
 
-  // 滚动到指定组件
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navbarHeight = 60;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: elementPosition - navbarHeight,
-        behavior: 'instant'
-      });
-    }
-  };
 
   return (
     <div className="mobile-container">
