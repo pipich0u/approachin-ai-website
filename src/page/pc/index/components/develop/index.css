@@ -81,7 +81,7 @@
 }
 
 .dep-tab-items:nth-child(2).dep-active {
-  background: url(/src/assets/images/img/dep_tab1.png) no-repeat;
+  background: url(/src/assets/images/img/dep_tab1.webp) no-repeat;
   background-size: cover;
   width: 610px;
   display: flex !important;
@@ -95,7 +95,7 @@
 }
 
 .dep-tab-items:nth-child(4).dep-active {
-  background: url(/src/assets/images/img/dep_tab3.png) no-repeat;
+  background: url(/src/assets/images/img/dep_tab3.webp) no-repeat;
   background-size: cover;
   width: 610px;
   display: flex !important;
@@ -105,7 +105,7 @@
 }
 
 .dep-tab-items:nth-child(6).dep-active {
-  background: url(/src/assets/images/img/dep_tab2.png) no-repeat;
+  background: url(/src/assets/images/img/dep_tab2.webp) no-repeat;
   background-size: cover;
   width: 610px;
   display: flex !important;
