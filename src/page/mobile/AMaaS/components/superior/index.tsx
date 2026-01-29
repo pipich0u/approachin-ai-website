@@ -1,115 +1,29 @@
 import './index.css'
-import { motion, AnimatePresence } from 'motion/react'
+import { motion } from 'motion/react'
 import amaas from '@/assets/images/img/amaas.png'
-import { useEffect, useRef, useState } from 'react'
 import { amaasTextConfig } from '../../textConfig'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
-import { trackButtonClick } from '@/utils/umami'
-import { useExposureTracking } from '@/hooks/useExposureTracking'
 
 export const MobAMaasSuperior = () => {
-    // 曝光埋点 - AMaaS产品优势区域
-    const exposureRef = useExposureTracking('产品优势区域', 'AMaaS产品页', { section: 'superior' });
+
     const { superior } = amaasTextConfig;
     const tabItems = superior.tabItems;
-
-    const [activeTab, setActiveTab] = useState(tabItems[0].id)
-    const [inView, setInView] = useState(false)
-    const [hovering, setHovering] = useState(false)
-
-    const timerRef = useRef<number | null>(null)
-    const containerRef = useRef<HTMLDivElement | null>(null)
-
-    const stopAuto = () => {
-        if (timerRef.current) {
-            clearTimeout(timerRef.current)
-            timerRef.current = null
-        }
-    }
-
-    const startAuto = () => {
-        stopAuto()
-        timerRef.current = window.setTimeout(() => {
-            setActiveTab(prev => {
-                const index = tabItems.findIndex(i => i.id === prev)
-                return tabItems[(index + 1) % tabItems.length].id
-            })
-        }, 8000)
-    }
-
-    /** 视口监听 */
-    useEffect(() => {
-        if (!containerRef.current) return
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setInView(entry.isIntersecting)
-            }, { threshold: 0.3 }
-        )
-        observer.observe(containerRef.current)
-        return () => observer.disconnect()
-    }, [])
-
-    /** 自动轮播控制中心 */
-    useEffect(() => {
-        if (inView && !hovering) {
-            startAuto()
-        } else {
-            stopAuto()
-        }
-
-        return stopAuto
-    }, [inView, hovering, activeTab])
-
     return (
-        <div ref={(el) => {
-            containerRef.current = el;
-            if (el && exposureRef) {
-                // (exposureRef as React.RefCallback<HTMLDivElement>)(el);
-            }
-        }} className='mob-amaas-superior-container' >
+        <div className='mob-amaas-superior-container' >
             <div className='mob-amaas-sup-content'>
                 <motion.div {...scrollInViewSpringOnceProps} className="mob-amaas-sup-title">{superior.title}</motion.div>
                 <div className='mob-amaas-sup-box'>
-                    <div className='mob-amaas-sup-tab'>
-                        <div className='mob-amaas-sup-nav'>
-                            <div className='mob-sup-active'
-                                style={{
-                                    top: tabItems.findIndex(item => item.id === activeTab) * 55 + 'px'
-                                }}
-                            />
-                            {tabItems.map(item => (
-                                <div key={item.id} onClick={() => {
-                                    trackButtonClick(`产品优势Tab-${item.label}`, 'AMaaS产品页优势区域', { tabId: item.id, tabLabel: item.label });
-                                    setActiveTab(item.id);
-                                }}
-                                    className={`mob-amaas-sup-tab-items ${item.id === activeTab ? 'mob-item-active' : ''}`}
-                                    onMouseEnter={() => setHovering(true)}
-                                    onMouseLeave={() => setHovering(false)}
-                                >
-                                    <div className='mob-amaas-sup-tab-title'>{item.label}</div>
-                                    <div className='mob-amaas-sup-tab-desc'>{item.desc}</div>
-                                </div>
-                            ))}
+                    {tabItems.map(item => (
+                        <div key={item.id} className={`mob-amaas-sup-tab-items`} >
+                            <div className='mob-amaas-sup-tab-title'>{item.label}</div>
+                            <div className='mob-amaas-sup-tab-desc'>{item.desc}</div>
                         </div>
-                    </div>
+                    ))}
                 </div>
 
-                <div className='mob-amaas-sup-tab-info'
-                    onMouseEnter={() => setHovering(true)}
-                    onMouseLeave={() => setHovering(false)}>
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={activeTab}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.4, ease: 'easeOut' }}
-                        >
-                            <img src={amaas} alt="" />
-                        </motion.div>
-                    </AnimatePresence>
-                </div>
+                <motion.div {...scrollInViewSpringOnceProps} className='mob-amaas-sup-tab-info'>
+                    <img src={amaas} alt="" />
+                </motion.div>
             </div>
         </div >
     )
