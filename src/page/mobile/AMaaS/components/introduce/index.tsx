@@ -2,7 +2,7 @@ import { motion } from 'motion/react'
 import { IconFont } from '@/utils/antdUtils'
 import './index.css'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
-import { amaasTextConfig } from '../../textConfig'
+import { amaasTextConfig } from '@/page/pc/product/AMaaS/textConfig'
 
 export const MobAMaaSIntroduce = () => {
     const { introduce } = amaasTextConfig;

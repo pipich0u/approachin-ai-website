@@ -1,7 +1,7 @@
 import './index.css'
 import { motion } from 'motion/react'
 import amaas from '@/assets/images/img/amaas.png'
-import { amaasTextConfig } from '../../textConfig'
+import { amaasTextConfig } from '@/page/pc/product/AMaaS/textConfig'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 
 export const MobAMaasSuperior = () => {

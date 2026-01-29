@@ -22,7 +22,7 @@ export const amaasTextConfig = {
                     '运维管理可视化',
                     '开箱即用'
                 ],
-                img:'/src/assets/images/img/amaas_nav1.png'
+                img: '/src/assets/images/img/amaas_nav1.png'
             },
             {
                 title: '全球TOP推理引擎',
@@ -32,7 +32,7 @@ export const amaasTextConfig = {
                     '多机分布式推理',
                     '国产卡深度优化'
                 ],
-                img:'/src/assets/images/img/amaas_nav2.png'
+                img: '/src/assets/images/img/amaas_nav2.png'
             },
             {
                 title: '内置各类大模型',
@@ -42,7 +42,7 @@ export const amaasTextConfig = {
                     '内置数十种主流模型',
                     '多模型并行运行'
                 ],
-                img:'/src/assets/images/img/amaas_nav3.png'
+                img: '/src/assets/images/img/amaas_nav3.png'
             },
             {
                 title: '内置办公辅助系统',
@@ -52,7 +52,7 @@ export const amaasTextConfig = {
                     '智能搜索',
                     '文案辅助'
                 ],
-                img:'/src/assets/images/img/amaas_nav4.png'
+                img: '/src/assets/images/img/amaas_nav4.png'
             }
         ]
     },
@@ -103,10 +103,20 @@ export const amaasTextConfig = {
                 title: '架构优势',
                 items: ['自研全球top推理引擎', '秒级弹性扩缩容', '多硬件异构管理']
             },
-            buttonText: '立即资讯',
+            buttonText: '立即咨询',
             relatedCapabilities: {
                 title: '相关能力',
-                items: ['模型仓库', 'KLLM', '一体机']
+                items: [
+                    {
+                        text: '模型仓库',
+                        link: '/models'
+                    }, {
+                        text: 'KLLM',
+                        link: '/kllm'
+                    }, {
+                        text: '一体机',
+                        link: '/machine'
+                    }]
             }
         }
     },

@@ -2,7 +2,7 @@ import { motion } from 'motion/react'
 import './index.css'
 import { initialLoadProps } from '@/utils/motionConfig'
 import { trackButtonClick } from '@/utils/umami';
-import { amaasTextConfig } from '../../textConfig';
+import { amaasTextConfig } from '@/page/pc/product/AMaaS/textConfig';
 import { useNavigate } from 'react-router-dom';
 export const MobAMaaSIndex = () => {
     const { index } = amaasTextConfig;

@@ -74,16 +74,16 @@ export const mobMenuHrefListDefault = [
             { title: 'Mooncake', href: 'mooncake' }
         ]
     },
-    {
-        title: '解决方案',
-        href: 'solution',
-        isSelected: false
-    },
-    {
-        title: '生态合作',
-        href: 'cooperate',
-        isSelected: false
-    },
+    // {
+    //     title: '解决方案',
+    //     href: 'solution',
+    //     isSelected: false
+    // },
+    // {
+    //     title: '生态合作',
+    //     href: 'cooperate',
+    //     isSelected: false
+    // },
     {
         title: '趋境资讯',
         href: 'information',

@@ -4,12 +4,13 @@ import './index.css'
 import img1 from '@/assets/images/mob/mob-amaas-relation1.webp'
 import img2 from '@/assets/images/mob/mob-amaas-relation2.webp'
 import img3 from '@/assets/images/mob/mob-amaas-relation3.webp'
-import { amaasTextConfig } from '../../textConfig'
+import { amaasTextConfig } from '@/page/pc/product/AMaaS/textConfig'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
+import { useNavigate } from 'react-router-dom'
 
 export const MobAMaaSRelation = () => {
     const { relation } = amaasTextConfig;
-
+    const navigate = useNavigate()
 
     return <div className='mob-amaas-relation-container'>
         <div className="mob-amaas-relation-content">
@@ -50,7 +51,7 @@ export const MobAMaaSRelation = () => {
                         <div className='mob-amaas-rel-box-rig-title'>{relation.sidebar?.relatedCapabilities?.title}</div>
                         <div className='mob-amaas-related-list'>
                             {relation.sidebar?.relatedCapabilities?.items?.map((item, idx) => (
-                                <div key={idx} className='mob-amaas-related-li'>{item}</div>
+                                <div key={idx} className='amaas-related-li' onClick={() => navigate(item.link)}>{item.text}</div>
                             ))}
                         </div>
                     </div>
