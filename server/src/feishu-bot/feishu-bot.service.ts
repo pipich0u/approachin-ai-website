@@ -2,7 +2,9 @@ import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import axios from 'axios';
 // import * as crypto from 'crypto';
-
+type FeishuMessage =
+    | { msg_type: 'text'; content: { text: string } }
+    | { msg_type: 'interactive'; card: any };
 @Injectable()
 export class FeishuBotService {
     private readonly webhookUrl: string;
@@ -15,12 +17,7 @@ export class FeishuBotService {
         this.webhookUrl = url;
     }
 
-    async sendTextMessage(content: string): Promise<void> {
-        await axios.post(this.webhookUrl, {
-            msg_type: 'text',
-            content: {
-                text: content,
-            },
-        });
+    async sendMessage(message: FeishuMessage) {
+        await axios.post(this.webhookUrl, message);
     }
 }
