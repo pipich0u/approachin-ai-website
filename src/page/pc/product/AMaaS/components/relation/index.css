@@ -3,7 +3,6 @@
     width: 100%;
     height: 723px;
     display: flex;
-    align-self: center;
     justify-content: center;
     font-family: MiSans;
     box-sizing: border-box;
@@ -47,12 +46,15 @@
 .amaas-relation-box-left-content {
     width: 800px;
     height: 425px;
-    padding: 20px 27.5px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.80);
     display: flex;
-    flex-direction: column;
     align-items: center;
+}
+
+.amaas-relation-box-left-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* 右侧边栏 */
@@ -66,158 +68,18 @@
     border-radius: 0 12px 12px 0;
 }
 
-/* 层级标题 */
-.amaas-left-item-title {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    margin: 8px 0;
-}
-
-.amaas-left-item-title-left {
-    color: #000;
-    font-size: 18px;
-    font-weight: 380;
-    line-height: 150%;
-    letter-spacing: 0.36px;
-}
-
-.amaas-left-item-title-rig {
-    color: #8E8C99;
-    font-size: 14px;
-    font-weight: 380;
-    line-height: 150%;
-    letter-spacing: 0.28px;
-}
-
-/* 特性卡片 */
-.amaas-left-item-feater {
-    display: flex;
-    gap: 15px;
-}
-
-.amaas-item-feater-box {
+/* 右侧边栏内容 */
+.amaas-related-box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    padding: 8px 10px 10px;
-    gap: 8px;
-    border-radius: 6px;
-    background: #FFF;
+    margin-bottom: 20px;
 }
 
-.amaas-item-feater-title {
-    color: #59595A;
-    font-size: 14px;
-    font-weight: 305;
-    line-height: 150%;
-    letter-spacing: 0.28px;
+.amaas-related-box:last-child {
+    border-top: 1px solid #E6E6E6;
+    padding-top: 20px;
 }
 
-.amaas-item-feater-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-}
-
-.feater-info-li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 34px;
-    background: #F2F1FF;
-    color: #59595A;
-    font-size: 11px;
-    font-weight: 305;
-    line-height: 150%;
-    letter-spacing: 0.22px;
-}
-
-/* AMaaS层特性 - 模型测试与评估 */
-.amaas-rel-feater-1 {
-    width: 190px;
-}
-
-.amaas-rel-feater-1>.amaas-item-feater-info>.feater-info-li {
-    width: 83px;
-}
-
-/* AMaaS层特性 - 大模型管理及运维 */
-.amaas-rel-feater-2 {
-    width: 345px;
-}
-
-.amaas-rel-full-width {
-    width: 100%;
-}
-
-.amaas-rel-inline-items {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.amaas-rel-inline-item {
-    padding: 8px 4px;
-}
-
-/* AMaaS层特性 - 多样化API接口 */
-.amaas-rel-feater-3 {
-    width: 180px;
-}
-
-.amaas-rel-api-gap {
-    gap: 5px;
-}
-
-.amaas-rel-api-item {
-    width: 50px;
-    text-align: center;
-    white-space: pre-line;
-}
-
-/* 引擎与框架层 */
-.amaas-item-feater-imgbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 360px;
-    height: 66px;
-    padding: 6px 10px;
-    border-radius: 8px;
-    background: #FFF;
-}
-
-.amaas-item-feater-imgs {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-/* 资源层 */
-.amaas-resource-layer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 60px;
-    padding: 7.879px 21.184px 7.879px 18px;
-    gap: 20px;
-    border-radius: 8px;
-    background: #FFF;
-}
-
-.amaas-resource-layer img {
-    max-height: 44px;
-    max-width: 85px;
-}
-
-/* 右侧边栏标题和描述 */
 .amaas-rel-box-rig-title {
     color: #000;
     font-size: 18px;
@@ -239,6 +101,10 @@
     margin-top: 8px;
 }
 
+.amaas-rel-box-rig-list {
+    margin-top: 8px;
+}
+
 .amaas-rel-li {
     display: flex;
     gap: 4px;
@@ -250,18 +116,6 @@
     opacity: 0.9;
 }
 
-/* 右侧边栏容器 */
-.amaas-related-box {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.amaas-related-box:last-child {
-    border-top: 1px solid #E6E6E6;
-    padding-top: 20px;
-}
-
 /* 按钮 */
 .amaas-rel-box-rig-btn {
     display: flex;
@@ -271,7 +125,6 @@
     height: 32px;
     padding: 10px 44px;
     margin-bottom: 20px;
-    gap: 4px;
     border-radius: 8px;
     background: #806BFF;
     color: #FFF;
