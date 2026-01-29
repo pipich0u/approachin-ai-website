@@ -16,11 +16,20 @@ export default function PageProduct() {
         trackPageView('产品页面', { section: 'products' });
     }, []);
 
+    const navigateFunction = (link: string) => {
+        if (link.startsWith('/')) {
+            navigate(link)
+        } else {
+            window.open(link, '_blank')
+        }
+
+    }
+
     const infoIcon = (productName: string, productType: string, link: string) => {
         return (
             <div
                 className='more w-24 h-[33px] text-[14px] font-[380] cursor-pointer'
-                onClick={() => { trackProductClick(productName, productType); navigate(link); }}
+                onClick={() => { trackProductClick(productName, productType); navigateFunction(link); }}
             >
                 了解更多
             </div>

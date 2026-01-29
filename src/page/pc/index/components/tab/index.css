@@ -109,8 +109,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: url(/src/assets/images/img/tab-cont-bg.png) no-repeat;
-    background-size: cover;
     padding: 40px;
     border-radius: 20px;
 }
@@ -176,7 +174,7 @@
 
 .tab-cont-rig-li {
     display: flex;
-    align-items: center;
+    align-items: start;
     margin-top: 10px;
 }
 
