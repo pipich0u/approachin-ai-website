@@ -81,10 +81,10 @@
 
 .circle-item-wrapper {
     position: absolute;
-    width: 46px;
-    height: 46px;
-    margin-left: -23px;
-    margin-top: -23px;
+    width: 64px;
+    height: 64px;
+    margin-left: -32px;
+    margin-top: -32px;
 }
 
 .circle-out {
@@ -119,8 +119,8 @@
 }
 
 .circle-item {
-    width: 46px;
-    height: 46px;
+    width: 64px;
+    height: 64px;
     object-fit: contain;
     display: block;
     animation: counter-rotate 50s linear infinite running;
@@ -131,8 +131,8 @@
 }
 
 .big {
-    width: 54px;
-    height: 54px;
+    width: 74px;
+    height: 74px;
 }
 
 .circle-in .circle-item {

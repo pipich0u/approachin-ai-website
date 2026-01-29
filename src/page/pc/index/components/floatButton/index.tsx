@@ -5,8 +5,6 @@ import btn1 from '@/assets/svg/floatbtn1.svg'
 import btn2 from '@/assets/svg/floatbtn2.svg'
 import phone from '@/assets/svg/phone.svg'
 import msg from '@/assets/svg/message.svg'
-import wechat from '@/assets/svg/wechat.svg'
-import ewm from '@/assets/images/img/ewmfl.png'
 import { useNavigate } from 'react-router-dom';
 import { trackButtonClick } from '@/utils/umami';
 
@@ -35,12 +33,12 @@ const FloatBtnEle: React.FC = () => {
             tooltip={{
                 color: '#fff',
                 placement: 'left',
-                title: <div className='flex flex-col items-start justify-between p-5 gap-[30px] '>
+                title: <div className='flex flex-col items-start justify-between p-4 gap-[30px] '>
                     <div className='flex items-start'>
                         <img src={phone} alt="" style={{ fontSize: '20px', width: '20px', height: '20px' }} />
                         <div className='flex flex-col ml-2.5'>
                             <div className='font-[450] text-[#1a1a1a]'>联系我们</div>
-                            <div className='text-[#6C3AE1] text-[14px] font-[330]'>166-0152-6267</div>
+                            <div className='text-[#6C3AE1] text-[14px] font-[330]'>quxin@approaching.ai</div>
                         </div>
                     </div>
                     <div className='flex items-start'>
@@ -48,13 +46,6 @@ const FloatBtnEle: React.FC = () => {
                         <div className='flex flex-col ml-2.5'>
                             <div className='font-[450] text-[#1a1a1a]'>售前咨询</div>
                             <div className='text-[#8D8D8D] text-[14px] font-[330]'>我们会第一时间为您解决问题</div>
-                        </div>
-                    </div>
-                    <div className='flex items-start'>
-                        <img src={wechat} alt="" style={{ fontSize: '20px', width: '20px', height: '20px' }} />
-                        <div className='flex flex-col ml-2.5'>
-                            <div className='font-[450] text-[#1a1a1a]'>微信咨询</div>
-                            <img src={ewm} alt="" />
                         </div>
                     </div>
                 </div>

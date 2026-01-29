@@ -18,6 +18,9 @@ import kunlun from '@/assets/images/img/kunpeng_logo.png'
 import adm from '@/assets/images/img/amd_logo.png'
 import feiteng from '@/assets/images/img/feiteng_logo.png'
 
+import img from '@/assets/images/img/amaas-relation.png'
+
+
 import { amaasTextConfig } from '../../textConfig'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
 
@@ -55,7 +58,8 @@ export const AMaaSRelation = () => {
             <motion.div className='amaas-relation-box' {...scrollInViewOnceProps}>
                 <div className='amaas-relation-box-left'>
                     <div className='amaas-relation-box-left-content'>
-                        <div className='amaas-left-item-title'>
+                        <img src={img} alt="" />
+                        {/* <div className='amaas-left-item-title'>
                             <div className='amaas-left-item-title-left'>{relation.layers[0]?.name}</div>
                             <div className='amaas-left-item-title-rig'>——{relation.layers[0]?.subtitle}</div>
                         </div>
@@ -128,7 +132,7 @@ export const AMaaSRelation = () => {
                             {resourceLogos.map((logo, idx) => (
                                 <img key={idx} src={logo.src} alt={logo.alt} className={`${logo.alt == 'intel' ? "w-[38px]" : ''}`} />
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className='amaas-relation-box-right'>

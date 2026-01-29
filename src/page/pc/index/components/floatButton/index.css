@@ -13,6 +13,7 @@
 }
 .ant-tooltip-inner{
     border-radius: 10px !important;
+    width: 260px;
 }
 .ant-float-btn-content{
     width: 40px;
