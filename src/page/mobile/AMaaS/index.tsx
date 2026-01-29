@@ -18,7 +18,7 @@ export const MobAMaaSPage = () => {
     return <div className='mob-amaas-page'>
         <MobAMaaSIndex />
         <MobAMaaSIntroduce />
-        {/* <MobAMaaSRelation /> */}
+        <MobAMaaSRelation />
         {/* <MobAMaasSuperior />
         <MobAMaasTestimony /> */}
         <PageConsult />

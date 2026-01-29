@@ -1,163 +1,61 @@
-// import { IconFont } from '@/utils/antdUtils'
-// import { motion } from 'motion/react'
-// import './index.css'
-// import sgl from '@/assets/images/img/sgl_logo.png'
-// import kt from '@/assets/images/img/kt_logo.png'
-// import vllm from '@/assets/images/img/vllm_logo.png'
-// import lmcache from '@/assets/images/img/lmcache_logo.png'
-// import moocake from '@/assets/images/img/mooncake_logo.png'
-// import nvidia from '@/assets/images/img/nvidia-logo.png'
-// import dynamo from '@/assets/images/img/dynamo_logo.png'
-// import ascend from '@/assets/images/img/ascend_logo.png'
-// import muxi from '@/assets/images/img/muxi_logo.png'
-// import tianshu from '@/assets/images/img/tianshu_logo.png'
-// import moer from '@/assets/images/img/moer_logo.png'
-// import intel from '@/assets/images/img/intel-logo.png'
-// import haiguang from '@/assets/images/img/haiguang_logo.png'
-// import kunlun from '@/assets/images/img/kunpeng_logo.png'
-// import adm from '@/assets/images/img/amd_logo.png'
-// import feiteng from '@/assets/images/img/feiteng_logo.png'
+import { IconFont } from '@/utils/antdUtils'
+import { motion } from 'motion/react'
+import './index.css'
+import img1 from '@/assets/images/mob/mob-amaas-relation1.webp'
+import img2 from '@/assets/images/mob/mob-amaas-relation2.webp'
+import img3 from '@/assets/images/mob/mob-amaas-relation3.webp'
+import { amaasTextConfig } from '../../textConfig'
+import { scrollInViewOnceProps } from '@/utils/motionConfig'
 
-// import { amaasTextConfig } from '../../textConfig'
-// import { scrollInViewOnceProps } from '@/utils/motionConfig'
+export const MobAMaaSRelation = () => {
+    const { relation } = amaasTextConfig;
 
-// export const MobAMaaSRelation = () => {
-//     const { relation } = amaasTextConfig;
-//     const inferenceEngines = [
-//         { src: sgl, alt: 'sgl' },
-//         { src: kt, alt: 'kt' },
-//         { src: vllm, alt: 'vllm' }
-//     ];
-//     const distributedFrameworks = [
-//         { src: lmcache, alt: 'lmcache' },
-//         { src: moocake, alt: 'mooncake' },
-//         { src: nvidia, alt: 'nvidia' },
-//         { src: dynamo, alt: 'dynamo' }
-//     ];
-//     const resourceLogos = [
-//         { src: nvidia, alt: 'nvidia' },
-//         { src: ascend, alt: 'ascend' },
-//         { src: muxi, alt: '沐曦' },
-//         { src: tianshu, alt: '天数' },
-//         { src: moer, alt: '摩尔' },
-//         { src: intel, alt: 'intel' },
-//         { src: haiguang, alt: '海光' },
-//         { src: kunlun, alt: '鲲鹏' },
-//         { src: adm, alt: 'amd' },
-//         { src: feiteng, alt: '飞腾' }
-//     ];
 
-//     return <div className='mob-amaas-relation-container'>
-//         <div className="mob-amaas-relation-content">
-//             <motion.div className='mob-amaas-relation-title' {...scrollInViewOnceProps}>
-//                 {relation.title}
-//             </motion.div>
-//             <motion.div className='mob-amaas-relation-box' {...scrollInViewOnceProps}>
-//                 <div className='mob-amaas-relation-box-left'>
-//                     <div className='mob-amaas-relation-box-left-content'>
-//                         <div className='mob-amaas-left-item-title'>
-//                             <div className='mob-amaas-left-item-title-left'>{relation.layers[0]?.name}</div>
-//                             <div className='mob-amaas-left-item-title-rig'>——{relation.layers[0]?.subtitle}</div>
-//                         </div>
-//                         <div className="mob-amaas-left-item-feater">
-//                             <div className='mob-amaas-item-feater-box mob-amaas-rel-feater-1'>
-//                                 <div className='mob-amaas-item-feater-title'>
-//                                     {relation.layers[0]?.features?.[0]?.title}
-//                                 </div>
-//                                 <div className='mob-amaas-item-feater-info'>
-//                                     {relation.layers[0]?.features?.[0]?.items?.map((item, idx) => (
-//                                         <div key={idx} className='feater-info-li'>{item}</div>
-//                                     ))}
-//                                 </div>
-//                             </div>
-//                             <div className='mob-amaas-item-feater-box mob-amaas-rel-feater-2'>
-//                                 <div className='mob-amaas-item-feater-title'>
-//                                     {relation.layers[0]?.features?.[1]?.title}
-//                                 </div>
-//                                 <div className='mob-amaas-item-feater-info'>
-//                                     <div className='feater-info-li mob-amaas-rel-full-width'>{relation.layers[0]?.features?.[1]?.items?.[0]}</div>
-//                                     <div className='mob-amaas-rel-inline-items'>
-//                                         {relation.layers[0]?.features?.[1]?.items?.slice(1).map((item, idx) => (
-//                                             <div key={idx} className='feater-info-li mob-amaas-rel-inline-item'>{item}</div>
-//                                         ))}
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                             <div className='mob-amaas-item-feater-box mob-amaas-rel-feater-3'>
-//                                 <div className='mob-amaas-item-feater-title'>
-//                                     {relation.layers[0]?.features?.[2]?.title}
-//                                 </div>
-//                                 <div className='mob-amaas-item-feater-info mob-amaas-rel-api-gap'>
-//                                     {relation.layers[0]?.features?.[2]?.items?.map((item, idx) => (
-//                                         <div key={idx} className='mob-feater-info-li mob-amaas-rel-api-item'>{item}</div>
-//                                     ))}
-//                                 </div>
-//                             </div>
-//                         </div>
-//                         <div className='mob-amaas-left-item-title'>
-//                             <div className='mob-amaas-left-item-title-left'>{relation.layers[1]?.name}</div>
-//                             <div className='mob-amaas-left-item-title-rig'>——{relation.layers[1]?.subtitle}</div>
-//                         </div>
-//                         <div className="mob-amaas-left-item-feater">
-//                             <div className='mob-amaas-item-feater-imgbox'>
-//                                 <div className='mob-amaas-item-feater-title'>
-//                                     {relation.layers[1]?.sections?.[0]?.title}
-//                                 </div>
-//                                 <div className='mob-amaas-item-feater-imgs'>
-//                                     {inferenceEngines.map((engine, idx) => (
-//                                         <img key={idx} src={engine.src} alt={engine.alt} />
-//                                     ))}
-//                                 </div>
-//                             </div>
-//                             <div className='mob-amaas-item-feater-imgbox'>
-//                                 <div className='mob-amaas-item-feater-title'>
-//                                     {relation.layers[1]?.sections?.[1]?.title}
-//                                 </div>
-//                                 <div className='mob-amaas-item-feater-imgs'>
-//                                     {distributedFrameworks.map((framework, idx) => (
-//                                         <img key={idx} src={framework.src} alt={framework.alt} />
-//                                     ))}
-//                                 </div>
-//                             </div>
-//                         </div>
-//                         <div className='mob-amaas-left-item-title'>
-//                             <div className='mob-amaas-left-item-title-left'>{relation.layers[2]?.name}</div>
-//                             <div className='mob-amaas-left-item-title-rig'>——{relation.layers[2]?.subtitle}</div>
-//                         </div>
-//                         <div className='mob-amaas-resource-layer'>
-//                             {resourceLogos.map((logo, idx) => (
-//                                 <img key={idx} src={logo.src} alt={logo.alt} className={`${logo.alt == 'intel' ? "w-[38px]" : ''}`} />
-//                             ))}
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <div className='mob-amaas-relation-box-right'>
-//                     <div className='mob-amaas-related-box'>
-//                         <div className='mob-amaas-rel-box-rig-title'>{relation.sidebar?.title}</div>
-//                         <div className='mob-amaas-rel-box-rig-desc'>{relation.sidebar?.description}</div>
-//                     </div>
-//                     <div className='mob-amaas-related-box'>
-//                         <div className='mob-amaas-rel-box-rig-title'>{relation.sidebar?.advantages?.title}</div>
-//                         <div className='mob-amaas-rel-box-rig-list'>
-//                             {relation.sidebar?.advantages?.items?.map((item, idx) => (
-//                                 <div key={idx} className='mob-amaas-rel-li'>
-//                                     <IconFont style={{ fontSize: '24px', color: '#6C3AE1' }} type='icon-dui'></IconFont>
-//                                     <div className='mob-amaas-rel-li-text'>{item}</div>
-//                                 </div>
-//                             ))}
-//                         </div>
-//                     </div>
-//                     <button className='mob-amaas-rel-box-rig-btn'>{relation.sidebar?.buttonText}</button>
-//                     <div className='mob-amaas-related-box'>
-//                         <div className='mob-amaas-rel-box-rig-title'>{relation.sidebar?.relatedCapabilities?.title}</div>
-//                         <div className='mob-amaas-related-list'>
-//                             {relation.sidebar?.relatedCapabilities?.items?.map((item, idx) => (
-//                                 <div key={idx} className='mob-amaas-related-li'>{item}</div>
-//                             ))}
-//                         </div>
-//                     </div>
-//                 </div>
-//             </motion.div>
-//         </div>
-//     </div>
-// } 
+    return <div className='mob-amaas-relation-container'>
+        <div className="mob-amaas-relation-content">
+            <motion.div className='mob-amaas-relation-title' {...scrollInViewOnceProps}>
+                {relation.title}
+            </motion.div>
+            <motion.div className='mob-amaas-relation-box' {...scrollInViewOnceProps}>
+                {
+                    relation.layers.map((layer, idx) => (
+                        <div className='mob-amaas-relation-box-item'>
+                            <div className='mob-amaas-relation-box-title'>
+                                <div className='mob-amaas-relation-box-text'>{layer.name}</div>
+                                <div className='mob-amaas-relation-box-desc'>———{layer.subtitle}</div>
+                            </div>
+                            <div className='mob-amaas-relation-box-item-content'>
+                                <img src={idx === 0 ? img1 : idx === 1 ? img2 : img3} alt='' className='mob-amaas-relation-img' />
+                            </div>
+                        </div>
+                    ))
+                }
+                <div className='mob-amaas-relation-box-right'>
+                    <div className='mob-amaas-related-box'>
+                        <div className='mob-amaas-rel-box-rig-title'>{relation.sidebar?.title}</div>
+                        <div className='mob-amaas-rel-box-rig-desc'>{relation.sidebar?.description}</div>
+                    </div>
+                    <div className='mob-amaas-related-box'>
+                        <div className='mob-amaas-rel-box-rig-title'>{relation.sidebar?.advantages?.title}</div>
+                        <div className='mob-amaas-rel-box-rig-list'>
+                            {relation.sidebar?.advantages?.items?.map((item, idx) => (
+                                <div key={idx} className='mob-amaas-rel-li'>
+                                    <IconFont style={{ fontSize: '20px', color: '#6C3AE1' }} type='icon-dui'></IconFont>
+                                    <div className='mob-amaas-rel-li-text'>{item}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className='mob-amaas-related-box'>
+                        <div className='mob-amaas-rel-box-rig-title'>{relation.sidebar?.relatedCapabilities?.title}</div>
+                        <div className='mob-amaas-related-list'>
+                            {relation.sidebar?.relatedCapabilities?.items?.map((item, idx) => (
+                                <div key={idx} className='mob-amaas-related-li'>{item}</div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+        </div>
+    </div>
+} 
