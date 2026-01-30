@@ -3,7 +3,9 @@ import { IconFont } from '@/utils/antdUtils';
 import { depList } from '@/page/textConfig';
 import { motion } from "motion/react"
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
+import { useNavigate } from 'react-router-dom';
 export default function DevelopPage() {
+    const navigator = useNavigate();
     return (
         <div className='mob-develop-box'>
             <div className='mob-dep-container'>
@@ -24,7 +26,7 @@ export default function DevelopPage() {
                                         <div className="mob-dep-tab-item-title">{item.name}</div>
                                         <div className="mob-dep-tab-item-desc">{item.desc}</div>
                                     </div>
-                                    {<div className={`mob-dev-more`} >了解更多</div>}
+                                    {<div className={`mob-dev-more`} onClick={()=>navigator('/contact')}>了解更多</div>}
                                 </motion.div>
                             </>
                         )

@@ -1,17 +1,23 @@
 import './index.css'
-import useAnimate from '@/common/useAnimate'
-import { useRef } from 'react';
 import { productFeatures, productTitle } from '@/page/textConfig';
 import { motion } from 'motion/react';
 import { initialLoadProps, scrollInViewSpringOnceProps } from '@/utils/motionConfig';
+import { useNavigate } from 'react-router-dom';
 
 export default function PageProduct() {
-    const elementRef = useRef<HTMLImageElement>(null)
-    //@ts-ignore
-    useAnimate({ elementRef, direction: 'right' });
-    const infoIcon = (path?: string) => {
+    const navigate = useNavigate()
+
+     const navigateFunction = (link: string) => {
+        if (link.startsWith('/')) {
+            navigate(link)
+        } else {
+            window.open(link, '_blank')
+        }
+
+    }
+    const infoIcon = (path: string) => {
         return (
-            <div className='mob-product-more'>了解更多</div>
+            <div className='mob-product-more' onClick={() => navigateFunction(path)}>了解更多</div>
         )
     }
 
@@ -33,7 +39,7 @@ export default function PageProduct() {
                             <div className='mob-product-items-desc'>{productFeatures[0].desc}</div>
                         </div>
                         <div className='mob-product-more-wrapper'>
-                            {infoIcon()}
+                            {infoIcon(productFeatures[0].link)}
                         </div>
                     </div>
                 </motion.div>
@@ -49,7 +55,7 @@ export default function PageProduct() {
                         <div className='mob-product-items-title'>{productFeatures[1].title}</div>
                         <div className='mob-product-items-desc'>{productFeatures[1].desc}</div>
                         <div className='mob-product-more-wrapper'>
-                            {infoIcon()}
+                            {infoIcon(productFeatures[1].link)}
                         </div>
                     </div>
                 </motion.div>
@@ -65,7 +71,7 @@ export default function PageProduct() {
                         <div className='mob-product-items-title'>{productFeatures[2].title}</div>
                         <div className='mob-product-items-desc  mob-product-desc-60'>{productFeatures[2].desc}</div>
                         <div className='mob-product-more-wrapper-small'>
-                            {infoIcon()}
+                            {infoIcon(productFeatures[2].link)}
                         </div>
                     </div>
                 </motion.div>
@@ -83,7 +89,7 @@ export default function PageProduct() {
                             <div className='mob-product-items-desc  mob-product-desc-60'>{productFeatures[3].desc}</div>
                         </div>
                         <div className='mob-product-more-wrapper-small'>
-                            {infoIcon()}
+                            {infoIcon(productFeatures[3].link)}
                         </div>
                     </div>
                 </motion.div>
@@ -102,7 +108,7 @@ export default function PageProduct() {
                             <div className='mob-product-items-desc mob-product-desc-60'>{productFeatures[4].desc}</div>
                         </div>
                         <div className='mob-product-more-wrapper-small'>
-                            {infoIcon()}
+                            {infoIcon(productFeatures[4].link)}
                         </div>
                     </div>
                 </motion.div>
@@ -120,8 +126,8 @@ export default function PageProduct() {
                             <div className='mob-product-items-title'>{productFeatures[5].title}</div>
                             <div className='mob-product-items-desc mob-product-desc-60'>{productFeatures[5].desc}</div>
                         </div>
-                        <div className='mob-product-more-wrapper'>
-                            {infoIcon()}
+                        <div className='mob-product-more-wrapper-small'>
+                            {infoIcon(productFeatures[5].link)}
                         </div>
                     </div>
                 </motion.div>

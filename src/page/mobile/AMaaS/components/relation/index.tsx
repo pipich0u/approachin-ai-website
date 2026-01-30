@@ -47,14 +47,14 @@ export const MobAMaaSRelation = () => {
                             ))}
                         </div>
                     </div>
-                    <div className='mob-amaas-related-box'>
+                    {/* <div className='mob-amaas-related-box'>
                         <div className='mob-amaas-rel-box-rig-title'>{relation.sidebar?.relatedCapabilities?.title}</div>
                         <div className='mob-amaas-related-list'>
                             {relation.sidebar?.relatedCapabilities?.items?.map((item, idx) => (
                                 <div key={idx} className='amaas-related-li' onClick={() => navigate(item.link)}>{item.text}</div>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </motion.div>
         </div>

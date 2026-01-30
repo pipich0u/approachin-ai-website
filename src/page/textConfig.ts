@@ -57,21 +57,20 @@ export const mobMenuHrefListDefault = [
         href: '/',
         isSelected: true,
         subItems: [
-            // { title: '灵启·AI小盒子', href: 'spark' },
-            { title: 'AI Studio 便携工作站', href: 'studio' },
-            { title: '大模型推理一体机', href: 'machine' },
-            { title: 'KLLM 推理引擎', href: 'kllm' },
-            { title: 'AMaaS 平台', href: 'amaas' },
+            // { title: 'AI Studio 便携工作站', href: '/studio' },
+            { title: '大模型推理一体机', href: '/machine' },
+            // { title: 'KLLM 推理引擎', href: '/kllm' }, 
+            { title: 'AMaaS 平台', href: '/amaas' },
             // { title: 'MVaaS 平台', href: 'mvaas' },
         ]
     },
     {
         title: '开源社区',
-        href: 'pageTechnology',
+        href: '',
         isSelected: true,
         subItems: [
             // { title: 'KTransformers', href: 'ktransformers' },
-            { title: 'Mooncake', href: 'mooncake' }
+            { title: 'Mooncake', href: '/mooncake' }
         ]
     },
     // {
@@ -81,12 +80,12 @@ export const mobMenuHrefListDefault = [
     // },
     // {
     //     title: '生态合作',
-    //     href: 'cooperate',
+    //     href: '/cooperate',
     //     isSelected: false
     // },
     {
         title: '趋境资讯',
-        href: 'information',
+        href: '/information',
         isSelected: false
     },
     {
@@ -94,8 +93,8 @@ export const mobMenuHrefListDefault = [
         href: 'about',
         isSelected: true,
         subItems: [
-            { title: '企业介绍', href: 'introduction' },
-            { title: '联系我们', href: 'contact' }
+            { title: '企业介绍', href: '/introduction' },
+            { title: '联系我们', href: '/contact' }
         ]
     },
 ]
@@ -132,7 +131,7 @@ export const bannerList = [
 
 export const productFeatures = [
     {
-        title: 'A·Spark 便携工作站',
+        title: '大模型推理一体机',
         desc: '内置趋境 KLLM 推理引擎，覆盖桌面级工作站、企业级一体机和大型分布式集群等型态',
         tag: ['单 4090 跑671B', '低成本起步', '弹性扩容', '国产化深度优化'],
         link: '/machine'
