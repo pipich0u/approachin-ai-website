@@ -1,24 +1,29 @@
 import { motion } from 'motion/react'
 import './index.css'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { solutionTextConfig } from '../../textConfig'
 import { IconFont } from '@/utils/antdUtils'
 import { trackEvent } from '@/utils/umami'
-
+import { useRef } from 'react'
 export const SolutionTab = () => {
 
     const { tabList, labelList } = solutionTextConfig;
     const [openSelectIdx, setOpenSelectIdx] = useState<boolean>(false)
     const [activeTab, setActiveTab] = useState(0)
     const [title, setTitle] = useState('')
-
+    const scrollRef = useRef<HTMLDivElement | null>(null)
     const handleSelectToggle = () => {
         setOpenSelectIdx(!openSelectIdx)
         setActiveTab(0)
+
     }
 
     const List = openSelectIdx ? labelList : tabList
+
+    useEffect(() => {
+        scrollRef.current?.scrollTo(0, 0)
+    }, [activeTab])
 
     return <div className='solution-tab-container'>
         <div className='solution-tab-content'>
@@ -33,11 +38,18 @@ export const SolutionTab = () => {
                             key={idx}
                             onClick={() => {
                                 setActiveTab(idx)
+
+                                scrollRef.current?.scrollTo({
+                                    top: 0,
+                                    behavior: 'auto',
+                                })
+
                                 trackEvent('tab-switch', {
                                     tabName: item.label,
                                     tabId: idx,
                                     location: 'Solution解决方案'
                                 });
+
                                 if (item.child) {
                                     handleSelectToggle()
                                     setTitle(item.label)
@@ -56,7 +68,11 @@ export const SolutionTab = () => {
                         {List[activeTab]?.desc}
                     </div>
                 </div>
-                <div className='solution-tabpanel-bottom' data-lenis-prevent>
+                <div
+                    className='solution-tabpanel-bottom'
+                    data-lenis-prevent
+                    ref={scrollRef}
+                >
                     {
                         List[activeTab]?.list?.map((items, index) => {
                             return <div className='solution-tabpanel-box' key={index}>
