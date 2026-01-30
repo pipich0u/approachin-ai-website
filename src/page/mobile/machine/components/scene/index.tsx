@@ -14,7 +14,7 @@ export const MobMachineScene = () => {
                 {
                     tabItems.map((item, index) => {
                         return <>
-                            <div className='mob-scene-items' key={index}>
+                            <motion.div {...scrollInViewSpringOnceProps} className='mob-scene-items' key={index}>
                                 <div className='mob-scene-items-title'>{item.label}</div>
                                 <div className='mob-scene-items-desc'>{item.desc}</div>
                                 <div className='mob-scene-items-list'>
@@ -26,8 +26,8 @@ export const MobMachineScene = () => {
                                         ))
                                     }
                                 </div>
-                            </div>
-                           { index!==2 && <div className='mob-scene-items-line'></div>}
+                            </motion.div>
+                            {index !== 2 && <motion.div {...scrollInViewSpringOnceProps} className='mob-scene-items-line' />}
                         </>
                     })
                 }
