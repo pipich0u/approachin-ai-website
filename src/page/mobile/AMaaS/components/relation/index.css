@@ -1,0 +1,155 @@
+/* =========================
+   容器布局
+========================= */
+.mob-amaas-relation-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: MiSans;
+    box-sizing: border-box;
+    background: #FAFAFF;
+}
+
+.mob-amaas-relation-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 53px 60px;
+}
+
+.mob-amaas-relation-title {
+    color: #333;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 450;
+    line-height: 150%;
+    letter-spacing: 0.76px;
+}
+
+.mob-amaas-relation-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 53px;
+    gap: 60px;
+}
+
+/* =========================
+   主内容区（层级块）
+========================= */
+.mob-amaas-relation-box-item {
+    width: 100%;
+}
+
+.mob-amaas-relation-box-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.mob-amaas-relation-box-text {
+    color: #333;
+    font-size: 32px;
+    font-weight: 450;
+    line-height: 150%;
+}
+
+.mob-amaas-relation-box-desc {
+    color: #666;
+    font-size: 24px;
+    font-weight: 330;
+    line-height: 150%;
+    margin-left: 10px;
+}
+
+.mob-amaas-relation-box-item-content {
+    width: 100%;
+}
+
+.mob-amaas-relation-box-item-content img {
+    width: 100%;
+    object-fit: contain;
+}
+
+/* =========================
+   右侧信息区
+========================= */
+.mob-amaas-relation-box-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #FAFAFA;
+    border-radius: 0 12px 12px 0;
+}
+
+.mob-amaas-related-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.mob-amaas-related-box:last-child {
+    border-top: 1px solid #E6E6E6;
+    padding: 40px 0;
+}
+
+.mob-amaas-rel-box-rig-title {
+    color: #000;
+    font-size: 32px;
+    font-weight: 450;
+    line-height: 150%;
+    letter-spacing: 0.64px;
+    margin-bottom: 20px;
+}
+
+.mob-amaas-rel-box-rig-desc {
+    color: #59595A;
+    font-size: 24px;
+    font-weight: 305;
+    line-height: 150%;
+    letter-spacing: 0.48px;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   优势列表
+========================= */
+.mob-amaas-rel-li {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.mob-amaas-rel-li-text {
+    color: #59595A;
+    font-size: 24px;
+    font-weight: 305;
+    line-height: 200%;
+    letter-spacing: 0.48px;
+    opacity: 0.9;
+}
+
+/* =========================
+   相关能力列表
+========================= */
+.mob-amaas-related-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 8px;
+}
+
+.mob-amaas-related-li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    background: #F2F2F4;
+    color: #59595A;
+    font-size: 30px;
+    font-weight: 305;
+    line-height: 150%;
+    letter-spacing: 0.28px;
+    opacity: 0.9;
+}

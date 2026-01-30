@@ -70,7 +70,7 @@ export default function PageContact() {
                                     return <div className='content-item-text'
                                         onClick={() => {
                                             trackButtonClick(`底部链接-${item.title}`, '页面底部联系区域', { href: item.href, title: item.title });
-                                            navigate(item.href);
+                                            navigate(`/${item.href}`);
                                         }}
                                         key={index + Date() + ""} >{item.title}</div>
                                 })
@@ -83,7 +83,7 @@ export default function PageContact() {
                                     return <div className='content-item-text'
                                         onClick={() => {
                                             trackButtonClick(`底部链接-${item.title}`, '页面底部联系区域', { href: item.href, title: item.title });
-                                            navigate(item.href);
+                                            navigate(`/${item.href}`);
                                         }}
                                         key={index + Date() + ""} >{item.title}</div>
                                 })
@@ -109,7 +109,7 @@ export default function PageContact() {
                                     return <div className='content-item-text'
                                         onClick={() => {
                                             trackButtonClick(`底部链接-${item.title}`, '页面底部联系区域', { href: item.href, title: item.title });
-                                            navigate(item.href);
+                                            navigate(`/${item.href}`);
                                         }}
                                         key={index + Date() + ""} >{item.title}</div>
                                 })

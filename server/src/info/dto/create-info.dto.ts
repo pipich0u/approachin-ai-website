@@ -1,5 +1,4 @@
-import { IsEmail, IsNotEmpty, IsOptional, IsPhoneNumber } from "class-validator";
-
+import { IsEmail, IsMobilePhone, IsNotEmpty, IsOptional } from "class-validator";
 export class CreateInfoDto {
   @IsNotEmpty()
   name: string;
@@ -7,7 +6,8 @@ export class CreateInfoDto {
   @IsOptional()
   company?: string;
 
-  @IsPhoneNumber('CN')
+  @IsOptional()
+  @IsMobilePhone('zh-CN',{  })
   phone: string;
 
   @IsEmail()

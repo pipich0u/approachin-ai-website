@@ -9,7 +9,7 @@ export const MobMachineAmaas = () => {
     return <div className='mob-amaas-container'>
         <div className='mob-amaas-content'>
             <motion.div className="mob-amaas-con-title" {...scrollInViewSpringOnceProps}>智能化运维 <br />大幅降低运维成本</motion.div>
-            <div className='mob-amaas-con-box'>
+            <motion.div className='mob-amaas-con-box' {...scrollInViewSpringOnceProps}>
                 <div className="mob-amaas-con-box-left">
                     <motion.div className="mob-amaas-con-box-title" {...scrollInViewSpringOnceProps}>{machinAmaas.platform}</motion.div>
                     <motion.div className="mob-amaas-con-box-list" {...scrollInViewSpringOnceProps}>
@@ -28,7 +28,7 @@ export const MobMachineAmaas = () => {
                     <img src={img2} alt="" className='selectNone' />
                     <img src={img3} alt="" className='selectNone' />
                 </motion.div>
-            </div>
+            </motion.div>
         </div>
     </div>
 }

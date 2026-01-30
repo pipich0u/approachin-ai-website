@@ -11,11 +11,11 @@ export const MobInformationIndex = () => {
             <motion.div {...initialLoadProps} className="mob-in-idx-content-title">
                 企业资讯
             </motion.div>
-            <motion.button {...initialLoadProps} className='mob-in-idx-content-btn  animated-button' onClick={() => {
+            <motion.button {...initialLoadProps} className='animated-button mob-in-idx-content-btn  ' onClick={() => {
                 trackButtonClick('联系我们', 'Information首屏');
                 navigate('/contact');
             }}>
-                <span className="text-white font-[380] bt-text">联系我们</span>
+                联系我们
             </motion.button>
         </div>
     </div>

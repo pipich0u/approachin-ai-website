@@ -6,13 +6,15 @@ import { IconFont } from "@/utils/antdUtils";
 import { PageTabList } from '@/page/textConfig';
 import { trackButtonClick } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';
+import { url } from "inspector";
+import { useNavigate } from "react-router-dom";
 
 export default function PageTab() {
     const [active, setActive] = useState(0);
     const [direction, setDirection] = useState(1);
     const navRef = useRef<HTMLDivElement>(null);
     const [underline, setUnderline] = useState({ left: 0, width: 0 });
-
+    const navigate =useNavigate()
     // 曝光埋点 - 首页Tab区域
     const exposureRef = useExposureTracking('Tab切换区域', '首页', { section: 'tab' });
 
@@ -79,7 +81,14 @@ export default function PageTab() {
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                             className="tab-cont-box"
                         >
-                            <div className="tab-cont-left">
+                            <div className="tab-cont-left" style={
+                                {
+                                    background:`url(/src/assets/images/img/${PageTabList.tablist[active].img})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    backgroundRepeat: 'no-repeat',
+                                }
+                            }>
                                 <div className="tab-cont-left-top">
                                     <div className="tab-cont-left-name">{PageTabList.tablist[active].name}</div>
                                     <div className="tab-cont-left-desc">{PageTabList.tablist[active].desc}</div>
@@ -88,6 +97,7 @@ export default function PageTab() {
                                     className='tab-cont-left-btn'
                                     onClick={() => {
                                         const tabName = PageTabList.tablist[active].name;
+                                        navigate('/solution')
                                         trackButtonClick(`了解详情-${tabName}`, '首页Tab区域', { tabId: active, tabName });
                                     }}
                                 >

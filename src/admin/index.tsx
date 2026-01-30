@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import { SolutionOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import { Layout, Menu, theme } from 'antd';
+import { ConfigProvider, Layout, Menu, theme } from 'antd';
 import './index.css'
 const { Header, Content, Footer, Sider } = Layout;
 import logo from '@/assets/svg/b-logo.svg'
+import { useNavigate } from 'react-router-dom';
 import TableContent from './components/tableContact';
 type MenuItem = Required<MenuProps>['items'][number];
+import zhCN from 'antd/locale/zh_CN'
 
 function getItem(
     label: React.ReactNode,
@@ -38,6 +40,7 @@ const AdminPage: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [selectedKey, setSelectedKey] = useState('1');
+    const navigate=useNavigate();
     const {
         token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
@@ -71,41 +74,43 @@ const AdminPage: React.FC = () => {
     };
 
     return (
-        <Layout style={{ minHeight: '100vh' }}>
-            <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-                <div className="p-4" >
-                    <img src={logo} alt="" />
-                </div>
-
-                <Menu
-                    theme="dark"
-                    selectedKeys={[selectedKey]}
-                    mode="inline"
-                    items={items}
-                    onClick={({ key }) => setSelectedKey(key)}
-                />
-            </Sider>
-            <Layout>
-                <Header style={{ padding: 0, background: '#fff' }} className="flex items-center justify-center" >
-                    <div className="text-[24px] text-[black]">趋境官网后台管理</div>
-                </Header>
-                <Content style={{ margin: ' 16px' }}>
-                    <div
-                        style={{
-                            padding: 20,
-                            minHeight: 730,
-                            background: '#fff',
-                            borderRadius: borderRadiusLG,
-                        }}
-                    >
-                        {renderContent()}
+        <ConfigProvider locale={zhCN}>
+            <Layout style={{ minHeight: '100vh' }}>
+                <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+                    <div className="p-4 cursor-pointer" >
+                        <img src={logo} alt="" onClick={()=>navigate('/')}/>
                     </div>
-                </Content>
-                <Footer style={{ textAlign: 'center' }}>
-                    更多功能持续开发中... <br /> ©{new Date().getFullYear()} 趋境科技
-                </Footer>
+
+                    <Menu
+                        theme="dark"
+                        selectedKeys={[selectedKey]}
+                        mode="inline"
+                        items={items}
+                        onClick={({ key }) => setSelectedKey(key)}
+                    />
+                </Sider>
+                <Layout>
+                    <Header style={{ padding: 0, background: '#fff' }} className="flex items-center justify-center" >
+                        <div className="text-[24px] text-[black]">趋境官网后台管理</div>
+                    </Header>
+                    <Content style={{ margin: ' 16px' }}>
+                        <div
+                            style={{
+                                padding: 20,
+                                minHeight: 730,
+                                background: '#fff',
+                                borderRadius: borderRadiusLG,
+                            }}
+                        >
+                            {renderContent()}
+                        </div>
+                    </Content>
+                    <Footer style={{ textAlign: 'center' }}>
+                        更多功能持续开发中... <br /> ©{new Date().getFullYear()} 趋境科技
+                    </Footer>
+                </Layout>
             </Layout>
-        </Layout>
+        </ConfigProvider>
     );
 };
 

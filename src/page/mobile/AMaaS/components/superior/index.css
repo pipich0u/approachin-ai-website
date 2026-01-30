@@ -1,0 +1,86 @@
+.mob-amaas-superior-container {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-family: MiSans;
+    box-sizing: border-box;
+    font-style: normal;
+}
+
+.mob-amaas-sup-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 60px;
+    padding-top: 80px;
+    position: relative;
+}
+
+.mob-amaas-sup-title {
+    color: #333;
+    font-size: 38px;
+    font-weight: 450;
+    line-height: 150%;
+    letter-spacing: 0.76px;
+    margin-bottom: 70px;
+}
+
+.mob-amaas-sup-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.mob-amaas-sup-tab-items {
+    width: 100%;
+    height: 208px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(90deg, #D6D7FE 0%, #FFF3FF 100%);
+    padding: 53px 45px;
+    border-radius: 20px;
+}
+
+.mob-amaas-sup-tab-items:nth-child(3) {
+    background: linear-gradient(90deg,
+            #C7DAFE 0%,
+            #F5F6FF 100%)
+}
+
+.mob-amaas-sup-tab-items:nth-child(2) {
+    background: linear-gradient(90deg,
+            #CFD9FE 0%,
+            #FAF5FF 100%);
+}
+
+.mob-amaas-sup-tab-title {
+    color: #333;
+    font-size: 30px;
+    font-weight: 450;
+    line-height: 150%;
+    letter-spacing: 0.6px;
+}
+
+.mob-amaas-sup-tab-desc {
+    color: #484848;
+    font-size: 24px;
+    font-weight: 305;
+    line-height: 150%;
+    letter-spacing: 0.28px;
+    margin-top: 8px;
+}
+
+.mob-amaas-sup-tab-info {
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+}
+
+.mob-amaas-sup-tab-info img {
+    width: 100%;
+}

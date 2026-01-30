@@ -29,7 +29,9 @@ export const AMaaSIntroduce = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className='amaas-in-item-img'></div>
+                        <div className='amaas-in-item-img'>
+                            <img src={item.img} alt="" />
+                        </div>
                     </motion.div>
                 ))}
             </div>

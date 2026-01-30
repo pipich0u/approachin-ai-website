@@ -7,14 +7,14 @@
     font-family: MiSans;
     background: #FFF;
     box-sizing: border-box;
-    background: url(/src/assets/images/img/amaas_bg.png) lightgray 50% / cover no-repeat;
+    background: url(/src/assets/images/img/amaas_bg.webp) lightgray 50% / cover no-repeat;
 }
 
 .amaas-content {
     width: 100%;
     max-width: 1440px;
     padding: 50px 100px;
-    height: 520px;
+    height: 550px;
     padding-bottom: 40px;
     display: flex;
     flex-direction: column;

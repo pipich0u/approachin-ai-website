@@ -42,15 +42,14 @@ const TableContent: React.FC = () => {
         openDetail,
         openEdit,
         closeModal,
+        setIsModalOpen
     } = useTable();
 
     // 分页获取数据
-    const fetchTableData = async () => {
-        setLoading(true);
+    const fetchTableData = async (silent = false) => {
+        if (!silent) setLoading(true)
         try {
             const res = await getPage({ page, pageSize });
-            console.log(res.data.data);
-
             const list = res.data.data.map((item: any) => ({
                 ...item,
                 key: item.id,
@@ -61,13 +60,28 @@ const TableContent: React.FC = () => {
         } catch (e) {
             message.error('数据加载失败');
         } finally {
-            setLoading(false);
+            if (!silent) setLoading(false)
         }
     };
 
     useEffect(() => {
-        fetchTableData();
-    }, [page, pageSize]);
+        let timer: number
+        let cancelled = false
+
+        const loop = async () => {
+            if (cancelled) return
+            await fetchTableData(true)
+            timer = window.setTimeout(loop, 5000)
+        }
+
+        loop()
+
+        return () => {
+            cancelled = true
+            clearTimeout(timer)
+        }
+    }, [page, pageSize])
+
 
     // 删除
     const handleDelete = async (ids: number[]) => {
@@ -83,7 +97,7 @@ const TableContent: React.FC = () => {
             setLoading(false);
         }
     };
-    
+
     const columns: TableColumnsType<DataType> = [
         { title: '姓名', dataIndex: 'name' },
         { title: '电话', dataIndex: 'phone' },
@@ -94,6 +108,9 @@ const TableContent: React.FC = () => {
             title: '时间',
             dataIndex: 'createTime',
             render: (t) => (t ? new Date(t).toLocaleString() : '-'),
+            sorter: (a, b) =>
+                new Date(a.createTime || 0).getTime() -
+                new Date(b.createTime || 0).getTime(),
         },
         {
             title: '是否已联系',
@@ -104,6 +121,7 @@ const TableContent: React.FC = () => {
                     checked={record.contact}
                     checkedChildren={<CheckOutlined />}
                     unCheckedChildren={<CloseOutlined />}
+                    onChange={() => message.info('请在编辑中修改！')}
                 />
             ),
         },
@@ -115,15 +133,10 @@ const TableContent: React.FC = () => {
                     <Button type="link" onClick={() => openEdit(record)}>
                         编辑
                     </Button>
-
                     <Button type="link" onClick={() => openDetail(record)}>
                         详情
                     </Button>
-                    <Button
-                        type="link"
-                        danger
-                        onClick={() => handleDelete([record.id])}
-                    >
+                    <Button type="link" danger onClick={() => handleDelete([record.id])}>
                         删除
                     </Button>
                 </div>
@@ -146,9 +159,17 @@ const TableContent: React.FC = () => {
         exportTable(exportData, '客户信息.xlsx');
     };
 
+    const handleOk = async (id: number, values?: { remark: string; contact: boolean }) => {
+        if (values) {
+            await updateItem(id, values)
+            message.success('更新成功')
+            fetchTableData()
+        }
+        setIsModalOpen(false)
+    }
+
     return (
         <div className="admin-table-page">
-            {/* 顶部操作栏 */}
             <div style={{
                 marginBottom: 16,
                 display: 'flex',
@@ -159,10 +180,8 @@ const TableContent: React.FC = () => {
                     onClick={handleExport}>
                     导出
                 </Button>
-                <Button
-                    danger
+                <Button danger loading={loading}
                     disabled={selectedRowKeys.length === 0}
-                    loading={loading}
                     onClick={() =>
                         handleDelete(selectedRowKeys as number[])
                     }>
@@ -170,7 +189,6 @@ const TableContent: React.FC = () => {
                 </Button>
             </div>
 
-            {/* 表格 */}
             <Table<DataType>
                 rowSelection={{
                     selectedRowKeys,
@@ -195,7 +213,7 @@ const TableContent: React.FC = () => {
                 open={isModalOpen}
                 isEditMode={isEditMode}
                 data={currentRow}
-                onOk={closeModal}
+                onOk={handleOk}
                 onCancel={closeModal}
             />
         </div >

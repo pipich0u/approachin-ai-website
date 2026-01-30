@@ -30,6 +30,8 @@ import { CustomLoggerService } from './modules/logger/logger.service';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { InfoModule } from './info/info.module';
+import { FeishuBotService } from './feishu-bot/feishu-bot.service';
+import { FeishuBotModule } from './feishu-bot/feishu-bot.module';
 
 @Module({
   imports: [
@@ -37,11 +39,12 @@ import { InfoModule } from './info/info.module';
     ConfigModule.forRoot({
       isGlobal: true,
       load: [appConfig],
-      envFilePath: ['.env.local', '.env'],
+      envFilePath: ['.env','.env.example' ],
     }),
 
     // 日志模块
     LoggerModule,
+    FeishuBotModule,
 
     // 业务模块
     InfoModule,
@@ -89,6 +92,8 @@ import { InfoModule } from './info/info.module';
       provide: APP_PIPE,
       useClass: ValidationPipe,
     },
+
+    FeishuBotService,
   ],
 })
 export class AppModule implements NestModule {

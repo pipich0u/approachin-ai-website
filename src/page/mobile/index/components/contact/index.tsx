@@ -6,11 +6,12 @@ import { mobMenuHrefListDefault } from '@/page/textConfig';
 import { useState } from 'react';
 import { IconFont } from '@/utils/antdUtils';
 import { getCopyrightYear } from '@/utils/transfrom';
+import { useNavigate } from 'react-router-dom';
 
 export default function PageContact() {
     const [expandedMenus, setExpandedMenus] = useState<Set<string>>(new Set())
     const [closingMenus, setClosingMenus] = useState<Set<string>>(new Set())
-
+    const navigator = useNavigate();
     const toggleSubmenu = (title: string) => {
         if (expandedMenus.has(title)) {
             // 开始关闭动画
@@ -51,7 +52,7 @@ export default function PageContact() {
                                         if (item.isSelected && item.subItems) {
                                             toggleSubmenu(item.title)
                                         } else {
-                                            console.log('Navigate to:', item.href)
+                                            navigator(item.href)
                                         }
                                     }}
                                 >
@@ -70,8 +71,7 @@ export default function PageContact() {
                                                 key={subItem.title}
                                                 className='mob-content-item-text'
                                                 onClick={() => {
-                                                    // 这里可以添加导航逻辑
-                                                    console.log('Navigate to:', subItem.href)
+                                                    navigator(subItem.href)
                                                 }}
                                             >
                                                 {subItem.title}

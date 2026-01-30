@@ -65,7 +65,7 @@
   color: #FFF;
   text-align: justify;
   font-family: MiSans;
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 330;
   line-height: 150%;
@@ -74,17 +74,17 @@
 }
 
 .mob-dep-tab-items:nth-child(1) {
-  background: url(/src/assets/images/img/dep_tab1.png) no-repeat;
+  background: url(/src/assets/images/img/dep_tab1.webp) no-repeat;
   background-size: cover;
 }
 
 .mob-dep-tab-items:nth-child(2) {
-  background: url(/src/assets/images/img/dep_tab3.png) no-repeat;
+  background: url(/src/assets/images/img/dep_tab3.webp) no-repeat;
   background-size: cover;
 }
 
 .mob-dep-tab-items:nth-child(3) {
-  background: url(/src/assets/images/img/dep_tab2.png) no-repeat;
+  background: url(/src/assets/images/img/dep_tab2.webp) no-repeat;
   background-size: cover;
 }
 

@@ -25,19 +25,19 @@ export const studioTextConfig = {
                 id: 0,
                 title: '训练场景',
                 desc: 'AI任务稳定运行，训练效率跟随卡数线性变化，趋境自研高性能引擎为千亿大模型的训练保驾护航。',
-                img:"/src/assets/images/img/studio1.png"
+                img:"/src/assets/images/img/studio1.webp"
             },
             {
                 id: 1,
                 title: '多框架开发场景',
                 desc: '兼容 Python/Java/C++ 及 PyTorch/TensorFlow 等主流框架，集成 Jupyter/VSCode 等在线 IDE，一键完成数据处理、模型调试与代码管理。',
-                img:"/src/assets/images/img/studio2.png"
+                img:"/src/assets/images/img/studio2.webp"
             },
             {
                 id: 2,
                 title: '镜像与资源管理场景',
                 desc: '提供 Web Shell 在线镜像构建能力，预置 GPU / 推理等基础镜像，支持 K8s 资源弹性调度，降低 AI 环境部署与运维成本。',
-                img:"/src/assets/images/img/studio3.png"
+                img:"/src/assets/images/img/studio3.webp"
             }
         ]
     }

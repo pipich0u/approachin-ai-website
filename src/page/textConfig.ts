@@ -57,36 +57,35 @@ export const mobMenuHrefListDefault = [
         href: '/',
         isSelected: true,
         subItems: [
-            // { title: '灵启·AI小盒子', href: 'spark' },
-            { title: 'AI Studio 便携工作站', href: 'studio' },
-            { title: '大模型推理一体机', href: 'machine' },
-            { title: 'KLLM 推理引擎', href: 'kllm' },
-            { title: 'AMaaS 平台', href: 'amaas' },
+            // { title: 'AI Studio 便携工作站', href: '/studio' },
+            { title: '大模型推理一体机', href: '/machine' },
+            // { title: 'KLLM 推理引擎', href: '/kllm' }, 
+            { title: 'AMaaS 平台', href: '/amaas' },
             // { title: 'MVaaS 平台', href: 'mvaas' },
         ]
     },
-    {
-        title: '开源社区',
-        href: 'pageTechnology',
-        isSelected: true,
-        subItems: [
-            // { title: 'KTransformers', href: 'ktransformers' },
-            { title: 'Mooncake', href: 'mooncake' }
-        ]
-    },
-    {
-        title: '解决方案',
-        href: 'solution',
-        isSelected: false
-    },
-    {
-        title: '生态合作',
-        href: 'cooperate',
-        isSelected: false
-    },
+    // {
+    //     title: '开源社区',
+    //     href: '',
+    //     isSelected: true,
+    //     subItems: [
+    //         // { title: 'KTransformers', href: 'ktransformers' },
+    //         { title: 'Mooncake', href: '/mooncake' }
+    //     ]
+    // },
+    // {
+    //     title: '解决方案',
+    //     href: 'solution',
+    //     isSelected: false
+    // },
+    // {
+    //     title: '生态合作',
+    //     href: '/cooperate',
+    //     isSelected: false
+    // },
     {
         title: '趋境资讯',
-        href: 'information',
+        href: '/information',
         isSelected: false
     },
     {
@@ -94,8 +93,8 @@ export const mobMenuHrefListDefault = [
         href: 'about',
         isSelected: true,
         subItems: [
-            { title: '企业介绍', href: 'introduction' },
-            { title: '联系我们', href: 'contact' }
+            { title: '企业介绍', href: '/introduction' },
+            { title: '联系我们', href: '/contact' }
         ]
     },
 ]
@@ -132,40 +131,40 @@ export const bannerList = [
 
 export const productFeatures = [
     {
-        title: 'A·Spark 便携工作站',
+        title: '大模型推理一体机',
         desc: '内置趋境 KLLM 推理引擎，覆盖桌面级工作站、企业级一体机和大型分布式集群等型态',
         tag: ['单 4090 跑671B', '低成本起步', '弹性扩容', '国产化深度优化'],
-        link:'/machine'
+        link: '/machine'
     },
     {
         title: '全可视化的“AI开发平台”',
         desc: 'AI Studio：覆盖从数据处理、模型开发训练到推理部署的全链路 AI 研发流程。',
         tag: ['训推一体', '全链可视', '敏捷开发'],
-        link:'/studio'
+        link: '/studio'
     },
     {
         title: '自主决策的“算力规划大脑”',
         desc: '将算力资源指标与业务 SLO对齐，实时感知业务变化，并动态调度算力资源',
         tag: ['SLO价值对齐', '智能资源规划', '自主决策'],
-        link:'/'
+        link: '/'
     },
     {
         title: '开箱即用的“模型服务平台”',
         desc: '预置数十种主流模型，集成丰富的硬件、模型、推理引擎等算力资源可视化能力',
         tag: ['内置数十模型', '资源监控', '可视运维', '知识库', '办公辅助'],
-        link:'/'
+        link: '/amaas'
     },
     {
         title: 'KTransformers',
         desc: 'CPU+GPU降低MOE大参数模型本地部署门槛，提升硬件资源利用率',
         tag: ['高SLA', '国产化兼容', '异构计算'],
-        link:'/'
+        link: 'https://github.com/kvcache-ai/ktransformers'
     },
     {
         title: 'Mooncake ',
         desc: 'GPU+CPU+内存+磁盘，大幅提升算力集群并发、吞吐',
         tag: ['高SLA', '国产化兼容', 'PD分离', '以存换算'],
-        link:'/mooncake'
+        link: '/mooncake'
     },
 ];
 export const productTitle = '模型价值即服务的产品理念'
@@ -189,86 +188,79 @@ export const PageTabList = {
                 title: '趋境价值',
                 icon: 'icon-dui',
                 content: ['单 4090D 工作站实现 6 个模型混合推理，成本降低 85%', '支撑 4 个场景/台，满足首 Token 延迟 和 decode 速度要求', 'AMaaS 管理平台屏蔽技术复杂性，客户只需关注业务自身']
-            }]
+            }],
+            img: 'index_tab1.webp'
         },
         {
             name: "高并发高吞吐", id: 1, icon: 'tab2',
-            desc: '依托趋境科技推理一体机解决方案，实现单 4090D 工作站实现 6 个模型混合推理，成本降低 85% 某海外投资机构',
+            desc: '依托趋境科技KLLM推理引擎，大幅度提升存量算力（16台8 卡 H200集群）吞吐性能，避免数千万的算力资源追加',
             info: [{
                 title: '客户痛点',
                 icon: 'icon-no',
-                content: ['数据不能上云，私有部署算力数百万起步', '缺少 AI 人才，部署调试运维等技术门槛高', 'AI 场景复杂，4 个业务场景需要 6 个模型混合推理']
+                content: ['开源引擎运行时，GPU 利用率不足', '集群总吞吐量仅能满足 30% 业务需求', '数千万硬件才能满足需求，投入产出比不足 1:0.2']
             }, {
                 title: '趋境价值',
                 icon: 'icon-dui',
-                content: ['单 4090D 工作站实现 6 个模型混合推理，成本降低 85%', '支撑 4 个场景/台，满足首 Token 延迟 和 decode 速度要求', 'AMaaS 管理平台屏蔽技术复杂性，客户只需关注业务自身']
-            }]
+                content: ['KLLM推理引擎优化后，总吞吐量 6 倍 + 跃升', '无需追加任何硬件即可完全满足业务增长需求，节约数千万硬件投资和隐形能耗、人力成本']
+            }],
+            img: 'index_tab2.webp'
         },
         {
             name: "ISV联合共创", id: 2, icon: 'tab3',
-            desc: '依托趋境科技推理一体机解决方案，实现单 4090D 工作站实现 6 个模型混合推理，成本降低 85% 某海外投资机构',
+            desc: '国内头部网络安全厂商，通过与趋境深度合作开发安全大模型一体机，实现AI赋能网络安全，抢占AI安全市场',
             info: [{
                 title: '客户痛点',
                 icon: 'icon-no',
-                content: ['数据不能上云，私有部署算力数百万起步', '缺少 AI 人才，部署调试运维等技术门槛高', 'AI 场景复杂，4 个业务场景需要 6 个模型混合推理']
+                content: ['部署成本高，难商业化', '网络安全行业深陷 “百亿模型内卷战”，同质化严重', '千亿级安全推理受限于高性能、低成本、易部署的“不可能三角”。']
             }, {
                 title: '趋境价值',
                 icon: 'icon-dui',
-                content: ['单 4090D 工作站实现 6 个模型混合推理，成本降低 85%', '支撑 4 个场景/台，满足首 Token 延迟 和 decode 速度要求', 'AMaaS 管理平台屏蔽技术复杂性，客户只需关注业务自身']
-            }]
+                content: ['推理引擎技术加持，落地成本直降300%', '安全业务创新与业绩有效增长，抢占AI安全市场份额', '提升了大模型在安全场景效率，远超同类竞品方案']
+            }],
+            img: 'index_tab3.webp'
         },
         {
             name: "AI开发环境敏捷交付", id: 3, icon: 'tab4',
-            desc: '依托趋境科技推理一体机解决方案，实现单 4090D 工作站实现 6 个模型混合推理，成本降低 85% 某海外投资机构',
+            desc: '军工行业卓越的应用开发商，面临时间紧急的AI应用开发任务，通过与趋境合作将6个月POC的目标缩短为1个月完成',
             info: [{
                 title: '客户痛点',
                 icon: 'icon-no',
-                content: ['数据不能上云，私有部署算力数百万起步', '缺少 AI 人才，部署调试运维等技术门槛高', 'AI 场景复杂，4 个业务场景需要 6 个模型混合推理']
+                content: ['作业场景无网络支持，无法依赖公有云 AI 开发环境', '市面多数一体机存在国产化适配不充分问题', 'AI 人才缺口大、团队规模小，推进项目难度极高']
             }, {
                 title: '趋境价值',
                 icon: 'icon-dui',
-                content: ['单 4090D 工作站实现 6 个模型混合推理，成本降低 85%', '支撑 4 个场景/台，满足首 Token 延迟 和 decode 速度要求', 'AMaaS 管理平台屏蔽技术复杂性，客户只需关注业务自身']
-            }]
+                content: ['推理一体机集成数十种模型，联合 AMaaS 模型服务平台一体交付，云下即可获得云上体验', '信创适配，零额外适配成本', 'POC 周期 6 个月 → 1 个月，撬动超千万元商机']
+            }],
+            img: 'index_tab4.webp'
         },
         {
-            name: "精准资源管理", id: 4, icon: 'tab5',
-            desc: '依托趋境科技推理一体机解决方案，实现单 4090D 工作站实现 6 个模型混合推理，成本降低 85% 某海外投资机构',
+            name: "资源精细化管理", id: 4, icon: 'tab5',
+            desc: '依托趋境科技AMaaS平台，实现根据业务场景精细资源匹配，大幅度提升算力资源利用率和AI性能',
             info: [{
                 title: '客户痛点',
                 icon: 'icon-no',
-                content: ['数据不能上云，私有部署算力数百万起步', '缺少 AI 人才，部署调试运维等技术门槛高', 'AI 场景复杂，4 个业务场景需要 6 个模型混合推理']
+                content: ['算力集群包括H100、A100 等近10种型号显卡，无专业管理平台', '高并发不足、资源利用率 <20%', '扩容需数千万元，ROI <1:0.2']
             }, {
                 title: '趋境价值',
                 icon: 'icon-dui',
-                content: ['单 4090D 工作站实现 6 个模型混合推理，成本降低 85%', '支撑 4 个场景/台，满足首 Token 延迟 和 decode 速度要求', 'AMaaS 管理平台屏蔽技术复杂性，客户只需关注业务自身']
-            }]
+                content: ['AMaaS + KLLM，资源利用率提升 3×；', '模型吞吐提升 4 倍，处理2000 个请求仅需 1.5 分钟', '首token响应时间减少41%，批量任务完成时间缩短 20%']
+            }],
+            img: 'index_tab5.webp'
         },
         {
             name: "超低TTFT", id: 5, icon: 'tab6',
-            desc: '依托趋境科技推理一体机解决方案，实现单 4090D 工作站实现 6 个模型混合推理，成本降低 85% 某海外投资机构',
+            desc: 'TTFT（首Token时延）不满足金融级的生产需求，依托KLLM推理优化引擎，实现无需购买高端算力TTFT下 降 84%',
             info: [{
                 title: '客户痛点',
                 icon: 'icon-no',
-                content: ['数据不能上云，私有部署算力数百万起步', '缺少 AI 人才，部署调试运维等技术门槛高', 'AI 场景复杂，4 个业务场景需要 6 个模型混合推理']
+                content: ['TTFT长期 300–400ms，制约 AI 财富管理“诊基”“盯盘”的实时性', 'H800 高端 GPU 集群利用率低于 40%', '峰值时段，TTFT 最长升至800毫秒，偶发风控决策超时']
             }, {
                 title: '趋境价值',
                 icon: 'icon-dui',
-                content: ['单 4090D 工作站实现 6 个模型混合推理，成本降低 85%', '支撑 4 个场景/台，满足首 Token 延迟 和 decode 速度要求', 'AMaaS 管理平台屏蔽技术复杂性，客户只需关注业务自身']
-            }]
-        },
-        {
-            name: "更多场景", id: 6, icon: 'tab7',
-            desc: '依托趋境科技推理一体机解决方案，实现单 4090D 工作站实现 6 个模型混合推理，成本降低 85% 某海外投资机构',
-            info: [{
-                title: '客户痛点',
-                icon: 'icon-no',
-                content: ['数据不能上云，私有部署算力数百万起步', '缺少 AI 人才，部署调试运维等技术门槛高', 'AI 场景复杂，4 个业务场景需要 6 个模型混合推理']
-            }, {
-                title: '趋境价值',
-                icon: 'icon-dui',
-                content: ['单 4090D 工作站实现 6 个模型混合推理，成本降低 85%', '支撑 4 个场景/台，满足首 Token 延迟 和 decode 速度要求', 'AMaaS 管理平台屏蔽技术复杂性，客户只需关注业务自身']
-            }]
-        }]
+                content: ['TTFT 降 84%，从优化前 350 毫秒降至 56 毫秒', '单卡 GPU 利用率 38%→82%，推理承载量提升 2.1×', '15 万次/秒峰值下，TTFT 波动 ≤5ms，风控成功率 99.99%']
+            }],
+            img: 'index_tab6.webp'
+        },]
 }
 
 export const cooperateList = {

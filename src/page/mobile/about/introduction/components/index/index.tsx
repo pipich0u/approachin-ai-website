@@ -32,7 +32,7 @@ export const MobIntroductionIndex = () => {
             </div>
 
             {/* 公司介绍区域 */}
-            <div className='mob-introduction-idx-company-box'>
+            <motion.div {...initialLoadProps} className='mob-introduction-idx-company-box'>
                 <div className='mob-introduction-idx-company'>
                     <motion.div {...initialLoadProps} className="mob-introduction-idx-company-size mob-introduction-idx-company-name">
                         {introductionList.companyName}
@@ -47,7 +47,7 @@ export const MobIntroductionIndex = () => {
                     ))}
 
                     {/* 解决方案区域 */}
-                    <motion.div {...scrollInViewOnceProps} className='mob-introduction-idx-company-desc'>
+                    <motion.div {...initialLoadProps} className='mob-introduction-idx-company-desc'>
                         <div className='mob-introduction-idx-company-desc-btn' />
                         {solutionSection.titles.map((title, index) => (
                             <div key={index} className={`mob-introduction-idx-company-desc-title${index === solutionSection.titles.length - 1 ? ' mob-introduction-mb-3' : ''}`}>
@@ -66,7 +66,7 @@ export const MobIntroductionIndex = () => {
                         <div className='mob-introduction-idx-company-desc-title mob-introduction-mb-3'>{recognitionSection.title}</div>
                         <div className="mob-introduction-idx-company-content mob-introduction-indent">{recognitionSection.content}</div>
                     </motion.div>
-                    <motion.div {...initialLoadProps} className='mob-introduction-idx-company-team'>
+                    <motion.div {...scrollInViewOnceProps} className='mob-introduction-idx-company-team'>
                         {introductionList.companyData.map((item, index) => (
                             <div key={index} className="mob-introduction-idx-company-data-item">
                                 <div className="mob-introduction-idx-company-data-item-num">{item.num}</div>
@@ -75,7 +75,7 @@ export const MobIntroductionIndex = () => {
                         ))}
                     </motion.div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

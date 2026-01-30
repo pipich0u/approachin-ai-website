@@ -25,6 +25,7 @@ import AdminPage from "@/admin"
 import { MobIntroductionPage } from "@/page/mobile/about/introduction"
 import { MobInformationPage } from "@/page/mobile/Information"
 import { MobMachinePage } from "@/page/mobile/machine"
+import { MobAMaaSPage } from "@/page/mobile/AMaaS"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -57,6 +58,10 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     {
                         path: "machine",
                         element: <MobMachinePage />,
+                    },
+                    {
+                        path: "amaas",
+                        element: <MobAMaaSPage />,
                     },
                 ],
             },
