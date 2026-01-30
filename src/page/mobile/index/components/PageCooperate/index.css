@@ -47,7 +47,7 @@
     width: 540px;
     font-weight: 305;
     font-style: Normal;
-    font-size: 24px;
+    font-size: 27px;
     line-height: 150%;
     text-align: center;
     color: #000;
@@ -202,7 +202,7 @@
     gap: 4px;
     padding: 10px 30px;
     border-color: transparent;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     box-shadow: 0 0 0 2px #ffffff;
     cursor: pointer;

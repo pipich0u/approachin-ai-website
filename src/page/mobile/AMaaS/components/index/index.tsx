@@ -16,7 +16,7 @@ export const MobAMaaSIndex = () => {
                 {index.features.map((feature, idx) => (
                     <div key={idx} style={{ display: 'contents' }}>
                         <div className='mob-amaas-index-desc-text'>{feature}</div>
-                        {idx < index.features.length - 1 && <div className="mob-amaas-index-desc-line">|</div>}
+                        {!(idx % 2) && <div className="mob-amaas-index-desc-line">|</div>}
                     </div>
                 ))}
             </motion.div>

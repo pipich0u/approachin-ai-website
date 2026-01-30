@@ -11,7 +11,7 @@
 }
 
 .mob-introduction-idx-company-box {
-    height: 1194px;
+    height: 1294px;
     width: 100%;
     position: relative;
 }
@@ -67,8 +67,9 @@
 
 /* ========== 公司介绍卡片 ========== */
 .mob-introduction-idx-company {
-    width: 670px;
-    height: 1554px;
+    width: 90%;
+    max-width: 670px;
+    height: 1654px;
     padding: 60px;
     position: absolute;
     left: 50%;
@@ -121,7 +122,7 @@
 
 .mob-introduction-idx-company-content {
     color: #666;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 380;
     line-height: 180%;
     letter-spacing: 0.32px;

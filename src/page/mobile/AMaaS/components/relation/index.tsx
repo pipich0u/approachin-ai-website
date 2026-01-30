@@ -17,10 +17,10 @@ export const MobAMaaSRelation = () => {
             <motion.div className='mob-amaas-relation-title' {...scrollInViewOnceProps}>
                 {relation.title}
             </motion.div>
-            <motion.div className='mob-amaas-relation-box' {...scrollInViewOnceProps}>
+            <div className='mob-amaas-relation-box' {...scrollInViewOnceProps}>
                 {
                     relation.layers.map((layer, idx) => (
-                        <div className='mob-amaas-relation-box-item'>
+                        <motion.div {...scrollInViewOnceProps} className='mob-amaas-relation-box-item'>
                             <div className='mob-amaas-relation-box-title'>
                                 <div className='mob-amaas-relation-box-text'>{layer.name}</div>
                                 <div className='mob-amaas-relation-box-desc'>———{layer.subtitle}</div>
@@ -28,15 +28,15 @@ export const MobAMaaSRelation = () => {
                             <div className='mob-amaas-relation-box-item-content'>
                                 <img src={idx === 0 ? img1 : idx === 1 ? img2 : img3} alt='' className='mob-amaas-relation-img' />
                             </div>
-                        </div>
+                        </motion.div>
                     ))
                 }
                 <div className='mob-amaas-relation-box-right'>
-                    <div className='mob-amaas-related-box'>
+                    <motion.div {...scrollInViewOnceProps} className='mob-amaas-related-box'>
                         <div className='mob-amaas-rel-box-rig-title'>{relation.sidebar?.title}</div>
                         <div className='mob-amaas-rel-box-rig-desc'>{relation.sidebar?.description}</div>
-                    </div>
-                    <div className='mob-amaas-related-box'>
+                    </motion.div>
+                    <motion.div {...scrollInViewOnceProps} className='mob-amaas-related-box'>
                         <div className='mob-amaas-rel-box-rig-title'>{relation.sidebar?.advantages?.title}</div>
                         <div className='mob-amaas-rel-box-rig-list'>
                             {relation.sidebar?.advantages?.items?.map((item, idx) => (
@@ -46,7 +46,7 @@ export const MobAMaaSRelation = () => {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
                     {/* <div className='mob-amaas-related-box'>
                         <div className='mob-amaas-rel-box-rig-title'>{relation.sidebar?.relatedCapabilities?.title}</div>
                         <div className='mob-amaas-related-list'>
@@ -56,7 +56,7 @@ export const MobAMaaSRelation = () => {
                         </div>
                     </div> */}
                 </div>
-            </motion.div>
+            </div>
         </div>
     </div>
 } 

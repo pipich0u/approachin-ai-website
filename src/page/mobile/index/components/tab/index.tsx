@@ -80,6 +80,14 @@ export default function PageTab() {
                             exit={{ opacity: 0, x: direction * -50 }}
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                             className="mob-tab-cont-box"
+                            style={
+                                {
+                                    background: `url(/src/assets/images/img/${PageTabList.tablist[active].img})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    backgroundRepeat: 'no-repeat',
+                                }
+                            }
                         >
                             <div className="mob-tab-cont-box-top">
                                 <div className="mob-tab-cont-box-name">{PageTabList.tablist[active].name}</div>

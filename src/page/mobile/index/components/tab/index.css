@@ -128,8 +128,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: url(/src/assets/images/img/tab-cont-bg.png) no-repeat center;
-    background-size: cover;
     padding: 50px;
     border-radius: 20px;
 }
@@ -174,6 +172,7 @@
 
 .mob-tab-cont-bottom-icon {
     font-size: 28px !important;
+    margin-right: 8px;
 }
 
 .mob-tab-cont-bottom-box {}
@@ -193,7 +192,7 @@
 
 .mob-tab-cont-bottom-li {
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 
 .mob-tab-cont-bottom-li-text {

@@ -41,4 +41,7 @@
 .mob-in-idx-content-btn {
     padding: 10px 44px;
     box-shadow: none;
+    font-size: 18px !important;
+    color: #fff;
+    font-weight: 305;
 }
