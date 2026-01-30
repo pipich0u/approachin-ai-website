@@ -20,9 +20,9 @@ export const MobMachinePage = () => {
         <MobMachineIndex />
         <MobMachineIntroduce />
         <MobMachineAmaas />
-        <MobMachineCompare />
+        {/* <MobMachineCompare /> */}
         <MobMachineProduct />
-        {/* <MobMachineScene /> */}
+        <MobMachineScene />
         <PageConsult />
         <PageContact />
     </div>

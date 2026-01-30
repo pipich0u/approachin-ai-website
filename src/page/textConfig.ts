@@ -64,15 +64,15 @@ export const mobMenuHrefListDefault = [
             // { title: 'MVaaS 平台', href: 'mvaas' },
         ]
     },
-    {
-        title: '开源社区',
-        href: '',
-        isSelected: true,
-        subItems: [
-            // { title: 'KTransformers', href: 'ktransformers' },
-            { title: 'Mooncake', href: '/mooncake' }
-        ]
-    },
+    // {
+    //     title: '开源社区',
+    //     href: '',
+    //     isSelected: true,
+    //     subItems: [
+    //         // { title: 'KTransformers', href: 'ktransformers' },
+    //         { title: 'Mooncake', href: '/mooncake' }
+    //     ]
+    // },
     // {
     //     title: '解决方案',
     //     href: 'solution',
