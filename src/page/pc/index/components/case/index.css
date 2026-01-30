@@ -72,6 +72,8 @@
   width: 190px;
   max-height: 70px;
   flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .case-mask-left {

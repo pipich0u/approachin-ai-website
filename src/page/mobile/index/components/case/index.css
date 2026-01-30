@@ -50,6 +50,7 @@
   height: 68px;
   animation: scroll-infinite 70s linear infinite;
 }
+
 /* 
 .mob-case-scroll-track:hover {
   animation-play-state: paused;
@@ -71,6 +72,11 @@
   /* max-height: 20px; */
   margin-top: 20px;
   flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.mob-item-img img{
+  width: 100%;
 }
 
 .mob-case-mask-left {
