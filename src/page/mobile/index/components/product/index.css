@@ -84,8 +84,13 @@
     /* padding: 0 2.5rem; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
+}
+.mob-product-3-content-top{
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .mob-product-tags {
@@ -130,7 +135,7 @@
 }
 
 .mob-product-desc-60 {
-    width: 60%;
+    width: 50%;
 }
 
 .mob-product-more-wrapper {

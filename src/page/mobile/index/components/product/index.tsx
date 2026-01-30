@@ -54,9 +54,9 @@ export default function PageProduct() {
                         </div>
                         <div className='mob-product-items-title'>{productFeatures[1].title}</div>
                         <div className='mob-product-items-desc'>{productFeatures[1].desc}</div>
-                        <div className='mob-product-more-wrapper'>
+                        {/* <div className='mob-product-more-wrapper'>
                             {infoIcon(productFeatures[1].link)}
-                        </div>
+                        </div> */}
                     </div>
                 </motion.div>
                 <motion.div className='mob-product-items mob-product-3'>
@@ -70,9 +70,9 @@ export default function PageProduct() {
                         </div>
                         <div className='mob-product-items-title'>{productFeatures[2].title}</div>
                         <div className='mob-product-items-desc  mob-product-desc-60'>{productFeatures[2].desc}</div>
-                        <div className='mob-product-more-wrapper-small'>
+                        {/* <div className='mob-product-more-wrapper-small'>
                             {infoIcon(productFeatures[2].link)}
-                        </div>
+                        </div> */}
                     </div>
                 </motion.div>
                 <motion.div className='mob-product-items mob-product-3'>
@@ -88,14 +88,14 @@ export default function PageProduct() {
                             <div className='mob-product-items-title'>{productFeatures[3].title}</div>
                             <div className='mob-product-items-desc  mob-product-desc-60'>{productFeatures[3].desc}</div>
                         </div>
-                        <div className='mob-product-more-wrapper-small'>
+                        <div className='mob-product-more-wrapper-small ' style={{marginTop:'10px'}}>
                             {infoIcon(productFeatures[3].link)}
                         </div>
                     </div>
                 </motion.div>
                 <motion.div {...scrollInViewSpringOnceProps} className='mob-product-items mob-product-4'>
                     <div className='mob-product-3-content'>
-                        <div>
+                        <div className='mob-product-3-content-top'>
                             <div className='mob-product-tags'>
                                 <div className='mob-product-items-tag mob-tag3'>KLLM</div>
                                 {
@@ -107,14 +107,14 @@ export default function PageProduct() {
                             <div className='mob-product-items-title'>{productFeatures[4].title}</div>
                             <div className='mob-product-items-desc mob-product-desc-60'>{productFeatures[4].desc}</div>
                         </div>
-                        <div className='mob-product-more-wrapper-small'>
+                        {/* <div className='mob-product-more-wrapper-small'>
                             {infoIcon(productFeatures[4].link)}
-                        </div>
+                        </div> */}
                     </div>
                 </motion.div>
                 <motion.div {...scrollInViewSpringOnceProps} className='mob-product-items mob-product-4'>
                     <div className='mob-product-3-content'>
-                        <div>
+                        <div className='mob-product-3-content-top'>
                             <div className='mob-product-tags'>
                                 <div className='mob-product-items-tag mob-tag3'>KLLM</div>
                                 {
@@ -126,9 +126,9 @@ export default function PageProduct() {
                             <div className='mob-product-items-title'>{productFeatures[5].title}</div>
                             <div className='mob-product-items-desc mob-product-desc-60'>{productFeatures[5].desc}</div>
                         </div>
-                        <div className='mob-product-more-wrapper-small'>
+                        {/* <div className='mob-product-more-wrapper-small'>
                             {infoIcon(productFeatures[5].link)}
-                        </div>
+                        </div> */}
                     </div>
                 </motion.div>
             </div>

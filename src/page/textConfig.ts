@@ -152,7 +152,7 @@ export const productFeatures = [
         title: '开箱即用的“模型服务平台”',
         desc: '预置数十种主流模型，集成丰富的硬件、模型、推理引擎等算力资源可视化能力',
         tag: ['内置数十模型', '资源监控', '可视运维', '知识库', '办公辅助'],
-        link: '/'
+        link: '/amaas'
     },
     {
         title: 'KTransformers',

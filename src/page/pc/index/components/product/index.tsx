@@ -84,9 +84,9 @@ export default function PageProduct() {
                         <div className='mt-4'>
                             <div className='text-[#333] font-[520] text-[18px] leading-[150%]'>{productFeatures[2].title}</div>
                             <div className='text-[14px] text-[#666] font-[330] leading-[150%] w-[50%]'>{productFeatures[2].desc}</div>
-                            <div className='mt-5'>
+                            {/* <div className='mt-5'>
                                 {infoIcon(productFeatures[2].title, productFeatures[2].tag.join(','), productFeatures[2].link)}
-                            </div>
+                            </div> */}
                         </div>
                     </motion.div>
                     <motion.div className='product-items product-3 p-[30px] w-[400px] h-60 rounded-[20px] '>
