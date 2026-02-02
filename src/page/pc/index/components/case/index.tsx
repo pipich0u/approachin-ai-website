@@ -9,7 +9,15 @@ export default function PageCase() {
     const list = [...arr, ...arr]
     // 曝光埋点 - 首页客户案例区域
     const exposureRef = useExposureTracking('客户案例区域', '首页', { section: 'case' });
-
+    const logos = import.meta.glob(
+        '@/assets/images/logo/*.png',
+        {
+            eager: true,
+            import: 'default'
+        }
+    ) as Record<string, string>
+    const getLogo = (num: number) =>
+        logos[`/src/assets/images/logo/partner${num}.png`]
     return (
         <div className='case' ref={exposureRef}>
             <motion.div {...scrollInViewSpringProps} className='case-title'>更多客户</motion.div>
@@ -19,7 +27,7 @@ export default function PageCase() {
                         {
                             list.map((item, index) => (
                                 <div className="item-img" key={index}>
-                                    <img src={`/src/assets/images/logo/partner${item}.png`} />
+                                    <img src={getLogo(item)} alt={`partner-${item}`} />
                                 </div>
                             ))
                         }

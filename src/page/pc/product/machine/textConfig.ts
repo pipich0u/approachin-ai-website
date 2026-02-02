@@ -1,3 +1,8 @@
+import machine1 from '@/assets/images/mob/mob-machine1.png';
+import machine2 from '@/assets/images/mob/mob-machine2.png';
+import machine3 from '@/assets/images/mob/mob-machine3.png';
+import machine4 from '@/assets/images/mob/mob-machine4.png';
+
 export const machineTextConfig = {
     pageName: 'AI算力解决方案页面',
     index: {
@@ -34,22 +39,22 @@ export const machineTextConfig = {
             {
                 title: '异构推理',
                 items: ['GPU+CPU异构推理', '算力门槛降低10倍', '让671B放到办公桌上',],
-                img: "/src/assets/images/mob/mob-machine1.png"
+                img: machine1
             },
             {
                 title: '以存换算',
                 items: ['将推理中间结果存储在内存或磁盘', '避免重复计算，计算量降低 10倍', '用户请求延迟降低10倍',],
-                img: "/src/assets/images/mob/mob-machine2.png"
+                img: machine2
             },
             {
                 title: 'PD分离',
                 items: ['基于算力特征搭配GPU，优化总体成本', 'P/D分离，集群并发量提升5倍', '12节点既支持万级并发',],
-                img: "/src/assets/images/mob/mob-machine3.png"
+                img: machine3
             },
             {
                 title: '多样场景',
                 items: ['桌面级小盒子百亿模型流畅跑', '企业级服务器单4090跑千亿模型', '支持弹性扩容至大规模集群',],
-                img: "/src/assets/images/mob/mob-machine4.png"
+                img: machine4
             },
         ]
     },

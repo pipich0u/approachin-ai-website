@@ -8,11 +8,22 @@ export default function CooperateBuddy() {
     const row2 = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
     const row3 = [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
 
+    const logos = import.meta.glob(
+        '@/assets/images/logo/*.png',
+        {
+            eager: true,
+            import: 'default'
+        }
+    ) as Record<string, string>
+
+    const getLogo = (num: number) =>
+        logos[`/src/assets/images/logo/partner${num}.png`]
+
     const renderRow = (list: number[], reverse = false) => (
         <div className={`buddy-scroll-track ${reverse ? 'buddy-backup' : ''}`}>
             {[...list, ...list, ...list].map((item, index) => (
                 <div className="buddy-items" key={index}>
-                    <img src={`/src/assets/images/logo/partner${item}.png`} />
+                    <img src={getLogo(item)} alt={`partner-${item}`} />
                 </div>
             ))}
         </div>

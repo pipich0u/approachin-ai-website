@@ -18,7 +18,7 @@ export const AMaasTestimony = () => {
                         {testimony.list.map((item, index) => (
                             <div className='testimony-items' key={index}>
                                 <div className='testimony-items-icon'>
-                                    <img src={`/src/assets/images/logo/testimony${item.icon}.png`} alt="" />
+                                    <img src={item.icon} alt="" />
                                 </div>
                                 <div className='testimony-items-desc'>{item.desc}</div>
                                 <div className='testimony-items-link' onClick={()=>window.open(item.link)}>
@@ -30,7 +30,7 @@ export const AMaasTestimony = () => {
                         {testimony.list.map((item, index) => (
                             <div className='testimony-items' key={index}>
                                 <div className='testimony-items-icon'>
-                                    <img src={`/src/assets/images/logo/testimony${item.icon}.png`} alt="" />
+                                    <img src={item.icon} alt="" />
                                 </div>
                                 <div className='testimony-items-desc'>{item.desc}</div>
                                 <div className='testimony-items-link' onClick={()=>window.open(item.link)}>

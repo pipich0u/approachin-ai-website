@@ -2,6 +2,14 @@ import step1 from '@/assets/images/img/moon-step1.png'
 import step2 from '@/assets/images/img/moon-step2.png'
 import step3 from '@/assets/images/img/moon-step3.png'
 import step4 from '@/assets/images/img/moon-step4.png'
+import mylogo from '@/assets/images/img/my.webp'
+import mybg from '@/assets/images/img/my_bg.webp'
+import aliyunlogo from '@/assets/images/img/aliyun.webp'
+import aliyunbg from '@/assets/images/img/ali_bg.webp'
+import moonlogo from '@/assets/images/img/shot.png'
+import moonbg from '@/assets/images/img/shot_bg.webp'
+import xflogo from '@/assets/images/img/xunfei.webp'
+import xfbg from '@/assets/images/img/xf_bg.webp'
 
 
 export const moonBannerList = {
@@ -26,23 +34,23 @@ export const MoonInfluenceList = {
     title: 'Mooncake 技术影响力',
     items: [
         {
-            img: '/src/assets/images/img/my.webp',
-            bg: '/src/assets/images/img/my_bg.webp',
+            img: mylogo,
+            bg: mybg,
             desc: '蚂蚁集团大规模多轮对话场景中，面对高并发交互需求与严苛的响应时效要求，趋境通过核心调度技术实现模块深度集成，推动首词响应时间大幅下降84%，显著优化用户交互体验；',
         },
         {
-            img: '/src/assets/images/img/aliyun.webp',
-            bg: '/src/assets/images/img/ali_bg.webp',
+            img: aliyunlogo,
+            bg: aliyunbg,
             desc: '阿里云超大规模云算力平台，针对海量用户推理需求与成本控制双重诉求，趋境依托自主研发的核心技术，在仅产生20%性能影响的前提下，助力客户成功达成低成本运营目标；',
         },
         {
-            img: '/src/assets/images/img/shot.png',
-            bg: '/src/assets/images/img/shot_bg.webp',
+            img: moonlogo,
+            bg: moonbg,
             desc: '月之暗面合作中，承接千万级用户规模的 Kimi 大模型核心流量承载任务，面对超大算力调度需求与高稳定性要求，通过精准调度优化实现 75% 的系统吞吐量提升，保障大规模并发请求稳定处理；',
         },
         {
-            img: '/src/assets/images/img/xunfei.webp',
-            bg: '/src/assets/images/img/xf_bg.webp',
+            img: xflogo,
+            bg: xfbg,
             desc: '科大讯飞星辰 MaaS 大规模集群项目中，针对规模化服务落地的极致算力效率要求，趋境基于核心技术构建优化方案，实现性能突破，为 MaaS 服务规模化落地提供核心支撑；',
         },
     ]

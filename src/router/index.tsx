@@ -18,7 +18,6 @@ import { SolutionPage } from "@/page/pc/solution"
 import { StudioPage } from "@/page/pc/product/studio"
 // import { MVaaSPage } from "@/page/pc/product/MVaaS"
 import { KLLMPage } from "@/page/pc/product/KLLM"
-import { SparkPage } from "@/page/pc/product/spark"
 import { ContactPage } from "@/page/pc/about/contact"
 import { MobContactPage } from "@/page/mobile/about/contact"
 import AdminPage from "@/admin"
@@ -120,10 +119,6 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                 {
                     path: "studio",
                     element: <StudioPage />,
-                },
-                {
-                    path: "spark",
-                    element: <SparkPage />,
                 },
                 {
                     path: "introduction",
