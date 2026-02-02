@@ -1,3 +1,15 @@
+import amaasnav1 from '@/assets/images/img/amaas_nav1.png'
+import amaasnav2 from '@/assets/images/img/amaas_nav2.png'
+import amaasnav3 from '@/assets/images/img/amaas_nav3.png'
+import amaasnav4 from '@/assets/images/img/amaas_nav4.png'
+
+import testimony1 from '@/assets/images/logo/testimony1.png'
+import testimony2 from '@/assets/images/logo/testimony2.png'
+import testimony3 from '@/assets/images/logo/testimony3.png'
+import testimony4 from '@/assets/images/logo/testimony4.png'
+import testimony5 from '@/assets/images/logo/testimony5.png'
+import testimony6 from '@/assets/images/logo/testimony6.png'
+
 export const amaasTextConfig = {
     pageName: 'AMaaS页面',
     index: {
@@ -22,7 +34,7 @@ export const amaasTextConfig = {
                     '运维管理可视化',
                     '开箱即用'
                 ],
-                img: '/src/assets/images/img/amaas_nav1.png'
+                img: amaasnav1
             },
             {
                 title: '全球TOP推理引擎',
@@ -32,7 +44,7 @@ export const amaasTextConfig = {
                     '多机分布式推理',
                     '国产卡深度优化'
                 ],
-                img: '/src/assets/images/img/amaas_nav2.png'
+                img: amaasnav2
             },
             {
                 title: '内置各类大模型',
@@ -42,7 +54,7 @@ export const amaasTextConfig = {
                     '内置数十种主流模型',
                     '多模型并行运行'
                 ],
-                img: '/src/assets/images/img/amaas_nav3.png'
+                img: amaasnav3
             },
             {
                 title: '内置办公辅助系统',
@@ -52,7 +64,7 @@ export const amaasTextConfig = {
                     '智能搜索',
                     '文案辅助'
                 ],
-                img: '/src/assets/images/img/amaas_nav4.png'
+                img: amaasnav4
             }
         ]
     },
@@ -145,37 +157,37 @@ export const amaasTextConfig = {
         description: '将企业用户算力与技术起步门槛降低10倍',
         list: [
             {
-                icon: 1,
+                icon: testimony1,
                 desc: '一站式AI开发基座，共同打造“航空+低空经济”双场景AI方案',
                 link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247485368&idx=1&sn=4d30e977474fd5b751901add672dc11f&chksm=c1d04d67f6a7c471083d8364e83ffc32ecaebaaf8e46395cedd4e3d868bef88b61b791e1e92c&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'
             },
             {
-                icon: 2,
+                icon: testimony2,
                 desc: 'AI诊断房屋健康，AI一体机助力“好房子”建设',
                 link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247485147&idx=1&sn=4b09c5895fe878957e17b64c3f05b4c6&chksm=c1d04c04f6a7c5128d76479d837d154b613a8971e8af9a51ff99515ff20612c3584eda9d2475&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'
             },
             {
-                icon: 3,
+                icon: testimony3,
                 desc: '交通枢纽协同治理，赋能空间决策智能化',
                 link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247485125&idx=1&sn=00fabd8c327383cf67470d93aea658d4&chksm=c1d04c1af6a7c50cffe61312c53d905fc09aee6669b0ac64bc358e6ca83508d922a612db10c3&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'
             },
             {
-                icon: 4,
+                icon: testimony4,
                 desc: '联合破局质检痛点，共创行业智能化新标杆',
                 link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247484974&idx=1&sn=d87fcfb8f3698e7e73634112d5cc9661&chksm=c1d04cf1f6a7c5e740c5087c4092f44b275bbdca75d7110590071e547239866fae8ac72525fd&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'
             },
             {
-                icon: 5,
+                icon: testimony5,
                 desc: 'AI一体机助力金融领域应用高效落地',
                 link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247484827&idx=1&sn=5a22d363d5ce7f0a98e995eb9e10ec65&chksm=c1d04f44f6a7c6528b01678ba15cd5abb8b49d21686cc7fc5e1af94106af3cac8d7d4160c70f&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'
             },
             {
-                icon: 6,
+                icon: testimony6,
                 desc: '辅助商业地产租售策略决策，赋能资管智能化转型',
                 link: 'https://mp.weixin.qq.com/s?__biz=MzkyNDc1Mzg0MA==&mid=2247485287&idx=1&sn=63acb35754f05b275d5a471a3454f3b9&chksm=c1d04db8f6a7c4aeb582ca153840d42ced816b2a9fed851dcd20e447c64bdb2b56ca8d569c82&scene=178&cur_album_id=4293869777053237262&search_click_id=#rd',
                 btn: '查看详情'

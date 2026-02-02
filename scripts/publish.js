@@ -1,7 +1,7 @@
 import execSh from "exec-sh";
 let server = "39.105.158.55";
 
-let remoteDir = `/www/wwwroot/approaching-ai-test`;
+let remoteDir = `/www/wwwroot/approaching-ai-v3-test`;
 
 // if (process.env.NODE_ENV == "production") {
 //   remoteDir = "/www/wwwroot/zhiwen-mvp";

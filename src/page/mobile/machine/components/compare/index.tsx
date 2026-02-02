@@ -1,5 +1,5 @@
 import './index.css'
-import img from '@/assets/images/img/machine_compare.png'
+// import img from '@/assets/images/img/machine_compare.png'
 import { motion } from 'motion/react'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
 export const MobMachineCompare = () => {

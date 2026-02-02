@@ -64,7 +64,7 @@ pnpm build
 pnpm start:prod
 ```
 
-项目将在 `http://localhost:3210` 启动，API 前缀为 `/api`
+项目将在 `http://localhost:3210` 启动，API 前缀为 `/v2`
 
 ## 📚 使用指南
 

@@ -1,3 +1,5 @@
+import no from '@/assets/images/no.png'
+import img202412 from '@/assets/images/img/202412.png'
 
 export const introductionList = {
     title: '趋境科技',
@@ -55,7 +57,7 @@ export const infoList = [
         title: '2025 年',
         desc: ['完成数千万元天使轮融资'],
         date: '3月',
-        image: '/src/assets/images/img/introduction_bg_about.webp'
+        image: no
     },
     {
         title: '',
@@ -67,7 +69,7 @@ export const infoList = [
         title: '2024 年',
         desc: ['联合月之暗面 Kimi、清华 MADSys', '共同发布开源项目 “Mooncake”', '大幅减少算力开销，提升推理吞吐量', '承载 Kimi 80% 的线上流量'],
         date: '11月',
-        image: '/src/assets/images/img/introduction_bg_about.webp'
+        image: no
     },
     {
         title: '',
@@ -91,6 +93,6 @@ export const infoList = [
         title: '2024 年',
         desc: ['公司成立', '种子轮融资：真知创投'],
         date: '12月',
-        image: '/src/assets/images/img/202412.png'
+        image: img202412
     }
 ]

@@ -46,3 +46,24 @@ pnpm preview
 ```bash
 pnpm push
 ```
+### 启动后端
+
+## 快速开始
+
+## 切换到server文件夹下
+
+### 安装依赖
+
+```bash
+pnpm install
+```
+
+### 开发运行
+
+```bash
+pnpm strat
+```
+
+```bash
+pnpm strat:dev
+```

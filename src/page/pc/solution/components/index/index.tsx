@@ -2,7 +2,7 @@ import { motion } from 'motion/react'
 import './index.css'
 import { initialLoadProps } from '@/utils/motionConfig'
 import { trackButtonClick } from '@/utils/umami'
-import inter from '@/assets/images/img/intel-logo.png'
+// import inter from '@/assets/images/img/intel-logo.png'
 import { solutionTextConfig } from '../../textConfig'
 import { useNavigate } from 'react-router-dom'
 

@@ -9,26 +9,41 @@
 }
 
 .product-1 {
-    background: url('/src/assets/images/img/product_1.png') no-repeat top;
+    background: url('/src/assets/images/img/product_1.webp') no-repeat top;
     background-size: cover;
 }
 
 .product-2 {
-    background: url('/src/assets/images/img/product_2.png') no-repeat top;
+    background: url('/src/assets/images/img/product_2.webp') no-repeat top;
     background-size: cover;
 }
 
-.product-3 {
-    background: url('/src/assets/images/img/product_3.png') no-repeat right 80%;
-    background-size: 60% 70%;
+.product-3-1 {
+    background: url('/src/assets/images/img/amaas.webp') no-repeat right 80%;
+    background-size: 130px 125px;
     background-color: white;
+    background-position: right 20px bottom 40%;
 }
 
-.product-4 {
-    background: url('/src/assets/images/img/product_4.png') no-repeat right 70%;
+.product-3 {
+    background: url('/src/assets/images/img/product_3.webp') no-repeat right 80%;
+    background-size: 130px 125px;
+    background-color: white;
+    background-position: right 20px bottom 40%;
+}
+
+.product-4-kt {
+    background: url('/src/assets/images/img/kt.webp') no-repeat right 70%;
     background-size: contain;
     background-color: white;
-    background-size: 40%;
+    /* background-size: 40%; */
+}
+
+.product-4-moon {
+    background: url('/src/assets/images/img/mooncake.webp') no-repeat right 70%;
+    background-size: contain;
+    background-color: white;
+    /* background-size: 40%; */
 }
 
 .more {

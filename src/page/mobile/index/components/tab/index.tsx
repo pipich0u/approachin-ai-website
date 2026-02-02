@@ -82,7 +82,7 @@ export default function PageTab() {
                             className="mob-tab-cont-box"
                             style={
                                 {
-                                    background: `url(/src/assets/images/img/${PageTabList.tablist[active].img})`,
+                                    background: `url(${PageTabList.tablist[active].img})`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     backgroundRepeat: 'no-repeat',

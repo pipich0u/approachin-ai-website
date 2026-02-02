@@ -83,10 +83,12 @@
 .mob-product-box-item-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 140px;
     height: 44px;
-    padding: 10px 10px;
+    padding: 10px 20px;
     background: #806BFF;
+    border-radius: 10px;
 }
 
 .mob-product-box-item-btn-text {
@@ -99,5 +101,5 @@
 
 .mob-product-box-item-btn .arr-1 {
     width: 24px;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    /* transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1); */
 }

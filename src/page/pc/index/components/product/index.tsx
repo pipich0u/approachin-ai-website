@@ -89,7 +89,7 @@ export default function PageProduct() {
                             </div> */}
                         </div>
                     </motion.div>
-                    <motion.div className='product-items product-3 p-[30px] w-[400px] h-60 rounded-[20px] '>
+                    <motion.div className='product-items product-3-1 p-[30px] w-[400px] h-60 rounded-[20px] '>
                         <div className='flex items-center gap-1'>
                             {
                                 productFeatures[3].tag.map((tag, index) => (
@@ -117,7 +117,7 @@ export default function PageProduct() {
                     </motion.div>
                 </div> */}
                 <div className='flex gap-5'>
-                    <motion.div {...scrollInViewSpringProps} className='product-items product-4 p-[30px] w-[610px] h-[260px] rounded-[20px] '>
+                    <motion.div {...scrollInViewSpringProps} className='product-items product-4-kt p-[30px] w-[610px] h-[260px] rounded-[20px] '>
                         <div className='flex items-center gap-1 mt-5'>
                             <div className='product-items-tag tag3 text-white ml-2'>KLLM</div>
                             {
@@ -134,7 +134,7 @@ export default function PageProduct() {
                             </div>
                         </div>
                     </motion.div>
-                    <motion.div {...scrollInViewSpringProps} className='product-items product-4 p-[30px] w-[610px] h-[260px] rounded-[20px] '>
+                    <motion.div {...scrollInViewSpringProps} className='product-items product-4-moon p-[30px] w-[610px] h-[260px] rounded-[20px] '>
                         <div className='flex items-center gap-1 mt-5'>
                             <div className='product-items-tag tag3 text-white ml-2'>KLLM</div>
                             {
