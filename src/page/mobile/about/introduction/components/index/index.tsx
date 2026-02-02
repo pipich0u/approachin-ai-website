@@ -2,6 +2,7 @@ import './index.css'
 import { motion } from 'motion/react'
 import { initialLoadProps, scrollInViewOnceProps } from '@/utils/motionConfig'
 import { introductionList } from '@/page/pc/about/introduction/textConfig'
+import { useNavigate } from 'react-router-dom'
 
 // 渲染公司内容的辅助函数
 const renderCompanyContent = (content: string | { text: string; bold?: string; text2?: string }) => {
@@ -17,7 +18,7 @@ const renderCompanyContent = (content: string | { text: string; bold?: string; t
 
 export const MobIntroductionIndex = () => {
     const { solutionSection, recognitionSection } = introductionList
-
+    const navigate = useNavigate()
     return (
         <div className='mob-introduction-index-container'>
             {/* 顶部内容区域 */}
@@ -26,7 +27,7 @@ export const MobIntroductionIndex = () => {
                     {introductionList.title}
                     <div className='mob-introduction-idx-content-title-color'>{introductionList.titleColor}</div>
                 </motion.div>
-                <motion.button {...initialLoadProps} className='mob-introduction-idx-content-btn animated-button'>
+                <motion.button {...initialLoadProps} className='mob-introduction-idx-content-btn animated-button' onClick={() => navigate('/contact')}>
                     <span className="mob-introduction-btn-text bt-text">{introductionList.btnText}</span>
                 </motion.button>
             </div>

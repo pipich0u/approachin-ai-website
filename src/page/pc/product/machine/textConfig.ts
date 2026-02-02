@@ -76,7 +76,7 @@ export const machineTextConfig = {
                 desc: '趋境✖️智谱联合发布，桌面级百亿参数工作站',
                 btn: '了解更多',
                 herf: '',
-                open: 'https://item.jd.com/10203585691430.html'
+                open: 'https://item.jd.com/10209754712094.html'
             }, {
                 title: '企业级推理一体机',
                 desc: '软硬一体深度优化，云下享受云上体验',
