@@ -1,3 +1,10 @@
+import tab1 from '@/assets/images/img/index_tab1.webp'
+import tab2 from '@/assets/images/img/index_tab2.webp'
+import tab3 from '@/assets/images/img/index_tab3.webp'
+import tab4 from '@/assets/images/img/index_tab4.webp'
+import tab5 from '@/assets/images/img/index_tab5.webp'
+import tab6 from '@/assets/images/img/index_tab6.webp'
+
 export const menuHrefListDefault = [
     {
         title: '产品介绍',
@@ -189,7 +196,7 @@ export const PageTabList = {
                 icon: 'icon-dui',
                 content: ['单 4090D 工作站实现 6 个模型混合推理，成本降低 85%', '支撑 4 个场景/台，满足首 Token 延迟 和 decode 速度要求', 'AMaaS 管理平台屏蔽技术复杂性，客户只需关注业务自身']
             }],
-            img: 'index_tab1.webp'
+            img: tab1
         },
         {
             name: "高并发高吞吐", id: 1, icon: 'tab2',
@@ -203,7 +210,7 @@ export const PageTabList = {
                 icon: 'icon-dui',
                 content: ['KLLM推理引擎优化后，总吞吐量 6 倍 + 跃升', '无需追加任何硬件即可完全满足业务增长需求，节约数千万硬件投资和隐形能耗、人力成本']
             }],
-            img: 'index_tab2.webp'
+            img: tab2
         },
         {
             name: "ISV联合共创", id: 2, icon: 'tab3',
@@ -217,7 +224,7 @@ export const PageTabList = {
                 icon: 'icon-dui',
                 content: ['推理引擎技术加持，落地成本直降300%', '安全业务创新与业绩有效增长，抢占AI安全市场份额', '提升了大模型在安全场景效率，远超同类竞品方案']
             }],
-            img: 'index_tab3.webp'
+            img: tab3
         },
         {
             name: "AI开发环境敏捷交付", id: 3, icon: 'tab4',
@@ -231,7 +238,7 @@ export const PageTabList = {
                 icon: 'icon-dui',
                 content: ['推理一体机集成数十种模型，联合 AMaaS 模型服务平台一体交付，云下即可获得云上体验', '信创适配，零额外适配成本', 'POC 周期 6 个月 → 1 个月，撬动超千万元商机']
             }],
-            img: 'index_tab4.webp'
+            img: tab4
         },
         {
             name: "资源精细化管理", id: 4, icon: 'tab5',
@@ -245,7 +252,7 @@ export const PageTabList = {
                 icon: 'icon-dui',
                 content: ['AMaaS + KLLM，资源利用率提升 3×；', '模型吞吐提升 4 倍，处理2000 个请求仅需 1.5 分钟', '首token响应时间减少41%，批量任务完成时间缩短 20%']
             }],
-            img: 'index_tab5.webp'
+            img: tab5
         },
         {
             name: "超低TTFT", id: 5, icon: 'tab6',
@@ -259,7 +266,7 @@ export const PageTabList = {
                 icon: 'icon-dui',
                 content: ['TTFT 降 84%，从优化前 350 毫秒降至 56 毫秒', '单卡 GPU 利用率 38%→82%，推理承载量提升 2.1×', '15 万次/秒峰值下，TTFT 波动 ≤5ms，风控成功率 99.99%']
             }],
-            img: 'index_tab6.webp'
+            img: tab6
         },]
 }
 
