@@ -38,11 +38,11 @@
 }
 
 .mob-product-1 {
-    background: url('/src/assets/images/img/product_1.png') no-repeat top;
+    background: url('/src/assets/images/img/product_1.webp') no-repeat top;
 }
 
 .mob-product-2 {
-    background: url('/src/assets/images/img/product_2.png') no-repeat top;
+    background: url('/src/assets/images/img/product_2.webp') no-repeat top;
 }
 
 .mob-product-3 {
@@ -60,7 +60,7 @@
 .mob-product-1,
 .mob-product-2 {
 
-    height: 826px;
+    height: 800px;
     background-color: white;
     background-size: cover;
     padding: 50px 65px;

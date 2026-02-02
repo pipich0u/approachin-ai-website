@@ -9,12 +9,12 @@
 }
 
 .product-1 {
-    background: url('/src/assets/images/img/product_1.png') no-repeat top;
+    background: url('/src/assets/images/img/product_1.webp') no-repeat top;
     background-size: cover;
 }
 
 .product-2 {
-    background: url('/src/assets/images/img/product_2.png') no-repeat top;
+    background: url('/src/assets/images/img/product_2.webp') no-repeat top;
     background-size: cover;
 }
 
