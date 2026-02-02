@@ -31,7 +31,7 @@ export default function DevelopPage() {
                                     }}
                                 >
                                     <div className='dep-tab-item-icon'>
-                                        <IconFont type={item.icon} />
+                                        <IconFont type={item.icon} className='text-[40px]!' />
                                     </div>
                                     <div className='dep-tab-item-content'>
                                         <div className="dep-tab-item-title">{item.name}</div>

@@ -41,21 +41,22 @@
 
 .moon-source-bottom {
     display: grid;
-    grid-template-columns: repeat(16, 60px);
+    grid-template-columns: repeat(20, 40px);
     gap: 10px;
-    max-width: 1200px;
+    max-width: calc(20 * 40px + 19 * 10px);
+    /* 精确 20 个 */
 }
 
 .contributor-item {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 }
 
 .contributor-avatar {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -85,4 +86,16 @@
 
 .contributor-item:hover .contributor-name {
     opacity: 1;
+}
+.moon-source-more {
+    margin-top: 24px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.2s ease;
+}
+
+.moon-source-more:hover {
+    opacity: 0.7;
 }

@@ -27,10 +27,14 @@ export const MoonCake = () => {
                 ]);
 
                 const allContributors = [];
+                // @ts-ignore
                 if (page1 && page1.length > 0) {
+                    // @ts-ignore
                     allContributors.push(...page1);
                 }
+                // @ts-ignore
                 if (page2 && page2.length > 0) {
+                    // @ts-ignore
                     allContributors.push(...page2);
                 }
 

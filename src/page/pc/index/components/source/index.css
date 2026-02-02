@@ -80,7 +80,7 @@
 
 .sou-cont-desc {
     color: #979B9E;
-    font-size: 14px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 380;
     line-height: 150%;
@@ -187,9 +187,9 @@
 
 .models-title {
     color: #1B1D22;
-    font-weight: 550;
+    font-weight: 450;
     font-style: Semibold;
-    font-size: 32px;
+    font-size: 38px;
     line-height: 150%;
     letter-spacing: 2%;
     text-align: center;

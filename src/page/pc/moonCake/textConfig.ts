@@ -26,17 +26,25 @@ export const MoonInfluenceList = {
     title: 'Mooncake 技术影响力',
     items: [
         {
-            title: '业界分布式推理事实标准',
-            desc: '和 vLLM、SGLang、NVIDIA Dynamo 等一同共建',
+            img: '/src/assets/images/img/my.webp',
+            bg: '/src/assets/images/img/my_bg.webp',
+            desc: '蚂蚁集团大规模多轮对话场景中，面对高并发交互需求与严苛的响应时效要求，趋境通过核心调度技术实现模块深度集成，推动首词响应时间大幅下降84%，显著优化用户交互体验；',
         },
         {
-            title: 'Kimi底座，并落地众多互联网公司',
-            desc: 'Mooncake 作为 Kimi 底座平台，承载其近四千万的月活用户 提升 Kimi 吞吐 75% 以上。并在阿里云、美团、京东、蚂蚁集团、腾讯元宝、科大讯飞等多家头部互联网公司落地',
+            img: '/src/assets/images/img/aliyun.webp',
+            bg: '/src/assets/images/img/ali_bg.webp',
+            desc: '阿里云超大规模云算力平台，针对海量用户推理需求与成本控制双重诉求，趋境依托自主研发的核心技术，在仅产生20%性能影响的前提下，助力客户成功达成低成本运营目标；',
         },
         {
-            title: '全球唯二的顶会最佳论文',
-            desc: '全球存储顶级会议 2025  USENIX FAST 最佳论文',
-        }
+            img: '/src/assets/images/img/shot.png',
+            bg: '/src/assets/images/img/shot_bg.webp',
+            desc: '月之暗面合作中，承接千万级用户规模的 Kimi 大模型核心流量承载任务，面对超大算力调度需求与高稳定性要求，通过精准调度优化实现 75% 的系统吞吐量提升，保障大规模并发请求稳定处理；',
+        },
+        {
+            img: '/src/assets/images/img/xunfei.webp',
+            bg: '/src/assets/images/img/xf_bg.webp',
+            desc: '科大讯飞星辰 MaaS 大规模集群项目中，针对规模化服务落地的极致算力效率要求，趋境基于核心技术构建优化方案，实现性能突破，为 MaaS 服务规模化落地提供核心支撑；',
+        },
     ]
 }
 export const MoonSourceList = {
@@ -44,27 +52,27 @@ export const MoonSourceList = {
     desc: '众多开发者、用户和社区成员共同构建繁荣生态'
 }
 export const MoonStepList = {
-    title:'最新动态',
-    list:[
-    {
-        title: 'Feb 25, 2025',
-        desc: '荣获 FAST 2025 Best Paper Award',
-        img: step1
-    },
-    {
-        title: 'Nov 28, 2024',
-        desc: 'Transfer Engine 正式开源',
-        img: step2
-    },
-    {
-        title: 'Jul 20, 2025',
-        desc: '支持Kimi K2在128×H200部署',
-        img: step3
-    },
-    {
-        title: 'Sept 10, 2025',
-        desc: 'SGLang HiCache集成发布',
-        img: step4
-    },
-]
+    title: '最新动态',
+    list: [
+        {
+            title: 'Feb 25, 2025',
+            desc: '荣获 FAST 2025 Best Paper Award',
+            img: step1
+        },
+        {
+            title: 'Nov 28, 2024',
+            desc: 'Transfer Engine 正式开源',
+            img: step2
+        },
+        {
+            title: 'Jul 20, 2025',
+            desc: '支持Kimi K2在128×H200部署',
+            img: step3
+        },
+        {
+            title: 'Sept 10, 2025',
+            desc: 'SGLang HiCache集成发布',
+            img: step4
+        },
+    ]
 }
