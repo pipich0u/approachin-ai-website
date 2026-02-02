@@ -59,7 +59,7 @@ export default function PageProduct() {
                         </div> */}
                     </div>
                 </motion.div>
-                <motion.div className='mob-product-items mob-product-3'>
+                <motion.div className='mob-product-items mob-product-3-1 mob-product-3'>
                     <div className='mob-product-3-content'>
                         <div className='mob-product-tags'>
                             {
@@ -75,7 +75,7 @@ export default function PageProduct() {
                         </div> */}
                     </div>
                 </motion.div>
-                <motion.div className='mob-product-items mob-product-3'>
+                <motion.div className='mob-product-items mob-product-3-2 mob-product-3'>
                     <div className='mob-product-3-content'>
                         <div>
                             <div className='mob-product-tags'>
@@ -93,7 +93,7 @@ export default function PageProduct() {
                         </div>
                     </div>
                 </motion.div>
-                <motion.div {...scrollInViewSpringOnceProps} className='mob-product-items mob-product-4'>
+                <motion.div {...scrollInViewSpringOnceProps} className='mob-product-items mob-product-4-kt mob-product-4'>
                     <div className='mob-product-3-content'>
                         <div className='mob-product-3-content-top'>
                             <div className='mob-product-tags'>
@@ -112,7 +112,7 @@ export default function PageProduct() {
                         </div> */}
                     </div>
                 </motion.div>
-                <motion.div {...scrollInViewSpringOnceProps} className='mob-product-items mob-product-4'>
+                <motion.div {...scrollInViewSpringOnceProps} className='mob-product-items mob-product-4 mob-product-4-moon'>
                     <div className='mob-product-3-content'>
                         <div className='mob-product-3-content-top'>
                             <div className='mob-product-tags'>
