@@ -101,7 +101,7 @@ export default function PageIndex() {
                                 <span className="text-white font-[380] bt-text">{indexPageList[0].ask}</span>
                             </motion.button>
 
-                            <motion.div {...initialLoadProps} className='index-bottom flex justify-between py-[45px] px-12 mt-28 w-[1210px] h-[130px] rounded-[20px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
+                            <motion.div {...initialLoadProps} className='index-bottom flex justify-between py-[45px] px-12 mt-20 w-[1210px] h-[130px] rounded-[20px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
                                 <div className='index-bottom-item flex items-center gap-2'>
                                     <div className='text-[#333] text-4xl font-[520]'>{indexPageList[0].list[0].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>
