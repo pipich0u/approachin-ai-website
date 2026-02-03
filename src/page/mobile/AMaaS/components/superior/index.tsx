@@ -12,14 +12,14 @@ export const MobAMaasSuperior = () => {
         <div className='mob-amaas-superior-container' >
             <div className='mob-amaas-sup-content'>
                 <motion.div {...scrollInViewSpringOnceProps} className="mob-amaas-sup-title">{superior.title}</motion.div>
-                <div className='mob-amaas-sup-box'>
+                <motion.div {...scrollInViewSpringOnceProps} className='mob-amaas-sup-box'>
                     {tabItems.map(item => (
                         <div key={item.id} className={`mob-amaas-sup-tab-items`} >
                             <div className='mob-amaas-sup-tab-title'>{item.label}</div>
                             <div className='mob-amaas-sup-tab-desc'>{item.desc}</div>
                         </div>
                     ))}
-                </div>
+                </motion.div>
 
                 <motion.div {...scrollInViewSpringOnceProps} className='mob-amaas-sup-tab-info'>
                     <img src={amaas} alt="" />
