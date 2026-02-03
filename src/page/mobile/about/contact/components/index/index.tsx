@@ -3,7 +3,7 @@ import React from 'react';
 import { Checkbox, Form, Input } from 'antd';
 import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig';
-import img from '@/assets/images/mob/mob-contact.png';
+import img from '@/assets/images/mob/mob-contact.webp';
 import { useContactForm } from '@/hooks/useContactForm';
 
 export const MobContactIndex = () => {
