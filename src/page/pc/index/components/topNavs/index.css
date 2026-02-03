@@ -79,9 +79,12 @@
 
 .ant-dropdown-menu {
   padding: 10px !important;
+  box-sizing: border-box;
+  width: 150px;
 }
-.ant-dropdown-menu-item{
-  padding: 5px 10px !important;
+
+.ant-dropdown-menu-item {
+  padding: 5px 0px !important;
 }
 
 @media (max-width: 1000px) {
@@ -115,4 +118,18 @@
 .navbar-btn:hover {
   background: #6524FF !important;
   color: #fff;
+}
+
+.dropdown-item {
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2D3039;
+  font-family: MiSans;
+  font-style: normal;
+  font-weight: 330;
+  line-height: 24px;
+  width: 130px;
+  /* 184.615% */
 }

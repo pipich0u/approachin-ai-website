@@ -28,7 +28,7 @@ const TopNavs = () => {
         key: `${index}`,
         label: (
           <div
-            className="text-[14px] flex items-center justify-center"
+            className="dropdown-item"
             onClick={() => onNavigate(subItem.href, subItem.title)}
           >
             {subItem.title}
