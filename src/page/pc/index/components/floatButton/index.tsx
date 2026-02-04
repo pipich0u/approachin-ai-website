@@ -33,7 +33,7 @@ const FloatBtnEle: React.FC = () => {
             tooltip={{
                 color: '#fff',
                 placement: 'left',
-                title: <div className='flex flex-col items-start justify-between p-4 gap-[30px] '>
+                title: <div className='flex flex-col items-start justify-between p-2 gap-[30px] '>
                     <div className='flex items-start'>
                         <img src={phone} alt="" style={{ fontSize: '20px', width: '20px', height: '20px' }} />
                         <div className='flex flex-col ml-2.5'>
@@ -41,13 +41,13 @@ const FloatBtnEle: React.FC = () => {
                             <div className='text-[#6C3AE1] text-[14px] font-[330]'>quxin@approaching.ai</div>
                         </div>
                     </div>
-                    <div className='flex items-start'>
+                    {/* <div className='flex items-start'>
                         <img src={msg} alt="" style={{ fontSize: '20px', width: '20px', height: '20px' }} />
                         <div className='flex flex-col ml-2.5'>
                             <div className='font-[450] text-[#1a1a1a]'>售前咨询</div>
                             <div className='text-[#8D8D8D] text-[14px] font-[330]'>我们会第一时间为您解决问题</div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             }}
         />

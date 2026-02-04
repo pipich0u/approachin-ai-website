@@ -10,7 +10,9 @@ export default function Layout() {
 
   return (
     <div className="layout">
-      {shouldUseLenis && <ReactLenis root />}
+      {/* {shouldUseLenis && <ReactLenis root options={{
+        lerp: 0.12
+      }} />} */}
       <div className="layout-main">
         {shouldShowTopNavs && <TopNavs />}
         <div>

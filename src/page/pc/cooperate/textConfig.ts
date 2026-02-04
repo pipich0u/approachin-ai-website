@@ -16,7 +16,7 @@ export const systemText = {
         desc: '携手硬件与模型伙伴深耕联合优化，以协同之力突破性能边界，彰显 AI Infra 核心效能'
     }, {
         title: '开源贡献者',
-        desc: '将KTransfirmers、Mooncake接入开源项目或开发基于趋境技术的AI应用'
+        desc: '将KTransformers、Mooncake接入开源项目或开发基于趋境技术的AI应用'
     }],
     btn: '立即加入'
 }

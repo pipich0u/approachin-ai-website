@@ -41,7 +41,7 @@
     flex-direction: column;
     align-items: start;
     position: relative;
-    margin-right: 150px;
+    /* margin-right: 150px; */
 }
 
 .contact-box-left-text {
