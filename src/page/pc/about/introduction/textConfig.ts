@@ -1,6 +1,7 @@
 import no from '@/assets/images/no.png'
 import img202412 from '@/assets/images/img/202412.png'
-
+import img252 from '@/assets/images/img/202502.webp';
+import img2411 from '@/assets/images/img/202411.webp';
 export const introductionList = {
     title: '趋境科技',
     titleColor: 'Approaching.ai',
@@ -9,7 +10,7 @@ export const introductionList = {
     companyTitle: '全球专属大模型推理解决方案提供商',
     companyData: [
         {
-            num: '30%',
+            num: '10+',
             title: '博士学位'
         },
         {
@@ -54,22 +55,22 @@ export const introductionList = {
 
 export const infoList = [
     {
-        title: '2025 年',
+        title: '',
         desc: ['完成数千万元天使轮融资'],
         date: '3月',
-        image: no
+        image: ''
     },
     {
-        title: '',
-        desc: ['升级大模型推理软硬一体机产品', '全系支持本地 DeepSeek- R1 / V3 部署门槛降低 90 %', '升级液冷套件、安静无噪', '上线运维平台', '方便模型管理','发布新版 “KTransformers” 0.2 版', '单个消费级 GPU+CPU 本地部署 DeepSeek-R1/V3-671B 大模型', 'GitHub 标星过万', '国内外社区热榜第一'],
+        title: '2025 年',
+        desc: ['升级大模型推理软硬一体机产品', '全系支持本地 DeepSeek- R1 / V3 部署门槛降低 90 %', '升级液冷套件、安静无噪', '上线运维平台', '方便模型管理', '发布新版 “KTransformers” 0.2 版', '单个消费级 GPU+CPU 本地部署 DeepSeek-R1/V3-671B 大模型', 'GitHub 标星过万', '国内外社区热榜第一'],
         date: '2月',
-        image: ''
+        image: img2411
     },
     {
         title: '2024 年',
         desc: ['联合月之暗面 Kimi、清华 MADSys', '共同发布开源项目 “Mooncake”', '大幅减少算力开销，提升推理吞吐量', '承载 Kimi 80% 的线上流量'],
         date: '11月',
-        image: no
+        image: img252
     },
     {
         title: '',

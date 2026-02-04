@@ -15,7 +15,7 @@ export default function PageCase() {
         logos[`/src/assets/images/logo/partner${num}.png`]
     return (
         <div className='mob-case'>
-            <motion.div {...scrollInViewSpringOnceProps} className='mob-case-title'>更多客户</motion.div>
+            <motion.div {...scrollInViewSpringOnceProps} className='mob-case-title'>合作伙伴</motion.div>
             <motion.div className='mob-case-content' {...scrollInViewSpringOnceProps}>
                 <div className='mob-case-scroll-container'>
                     <div className='mob-case-scroll-track'>

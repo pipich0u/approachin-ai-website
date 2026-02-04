@@ -21,7 +21,8 @@
 }
 
 .solution-tabnav {
-    width: 310px;
+    width: 30%;
+    max-width: 310px;
     height: 700px;
     border-radius: 14px;
     display: flex;
@@ -34,7 +35,8 @@
 }
 
 .solution-tabpanel {
-    width: 900px;
+    width: 60%;
+    max-width: 900px;
     height: 700px;
     padding: 40px;
     border-radius: 14px;

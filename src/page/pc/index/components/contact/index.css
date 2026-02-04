@@ -61,10 +61,10 @@
 .contact-box-right {
     /* width: 65%; */
     /* flex: 1; */
-    margin-left: 120px;
+    margin-left: 20px;
     display: flex;
     /* justify-content: space-between; */
-    gap: 60px;
+    gap: 50px;
 }
 
 .content-box-right-item {

@@ -18,10 +18,10 @@ export const IntroductionStep = () => {
                 {infoList.map((item, index) => (
                     <motion.div key={index} className='introduction-step-item' {...scrollInViewOnceProps}>
                         <div className='introduction-step-left'>
-                            {item.image && (
+                            {item.title && (
                                 <div className='introduction-step-img-box'>
                                     <div className='introduction-step-img-title'>{item.title}</div>
-                                    <img src={item.image} alt={item.title} className='introduction-step-img selectNone' />
+                                    {item.image && <img src={item.image} className='introduction-step-img selectNone' />}
                                 </div>
                             )}
                         </div>

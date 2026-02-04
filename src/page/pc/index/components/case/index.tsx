@@ -20,7 +20,7 @@ export default function PageCase() {
         logos[`/src/assets/images/logo/partner${num}.png`]
     return (
         <div className='case' ref={exposureRef}>
-            <motion.div {...scrollInViewSpringProps} className='case-title'>更多客户</motion.div>
+            <motion.div {...scrollInViewSpringProps} className='case-title'>合作伙伴</motion.div>
             <motion.div className='case-content' {...scrollInViewSpringProps}>
                 <div className='case-scroll-container'>
                     <div className='case-scroll-track'>

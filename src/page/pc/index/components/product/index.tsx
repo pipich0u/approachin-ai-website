@@ -31,7 +31,7 @@ export default function PageProduct() {
                 className='more w-24 h-[33px] text-[14px] font-[380] cursor-pointer'
                 onClick={() => { trackProductClick(productName, productType); navigateFunction(link); }}
             >
-                了解更多
+                了解详情
             </div>
         )
     }
