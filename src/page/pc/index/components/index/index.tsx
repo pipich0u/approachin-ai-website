@@ -87,7 +87,7 @@ export default function PageIndex() {
                                 {indexPageList[0].title}<div className='title-top-text'>{indexPageList[0].color}</div>
                             </motion.div>
 
-                            <motion.div {...initialLoadProps} className='title-desc text-[#484848]'>
+                            <motion.div {...initialLoadProps} className='title-desc text-[#666]'>
                                 {indexPageList[0].desc}
                             </motion.div>
 

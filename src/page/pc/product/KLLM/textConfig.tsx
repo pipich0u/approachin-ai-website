@@ -1,4 +1,4 @@
-import kllm1 from '@/assets/images/img/kllm-st1.png';
+import kllm1 from '@/assets/images/img/kllm-st1.webp';
 import kllm2 from '@/assets/images/img/kllm-st2.png';
 import kllm3 from '@/assets/images/img/kllm-st3.png';
 import kllm4 from '@/assets/images/img/kllm-st4.png';
