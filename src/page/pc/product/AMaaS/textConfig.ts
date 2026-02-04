@@ -21,7 +21,7 @@ export const amaasTextConfig = {
             '模型天级更新',
             '极致推理性能'
         ],
-        buttonText: '联系我们'
+        buttonText: '立即咨询'
     },
     introduce: {
         title: 'AMaaS产品简介',

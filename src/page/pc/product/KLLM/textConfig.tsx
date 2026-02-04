@@ -6,6 +6,10 @@ import kllm4 from '@/assets/images/img/kllm-st4.png';
 export const kllmTextConfig = {
     pageName: 'KLLM页面'
 }
+export const overviewText = {
+    title:'KLLM推理引擎',
+    desc:'AI时代企业级用户的大模型“操作系统”',
+}
 
 export const advantagesText = {
     title: '产品优势',

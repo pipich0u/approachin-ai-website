@@ -100,7 +100,7 @@ export const StudioCarousel = ({ config = studioTextConfig.carousel }: StudioCar
                                     }
                                 }}
                                 animate={{
-                                    width: isActive ? 760 : 210,
+                                    width: isActive ? 720 : 240,
                                     opacity: isActive ? 1 : 0.8
                                 }}
                                 transition={{ duration: 0.4, ease: "easeInOut" }}
