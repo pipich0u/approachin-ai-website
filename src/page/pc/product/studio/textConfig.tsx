@@ -4,8 +4,8 @@ import studio3 from '@/assets/images/img/studio3.webp';
 
 import tab1 from '@/assets/images/img/tab1.png'
 import tab2 from '@/assets/images/img/tab2.png'
-import tab3 from '@/assets/images/img/tab4.png'
-import tab4 from '@/assets/images/img/tab2.png'
+import tab3 from '@/assets/images/img/tab3.png'
+import tab4 from '@/assets/images/img/tab4.png'
 import tab5 from '@/assets/images/img/tab5.png'
 import tab6 from '@/assets/images/img/tab6.png'
 
@@ -98,10 +98,12 @@ export const StudioTabList = {
             info: [{
                 title: '支持tfjob/pytorch/paddlejob/mindspore/mxnet等分布式训练框架',
                 content: ''
-            }, {
-                title: '支持Deepspeed/Megatron/ColossalAI/Horovod/MPI等分布式加速框架',
-                content: ''
-            }, {
+            },
+            //  {
+            //     title: '支持Deepspeed/Megatron/ColossalAI/Horovod/MPI等分布式加速框架',
+            //     content: ''
+            // }, 
+            {
                 title: '支持Deepseek/ChatGLM4/Baichuan2/Qwen2等Full/LoRA微调，支持Llama Factory 100+ LLMs',
                 content: ''
             }, {

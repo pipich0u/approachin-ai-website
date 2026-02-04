@@ -1,6 +1,6 @@
 import machine1 from '@/assets/images/mob/mob-machine1.png';
-import machine2 from '@/assets/images/mob/mob-machine2.png';
-import machine3 from '@/assets/images/mob/mob-machine3.png';
+import machine2 from '@/assets/images/mob/mob-machine2.webp';
+import machine3 from '@/assets/images/mob/mob-machine3.webp';
 import machine4 from '@/assets/images/mob/mob-machine4.png';
 
 export const machineTextConfig = {
