@@ -48,7 +48,7 @@ export const machineTextConfig = {
             },
             {
                 title: 'PD分离',
-                items: ['基于算力特征搭配GPU，优化总体成本', 'P/D分离，集群并发量提升5倍', '12节点既支持万级并发',],
+                items: ['基于算力特征搭配GPU，优化总体成本', 'P/D分离，集群并发量提升5倍', '12节点即支持万级并发',],
                 img: machine3
             },
             {

@@ -72,13 +72,15 @@
     transition: all 0.3s ease;
 
 }
-.solution-tabnav-item-label-title{
+
+.solution-tabnav-item-label-title {
     display: flex;
     align-items: center;
     gap: 25px;
 }
 
-.solution-tabnav-item-label:hover,.solution-tabnav-item:hover {
+.solution-tabnav-item-label:hover,
+.solution-tabnav-item:hover {
     background: #F7F7F7;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -122,6 +124,7 @@
     gap: 30px;
     /* overflow: hidden; */
     overflow-y: auto;
+     -webkit-overflow-scrolling: touch;
 }
 
 .solution-tabpanel-box {
@@ -169,6 +172,7 @@
     line-height: 170%;
     letter-spacing: 0.36px;
 }
+
 .solution-tabnav-li-active {
     color: #333;
 }

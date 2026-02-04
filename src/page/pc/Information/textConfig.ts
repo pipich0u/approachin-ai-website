@@ -54,7 +54,7 @@ export const infoList = [
         date: '2025-11-20',
         image: img20251120,
         link: 'https://mp.weixin.qq.com/s/Gez_l8S4g6bHypJqbAvHuw',
-        title: '趋境科技亮相 GOSIM 全球开源大会，与 Huggingface、Llama.cpp 等社区共建开源生态',
+        title: '趋境科技亮相 GOSIM 全球开源大会，与 Hugging Face、Llama.cpp 等社区共建开源生态',
         desc: '2025 年 11 月，趋境科技受邀参与杭州 GOSIM 全球开源大会，与 Hugging Face 等社区共建生态。清华博士谢威宇发表演讲，介绍 KTransformers 框架：以 GPU+CPU 异构协同破解大模型推理难题，联合社区推出千亿模型 LoRA 微调方案（仅需 70GB 显存），兼容多品牌芯片。此外，其与 NVIDIA 交流合作，将以该框架为核心加速 AI 技术行业普惠落地。',
     },
     {

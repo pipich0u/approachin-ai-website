@@ -1,7 +1,7 @@
 import './index.css'
 import { motion } from 'motion/react'
 import { scrollInViewOnceProps,initialLoadProps } from '@/utils/motionConfig'
-import studioLink from '@/assets/images/img/studio_link.png'
+import studioLink from '@/assets/images/img/studio_link.webp'
 import { studioTextConfig } from '../../textConfig'
 
 export const StudioLink = () => {

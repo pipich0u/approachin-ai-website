@@ -163,7 +163,7 @@ export const productFeatures = [
     },
     {
         title: 'KTransformers',
-        desc: 'CPU+GPU降低MOE大参数模型本地部署门槛，提升硬件资源利用率。',
+        desc: 'CPU+GPU 降低 MoE 大参数模型本地部署门槛，提升硬件资源利用率。',
         tag: ['高SLA', '国产化兼容', '异构计算'],
         link: 'https://github.com/kvcache-ai/ktransformers'
     },
@@ -186,7 +186,7 @@ export const PageTabList = {
     tablist: [
         {
             name: "低门槛启动", id: 0, icon: 'tab1',
-            desc: '依托趋境科技推理一体机解决方案，实现单 4090D 工作站实现 6 个模型混合推理，成本降低 85% 某海外投资机构',
+            desc: '依托趋境科技推理一体机解决方案，实现单 4090D 工作站实现 6 个模型混合推理，助力某海外投资机构成本降低 85%',
             info: [{
                 title: '客户痛点',
                 icon: 'icon-no',
@@ -314,11 +314,11 @@ export const depList = {
         },
         {
             name: '繁荣软硬生态\n释放协同价值',
-            desc: '依托 KTransformers 与 Mooncake 两大开源社区，趋境与国内外主流硬件厂商、大模型厂商及推理优化技术社区建立密切的的合作生态，第一时间将行业前沿技术转化为客户可感知的技术红利。',
+            desc: '依托 KTransformers 与 Mooncake 两大开源社区，趋境与国内外主流硬件厂商、大模型厂商及推理优化技术社区建立密切的合作生态。',
             icon: 'icon-dep_tap3',
         },
     ]
-}
+} 
 
 export const consultList = {
     title: '助力AI进入普惠时代！',
