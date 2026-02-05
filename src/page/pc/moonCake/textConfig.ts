@@ -73,37 +73,37 @@ export const MoonStepList = {
             img: step1
         },
         {
-            title: 'Sep 10, 2025',
+            title: 'Sep 10 , 2025',
             desc: ['SGLang HiCache 发布，官方支持 Mooncake 作为分布式 KVCache 存储后端','Mooncake P2P Store 的官方高性能版本以 checkpoint-engine 形式','开源，并已成功应用于 Kimi K1.5 与 K2 的生产级训练中，在 20 秒','内完成对 1 万亿参数模型在数千张 GPU 上的更新。'],
             img: step1
         },
         {
-            title: 'Jul 25, 2025',
+            title: 'Jul 25 , 2025',
             desc: ['支撑 Kimi K2 在 128 张 H200 GPU 上完成 PD 解耦与大规模专家并行部署，达到 224k tokens/sec 的 prefill 吞吐 与 288k tokens/sec 的 decode 吞吐。',],
             img: step1
         },
         {
-            title: 'May 05, 2025',
+            title: 'May 05 , 2025',
             desc: ['联合 SGLang 成为业界首个复现完整 DeepSeek 推理架构的开源软件栈',],
             img: step2
         },
         {
-            title: 'Mar 07, 2025',
+            title: 'Mar 07 , 2025',
             desc: ['Mooncake Store 正式开源',],
             img: step3
         },
         {
-            title: 'Feb 25, 2025',
+            title: 'Feb 25 , 2025',
             desc: ['荣获 FAST 2025 Best Paper Award',],
             img: step4
         },
         {
-            title: 'Nov 16, 2024',
+            title: 'Dec 16 , 2024',
             desc: ['vLLM 官方支持 Mooncake，用于 P/D 分离架构',],
             img: step4
         },
         {
-            title: 'Nov 16, 2024',
+            title: 'Nov 16 , 2024',
             desc: ['Mooncake Transfer Engine 正式开源',],
             img: step4
         },
