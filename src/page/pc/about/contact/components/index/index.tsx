@@ -3,6 +3,7 @@ import { Checkbox, Form, Input } from 'antd';
 import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig';
 import { useContactForm } from '@/hooks/useContactForm';
+import { contactTextConfig } from '../../textConfig';
 
 export const ContactIndex = () => {
 
@@ -10,8 +11,8 @@ export const ContactIndex = () => {
 
     return <div className='contact-in-container'>
         <div className='contact-in-content'>
-            <motion.div  {...initialLoadProps} className='ct-in-ct-title'>联系我们</motion.div>
-            <motion.div  {...initialLoadProps} className='ct-in-ct-desc'>定制趋境一体化解决方案，即享受数智化升级</motion.div>
+            <motion.div  {...initialLoadProps} className='ct-in-ct-title'>{contactTextConfig.title}</motion.div>
+            <motion.div  {...initialLoadProps} className='ct-in-ct-desc'>{contactTextConfig.desc}</motion.div>
             <motion.div  {...initialLoadProps}>
                 <Form form={form} initialValues={{}} >
                     <div className='flex gap-2.5 w-[530px]'>
@@ -74,7 +75,7 @@ export const ContactIndex = () => {
                             label={null}
                             style={{ marginBottom: 10 }}
                         >
-                            <Checkbox className='ct-in-checkbox'>勾选表示：您同意趋境科技通过您填写的联系方式联系您，且数据仅用于与您沟通。</Checkbox>
+                            <Checkbox className='ct-in-checkbox'>{contactTextConfig.rule}</Checkbox>
                         </Form.Item>
                     </motion.div>
                     <Form.Item>
@@ -83,7 +84,7 @@ export const ContactIndex = () => {
                             type="button"
                             onClick={handleSubmit}
                         >
-                            <span className="text-white font-[380] bt-text">立即咨询</span>
+                            <span className="text-white font-[380] bt-text">{contactTextConfig.btnText}</span>
                         </motion.button>
                     </Form.Item>
                 </Form>

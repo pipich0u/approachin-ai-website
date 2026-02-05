@@ -62,7 +62,7 @@ export const infoList = [
     },
     {
         title: '2025 年',
-        desc: ['升级大模型推理软硬一体机产品', '全系支持本地 DeepSeek- R1 / V3 部署门槛降低 90 %', '升级液冷套件、安静无噪', '上线运维平台', '方便模型管理', '发布新版 “KTransformers” 0.2 版', '单个消费级 GPU+CPU 本地部署 DeepSeek-R1/V3-671B 大模型', 'GitHub 标星过万', '国内外社区热榜第一'],
+        desc: ['升级大模型推理软硬一体机产品', '全系支持本地 DeepSeek- R1 / V3 部署门槛降低 90 %', '升级液冷套件、静音无噪', '上线运维平台', '便捷模型管理', '发布新版 “KTransformers” 0.2 版', '单个消费级 GPU+CPU 本地部署 DeepSeek-R1/V3-671B 大模型', 'GitHub 标星过万', '国内外社区热榜第一'],
         date: '2月',
         image: img2411
     },

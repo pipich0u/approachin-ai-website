@@ -31,7 +31,7 @@ export const advantagesText = {
         }, {
             title: '企业级场景优化',
             items: [
-                '多种企业场景在NVIDIA、昇腾实测，性能超开源引擎3倍',
+                '在Nvdia、昇腾等多种企业场景下实测，性能超开源引擎3倍',
                 'CPU/GPU/NPU异构、模型弹性扩缩容、秒级模型冷启动',
                 '百节点集群资源调度，案例落地'
             ]
