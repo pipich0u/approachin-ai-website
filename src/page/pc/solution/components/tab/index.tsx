@@ -13,7 +13,7 @@ export const SolutionTab = () => {
     const [openSelectIdx, setOpenSelectIdx] = useState<boolean>(false)
     const [activeTab, setActiveTab] = useState(0)
     const [title, setTitle] = useState('')
-
+    const [showHint, setShowHint] = useState(true)
     const scrollRef = useRef<HTMLDivElement | null>(null)
 
     const handleSelectToggle = () => {
@@ -25,8 +25,24 @@ export const SolutionTab = () => {
 
     useEffect(() => {
         scrollRef.current?.scrollTo(0, 0)
+        setShowHint(true)
     }, [activeTab])
 
+    useEffect(() => {
+        const el = scrollRef.current
+        if (!el) return
+
+        const handleScroll = () => {
+            const { scrollTop, clientHeight, scrollHeight } = el
+            const isBottom = scrollTop + clientHeight >= scrollHeight - 2
+            setShowHint(!isBottom)
+        }
+
+        el.addEventListener('scroll', handleScroll)
+        return () => {
+            el.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
     return (
         <div className='solution-tab-container'>
             <div className='solution-tab-content'>
@@ -43,8 +59,7 @@ export const SolutionTab = () => {
                     )}
 
                     {List.map((item, idx) => (
-                        <div key={idx} className={`solution-tabnav-item ${
-                                activeTab === idx ? 'solution-item-active' : ''
+                        <div key={idx} className={`solution-tabnav-item ${activeTab === idx ? 'solution-item-active' : ''
                             }`}
                             onClick={() => {
                                 setActiveTab(idx)
@@ -132,12 +147,16 @@ export const SolutionTab = () => {
                             </motion.div>
                         ))}
                     </div>
-                    <div className='solution-hint'>
+                    <motion.div
+                        className="solution-hint"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: showHint ? 1 : 0 }}
+                        transition={{ duration: 0.2 }}
+                    >
                         滑动查看更多 <img src={moreIcon} alt="" />
-                    </div>
+                    </motion.div>
                 </motion.div>
             </div>
         </div>
     )
 }
- 
