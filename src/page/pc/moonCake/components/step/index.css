@@ -106,6 +106,8 @@
     flex-shrink: 0;
     overflow: hidden;
     border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .moon-step-items-right img {

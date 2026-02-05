@@ -36,9 +36,9 @@ export const MoonStep = () => {
                             }
                         </div>
                     </div>
-                    {/* <div className='moon-step-items-right'>
+                    {item.img && <div className='moon-step-items-right'>
                         <img src={item.img} alt={item.title} />
-                    </div> */}
+                    </div>}
                 </motion.div>
             ))}
         </div>
