@@ -2,7 +2,9 @@ import './index.css'
 import { motion } from 'motion/react'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import { useState } from 'react'
-import img from '@/assets/images/img/scene_rig.png'
+import img1 from '@/assets/images/img/scene1.webp'
+import img2 from '@/assets/images/img/scene2.webp'
+import img3 from '@/assets/images/img/scene3.webp'
 import { machineTextConfig } from '../../textConfig'
 import { trackEvent } from '@/utils/umami'
 
@@ -11,7 +13,7 @@ export const MachineScene = () => {
     const tabItems = scene.tabItems;
     const [activeTab, setActiveTab] = useState(tabItems[0].id)
     const currentTab = tabItems.find(item => item.id === activeTab)
-
+    const arr = [img1, img2, img3];
     const handleTabClick = (id: typeof activeTab) => {
         setActiveTab(id);
         const tab = tabItems.find(item => item.id === id);
@@ -71,7 +73,7 @@ export const MachineScene = () => {
                             </div>
                         </div>
                         <div className='scene-panel-rig'>
-                            <img src={img} alt="" />
+                            <img src={arr[activeTab]} alt="" />
                         </div>
                     </motion.div>
                 </div>

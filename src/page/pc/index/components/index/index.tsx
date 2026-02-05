@@ -2,7 +2,7 @@ import './index.css'
 import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig'
 import { useState, useEffect } from 'react';
-import { indexPageList,bannerList } from '@/page/textConfig';
+import { indexPageList,bannerList } from '@/page/pc/index/textConfig';
 import { trackPageView, trackButtonClick, trackCarouselChange } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';
 import { useNavigate } from 'react-router-dom';
@@ -87,7 +87,7 @@ export default function PageIndex() {
                                 {indexPageList[0].title}<div className='title-top-text'>{indexPageList[0].color}</div>
                             </motion.div>
 
-                            <motion.div {...initialLoadProps} className='title-desc text-[#484848]'>
+                            <motion.div {...initialLoadProps} className='title-desc text-[#666]'>
                                 {indexPageList[0].desc}
                             </motion.div>
 
@@ -101,7 +101,7 @@ export default function PageIndex() {
                                 <span className="text-white font-[380] bt-text">{indexPageList[0].ask}</span>
                             </motion.button>
 
-                            <motion.div {...initialLoadProps} className='index-bottom flex justify-between py-[45px] px-12 mt-28 w-[1210px] h-[130px] rounded-[20px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
+                            <motion.div {...initialLoadProps} className='index-bottom flex justify-between py-[45px] px-12 mt-20 w-[1210px] h-[130px] rounded-[20px] bg-[#FFFFFF1A] border border-white/80 backdrop-blur-sm'>
                                 <div className='index-bottom-item flex items-center gap-2'>
                                     <div className='text-[#333] text-4xl font-[520]'>{indexPageList[0].list[0].item}</div>
                                     <div className='text-[#484848] flex flex-col font-[305] text-[14px] '>

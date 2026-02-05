@@ -116,6 +116,12 @@
     justify-content: end;
 }
 
+.scene-panel-rig img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
 .scene-panel-title {
     color: #333;
     font-size: 28px;

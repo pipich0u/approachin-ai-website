@@ -1,6 +1,6 @@
 import machine1 from '@/assets/images/mob/mob-machine1.png';
-import machine2 from '@/assets/images/mob/mob-machine2.png';
-import machine3 from '@/assets/images/mob/mob-machine3.png';
+import machine2 from '@/assets/images/mob/mob-machine2.webp';
+import machine3 from '@/assets/images/mob/mob-machine3.webp';
 import machine4 from '@/assets/images/mob/mob-machine4.png';
 
 export const machineTextConfig = {
@@ -8,17 +8,17 @@ export const machineTextConfig = {
     index: {
         title: '企业级推理一体机',
         desc: '内置趋境KLLM推理引擎及AMaaS模型服务平台，搭配深度优化的硬件，提供最低成本最高性能的私有化算力设施',
-        btn: '加入我们',
+        btn: '立即咨询',
         bottomList: [
             {
                 title: '算力门槛',
                 color: '10倍',
-                desc: '业界首创CPU+GPU异构推理技术，算力不捆绑GPU，灵活搭配降低大参数模型部署成本'
+                desc: '业界首创CPU+GPU异构推理技术，算力不再捆绑GPU，灵活搭配降低大参数模型部署成本'
             },
             {
                 title: '利用率',
                 color: '80%',
-                desc: '基于计算强度卸载MOE算子，以存换算降低重复计算，硬件资源综合利用率达80%'
+                desc: '基于计算强度卸载MoE算子，以存换算降低重复计算，硬件资源综合利用率达80%'
             },
             {
                 title: '硬件性能',
@@ -48,7 +48,7 @@ export const machineTextConfig = {
             },
             {
                 title: 'PD分离',
-                items: ['基于算力特征搭配GPU，优化总体成本', 'P/D分离，集群并发量提升5倍', '12节点既支持万级并发',],
+                items: ['基于算力特征搭配GPU，优化总体成本', 'P/D分离，集群并发量提升5倍', '12节点即支持万级并发',],
                 img: machine3
             },
             {
@@ -96,19 +96,19 @@ export const machineTextConfig = {
         buttonText: '立即体验',
         tabItems: [
             {
-                id: 'tab1',
+                id: 0,
                 label: '企业自建AI算力场景',
                 desc: '在企业自建AI算力基础设施场景，性能、成本、稳定性、弹性扩缩容等能力同时重要。',
                 features: ['自研全球TOP推理引擎，顶尖团队技术兜底', '软硬生态携手深度优化，最大程度发挥算力性能', '大参数门槛最低成本起步', 'PD分离，随业务增量弹性扩容']
             },
             {
-                id: 'tab2',
+                id: 1,
                 label: 'ISV合作场景',
                 desc: '在竞争对手还困在成本、效率、效果的不可能三角时，趋境助力ISV合作伙伴打造极具市场竞争力的的AI应用！',
                 features: ['价格竞争力提升', '更智能的AI应用', '客户满意度更高', '更领先的技术优势','更丰富的场景方案']
             },
             {
-                id: 'tab3',
+                id: 2,
                 label: '研发环境极速搭建场景',
                 desc: '最低的起步门槛 —— AI·灵启小盒子由趋境科技与智谱联合发布，独家内置 FP4 精度的 106B 模型',
                 features: ['内置趋境AMaaS资源管理平台', '预置数十种主流办公助手']

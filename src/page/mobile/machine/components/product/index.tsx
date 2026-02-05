@@ -2,7 +2,6 @@ import './index.css'
 import { motion } from 'motion/react'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import { machinProduct } from '@/page/pc/product/machine/textConfig'
-import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import { trackButtonClick } from '@/utils/umami'
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './index.css';
 import logo from '@/assets/svg/logo-black.svg'
 import { IconFont } from '@/utils/antdUtils';
-import { mobMenuHrefListDefault } from '@/page/textConfig';
+import { mobMenuHrefListDefault } from '@/page/pc/index/textConfig';
 import { useNavigate } from 'react-router-dom';
 import { trackButtonClick } from '@/utils/umami';
 
@@ -92,7 +92,7 @@ const TopNav = () => {
     <nav className={`mob-top-nav`}>
       <div className='mob-nav-container'>
         <div className="mob-logo">
-          <img src={logo} alt="" onClick={() => { navigate('/'); scrollTo(0, 0) }} />
+          <img src={logo} alt="" onClick={() => { navigate('/'); scrollTo(0, 0); setOpenDrawer(false) }} />
         </div>
         <div className="mob-right">
           <IconFont className='mob-rig-icon' type={openDrawer ? 'icon-no' : 'icon-caidan'}

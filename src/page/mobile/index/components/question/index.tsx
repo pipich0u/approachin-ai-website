@@ -2,7 +2,7 @@
 import './index.css'
 import { motion } from "motion/react";
 import { scrollInViewSpringOnceProps } from "@/utils/motionConfig";
-import { pageQuestionList } from '@/page/textConfig';
+import { pageQuestionList } from '@/page/pc/index/textConfig';
 export default function PageQuestion() {
 
     return (

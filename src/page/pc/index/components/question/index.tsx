@@ -2,7 +2,7 @@
 import './index.css'
 import { motion } from "motion/react";
 import { scrollInViewSpringProps } from "@/utils/motionConfig";
-import { pageQuestionList } from '@/page/textConfig';
+import { pageQuestionList } from '@/page/pc/index/textConfig';
 import { useEffect } from 'react';
 import { trackPageView } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';

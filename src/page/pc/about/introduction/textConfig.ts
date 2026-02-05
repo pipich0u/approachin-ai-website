@@ -1,6 +1,7 @@
 import no from '@/assets/images/no.png'
 import img202412 from '@/assets/images/img/202412.png'
-
+import img252 from '@/assets/images/img/202502.webp';
+import img2411 from '@/assets/images/img/202411.webp';
 export const introductionList = {
     title: '趋境科技',
     titleColor: 'Approaching.ai',
@@ -9,7 +10,7 @@ export const introductionList = {
     companyTitle: '全球专属大模型推理解决方案提供商',
     companyData: [
         {
-            num: '30%',
+            num: '10+',
             title: '博士学位'
         },
         {
@@ -48,28 +49,28 @@ export const introductionList = {
     },
     recognitionSection: {
         title: '行业认可与生态共建',
-        content: '趋境科技技术成果曾获得 CCTV 官方报道，并向国务院参事室进行成果展示，公司屡次荣获"AI行业最具影响力企业"、"中国技术力量榜单"、"年度最新技术创新奖"等业内奖项。公司与英特尔、海光、华为、联想、英伟达、智谱、阿里、月之暗面Kimi 等行业领先企业均建立了深度合作，与市场监管总局认研中心、金航数码、华为、联想等机构形成标杆大模型落地案例，产业链上下游合作伙伴超过 30 家；技术方面，与 vLLM、SGLang、LllamaFactory 等国际知名开源社区共建技术生态，持续赋能全球开发者，在开发者侧形成了广泛影响力。'
+        content: '趋境科技技术成果曾获得 CCTV 官方报道，并向国务院参事室进行成果展示，公司屡次荣获“AI行业最具影响力企业”、“中国技术力量榜单”、“年度最新技术创新奖”等业内奖项。公司与英特尔、海光、华为、联想、英伟达、智谱、阿里、月之暗面Kimi 等行业领先企业均建立了深度合作，与市场监管总局认研中心、金航数码、华为、联想等机构形成标杆大模型落地案例，产业链上下游合作伙伴超过 30 家；技术方面，与 vLLM、SGLang、LlamaFactory 等国际知名开源社区共建技术生态，持续赋能全球开发者，在开发者侧形成了广泛影响力。'
     }
 }
 
 export const infoList = [
     {
-        title: '2025 年',
+        title: '',
         desc: ['完成数千万元天使轮融资'],
         date: '3月',
-        image: no
+        image: ''
     },
     {
-        title: '',
-        desc: ['升级大模型推理软硬一体机产品', '全系支持本地 DeepSeek- R1 / V3 部署门槛降低 90 %', '升级液冷套件、安静无噪', '上线运维平台', '方便模型管理','发布新版 “KTransformers” 0.2 版', '单个消费级 GPU+CPU 本地部署 DeepSeek-R1/V3-671B 大模型', 'GitHub 标星过万', '国内外社区热榜第一'],
+        title: '2025 年',
+        desc: ['升级大模型推理软硬一体机产品', '全系支持本地 DeepSeek- R1 / V3 部署门槛降低 90 %', '升级液冷套件、静音无噪', '上线运维平台', '便捷模型管理', '发布新版 “KTransformers” 0.2 版', '单个消费级 GPU+CPU 本地部署 DeepSeek-R1/V3-671B 大模型', 'GitHub 标星过万', '国内外社区热榜第一'],
         date: '2月',
-        image: ''
+        image: img2411
     },
     {
         title: '2024 年',
         desc: ['联合月之暗面 Kimi、清华 MADSys', '共同发布开源项目 “Mooncake”', '大幅减少算力开销，提升推理吞吐量', '承载 Kimi 80% 的线上流量'],
         date: '11月',
-        image: no
+        image: img252
     },
     {
         title: '',
@@ -90,7 +91,7 @@ export const infoList = [
         image: ''
     },
     {
-        title: '2024 年',
+        title: '2023 年',
         desc: ['公司成立', '种子轮融资：真知创投'],
         date: '12月',
         image: img202412

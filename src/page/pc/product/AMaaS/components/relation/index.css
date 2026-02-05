@@ -72,7 +72,7 @@
 .amaas-related-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .amaas-related-box:last-child {

@@ -1,6 +1,6 @@
 import amaasnav1 from '@/assets/images/img/amaas_nav1.png'
-import amaasnav2 from '@/assets/images/img/amaas_nav2.png'
-import amaasnav3 from '@/assets/images/img/amaas_nav3.png'
+import amaasnav2 from '@/assets/images/img/amaas_nav3.png'
+import amaasnav3 from '@/assets/images/img/amaas_nav2.png'
 import amaasnav4 from '@/assets/images/img/amaas_nav4.png'
 
 import testimony1 from '@/assets/images/logo/testimony1.png'
@@ -21,7 +21,7 @@ export const amaasTextConfig = {
             '模型天级更新',
             '极致推理性能'
         ],
-        buttonText: '联系我们'
+        buttonText: '立即咨询'
     },
     introduce: {
         title: 'AMaaS产品简介',
@@ -137,7 +137,7 @@ export const amaasTextConfig = {
         tabItems: [
             {
                 id: 'tab1',
-                label: '多卡异构，软件定义AI Infr',
+                label: '全栈异构兼容，高效协同推理',
                 desc: '兼容主流国产、非国产硬件，CPU+GPU、GPU+GPU异构推理'
             },
             {

@@ -1,7 +1,7 @@
 import './index.css'
 import { motion } from 'motion/react';
 import { scrollInViewSpringProps } from '@/utils/motionConfig'
-import { productFeatures, productTitle } from '@/page/textConfig';
+import { productFeatures, productTitle } from '@/page/pc/index/textConfig';
 import { useEffect } from 'react';
 import { trackPageView, trackProductClick } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';
@@ -31,14 +31,14 @@ export default function PageProduct() {
                 className='more w-24 h-[33px] text-[14px] font-[380] cursor-pointer'
                 onClick={() => { trackProductClick(productName, productType); navigateFunction(link); }}
             >
-                了解更多
+                了解详情
             </div>
         )
     }
 
     return (
         <div ref={exposureRef} className="product-container h-[1030px] bg-[#FAFAFA] flex flex-col items-center pt-[90px] pb-5 px-[100px]">
-            <motion.div {...scrollInViewSpringProps} className='text-[#1B1D22] font-[540] text-[38px] leading-[150%] tracking-[2%] text-center'>{productTitle}</motion.div>
+            <motion.div {...scrollInViewSpringProps} className='text-[#1B1D22] font-[360] text-[38px] leading-[150%] tracking-[2%] text-center'>{productTitle}</motion.div>
             <div className='flex items-center gap-5 mt-[60px]'>
                 <motion.div {...scrollInViewSpringProps} className='product-items product-1 w-[400px] h-[500px] rounded-[20px] '>
                     <div className='mt-72 px-10'>
@@ -49,7 +49,7 @@ export default function PageProduct() {
                                 ))
                             }
                         </div>
-                        <div className='text-[#333] font-[520] mt-4 text-[18px] leading-[150%]'>{productFeatures[0].title}</div>
+                        <div className='text-[#333] font-[450] mt-4 text-[18px] leading-[150%]'>{productFeatures[0].title}</div>
                         <div className='text-[14px] text-[#666] font-[330] leading-[150%]'>{productFeatures[0].desc}</div>
                         <div className='mt-10'>
                             {infoIcon(productFeatures[0].title, productFeatures[0].tag.join(','), productFeatures[0].link)}

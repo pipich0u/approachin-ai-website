@@ -4,6 +4,8 @@
     flex-direction: column;
     align-items: center;
     padding: 80px 0;
+    height: fit-content;
+    overflow: hidden;
 }
 
 .in-info-title {
@@ -44,6 +46,11 @@
     line-height: 150%;
     letter-spacing: 0.32px;
     margin-top: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    /* 👈 最多三行 */
+    overflow: hidden;
 }
 
 .in-info-item-time {
@@ -65,7 +72,8 @@
 }
 
 .in-info-item-left {
-    width: 680px;
+    width: 55%;
+    max-width: 680px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -85,12 +93,15 @@
 }
 
 .in-info-item-rig {
-    width: 458px;
+    width: 40%;
+    max-width: 458px;
     height: 100%;
 }
-.in-info-item-rig img{
+
+.in-info-item-rig img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .in-info-line {

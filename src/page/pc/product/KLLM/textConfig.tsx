@@ -1,10 +1,14 @@
-import kllm1 from '@/assets/images/img/kllm-st1.png';
+import kllm1 from '@/assets/images/img/kllm-st1.webp';
 import kllm2 from '@/assets/images/img/kllm-st2.png';
 import kllm3 from '@/assets/images/img/kllm-st3.png';
 import kllm4 from '@/assets/images/img/kllm-st4.png';
 
 export const kllmTextConfig = {
     pageName: 'KLLM页面'
+}
+export const overviewText = {
+    title:'KLLM推理引擎',
+    desc:'AI 时代企业级用户的大模型“操作系统”',
 }
 
 export const advantagesText = {
@@ -14,7 +18,7 @@ export const advantagesText = {
             title: '强大的技术基座',
             items: [
                 'Mooncake与KTransformers技术底座',
-                'Nvdia、昇腾、沐曦、海光等主流芯片算子级优化',
+                'NVIDIA、昇腾、沐曦、海光等主流芯片算子级优化',
                 '高适配新模型，模型发布当日即支持推理部署'
             ]
         }, {
@@ -27,7 +31,7 @@ export const advantagesText = {
         }, {
             title: '企业级场景优化',
             items: [
-                '多种企业场景在Nvdia、昇腾实测，性能超开源引擎3倍',
+                '在Nvdia、昇腾等多种企业场景下实测，性能超开源引擎3倍',
                 'CPU/GPU/NPU异构、模型弹性扩缩容、秒级模型冷启动',
                 '百节点集群资源调度，案例落地'
             ]

@@ -139,7 +139,7 @@ export const bannerList = [
 export const productFeatures = [
     {
         title: '大模型推理一体机',
-        desc: '内置趋境 KLLM 推理引擎，覆盖桌面级工作站、企业级一体机和大型分布式集群等型态',
+        desc: '内置趋境 KLLM 推理引擎，覆盖桌面级工作站、企业级一体机和大型分布式集群等形态。 ',
         tag: ['单 4090 跑671B', '低成本起步', '弹性扩容', '国产化深度优化'],
         link: '/machine'
     },
@@ -151,25 +151,25 @@ export const productFeatures = [
     },
     {
         title: '自主决策的“算力规划大脑”',
-        desc: '将算力资源指标与业务 SLO对齐，实时感知业务变化，并动态调度算力资源',
+        desc: '将算力资源指标与业务 SLO对齐，实时感知业务变化，并动态调度算力资源。',
         tag: ['SLO价值对齐', '智能资源规划', '自主决策'],
         link: '/'
     },
     {
         title: '开箱即用的“模型服务平台”',
-        desc: '预置数十种主流模型，集成丰富的硬件、模型、推理引擎等算力资源可视化能力',
+        desc: '预置数十种主流模型，集成丰富的硬件、模型、推理引擎等算力资源可视化能力。',
         tag: ['内置数十模型', '资源监控', '可视运维', '知识库', '办公辅助'],
         link: '/amaas'
     },
     {
         title: 'KTransformers',
-        desc: 'CPU+GPU降低MOE大参数模型本地部署门槛，提升硬件资源利用率',
+        desc: 'CPU+GPU 降低 MoE 大参数模型本地部署门槛，提升硬件资源利用率。',
         tag: ['高SLA', '国产化兼容', '异构计算'],
         link: 'https://github.com/kvcache-ai/ktransformers'
     },
     {
         title: 'Mooncake ',
-        desc: 'GPU+CPU+内存+磁盘，大幅提升算力集群并发、吞吐',
+        desc: 'GPU+CPU+内存+磁盘，大幅提升算力集群并发、吞吐。',
         tag: ['高SLA', '国产化兼容', 'PD分离', '以存换算'],
         link: '/mooncake'
     },
@@ -186,7 +186,7 @@ export const PageTabList = {
     tablist: [
         {
             name: "低门槛启动", id: 0, icon: 'tab1',
-            desc: '依托趋境科技推理一体机解决方案，实现单 4090D 工作站实现 6 个模型混合推理，成本降低 85% 某海外投资机构',
+            desc: '依托趋境科技推理一体机解决方案，实现单台 4090D 工作站实现 6 个模型混合推理，成本降低 85%',
             info: [{
                 title: '客户痛点',
                 icon: 'icon-no',
@@ -276,7 +276,7 @@ export const cooperateList = {
     info: '开放兼容・智算赋能',
     desc: '全栈智算引擎激发生态核心潜能，普惠高效 AI 拓宽价值增长边界，开放兼容拥抱全球硬软伙伴，引领 AI Infra 技术革新，加速智能应用规模化落地，精准服务客户核心所需。',
     mbDesc: '正在布局云、边、端上的全领域大模型推理集群和推理加速，助力提升大模型应用在各行业中的经济效益。AMD 中国与无问芯穹达成战略合作，未来双方将密切合作推动商用AI应用的性能提高，并推进相关生态系统建设。',
-    btn: '成为合作伙伴',
+    btn: '加入我们',
 }
 
 export const sourceList = {
@@ -314,11 +314,11 @@ export const depList = {
         },
         {
             name: '繁荣软硬生态\n释放协同价值',
-            desc: '依托 KTransformers 与 Mooncake 两大开源社区，趋境与国内外主流硬件厂商、大模型厂商及推理优化技术社区建立密切的的合作生态，第一时间将行业前沿技术转化为客户可感知的技术红利。',
+            desc: '依托 KTransformers 与 Mooncake 两大开源社区，趋境与国内外主流硬件厂商、大模型厂商及推理优化技术社区建立密切的合作生态。',
             icon: 'icon-dep_tap3',
         },
     ]
-}
+} 
 
 export const consultList = {
     title: '助力AI进入普惠时代！',

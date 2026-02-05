@@ -1,5 +1,5 @@
 import './index.css'
-import { productFeatures, productTitle } from '@/page/textConfig';
+import { productFeatures, productTitle } from '@/page/pc/index/textConfig';
 import { motion } from 'motion/react';
 import { initialLoadProps, scrollInViewSpringOnceProps } from '@/utils/motionConfig';
 import { useNavigate } from 'react-router-dom';

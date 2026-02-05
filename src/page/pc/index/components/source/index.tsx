@@ -7,7 +7,7 @@ import leftImg2 from '@/assets/images/img/models_left2.png'
 import leftImg3 from '@/assets/images/img/models_left3.png'
 import rigImg1 from '@/assets/images/img/models_rig1.png'
 import rigImg2 from '@/assets/images/img/models_rig2.png'
-import { sourceList, modelList } from '@/page/textConfig';
+import { sourceList, modelList } from '@/page/pc/index/textConfig';
 import { scrollInViewSpringProps } from "@/utils/motionConfig";
 import { useNavigate } from 'react-router-dom';
 import { trackButtonClick } from '@/utils/umami';

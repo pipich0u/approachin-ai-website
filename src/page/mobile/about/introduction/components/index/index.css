@@ -11,7 +11,7 @@
 }
 
 .mob-introduction-idx-company-box {
-    height: 1294px;
+    height: 1500px;
     width: 100%;
     position: relative;
 }
@@ -69,7 +69,7 @@
 .mob-introduction-idx-company {
     width: 90%;
     max-width: 670px;
-    height: 1654px;
+    height: 1854px;
     padding: 60px;
     position: absolute;
     left: 50%;
@@ -78,7 +78,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 30px;
-    background: url(/src/assets/images/img/transparent_logo_bg.png) no-repeat right 20px bottom 50px, rgba(255, 255, 255, 0.80);
+    background: url(/src/assets/images/img/transparent_logo_bg.png) no-repeat right 20px bottom 200px, rgba(255, 255, 255, 0.80);
     
     backdrop-filter: blur(20px);
 }

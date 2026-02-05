@@ -3,7 +3,7 @@ import './index.css'
 import logo from '@/assets/svg/logo-black.svg'
 import ewm from '@/assets/images/ewm.png'
 import { useNavigate } from 'react-router-dom';
-import { menuHrefListDefault } from '@/page/textConfig';
+import { menuHrefListDefault } from '@/page/pc/index/textConfig';
 import { getCopyrightYear } from '@/utils/transfrom';
 import { trackButtonClick } from '@/utils/umami';
 

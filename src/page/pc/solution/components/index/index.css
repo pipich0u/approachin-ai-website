@@ -46,7 +46,7 @@
     box-shadow: 0 4px 20px 0 rgba(25, 0, 124, 0.06);
     backdrop-filter: blur(10px);
     position: absolute;
-    bottom: -30px;
+    bottom: -20px;
 }
 
 .solution-index-bottom-items {
@@ -79,6 +79,7 @@
     font-weight: 520;
     line-height: 150%;
     letter-spacing: 0.96px;
+    margin-top: 40px;
 }
 
 .solution-index-desc {

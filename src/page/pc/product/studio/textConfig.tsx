@@ -4,8 +4,8 @@ import studio3 from '@/assets/images/img/studio3.webp';
 
 import tab1 from '@/assets/images/img/tab1.png'
 import tab2 from '@/assets/images/img/tab2.png'
-import tab3 from '@/assets/images/img/tab4.png'
-import tab4 from '@/assets/images/img/tab2.png'
+import tab3 from '@/assets/images/img/tab3.png'
+import tab4 from '@/assets/images/img/tab4.png'
 import tab5 from '@/assets/images/img/tab5.png'
 import tab6 from '@/assets/images/img/tab6.png'
 
@@ -98,17 +98,19 @@ export const StudioTabList = {
             info: [{
                 title: '支持tfjob/pytorch/paddlejob/mindspore/mxnet等分布式训练框架',
                 content: ''
-            }, {
-                title: '支持deepspeed/megatron/colossalai/horovod/mpi等分布式加速框架',
-                content: ''
-            }, {
-                title: '支持deepseek/chatglm4/baichuan2/qwen2等full/lora微调，支持llama factory 100+ LLMs',
+            },
+            //  {
+            //     title: '支持Deepspeed/Megatron/ColossalAI/Horovod/MPI等分布式加速框架',
+            //     content: ''
+            // }, 
+            {
+                title: '支持Deepseek/ChatGLM4/Baichuan2/Qwen2等Full/LoRA微调，支持Llama Factory 100+ LLMs',
                 content: ''
             }, {
                 title: '支持大模型量化，大模型sft/奖励模型/强化学习训练，大模型评估',
                 content: ''
             }, {
-                title: '支持RDMA网址，支持IB/roce底层，国产gpu卡，不同gpu厂商/卡型选择',
+                title: '支持RDMA网址，支持IB/ROCE底层，国产GPU卡，不同GPU厂商/卡型选择',
                 content: ''
             }],
             btn: '立即咨询',
@@ -131,10 +133,10 @@ export const StudioTabList = {
             name: "推理服务", id: 4, icon: 'tab-e',
             desc: '',
             info: [{
-                title: '开源大模型的部署，vllm/ollama/mindie/xinference等多种部署形式',
+                title: '开源大模型的部署，VLLM/Ollama/Mindie/Xinference等多种部署形式',
                 content: ''
             }, {
-                title: '支持vllm/mindie单机多卡/多机多卡推理加速，形成openai流式接口',
+                title: '支持VLLM/Mindie单机多卡/多机多卡推理加速，形成OpenAI流式接口',
                 content: ''
             }, {
                 title: '支持大模型网关：秘钥匹配，限速，黑白名单，token限额，统计监控，有效期设定等',
