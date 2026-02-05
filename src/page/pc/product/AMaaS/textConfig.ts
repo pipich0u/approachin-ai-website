@@ -1,6 +1,6 @@
 import amaasnav1 from '@/assets/images/img/amaas_nav1.png'
-import amaasnav2 from '@/assets/images/img/amaas_nav2.png'
-import amaasnav3 from '@/assets/images/img/amaas_nav3.png'
+import amaasnav2 from '@/assets/images/img/amaas_nav3.png'
+import amaasnav3 from '@/assets/images/img/amaas_nav2.png'
 import amaasnav4 from '@/assets/images/img/amaas_nav4.png'
 
 import testimony1 from '@/assets/images/logo/testimony1.png'

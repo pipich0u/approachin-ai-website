@@ -8,7 +8,7 @@ export const kllmTextConfig = {
 }
 export const overviewText = {
     title:'KLLM推理引擎',
-    desc:'AI时代企业级用户的大模型“操作系统”',
+    desc:'AI 时代企业级用户的大模型“操作系统”',
 }
 
 export const advantagesText = {

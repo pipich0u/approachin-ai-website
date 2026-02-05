@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from 'react'
 import { solutionTextConfig } from '../../textConfig'
 import { IconFont } from '@/utils/antdUtils'
 import { trackEvent } from '@/utils/umami'
+import moreIcon from '@/assets/svg/silder-icon.svg'
 
 export const SolutionTab = () => {
     const { tabList, labelList } = solutionTextConfig
@@ -132,10 +133,11 @@ export const SolutionTab = () => {
                         ))}
                     </div>
                     <div className='solution-hint'>
-                        滑动查看更多
+                        滑动查看更多 <img src={moreIcon} alt="" />
                     </div>
                 </motion.div>
             </div>
         </div>
     )
 }
+ 

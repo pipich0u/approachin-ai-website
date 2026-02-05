@@ -13,7 +13,7 @@ export const machineTextConfig = {
             {
                 title: '算力门槛',
                 color: '10倍',
-                desc: '业界首创CPU+GPU异构推理技术，算力不捆绑GPU，灵活搭配降低大参数模型部署成本'
+                desc: '业界首创CPU+GPU异构推理技术，算力不再捆绑GPU，灵活搭配降低大参数模型部署成本'
             },
             {
                 title: '利用率',
