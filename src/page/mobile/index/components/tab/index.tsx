@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { useState, useRef, useEffect } from "react";
 import { scrollInViewSpringOnceProps } from "@/utils/motionConfig";
 import { IconFont } from "@/utils/antdUtils";
-import { PageTabList } from '@/page/textConfig';
+import { PageTabList } from '@/page/pc/index/textConfig';
 import { trackButtonClick } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';
 

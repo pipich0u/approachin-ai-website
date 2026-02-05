@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './index.css';
 import logo from '@/assets/svg/logo-black.svg'
 import { IconFont } from '@/utils/antdUtils';
-import { mobMenuHrefListDefault } from '@/page/textConfig';
+import { mobMenuHrefListDefault } from '@/page/pc/index/textConfig';
 import { useNavigate } from 'react-router-dom';
 import { trackButtonClick } from '@/utils/umami';
 

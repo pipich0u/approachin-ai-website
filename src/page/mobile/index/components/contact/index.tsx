@@ -2,7 +2,7 @@
 import './index.css'
 // import logo from '@/assets/svg/logo-black.svg'
 import ewm from '@/assets/images/gzh.png'
-import { mobMenuHrefListDefault } from '@/page/textConfig';
+import { mobMenuHrefListDefault } from '@/page/pc/index/textConfig';
 import { useState } from 'react';
 import { IconFont } from '@/utils/antdUtils';
 import { getCopyrightYear } from '@/utils/transfrom';

@@ -23,7 +23,7 @@ import circleIn4 from '@/assets/images/img/circle_in4.png'
 import circleIn5 from '@/assets/images/img/circle_in5.png'
 import circleIn6 from '@/assets/images/img/circle_in6.png'
 import circleIn7 from '@/assets/images/img/circle_in7.png'
-import { cooperateList } from '@/page/textConfig';
+import { cooperateList } from '@/page/pc/index/textConfig';
 
 export default function PageCooperate() {
     const navgitor = useNavigate()

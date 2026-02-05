@@ -18,7 +18,7 @@ export const machineTextConfig = {
             {
                 title: '利用率',
                 color: '80%',
-                desc: '基于计算强度卸载MOE算子，以存换算降低重复计算，硬件资源综合利用率达80%'
+                desc: '基于计算强度卸载MoE算子，以存换算降低重复计算，硬件资源综合利用率达80%'
             },
             {
                 title: '硬件性能',

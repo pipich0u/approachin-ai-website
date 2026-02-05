@@ -23,13 +23,13 @@ export const ContactIndex = () => {
                             ]}
                             style={{ marginBottom: 10, flex: 1 }}
                         >
-                            <Input placeholder="请输入您的姓名" maxLength={10} style={{ width: '260px', height: 40 }} />
+                            <Input placeholder="请输入您的姓名" className='ct-in-input' maxLength={10} style={{ width: '260px', height: 40 }} />
                         </Form.Item>
                         <Form.Item
                             name="company"
                             style={{ marginBottom: 10, flex: 1 }}
                         >
-                            <Input placeholder="请输入您的公司名称" maxLength={100} style={{ width: '260px', height: 40 }} />
+                            <Input placeholder="请输入您的公司名称" className='ct-in-input' maxLength={100} style={{ width: '260px', height: 40 }} />
                         </Form.Item>
                     </div>
                     <div className='flex gap-2.5 w-[530px]'>
@@ -41,7 +41,7 @@ export const ContactIndex = () => {
                             ]}
                             style={{ marginBottom: 10, flex: 1 }}
                         >
-                            <Input placeholder="请输入您的手机号" style={{ width: '260px', height: 40 }} />
+                            <Input placeholder="请输入您的手机号" className='ct-in-input' style={{ width: '260px', height: 40 }} />
                         </Form.Item>
                         <Form.Item
                             name="email"
@@ -51,7 +51,7 @@ export const ContactIndex = () => {
                             ]}
                             style={{ marginBottom: 10, flex: 1 }}
                         >
-                            <Input placeholder="请输入您的邮箱" style={{ width: '260px', height: 40 }} />
+                            <Input placeholder="请输入您的邮箱" className='ct-in-input' style={{ width: '260px', height: 40 }} />
                         </Form.Item>
                     </div>
                     <div className='flex gap-2.5 w-[530px]'>
@@ -59,7 +59,7 @@ export const ContactIndex = () => {
                             name="description"
                             style={{ marginBottom: 10, flex: 1 }}
                         >
-                            <Input.TextArea maxLength={200} placeholder="请输入您的需求"
+                            <Input.TextArea maxLength={200} placeholder="请输入您的需求" className='ct-in-input'
                                 style={{ width: '530px', height: 150, resize: 'none' }} />
                         </Form.Item>
                     </div>

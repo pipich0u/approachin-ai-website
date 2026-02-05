@@ -4,7 +4,7 @@ import logo_black from '@/assets/svg/logo-black.svg';
 import { useNavigate } from 'react-router-dom';
 import { Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
-import { menuHrefListDefault } from '@/page/textConfig';
+import { menuHrefListDefault } from '@/page/pc/index/textConfig';
 import { IconFont } from '@/utils/antdUtils';
 import { trackButtonClick } from '@/utils/umami';
 

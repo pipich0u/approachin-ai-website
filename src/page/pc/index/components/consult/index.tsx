@@ -2,7 +2,7 @@
 import './index.css'
 import { motion } from "motion/react"
 import { scrollInViewSpringProps } from '@/utils/motionConfig'
-import { consultList } from '@/page/textConfig'
+import { consultList } from '@/page/pc/index/textConfig'
 import { useNavigate } from 'react-router-dom'
 import { trackButtonClick } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';

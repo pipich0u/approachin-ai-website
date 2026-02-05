@@ -1,6 +1,6 @@
 import './index.css'
 import { IconFont } from '@/utils/antdUtils';
-import { depList } from '@/page/textConfig';
+import { depList } from '@/page/pc/index/textConfig';
 import { motion } from "motion/react"
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import { useNavigate } from 'react-router-dom';

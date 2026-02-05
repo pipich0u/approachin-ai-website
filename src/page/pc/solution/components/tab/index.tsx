@@ -73,7 +73,7 @@ export const SolutionTab = () => {
                     ))}
                 </motion.div>
 
-                <motion.div className='solution-tabpanel' {...scrollInViewOnceProps}>
+                <motion.div className='solution-tabpanel relative' {...scrollInViewOnceProps}>
                     <motion.div
                         key={`top-${activeTab}`}
                         initial={{ opacity: 0 }}
@@ -130,6 +130,9 @@ export const SolutionTab = () => {
                                 )}
                             </motion.div>
                         ))}
+                    </div>
+                    <div className='solution-hint'>
+                        滑动查看更多
                     </div>
                 </motion.div>
             </div>

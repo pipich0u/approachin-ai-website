@@ -2,7 +2,7 @@ import './index.css'
 import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig'
 import { useState, useEffect } from 'react';
-import { indexPageList,bannerList } from '@/page/textConfig';
+import { indexPageList,bannerList } from '@/page/pc/index/textConfig';
 import { trackPageView, trackButtonClick, trackCarouselChange } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';
 import { useNavigate } from 'react-router-dom';

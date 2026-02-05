@@ -1,7 +1,7 @@
 import './index.css'
 import { motion } from 'motion/react';
 import { scrollInViewSpringProps } from '@/utils/motionConfig'
-import { productFeatures, productTitle } from '@/page/textConfig';
+import { productFeatures, productTitle } from '@/page/pc/index/textConfig';
 import { useEffect } from 'react';
 import { trackPageView, trackProductClick } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';

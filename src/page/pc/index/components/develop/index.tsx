@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './index.css'
 import { IconFont } from '@/utils/antdUtils';
-import { depList } from '@/page/textConfig';
+import { depList } from '@/page/pc/index/textConfig';
 import { motion } from "motion/react"
 import { scrollInViewSpringProps } from '@/utils/motionConfig'
 import { trackButtonClick, trackHover } from '@/utils/umami';

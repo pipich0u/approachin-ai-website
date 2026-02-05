@@ -186,7 +186,7 @@ export const PageTabList = {
     tablist: [
         {
             name: "低门槛启动", id: 0, icon: 'tab1',
-            desc: '依托趋境科技推理一体机解决方案，实现单 4090D 工作站实现 6 个模型混合推理，助力某海外投资机构成本降低 85%',
+            desc: '依托趋境科技推理一体机解决方案，实现单台 4090D 工作站实现 6 个模型混合推理，成本降低 85%',
             info: [{
                 title: '客户痛点',
                 icon: 'icon-no',
