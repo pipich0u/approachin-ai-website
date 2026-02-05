@@ -92,7 +92,7 @@ const TopNav = () => {
     <nav className={`mob-top-nav`}>
       <div className='mob-nav-container'>
         <div className="mob-logo">
-          <img src={logo} alt="" onClick={() => { navigate('/'); scrollTo(0, 0) }} />
+          <img src={logo} alt="" onClick={() => { navigate('/'); scrollTo(0, 0); setOpenDrawer(false) }} />
         </div>
         <div className="mob-right">
           <IconFont className='mob-rig-icon' type={openDrawer ? 'icon-no' : 'icon-caidan'}
