@@ -97,6 +97,7 @@
     font-weight: 330;
     line-height: 150%;
     letter-spacing: 0.56px;
+    max-width: 720px;
 }
 
 .moon-step-items-right {

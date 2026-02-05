@@ -6,10 +6,8 @@ import { MoonStepList } from '../../textConfig'
 
 export const MoonStep = () => {
 
-
-    // 计算每个圆点的透明度，从100%逐渐降低到30%
     const getCircleOpacity = (index: number) => {
-        const opacities = [1, 0.8, 0.6, 0.4, 0.3]
+        const opacities = [1, 0.9, 0.9, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3]
         return opacities[index] || 0.3
     }
 
@@ -31,12 +29,16 @@ export const MoonStep = () => {
                             <div className='moon-step-items-title'>
                                 <div className='moon-step-items-title-text'>{item.title}</div>
                             </div>
-                            <div className='moon-step-items-desc'>{item.desc}</div>
+                            {
+                                item.desc.map((descItem, descIndex) => {
+                                    return <div key={descIndex} className='moon-step-items-desc'>{descItem}</div>
+                                })
+                            }
                         </div>
                     </div>
-                    <div className='moon-step-items-right'>
-                        <img src={item.img} alt={item.desc} />
-                    </div>
+                    {/* <div className='moon-step-items-right'>
+                        <img src={item.img} alt={item.title} />
+                    </div> */}
                 </motion.div>
             ))}
         </div>
