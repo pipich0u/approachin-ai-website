@@ -1,5 +1,4 @@
 import './index.css'
-import { IconFont } from '@/utils/antdUtils'
 import { infoList } from '../../textConfig'
 import { motion } from 'motion/react'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'

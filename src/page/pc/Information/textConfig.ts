@@ -28,6 +28,11 @@ export const introductionList = {
     ]
 }
 
+export const InformationBannerList = {
+    title:'企业资讯',
+    btn:'联系我们'
+}
+
 export const infoList = [
     {
         date: '2026-01-05',

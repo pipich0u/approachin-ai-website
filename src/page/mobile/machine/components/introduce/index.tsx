@@ -1,6 +1,6 @@
 import './index.css'
 import { motion } from 'motion/react'
-import { initialLoadProps, scrollInViewSpringOnceProps } from '@/utils/motionConfig'
+import {  scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import { machinIntroduce } from '@/page/pc/product/machine/textConfig'
 
 export const MobMachineIntroduce = () => {

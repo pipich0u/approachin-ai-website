@@ -137,7 +137,7 @@ export const amaasTextConfig = {
         tabItems: [
             {
                 id: 'tab1',
-                label: '多卡异构，软件定义AI Infr',
+                label: '全栈异构兼容，高效协同推理',
                 desc: '兼容主流国产、非国产硬件，CPU+GPU、GPU+GPU异构推理'
             },
             {
