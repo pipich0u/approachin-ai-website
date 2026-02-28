@@ -18,7 +18,13 @@ const TopNavs = () => {
     if (title) {
       trackButtonClick(`顶部导航-${title}`, '页面顶部导航栏', { href, title });
     }
-    navigate(`/${href}`);
+    
+    // 判断是否为外部链接（http/https）
+    if (href.startsWith('http://') || href.startsWith('https://')) {
+      window.open(href, '_blank');
+    } else {
+      navigate(`/${href}`);
+    }
   };
 
   // 根据菜单项的 subItems 生成下拉菜单

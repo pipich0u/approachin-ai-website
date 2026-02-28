@@ -24,7 +24,7 @@ export const menuHrefListDefault = [
         href: 'pageTechnology',
         isSelected: true,
         subItems: [
-            // { title: 'KTransformers', href: 'ktransformers' },
+            { title: 'KTransformers', href: 'https://ktransformers.net/zh' },
             { title: 'Mooncake', href: 'mooncake' }
         ]
     },

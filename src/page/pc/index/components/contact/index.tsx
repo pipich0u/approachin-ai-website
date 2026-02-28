@@ -13,6 +13,18 @@ import { trackButtonClick } from '@/utils/umami';
 export default function PageContact() {
     const navigate = useNavigate();
 
+    const onNavigate = (href: string, title?: string) => {
+        if (title) {
+            trackButtonClick(`底部链接-${title}`, '页面底部联系区域', { href, title });
+        }
+        
+        if (href.startsWith('http://') || href.startsWith('https://')) {
+            window.open(href, '_blank');
+        } else {
+            navigate(`/${href}`);
+        }
+    };
+
     const open = () => {
         trackButtonClick('底部链接-公安备案', '页面底部联系区域', { url: 'https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671' });
         window.open('https://beian.mps.gov.cn/#/query/webSearch?code=11010802044671');
@@ -68,10 +80,7 @@ export default function PageContact() {
                             {
                                 fix.map((item, index) => {
                                     return <div className='content-item-text'
-                                        onClick={() => {
-                                            trackButtonClick(`底部链接-${item.title}`, '页面底部联系区域', { href: item.href, title: item.title });
-                                            navigate(`/${item.href}`);
-                                        }}
+                                        onClick={() => onNavigate(item.href, item.title)}
                                         key={index + Date() + ""} >{item.title}</div>
                                 })
                             }
@@ -81,10 +90,7 @@ export default function PageContact() {
                             {
                                 openSource.map((item, index) => {
                                     return <div className='content-item-text'
-                                        onClick={() => {
-                                            trackButtonClick(`底部链接-${item.title}`, '页面底部联系区域', { href: item.href, title: item.title });
-                                            navigate(`/${item.href}`);
-                                        }}
+                                        onClick={() => onNavigate(item.href, item.title)}
                                         key={index + Date() + ""} >{item.title}</div>
                                 })
                             }
@@ -94,10 +100,7 @@ export default function PageContact() {
                             {
                                 info.map((item, index) => {
                                     return <div className='content-item-text'
-                                        onClick={() => {
-                                            trackButtonClick(`底部链接-${item.title}`, '页面底部联系区域', { href: item.href, title: item.title });
-                                            navigate(`/${item.href}`);
-                                        }}
+                                        onClick={() => onNavigate(item.href, item.title)}
                                         key={index + Date() + ""} >{item.title}</div>
                                 })
                             }
@@ -107,10 +110,7 @@ export default function PageContact() {
                             {
                                 about.map((item, index) => {
                                     return <div className='content-item-text'
-                                        onClick={() => {
-                                            trackButtonClick(`底部链接-${item.title}`, '页面底部联系区域', { href: item.href, title: item.title });
-                                            navigate(`/${item.href}`);
-                                        }}
+                                        onClick={() => onNavigate(item.href, item.title)}
                                         key={index + Date() + ""} >{item.title}</div>
                                 })
                             }
