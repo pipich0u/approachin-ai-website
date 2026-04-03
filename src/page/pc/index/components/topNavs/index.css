@@ -1,135 +1,153 @@
+/* 导航栏 — 火山引擎风格 */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 20px 75px;
-  height: 64px;
+  height: 3.75rem; /* 60px@16px */
   display: flex;
-  justify-content: center;
   align-items: center;
   min-width: 1200px;
   box-sizing: border-box;
+  padding: 0 1.5rem; /* 24px — Volcengine: 24px */
 }
 
 .bg-1 {
-  background: #FFFFFFB8;
-  backdrop-filter: blur(80px);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }
 
-.navbar-container {
-  max-width: 800px;
-  width: fit-content;
-  /* margin: 0 50px; */
+/* 导航栏内部布局：左(logo+链接) + 右(按钮) */
+.navbar-inner {
+  width: 100%;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
-  gap: 28px;
-  padding: 0 4px;
+  justify-content: space-between;
 }
 
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* Logo — 放大，顶着左边 */
+.logo-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 2.75rem; /* 44px — Volcengine: 44px gap to nav */
+  flex-shrink: 0;
+}
+
+.logo-link img {
+  width: 8.5rem; /* 136px@16px — 比之前 111px 更大 */
+  height: auto;
+}
+
+/* 导航链接容器 */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* 导航项 */
 .navbar-item {
-  color: #333;
+  color: var(--color-text-1, #1D2129);
   cursor: pointer;
   position: relative;
-  transition: all 0.3s ease;
-  font-family: MiSans;
-  font-weight: 380;
-  font-style: Medium;
-  font-size: 16px;
-  line-height: 100%;
+  transition: color 0.2s ease;
+  font-family: var(--font-stack);
+  font-weight: 400; /* Volcengine: 400 */
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem;
+  padding: 1.25rem 0.75rem; /* 20px 12px — Volcengine 一致 */
+  white-space: nowrap;
 }
-
-
-.navbar-items {
-  color: #2D3039;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease;
-  font-family: MiSans;
-  font-weight: 380;
-  font-size: 16px;
-  line-height: 100%;
-  letter-spacing: 0%;
-}
-
-.logo img {
-  width: 111px;
-  height: 32px;
-}
-
 
 .navbar-item:hover {
-  opacity: 0.8;
-  /* color: #4E00CC; */
+  color: var(--color-primary, #6951FF);
+}
+
+/* 右侧按钮 */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.75rem; /* 撑满导航栏高度 — Volcengine 同款 */
+  padding: 0 1.75rem; /* 28px */
+  background: var(--color-primary, #6951FF);
+  color: #fff;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  border: none;
+  border-radius: 0; /* 无圆角 — Volcengine 同款 */
   cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
 }
 
-
-@keyframes slideIn {
-  from {
-    transform: scaleX(0);
-  }
-
-  to {
-    transform: scaleX(1);
-  }
+.navbar-cta:hover {
+  background: #5a42e6;
 }
 
-.ant-dropdown-menu {
-  padding: 10px !important;
+.navbar-cta:active {
+  background: #4d38cc;
+}
+
+/* 下拉菜单 — 玻璃感 */
+.ant-dropdown .ant-dropdown-menu {
+  padding: 12px 16px !important;
   box-sizing: border-box;
-  width: 150px;
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.25rem !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
 }
 
 .ant-dropdown-menu-item {
-  padding: 5px 0px !important;
+  padding: 6px 0 !important;
+  border-radius: 0.25rem !important;
 }
 
-@media (max-width: 1000px) {
-  .nav-item {
-    color: #FFFFFF80;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
-    font-family: MiSans;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 100%;
-    letter-spacing: 0%;
-
-  }
-}
-
-.navbar-btn {
-  border-radius: 8px;
-  background: #6524FF;
-  display: inline-flex;
-  padding: 6px 24px;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  width: 112px;
-  height: 36px;
-  color: #fff;
-}
-
-.navbar-btn:hover {
-  background: #6524FF !important;
-  color: #fff;
+.ant-dropdown-menu-item:hover {
+  background: rgba(105, 81, 255, 0.06) !important;
 }
 
 .dropdown-item {
-  font-size: 13px;
+  font-size: 14px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  color: #2D3039;
-  font-family: MiSans;
-  font-style: normal;
-  font-weight: 330;
+  color: var(--color-text-1, #1D2129);
+  font-family: var(--font-stack);
+  font-weight: 400;
   line-height: 24px;
-  width: 130px;
-  /* 184.615% */
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+.dropdown-logo {
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes slideIn {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }

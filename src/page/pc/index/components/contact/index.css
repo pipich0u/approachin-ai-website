@@ -1,184 +1,128 @@
+/* ========== Footer — 火山引擎风格 ========== */
 .section-9 {
-    height: 500px !important;
-    background-color: #FAFCFF;
+    width: 100%;
+    background-color: #1a1a2e;
+    min-height: auto !important;
+    height: auto !important;
+}
+
+.footer-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 48px 5rem 0;
+}
+
+/* 主体：左 logo + 右链接列，改为整体 space-between */
+.footer-main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 530px !important;
-    /* justify-content: center; */
-    /* align-items: start; */
-    /* justify-content: start; */
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    gap: 60px;
 }
 
-.contact-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 120px;
+.footer-logo-area {
+    flex-shrink: 0;
+    padding-top: 2px;
 }
 
-.section-9>.fp-overflow {
-    overflow: auto;
+.footer-logo {
+    height: 38px;
+    width: auto;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
 }
 
-.contact-box {
-    box-sizing: border-box;
-    padding: 0 20px;
-    width: 100%;
-    min-width: 1000px;
-    max-width: 1440px;
-    /* height: 100%; */
+/* 链接列：每列等分剩余空间 */
+.footer-links {
+    flex: 1;
     display: flex;
     justify-content: space-between;
-    /* margin-top: 7px; */
-    margin-top: 20px;
-
+    gap: 60px;
 }
 
-.contact-box-left {
-    min-width: 380px;
-    width: 10%;
+.footer-col {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    position: relative;
-    /* margin-right: 150px; */
-}
-
-.contact-box-left-text {
-    color: #fff;
-    font-family: MiSans;
-    font-weight: 250;
-    font-size: 14px;
-    line-height: 26px;
-    font-family: MiSans;
-    text-align: justify;
-
-    letter-spacing: 2%;
-    margin-top: 51px;
-    max-width: 400px;
-}
-
-.contact-box-right {
-    /* width: 65%; */
-    /* flex: 1; */
-    margin-left: 20px;
-    display: flex;
-    /* justify-content: space-between; */
-    gap: 50px;
-}
-
-.content-box-right-item {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    height: 100%;
-    user-select: text;
-    width: 78px;
-}
-
-
-.content-box-right-item-title {
-    font-family: MiSans;
-    font-weight: 460;
-    font-size: 18px;
-    line-height: 130%;
-    letter-spacing: 6%;
-    color: #333333;
-    margin-bottom: 14px;
-}
-
-.content-item-text {
-    font-family: MiSans;
-    font-weight: 330;
-    font-size: 14px;
-    line-height: 130%;
-    letter-spacing: 6%;
-    color: #33333399;
-    margin-top: 16px;
-    cursor: pointer;
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.content-item-text:hover {
-    color: #333;
-}
-
-.ewm {
-    width: 100px !important;
-    height: 100px !important;
-}
-
-.canlogo {
-    width: 190px;
-    height: 54px;
-    /* position: absolute;
-    top: -20px; */
-}
-
-.contact-icp {
     flex: 1;
-    box-sizing: border-box;
-    margin: 0 100px;
-    padding-top: 40px;
-    width: calc(100% - 200px);
-    display: flex;
-    flex-direction: column;
-    border-top: .3px solid #33333330;
-    margin-top: 58px;
-    align-items: center;
-    justify-content: center;
+    min-width: 0;
 }
 
-.contact-icp-text {
-    font-family: MiSans;
-    font-weight: 250;
-    font-size: 12px;
-    line-height: 22px;
-    letter-spacing: 2%;
-    color: #999;
+/* 最后一列（联系我们）稍宽，放二维码 */
+.footer-col:last-child {
+    flex: 1.5;
 }
 
-.contact-icp-text span {
-    cursor: pointer;
+.footer-col-title {
+    font-family: var(--font-stack);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
 }
 
-.contact-box-left-up {
-    width: 385px;
-    gap: 24px;
-    display: flex;
-    margin-top: 30px;
-}
-
-.contact-box-left-up-items {
-    width: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.up-item-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-}
-
-.contact-user{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 16px;
-    margin-top: 12px;
-}
-
-.contact-user-text {
-    color: rgba(51, 51, 51, 0.60);
-    font-feature-settings: 'liga' off, 'clig' off;
-    font-family: MiSans;
+.footer-col-item {
+    font-family: var(--font-stack);
+    font-weight: 400;
     font-size: 14px;
-    font-style: normal;
-    font-weight: 330;
-    line-height: 130%;
-    letter-spacing: 0.84px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    margin-top: 10px;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.footer-col-item:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-col-static {
+    cursor: default;
     user-select: text;
+}
+
+.footer-col-static:hover {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-ewm {
+    width: 88px;
+    height: 88px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 16px;
+}
+
+/* 底部：版权备案 居中 */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 18px 0 2px;
+    text-align: center;
+}
+
+.footer-bottom-line {
+    font-family: var(--font-stack);
+    font-size: 13px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.footer-bottom-line + .footer-bottom-line {
+    margin-top: 4px;
+}
+
+.footer-divider {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.footer-link {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: rgba(255, 255, 255, 0.6);
 }

@@ -5,10 +5,31 @@
   src: url("/public/MiSans\ VF.ttf");
 }
 
+/* 火山引擎风格全局变量 */
+:root {
+  --font-stack: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+    "noto sans", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --color-text-1: #1D2129;
+  --color-text-2: #4E5969;
+  --color-text-3: #86909C;
+  --color-text-4: #C9CDD4;
+  --color-bg-1: #FFFFFF;
+  --color-bg-2: #F7F8FA;
+  --color-bg-3: #F2F3F5;
+  --color-border: #E5E6EB;
+  --color-primary: #6951FF;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-1: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-2: 0 4px 16px 0 rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 8px 24px 0 rgba(0, 0, 0, 0.06);
+}
+
 /* 主容器 - 响应式宽度 */
 .w-100 {
   width: 100%;
-  min-width: 1440px;
+  min-width: 1200px;
   user-select: none;
 }
 
@@ -24,7 +45,7 @@
 
 /* 内容容器 - 最大宽度限制 */
 .app {
-  max-width: 1440px;
+  max-width: 120rem;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -43,7 +64,7 @@
 
 /* 全屏区域内容容器 */
 .fp-overflow {
-  max-width: 1440px;
+  max-width: 120rem;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;

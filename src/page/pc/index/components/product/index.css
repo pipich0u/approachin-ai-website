@@ -1,21 +1,23 @@
 .product-container {
-    font-family: MiSans;
+    font-family: var(--font-stack);
     box-sizing: border-box;
     user-select: none;
 }
 
 .product-items {
-    border: 1px solid #EFEFEF;
+    border: 1px solid var(--color-border);
 }
 
 .product-1 {
-    background: url('/src/assets/images/img/product_1.webp') no-repeat top;
-    background-size: cover;
+    background: url('/src/assets/images/img/product_1.webp') no-repeat top center;
+    background-size: 85%;
+    background-color: white;
 }
 
 .product-2 {
-    background: url('/src/assets/images/img/product_2.webp') no-repeat top;
-    background-size: cover;
+    background: url('/src/assets/images/img/product_2.webp') no-repeat top center;
+    background-size: 85%;
+    background-color: white;
 }
 
 .product-3-1 {
@@ -36,34 +38,33 @@
     background: url('/src/assets/images/img/kt.webp') no-repeat right 70%;
     background-size: contain;
     background-color: white;
-    /* background-size: 40%; */
 }
 
 .product-4-moon {
     background: url('/src/assets/images/img/mooncake.webp') no-repeat right 70%;
     background-size: contain;
     background-color: white;
-    /* background-size: 40%; */
 }
 
 .more {
     position: relative;
-    border: 1px solid #4500F5;
-    border-radius: 6px;
-    color: #4500F5;
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    color: var(--color-primary);
     display: flex;
     padding: 6px 18px;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
+    line-height: 22px;
+    transition: all 0.2s ease;
 }
 
 .more:hover {
     cursor: pointer;
-    border: 1px solid #4500F5;
-    background: linear-gradient(280deg, #8310FE -46.27%, #4A3EFF 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: var(--color-primary);
+    color: #fff;
+    -webkit-text-fill-color: #fff;
 }
 
 .product-items-tag {
@@ -71,12 +72,11 @@
     padding: 2px 8px;
     justify-content: center;
     align-items: center;
-    font-family: MiSans;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 380;
-    line-height: 150%;
-    border-radius: 4px;
+    font-family: var(--font-stack);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    border-radius: var(--radius-sm);
 }
 
 .tag1 {
@@ -89,17 +89,4 @@
 
 .tag3 {
     background: linear-gradient(90deg, rgba(69, 0, 245, 0.70) 0%, rgba(205, 105, 255, 0.70) 100%);
-}
-
-
-.more:hover {
-    cursor: pointer;
-    background: linear-gradient(280.15deg, #8310FE -46.27%, #4A3EFF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.more:hover:after {
-    background-position: right -1.4rem top -1.4rem;
 }

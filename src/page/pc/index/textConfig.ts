@@ -7,25 +7,38 @@ import tab6 from '@/assets/images/img/index_tab6.webp'
 
 export const menuHrefListDefault = [
     {
-        title: '产品介绍',
-        href: '/',
+        title: 'Token Service',
+        href: 'kllm',
+        isSelected: false,
+        comingSoon: true
+    },
+    {
+        title: 'Token System',
+        href: 'amaas',
         isSelected: true,
         subItems: [
-            // { title: '灵启·AI小盒子', href: 'spark' },
-            { title: 'AI Studio 便携工作站', href: 'studio' },
-            { title: '大模型推理一体机', href: 'machine' },
-            { title: 'KLLM 推理引擎', href: 'kllm' },
-            { title: 'AMaaS 平台', href: 'amaas' },
-            // { title: 'MVaaS 平台', href: 'mvaas' },
+            { title: 'KLLM-企业级高效能推理引擎', href: 'kllm' },
+            { title: 'AMaaS-模型价值即服务平台', href: 'amaas' },
+            { title: 'ATaaS-Token价值即服务平台', href: '' }
         ]
+    },
+    {
+        title: 'Token Machine',
+        href: 'machine',
+        isSelected: false
+    },
+    {
+        title: 'AI Studio',
+        href: 'studio',
+        isSelected: false
     },
     {
         title: '开源社区',
         href: 'pageTechnology',
         isSelected: true,
         subItems: [
-            { title: 'KTransformers', href: 'https://ktransformers.net/zh' },
-            { title: 'Mooncake', href: 'mooncake' }
+            { title: 'KTransformers', href: 'https://ktransformers.net/zh', logo: '/src/assets/images/img/logo_ktransformers.png', logoWidth: 150 },
+            { title: 'Mooncake', href: 'mooncake', logo: '/src/assets/images/img/logo_mooncake.png', logoWidth: 130, logoOffset: -8 }
         ]
     },
     {
@@ -125,41 +138,94 @@ export const indexPageList = [
 
 export const bannerList = [
     {
-        title: ['趋境科技受邀参与 AIGC 开发者大会', '获评“AI行业最具影响力企业Top10”'],
+        title: ['趋境科技受邀参与 AIGC 开发者大会', '获评”AI行业最具影响力企业Top10”'],
         ask: '了解详情',
-        link: "https://mp.weixin.qq.com/s/HiO8FzBI6vWv5BdxNnVPNw"
+        link: 'https://mp.weixin.qq.com/s/HiO8FzBI6vWv5BdxNnVPNw'
     },
     {
         title: ['KTransformers 与 Mooncake 入选', '2025 清华最受师生关注十大亮点成果'],
         ask: '了解详情',
-        link: "https://mp.weixin.qq.com/s/RTfcAeq2__NgrPsjEY7YSg"
+        link: 'https://mp.weixin.qq.com/s/RTfcAeq2__NgrPsjEY7YSg'
     }
+]
+
+// 首页 Hero 区域 - 左侧轮播内容
+export const heroSlides = [
+    {
+        tag: '我们的愿景',
+        title: '让算力更高效，让智能更普惠',
+        desc: '趋境科技：全球领先的高效能 AI Token 生产服务商',
+        btnText: '',
+        btnLink: '',
+        btnType: 'primary' as const,
+    },
+    {
+        tag: 'AIGC 开发者大会',
+        title: '趋境科技获评”AI行业最具影响力企业Top10”',
+        desc: '受邀参与 AIGC 开发者大会，展示全栈推理引擎技术与行业解决方案',
+        btnText: '了解详情',
+        btnLink: 'https://mp.weixin.qq.com/s/HiO8FzBI6vWv5BdxNnVPNw',
+        btnType: 'default' as const,
+    },
+    {
+        tag: '清华十大亮点成果',
+        title: 'KTransformers 与 Mooncake 入选清华十大亮点成果',
+        desc: '两大开源项目同时入选 2025 清华最受师生关注十大亮点成果',
+        btnText: '了解详情',
+        btnLink: 'https://mp.weixin.qq.com/s/RTfcAeq2__NgrPsjEY7YSg',
+        btnType: 'default' as const,
+    },
+]
+
+// 首页 Hero 区域 - 右侧资讯卡片（火山引擎排版：左标题+标签，右方图）
+export const heroCards = [
+    {
+        title: '为用户提供日均万亿级的高效能Token服务',
+        tag: '产品发布',
+        image: '/src/assets/images/img/hero_card1.png',
+        imageLabel: 'Token\nService',
+        link: 'https://mp.weixin.qq.com/s/2Ly_0FuReh03pYg7h91NjQ',
+    },
+    {
+        title: 'ATaaS、AMaaS及KLLM引擎分层提升Token产能',
+        tag: '产品发布',
+        image: '/src/assets/images/img/hero_card2.png',
+        imageLabel: 'Token\nSystem',
+        link: 'https://mp.weixin.qq.com/s/2Ly_0FuReh03pYg7h91NjQ',
+    },
+    {
+        title: '从桌面型小盒子到企业级智算集群的全场景硬件方案',
+        tag: '产品发布',
+        image: '/src/assets/images/img/hero_card3.png',
+        imageLabel: 'Token\nMachine',
+        link: 'https://mp.weixin.qq.com/s/2Ly_0FuReh03pYg7h91NjQ',
+    },
 ]
 
 export const productFeatures = [
     {
-        title: '大模型推理一体机',
+        title: 'Token Service',
+        desc: '将算力资源指标与业务 SLO对齐，实时感知业务变化，并动态调度算力资源。',
+        tag: ['SLO价值对齐', '智能资源规划', '自主决策'],
+        link: ''
+    },
+    {
+        title: 'Token System',
+        desc: '预置数十种主流模型，集成丰富的硬件、模型、推理引擎等算力资源可视化能力。',
+        tag: ['内置数十模型', '资源监控', '可视运维', '知识库'],
+        link: '/amaas'
+    },
+    {
+        title: 'Token Machine',
         desc: '内置趋境 KLLM 推理引擎，覆盖桌面级工作站、企业级一体机和大型分布式集群等形态。 ',
-        tag: ['单 4090 跑671B', '低成本起步', '弹性扩容', '国产化深度优化'],
+        tag: ['单 4090 跑671B', '低成本起步', '弹性扩容'],
         link: '/machine'
     },
     {
-        title: '全可视化的“AI开发平台”',
+        title: 'AI Studio',
         desc: 'AI Studio：覆盖从数据处理、模型开发训练到推理部署的全链路 AI 研发流程。',
         tag: ['训推一体', '全链可视', '敏捷开发'],
         link: '/studio'
-    },
-    {
-        title: '自主决策的“算力规划大脑”',
-        desc: '将算力资源指标与业务 SLO对齐，实时感知业务变化，并动态调度算力资源。',
-        tag: ['SLO价值对齐', '智能资源规划', '自主决策'],
-        link: '/'
-    },
-    {
-        title: '开箱即用的“模型服务平台”',
-        desc: '预置数十种主流模型，集成丰富的硬件、模型、推理引擎等算力资源可视化能力。',
-        tag: ['内置数十模型', '资源监控', '可视运维', '知识库', '办公辅助'],
-        link: '/amaas'
     },
     {
         title: 'KTransformers',
@@ -303,17 +369,17 @@ export const depList = {
     title: '为什么选择趋境科技',
     list: [
         {
-            name: '顶尖技术团队\n筑牢核心壁垒',
+            name: '顶尖技术团队 筑牢核心壁垒',
             desc: '核心技术团队源自清华大学计算机系高性能计算所，十余名博士骨干，沉淀十余年高性能优化技术经验，构建起国际顶尖的技术实力。',
             icon: 'icon-dep_tap1',
         },
         {
-            name: '创新方案理念\n引领行业变革',
-            desc: '区别于传统以 token 为核心的算力解决方案，趋境科技首创 “业务 SLO 为导向的模型价值即服务” 核心理念。以更贴合实际业务需求的优化逻辑，为客户创造差异化价值。',
+            name: '创新方案理念 引领行业变革',
+            desc: '区别于传统以 token 为核心的算力解决方案，趋境科技首创 “业务 SLO 为导向的模型价值即服务” 核心理念。以更贴合实际业务需求的优化逻辑。',
             icon: 'icon-dep_tab2',
         },
         {
-            name: '繁荣软硬生态\n释放协同价值',
+            name: '繁荣软硬生态 释放协同价值',
             desc: '依托 KTransformers 与 Mooncake 两大开源社区，趋境与国内外主流硬件厂商、大模型厂商及推理优化技术社区建立密切的合作生态。',
             icon: 'icon-dep_tap3',
         },
@@ -322,6 +388,6 @@ export const depList = {
 
 export const consultList = {
     title: '助力AI进入普惠时代！',
-    desc: '为企业级用户的 AI 落地提供从算力破局到价值交付的全链路解决方案',
+    desc: '',
     btn: '立即咨询'
 }

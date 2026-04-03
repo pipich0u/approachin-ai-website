@@ -1,8 +1,248 @@
-.introduction-page {
+@font-face {
+    font-family: 'BiggerDisplay';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/font/biggerdisplay.otf') format('opentype');
+}
+
+.about-page {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 64px;
+    min-width: 1200px;
+    padding-top: 60px;
+}
+
+/* ========== Top Banner ========== */
+.about-banner {
+    width: 100%;
+    height: 320px;
+    background: url('/src/assets/images/img/about_banner.png') center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    min-width: 1440px;
+    justify-content: center;
+    position: relative;
+}
+
+.about-banner-title {
+    font-size: 42px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 6px;
+    margin: 0;
+}
+
+.about-banner-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 8px;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+
+/* ========== Guide Nav ========== */
+.about-guide {
+    position: sticky;
+    top: 60px;
+    z-index: 50;
+    background: #fff;
+    border-bottom: 1px solid #EAEDF1;
+}
+
+.about-guide-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.about-guide-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0;
+}
+
+.about-guide-list li {
+    cursor: pointer;
+}
+
+.about-guide-list li p {
+    display: inline-block;
+    padding: 16px 24px;
+    font-size: 15px;
+    color: #86909C;
+    transition: all 0.2s ease;
+    font-family: var(--font-stack);
+    border-bottom: 2px solid transparent;
+    margin: 0;
+}
+
+.about-guide-list li p.active {
+    color: var(--color-primary, #6951FF);
+    font-weight: 500;
+    border-bottom-color: var(--color-primary, #6951FF);
+}
+
+.about-guide-list li p:hover {
+    color: var(--color-primary, #6951FF);
+}
+
+/* ========== Section Common ========== */
+.about-section {
+    width: 100%;
+    background: #fff;
+}
+
+.about-section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+/* ========== 我们是谁 ========== */
+.about-section-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #4A0E8F;
+    margin: 0 0 48px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.about-title-cn {
+    font-family: 'AlibabaPuHuiTi', sans-serif;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-right: 12px;
+}
+
+.about-title-en {
+    font-family: 'AlibabaPuHuiTi', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.about-intro-columns {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-intro-col {
+    width: 100%;
+}
+
+.about-intro-col p {
+    font-size: 16px;
+    line-height: 2;
+    color: #4E5969;
+    text-align: justify;
+    margin: 0 0 24px;
+    font-family: var(--font-stack);
+    text-indent: 2em;
+}
+
+.about-intro-col p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========== Honors ========== */
+.about-honors {
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid #EAEDF1;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-honors-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1D2129;
+    margin-bottom: 20px;
+    font-family: var(--font-stack);
+}
+
+.about-honors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 48px;
+}
+
+.about-honors-list li {
+    font-size: 15px;
+    line-height: 28px;
+    color: #4E5969;
+    font-family: var(--font-stack);
+    padding: 4px 0;
+}
+
+.about-honors-list li::before {
+    content: '·';
+    margin-right: 8px;
+    font-weight: 700;
+    color: var(--color-primary, #6951FF);
+}
+
+/* ========== 使命 / 愿景 / 价值观 ========== */
+.about-values {
+    display: flex;
+    gap: 24px;
+    margin-top: 64px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-value-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    padding: 12px 36px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-value-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #1D2129;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.about-value-en {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-primary, #6951FF);
+    margin-top: 6px;
+    letter-spacing: 1px;
+}
+
+.about-value-desc {
+    font-size: 18px;
+    font-weight: 400;
+    color: #4E5969;
+    line-height: 1.8;
+    margin-top: 16px;
+    text-align: center;
+}
+
+/* ========== 文化理念 ========== */
+.about-section-culture {
+    background: #F7F8FA;
 }

@@ -1,0 +1,80 @@
+/* ========== 文化理念 - 左图右文 ========== */
+.culture-section {
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    position: relative;
+    font-family: var(--font-stack);
+    overflow: hidden;
+}
+
+/* 左侧背景图 */
+.culture-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: url('/src/assets/images/img/culture_bg.png') center / cover no-repeat;
+}
+
+/* 右侧内容 */
+.culture-content {
+    width: 50%;
+    margin-left: 50%;
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #F7F8FA;
+    box-sizing: border-box;
+}
+
+.culture-title {
+    color: var(--color-primary, #6951FF) !important;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1D2129;
+    line-height: 1.3;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+.culture-items {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.culture-item {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.culture-item-label {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1D2129;
+    line-height: 1;
+    flex-shrink: 0;
+    white-space: nowrap;
+    letter-spacing: 2px;
+}
+
+.culture-item-divider {
+    width: 3px;
+    align-self: stretch;
+    background: linear-gradient(180deg, #6951FF 0%, #4E74FF 100%);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin: 0 20px;
+}
+
+.culture-item-value {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4E5969;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}

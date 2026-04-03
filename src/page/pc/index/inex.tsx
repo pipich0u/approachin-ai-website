@@ -1,13 +1,14 @@
 import { useEffect, useRef } from 'react';
 import './index.css';
 import PageIndex from './components/index/index'
-import PageProduct from './components/product/index'
+import PageStrips from './components/strips/index'
 import PageTab from './components/tab/index'
 import PageCooperate from './components/PageCooperate/index'
 import PageContact from './components/contact/index'
 import DevelopPage from './components/develop';
 import PageQuestion from './components/question/index';
 import PageConsult from './components/consult/index';
+import AiCloud from './components/aiCloud/index';
 import PageCase from './components/case';
 import SourcePage from './components/source';
 
@@ -47,16 +48,17 @@ export default function Index() {
 
     return (
         <div className="w-100 h-100" >
-            <div className='flex items-center flex-col bg-[#fafafa]'>
+            <div className='flex items-center flex-col bg-[#F7F8FA]'>
                 {/* <TopNavs /> */}
                 <PageIndex />
-                <PageProduct />
-                <PageQuestion />
+                <PageStrips />
                 <PageTab />
                 <PageCase />
                 <PageCooperate />
+
                 <SourcePage />
                 <DevelopPage />
+                <AiCloud />
                 <PageConsult />
                 <PageContact />
                 {/* <FloatBtnEle/> */}

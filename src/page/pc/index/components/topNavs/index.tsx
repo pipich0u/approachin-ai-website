@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './index.css';
 import logo_black from '@/assets/svg/logo-black.svg';
 import { useNavigate } from 'react-router-dom';
-import { Dropdown } from 'antd';
+import { Dropdown, message } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { menuHrefListDefault } from '@/page/pc/index/textConfig';
 import { IconFont } from '@/utils/antdUtils';
@@ -14,12 +14,11 @@ const TopNavs = () => {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   const onNavigate = (href: string, title?: string) => {
-    // 根据 href 进行路由跳转或锚点定位
+    if (!href) return;
     if (title) {
       trackButtonClick(`顶部导航-${title}`, '页面顶部导航栏', { href, title });
     }
-    
-    // 判断是否为外部链接（http/https）
+
     if (href.startsWith('http://') || href.startsWith('https://')) {
       window.open(href, '_blank');
     } else {
@@ -27,17 +26,26 @@ const TopNavs = () => {
     }
   };
 
-  // 根据菜单项的 subItems 生成下拉菜单
-  const getDropdownMenu = (subItems: Array<{ title: string; href: string }>) => {
+  const getDropdownMenu = (subItems: Array<{ title: string; href: string; logo?: string; logoWidth?: number; logoOffset?: number }>) => {
     return {
       items: subItems.map((subItem, index) => ({
         key: `${index}`,
         label: (
           <div
             className="dropdown-item"
-            onClick={() => onNavigate(subItem.href, subItem.title)}
+            onClick={() => {
+              if (!subItem.href) {
+                message.info('敬请期待');
+                return;
+              }
+              onNavigate(subItem.href, subItem.title);
+            }}
           >
-            {subItem.title}
+            {subItem.logo ? (
+              <img src={subItem.logo} alt={subItem.title} className="dropdown-logo" style={{ width: `${subItem.logoWidth || 140}px`, marginLeft: subItem.logoOffset || 0 }} />
+            ) : (
+              subItem.title
+            )}
           </div>
         ),
       })),
@@ -46,30 +54,39 @@ const TopNavs = () => {
 
   return (
     <nav className="bg-1 navbar">
-      <div className="app w-full flex justify-between">
+      <div className="navbar-inner">
+        {/* 左侧：Logo + 导航链接 */}
+        <div className="navbar-left">
+          <div
+            className="logo-link"
+            onClick={() => {
+              trackButtonClick('Logo点击', '页面顶部导航栏', { href: '/' });
+              navigate('/');
+            }}
+          >
+            <img src={logo_black} alt="logo" />
+          </div>
 
-        <div className="logo flex items-center justify-between w-full">
-          <img src={logo_black} alt="" className=' cursor-pointer ' onClick={() => {
-            trackButtonClick('Logo点击', '页面顶部导航栏', { href: '/' });
-            navigate('/');
-          }} />
-          <div className="navbar-container ml-[100px]">
+          <div className="navbar-container">
             {menuHrefListDefault.map((item, index) => {
-
-              // 非下拉 — 点击跳转
               if (!item.isSelected) {
                 return (
                   <div
                     key={index}
                     className="navbar-item cursor-pointer"
-                    onClick={() => onNavigate(item.href, item.title)}
+                    onClick={() => {
+                      if ((item as any).comingSoon) {
+                        message.info('敬请期待');
+                        return;
+                      }
+                      onNavigate(item.href, item.title);
+                    }}
                   >
                     {item.title}
                   </div>
                 );
               }
 
-              // 下拉菜单项
               return (
                 <Dropdown
                   key={index}
@@ -93,7 +110,19 @@ const TopNavs = () => {
             })}
           </div>
         </div>
-        {/* <Button className='navbar-btn' type='primary'>免费下载</Button> */}
+
+        {/* 右侧：免费使用按钮 */}
+        <div className="navbar-right">
+          <button
+            className="navbar-cta"
+            onClick={() => {
+              trackButtonClick('免费使用', '页面顶部导航栏', { href: '/contact' });
+              navigate('/contact');
+            }}
+          >
+            免费使用
+          </button>
+        </div>
       </div>
     </nav>
   );

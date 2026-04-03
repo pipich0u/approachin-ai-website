@@ -13,17 +13,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: MiSans;
+    font-family: var(--font-stack);
 }
 
 .qt-title {
-    font-weight: 450;
-    font-style: Semibold;
-    font-size: 38px;
-    line-height: 150%;
-    letter-spacing: 2%;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 56px;
+    letter-spacing: 0;
     text-align: center;
-    /* color: #434343; */
     padding-top: 20px;
     z-index: 1;
     background: linear-gradient(280deg, #CD69FF -46.27%, #530FFF 100%);
@@ -31,7 +29,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 
 .video-bg {
     position: absolute;

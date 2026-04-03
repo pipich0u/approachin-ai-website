@@ -2,19 +2,21 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background: #F9F6FF;
+    background: #F7F8FA;
 }
 
 .cpa-container {
-    padding-left: 148px;
-    padding-right: 124px;
-    height: 670px;
-    max-width: 1440px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    height: auto;
+    max-width: 120rem;
     width: 100%;
     display: flex;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     flex-direction: column;
-    padding-top: 70px;
+    padding-top: 120px;
+    box-sizing: border-box;
+    padding-bottom: 0;
 }
 
 .cpa-title {
@@ -22,76 +24,76 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 450;
-    font-style: Semibold;
-    font-size: 38px;
-    line-height: 150%;
-    letter-spacing: 2%;
-    color: #1B1D22;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 56px;
+    letter-spacing: 0;
+    color: #1D2129;
 }
 
 .cpa-content {
     display: flex;
     justify-content: space-between;
-
 }
 
 .cpa-content-left {
-    width: 530px;
-    height: 450px;
+    width: 40%;
+    flex-shrink: 0;
+    height: 720px;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    justify-content: center;
     align-items: start;
 }
 
 .cpa-ct-left-title {
-    color: #333333;
-    font-weight: 520;
-    font-style: Semibold;
-    font-size: 32px;
-    line-height: 150%;
-    letter-spacing: 0%;
-    text-align: center;
+    color: #1D2129;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0;
+    text-align: left;
 }
 
 .cpa-ct-left-desc {
-    font-weight: 305;
-    font-style: Normal;
-    font-size: 18px;
-    line-height: 150%;
-    letter-spacing: 0%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0;
     text-align: justify;
-    color: #646464;
-    margin-top: 15px;
+    color: var(--color-text-2);
+    margin-top: 16px;
 }
 
 .cpa-content-rig {
-    width: 450px;
-    height: 450px;
-    padding: 25px;
+    width: 60%;
+    flex-shrink: 0;
+    height: 720px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .circle-container {
     width: 100%;
+    max-width: 720px;
     height: 100%;
     position: relative;
 }
 
-
 .circle-item-wrapper {
     position: absolute;
-    width: 64px;
-    height: 64px;
-    margin-left: -32px;
-    margin-top: -32px;
+    width: 88px;
+    height: 88px;
+    margin-left: -44px;
+    margin-top: -44px;
 }
 
 .circle-out {
     border-radius: 50%;
     width: 100%;
     height: 100%;
-    border: 1px dashed #DEDEDE;
+    border: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -99,10 +101,10 @@
 }
 
 .circle-in {
-    width: 238.233px;
-    height: 238.233px;
+    width: 330px;
+    height: 330px;
     border-radius: 50%;
-    border: 1px dashed #DEDEDE;
+    border: 1px dashed #E5E6EB;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -119,8 +121,8 @@
 }
 
 .circle-item {
-    width: 64px;
-    height: 64px;
+    width: 88px;
+    height: 88px;
     object-fit: contain;
     display: block;
     animation: counter-rotate 50s linear infinite running;
@@ -131,8 +133,8 @@
 }
 
 .big {
-    width: 74px;
-    height: 74px;
+    width: 96px;
+    height: 96px;
 }
 
 .circle-in .circle-item {
@@ -140,43 +142,23 @@
 }
 
 @keyframes rotate-outer {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 @keyframes rotate-inner {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-
-    to {
-        transform: translate(-50%, -50%) rotate(-360deg);
-    }
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(-360deg); }
 }
 
 @keyframes counter-rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(-360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
 }
 
 @keyframes counter-rotate-reverse {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .cpa-ct-left-btn {
@@ -185,16 +167,16 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
-    padding: 16px 36px;
+    padding: 12px 32px;
     border-color: transparent;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     box-shadow: 0 0 0 2px #ffffff;
     cursor: pointer;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     margin-top: 100px;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     background: linear-gradient(90deg, #4E74FF 0%, #7F49FF 100%);
 }
 
@@ -220,6 +202,7 @@
     transform: translateX(5px);
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
 .cpa-ct-left-btn::before {
     content: '';
     position: absolute;
@@ -228,11 +211,12 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(250deg, #6c3ed9, #0f37d7);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     opacity: 0;
     transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     z-index: 0;
 }
+
 .cpa-ct-left-btn:hover::before {
     opacity: 1;
 }
@@ -240,24 +224,3 @@
 .cpa-ct-left-btn:active {
     scale: 0.95;
 }
-/* .cpa-ct-left-btn:hover {
-    box-shadow: 0 0 0 12px transparent;
-    color: #212121;
-    border-radius: 12px;
-} */
-
-/* .cpa-ct-left-btn:hover .arr-1 {
-    right: -25%;
-}
-
-.cpa-ct-left-btn:hover .arr-2 {
-    left: 25px;
-}
-
-.cpa-ct-left-btn:hover .bt-text {
-    transform: translateX(20px);
-}
-
-.cpa-ct-left-btn:hover svg {
-    fill: #fff;
-} */

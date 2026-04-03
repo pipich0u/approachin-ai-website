@@ -1,199 +1,419 @@
-.section-1 {
-    /* background: linear-gradient(180deg, rgba(250, 250, 250, 0.00) 0%, #FAFAFA 100%); */
-    background: url('/src/assets/images/img/index_bg.webp') no-repeat;
-    background-size: cover;
-    background-position: center;
-    font-family: MiSans !important;
+@font-face {
+    font-family: 'AlibabaPuHuiTi';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-3/AlibabaPuHuiTi-3-115-Black/AlibabaPuHuiTi-3-115-Black.woff2') format('woff2');
+}
+
+/* ===== Hero Section - 火山引擎风格（rem 等比缩放） ===== */
+/* 基准: 1920px 设计稿, 16px = 1rem */
+
+.hero-section {
     width: 100%;
-    height: 800px;
-}
-
-.section-2 {
-    width: 100%;
-    background: #E9E8FA;
-    background: url('/src/assets/images/img/Banner2.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-
-.section-3 {
-    width: 100%;
-    background: #E9E8FA;
-    background: url('/src/assets/images/img/Banner3.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.floating-left {
-    position: absolute;
-    left: 0;
-    top: 30%;
-    width: 800px;
-    transform: translate(-60%, -50%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.floating-right {
-    position: absolute;
-    right: 0;
-    top: 30%;
-    width: 1200px;
-    transform: translate(60%, -50%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.carousel-wrapper {
-    width: 100%;
-    height: 706px;
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel-slides {
+    height: 48.875rem;  /* 782px@16px, 586px@12px — matches Volcengine */
+    background: linear-gradient(180deg, #EDF0F8 0%, #F3F5FA 40%, #F8F9FC 70%, #FFFFFF 100%);
     display: flex;
-    width: 300%;
-    /* width: 100%; */
-    /* 3个页面 */
-    height: 100%;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 2rem; /* 32px — 距导航栏缩小一半 */
+    font-family: var(--font-stack);
+    box-sizing: border-box;
 }
 
-.carousel-slides>.section {
-    width: 33.333%;
-    /* width: 100%; */
-    /* 每个页面占1/3 */
-    flex-shrink: 0;
+.hero-inner {
+    width: 100%;
+    max-width: 120rem; /* let padding control edges, not max-width */
+    margin: 0 auto;
+    padding: 0 5rem;
+    display: flex;
+    gap: 3.5rem; /* 56px */
+    align-items: stretch;
+    box-sizing: border-box;
 }
 
-.title {
-    /* text-align: center; */
+/* === 左侧（白色卡片面板，火山引擎同款） === */
+.hero-left {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    height: 600px;
-    box-sizing: border-box;
-    padding: 0 116px;
+    justify-content: space-between;
+    margin: 4.2rem 0; /* 上下各缩进，下边缘对齐右侧最后一条标签 */
+    padding: 2rem 2.5rem 1.5rem; /* 内边距相应减小 */
+    min-width: 0;
+    background: #fff url('/src/assets/images/img/hero_slide_bg.png') no-repeat center / cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 1.5rem 0 rgba(0, 0, 0, 0.06);
+    overflow: hidden;
 }
 
-.title-top {
-    font-family: MiSans;
-    font-weight: 520;
-    font-style: Semibold;
-    font-size: 56px;
-    line-height: 150%;
-    letter-spacing: 2%;
-    text-align: center;
-    margin-top: 180px;
+.hero-left-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
-.title-desc {
-    font-family: MiSans;
-    font-weight: 305;
-    font-style: Normal;
-    font-size: 24px;
-    line-height: 150%;
-    letter-spacing: 2%;
-    text-align: center;
-}
-
-.title-bottom {
-    font-family: MiSans;
-    font-weight: 305;
-    font-size: 24px;
-    line-height: 34px;
-    letter-spacing: 2%;
-    text-align: center;
-    color: #FFFFFFB2;
-
-}
-
-.title-top-text {
-    background: linear-gradient(256deg, #4E74FF -3.3%, #A557FE 105.24%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.index-bottom {
-    background: #ffffff72;
-    border: 0.89px solid #FFFFFFCC;
-    box-shadow: 0 4.538px 34.037px 0 rgba(38, 0, 162, 0.20);
-    backdrop-filter: blur(18px);
-}
-
-.index-line {
-    border: 0.89px solid #806BFF33;
-}
-
-/* @media (max-width: 1200px) {
-    .index-bottom {
-        width: 800px;
-
-    }
-    .index-bottom-item {
-        
-    }
-    .index-line{
-        margin: 0 10px;
-    }
-} */
-
-.animated-button {
-    position: relative;
+.hero-slide-area {
+    flex: 1;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-slide-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: -50px;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem; /* 4px 12px */
+    border-radius: 0.25rem;
+    background: linear-gradient(90deg, rgba(105, 81, 255, 0.10) 0%, rgba(78, 116, 255, 0.10) 100%);
+    color: var(--color-primary, #6951FF);
+    font-size: 0.8125rem; /* 13px */
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.hero-title {
+    font-size: 2.625rem; /* 42px */
+    font-weight: 600;
+    line-height: 3.25rem; /* 52px */
+    letter-spacing: -0.01em;
+    color: #1D2129;
+    margin: 0 0 1rem;
+}
+
+.hero-desc {
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+    line-height: 1.625rem; /* 26px */
+    color: #4E5969;
+    margin: 0 0 2rem; /* 32px */
+    max-width: 35rem; /* 560px */
+}
+
+/* 按钮 — 火山引擎同款尺寸（两种形态） */
+.hero-btn {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    padding: 16px 36px;
-    border-color: transparent;
-    font-size: 14px;
-    font-weight: 600;
-    box-shadow: 0 0 0 2px #ffffff;
+    padding: 0.75rem 2.375rem; /* 12px 38px@16px — Volcengine: 9px 28.5px@12px */
+    border-radius: 0.25rem; /* 4px@16px — Volcengine: 3px@12px */
+    font-size: 1rem; /* 16px@16px — Volcengine: 12px@12px */
+    font-weight: 500;
+    line-height: 1.375rem;
     cursor: pointer;
-    overflow: hidden;
-    height: 44px;
-    margin-top: 30px;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    border-radius: 8px;
-    background: linear-gradient(90deg, #4E74FF 0%, #7F49FF 100%);
+    transition: all 0.2s ease;
+    border: none;
+    outline: none;
 }
 
-.animated-button::before {
+/* 深色填充 + 白字 */
+.hero-btn-primary {
+    background: var(--color-primary, #6951FF);
+    color: #fff;
+}
+
+.hero-btn-primary:hover {
+    background: #5a42e6;
+}
+
+.hero-btn-primary:active {
+    background: #4d38cc;
+}
+
+/* 有色边框 + 黑字 */
+.hero-btn-default {
+    background: transparent;
+    color: #0C0D0E;
+    border: 1px solid #42464E;
+}
+
+.hero-btn-default:hover {
+    border-color: var(--color-primary, #6951FF);
+    color: var(--color-primary, #6951FF);
+}
+
+.hero-btn-default:active {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* 指示器 — 火山引擎同款：上文字 + 下进度线，居中 */
+.hero-indicators {
+    display: flex;
+    gap: 0.375rem; /* 6px — 线之间的间距 */
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-indicator {
+    padding: 0.9375rem 1.25rem 1.25rem;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.hero-indicator-text {
+    font-size: 1rem; /* 16px@16px — Volcengine: 12px@12px */
+    font-weight: 400;
+    line-height: 1.375rem;
+    color: #41464F;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.hero-indicator.active .hero-indicator-text {
+    color: #020814;
+    font-weight: 500;
+}
+
+.hero-indicator:hover .hero-indicator-text {
+    color: #020814;
+}
+
+.hero-indicator-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px; /* Volcengine: 1px */
+    background: rgba(65, 70, 79, 0.15);
+    overflow: hidden;
+}
+
+.hero-indicator-fill {
+    height: 100%;
+    background: var(--color-primary, #6951FF);
+    transition: width 0.05s linear;
+}
+
+/* === AIGC 轮播页深色背景文字适配 === */
+.hero-left-dark .hero-title {
+    color: #fff;
+}
+
+.hero-left-dark .hero-desc {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-left-dark .hero-btn-default {
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-left-dark .hero-btn-default:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+.hero-left-dark .hero-indicator-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-left-dark .hero-indicator.active .hero-indicator-text {
+    color: #fff;
+}
+
+.hero-left-dark .hero-indicator:hover .hero-indicator-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-left-dark .hero-indicator-bar {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* === AIGC & 清华 轮播页内容居中 === */
+.hero-left-centered .hero-slide-content {
+    margin-top: 0;
+}
+
+/* === 我们的愿景 轮播页字体加大 + 上移 === */
+.hero-left-vision .hero-slide-content {
+    margin-top: -120px;
+}
+
+.hero-left-vision .hero-title {
+    font-family: 'AlibabaPuHuiTi', sans-serif;
+    font-size: 3.25rem; /* 52px */
+    line-height: 4.25rem; /* 68px */
+    letter-spacing: 3px;
+    margin: 0 0 1.75rem;
+}
+
+.hero-left-vision .hero-desc {
+    font-size: 1.25rem; /* 20px */
+    line-height: 2.125rem; /* 34px */
+    color: #1D2129;
+    margin: 0 0 3rem;
+    max-width: 38rem;
+}
+
+.hero-left-vision .hero-indicator-text {
+    color: #fff;
+}
+
+.hero-left-vision .hero-indicator.active .hero-indicator-text {
+    color: #fff;
+}
+
+.hero-left-vision .hero-indicator:hover .hero-indicator-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-left-vision .hero-indicator-bar {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* === 右侧资讯卡片（火山引擎同款布局） === */
+.hero-right {
+    width: 32.5rem; /* 520px@16px, 390px@12px — Volcengine: 391px@12px */
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; /* 64px@16px — Volcengine: 48px@12px */
+    justify-content: center;
+    padding: 3rem 0 2.5rem;
+}
+
+.hero-card {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem; /* 38px@16px — Volcengine: 28.8px@12px */
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+/* 卡片间分割线 — Volcengine ::after 样式 */
+.hero-card:not(:last-child)::after {
     content: '';
     position: absolute;
-    top: 0;
     left: 0;
+    right: 0;
+    bottom: -2rem; /* gap 的一半 (4rem / 2) */
+    height: 1px;
+    background: #EAEDF1;
+}
+
+.hero-card:hover .hero-card-title {
+    color: var(--color-primary, #6951FF);
+}
+
+.hero-card:hover .hero-card-img img {
+    transform: scale(1.05);
+}
+
+.hero-card-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.45rem 0 0.5625rem;
+    align-self: stretch;
+}
+
+.hero-card-title {
+    font-size: 1.56rem; /* 25px@16px — Volcengine: 18.72px@12px */
+    font-weight: 500;
+    line-height: 2.12rem; /* Volcengine: 25.44px@12px */
+    color: #0C0D0E;
+    transition: color 0.2s ease;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.hero-card-tag {
+    font-size: 1.125rem; /* 18px@16px — Volcengine: 13.5px@12px */
+    font-weight: 400;
+    line-height: 1.56rem; /* Volcengine: 18.72px@12px */
+    color: #42464E;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hero-card-img {
+    width: 9.75rem; /* 156px@16px — Volcengine: 117px@12px */
+    height: 9.75rem;
+    flex-shrink: 0;
+    border-radius: 0.375rem; /* Volcengine: 4.5px@12px */
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-card-img-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    white-space: pre-line;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+.hero-card-img img {
     width: 100%;
     height: 100%;
-    background: linear-gradient(250deg, #6c3ed9, #0f37d7);
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    z-index: 0;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* 通用按钮（其他板块复用） — 火山引擎同款 */
+.animated-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2.375rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.375rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    border-radius: 0.25rem;
+    background: var(--color-primary, #6951FF);
+    color: #fff;
+}
+
+.animated-button:hover {
+    background: #5a42e6;
+}
+
+.animated-button:active {
+    background: #4d38cc;
 }
 
 .animated-button .bt-text {
     position: relative;
     z-index: 1;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.animated-button:hover::before {
-    opacity: 1;
-}
-
-.animated-button:hover {
-    box-shadow: 0 0 0 12px transparent;
-    color: #212121;
-    text-decoration: none;
-}
-
-.animated-button:active {
-    scale: 0.95;
-}
-.ant-dropdown-menu-item{
-    padding:6 0!important;
+.ant-dropdown-menu-item {
+    padding: 0.375rem 0 !important;
 }

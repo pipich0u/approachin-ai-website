@@ -1,0 +1,154 @@
+.aicloud-section {
+    width: 100%;
+    font-family: var(--font-stack);
+    background: #F7F8FA;
+    display: flex;
+    justify-content: center;
+    padding: 120px 5rem 80px;
+    box-sizing: border-box;
+}
+
+.aicloud-card {
+    width: 100%;
+    max-width: calc(120rem - 10rem);
+    min-height: 528px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #eef2fb 0%, #f7f8fc 40%, #ffffff 100%);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: stretch;
+    overflow: visible;
+    position: relative;
+}
+
+/* 左侧文字 — 基准 1920px，等比缩放 */
+.aicloud-left {
+    flex: 1;
+    padding: 2.6vw 0 2.2vw 3.4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+    max-width: 55%;
+}
+
+.aicloud-headline {
+    font-size: clamp(32px, 2.2vw, 42px);
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1D2129;
+    letter-spacing: 0.05vw;
+    margin: 0;
+}
+
+.aicloud-highlight {
+    color: #4A0E8F;
+}
+
+.aicloud-desc-text {
+    font-size: clamp(14px, 0.95vw, 18px);
+    font-weight: 300;
+    line-height: 1.8;
+    color: #2D2D2D;
+    margin: 0.9vw 0 0;
+    letter-spacing: 0.025vw;
+}
+
+/* 奖项荣誉区 */
+.aicloud-awards {
+    display: flex;
+    gap: 1.8vw;
+    margin-top: 1.6vw;
+}
+
+.aicloud-award-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.aicloud-award-wreath {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aicloud-wreath-svg {
+    display: block;
+    width: clamp(120px, 9vw, 160px);
+    height: auto;
+}
+
+.aicloud-award-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.aicloud-award-title {
+    font-size: clamp(12px, 0.85vw, 15px);
+    font-weight: 700;
+    color: #4A0E8F;
+    line-height: 1.3;
+    margin-bottom: 0.2vw;
+    white-space: nowrap;
+}
+
+.aicloud-award-desc {
+    font-size: clamp(10px, 0.65vw, 12px);
+    font-weight: 400;
+    color: #86909C;
+    line-height: 1.4;
+    white-space: pre-line;
+}
+
+/* 标签 */
+.aicloud-tags {
+    display: flex;
+    gap: 0.4vw;
+    margin-top: 1.6vw;
+}
+
+.aicloud-tag {
+    display: flex;
+    padding: 0.45vw 1.5vw;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-stack);
+    font-size: 0.78vw;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #fff;
+    border-radius: var(--radius-sm, 4px);
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
+}
+
+/* 右侧球体 */
+.aicloud-right {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    bottom: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.aicloud-ball {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: right center;
+    display: block;
+}
