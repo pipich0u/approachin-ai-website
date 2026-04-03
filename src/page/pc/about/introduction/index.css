@@ -11,6 +11,7 @@
     flex-direction: column;
     min-width: 1200px;
     padding-top: 60px;
+    background: #EDF0F8;
 }
 
 /* ========== Top Banner ========== */
@@ -93,7 +94,7 @@
 /* ========== Section Common ========== */
 .about-section {
     width: 100%;
-    background: #fff;
+    background: linear-gradient(180deg, #EDF0F8 0%, #F3F5FA 40%, #F8F9FC 70%, #FFFFFF 100%);
 }
 
 .about-section-inner {
