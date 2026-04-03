@@ -6,7 +6,7 @@ import { trackPageView, trackButtonClick } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';
 import { useNavigate } from 'react-router-dom';
 import LightPillar from './LightPillar';
-const heroVisionBg = '/images/hero_vision_bg.jpg';
+import heroVisionBg from '@/assets/images/img/hero_vision_bg.png';
 
 
 const SLIDE_DURATION = 6000; // 6秒切换
@@ -156,7 +156,7 @@ export default function PageIndex() {
                                 <span className="hero-card-tag">{card.tag}</span>
                             </div>
                             <div className="hero-card-img">
-                                <img src={card.image} alt={card.title} />
+                                <img src={card.image} alt={card.title} loading="eager" fetchPriority="high" />
                                 {card.imageLabel && (
                                     <span className="hero-card-img-label">{card.imageLabel}</span>
                                 )}

@@ -1,3 +1,6 @@
+import heroCard1 from '@/assets/images/img/hero_card1.png'
+import heroCard2 from '@/assets/images/img/hero_card2.png'
+import heroCard3 from '@/assets/images/img/hero_card3.png'
 import tab1 from '@/assets/images/img/index_tab1.webp'
 import tab2 from '@/assets/images/img/index_tab2.webp'
 import tab3 from '@/assets/images/img/index_tab3.webp'
@@ -182,21 +185,21 @@ export const heroCards = [
     {
         title: '为用户提供日均万亿级的高效能Token服务',
         tag: '产品发布',
-        image: '/images/hero_card1.jpg',
+        image: heroCard1,
         imageLabel: 'Token\nService',
         link: 'https://mp.weixin.qq.com/s/2Ly_0FuReh03pYg7h91NjQ',
     },
     {
         title: 'ATaaS、AMaaS及KLLM引擎分层提升Token产能',
         tag: '产品发布',
-        image: '/images/hero_card2.jpg',
+        image: heroCard2,
         imageLabel: 'Token\nSystem',
         link: 'https://mp.weixin.qq.com/s/2Ly_0FuReh03pYg7h91NjQ',
     },
     {
         title: '从桌面型小盒子到企业级智算集群的全场景硬件方案',
         tag: '产品发布',
-        image: '/images/hero_card3.jpg',
+        image: heroCard3,
         imageLabel: 'Token\nMachine',
         link: 'https://mp.weixin.qq.com/s/2Ly_0FuReh03pYg7h91NjQ',
     },
