@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { message } from 'antd';
 import product1 from '@/assets/images/img/product_1.webp';
 import product2 from '@/assets/images/img/product_2.webp';
+import product3 from '@/assets/images/img/product_3.webp';
+import amaas from '@/assets/images/img/amaas.webp';
 
-const stripImages = [product1, product2, '', ''];
+const stripImages = [product1, product2, product3, amaas];
 
 export default function MobStrips() {
     const navigate = useNavigate();
@@ -20,10 +22,7 @@ export default function MobStrips() {
             <div className="mob-strips-title">以高效能Token为核心的产品布局</div>
             <div className="mob-strips-list">
                 {productFeatures.slice(0, 4).map((item, idx) => (
-                    <div key={idx} className={`mob-strip-item mob-strip-bg-${idx + 1}`}>
-                        {stripImages[idx] && (
-                            <img src={stripImages[idx]} alt={item.title} className="mob-strip-img" />
-                        )}
+                    <div key={idx} className="mob-strip-item">
                         <div className="mob-strip-body">
                             <div className="mob-strip-tags">
                                 {item.tag.map((tag, i) => (
@@ -33,6 +32,9 @@ export default function MobStrips() {
                             <div className="mob-strip-name">{item.title}</div>
                             <div className="mob-strip-desc">{item.desc}</div>
                             <button className="mob-strip-btn" onClick={() => navigateTo(item.link)}>了解详情</button>
+                        </div>
+                        <div className="mob-strip-img-wrap">
+                            <img src={stripImages[idx]} alt={item.title} />
                         </div>
                     </div>
                 ))}
