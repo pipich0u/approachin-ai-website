@@ -26,8 +26,8 @@ const SourcePage = () => {
                         </motion.div>
                         <div className='source-cont-left-bot'>
                             <motion.button onClick={() => {
-                                trackButtonClick('开源社区-Mooncake', '首页开源社区区域', { url: 'https://kvcache-ai.github.io/Mooncake/index.html' });
-                                window.open('https://kvcache-ai.github.io/Mooncake/index.html');
+                                trackButtonClick('开源社区-KTransformers', '首页开源社区区域', { url: sourceList.list[0].link });
+                                window.open(sourceList.list[0].link, '_blank');
                             }} className='hero-btn hero-btn-default' {...scrollInViewSpringProps}>
                                 {sourceList.list[0].btn}
                             </motion.button>
@@ -41,8 +41,8 @@ const SourcePage = () => {
                         </motion.div>
                         <div className='source-cont-left-bot'>
                             <motion.button onClick={() => {
-                                trackButtonClick('开源社区-生态合作', '首页开源社区区域', { href: '/cooperate' });
-                                navigator('/cooperate');
+                                trackButtonClick('开源社区-Mooncake', '首页开源社区区域', { href: sourceList.list[1].link });
+                                navigator(sourceList.list[1].link);
                             }} {...scrollInViewSpringProps} className='hero-btn hero-btn-default'>
                                 {sourceList.list[1].btn}
                             </motion.button>

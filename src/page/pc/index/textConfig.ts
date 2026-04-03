@@ -355,12 +355,14 @@ export const sourceList = {
         {
             title: 'KTransformers',
             desc: '全球 TOP 推理引擎，首创 GPU+CPU 异构计算技术，击穿千亿/万亿大参数模型部署算力门槛，多家主流大模型首选推理引擎，获国际顶级系统会议 SOSP 论文',
-            btn: '了解详情'
+            btn: '了解详情',
+            link: 'https://ktransformers.net/zh'
         },
         {
             title: 'Mooncake',
             desc: '业界分布式推理事实标准，以 KVCache 为核心大幅提升大模型推理吞吐量与成本效率，获 2025 USENIX FAST 最佳论文',
-            btn: '了解详情'
+            btn: '了解详情',
+            link: '/mooncake'
         },
     ]
 }
