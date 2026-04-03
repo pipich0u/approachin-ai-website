@@ -12,14 +12,20 @@ export default function MobAiCloud() {
     return (
         <div className="mob-aicloud">
             <div className="mob-aicloud-card">
-                <h2 className="mob-aicloud-headline">
-                    ATaaS: 全球领先的<span className="mob-aicloud-highlight">高效能Token</span>生产平台
-                </h2>
-                <p className="mob-aicloud-desc">
-                    ATaaS通过极致的系统工程设计，重构模型推理的计算、调度、访存逻辑，能够在万卡级异构算力环境上提供<span className="mob-aicloud-highlight">高产能</span>、<span className="mob-aicloud-highlight">高性能</span>、<span className="mob-aicloud-highlight">高可靠</span>的Token服务
-                </p>
-                <div className="mob-aicloud-ball">
-                    <img src={computeBall} alt="算力球" />
+                <div className="mob-aicloud-top">
+                    <div className="mob-aicloud-left">
+                        <h2 className="mob-aicloud-headline">
+                            ATaaS: 全球领先的<span className="mob-aicloud-highlight">高效能Token</span>生产平台
+                            <span className="mob-aicloud-tag">万卡级</span>
+                            <span className="mob-aicloud-tag">高产能</span>
+                        </h2>
+                        <p className="mob-aicloud-desc">
+                            ATaaS通过极致的系统工程设计，重构模型推理的计算、调度、访存逻辑，能够在万卡级异构算力环境上提供<span className="mob-aicloud-highlight">高产能</span>、<span className="mob-aicloud-highlight">高性能</span>、<span className="mob-aicloud-highlight">高可靠</span>的Token服务
+                        </p>
+                    </div>
+                    <div className="mob-aicloud-right">
+                        <img src={computeBall} alt="算力球" />
+                    </div>
                 </div>
                 <div className="mob-aicloud-awards">
                     {awards.map((award, i) => (
@@ -28,10 +34,6 @@ export default function MobAiCloud() {
                             <div className="mob-aicloud-award-desc">{award.desc}</div>
                         </div>
                     ))}
-                </div>
-                <div className="mob-aicloud-tags">
-                    <span className="mob-aicloud-tag">万卡级</span>
-                    <span className="mob-aicloud-tag">高产能</span>
                 </div>
             </div>
         </div>
