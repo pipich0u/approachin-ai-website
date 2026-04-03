@@ -19,26 +19,32 @@
 
 .mob-strip-item {
     border-radius: 12px;
-    padding: 24px;
+    overflow: hidden;
     background-color: #fff;
-    background-size: cover;
-    background-position: top center;
-    min-height: 280px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
-.mob-strip-bg-1 { background-image: url('/src/assets/images/img/product_1.webp'); }
-.mob-strip-bg-2 { background-image: url('/src/assets/images/img/product_2.webp'); }
-.mob-strip-bg-3 {
-    background: linear-gradient(135deg, #f0edff 0%, #e8eeff 100%);
-    min-height: 200px;
+.mob-strip-item .mob-strip-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
 }
+
+.mob-strip-item .mob-strip-body {
+    padding: 20px 24px 24px;
+}
+
+.mob-strip-bg-3,
 .mob-strip-bg-4 {
-    background: linear-gradient(135deg, #eef5ff 0%, #f0edff 100%);
-    min-height: 200px;
+    background: linear-gradient(135deg, #f0edff 0%, #e8eeff 100%);
+}
+
+.mob-strip-bg-3 .mob-strip-body,
+.mob-strip-bg-4 .mob-strip-body {
+    padding-top: 24px;
 }
 
 .mob-strip-tags {
