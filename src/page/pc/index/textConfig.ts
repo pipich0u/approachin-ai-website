@@ -76,36 +76,35 @@ export const menuHrefListDefault = [
 ]
 export const mobMenuHrefListDefault = [
     {
-        title: '产品介绍',
-        href: '/',
+        title: 'Token Service',
+        href: '',
+        isSelected: false,
+        comingSoon: true
+    },
+    {
+        title: 'Token System',
+        href: '',
         isSelected: true,
         subItems: [
-            // { title: 'AI Studio 便携工作站', href: '/studio' },
-            { title: '大模型推理一体机', href: '/machine' },
-            // { title: 'KLLM 推理引擎', href: '/kllm' }, 
-            { title: 'AMaaS 平台', href: '/amaas' },
-            // { title: 'MVaaS 平台', href: 'mvaas' },
+            { title: 'KLLM推理引擎', href: '/kllm' },
+            { title: 'AMaaS平台', href: '/amaas' },
+            { title: 'ATaaS', href: '' }
         ]
     },
-    // {
-    //     title: '开源社区',
-    //     href: '',
-    //     isSelected: true,
-    //     subItems: [
-    //         // { title: 'KTransformers', href: 'ktransformers' },
-    //         { title: 'Mooncake', href: '/mooncake' }
-    //     ]
-    // },
-    // {
-    //     title: '解决方案',
-    //     href: 'solution',
-    //     isSelected: false
-    // },
-    // {
-    //     title: '生态合作',
-    //     href: '/cooperate',
-    //     isSelected: false
-    // },
+    {
+        title: 'Token Machine',
+        href: '/machine',
+        isSelected: false
+    },
+    {
+        title: '开源社区',
+        href: '',
+        isSelected: true,
+        subItems: [
+            { title: 'KTransformers', href: 'https://ktransformers.net/zh' },
+            { title: 'Mooncake', href: '/mooncake' }
+        ]
+    },
     {
         title: '趋境资讯',
         href: '/information',

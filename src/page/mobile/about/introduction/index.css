@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 120px ;
+    padding-top: 120px;
     align-items: center;
+    background: #EDF0F8;
 }

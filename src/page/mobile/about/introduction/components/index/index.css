@@ -1,218 +1,107 @@
-/* ========== 容器布局 ========== */
-.mob-introduction-index-container {
+.mob-intro-page {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: relative;
-    font-family: MiSans;
-    font-style: normal;
-    box-sizing: border-box;
 }
 
-.mob-introduction-idx-company-box {
-    height: 1500px;
+/* Banner */
+.mob-intro-banner {
     width: 100%;
-    position: relative;
-}
-
-/* ========== 顶部内容区域 ========== */
-.mob-introduction-idx-content {
-    width: 100%;
-    height: 800px;
+    height: 200px;
+    background: #1a0a2e url('/images/about_banner.jpg') center / cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(/src/assets/images/img/introduction_bg_about.webp) no-repeat;
-    background-position: center top;
-    background-size: 200% 800px;
-    padding-top: 160px;
+    justify-content: center;
 }
 
-.mob-introduction-idx-content-title {
-    color: #FFF;
-    font-size: 40.031px;
-    font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 0.801px;
-    display: flex;
-
-}
-
-.mob-introduction-idx-content-title-color {
-    text-transform: uppercase;
-    margin-left: 8px;
-}
-
-.mob-introduction-idx-content-btn {
-    padding: 10px 44px;
-    width: 163px;
-    height: 56px;
-    box-shadow: none;
-}
-
-.mob-introduction-btn-text {
-    font-size: 16px;
-    color: white;
-    font-weight: 380;
-}
-
-.mob-introduction-idx-company-team {
-    display: flex;
-    width: 400px;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-}
-
-/* ========== 公司介绍卡片 ========== */
-.mob-introduction-idx-company {
-    width: 90%;
-    max-width: 670px;
-    height: 1854px;
-    padding: 60px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -340px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 30px;
-    background: url(/src/assets/images/img/transparent_logo_bg.png) no-repeat right 20px bottom 200px, rgba(255, 255, 255, 0.80);
-    
-    backdrop-filter: blur(20px);
-}
-
-.mob-introduction-idx-company::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 30px;
-    padding: 2px;
-    background: linear-gradient(180deg, #B4A8FF -8.57%, rgba(125, 104, 255, 0.387857) 34.86%, rgba(125, 104, 255, 0) 100%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    pointer-events: none;
-}
-
-.mob-introduction-idx-company-size {
+.mob-intro-banner-title {
     font-size: 32px;
-    font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 0.8px;
-    width: fit-content;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 4px;
+    margin: 0;
 }
 
-.mob-introduction-idx-company-name {
-    display: inline-block;
-    background: linear-gradient(256deg, #4E74FF -3.3%, #A557FE 105.24%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.mob-intro-banner-sub {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 6px;
+    margin-top: 8px;
 }
 
-.mob-introduction-idx-company-title {
-    margin-bottom: 28px;
+/* Content */
+.mob-intro-content {
+    padding: 40px 24px;
+    background: linear-gradient(180deg, #EDF0F8 0%, #F3F5FA 40%, #F8F9FC 70%, #FFFFFF 100%);
 }
 
-.mob-introduction-idx-company-content {
-    color: #666;
-    font-size: 18px;
-    font-weight: 380;
-    line-height: 180%;
-    letter-spacing: 0.32px;
+.mob-intro-title {
+    text-align: center;
+    color: #4A0E8F;
+    margin: 0 0 24px;
+    font-size: 24px;
 }
 
-.mob-introduction-bold-text {
-    color: #4D4D4D;
-    font-weight: 520;
+.mob-intro-title-cn {
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-right: 8px;
 }
 
-.mob-introduction-indent {
+.mob-intro-title-en {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.mob-intro-text p {
+    font-size: 14px;
+    line-height: 2;
+    color: #4E5969;
+    text-align: justify;
+    margin: 0 0 16px;
     text-indent: 2em;
 }
 
-.mob-introduction-mb-3 {
-    margin-bottom: 0.75rem;
-}
-
-/* ========== 公司数据展示 ========== */
-.mob-introduction-idx-company-data-item {
+/* Value Cards */
+.mob-intro-values {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    position: relative;
+    gap: 12px;
+    margin-top: 32px;
 }
 
-.mob-introduction-idx-company-data-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: -100px;
-    top: 15%;
-    width: 2px;
-    height: 70%;
-    background: rgba(255, 255, 255, 0.3);
+.mob-intro-value-card {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    padding: 20px 24px;
+    text-align: center;
 }
 
-.mob-introduction-idx-company-data-item-num {
-    color: #6C19FE;
-    text-align: justify;
-    font-size: 29.528px;
-    font-weight: 520;
-    line-height: 180%;
-    letter-spacing: 0.591px;
+.mob-intro-value-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1D2129;
+    margin: 0;
+    letter-spacing: 2px;
 }
 
-.mob-introduction-idx-company-data-item-title {
-    color: #808080;
-    text-align: justify;
-    font-size: 16px;
-    font-weight: 330;
-    line-height: 180%;
-    letter-spacing: 0.32px;
-}
-
-/* ========== 解决方案与认可区域 ========== */
-.mob-introduction-idx-company-desc {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 58px;
-}
-
-.mob-introduction-idx-company-desc-btn {
-    width: 84px;
-    height: 32px;
-    border-radius: 6px;
-    background: #26007E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.mob-intro-value-en {
     font-size: 14px;
     font-weight: 400;
-    margin-bottom: 14px;
+    color: #6951FF;
+    margin-top: 4px;
+    display: block;
 }
 
-.mob-introduction-idx-company-desc-btn::before {
-    content: '核心产品';
-    background: url(/src/assets/images/img/introduction_btn.png) lightgray 50% / cover no-repeat;
-    background-clip: text;
-    font-size: 16px;
-    font-weight: 520;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.mob-intro-value-desc {
+    font-size: 14px;
+    color: #4E5969;
+    line-height: 1.6;
+    margin-top: 12px;
 }
-
-.mob-introduction-idx-company-desc-title {
-    color: #6031D2;
-    font-size: 20px;
-    font-weight: 520;
-    line-height: 150%;
-}
-

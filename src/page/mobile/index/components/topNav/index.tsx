@@ -5,6 +5,7 @@ import { IconFont } from '@/utils/antdUtils';
 import { mobMenuHrefListDefault } from '@/page/pc/index/textConfig';
 import { useNavigate } from 'react-router-dom';
 import { trackButtonClick } from '@/utils/umami';
+import { message } from 'antd';
 
 const TopNav = () => {
   // const [isFirstOpenPage, setIsFirstOpenPage] = useState(true)
@@ -52,6 +53,8 @@ const TopNav = () => {
                 if (item.isSelected && item.subItems) {
                   trackButtonClick(`移动端菜单-${item.title}`, '移动端顶部导航', { action: '展开子菜单' });
                   toggleSubmenu(item.title);
+                } else if ((item as any).comingSoon || !item.href) {
+                  message.info('敬请期待');
                 } else {
                   trackButtonClick(`移动端菜单-${item.title}`, '移动端顶部导航', { href: item.href });
                   navigate(item.href);
@@ -74,8 +77,16 @@ const TopNav = () => {
                     key={subItem.title}
                     className="mobile-submenu-item"
                     onClick={() => {
+                      if (!subItem.href) {
+                        message.info('敬请期待');
+                        return;
+                      }
                       handleClose();
-                      navigate(subItem.href);
+                      if (subItem.href.startsWith('http')) {
+                        window.open(subItem.href, '_blank');
+                      } else {
+                        navigate(subItem.href);
+                      }
                     }}
                   >
                     {subItem.title}
