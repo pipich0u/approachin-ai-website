@@ -6,6 +6,7 @@ import { trackPageView, trackButtonClick } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';
 import { useNavigate } from 'react-router-dom';
 import LightPillar from './LightPillar';
+import heroVisionBg from '@/assets/images/img/hero_vision_bg.png';
 
 
 const SLIDE_DURATION = 6000; // 6秒切换
@@ -73,7 +74,7 @@ export default function PageIndex() {
                 <div className={`hero-left ${current === 0 ? 'hero-left-vision' : ''} ${current === 1 ? 'hero-left-dark' : ''} ${current === 1 || current === 2 ? 'hero-left-centered' : ''}`} style={{
                     position: 'relative',
                     ...(current === 0 ? {
-                        backgroundImage: "url('/src/assets/images/img/hero_vision_bg.png')",
+                        backgroundImage: `url(${heroVisionBg})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     } : {})
