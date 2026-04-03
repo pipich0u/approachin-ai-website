@@ -1,0 +1,87 @@
+.mob-strips {
+    padding: 48px 24px 32px;
+    background: #fff;
+}
+
+.mob-strips-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1D2129;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.mob-strips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mob-strip-item {
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #fff;
+    background-size: cover;
+    background-position: top center;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.mob-strip-bg-1 { background-image: url('/src/assets/images/img/product_1.webp'); }
+.mob-strip-bg-2 { background-image: url('/src/assets/images/img/product_2.webp'); }
+.mob-strip-bg-3 {
+    background: linear-gradient(135deg, #f0edff 0%, #e8eeff 100%);
+    min-height: 200px;
+}
+.mob-strip-bg-4 {
+    background: linear-gradient(135deg, #eef5ff 0%, #f0edff 100%);
+    min-height: 200px;
+}
+
+.mob-strip-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.mob-strip-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgba(69, 0, 245, 0.10) 0%, rgba(205, 105, 255, 0.10) 100%);
+    color: #6133CC;
+}
+
+.mob-strip-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1D2129;
+    margin-bottom: 6px;
+}
+
+.mob-strip-desc {
+    font-size: 13px;
+    color: #4E5969;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.mob-strip-btn {
+    align-self: flex-start;
+    padding: 6px 20px;
+    border: 1px solid #42464E;
+    border-radius: 4px;
+    background: transparent;
+    color: #0C0D0E;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.mob-strip-btn:active {
+    background: rgba(0, 0, 0, 0.04);
+}
