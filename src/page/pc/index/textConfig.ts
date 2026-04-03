@@ -1,3 +1,5 @@
+import logoKT from '@/assets/images/img/logo_ktransformers.png'
+import logoMC from '@/assets/images/img/logo_mooncake.png'
 import heroCard1 from '@/assets/images/img/hero_card1.png'
 import heroCard2 from '@/assets/images/img/hero_card2.png'
 import heroCard3 from '@/assets/images/img/hero_card3.png'
@@ -40,8 +42,8 @@ export const menuHrefListDefault = [
         href: 'pageTechnology',
         isSelected: true,
         subItems: [
-            { title: 'KTransformers', href: 'https://ktransformers.net/zh', logo: '/src/assets/images/img/logo_ktransformers.png', logoWidth: 150 },
-            { title: 'Mooncake', href: 'mooncake', logo: '/src/assets/images/img/logo_mooncake.png', logoWidth: 130, logoOffset: -8 }
+            { title: 'KTransformers', href: 'https://ktransformers.net/zh', logo: logoKT, logoWidth: 150 },
+            { title: 'Mooncake', href: 'mooncake', logo: logoMC, logoWidth: 130, logoOffset: -8 }
         ]
     },
     {
