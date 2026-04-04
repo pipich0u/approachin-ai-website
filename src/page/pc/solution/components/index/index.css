@@ -74,20 +74,20 @@
 }
 
 .solution-index-title {
-    color: #1B1D22;
-    font-size: 48px;
-    font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 0.96px;
+    color: #1D2129;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 2px;
     margin-top: 40px;
 }
 
 .solution-index-desc {
-    color: #484848;
-    font-size: 20px;
-    font-weight: 305;
-    line-height: 170%;
-    letter-spacing: 0.4px;
-    margin-top: 4px;
-    width: 575px;
+    color: #4E5969;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    margin-top: 16px;
+    width: 560px;
 }

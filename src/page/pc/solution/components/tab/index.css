@@ -84,37 +84,35 @@
 
 .solution-tabnav-item-label:hover,
 .solution-tabnav-item:hover {
-    background: #F7F7F7;
-    transition: all 0.3s ease;
+    background: #F7F8FA;
+    transition: all 0.2s ease;
     cursor: pointer;
 }
 
 .solution-item-active {
-    background: #F7F7F7;
+    background: #F2F3F5;
+    font-weight: 500;
 }
 
 .solution-tabpanel-top {
-    padding-bottom: 30px;
-    border-bottom: 1px solid #CCC;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E5E6EB;
 }
 
 .solution-tabpanel-title {
-    font-size: 24px;
-    font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 0.48px;
-    background: linear-gradient(96deg, #6951FF -32.94%, #206EFF 147.78%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: #1D2129;
 }
 
 .solution-tabpanel-desc {
-    color: #666;
-    font-size: 18px;
-    font-weight: 305;
-    line-height: 150%;
-    letter-spacing: 0.36px;
+    color: #4E5969;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
     margin-top: 10px;
 }
 
@@ -137,21 +135,21 @@
 }
 
 .solution-tabpanel-box-title {
-    color: #4D4D4D;
-    font-size: 18px;
-    font-weight: 450;
-    line-height: 150%;
-    letter-spacing: 0.36px;
+    color: #1D2129;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
 }
 
 .solution-tabpanel-box-desc,
 .solution-tabpanel-box-list {
-    color: #666;
+    color: #4E5969;
     text-align: justify;
-    font-size: 18px;
-    font-weight: 305;
-    line-height: 150%;
-    letter-spacing: 0.36px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
 }
 
 .solution-tabpanel-box-list {
@@ -169,15 +167,16 @@
 }
 
 .solution-tabnav-li {
-    color: #999;
-    font-size: 18px;
-    font-weight: 380;
-    line-height: 170%;
-    letter-spacing: 0.36px;
+    color: #86909C;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
 }
 
 .solution-tabnav-li-active {
-    color: #333;
+    color: #1D2129;
+    font-weight: 500;
 }
 
 .solution-hint {
