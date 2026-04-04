@@ -55,8 +55,8 @@
     padding: 10px 44px;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
-    background: #806BFF;
+    border-radius: 4px;
+    background: #6951FF;
     gap: 4px;
     cursor: pointer;
     transition: all 0.1s ease-in-out;

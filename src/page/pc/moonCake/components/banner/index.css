@@ -88,17 +88,16 @@
     gap: 6px;
     width: fit-content;
     height: 40px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.70);
+    border-radius: 4px;
+    background: #6951FF;
     color: #FFFFFFE5;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
 .mo-btn-down {
-    border-radius: 8px;
-    border: 1px solid rgba(7, 137, 243, 0.34);
-    background: linear-gradient(90deg, #4E74FF 0%, #7F49FF 100%);
+    border-radius: 4px;
+    background: #6951FF;
     font-size: 16px;
 }
 

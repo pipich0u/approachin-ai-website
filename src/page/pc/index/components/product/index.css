@@ -48,9 +48,9 @@
 
 .more {
     position: relative;
-    border: 1px solid var(--color-primary);
-    border-radius: var(--radius-sm);
-    color: var(--color-primary);
+    border: 1px solid #42464E;
+    border-radius: 0.25rem;
+    color: #0C0D0E;
     display: flex;
     padding: 6px 18px;
     justify-content: center;
@@ -62,9 +62,8 @@
 
 .more:hover {
     cursor: pointer;
-    background: var(--color-primary);
-    color: #fff;
-    -webkit-text-fill-color: #fff;
+    border-color: #6951FF;
+    color: #6951FF;
 }
 
 .product-items-tag {
