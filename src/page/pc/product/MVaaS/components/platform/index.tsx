@@ -1,6 +1,6 @@
 import { CollapseProps, Collapse } from 'antd';
 import './index.css'
-import platfromImg from '@/assets/images/img/mvaas_pl.png'
+import platfromImg from '@/assets/images/img/mvaas_pl.webp'
 import { IconFont } from '@/utils/antdUtils';
 import { motion } from 'motion/react';
 import { scrollInViewOnceProps } from '@/utils/motionConfig';

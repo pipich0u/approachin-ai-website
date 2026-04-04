@@ -5,7 +5,7 @@
     align-items: center;
     padding: 60px 0;
     font-family: MiSans;
-    background: url(/src/assets/images/img/scene_bg.png) center bottom / cover no-repeat;
+    background: url(/src/assets/images/img/scene_bg.webp) center bottom / cover no-repeat;
 }
 
 .scene-content {

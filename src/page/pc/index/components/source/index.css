@@ -164,7 +164,7 @@
     overflow: hidden;
     border-left: 1px solid #C5BCFF;
     border-right: 1px solid #C5BCFF;
-    background: url(/src/assets/images/img/models_bg.png) no-repeat center;
+    background: url(/src/assets/images/img/models_bg.webp) no-repeat center;
     background-size: cover;
 }
 

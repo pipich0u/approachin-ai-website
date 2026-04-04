@@ -2,7 +2,7 @@ import './index.css'
 import { motion } from 'motion/react'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 import { machinAmaas } from '../../textConfig'
-import img from '@/assets/images/img/machine-rig.png'
+import img from '@/assets/images/img/machine-rig.webp'
 export const MachineAmaas = () => {
     return <div className='amaas-container'>
         <div className='amaas-content'>

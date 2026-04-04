@@ -65,15 +65,15 @@
 }
 
 .dep-card[data-index="0"]::before {
-  background-image: url(/src/assets/images/img/dep_tab1_new.png);
+  background-image: url(/src/assets/images/img/dep_tab1_new.webp);
 }
 
 .dep-card[data-index="1"]::before {
-  background-image: url(/src/assets/images/img/dep_tab3_new2.png);
+  background-image: url(/src/assets/images/img/dep_tab3_new2.webp);
 }
 
 .dep-card[data-index="2"]::before {
-  background-image: url(/src/assets/images/img/dep_tab2_new.png);
+  background-image: url(/src/assets/images/img/dep_tab2_new.webp);
 }
 
 /* 激活态 */

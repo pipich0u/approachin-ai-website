@@ -1,7 +1,7 @@
 .qt-container {
     height: 411px;
     width: 100%;
-    background: url(/src/assets/images/img/question_bg.png) no-repeat center;
+    background: url(/src/assets/images/img/question_bg.webp) no-repeat center;
     position: relative;
     background-size: cover;
     overflow: hidden;

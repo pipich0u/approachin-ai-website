@@ -1,7 +1,7 @@
 
 import './index.css'
 import logo from '@/assets/svg/logo-black.svg'
-import ewm from '@/assets/images/ewm.png'
+import ewm from '@/assets/images/ewm.webp'
 import { useNavigate } from 'react-router-dom';
 import { getCopyrightYear } from '@/utils/transfrom';
 import { trackButtonClick } from '@/utils/umami';

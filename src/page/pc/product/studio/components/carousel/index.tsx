@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import './index.css'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
 import { studioTextConfig } from '../../textConfig'
-import studio_carousel from '@/assets/images/img/studio_carousel.png'
+import studio_carousel from '@/assets/images/img/studio_carousel.webp'
 import { trackCarouselChange } from '@/utils/umami'
 
 interface CarouselItem {

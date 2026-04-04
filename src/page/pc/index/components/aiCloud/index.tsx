@@ -2,7 +2,7 @@ import './index.css'
 import { motion } from "motion/react"
 import { scrollInViewSpringProps } from '@/utils/motionConfig'
 import { useExposureTracking } from '@/hooks/useExposureTracking'
-import computeBall from '@/assets/images/img/compute-ball.png'
+import computeBall from '@/assets/images/img/compute-ball.webp'
 
 const awards = [
     { title: '异构推理2.0', desc: 'GPU+CPU\n异构协同计算' },

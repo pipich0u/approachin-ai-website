@@ -2,7 +2,7 @@ import { motion } from 'motion/react'
 import './index.css'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
 import imgtop from '@/assets/images/img/mvaas_cahtbot1.png'
-import imgbottom from '@/assets/images/img/mvaas_cahtbot2.png'
+import imgbottom from '@/assets/images/img/mvaas_cahtbot2.webp'
 import { mvaasTextConfig } from '../../textConfig'
 
 export const MVaaSChatBot = () => {

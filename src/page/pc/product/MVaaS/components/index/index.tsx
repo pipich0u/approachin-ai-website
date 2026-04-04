@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import './index.css'
-import mvaas from '@/assets/images/img/mvaas_index.png'
+import mvaas from '@/assets/images/img/mvaas_index.webp'
 import { initialLoadProps } from '@/utils/motionConfig'
 import { mvaasTextConfig } from '../../textConfig'
 import { trackButtonClick } from '@/utils/umami'

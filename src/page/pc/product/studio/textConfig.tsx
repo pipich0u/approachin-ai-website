@@ -2,10 +2,10 @@ import studio1 from '@/assets/images/img/studio1.webp';
 import studio2 from '@/assets/images/img/studio2.webp';
 import studio3 from '@/assets/images/img/studio3.webp';
 
-import tab1 from '@/assets/images/img/tab1.png'
-import tab2 from '@/assets/images/img/tab2.png'
-import tab3 from '@/assets/images/img/tab3.png'
-import tab4 from '@/assets/images/img/tab4.png'
+import tab1 from '@/assets/images/img/tab1.webp'
+import tab2 from '@/assets/images/img/tab2.webp'
+import tab3 from '@/assets/images/img/tab3.webp'
+import tab4 from '@/assets/images/img/tab4.webp'
 import tab5 from '@/assets/images/img/tab5.png'
 import tab6 from '@/assets/images/img/tab6.png'
 

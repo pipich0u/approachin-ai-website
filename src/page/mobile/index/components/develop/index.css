@@ -74,17 +74,17 @@
 }
 
 .mob-dep-tab-items:nth-child(1) {
-  background: url(/src/assets/images/img/dep_tab1_new.png) no-repeat;
+  background: url(/src/assets/images/img/dep_tab1_new.webp) no-repeat;
   background-size: cover;
 }
 
 .mob-dep-tab-items:nth-child(2) {
-  background: url(/src/assets/images/img/dep_tab3_new2.png) no-repeat;
+  background: url(/src/assets/images/img/dep_tab3_new2.webp) no-repeat;
   background-size: cover;
 }
 
 .mob-dep-tab-items:nth-child(3) {
-  background: url(/src/assets/images/img/dep_tab2_new.png) no-repeat;
+  background: url(/src/assets/images/img/dep_tab2_new.webp) no-repeat;
   background-size: cover;
 }
 

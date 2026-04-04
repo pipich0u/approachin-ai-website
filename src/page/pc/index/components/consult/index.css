@@ -6,7 +6,7 @@
     align-items: center;
     font-family: var(--font-stack);
     justify-content: center;
-    background: url(/src/assets/images/img/consult-bg.png) no-repeat center center;
+    background: url(/src/assets/images/img/consult-bg.webp) no-repeat center center;
     background-size: cover;
     box-sizing: border-box;
 }

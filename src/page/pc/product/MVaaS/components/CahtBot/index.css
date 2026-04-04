@@ -6,7 +6,7 @@
     box-sizing: border-box;
     align-items: center;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, #FEFEFE 100%),
-        url(/src/assets/images/img/scene_bg.png) lightgray 0px -14.365px / 100% 102.59% no-repeat;
+        url(/src/assets/images/img/scene_bg.webp) lightgray 0px -14.365px / 100% 102.59% no-repeat;
 }
 
 .mvaas-chatbot-content {

@@ -1,7 +1,7 @@
 .mob-qt-container {
     height: 347px;
     width: 100%;
-    background: url(/src/assets/images/img/question_bg.png) no-repeat center #F6F6F9;
+    background: url(/src/assets/images/img/question_bg.webp) no-repeat center #F6F6F9;
     background-size:cover;
     position: relative;
     overflow: hidden;

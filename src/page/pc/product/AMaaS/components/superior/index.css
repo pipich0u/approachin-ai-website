@@ -6,7 +6,7 @@
     justify-content: center;
     font-family: MiSans;
     box-sizing: border-box;
-    background: url(/src/assets/images/img/scene_bg.png) no-repeat center bottom;
+    background: url(/src/assets/images/img/scene_bg.webp) no-repeat center bottom;
     background-size: 100% 60%;
 }
 

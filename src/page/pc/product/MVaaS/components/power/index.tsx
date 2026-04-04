@@ -1,7 +1,7 @@
 import './index.css'
 import { motion } from 'motion/react'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
-import powerImg from '@/assets/images/img/mvaas_power.png'
+import powerImg from '@/assets/images/img/mvaas_power.webp'
 import { mvaasTextConfig } from '../../textConfig'
 
 export const MVaaSPower = () => {

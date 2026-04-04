@@ -2,7 +2,7 @@ import { IconFont } from '@/utils/antdUtils'
 import { motion } from 'motion/react'
 import './index.css'
 
-import img from '@/assets/images/img/amaas-relation.png'
+import img from '@/assets/images/img/amaas-relation.webp'
 
 
 import { amaasTextConfig } from '../../textConfig'

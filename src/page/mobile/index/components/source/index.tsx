@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import './index.css'
-import SourceImg1 from '@/assets/images/img/soucre1.png'
-import SourceImg2 from '@/assets/images/img/soucre2.png'
+import SourceImg1 from '@/assets/images/img/soucre1.webp'
+import SourceImg2 from '@/assets/images/img/soucre2.webp'
 import { sourceList } from '@/page/pc/index/textConfig';
 import { scrollInViewSpringOnceProps } from "@/utils/motionConfig";
 import { useNavigate } from 'react-router-dom';

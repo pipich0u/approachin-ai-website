@@ -1,6 +1,6 @@
 import './index.css'
 import { motion } from 'motion/react'
-import amaas from '@/assets/images/img/amaas.png'
+import amaas from '@/assets/images/img/amaas.webp'
 import { amaasTextConfig } from '@/page/pc/product/AMaaS/textConfig'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'
 

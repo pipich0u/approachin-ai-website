@@ -1,6 +1,6 @@
 import './index.css'
 import { motion, AnimatePresence } from 'motion/react'
-import amaas from '@/assets/images/img/amaas.png'
+import amaas from '@/assets/images/img/amaas.webp'
 import { useEffect, useRef, useState } from 'react'
 import { amaasTextConfig } from '../../textConfig'
 import { scrollInViewSpringOnceProps } from '@/utils/motionConfig'

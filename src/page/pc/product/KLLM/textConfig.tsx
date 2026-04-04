@@ -1,7 +1,7 @@
 import kllm1 from '@/assets/images/img/kllm-st1.webp';
-import kllm2 from '@/assets/images/img/kllm-st2.png';
-import kllm3 from '@/assets/images/img/kllm-st3.png';
-import kllm4 from '@/assets/images/img/kllm-st4.png';
+import kllm2 from '@/assets/images/img/kllm-st2.webp';
+import kllm3 from '@/assets/images/img/kllm-st3.webp';
+import kllm4 from '@/assets/images/img/kllm-st4.webp';
 
 export const kllmTextConfig = {
     pageName: 'KLLM页面'

@@ -1,5 +1,5 @@
-import logoKT from '@/assets/images/img/logo_ktransformers.png'
-import logoMC from '@/assets/images/img/logo_mooncake.png'
+import logoKT from '@/assets/images/img/logo_ktransformers.webp'
+import logoMC from '@/assets/images/img/logo_mooncake.webp'
 import heroCard1 from '@/assets/images/img/hero_card1.webp'
 import heroCard2 from '@/assets/images/img/hero_card2.webp'
 import heroCard3 from '@/assets/images/img/hero_card3.webp'

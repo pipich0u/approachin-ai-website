@@ -1,5 +1,5 @@
 import './index.css'
-import computeBall from '@/assets/images/img/compute-ball.png'
+import computeBall from '@/assets/images/img/compute-ball.webp'
 
 const awards = [
     { title: '异构推理2.0', desc: 'GPU+CPU\n异构协同计算' },

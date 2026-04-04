@@ -1,5 +1,5 @@
-import no from '@/assets/images/no.png'
-import img202412 from '@/assets/images/img/202412.png'
+import no from '@/assets/images/no.webp'
+import img202412 from '@/assets/images/img/202412.webp'
 import img252 from '@/assets/images/img/202502.webp';
 import img2411 from '@/assets/images/img/202411.webp';
 export const introductionList = {

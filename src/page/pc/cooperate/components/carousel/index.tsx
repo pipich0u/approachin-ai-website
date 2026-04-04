@@ -6,9 +6,9 @@ import logo1 from '@/assets/images/img/guo_logo.png'
 import logo2 from '@/assets/images/img/zhipu_logo.png'
 import logo3 from '@/assets/images/img/changting_logo.png'
 // import logo4 from '@/assets/images/img/huawei.png'
-import card_bg1 from '@/assets/images/img/carousel1.png'
-import card_bg2 from '@/assets/images/img/carousel2.png'
-import card_bg3 from '@/assets/images/img/carousel3.png'
+import card_bg1 from '@/assets/images/img/carousel1.webp'
+import card_bg2 from '@/assets/images/img/carousel2.webp'
+import card_bg3 from '@/assets/images/img/carousel3.webp'
 // import card_bg4 from '@/assets/images/img/carousel4.png'
 import { trackCarouselChange } from '@/utils/umami';
 
