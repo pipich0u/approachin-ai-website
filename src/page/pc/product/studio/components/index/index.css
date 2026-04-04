@@ -7,11 +7,22 @@
     box-sizing: border-box;
     font-family: MiSans;
     font-style: normal;
-    /* background: linear-gradient(90deg, #F3F5FE 76.3%, #E9E7FC 77%); */
     background: url(/src/assets/images/img/studio_bg.webp);
     background-size: auto 100%;
     background-position: 45%;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+.studio-index-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, #fff);
+    pointer-events: none;
 }
 
 .studio-index-content {
