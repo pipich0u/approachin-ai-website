@@ -4,7 +4,7 @@
     display: flex;
     box-sizing: border-box;
     font-style: normal;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     align-items: center;
     flex-direction: column;
     /* background: linear-gradient(270deg, #F9FBFF 4.3%, #ECF2FF 73.89%); */

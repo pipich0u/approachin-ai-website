@@ -97,7 +97,7 @@
 
 .carousel-card-info-title {
     color: #333;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 18px;
     font-style: normal;
     font-weight: 520;
@@ -107,7 +107,7 @@
 
 .carousel-card-info p {
     color: #666;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 12px;
     font-style: normal;
     font-weight: 330;

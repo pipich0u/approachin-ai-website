@@ -6,7 +6,7 @@
     background: #FFF;
     box-sizing: border-box;
 
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-style: normal;
 }
 

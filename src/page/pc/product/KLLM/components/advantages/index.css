@@ -6,7 +6,7 @@
     align-items: center;
     background: url('/src/assets/images/img/advantages_bg.webp') no-repeat center;
     background-size: cover;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-style: normal;
 }
 

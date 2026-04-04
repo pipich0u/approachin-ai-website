@@ -4,7 +4,7 @@
     height: 723px;
     display: flex;
     justify-content: center;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     box-sizing: border-box;
     background: #fff;
 }

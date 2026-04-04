@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-style: normal;
     padding: 80px 70px;
 }

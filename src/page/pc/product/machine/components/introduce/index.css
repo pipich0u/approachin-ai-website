@@ -20,7 +20,7 @@
 .mc-introduce-title {
     color: #333;
     text-align: center;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 38px;
     font-style: normal;
     font-weight: 450;
@@ -55,7 +55,7 @@
 
 .mc-introduce-box-item-title {
     color: #000;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 28px;
     font-style: normal;
     font-weight: 450;
@@ -64,7 +64,7 @@
 
 .mc-introduce-box-item-list {
     color: #59595A;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 14px;
     font-style: normal;
     font-weight: 305;

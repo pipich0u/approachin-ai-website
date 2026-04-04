@@ -8,7 +8,7 @@
     box-sizing: border-box;
     padding: 40px 100px;
     font-style: normal;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     padding-top: 80px;
 }
 

@@ -18,7 +18,7 @@
 .step-title {
     color: #1B1D22;
     text-align: center;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 38px;
     font-style: normal;
     font-weight: 520;
@@ -66,7 +66,7 @@
     align-items: center;
     color: #333;
     text-align: center;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 16px;
     font-style: normal;
     font-weight: 520;
@@ -111,7 +111,7 @@
 
 .step-btn-text {
     color: #FFF;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 16px;
     font-style: normal;
     font-weight: 380;

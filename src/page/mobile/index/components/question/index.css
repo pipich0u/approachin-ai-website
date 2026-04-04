@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: MiSans;
+    font-family: var(--font-stack);
 }
 
 .mob-qt-title {

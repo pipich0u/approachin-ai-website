@@ -3,7 +3,7 @@
     height: 700px;
     display: flex;
     padding: 50px 0;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-style: normal;
     background: url(/src/assets/images/img/contact_bg.webp), #F7FAFC;
     background-size: auto 100%;

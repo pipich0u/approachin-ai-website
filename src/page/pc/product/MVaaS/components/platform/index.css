@@ -7,7 +7,7 @@
     align-items: center;
     padding: 50px 0;
     background: #fff;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-style: normal;
 }
 

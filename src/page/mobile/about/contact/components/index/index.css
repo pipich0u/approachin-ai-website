@@ -3,7 +3,7 @@
     height: 1800px;
     display: flex;
     padding: 100px 0;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-style: normal;
     background: #F7FAFC;
     flex-direction: column;

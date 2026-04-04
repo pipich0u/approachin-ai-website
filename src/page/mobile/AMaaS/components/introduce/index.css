@@ -4,7 +4,7 @@
     display: flex;
     align-self: center;
     justify-content: center;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     box-sizing: border-box;
     /* background: url(/src/assets/images/img/scene_bg.webp) no-repeat center bottom; */
     background-size: 100% 60%;

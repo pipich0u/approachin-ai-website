@@ -1,14 +1,11 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "MiSans";
-  src: url("/public/MiSans\ VF.ttf");
-}
+/* MiSans font removed - using system font stack (PingFang SC) */
 
 /* 火山引擎风格全局变量 */
 :root {
-  --font-stack: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
-    "noto sans", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-stack: PingFangSC, "PingFang SC", "Helvetica Neue", Helvetica, Arial,
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   --color-text-1: #1D2129;
   --color-text-2: #4E5969;
   --color-text-3: #86909C;

@@ -30,7 +30,7 @@
 
 .mc-in-title {
     color: #1B1D22;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 48px;
     font-style: normal;
     font-weight: 520;
@@ -40,7 +40,7 @@
 
 .mc-in-desc {
     color: #484848;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 24px;
     font-style: normal;
     font-weight: 305;
@@ -71,7 +71,7 @@
     display: flex;
     align-items: center;
     color: #000;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 24px;
     font-style: normal;
     font-weight: 450;
@@ -85,7 +85,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 32px;
     font-style: normal;
     font-weight: 520;
@@ -97,7 +97,7 @@
 .mc-in-item-desc {
     color: #59595A;
     text-align: justify;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 14px;
     font-style: normal;
     font-weight: 305;

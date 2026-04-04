@@ -33,7 +33,7 @@
 
 .kllm-index-desc {
     color: #323334;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 20px;
     font-weight: 305;
     line-height: 150%;
@@ -43,7 +43,7 @@
 
 .kllm-index-list {
     color: #666;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 20px;
     font-weight: 305;
     line-height: 150%;

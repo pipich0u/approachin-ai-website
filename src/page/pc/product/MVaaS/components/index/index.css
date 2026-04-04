@@ -8,7 +8,7 @@
     justify-content: center;
     box-sizing: border-box;
     background: linear-gradient(360deg, rgba(237, 241, 255, 0) 0%, #EDF1FF 100%);
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-style: normal;
 }
 
@@ -52,7 +52,7 @@
     background: #FFF;
     box-shadow: 0 0 10px 0 rgba(0, 66, 123, 0.06);
     color: #333;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 20px;
     font-style: normal;
     font-weight: 380;
@@ -68,7 +68,7 @@
 
 .mvaas-index-desc-items {
     color: #31365F;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 18px;
     font-style: normal;
     font-weight: 305;

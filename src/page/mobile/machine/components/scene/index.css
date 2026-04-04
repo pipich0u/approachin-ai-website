@@ -4,9 +4,9 @@
     justify-content: center;
     align-items: center;
     padding: 60px 70px 200px 70px;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     background: url(/src/assets/images/mob/mob-maction-tab-bg.webp) center bottom / cover no-repeat;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-style: normal;
 }
 

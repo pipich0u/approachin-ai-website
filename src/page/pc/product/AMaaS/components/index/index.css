@@ -4,7 +4,7 @@
     box-sizing: border-box;
     padding-left: 100px;
     background-size: contain;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +40,7 @@
 }
 
 .amaas-index-desc-text {
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 20px;
     font-style: normal;
     font-weight: 305;

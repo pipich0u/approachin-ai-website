@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     background: #FFF;
     box-sizing: border-box;
     background: url(/src/assets/images/img/amaas_bg.webp) lightgray 50% / cover no-repeat;

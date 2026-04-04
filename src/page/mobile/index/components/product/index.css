@@ -114,7 +114,7 @@
 .mob-product-tags {
     display: flex;
     align-items: center;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 16px;
     font-style: normal;
     font-weight: 380;
@@ -129,7 +129,7 @@
 
 .mob-product-items-title {
     color: #333;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 30px;
     font-style: normal;
     font-weight: 520;
@@ -141,7 +141,7 @@
 .mob-product-items-desc {
     color: #666;
     text-align: justify;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 23.114px;
     font-style: normal;
     font-weight: 330;

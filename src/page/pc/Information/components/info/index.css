@@ -11,7 +11,7 @@
 .in-info-title {
     color: #333;
     text-align: justify;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 40px;
     font-style: normal;
     font-weight: 450;
@@ -28,7 +28,7 @@
 
 .in-info-item-title {
     color: #1A1A1A;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 22px;
     font-style: normal;
     font-weight: 450;
@@ -39,7 +39,7 @@
 .in-info-item-desc {
     color: #A3A3A3;
     text-align: justify;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 16px;
     font-style: normal;
     font-weight: 330;
@@ -55,7 +55,7 @@
 
 .in-info-item-time {
     color: #999;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-size: 18px;
     font-style: normal;
     font-weight: 330;

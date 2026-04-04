@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     background: #fff;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-style: normal;
 }
 

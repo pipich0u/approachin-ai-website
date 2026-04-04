@@ -7,7 +7,7 @@
     justify-content: center;
     /* background: linear-gradient(180deg, rgba(248, 248, 252, 0.00) 0%, #F8F8FC 26.82%); */
     background: #FFF;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-style: normal;
     padding: 100px 0;
 }

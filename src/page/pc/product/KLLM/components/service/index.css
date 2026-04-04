@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     background: #fff;
-    font-family: MiSans;
+    font-family: var(--font-stack);
     font-style: normal;
     padding: 100px 0;
     background: url('/src/assets/images/img/service_bg.webp') no-repeat center;
