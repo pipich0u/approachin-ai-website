@@ -36,26 +36,25 @@
 }
 
 .scene-tab-nav {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 3px;
-    border-radius: 50px;
-    background: rgba(43, 7, 255, 0.30);
-    width: 800px;
-    height: 34px;
+    justify-content: center;
+    gap: 0;
+    width: auto;
 }
 
 .scene-tab-item {
     position: relative;
-    padding: 3px 70px;
+    z-index: 1;
+    padding: 10px 40px;
     cursor: pointer;
-    border-radius: 50px;
     transition: color 0.3s ease;
     user-select: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
 }
 
 .scene-tab-bg {
@@ -64,22 +63,25 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.80);
+    border-radius: 999px;
+    background: #1D2129;
     z-index: 0;
 }
 
 .scene-tab-label {
     position: relative;
-    color: #FFF;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 450;
-    line-height: 150%;
+    color: #4E5969;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
 }
 
 .scene-tab-item.active .scene-tab-label {
-    color: #4A19BA;
+    color: #fff;
+}
+
+.scene-tab-item:hover:not(.active) .scene-tab-label {
+    color: #1D2129;
 }
 
 .scene-tab-content {
