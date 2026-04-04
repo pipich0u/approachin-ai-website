@@ -6,7 +6,7 @@ import { trackPageView, trackButtonClick } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';
 import { useNavigate } from 'react-router-dom';
 import LightPillar from './LightPillar';
-import heroVisionBg from '@/assets/images/img/hero_vision_bg.png';
+import heroVisionBg from '@/assets/images/img/hero_vision_bg.webp';
 
 
 const SLIDE_DURATION = 6000; // 6秒切换

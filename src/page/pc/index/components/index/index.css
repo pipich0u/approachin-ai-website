@@ -40,7 +40,7 @@
     margin: 4.2rem 0; /* 上下各缩进，下边缘对齐右侧最后一条标签 */
     padding: 2rem 2.5rem 1.5rem; /* 内边距相应减小 */
     min-width: 0;
-    background: #EDF0F8 url('/images/hero_slide_bg.jpg') no-repeat center / cover;
+    background: #EDF0F8 url('/images/hero_slide_bg.webp') no-repeat center / cover;
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 1.5rem 0 rgba(0, 0, 0, 0.06);
     overflow: hidden;

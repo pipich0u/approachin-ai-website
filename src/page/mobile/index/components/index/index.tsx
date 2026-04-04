@@ -3,7 +3,7 @@ import './index.css'
 import { useState, useEffect } from 'react';
 import { heroSlides, heroCards } from '@/page/pc/index/textConfig';
 import { useNavigate } from 'react-router-dom';
-import heroVisionBg from '@/assets/images/img/hero_vision_bg.png';
+import heroVisionBg from '@/assets/images/img/hero_vision_bg.webp';
 
 const SLIDE_DURATION = 6000;
 

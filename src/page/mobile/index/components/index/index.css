@@ -9,7 +9,7 @@
 .mob-hero-slide {
     margin: 0 24px;
     padding: 40px 28px 20px;
-    background: #fff url('/images/hero_slide_bg.jpg') no-repeat center / cover;
+    background: #fff url('/images/hero_slide_bg.webp') no-repeat center / cover;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     display: flex;
