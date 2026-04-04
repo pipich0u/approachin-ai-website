@@ -147,14 +147,6 @@ export const SolutionTab = () => {
                             </motion.div>
                         ))}
                     </div>
-                    <motion.div
-                        className="solution-hint"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: showHint ? 1 : 0 }}
-                        transition={{ duration: 0.2 }}
-                    >
-                        滑动查看更多 <img src={moreIcon} alt="" />
-                    </motion.div>
                 </motion.div>
             </div>
         </div>
