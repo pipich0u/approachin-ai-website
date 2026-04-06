@@ -29,15 +29,14 @@
 
 .mob-amaas-sup-box {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
 
 .mob-amaas-sup-tab-items {
     width: 100%;
-    height: 208px;
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     position: relative;

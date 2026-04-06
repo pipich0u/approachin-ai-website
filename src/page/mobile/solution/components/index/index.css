@@ -65,9 +65,9 @@
 }
 
 .mob-solution-case-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .mob-solution-case-card {

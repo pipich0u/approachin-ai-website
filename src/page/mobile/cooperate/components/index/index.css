@@ -74,9 +74,9 @@
 }
 
 .mob-cp-system-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .mob-cp-system-card {
@@ -114,9 +114,9 @@
 }
 
 .mob-cp-case-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 .mob-cp-case-card {
