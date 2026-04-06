@@ -1,5 +1,4 @@
 import './index.css'
-new Image().src = '/images/studio_banner_new.webp'
 import { studioTextConfig } from '../../textConfig'
 import { motion } from 'motion/react'
 import { initialLoadProps } from '@/utils/motionConfig'

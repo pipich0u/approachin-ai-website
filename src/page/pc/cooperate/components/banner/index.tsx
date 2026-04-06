@@ -1,5 +1,4 @@
 import './index.css'
-new Image().src = '/images/cooperate_banner_new.webp'
 import { motion } from 'motion/react';
 import { initialLoadProps } from '@/utils/motionConfig'
 

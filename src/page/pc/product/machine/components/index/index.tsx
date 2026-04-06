@@ -1,5 +1,4 @@
 import './index.css'
-new Image().src = '/images/machine_banner.webp'
 import { motion } from 'motion/react'
 import { initialLoadProps } from '@/utils/motionConfig'
 import { MachinList } from '../../textConfig'

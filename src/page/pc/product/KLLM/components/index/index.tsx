@@ -1,5 +1,4 @@
 import './index.css'
-new Image().src = '/images/kllm_banner.webp'
 import { motion } from 'motion/react'
 import { initialLoadProps } from '@/utils/motionConfig'
 import { overviewText } from '../../textConfig'

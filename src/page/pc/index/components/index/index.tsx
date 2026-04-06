@@ -6,8 +6,19 @@ import { trackPageView, trackButtonClick } from '@/utils/umami';
 import { useExposureTracking } from '@/hooks/useExposureTracking';
 import { useNavigate } from 'react-router-dom';
 import LightPillar from './LightPillar';
-import heroVisionBg from '@/assets/images/img/hero_vision_bg.webp';
+const heroVisionBg = '/images/hero_vision_bg.webp';
 
+// 延迟预加载其他页面banner，避免与首页抢带宽
+const otherBanners = [
+    '/images/kllm_banner.webp',
+    '/images/amaas_banner.webp',
+    '/images/ataas_banner.webp',
+    '/images/machine_banner.webp',
+    '/images/studio_banner_new.webp',
+    '/images/token_service_banner_new.webp',
+    '/images/cooperate_banner_new.webp',
+    '/images/about_banner_new.webp',
+];
 
 const SLIDE_DURATION = 6000; // 6秒切换
 
@@ -20,6 +31,10 @@ export default function PageIndex() {
 
     useEffect(() => {
         trackPageView('首页Hero', { section: 'hero' });
+        const timer = setTimeout(() => {
+            otherBanners.forEach(src => { new Image().src = src; });
+        }, 2000);
+        return () => clearTimeout(timer);
     }, []);
 
     // 自动轮播进度

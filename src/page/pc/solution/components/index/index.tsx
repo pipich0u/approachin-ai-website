@@ -1,6 +1,5 @@
 import { motion } from 'motion/react'
 import './index.css'
-new Image().src = '/images/about_banner_new.webp'
 import { initialLoadProps } from '@/utils/motionConfig'
 import { trackButtonClick } from '@/utils/umami'
 import { solutionTextConfig } from '../../textConfig'
