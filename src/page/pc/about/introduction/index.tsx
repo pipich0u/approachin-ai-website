@@ -3,7 +3,7 @@ import './index.css'
 import { useEffect, useRef, useState } from 'react'
 import { trackPageView } from '@/utils/umami'
 import { introductionList, cultureList, infoList } from './textConfig'
-import leafImg from '@/assets/images/img/leaf.png'
+import leafImg from '@/assets/images/img/leaf_gold.png'
 import DarkVeil from './DarkVeil'
 
 const leafItems = [

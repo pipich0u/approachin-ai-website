@@ -1,6 +1,6 @@
 import './index.css'
 import { introductionList, infoList } from '@/page/pc/about/introduction/textConfig'
-import leafImg from '@/assets/images/img/leaf.png'
+import leafImg from '@/assets/images/img/leaf_gold.png'
 import { useState, useRef } from 'react'
 
 const leafItems = [
