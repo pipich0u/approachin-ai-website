@@ -110,6 +110,8 @@
     transition: all 0.2s ease;
     border: none;
     outline: none;
+    position: relative;
+    overflow: hidden;
 }
 
 /* 深色填充 + 白字 */
@@ -118,12 +120,23 @@
     color: #fff;
 }
 
-.hero-btn-primary:hover {
-    background: #5a42e6;
+.hero-btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
-.hero-btn-primary:active {
-    background: #4d38cc;
+.hero-btn-primary:hover::after {
+    opacity: 1;
+}
+
+.hero-btn-primary:active::after {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.25);
 }
 
 /* 有色边框 + 黑字 */
@@ -390,17 +403,29 @@
     cursor: pointer;
     overflow: hidden;
     transition: all 0.2s ease;
+    position: relative;
     border-radius: 0.25rem;
     background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     color: #fff;
 }
 
-.animated-button:hover {
-    background: #5a42e6;
+.animated-button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
-.animated-button:active {
-    background: #4d38cc;
+.animated-button:hover::after {
+    opacity: 1;
+}
+
+.animated-button:active::after {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .animated-button .bt-text {

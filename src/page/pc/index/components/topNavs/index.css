@@ -94,16 +94,29 @@
   border: none;
   border-radius: 0; /* 无圆角 — Volcengine 同款 */
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
 }
 
-.navbar-cta:hover {
-  background: #5a42e6;
+.navbar-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
-.navbar-cta:active {
-  background: #4d38cc;
+.navbar-cta:hover::after {
+  opacity: 1;
+}
+
+.navbar-cta:active::after {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.25);
 }
 
 /* 下拉菜单 — 玻璃感 */
