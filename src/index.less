@@ -10,3 +10,19 @@ img {
 a img, button img, [role="button"] img {
   pointer-events: auto;
 }
+
+/* 滚动与交互性能优化 */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  loading: lazy;
+}
+
+/* 背景图片元素GPU加速 */
+[class*="-banner"],
+[class*="-page"]::before {
+  will-change: auto;
+  transform: translateZ(0);
+}

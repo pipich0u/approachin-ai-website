@@ -23,6 +23,20 @@
   --shadow-3: 0 8px 24px 0 rgba(0, 0, 0, 0.06);
 }
 
+/* 滚动性能优化：离屏板块延迟渲染 */
+.kllm-page > *,
+.amaas-page > *,
+.ataas-page > *,
+.ts-page > *,
+.machin-page > *,
+.studio-page > *,
+.solution-page > *,
+.cooperate-page-content > *,
+.cake-container > * {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
 /* 主容器 - 响应式宽度 */
 .w-100 {
   width: 100%;

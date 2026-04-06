@@ -124,7 +124,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.15);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -135,8 +135,7 @@
 }
 
 .hero-btn-primary:active::after {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.25);
+    opacity: 0.6;
 }
 
 /* 有色边框 + 黑字 */
@@ -413,7 +412,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.15);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -424,8 +423,7 @@
 }
 
 .animated-button:active::after {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.25);
+    opacity: 0.6;
 }
 
 .animated-button .bt-text {

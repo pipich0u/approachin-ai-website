@@ -3,12 +3,12 @@ import type { Transition } from "motion/react";
 
 // 滚动进入视口动画配置
 export const fadeInUpVariants = {
-  initial: { y: 50, opacity: 0 },
+  initial: { y: 30, opacity: 0 },
   whileInView: { y: 0, opacity: 1 },
 };
 
 export const fadeInUpTransition: Transition = {
-  duration: 0.5,
+  duration: 0.4,
   ease: 'easeOut',
 };
 
@@ -26,12 +26,12 @@ export const onceViewport = {
 
 // 初始加载动画配置
 export const initialLoadVariants = {
-  initial: { x: 0, y: 100, opacity: 0 },
+  initial: { x: 0, y: 40, opacity: 0 },
   animate: { x: 0, y: 0, opacity: 1 },
 };
 
 export const initialLoadTransition: Transition = {
-  duration: 0.8,
+  duration: 0.5,
   ease: 'easeOut',
 };
 
@@ -51,9 +51,9 @@ export const initialLoadProps = {
 // Spring 弹簧滚动动画配置
 export const springScrollTransition: Transition = {
   type: "spring",
-  stiffness: 100,    // 弹簧刚度（值越大动画越快）
-  damping: 20,       // 阻尼系数（值越大弹跳越少，越平滑）
-  mass: 1,           // 质量（值越大惯性越大）
+  stiffness: 120,
+  damping: 24,
+  mass: 0.8,
 };
 
 // 滚动进入视口 - Spring 版本
