@@ -8,18 +8,17 @@ import { trackButtonClick } from '@/utils/umami'
 export const MobMachineIndex = () => {
     const navigate = useNavigate();
     return <>
-        <div className='mob-machin-index-container'>
-            <div className='mob-mc-in-content'>
-                <div className="mob-mc-in-top-box">
-                    <motion.div {...initialLoadProps} className="mob-mc-in-title">{MachinList.title}</motion.div>
-                    <motion.div {...initialLoadProps} className="mob-mc-in-desc">{MachinList.desc}</motion.div>
-                    <motion.button {...initialLoadProps} className='mob-mc-in-btn' onClick={() => {
-                        trackButtonClick(MachinList.btn, '移动端Machine首屏');
-                        navigate('/contact');
-                    }}>
-                        <span className="mob-mc-bt-text">{MachinList.btn}</span>
-                    </motion.button>
-                </div>
+        <div className='mob-mc-banner'>
+            <div className='mob-mc-banner-inner'>
+                <motion.div {...initialLoadProps} className="mob-mc-banner-name">{MachinList.title}</motion.div>
+                <motion.div {...initialLoadProps} className="mob-mc-banner-title">{MachinList.title2}</motion.div>
+                <motion.p {...initialLoadProps} className="mob-mc-banner-desc">{MachinList.desc}</motion.p>
+                <motion.button {...initialLoadProps} className='mob-mc-banner-btn' onClick={() => {
+                    trackButtonClick(MachinList.btn, '移动端Machine首屏');
+                    navigate('/contact');
+                }}>
+                    {MachinList.btn}
+                </motion.button>
             </div>
         </div>
         <div className="mob-mc-in-bottom-box">
@@ -30,4 +29,4 @@ export const MobMachineIndex = () => {
             })}
         </div>
     </>
-}  
+}

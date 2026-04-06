@@ -8,7 +8,7 @@
     box-sizing: border-box;
     /* background: url(/src/assets/images/img/scene_bg.webp) no-repeat center bottom; */
     background-size: 100% 60%;
-    background: linear-gradient(180deg, #FEFEFE 2.11%, #D3D8FE 100%);
+    background: #fff;
 }
 
 .mob-amaas-in-content {
@@ -21,11 +21,11 @@
 }
 
 .mob-amaas-in-title {
-    color: #333;
+    color: #1D2129;
     text-align: center;
-    font-size: 38px;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 700;
     line-height: 150%;
     letter-spacing: 0.76px;
     padding: 20px 0;

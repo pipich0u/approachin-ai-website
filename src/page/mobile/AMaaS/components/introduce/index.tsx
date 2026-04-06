@@ -28,7 +28,7 @@ export const MobAMaaSIntroduce = () => {
                         <div className='mob-amaas-in-item-list'>
                             {item.features.map((feature, idx) => (
                                 <div key={idx} className='mob-amaas-in-item-list-li'>
-                                    <IconFont style={{ fontSize: '18px', color: '#02Dc52' }} type='icon-dui'></IconFont>
+                                    <IconFont style={{ fontSize: '18px', color: '#6951FF' }} type='icon-dui'></IconFont>
                                     <div>{feature}</div>
                                 </div>
                             ))}
