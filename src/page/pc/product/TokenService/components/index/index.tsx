@@ -1,4 +1,5 @@
 import './index.css'
+new Image().src = '/images/token_service_banner_new.webp'
 import { motion } from 'motion/react'
 import { initialLoadProps } from '@/utils/motionConfig'
 import { overviewText } from '../../textConfig'

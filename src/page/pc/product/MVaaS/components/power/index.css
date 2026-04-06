@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: transparent;
     font-family: var(--font-stack);
     font-style: normal;
 }
@@ -23,11 +23,12 @@
 
 .mvaas-power-title {
     margin-bottom: 53px;
-    color: #333;
-    font-size: 38px;
-    font-weight: 450;
-    line-height: 150%;
+    color: #1D2129;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.4;
     letter-spacing: 0.76px;
+    text-align: center;
 }
 
 .mvaas-power-box {

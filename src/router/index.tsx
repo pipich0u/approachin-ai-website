@@ -16,7 +16,6 @@ import { AMaaSPage } from "@/page/pc/product/AMaaS"
 import { InformationPage } from "@/page/pc/Information"
 import { SolutionPage } from "@/page/pc/solution"
 import { StudioPage } from "@/page/pc/product/studio"
-// import { MVaaSPage } from "@/page/pc/product/MVaaS"
 import { KLLMPage } from "@/page/pc/product/KLLM"
 import { TokenServicePage } from "@/page/pc/product/TokenService"
 import { ATaaSPage } from "@/page/pc/product/ATaaS"
@@ -110,10 +109,6 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     path: "mooncake",
                     element: <MoonCake />,
                 },
-                // {
-                //     path: "mvaas",
-                //     element: <MVaaSPage />,
-                // },
                 {
                     path: "models",
                     element: <ModelsRepository />,
