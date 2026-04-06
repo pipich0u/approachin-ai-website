@@ -37,7 +37,7 @@ const OfflineModel = (props: OfflineModelProps) => {
         onCancel={handleOk}
         footer={
             <Button style={{
-                background: '#6951FF',
+                background: 'linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%)',
                 color: 'white'
             }} onClick={handleOk}>
                 关闭

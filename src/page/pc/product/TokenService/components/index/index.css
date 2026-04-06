@@ -1,0 +1,63 @@
+.ts-banner {
+    width: 100%;
+    height: 500px;
+    padding-top: 60px;
+    background: #000 url('/images/token_service_banner_new.webp') no-repeat right center;
+    background-size: auto 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.ts-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #000 0%, #000 25%, transparent 60%);
+    z-index: 0;
+}
+
+.ts-banner-inner {
+    position: absolute;
+    top: 134px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1292px;
+    z-index: 1;
+}
+
+.ts-banner-name {
+    color: #fff;
+    font-family: var(--font-stack);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 2px;
+}
+
+.ts-banner-title {
+    color: #fff;
+    font-family: var(--font-stack);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 1px;
+    margin-top: 12px;
+}
+
+.ts-banner-desc {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-stack);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 16px;
+    text-align: justify;
+    max-width: 680px;
+}
+
+.ts-banner .hero-btn {
+    margin-top: 20px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 28px;
+}

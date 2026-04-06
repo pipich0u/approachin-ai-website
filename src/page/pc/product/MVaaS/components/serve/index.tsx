@@ -40,8 +40,8 @@ export const MVaaSServe = () => {
                                 <div className='mvaas-serve-top-title'>{item.title}</div>
                                 <div className='mvaas-serve-top-desc'>{item.desc}</div>
                             </div>
-                            <button className='animated-button w-[124px] rounded-lg mvaas-serve-btn'>
-                                <span className="text-white font-[380] bt-text">{item.buttonText}</span>
+                            <button className='hero-btn hero-btn-primary'>
+                                {item.buttonText}
                             </button>
                         </div>
                     ))}

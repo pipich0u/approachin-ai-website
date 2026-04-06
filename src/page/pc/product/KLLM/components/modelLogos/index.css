@@ -1,0 +1,75 @@
+.kllm-logos-container {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    position: relative;
+}
+
+.kllm-logos-container::before,
+.kllm-logos-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.kllm-logos-container::before {
+    left: 0;
+    background: linear-gradient(to right, #fff, transparent);
+}
+
+.kllm-logos-container::after {
+    right: 0;
+    background: linear-gradient(to left, #fff, transparent);
+}
+
+.kllm-logos-track {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: fit-content;
+    animation: kllm-logos-scroll 60s linear infinite;
+    will-change: transform;
+}
+
+.kllm-logos-track:hover {
+    animation-play-state: paused;
+}
+
+.kllm-logos-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 40px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.kllm-logos-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.2) contrast(1.2);
+}
+
+.kllm-logos-name {
+    color: #333;
+    font-family: var(--font-stack);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+@keyframes kllm-logos-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

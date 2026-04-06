@@ -1,5 +1,4 @@
 import './index.css'
-import { IconFont } from '@/utils/antdUtils'
 import { infoList } from '../../textConfig'
 import { motion } from 'motion/react'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
@@ -8,29 +7,32 @@ import { trackButtonClick } from '@/utils/umami'
 export const InformationInfo = () => {
 
     return <div className='information-info-container'>
-        {/* <motion.div {...scrollInViewOnceProps} className='in-info-title'>企业资讯</motion.div> */}
         <div className='in-info-content'>
             {infoList.map((item, index) => (
                 <motion.div {...scrollInViewOnceProps} key={index}>
-                    <div className="in-info-item">
-                        <div className='in-info-item-left'>
-                            <div className='in-info-item-content'>
-                                <div className='in-info-item-title'>{item.title}</div>
-                                <div className='in-info-item-desc'>{item.desc}</div>
-                            </div>
-                            <div className='in-info-item-time'>
-                                <div>{item.date}</div>
-                                <div className='cursor-pointer' onClick={() => {
-                                    trackButtonClick('查看详情', `Information资讯-${item.title}`);
-                                    window.open(item.link);
-                                }}>查看详情<IconFont type='icon-up-s' className='detail-icon' /></div>
-                            </div>
+                    <div
+                        className="in-info-item"
+                        onClick={() => {
+                            trackButtonClick('查看详情', `Information资讯-${item.title}`);
+                            window.open(item.link);
+                        }}
+                    >
+                        <div className='in-info-item-thumb'>
+                            <img src={item.image} alt={item.title} />
                         </div>
-                        <div className='in-info-item-rig'>
-                            <img src={item.image} alt='' />
+                        <div className='in-info-item-body'>
+                            <h3 className='in-info-item-title'>{item.title}</h3>
+                            <div className='in-info-item-desc'>{item.desc}</div>
+                            <div className='in-info-item-meta'>
+                                <span className='in-info-item-date-icon-wrap'>
+                                    <svg className='in-info-item-date-icon' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ transform: 'rotate(-45deg)' }}>
+                                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="#fff" />
+                                    </svg>
+                                </span>
+                                <span className='in-info-item-date'>发布时间：{item.date}</span>
+                            </div>
                         </div>
                     </div>
-                    {index < infoList.length - 1 && <div className='in-info-line' />}
                 </motion.div>
             ))}
         </div>

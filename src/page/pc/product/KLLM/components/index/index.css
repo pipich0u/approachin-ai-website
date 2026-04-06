@@ -1,52 +1,63 @@
-.kllm-index-container {
+.kllm-banner {
     width: 100%;
-    display: flex;
-    height: 600px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url(/src/assets/images/img/kllm_in_bg.webp);
+    height: 500px;
+    padding-top: 60px;
+    background: #000 url('/images/kllm_banner.webp') no-repeat right center;
     background-size: auto 100%;
-    background-position: 48%;
-    background-repeat: no-repeat;
-    font-style: normal;
+    position: relative;
+    box-sizing: border-box;
 }
 
-.kllm-index-content {
-    width: 100%;
-    height: 100%;
-    max-width: 1440px;
-    padding: 0px 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.kllm-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #000 0%, #000 25%, transparent 60%);
+    z-index: 0;
 }
 
-.kllm-index-title {
-    color: #333;
-    font-family: Inter;
-    font-size: 50.039px;
+.kllm-banner-inner {
+    position: absolute;
+    top: 134px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1292px;
+    z-index: 1;
+}
+
+.kllm-banner-name {
+    color: #fff;
+    font-family: var(--font-stack);
+    font-size: 40px;
     font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 1.001px;
+    line-height: 1.4;
+    letter-spacing: 2px;
 }
 
-.kllm-index-desc {
-    color: #323334;
+.kllm-banner-title {
+    color: #fff;
     font-family: var(--font-stack);
-    font-size: 20px;
-    font-weight: 305;
-    line-height: 150%;
-    letter-spacing: 0.4px;
-    margin-top: 6px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 1px;
+    margin-top: 12px;
 }
 
-.kllm-index-list {
-    color: #666;
+.kllm-banner-desc {
+    color: rgba(255, 255, 255, 0.5);
     font-family: var(--font-stack);
-    font-size: 20px;
-    font-weight: 305;
-    line-height: 150%;
-    letter-spacing: 0.4px;
-    margin-top: 34px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 16px;
+    text-align: justify;
+    max-width: 680px;
+}
+
+.kllm-banner .hero-btn {
+    margin-top: 20px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 28px;
 }

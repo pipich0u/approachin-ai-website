@@ -1,0 +1,73 @@
+.ts-core-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-stack);
+    padding: 100px 0 0;
+    background: transparent;
+}
+
+.ts-core-content {
+    max-width: 1238px;
+    width: 100%;
+}
+
+.ts-core-title {
+    color: #1D2129;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.76px;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.ts-core-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 0 10px;
+    gap: 24px;
+}
+
+.ts-core-card {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+}
+
+.ts-core-card::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 44px;
+    height: 4px;
+    background: #6C3AE1;
+}
+
+.ts-core-num {
+    color: #6C3AE1;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.ts-core-card-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.ts-core-card-list p {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}

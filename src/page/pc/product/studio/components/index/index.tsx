@@ -5,22 +5,16 @@ import { initialLoadProps } from '@/utils/motionConfig'
 
 export const StudioIndex = () => {
 
-    return <div className='studio-index-container'>
-        <div className='studio-index-content'>
-            <motion.div {...initialLoadProps} className='studio-index-title'>{studioTextConfig.index.title}</motion.div>
-            <motion.div {...initialLoadProps} className='studio-index-desc'>{studioTextConfig.index.desc}</motion.div>
-            <div className='studio-index-btnbox'>
+    return <div className='st-banner'>
+        <div className='st-banner-inner'>
+            <motion.h2 {...initialLoadProps} className='st-banner-name'>{studioTextConfig.index.name}</motion.h2>
+            <motion.h3 {...initialLoadProps} className='st-banner-title'>{studioTextConfig.index.title}</motion.h3>
+            <motion.p {...initialLoadProps} className='st-banner-desc'>{studioTextConfig.index.desc}</motion.p>
+            <div className='st-banner-btnbox'>
                 {/* <motion.button {...initialLoadProps}
-                    className='animated-button w-[150px] rounded-lg bg-[#806BFF]'
-                // onClick={() => trackButtonClick(index.buttonText, 'AMaaS第1屏', { slideIndex: 0 })}
+                    className='animated-button w-[150px] rounded-lg bg-gradient-to-r from-[#7B2FFF] via-[#5550FF] to-[#3D6DFC]'
                 >
                     <span className="text-white font-[380] bt-text">{studioTextConfig.index.buttons[0].text}</span>
-                </motion.button> */}
-                {/* <motion.button {...initialLoadProps}
-                    className='animated-button studio-btn w-[150px] rounded-lg bg-[#333]'
-                // onClick={() => trackButtonClick(index.buttonText, 'AMaaS第1屏', { slideIndex: 0 })}
-                >
-                    <span className="text-white font-[380] bt-text">{studioTextConfig.index.buttons[1].text}</span>
                 </motion.button> */}
             </div>
         </div>

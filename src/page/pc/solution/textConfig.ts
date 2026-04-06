@@ -2,7 +2,7 @@ export const solutionTextConfig = {
     pageName: 'AI算力解决方案页面',
     index: {
         title: '解决方案',
-        desc: '趋境科技依托丰富的经验，深入理解多种实际应用场景，提供一系列成熟且易于实施的解决方案，为更加多元化的企业网络安全体系建设保驾护航。',
+        desc: '趋境科技依托丰富的经验，深入理解多种实际AI应用场景，提供一系列成熟且易于实施的算力方案，为更加多元化的企业AI应用场景落地保驾护航。',
         buttonText: '立即咨询'
     },
     tab: {
@@ -12,7 +12,7 @@ export const solutionTextConfig = {
         {
             id: 0,
             child: false,
-            label: "低门槛启动",
+            label: "Token Machine-大模型低成本部署",
             title: "千亿大模型低成本私有化部署场景",
             desc: "依托趋境科技推理一体机解决方案，实现单台 4090D 工作站实现 6 个模型混合推理，成本降低 85%",
             list: [
@@ -37,7 +37,7 @@ export const solutionTextConfig = {
         {
             id: 1,
             child: false,
-            label: "高并发高吞吐",
+            label: "ATaaS-H200集群Token产能提升",
             title: "高吞吐集群算力优化节省数千万扩容成本",
             desc: "头部 AI 公司 H200 集群经趋境优化，吞吐升 6 倍 +，节省 3200 万扩容成本。",
             list: [
@@ -65,7 +65,7 @@ export const solutionTextConfig = {
         {
             id: 2,
             child: false,
-            label: "资源精细化管理",
+            label: "AMaaS-异构资源精细化管理",
             title: "算力资源精细化管理大提升利用率",
             desc: "金融客户算力集群经趋境优化，利用率提 3 倍性能显跃升",
             list: [
@@ -88,14 +88,9 @@ export const solutionTextConfig = {
             ]
         },
         {
-            id: 31,
-            label: "ISV联合共创",
-            child: true
-        },
-        {
             id: 4,
             child: false,
-            label: "超低TTFT",
+            label: "ATaaS-超低TTFT生产保障",
             title: "互联网金融超低TTFT（首token时延）",
             desc: "趋境助力互联网金融企业优化大模型推理，实现时延、效率、稳定性的三重突破。",
             list: [
@@ -123,7 +118,7 @@ export const solutionTextConfig = {
         {
             id: 5,
             child: false,
-            label: "AI 开发环境一体交付",
+            label: "Token Machine-AI开发环境一体化交付",
             title: "天级交付与云上同等的AI开发环境",
             desc: "趋境为涉密客户天级交付本地 AI 开发环境，1 个月完成 POC 并节省改造成本。",
             list: [
@@ -146,11 +141,10 @@ export const solutionTextConfig = {
             ]
         },
 
-    ],
-    labelList: [{
+        {
         id: 31,
         child: false,
-        label: "长亭科技",
+        label: "Token Machine-长亭科技问津一体机",
         title: "趋境科技✖️长亭科技共创垂域AI解决方案",
         desc: "长亭携手趋境打造 AI 安全一体机，破行业困局实现多方共赢。",
         list: [
@@ -174,7 +168,7 @@ export const solutionTextConfig = {
     }, {
         id: 32,
         child: false,
-        label: "认研中心",
+        label: "Token Machine-市场监管总局认研中心AITIC一体机",
         title: "趋境科技✖️市场监管总局认研中心共创AITIC一体机",
         desc: "趋境与市监认研中心共创 AITIC 一体机，赋能质检升级。",
         list: [
@@ -202,5 +196,6 @@ export const solutionTextConfig = {
                 desc: ["本案例的核心启示在于，政企深度协同是破解行业共性痛点、推动智能化转型的关键路径。趋境科技与市场监管总局认研中心的合作，并非简单的技术输出，而是基于对质检行业监管需求、基层痛点的深刻理解，通过 “定制化研发 + 标准化落地” 的模式，打造适配行业实际需求的解决方案。"],
             },
         ]
-    }],
+    }
+    ],
 }

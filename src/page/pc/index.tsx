@@ -32,6 +32,8 @@ export default function Layout() {
   useRemScale()
   const location = useLocation()
   const shouldShowTopNavs = location.pathname !== '/models' && location.pathname !== '/admin_qujing_backend'
+  const solidNavPages = ['/kllm', '/amaas', '/ataas', '/machine', '/token-service', '/information', '/introduction']
+  const isSolidNav = solidNavPages.includes(location.pathname)
   const shouldUseLenis = location.pathname !== '/models'
 
   return (
@@ -40,7 +42,7 @@ export default function Layout() {
         lerp: 0.12
       }} />} */}
       <div className="layout-main">
-        {shouldShowTopNavs && <TopNavs />}
+        {shouldShowTopNavs && <TopNavs solid={isSolidNav} />}
         <div>
           <Outlet />
           {shouldShowTopNavs && <FloatBtnEle />}

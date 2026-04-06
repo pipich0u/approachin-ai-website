@@ -13,9 +13,8 @@ import tab6 from '@/assets/images/img/index_tab6.webp'
 export const menuHrefListDefault = [
     {
         title: 'Token Service',
-        href: 'kllm',
+        href: 'token-service',
         isSelected: false,
-        comingSoon: true
     },
     {
         title: 'Token System',
@@ -24,7 +23,7 @@ export const menuHrefListDefault = [
         subItems: [
             { title: 'KLLM-企业级高效能推理引擎', href: 'kllm' },
             { title: 'AMaaS-模型价值即服务平台', href: 'amaas' },
-            { title: 'ATaaS-Token价值即服务平台', href: '' }
+            { title: 'ATaaS-Token价值即服务平台', href: 'ataas' }
         ]
     },
     {
@@ -79,9 +78,8 @@ export const menuHrefListDefault = [
 export const mobMenuHrefListDefault = [
     {
         title: 'Token Service',
-        href: '',
+        href: 'token-service',
         isSelected: false,
-        comingSoon: true
     },
     {
         title: 'Token System',
@@ -90,7 +88,7 @@ export const mobMenuHrefListDefault = [
         subItems: [
             { title: 'KLLM推理引擎', href: '/kllm' },
             { title: 'AMaaS平台', href: '/amaas' },
-            { title: 'ATaaS', href: '' }
+            { title: 'ATaaS', href: '/ataas' }
         ]
     },
     {
@@ -157,7 +155,7 @@ export const bannerList = [
 export const heroSlides = [
     {
         tag: '我们的愿景',
-        title: '让算力更高效，让智能更普惠',
+        title: '算力更高效，智能更普惠',
         desc: '趋境科技：全球领先的高效能 AI Token 生产服务商',
         btnText: '',
         btnLink: '',
@@ -165,7 +163,7 @@ export const heroSlides = [
     },
     {
         tag: 'AIGC 开发者大会',
-        title: '趋境科技获评”AI行业最具影响力企业Top10”',
+        title: '趋境科技获评AI行业最具影响力企业TOP10',
         desc: '受邀参与 AIGC 开发者大会，展示全栈推理引擎技术与行业解决方案',
         btnText: '了解详情',
         btnLink: 'https://mp.weixin.qq.com/s/HiO8FzBI6vWv5BdxNnVPNw',
@@ -211,7 +209,7 @@ export const productFeatures = [
         title: 'Token Service',
         desc: '将算力资源指标与业务 SLO对齐，实时感知业务变化，并动态调度算力资源。',
         tag: ['SLO价值对齐', '智能资源规划', '自主决策'],
-        link: ''
+        link: 'token-service'
     },
     {
         title: 'Token System',

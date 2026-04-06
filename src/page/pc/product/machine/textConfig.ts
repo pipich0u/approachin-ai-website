@@ -6,14 +6,15 @@ import machine4 from '@/assets/images/mob/mob-machine4.png';
 export const machineTextConfig = {
     pageName: 'AI算力解决方案页面',
     index: {
-        title: '企业级推理一体机',
+        title: 'Token Machine',
+        title2: '全场景软硬一体化方案',
         desc: '内置趋境KLLM推理引擎及AMaaS模型服务平台，搭配深度优化的硬件，提供最低成本最高性能的私有化算力设施',
         btn: '立即咨询',
         bottomList: [
             {
                 title: '算力门槛',
                 color: '10倍',
-                desc: '业界首创CPU+GPU异构推理技术，算力不再捆绑GPU，灵活搭配降低大参数模型部署成本'
+                desc: '业界首创CPU+GPU异构推理技术，灵活搭配降低大参数模型部署成本'
             },
             {
                 title: '利用率',
@@ -22,13 +23,13 @@ export const machineTextConfig = {
             },
             {
                 title: '硬件性能',
-                color: '50%',
-                desc: '深度的适配优化，包括NUMA亲和、算子加速，相比只兼容不优化的方案硬件性能提升50%'
+                color: '+50%',
+                desc: '深度的适配优化，相比只兼容不优化的方案硬件性能提升50%'
             },
             {
-                title: '智能运维',
-                color: '80%',
-                desc: '大模型服务平台，丰富的算力资源、模型可视化监控管理，相比人工节约 80% 时间成本'
+                title: '运维成本',
+                color: '-80%',
+                desc: '大模型服务平台，丰富的算力资源、模型可视化监控管理，运维成本降低80%'
             },
         ]
     },

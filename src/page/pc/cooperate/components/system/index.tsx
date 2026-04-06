@@ -33,7 +33,6 @@ export default function CooperateSystem() {
                                     navigate('/contact');
                                 }}>
                                     <span className='sys-list-item-btn-text'>{systemText.btn}</span>
-                                    <img src={more} alt="" className='sys-list-item-btn-icon' />
                                 </div>
                             </motion.div>
                         ))

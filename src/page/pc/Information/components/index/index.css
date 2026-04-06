@@ -8,38 +8,54 @@
 
 .in-idx-content {
     width: 100%;
-    /* max-width: 1440px; */
-    height: 540px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background: url(/src/assets/images/img/introduction_bg.webp) 50% / cover no-repeat;
-    background-size: 100% 540px;
+    background-size: cover;
+    position: relative;
+}
+
+.in-idx-content::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
 }
 
 .in-idx-content-title {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
-    color: #FAFBFD;
+    color: #fff;
     text-align: center;
     font-family: var(--font-stack);
-    font-size: 48px;
+    font-size: 40px;
     font-style: normal;
-    font-weight: 520;
+    font-weight: 400;
     line-height: 150%;
-    letter-spacing: 0.96px;
-    margin-top: 170px;
+    letter-spacing: 2px;
 }
 
-.in-idx-content-title-color {
-    background: linear-gradient(256deg, #4E74FF -3.3%, #A557FE 105.24%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.in-idx-content-subtitle {
+    position: relative;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: var(--font-stack);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-top: 12px;
 }
-
 
 .in-idx-content-btn {
+    position: relative;
+    z-index: 1;
     padding: 10px 44px;
     box-shadow: none;
+    margin-top: 30px;
 }

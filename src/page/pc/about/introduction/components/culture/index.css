@@ -65,7 +65,7 @@
 .culture-item-divider {
     width: 3px;
     align-self: stretch;
-    background: linear-gradient(180deg, #6951FF 0%, #4E74FF 100%);
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     border-radius: 2px;
     flex-shrink: 0;
     margin: 0 20px;

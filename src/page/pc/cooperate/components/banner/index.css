@@ -1,90 +1,63 @@
-.banner-container {
+.cp-banner {
     width: 100%;
-    height: 626px;
-    padding: 64px 100px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    justify-content: center;
-    padding-bottom: 0;
-    background: url(/src/assets/images/img/banner_bg1.webp);
+    height: 500px;
+    padding-top: 60px;
+    background: #000 url('/images/cooperate_banner_new.png') no-repeat right center;
     background-size: auto 100%;
-    background-position: 48%;
-    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
 }
 
-.banner-box {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    justify-content: space-between;
-    max-width: 1440px;
+.cp-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #000 0%, #000 25%, transparent 60%);
+    z-index: 0;
 }
 
-.banner-left-content {
-    margin-left: 50px;
+.cp-banner-inner {
+    position: absolute;
+    top: 134px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1292px;
+    z-index: 1;
 }
 
-.banner-title {
-    color: #1B1D22;
-    text-align: center;
+.cp-banner-name {
+    color: #fff;
     font-family: var(--font-stack);
-    font-size: 56px;
-    font-style: normal;
-    font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 1.12px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 2px;
 }
 
-.banner-desc {
-    max-width: 690px;
-    color: #484848;
+.cp-banner-title {
+    color: #fff;
     font-family: var(--font-stack);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 305;
-    line-height: 150%;
-    opacity: 0.9;
-    letter-spacing: 0.48px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 1px;
+    margin-top: 12px;
 }
 
-.banner-btn {
-    display: inline-flex;
-    padding: 10px 44px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    background: #6951FF;
-    gap: 4px;
-    cursor: pointer;
-    transition: all 0.1s ease-in-out;
-    margin-top: 34px;
-}
-
-.banner-btn:active {
-    scale: 0.95;
-    transition: all 0.1s ease-in-out;
-}
-
-.banner-btn-text {
-    color: #FFF;
+.cp-banner-desc {
+    color: rgba(255, 255, 255, 0.5);
     font-family: var(--font-stack);
     font-size: 16px;
-    font-style: normal;
-    font-weight: 380;
-    line-height: 150%;
-    /* 24px */
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 16px;
+    text-align: justify;
+    max-width: 680px;
 }
 
-.banner-btn .arr-1 {
-    width: 24px;
-    height: 24px;
-    fill: #FFFFFF;
+.cp-banner .hero-btn {
+    margin-top: 20px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 28px;
 }
-
-/* .banner-right-img {
-    width: 580px;
-    height: 426.533px;
-} */

@@ -20,10 +20,10 @@
 }
 
 .studio-tab-title {
-    color: #333;
-    font-size: 38px;
-    font-weight: 520;
-    line-height: 150%;
+    color: #1D2129;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.4;
     letter-spacing: 0.76px;
 }
 
@@ -69,7 +69,7 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background: #6951FF;
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     border-radius: 2px;
 }
 
@@ -80,7 +80,7 @@
     align-items: center;
     padding: 70px 60px;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 4px;
 }
 
 .studio-cont-box {

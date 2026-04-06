@@ -89,7 +89,7 @@
     width: fit-content;
     height: 40px;
     border-radius: 4px;
-    background: #6951FF;
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     color: #FFFFFFE5;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -97,7 +97,7 @@
 
 .mo-btn-down {
     border-radius: 4px;
-    background: #6951FF;
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     font-size: 16px;
 }
 

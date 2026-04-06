@@ -22,10 +22,10 @@ export const MVaaSIndex = () => {
                     ))}
                 </motion.div>
                 <motion.button {...initialLoadProps}
-                    className='animated-button w-[150px] rounded-lg mvaas-index-btn'
+                    className='hero-btn hero-btn-primary'
                     onClick={() => trackButtonClick(index.buttonText, 'MVaaS首屏')}
                 >
-                    <span className="text-white font-[380] bt-text">{index.buttonText}</span>
+                    {index.buttonText}
                 </motion.button>
             </div>
             <motion.div {...initialLoadProps} className='mvaas-index-right'>

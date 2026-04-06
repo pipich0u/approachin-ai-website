@@ -21,9 +21,9 @@
 }
 
 .amaas-testimony-title {
-    color: #333;
-    font-size: 38px;
-    font-weight: 450;
+    color: #1D2129;
+    font-size: 36px;
+    font-weight: 700;
     line-height: 150%;
     letter-spacing: 0.76px;
     margin-top: 30px;
@@ -65,7 +65,7 @@
 }
 
 .testimony-items {
-    border-radius: 12px;
+    border-radius: 4px;
     background: #FFF;
     width: 360px;
     height: 200px;

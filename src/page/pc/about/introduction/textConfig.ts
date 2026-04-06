@@ -1,7 +1,3 @@
-import no from '@/assets/images/no.webp'
-import img202412 from '@/assets/images/img/202412.webp'
-import img252 from '@/assets/images/img/202502.webp';
-import img2411 from '@/assets/images/img/202411.webp';
 export const introductionList = {
     title: '趋境科技',
     titleColor: 'Approaching.ai',
@@ -23,8 +19,8 @@ export const introductionList = {
         },
     ],
     companyContent: [
-        '趋境科技是全球领先的高效能AI Token生产服务商，专注于为企业提供高性能AI Token及全场景专属AI推理解决方案，是企业高效部署AI能力和实现智能升级的核心战略伙伴。核心团队源自清华大学高性能计算研究所，由中国工程院院士郑纬民担任首席科学顾问，清华大学教授武永卫担任首席科学家。团队立足系统级原始创新，通过全系统异构协同、以存换算等全球首创技术助力国产算力硬件缩小与国际领先水平的差距，为解决大模型算力难题贡献了重要的"中国方案"。趋境推理优化方案被誉为"AI时代的操作系统"，被广泛应用于头部企业万卡智算集群，并深度参与国家与行业标准制定，推动国产AI基础设施向高效、自主、可持续方向发展。',
-        '趋境科技现已构建覆盖云、边、端全场景的推理产品布局，形成围绕Token效能的Token Service（Token服务）、Token System（推理引擎、AMaaS平台、ATaaS平台）和Token Machine（从端到云的软硬一体化方案）三大产品形态，致力于为全球用户提供全场景高效能的Token，实现让算力更高效，让AI更普惠的公司使命。'
+        '趋境科技是全球领先的高效能AI Token生产服务商，专注于为企业提供高性能AI Token及全场景专属AI推理解决方案。核心团队源自清华大学高性能计算研究所，由中国工程院院士郑纬民担任首席科学顾问，清华大学教授武永卫担任首席科学家。团队立足系统级原始创新，通过全系统异构协同、以存换算等全球首创技术助力国产算力硬件缩小与国际领先水平的差距，为解决大模型算力难题贡献了重要的"中国方案"。趋境推理优化方案被誉为"AI时代的操作系统"，被广泛应用于头部企业万卡智算集群，并深度参与国家与行业标准制定，推动国产AI基础设施向高效、自主、可持续方向发展。',
+        '趋境科技现已形成围绕Token效能的Token Service（Token服务）、Token System（推理引擎、AMaaS平台、ATaaS平台）和Token Machine（从端到云的软硬一体化方案）三大产品形态，致力于为全球用户提供全场景高效能的Token，实现让算力更高效，让智能更普惠的公司使命。'
     ],
     solutionSection: {
         badge: '核心产品',
@@ -85,45 +81,73 @@ export const cultureList = {
 
 export const infoList = [
     {
-        title: '',
-        desc: ['完成数千万元天使轮融资'],
+        title: '2024',
+        desc: ['公司成立，清华大学计算机系高性能所核心技术成员成立趋境科技'],
         date: '3月',
-        image: ''
-    },
-    {
-        title: '2025 年',
-        desc: ['升级大模型推理软硬一体机产品', '全系支持本地 DeepSeek- R1 / V3 部署门槛降低 90 %', '升级液冷套件、静音无噪', '上线运维平台', '便捷模型管理', '发布新版 “KTransformers” 0.2 版', '单个消费级 GPU+CPU 本地部署 DeepSeek-R1/V3-671B 大模型', 'GitHub 标星过万', '国内外社区热榜第一'],
-        date: '2月',
-        image: img2411
-    },
-    {
-        title: '2024 年',
-        desc: ['联合月之暗面 Kimi、清华 MADSys', '共同发布开源项目 “Mooncake”', '大幅减少算力开销，提升推理吞吐量', '承载 Kimi 80% 的线上流量'],
-        date: '11月',
-        image: img252
     },
     {
         title: '',
-        desc: ['首次发布产品：', '大模型知识推理一体机', '异构协同支持千亿参数', '大模型推理单机私有化部署'],
+        desc: ['全球首创异构推理，KTransformers提出异构推理的全新范式，CPU+GPU异构推理'],
+        date: '5月',
+    },
+    {
+        title: '',
+        desc: ['全球首创以存换算，全球首个以KVCache为中心的分布式推理架构发布'],
         date: '10月',
-        image: ''
+    },
+    {
+        title: '2025',
+        desc: ['发布业界首个单卡推理671B一体机，第一个端侧商业产品，将用户AI起步门槛降低10倍'],
+        date: '2月',
     },
     {
         title: '',
-        desc: ['与长亭科技共同发布“长亭问津千亿大模型解决方案”', '由此安全领域迈入千亿级大模型时代', '高准确率、低延迟'],
-        date: '9月',
-        image: ''
+        desc: ['Mooncake成为首个稳定承载千万月活流量的推理架构'],
+        date: '4月',
     },
     {
         title: '',
-        desc: ['首创“以存换算”技术', '首创“全系统异构协同推理架构”技术', '开源 “KTransformers” 技术', '可支持单卡运行千亿级大模型'],
+        desc: ['趋境科技携手鲲鹏昇腾联合发布全国产化异构推理硬件'],
+        date: '5月',
+    },
+    {
+        title: '',
+        desc: ['以存换算技术获存储顶会 USENIX FAST，全球唯二'],
+        date: '6月',
+    },
+    {
+        title: '',
+        desc: ['全球首个完整复现分布式PD+EP推理，相比业界其他方案成本降低80%'],
         date: '7月',
-        image: ''
     },
     {
-        title: '2023 年',
-        desc: ['公司成立', '种子轮融资：真知创投'],
+        title: '',
+        desc: ['KTransformers相关论文入选国际计算机顶会 SOSP'],
+        date: '8月',
+    },
+    {
+        title: '',
+        desc: ['业界首个实现万亿模型秒级拉起'],
+        date: '10月',
+    },
+    {
+        title: '',
+        desc: ['业界首个基于异构推理引擎实现双4090显卡微调万亿模型'],
+        date: '11月',
+    },
+    {
+        title: '',
+        desc: ['以存换算相关论文入选国际数据顶会SIGMOD'],
         date: '12月',
-        image: img202412
-    }
+    },
+    {
+        title: '2026',
+        desc: ['陆续发布一系列全球首创技术：无序KVcache技术、智能算力规划、算子仿真...'],
+        date: '1月',
+    },
+    {
+        title: '',
+        desc: ['发布ATaaS解决方案，业界第一个定义Token as a Service的厂商'],
+        date: '3月',
+    },
 ]

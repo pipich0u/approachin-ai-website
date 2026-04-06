@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #FFF;
+    background: transparent;
     box-sizing: border-box;
 }
 
@@ -19,13 +19,13 @@
 }
 
 .product-title {
-    color: #1B1D22;
+    color: #1D2129;
     text-align: center;
     font-family: var(--font-stack);
-    font-size: 38px;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 450;
-    line-height: 150%;
+    font-weight: 700;
+    line-height: 1.4;
     letter-spacing: 0.76px;
 }
 
@@ -38,7 +38,7 @@
 .product-box-item {
     width: 610px;
     height: 366px;
-    border-radius: 20px;
+    border-radius: 4px;
     background: #E8EAF1;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.06);
     overflow: hidden;

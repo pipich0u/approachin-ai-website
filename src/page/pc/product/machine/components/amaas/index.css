@@ -5,15 +5,14 @@
     align-items: center;
 
     font-family: var(--font-stack);
-    background: #FFF;
     box-sizing: border-box;
-    background: url(/src/assets/images/img/amaas_bg.webp) lightgray 50% / cover no-repeat;
+    background: transparent;
 }
 
 .amaas-content {
     width: 100%;
     max-width: 1440px;
-    padding: 50px 100px;
+    padding: 60px 100px;
     height: 550px;
     padding-bottom: 40px;
     display: flex;
@@ -21,11 +20,11 @@
 }
 
 .amaas-con-title {
-    color: #333;
+    color: #1D2129;
     text-align: center;
-    font-size: 38px;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 700;
     line-height: 150%;
     letter-spacing: 0.76px;
 }

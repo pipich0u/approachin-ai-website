@@ -7,8 +7,9 @@ export const MachineIntroduce = () => {
     return <div className='mc-introduce-container'>
         <div className='mc-introduce-content'>
             <motion.div {...scrollInViewSpringOnceProps} className='mc-introduce-title'>
-                {machinIntroduce.title1}<br />{machinIntroduce.title2}
+                {machinIntroduce.title1}
             </motion.div>
+            <div className='mc-introduce-desc'>{machinIntroduce.title2}</div>
             <div className="mc-introduce-box">
                 {
                     machinIntroduce.list.map((item, index) => {

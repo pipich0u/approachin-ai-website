@@ -1,63 +1,76 @@
-.machin-index-container {
+.mc-banner {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 600px;
-    box-sizing: border-box;
-    background: url(/src/assets/images/img/mc_bg.webp);
+    height: 500px;
+    padding-top: 60px;
+    background: #000 url('/images/machine_banner.webp') no-repeat right calc(50% + 15px);
     background-size: auto 100%;
-    background-position: 45%;
-    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
 }
 
-.mc-in-content {
-    max-width: 1440px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding: 20px 100px;
+.mc-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #000 0%, #000 25%, transparent 60%);
+    z-index: 0;
 }
 
-.mc-in-top-box {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 6px;
+.mc-banner-inner {
+    position: absolute;
+    top: 134px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1292px;
+    z-index: 1;
 }
 
-.mc-in-title {
-    color: #1B1D22;
+.mc-banner-name {
+    color: #fff;
     font-family: var(--font-stack);
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 0.96px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 2px;
 }
 
-.mc-in-desc {
-    color: #484848;
+.mc-banner-title {
+    color: #fff;
     font-family: var(--font-stack);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 305;
-    line-height: 150%;
-    letter-spacing: 0.48px;
-    width: 690px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 1px;
+    margin-top: 12px;
 }
 
+.mc-banner-desc {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-stack);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 16px;
+    text-align: justify;
+    max-width: 680px;
+}
+
+.mc-banner .hero-btn {
+    margin-top: 20px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 28px;
+}
+
+/* Bottom stats strip */
 .mc-in-bottom-box {
     display: flex;
-    padding-top: 80px;
+    padding-top: 10px;
     gap: 60px;
     width: 100%;
-    display: flex;
     align-items: start;
     justify-content: center;
-    background: linear-gradient(180deg, #DBE8F3 0%, #FFF 100%);
+    background: linear-gradient(180deg, #DBE8F3 0%, #F7F8FA 100%);
 }
 
 .mc-in-item {
@@ -73,7 +86,6 @@
     color: #000;
     font-family: var(--font-stack);
     font-size: 24px;
-    font-style: normal;
     font-weight: 450;
     line-height: 150%;
     letter-spacing: 0.48px;
@@ -87,7 +99,6 @@
     -webkit-text-fill-color: transparent;
     font-family: var(--font-stack);
     font-size: 32px;
-    font-style: normal;
     font-weight: 520;
     line-height: 150%;
     letter-spacing: 0.64px;
@@ -99,62 +110,7 @@
     text-align: justify;
     font-family: var(--font-stack);
     font-size: 14px;
-    font-style: normal;
     font-weight: 305;
     line-height: 170%;
     letter-spacing: 0.28px;
-}
-
-.mc-in-btn {
-    width: 180px;
-    height: 44px;
-    border-radius: 8px;
-    background: linear-gradient(90deg, #4E74FF 0%, #7F49FF 100%), #806BFF;
-    display: flex;
-    padding: 10px 42px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    cursor: pointer;
-    overflow: hidden;
-    margin-top: 34px;
-    position: relative;
-}
-
-.mc-in-btn svg {
-    width: 24px;
-    fill: #fff;
-    z-index: 9;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.mc-in-btn .arr-1 {
-    margin-left: 4px;
-}
-
-.mc-in-btn .mc-bt-text {
-    color: #fff;
-    font-weight: 450;
-    z-index: 1;
-    transform: translateX(5px);
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.mc-in-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(250deg, #6c3ed9, #0f37d7);
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    z-index: 0;
-}
-
-.mc-in-btn:hover::before {
-    opacity: 1;
 }

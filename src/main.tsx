@@ -15,6 +15,13 @@ import heroCard3 from '@/assets/images/img/hero_card3.webp'
   img.src = src
 })
 
+// 素材保护：禁止右键保存图片
+document.addEventListener('contextmenu', (e) => {
+  if (e.target instanceof HTMLImageElement || e.target instanceof HTMLCanvasElement) {
+    e.preventDefault()
+  }
+})
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>

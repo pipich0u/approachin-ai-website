@@ -31,7 +31,7 @@
 }
 
 .mob-in-idx-content-title-color {
-    background: linear-gradient(256deg, #4E74FF -3.3%, #A557FE 105.24%);
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

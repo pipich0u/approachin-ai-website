@@ -5,7 +5,7 @@
     align-items: center;
     padding: 60px 0;
     font-family: var(--font-stack);
-    background: url(/src/assets/images/img/scene_bg.webp) center bottom / cover no-repeat;
+    background: transparent;
 }
 
 .scene-content {
@@ -19,12 +19,12 @@
 }
 
 .scene-title {
-    color: #1B1D22;
+    color: #1D2129;
     text-align: center;
-    font-size: 38px;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 450;
-    line-height: 150%;
+    font-weight: 700;
+    line-height: 1.4;
     letter-spacing: 0.76px;
     margin-top: 50px;
 }
@@ -88,7 +88,7 @@
     width: 1240px;
     height: 420px;
     margin-top: 24px;
-    border-radius: 20px;
+    border-radius: 4px;
     /* background: #FFF; */
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.06);
 }
@@ -97,7 +97,7 @@
     width: 100%;
     height: 100%;
     background: #fff;
-    border-radius: 16px;
+    border-radius: 4px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     display: flex;
     justify-content: space-between;
@@ -173,7 +173,7 @@
     height: 44px;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 4px;
-    background: #6951FF;
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     margin-top: 30px;
     width: 162px;
     justify-content: center;
@@ -205,7 +205,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(250deg, #6c3ed9);
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     border-radius: 8px;
     opacity: 0;
     transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);

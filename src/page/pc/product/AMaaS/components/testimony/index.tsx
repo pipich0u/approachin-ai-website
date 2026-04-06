@@ -23,7 +23,6 @@ export const AMaasTestimony = () => {
                                 <div className='testimony-items-desc'>{item.desc}</div>
                                 <div className='testimony-items-link' onClick={()=>window.open(item.link)}>
                                     {item.btn}
-                                    <IconFont type='icon-up-s' className='rotate-90 text-[26px]'/>
                                 </div>
                             </div>
                         ))}
@@ -35,7 +34,6 @@ export const AMaasTestimony = () => {
                                 <div className='testimony-items-desc'>{item.desc}</div>
                                 <div className='testimony-items-link' onClick={()=>window.open(item.link)}>
                                     {item.btn}
-                                    <IconFont type='icon-up-s' className='rotate-90 text-[26px]'/>
                                 </div>
                             </div>
                         ))}

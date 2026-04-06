@@ -54,7 +54,7 @@ export default function PageContact() {
                             <div className="footer-col-title">产品</div>
                             <div className="footer-col-item" onClick={() => onNavigate('machine', 'Token Machine')}>Token Machine</div>
                             <div className="footer-col-item" onClick={() => onNavigate('amaas', 'ATaaS平台')}>ATaaS 平台</div>
-                            <div className="footer-col-item" onClick={() => onNavigate('kllm', 'Token Service')}>Token Service</div>
+                            <div className="footer-col-item" onClick={() => onNavigate('token-service', 'Token Service')}>Token Service</div>
                         </div>
                         <div className="footer-col">
                             <div className="footer-col-title">解决方案</div>

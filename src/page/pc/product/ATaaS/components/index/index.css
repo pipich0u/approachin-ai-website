@@ -1,0 +1,62 @@
+.ataas-banner {
+    width: 100%;
+    height: 500px;
+    padding-top: 60px;
+    background: #000 url('/images/ataas_banner.webp') no-repeat right bottom;
+    background-size: auto 90%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.ataas-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #000 0%, #000 25%, transparent 60%);
+    z-index: 0;
+}
+
+.ataas-banner-inner {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1292px;
+    z-index: 1;
+}
+
+.ataas-banner-name {
+    color: #fff;
+    font-family: var(--font-stack);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 2px;
+}
+
+.ataas-banner-title {
+    color: #fff;
+    font-family: var(--font-stack);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 1px;
+    margin-top: 12px;
+}
+
+.ataas-banner-features {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-stack);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 16px;
+    letter-spacing: 1px;
+}
+
+.ataas-banner .hero-btn {
+    margin-top: 24px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 28px;
+}

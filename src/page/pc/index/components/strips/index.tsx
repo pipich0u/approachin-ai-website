@@ -19,11 +19,10 @@ export default function PageStrips() {
 
     return (
         <div className="strips-section">
-            <motion.div {...scrollInViewSpringProps} className="strips-title">以高效能Token为核心的产品布局</motion.div>
+            <div className="strips-title">以高效能Token为核心的产品布局</div>
             <div className="strips-inner">
                 {/* 第1条：大模型推理一体机 */}
-                <motion.div
-                    {...scrollInViewSpringProps}
+                <div
                     className="strip-item strip-bg-1"
                     onClick={() => navigateTo(productFeatures[0].link, productFeatures[0].title)}
                 >
@@ -46,11 +45,10 @@ export default function PageStrips() {
                             >了解详情</button>
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
                 {/* 第2条：全可视化的AI开发平台 */}
-                <motion.div
-                    {...scrollInViewSpringProps}
+                <div
                     className="strip-item strip-bg-2"
                     onClick={() => navigateTo(productFeatures[1].link, productFeatures[1].title)}
                 >
@@ -73,11 +71,10 @@ export default function PageStrips() {
                             >了解详情</button>
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
                 {/* 第3条：自主决策的算力规划大脑 */}
-                <motion.div
-                    {...scrollInViewSpringProps}
+                <div
                     className="strip-item strip-bg-3"
                     onClick={() => navigateTo(productFeatures[2].link, productFeatures[2].title)}
                 >
@@ -100,11 +97,10 @@ export default function PageStrips() {
                             >了解详情</button>
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
                 {/* 第4条：开箱即用的模型服务平台 */}
-                <motion.div
-                    {...scrollInViewSpringProps}
+                <div
                     className="strip-item strip-bg-4"
                     onClick={() => navigateTo(productFeatures[3].link, productFeatures[3].title)}
                 >
@@ -127,7 +123,7 @@ export default function PageStrips() {
                             >了解详情</button>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </div>
     );

@@ -87,7 +87,7 @@
   justify-content: center;
   height: 3.75rem; /* 撑满导航栏高度 — Volcengine 同款 */
   padding: 0 1.75rem; /* 28px */
-  background: var(--color-primary, #6951FF);
+  background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
   color: #fff;
   font-size: 0.875rem; /* 14px */
   font-weight: 500;
@@ -150,4 +150,32 @@
 @keyframes slideIn {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
+}
+
+/* 不透明灰白导航栏 — 产品页面 */
+.navbar-solid {
+  background: #F7F8FA;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* 黑色导航栏 */
+.navbar-dark {
+  background: #1D2129;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-dark .navbar-link,
+.navbar-dark .navbar-btn-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-dark .navbar-link:hover,
+.navbar-dark .navbar-btn-text:hover {
+  color: #fff;
+}
+
+.navbar-dark .navbar-btn {
+  background: #fff;
+  color: #1D2129;
 }

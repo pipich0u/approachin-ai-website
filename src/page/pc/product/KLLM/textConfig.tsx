@@ -7,8 +7,8 @@ export const kllmTextConfig = {
     pageName: 'KLLM页面'
 }
 export const overviewText = {
-    title:'KLLM推理引擎',
-    desc:'AI 时代企业级用户的大模型"操作系统"',
+    name: 'KLLM',
+    title: '企业级高效能推理引擎',
 }
 
 export const advantagesText = {

@@ -1,5 +1,6 @@
 export const bannerText = {
-    title: '趋境科技生态伙伴合作计划',
+    title: '生态合作',
+    title2: '趋境科技生态伙伴合作计划',
     desc: '期待通过开放生态合作，携手伙伴共推技术创新，为企业级用户提供高品质的AI解决方案与服务',
     btnText: '加入我们'
 };

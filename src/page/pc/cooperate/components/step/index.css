@@ -16,14 +16,14 @@
 }
 
 .step-title {
-    color: #1B1D22;
+    color: #1D2129;
     text-align: center;
     font-family: var(--font-stack);
-    font-size: 38px;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 0.8px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.76px;
     margin-bottom: 10px;
 }
 
@@ -97,7 +97,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    background: #6951FF;
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     gap: 4px;
     cursor: pointer;
     transition: all 0.1s ease-in-out;

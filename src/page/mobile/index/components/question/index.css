@@ -27,7 +27,7 @@
     /* color: #434343; */
     padding-top: 20px;
     z-index: 1;
-    background: linear-gradient(280deg, #CD69FF -46.27%, #530FFF 100%);
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -18,14 +18,14 @@
 }
 
 .buddy-con-title {
-    color: #434343;
+    color: #1D2129;
     text-align: center;
     font-family: var(--font-stack);
-    font-size: 38px;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 0.8px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.76px;
 }
 
 .buddy-items {

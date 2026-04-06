@@ -6,8 +6,7 @@
     justify-content: center;
     font-family: var(--font-stack);
     box-sizing: border-box;
-    background: url(/src/assets/images/img/scene_bg.webp) no-repeat center bottom;
-    background-size: 100% 60%;
+    background: transparent;
 }
 
 .amaas-in-content {
@@ -16,18 +15,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 45px 100px;
+    padding: 60px 100px;
 }
 
 .amaas-in-title {
-    color: #333;
+    color: #1D2129;
     text-align: center;
-    font-size: 38px;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 450;
-    line-height: 150%;
+    font-weight: 700;
+    line-height: 1.4;
     letter-spacing: 0.76px;
-    margin-bottom: 53px;
+    margin-bottom: 45px;
 }
 
 .amaas-in-box {
@@ -38,12 +37,20 @@
 .amaas-in-item {
     width: 295px;
     height: 430px;
-    border-radius: 20px;
+    border-radius: 4px;
     background: #FFF;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.amaas-in-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .amaas-in-item-title {
@@ -81,7 +88,7 @@
 .amaas-in-item-img {
     width: 235px;
     height: 200px;
-    border-radius: 12px;
+    border-radius: 4px;
     background: #F2F2F2;
 }
 
@@ -89,5 +96,5 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 4px;
 }

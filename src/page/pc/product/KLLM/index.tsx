@@ -1,5 +1,6 @@
 import './index.css'
 import { KllmIndex } from './components/index/index'
+import { KllmModelLogos } from './components/modelLogos'
 import { KllmAdvantages } from './components/advantages'
 import { KllmIndustry } from './components/industry'
 import { KllmService } from './components/service'
@@ -16,6 +17,7 @@ export const KLLMPage = () => {
 
     return <div className='kllm-page'>
         <KllmIndex />
+        <KllmModelLogos />
         <KllmAdvantages />
         <KllmIndustry />
         <KllmService />

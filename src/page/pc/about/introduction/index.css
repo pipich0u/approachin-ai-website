@@ -10,20 +10,29 @@
     display: flex;
     flex-direction: column;
     min-width: 1200px;
-    padding-top: 60px;
-    background: #EDF0F8;
+    padding-top: 50px;
+    background: #FAFBFC;
 }
 
 /* ========== Top Banner ========== */
 .about-banner {
     width: 100%;
     height: 320px;
-    background: #1a0a2e url('/images/about_banner.jpg') center / cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
+    z-index: 1;
 }
 
 .about-banner-title {
@@ -91,159 +100,261 @@
     color: var(--color-primary, #6951FF);
 }
 
-/* ========== Section Common ========== */
-.about-section {
+/* ========== 通用板块 ========== */
+.about-block {
     width: 100%;
-    background: linear-gradient(180deg, #EDF0F8 0%, #F3F5FA 40%, #F8F9FC 70%, #FFFFFF 100%);
+    background: #FAFBFC;
 }
 
-.about-section-inner {
-    max-width: 1200px;
+.about-block-inner {
+    max-width: 1360px;
     margin: 0 auto;
     padding: 80px 40px;
 }
 
-/* ========== 我们是谁 ========== */
-.about-section-title {
-    font-size: 36px;
-    font-weight: 600;
-    color: #4A0E8F;
-    margin: 0 0 28px;
-    letter-spacing: 1px;
-    text-align: center;
+.about-block:last-of-type {
+    margin-bottom: 200px;
 }
 
-.about-title-cn {
-    font-family: 'AlibabaPuHuiTi', sans-serif;
+.about-block-title {
+    font-size: 40px;
     font-weight: 700;
-    letter-spacing: 4px;
-    margin-right: 12px;
+    color: #000;
+    margin: 0 0 56px;
+    letter-spacing: 0;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1;
 }
 
-.about-title-en {
-    font-family: 'AlibabaPuHuiTi', sans-serif;
-    font-weight: 700;
-    letter-spacing: 3px;
+.about-block-card {
+    background: #F3F4F6;
+    border-radius: 6px;
+    padding: 40px 48px;
 }
 
-.about-intro-columns {
-    display: flex;
-    flex-direction: column;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.about-intro-col {
-    width: 100%;
-}
-
-.about-intro-col p {
-    font-size: 16px;
+.about-block-card p {
+    font-size: 15px;
+    font-weight: 250;
     line-height: 2;
-    color: #4E5969;
-    text-align: justify;
-    margin: 0 0 24px;
-    font-family: var(--font-stack);
-    text-indent: 2em;
+    color: #111;
+    margin: 0 0 16px;
+    font-family: ui-sans-serif, system-ui, sans-serif;
 }
 
-.about-intro-col p:last-child {
+.about-block-card p:last-child {
     margin-bottom: 0;
 }
 
-/* ========== Honors ========== */
-.about-honors {
-    margin-top: 48px;
-    padding-top: 40px;
-    border-top: 1px solid #EAEDF1;
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about-honors-label {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1D2129;
-    margin-bottom: 20px;
-    font-family: var(--font-stack);
-}
-
-.about-honors-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 48px;
-}
-
-.about-honors-list li {
-    font-size: 15px;
-    line-height: 28px;
-    color: #4E5969;
-    font-family: var(--font-stack);
-    padding: 4px 0;
-}
-
-.about-honors-list li::before {
-    content: '·';
-    margin-right: 8px;
-    font-weight: 700;
-    color: var(--color-primary, #6951FF);
-}
-
-/* ========== 使命 / 愿景 / 价值观 ========== */
-.about-values {
+/* ========== 麦穗装饰 ========== */
+.about-leaf-rows {
     display: flex;
-    gap: 24px;
-    margin-top: 64px;
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px 0;
+    margin-top: 60px;
 }
 
-.about-value-card {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-    border-radius: 8px;
-    padding: 12px 36px;
-    text-align: center;
+.about-leaf-item {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-leaf-wrap {
+    position: relative;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-leaf-icon {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(5deg);
+}
+
+.about-leaf-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    width: 120px;
 }
 
-.about-value-title {
-    font-size: 36px;
-    font-weight: 600;
-    color: #1D2129;
-    margin: 0;
+.about-leaf-big {
+    font-size: 24px;
+    font-weight: 700;
+    color: #DAA520;
     letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.about-leaf-small {
+    font-size: 11px;
+    font-weight: 400;
+    color: #4E5969;
+    line-height: 1.4;
+    margin-top: 4px;
+}
+
+/* ========== 文化价值 ========== */
+.about-values {
+    display: flex;
+    gap: 20px;
+}
+
+.about-value-item {
+    flex: 1;
+    border-radius: 4px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-value-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.about-value-accent {
+    display: none;
+}
+
+.about-value-label {
+    color: #000;
+    font-size: 24px;
+    font-weight: 450;
+    line-height: 150%;
+    margin: 0;
 }
 
 .about-value-en {
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--color-primary, #6951FF);
-    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 305;
+    color: #59595A;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 6px;
 }
 
-.about-value-desc {
-    font-size: 18px;
-    font-weight: 400;
-    color: #4E5969;
-    line-height: 1.8;
+.about-value-content {
+    color: #59595A;
+    font-size: 14px;
+    font-weight: 305;
+    line-height: 180%;
     margin-top: 16px;
-    text-align: center;
 }
 
-/* ========== 文化理念 ========== */
-.about-section-culture {
-    background: #F7F8FA;
+/* ========== 发展历程 ========== */
+.about-tl-tabs {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.about-tl-tab {
+    font-size: 20px;
+    font-weight: 500;
+    color: #8B8D98;
+    cursor: pointer;
+    transition: color 0.2s;
+    letter-spacing: 0;
+    user-select: none;
+    line-height: 1.2;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.about-tl-tab:hover {
+    color: #1E1F24;
+}
+
+.about-tl-tab.active {
+    background: linear-gradient(90deg, #6C3AE1, #045AF9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500;
+}
+
+.about-tl-track {
+    overflow-x: auto;
+    cursor: grab;
+    user-select: none;
+    padding-top: 72px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.about-tl-track::-webkit-scrollbar {
+    display: none;
+}
+
+.about-tl-track:active {
+    cursor: grabbing;
+}
+
+.about-tl-rail {
+    display: flex;
+    border-top: 1.5px solid #D9DBE1;
+    width: max-content;
+    padding-right: 200px;
+}
+
+.about-tl-item {
+    flex: 0 0 200px;
+    position: relative;
+    padding-top: 32px;
+}
+
+.about-tl-year-label {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    font-size: 28px;
+    font-weight: 250;
+    color: #000;
+    letter-spacing: 0;
+    line-height: 1;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.about-tl-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    top: -5px;
+    left: 0;
+}
+
+.about-tl-month {
+    font-size: 14px;
+    font-weight: 250;
+    color: #000;
+    margin-bottom: 16px;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.about-tl-desc {
+    padding-right: 24px;
+}
+
+.about-tl-desc p {
+    font-size: 14px;
+    font-weight: 250;
+    line-height: 1.8;
+    color: #000;
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, sans-serif;
 }

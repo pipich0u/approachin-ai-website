@@ -1,1 +1,12 @@
 @import url("./assets/iconfont/iconfont.css");
+
+/* 素材保护 */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+a img, button img, [role="button"] img {
+  pointer-events: auto;
+}

@@ -6,7 +6,7 @@
     justify-content: center;
     font-family: var(--font-stack);
     box-sizing: border-box;
-    background: #fff;
+    background: transparent;
 }
 
 .amaas-relation-content {
@@ -16,15 +16,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 53px 100px 0;
+    padding: 60px 100px 0;
 }
 
 .amaas-relation-title {
-    color: #333;
+    color: #1D2129;
     text-align: center;
-    font-size: 38px;
-    font-weight: 450;
-    line-height: 150%;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.4;
     letter-spacing: 0.76px;
 }
 
@@ -39,14 +39,14 @@
     width: 890px;
     height: 560px;
     padding: 77.5px 45px;
-    border-radius: 16px 0 0 16px;
+    border-radius: 4px 0 0 4px;
     background: linear-gradient(180deg, #F6F5FF -2.63%, #6A5AFF 115.66%);
 }
 
 .amaas-relation-box-left-content {
     width: 800px;
     height: 425px;
-    border-radius: 20px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
 }
@@ -65,7 +65,7 @@
     display: flex;
     flex-direction: column;
     background: #FAFAFA;
-    border-radius: 0 12px 12px 0;
+    border-radius: 0 4px 4px 0;
 }
 
 /* 右侧边栏内容 */
@@ -125,8 +125,8 @@
     height: 32px;
     padding: 10px 44px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    background: #806BFF;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     color: #FFF;
     font-size: 14px;
     font-weight: 380;

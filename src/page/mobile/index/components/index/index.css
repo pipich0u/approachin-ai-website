@@ -154,7 +154,7 @@
 
 .mob-hero-indicator-fill {
     height: 100%;
-    background: #6951FF;
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     transition: width 0.05s linear;
 }
 

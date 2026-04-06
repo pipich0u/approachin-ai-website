@@ -1,0 +1,82 @@
+.studio-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    position: relative;
+}
+
+.studio-scroll-container::before,
+.studio-scroll-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.studio-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, #fff, transparent);
+}
+
+.studio-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, #fff, transparent);
+}
+
+.studio-scroll-track {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: fit-content;
+    animation: studio-scroll 35s linear infinite;
+    will-change: transform;
+}
+
+.studio-scroll-track:hover {
+    animation-play-state: paused;
+}
+
+.studio-scroll-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 40px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.studio-scroll-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.studio-scroll-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.studio-scroll-name {
+    color: #333;
+    font-family: var(--font-stack);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+@keyframes studio-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-33.33%);
+    }
+}

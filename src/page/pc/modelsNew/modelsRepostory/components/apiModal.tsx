@@ -74,7 +74,7 @@ const ApiModal = (props: OfflineModelProps) => {
             afterOpenChange={(open) => open && onModalOpen()}
             footer={
                 <Button
-                    style={{ background: '#6951FF', color: 'white' }}
+                    style={{ background: 'linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%)', color: 'white' }}
                     onClick={handleOk}
                 >
                     关闭

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
 import logo_black from '@/assets/svg/logo-black.svg';
+import logo_white from '@/assets/svg/b-logo.svg';
 import { useNavigate } from 'react-router-dom';
 import { Dropdown, message } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
@@ -8,7 +9,7 @@ import { menuHrefListDefault } from '@/page/pc/index/textConfig';
 import { IconFont } from '@/utils/antdUtils';
 import { trackButtonClick } from '@/utils/umami';
 
-const TopNavs = () => {
+const TopNavs = ({ solid = false, dark = false }: { solid?: boolean; dark?: boolean }) => {
   const navigate = useNavigate();
 
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
@@ -53,7 +54,7 @@ const TopNavs = () => {
   };
 
   return (
-    <nav className="bg-1 navbar">
+    <nav className={`navbar ${dark ? 'navbar-dark' : solid ? 'navbar-solid' : 'bg-1'}`}>
       <div className="navbar-inner">
         {/* 左侧：Logo + 导航链接 */}
         <div className="navbar-left">
@@ -64,7 +65,7 @@ const TopNavs = () => {
               navigate('/');
             }}
           >
-            <img src={logo_black} alt="logo" />
+            <img src={dark ? logo_white : logo_black} alt="logo" />
           </div>
 
           <div className="navbar-container">

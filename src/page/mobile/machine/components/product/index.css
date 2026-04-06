@@ -87,7 +87,7 @@
     width: 140px;
     height: 44px;
     padding: 10px 20px;
-    background: #806BFF;
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     border-radius: 10px;
 }
 

@@ -223,7 +223,7 @@
     overflow: hidden;
     box-sizing: border-box;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    background: radial-gradient(115.93% 115.93% at 81.07% 50%, rgba(27, 18, 94, 0.00) 0%, #988AFF 100%), #000;
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     border: 6px solid #E5E6EB;
     margin-top: 30px;
 }

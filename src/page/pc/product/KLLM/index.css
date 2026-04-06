@@ -4,7 +4,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 64px;
+    padding-top: 0;
+    min-width: 1200px;
+    position: relative;
     background: #fff;
-    min-width: 1440px;
+}
+
+.kllm-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 900px;
+    background: url('/images/kllm_page_bg.png') no-repeat top center;
+    background-size: 100% auto;
+    filter: hue-rotate(150deg);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.kllm-page > * {
+    position: relative;
+    z-index: 1;
 }

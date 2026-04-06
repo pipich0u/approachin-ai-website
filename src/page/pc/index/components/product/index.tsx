@@ -45,9 +45,9 @@ export default function PageProduct() {
     return (
         <div className="w-full bg-white">
             <div ref={exposureRef} className="product-container flex flex-col items-center pt-[120px] pb-0 px-[2rem] max-w-[120rem] mx-auto w-full">
-            <motion.div {...scrollInViewSpringProps} className='text-[#1D2129] font-medium text-[36px] leading-[44px] text-center'>{productTitle}</motion.div>
+            <div className='text-[#1D2129] font-medium text-[36px] leading-[44px] text-center'>{productTitle}</div>
             <div className='flex items-center gap-5 mt-[56px] w-full'>
-                <motion.div {...scrollInViewSpringProps} className='product-items product-1 flex-1 min-w-0 h-[500px] rounded-[12px] '>
+                <div className='product-items product-1 flex-1 min-w-0 h-[500px] rounded-[12px] '>
                     <div className='mt-72 px-10'>
                         <div className='flex items-center gap-1'>
                             {
@@ -62,8 +62,8 @@ export default function PageProduct() {
                             {infoIcon(productFeatures[0].title, productFeatures[0].tag.join(','), productFeatures[0].link)}
                         </div>
                     </div>
-                </motion.div>
-                <motion.div {...scrollInViewSpringProps} className='product-items product-2 flex-1 min-w-0 h-[500px] rounded-[12px] '>
+                </div>
+                <div className='product-items product-2 flex-1 min-w-0 h-[500px] rounded-[12px] '>
                     <div className='mt-72  px-10'>
                         <div className='flex items-center gap-1'>
                             {
@@ -78,9 +78,9 @@ export default function PageProduct() {
                             {infoIcon(productFeatures[1].title, productFeatures[1].tag.join(','), productFeatures[1].link)}
                         </div>
                     </div>
-                </motion.div>
-                <motion.div className='flex flex-col gap-5 items-center ' {...scrollInViewSpringProps}>
-                    <motion.div className='product-items product-3 p-[30px] w-full h-60 rounded-[12px] '>
+                </div>
+                <div className='flex flex-col gap-5 items-center '>
+                    <div className='product-items product-3 p-[30px] w-full h-60 rounded-[12px] '>
                         <div className='flex items-center gap-1'>
                             {
                                 productFeatures[2].tag.map((tag, index) => (
@@ -92,8 +92,8 @@ export default function PageProduct() {
                             <div className='text-[#1D2129] font-medium text-[18px] leading-[26px]'>{productFeatures[2].title}</div>
                             <div className='text-[14px] text-[#4E5969] leading-[22px] w-[50%]'>{productFeatures[2].desc}</div>
                         </div>
-                    </motion.div>
-                    <motion.div className='product-items product-3-1 p-[30px] w-full h-60 rounded-[12px] '>
+                    </div>
+                    <div className='product-items product-3-1 p-[30px] w-full h-60 rounded-[12px] '>
                         <div className='flex items-center gap-1'>
                             {
                                 productFeatures[3].tag.map((tag, index) => (
@@ -108,9 +108,9 @@ export default function PageProduct() {
                                 {infoIcon(productFeatures[3].title, productFeatures[3].tag.join(','), productFeatures[3].link)}
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
-                </motion.div>
+                </div>
             </div>
         </div>
         </div>

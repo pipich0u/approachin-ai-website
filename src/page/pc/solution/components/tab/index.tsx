@@ -8,20 +8,13 @@ import { trackEvent } from '@/utils/umami'
 import moreIcon from '@/assets/svg/silder-icon.svg'
 
 export const SolutionTab = () => {
-    const { tabList, labelList } = solutionTextConfig
+    const { tabList } = solutionTextConfig
 
-    const [openSelectIdx, setOpenSelectIdx] = useState<boolean>(false)
     const [activeTab, setActiveTab] = useState(0)
-    const [title, setTitle] = useState('')
     const [showHint, setShowHint] = useState(true)
     const scrollRef = useRef<HTMLDivElement | null>(null)
 
-    const handleSelectToggle = () => {
-        setOpenSelectIdx(!openSelectIdx)
-        setActiveTab(0)
-    }
-
-    const List = openSelectIdx ? labelList : tabList
+    const List = tabList
 
     useEffect(() => {
         scrollRef.current?.scrollTo(0, 0)
@@ -47,17 +40,7 @@ export const SolutionTab = () => {
         <div className='solution-tab-container'>
             <div className='solution-tab-content'>
                 {/* Tab Nav */}
-                <motion.div className='solution-tabnav' {...scrollInViewOnceProps}>
-                    {openSelectIdx && (
-                        <div
-                            className='w-full flex items-center justify-center cursor-pointer'
-                            onClick={handleSelectToggle}
-                        >
-                            <IconFont type='icon-down-s' className='rotate-90 mr-2' />
-                            <div>{title}</div>
-                        </div>
-                    )}
-
+                <div className='solution-tabnav'>
                     {List.map((item, idx) => (
                         <div key={idx} className={`solution-tabnav-item ${activeTab === idx ? 'solution-item-active' : ''
                             }`}
@@ -74,22 +57,14 @@ export const SolutionTab = () => {
                                     tabId: idx,
                                     location: 'Solution解决方案',
                                 })
-
-                                if (item.child) {
-                                    handleSelectToggle()
-                                    setTitle(item.label)
-                                }
                             }}
                         >
-                            {item.label}
-                            {item.child && (
-                                <IconFont type='icon-up-s' className='rotate-90' />
-                            )}
+                            <span className='solution-tabnav-text'>{item.label}</span>
                         </div>
                     ))}
-                </motion.div>
+                </div>
 
-                <motion.div className='solution-tabpanel relative' {...scrollInViewOnceProps}>
+                <div className='solution-tabpanel relative'>
                     <motion.div
                         key={`top-${activeTab}`}
                         initial={{ opacity: 0 }}
@@ -130,7 +105,7 @@ export const SolutionTab = () => {
                                     {items.desc.map((descItem, descIdx) => (
                                         <p
                                             key={descIdx}
-                                            className='solution-tabpanel-box-desc-item'
+                                            className={`solution-tabpanel-box-desc-item${items.desc.length > 1 && descIdx > 0 ? ' has-bullet' : ''}`}
                                         >
                                             {descItem}
                                         </p>
@@ -147,7 +122,7 @@ export const SolutionTab = () => {
                             </motion.div>
                         ))}
                     </div>
-                </motion.div>
+                </div>
             </div>
         </div>
     )

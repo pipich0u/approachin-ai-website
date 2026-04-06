@@ -16,14 +16,14 @@
 }
 
 .sys-con-title {
-    color: #1B1D22;
+    color: #1D2129;
     text-align: center;
     font-family: var(--font-stack);
-    font-size: 38px;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 0.8px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.76px;
 }
 
 .sys-con-list {
@@ -36,83 +36,80 @@
 
 .sys-con-list-item {
     width: 295px;
-    height: 375px;
-    border-radius: 12px;
+    height: 430px;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background: #FFF;
-    overflow: hidden;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sys-con-list-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .sys-list-item-icon {
     width: 100%;
-    height: 210px;
-    background: url(/src/assets/images/img/sys_items_bg.webp) no-repeat;
-    background-size: contain;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #F2F2F2;
+    border-radius: 4px;
 }
 
 .sys-list-item-icon img {
-    width: 206px;
+    width: 160px;
 }
 
 .sys-list-item-text {
-    padding: 10px 30px;
+    flex: 1;
+    padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 .sys-list-item-title {
-    color: #333;
-    text-align: center;
+    color: #000;
     font-family: var(--font-stack);
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
-    font-weight: 520;
+    font-weight: 450;
     line-height: 150%;
-    margin-top: 10px;
 }
 
 .sys-list-item-desc {
-    color: #666;
-    text-align: center;
-    font-family: var(--font-stack);
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 330;
-    line-height: 150%;
-    margin-top: 12px;
-}
-
-.sys-list-item-btn {
-    border-top: 1px solid #0000000F;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.sys-list-item-btn:hover {
-    background-color: #f5f5f59e;
-    transition: all 0.2s ease-in-out;
-}
-
-.sys-list-item-btn-text {
+    color: #59595A;
     text-align: justify;
     font-family: var(--font-stack);
     font-size: 14px;
     font-style: normal;
-    font-weight: 380;
+    font-weight: 305;
+    line-height: 180%;
+    margin-top: 10px;
+}
+
+.sys-list-item-btn {
+    height: auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.sys-list-item-btn-text {
+    font-family: var(--font-stack);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 150%;
-    opacity: 0.9;
-    background: linear-gradient(280deg, #8310FE -46.27%, #4A3EFF 100%);
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

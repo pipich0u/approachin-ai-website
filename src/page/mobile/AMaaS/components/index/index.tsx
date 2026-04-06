@@ -24,7 +24,7 @@ export const MobAMaaSIndex = () => {
             <div className='mob-amaas-index-box'>
                 <motion.button
                     {...initialLoadProps}
-                    className='animated-button mob-amaas-index-box-btn rounded-lg bg-[#806BFF] '
+                    className='animated-button mob-amaas-index-box-btn rounded-lg bg-gradient-to-r from-[#7B2FFF] via-[#5550FF] to-[#3D6DFC] '
                     onClick={() => { trackButtonClick(index.buttonText, 'AMaaS第1屏', { slideIndex: 0 }); navigate('/contact') }}
                 >
                     <span className="text-white font-[380] bt-text">{index.buttonText}</span>

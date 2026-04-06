@@ -1,6 +1,6 @@
 .floatbtn1 {
     border-radius: 20px;
-    background: linear-gradient(156deg, #4E74FF -7.06%, #7F49FF 114.58%), #6C3AE1 !important;
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%) !important;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.20);
     display: flex;
     width: 40px;

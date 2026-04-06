@@ -1,66 +1,62 @@
-.kllm-service-container {
+.kllm-svc-container {
     width: 100%;
     display: flex;
-    height: 520px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: #fff;
     font-family: var(--font-stack);
-    font-style: normal;
     padding: 100px 0;
-    background: url('/src/assets/images/img/service_bg.webp') no-repeat center;
-    background-size: cover;
-
+    background: transparent;
 }
 
-.kllm-service-content {
+.kllm-svc-content {
+    max-width: 1238px;
     width: 100%;
-    height: 100%;
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
 }
 
-.kllm-service-title {
-    color: #333;
-    font-size: 38px;
-    font-weight: 450;
-    line-height: 150%;
+.kllm-svc-title {
+    color: #1D2129;
+    font-size: 36px;
+    font-weight: 700;
     letter-spacing: 0.76px;
-    margin-bottom: 63px;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.kllm-service-content-item {
-    width: 610px;
-    height: 200px;
-    border-radius: 12px;
-    background: #FFF;
-    padding: 35px 45px;
-}
-
-.kllm-service-content-box {
-    gap: 20px;
+.kllm-svc-cards {
     display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
-.kllm-service-content-title {
+.kllm-svc-card {
+    flex: 1;
+    background: linear-gradient(132deg, rgba(255, 255, 255, 0.79), rgba(245, 240, 255, 0.8));
+    border-radius: 4px;
+    box-shadow: 0 2px 30px 2px rgba(51, 51, 51, 0.1);
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.kllm-svc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.kllm-svc-card-title {
     color: #333;
-    font-size: 24px;
-    font-weight: 380;
-    line-height: 150%;
-    letter-spacing: 0.48px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 16px;
 }
 
-.kllm-service-content-desc {
-    color: #484848;
+.kllm-svc-card-desc {
+    color: #333;
     font-size: 14px;
-    font-weight: 305;
-    line-height: 150%;
-    letter-spacing: 0.28px;
-    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 28px;
+    text-align: justify;
 }

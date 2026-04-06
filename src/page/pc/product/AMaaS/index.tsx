@@ -2,6 +2,7 @@ import './index.css'
 import { useEffect } from 'react'
 import { trackPageView } from '@/utils/umami'
 import { AMaaSIndex } from './components/index/index'
+import { KllmModelLogos } from '../KLLM/components/modelLogos'
 import { AMaaSIntroduce } from './components/introduce'
 import { AMaaSRelation } from './components/relation'
 import { AMaasSuperior } from './components/superior'
@@ -17,6 +18,7 @@ export const AMaaSPage = () => {
 
     return <div className='amaas-page'>
         <AMaaSIndex />
+        <KllmModelLogos />
         <AMaaSIntroduce />
         <AMaaSRelation />
         <AMaasSuperior />

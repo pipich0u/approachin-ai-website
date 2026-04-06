@@ -44,10 +44,10 @@ export const MVaaSPlatform = () => {
                         accordion
                     />
                     <motion.button {...scrollInViewOnceProps}
-                        className='animated-button w-[100px] rounded-lg mvaas-platform-btn'
+                        className='hero-btn hero-btn-primary'
                         onClick={() => trackButtonClick(platform.buttonText, 'MVaaS平台智能调度')}
                     >
-                        <span className="text-white font-[380] w-full">{platform.buttonText}</span>
+                        {platform.buttonText}
                     </motion.button>
                 </motion.div>
             </div>

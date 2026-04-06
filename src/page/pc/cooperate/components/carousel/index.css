@@ -15,10 +15,12 @@
 
 .carousel-con-title {
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     /* margin-bottom: 60px; */
-    color: #1a1a1a;
+    color: #1D2129;
+    letter-spacing: 0.76px;
+    line-height: 1.4;
 }
 
 .carousel-con-box {
@@ -163,7 +165,7 @@
 }
 
 .carousel-dot.active {
-    background: #806BFF;
+    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
     width: 50px;
 }
 

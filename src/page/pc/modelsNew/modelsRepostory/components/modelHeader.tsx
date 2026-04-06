@@ -31,7 +31,7 @@ const ModelHeader = memo(({ downloadModelInfo, version }: ModelHeaderProps) => {
                 <Button
                     onClick={downloadModelInfo}
                     style={{
-                        background: '#6951FF',
+                        background: 'linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%)',
                         color: 'white'
                     }}>导出模型信息</Button>
             </div>

@@ -6,8 +6,7 @@
     justify-content: center;
     font-family: var(--font-stack);
     box-sizing: border-box;
-    background: url(/src/assets/images/img/scene_bg.webp) no-repeat center bottom;
-    background-size: 100% 60%;
+    background: transparent;
 }
 
 .amaas-sup-content {
@@ -23,11 +22,11 @@
 }
 
 .amaas-sup-title {
-    color: #333;
-    font-size: 38px;
+    color: #1D2129;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 450;
-    line-height: 150%;
+    font-weight: 700;
+    line-height: 1.4;
     letter-spacing: 0.76px;
 }
 
@@ -114,6 +113,8 @@
     right: 100px;
     bottom: 0;
     width: 680px;
+    max-height: 530px;
+    overflow: hidden;
 }
 
 .amaas-sup-tab-info img {

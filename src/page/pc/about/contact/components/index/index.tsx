@@ -80,11 +80,11 @@ export const ContactIndex = () => {
                     </motion.div>
                     <Form.Item>
                         <motion.button
-                            className='animated-button w-[530px] rounded-lg mt-8!'
+                            className='hero-btn hero-btn-primary w-[530px] mt-8!'
                             type="button"
                             onClick={handleSubmit}
                         >
-                            <span className="text-white font-[380] bt-text">{contactTextConfig.btnText}</span>
+                            {contactTextConfig.btnText}
                         </motion.button>
                     </Form.Item>
                 </Form>
