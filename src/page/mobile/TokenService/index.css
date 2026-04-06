@@ -1,0 +1,7 @@
+.mob-ts-page {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    padding-top: 120px;
+}

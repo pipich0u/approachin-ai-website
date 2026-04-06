@@ -26,6 +26,12 @@ import { MobIntroductionPage } from "@/page/mobile/about/introduction"
 import { MobInformationPage } from "@/page/mobile/Information"
 import { MobMachinePage } from "@/page/mobile/machine"
 import { MobAMaaSPage } from "@/page/mobile/AMaaS"
+import { MobKLLMPage } from "@/page/mobile/KLLM"
+import { MobTokenServicePage } from "@/page/mobile/TokenService"
+import { MobATaaSPage } from "@/page/mobile/ATaaS"
+import { MobSolutionPage } from "@/page/mobile/solution"
+import { MobCooperatePage } from "@/page/mobile/cooperate"
+import { MobMoonCakePage } from "@/page/mobile/moonCake"
 
 
 export function createAppRoutes(isMobile: boolean): RouteObject[] {
@@ -62,6 +68,30 @@ export function createAppRoutes(isMobile: boolean): RouteObject[] {
                     {
                         path: "amaas",
                         element: <MobAMaaSPage />,
+                    },
+                    {
+                        path: "kllm",
+                        element: <MobKLLMPage />,
+                    },
+                    {
+                        path: "token-service",
+                        element: <MobTokenServicePage />,
+                    },
+                    {
+                        path: "ataas",
+                        element: <MobATaaSPage />,
+                    },
+                    {
+                        path: "solution",
+                        element: <MobSolutionPage />,
+                    },
+                    {
+                        path: "cooperate",
+                        element: <MobCooperatePage />,
+                    },
+                    {
+                        path: "mooncake",
+                        element: <MobMoonCakePage />,
                     },
                 ],
             },

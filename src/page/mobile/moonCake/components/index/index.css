@@ -1,0 +1,87 @@
+.mob-moon-banner {
+    width: 100%;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    background: url('/src/assets/images/img/moon_bg.webp') no-repeat center / cover;
+    font-family: var(--font-stack);
+}
+
+.mob-moon-banner-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #6147FF;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.mob-moon-banner-title {
+    color: #1D2129;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.mob-moon-banner-desc {
+    color: #4E5969;
+    font-size: 22px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.mob-moon-banner-btn {
+    width: 180px;
+    height: 52px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #7B2FFF 0%, #5550FF 60%, #3D6DFC 100%);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+}
+
+/* 技术影响力 */
+.mob-moon-influence {
+    padding: 60px 40px;
+    background: #F7F8FA;
+    font-family: var(--font-stack);
+}
+
+.mob-moon-influence-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1D2129;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mob-moon-influence-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mob-moon-influence-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.mob-moon-influence-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.mob-moon-influence-card-desc {
+    color: #4E5969;
+    font-size: 22px;
+    line-height: 1.7;
+}

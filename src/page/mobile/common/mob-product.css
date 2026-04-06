@@ -1,0 +1,154 @@
+/* ===== 移动端产品页通用样式 ===== */
+
+/* 页面容器 */
+.mob-product-page {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    padding-top: 120px;
+}
+
+/* 核心能力/优势 */
+.mob-product-advantages {
+    width: 100%;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    font-family: var(--font-stack);
+}
+
+.mob-product-adv-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1D2129;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mob-product-adv-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.mob-product-adv-card {
+    padding: 30px;
+    border-radius: 12px;
+    background: #F7F8FA;
+}
+
+.mob-product-adv-num {
+    color: #6C3AE1;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.mob-product-adv-card-title {
+    color: #1D2129;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.mob-product-adv-card-list p {
+    color: #4E5969;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* 服务模式 */
+.mob-product-service {
+    width: 100%;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    background: #F7F8FA;
+    font-family: var(--font-stack);
+}
+
+.mob-product-svc-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1D2129;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mob-product-svc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mob-product-svc-card {
+    padding: 30px;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.mob-product-svc-card-title {
+    color: #1D2129;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.mob-product-svc-card-desc {
+    color: #4E5969;
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+/* 应用场景 */
+.mob-product-scenes {
+    width: 100%;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    font-family: var(--font-stack);
+}
+
+.mob-product-scenes-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1D2129;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mob-product-scene-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mob-product-scene-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #F7F8FA;
+}
+
+.mob-product-scene-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.mob-product-scene-card-body {
+    padding: 24px 30px;
+}
+
+.mob-product-scene-card-title {
+    color: #1D2129;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.mob-product-scene-card-desc {
+    color: #4E5969;
+    font-size: 22px;
+    line-height: 1.7;
+}
