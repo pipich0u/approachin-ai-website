@@ -186,7 +186,7 @@
 }
 
 .mob-hero-card-title {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 500;
     color: #0C0D0E;
     line-height: 1.5;
@@ -197,7 +197,7 @@
 }
 
 .mob-hero-card-tag {
-    font-size: 13px;
+    font-size: 20px;
     color: #42464E;
     margin-top: 4px;
     display: block;
