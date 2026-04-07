@@ -13,7 +13,7 @@ export const MobTokenServiceIndex = () => {
             <div className='mob-banner-left'>
                 <motion.div {...initialLoadProps} className='mob-banner-name'>{overviewText.name}</motion.div>
                 <motion.div {...initialLoadProps} className='mob-banner-title'>{overviewText.title}</motion.div>
-                <motion.p {...initialLoadProps} className='mob-banner-desc'>{overviewText.desc}</motion.p>
+                <motion.p {...initialLoadProps} className='mob-banner-desc'>将算力资源指标与业务 SLO 对齐，为企业提供稳定、高效、可控的大模型推理服务。</motion.p>
                 <motion.button {...initialLoadProps} className='mob-banner-btn' onClick={() => {
                     trackButtonClick('联系我们', '移动端TokenService首屏');
                     navigate('/contact');
