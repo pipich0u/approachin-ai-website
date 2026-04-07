@@ -1,7 +1,8 @@
 .mob-amaas-testimony {
-    padding: 60px 0 60px 40px;
+    padding: 60px 0 60px 0;
     background: #F7F8FA;
     font-family: var(--font-stack);
+    overflow: hidden;
 }
 
 .mob-amaas-testimony-title {
@@ -10,7 +11,7 @@
     color: #1D2129;
     text-align: center;
     margin-bottom: 12px;
-    padding-right: 40px;
+    padding: 0 40px;
 }
 
 .mob-amaas-testimony-desc {
@@ -18,16 +19,16 @@
     color: #4E5969;
     text-align: center;
     margin-bottom: 40px;
-    padding-right: 40px;
+    padding: 0 40px;
 }
 
 .mob-amaas-testimony-list {
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 16px;
-    padding-right: 40px;
+    padding: 0 40px 16px;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
 }
 
 .mob-amaas-testimony-list::-webkit-scrollbar {
@@ -35,7 +36,7 @@
 }
 
 .mob-amaas-testimony-card {
-    flex: 0 0 500px;
+    flex: 0 0 75vw;
     padding: 36px;
     border-radius: 16px;
     background: #fff;
@@ -43,10 +44,11 @@
     flex-direction: column;
     align-items: center;
     margin-right: 20px;
+    scroll-snap-align: start;
 }
 
 .mob-amaas-testimony-card:last-child {
-    margin-right: 0;
+    margin-right: 40px;
 }
 
 .mob-amaas-testimony-icon {
