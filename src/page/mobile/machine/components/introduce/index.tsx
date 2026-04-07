@@ -18,7 +18,10 @@ export const MobMachineIntroduce = () => {
                                 <div className="mob-mc-introduce-box-item-list">
                                     {
                                         item.items.map((it, idx) => {
-                                            return <li key={idx + index}>{it}</li>
+                                            return <div className='mob-mc-introduce-li' key={idx + index}>
+                                                <span className='mob-mc-introduce-dot'></span>
+                                                <div>{it}</div>
+                                            </div>
                                         })
                                     }
                                 </div>

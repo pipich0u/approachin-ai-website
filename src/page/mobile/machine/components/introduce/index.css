@@ -29,55 +29,65 @@
 
 .mob-mc-introduce-box {
     display: flex;
-    flex-direction: column;
-    gap: 26px;
-    margin-top: 54px;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
     width: 100%;
 }
 
 .mob-mc-introduce-box-item {
-    width: 100%;
-    border-radius: 20px;
+    width: calc(50% - 7px);
+    border-radius: 12px;
     background: #FFF;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     border: 1px solid #f0f0f0;
     overflow: hidden;
 }
 
 .mob-mc-introduce-box-item-left {
-    padding: 36px 36px 20px;
+    padding: 16px 16px 10px;
 }
 
 .mob-mc-introduce-box-item-title {
     color: #1D2129;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 600;
-    line-height: 150%;
-    margin-bottom: 10px;
+    line-height: 1.4;
+    margin-bottom: 6px;
 }
 
 .mob-mc-introduce-box-item-list {
     color: #4E5969;
-    font-size: 22px;
-    font-weight: 305;
-    line-height: 200%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.mob-mc-introduce-li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 2px;
+}
+
+.mob-mc-introduce-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #6951FF;
+    flex-shrink: 0;
 }
 
 .mob-mc-introduce-box-item-rig {
     width: 100%;
-    padding: 0 36px 36px;
+    padding: 0 16px 16px;
 }
 
 .mob-mc-introduce-box-item-rig img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: 12px;
-}
-
-.mob-mc-introduce-box-item-list li {
-    list-style-position: inside;
-    margin-left: 6px;
+    border-radius: 8px;
 }
