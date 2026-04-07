@@ -62,26 +62,30 @@
     margin-bottom: 0;
 }
 
-/* 麦穗 */
+/* 麦穗 - 横向滑动 */
 .mob-leaf-rows {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     margin-top: 36px;
+    padding-bottom: 16px;
+    scrollbar-width: none;
+}
+
+.mob-leaf-rows::-webkit-scrollbar {
+    display: none;
 }
 
 .mob-leaf-item {
-    width: 20%;
+    flex: 0 0 200px;
     display: flex;
     justify-content: center;
 }
 
 .mob-leaf-wrap {
     position: relative;
-    width: 100%;
-    max-width: 130px;
-    height: 46px;
+    width: 180px;
+    height: 64px;
 }
 
 .mob-leaf-icon {
@@ -102,13 +106,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100%;
-    padding: 0 6px;
-    box-sizing: border-box;
+    width: 130px;
 }
 
 .mob-leaf-big {
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 700;
     color: #DAA520;
     letter-spacing: 1px;
@@ -116,11 +118,11 @@
 }
 
 .mob-leaf-small {
-    font-size: 9px;
+    font-size: 13px;
     font-weight: 400;
     color: #4E5969;
-    line-height: 1.3;
-    margin-top: 2px;
+    line-height: 1.4;
+    margin-top: 3px;
 }
 
 /* 文化价值 */
