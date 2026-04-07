@@ -3,45 +3,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     font-family: var(--font-stack);
 }
 
 .mob-in-idx-content {
     width: 100%;
-    /* max-width: 1440px; */
-    height: 500px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(/src/assets/images/mob/mob_bg_in.webp) no-repeat;
-    background-position: 20% center;
-    background-size: 100%;
+    justify-content: center;
+    background: url(/src/assets/images/mob/mob_bg_in.webp) no-repeat center / cover;
 }
 
 .mob-in-idx-content-title {
-    display: flex;
-    align-items: center;
-    color: #FAFBFD;
-    font-size: 48px;
-    font-weight: 520;
-    line-height: 150%;
-    letter-spacing: 0.96px;
-    margin-top: 60px;
-}
-
-.mob-in-idx-content-title-color {
-    background: linear-gradient(135deg, #7B2FFF 0%, #6B3CFF 30%, #5550FF 60%, #3D6DFC 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
-.mob-in-idx-content-btn {
-    padding: 10px 44px;
-    box-shadow: none;
-    font-size: 18px !important;
     color: #fff;
-    font-weight: 305;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.mob-in-idx-content-sub {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 6px;
+    margin-top: 8px;
 }
