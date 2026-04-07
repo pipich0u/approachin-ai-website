@@ -10,7 +10,7 @@ export const MobMachineProduct = () => {
     return <div className='mob-product-container'>
         <div className="mob-product-content">
             <motion.div {...scrollInViewSpringOnceProps} className="mob-product-title">{machinProduct.title}</motion.div>
-            <motion.div {...scrollInViewSpringOnceProps} className="mob-product-box">
+            <div className="mob-product-box">
                 {
                     machinProduct.list.map((item, index) => {
                         return <div className='mob-product-box-item' key={index}>
@@ -30,7 +30,7 @@ export const MobMachineProduct = () => {
                         </div>
                     })
                 }
-            </motion.div>
+            </div>
         </div>
     </div>
 }

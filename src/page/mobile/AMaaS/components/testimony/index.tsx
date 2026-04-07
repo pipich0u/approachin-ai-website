@@ -11,11 +11,11 @@ export const MobAMaaSTestimony = () => {
         <motion.div {...scrollInViewOnceProps} className='mob-amaas-testimony-desc'>{testimony.description}</motion.div>
         <div className='mob-amaas-testimony-list'>
             {testimony.list.map((item, index) => (
-                <motion.div {...scrollInViewOnceProps} className='mob-amaas-testimony-card' key={index}>
+                <div className='mob-amaas-testimony-card' key={index}>
                     <img src={item.icon} alt="" className='mob-amaas-testimony-icon' />
                     <div className='mob-amaas-testimony-card-desc'>{item.desc}</div>
                     <div className='mob-amaas-testimony-link' onClick={() => window.open(item.link)}>{item.btn}</div>
-                </motion.div>
+                </div>
             ))}
         </div>
     </div>
