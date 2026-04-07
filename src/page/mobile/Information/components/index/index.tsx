@@ -12,12 +12,6 @@ export const MobInformationIndex = () => {
             <motion.div {...initialLoadProps} className="mob-in-idx-content-title">
                 {InformationBannerList.title}
             </motion.div>
-            <motion.button {...initialLoadProps} className='animated-button mob-in-idx-content-btn  ' onClick={() => {
-                trackButtonClick(InformationBannerList.btn, 'Information首屏');
-                navigate('/contact');
-            }}>
-                {InformationBannerList.btn}
-            </motion.button>
         </div>
     </div>
 }

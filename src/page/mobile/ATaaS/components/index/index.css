@@ -1,3 +1,4 @@
 .mob-ataas-bg {
-    background: linear-gradient(135deg, #0a0a1a 0%, #1a0d40 50%, #0d0a2b 100%);
+    background: #000 url('/images/ataas_banner.webp') no-repeat right bottom;
+    background-size: auto 100%;
 }

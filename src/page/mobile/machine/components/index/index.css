@@ -1,5 +1,6 @@
 .mob-machine-bg {
-    background: linear-gradient(135deg, #0a0a1a 0%, #0a1a30 50%, #0d1025 100%);
+    background: #000 url('/images/machine_banner.webp') no-repeat right calc(50% + 15px);
+    background-size: auto 100%;
 }
 
 .mob-mc-in-bottom-box {

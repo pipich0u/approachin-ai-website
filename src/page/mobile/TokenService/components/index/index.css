@@ -1,3 +1,4 @@
 .mob-ts-bg {
-    background: linear-gradient(135deg, #0a0a1a 0%, #0d1a40 50%, #0a1030 100%);
+    background: #000 url('/images/token_service_banner_new.webp') no-repeat right center;
+    background-size: auto 100%;
 }

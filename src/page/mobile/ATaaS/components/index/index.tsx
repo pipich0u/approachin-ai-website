@@ -5,7 +5,6 @@ import { initialLoadProps } from '@/utils/motionConfig'
 import { overviewText } from '@/page/pc/product/ATaaS/textConfig'
 import { useNavigate } from 'react-router-dom'
 import { trackButtonClick } from '@/utils/umami'
-import bannerImg from '@/assets/images/img/kllm_in_bg.webp'
 
 export const MobATaaSIndex = () => {
     const navigate = useNavigate()
@@ -22,9 +21,6 @@ export const MobATaaSIndex = () => {
                     联系我们
                 </motion.button>
             </div>
-            <motion.div {...initialLoadProps} className='mob-banner-right'>
-                <img src={bannerImg} alt={overviewText.name} />
-            </motion.div>
         </div>
     </div>
 }

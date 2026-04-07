@@ -1,8 +1,8 @@
 /* ===== 移动端产品页通用Banner - 左文右图 ===== */
 .mob-banner {
     width: 100%;
-    min-height: 480px;
-    padding: 40px;
+    height: 520px;
+    padding: 40px 40px 40px 40px;
     box-sizing: border-box;
     background: #000;
     display: flex;
@@ -12,32 +12,30 @@
     overflow: hidden;
 }
 
+/* 左侧暗色渐变遮罩，保证文字可读，右侧露出原图 */
+.mob-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: linear-gradient(to right, #000 0%, #000 30%, rgba(0,0,0,0.6) 55%, transparent 75%);
+    z-index: 1;
+}
+
 .mob-banner-content {
     display: flex;
     align-items: center;
     width: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .mob-banner-left {
-    flex: 1;
+    flex: 0 0 65%;
     min-width: 0;
 }
 
 .mob-banner-right {
-    flex: 0 0 280px;
-    height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20px;
-}
-
-.mob-banner-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    flex: 1;
 }
 
 .mob-banner-name {

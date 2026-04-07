@@ -5,7 +5,6 @@ import { initialLoadProps } from '@/utils/motionConfig'
 import { overviewText } from '@/page/pc/product/TokenService/textConfig'
 import { useNavigate } from 'react-router-dom'
 import { trackButtonClick } from '@/utils/umami'
-import bannerImg from '@/assets/images/img/compute-ball.webp'
 
 export const MobTokenServiceIndex = () => {
     const navigate = useNavigate()
@@ -22,9 +21,6 @@ export const MobTokenServiceIndex = () => {
                     联系我们
                 </motion.button>
             </div>
-            <motion.div {...initialLoadProps} className='mob-banner-right'>
-                <img src={bannerImg} alt={overviewText.name} />
-            </motion.div>
         </div>
     </div>
 }
