@@ -4,7 +4,6 @@ import { trackPageView } from '@/utils/umami'
 import { MobAMaaSIndex } from './components/index/index'
 import { MobAMaaSIntroduce } from './components/introduce'
 import { MobAMaaSRelation } from './components/relation'
-import { MobAMaasSuperior } from './components/superior'
 import { MobAMaaSTestimony } from './components/testimony'
 import PageConsult from '../index/components/consult'
 import PageContact from '../index/components/contact'
@@ -19,7 +18,6 @@ export const MobAMaaSPage = () => {
         <MobAMaaSIndex />
         <MobAMaaSIntroduce />
         <MobAMaaSRelation />
-        <MobAMaasSuperior />
         <MobAMaaSTestimony />
         <PageConsult />
         <PageContact />
