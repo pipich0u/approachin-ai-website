@@ -1,6 +1,6 @@
 .mob-machine-bg {
-    background: #000 url('/images/machine_banner.webp') no-repeat left center;
-    background-size: auto 150%;
+    background: #000 url('/images/machine_banner.webp') no-repeat right center;
+    background-size: auto 100%;
 }
 
 .mob-mc-in-bottom-box {

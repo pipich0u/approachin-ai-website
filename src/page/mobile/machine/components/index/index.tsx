@@ -5,7 +5,6 @@ import { initialLoadProps } from '@/utils/motionConfig'
 import { MachinList } from '@/page/pc/product/machine/textConfig'
 import { useNavigate } from 'react-router-dom'
 import { trackButtonClick } from '@/utils/umami'
-import bannerImg from '@/assets/images/img/machine-rig.webp'
 
 export const MobMachineIndex = () => {
     const navigate = useNavigate();
@@ -23,9 +22,6 @@ export const MobMachineIndex = () => {
                         {MachinList.btn}
                     </motion.button>
                 </div>
-                <motion.div {...initialLoadProps} className='mob-banner-right'>
-                    <img src={bannerImg} alt="Token Machine" />
-                </motion.div>
             </div>
         </div>
         <div className="mob-mc-in-bottom-box">

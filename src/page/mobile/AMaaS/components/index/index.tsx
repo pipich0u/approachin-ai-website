@@ -5,7 +5,6 @@ import { initialLoadProps } from '@/utils/motionConfig'
 import { trackButtonClick } from '@/utils/umami'
 import { amaasTextConfig } from '@/page/pc/product/AMaaS/textConfig'
 import { useNavigate } from 'react-router-dom'
-import bannerImg from '@/assets/images/img/amaas.webp'
 
 export const MobAMaaSIndex = () => {
     const { index } = amaasTextConfig
@@ -26,9 +25,6 @@ export const MobAMaaSIndex = () => {
                     {index.buttonText}
                 </motion.button>
             </div>
-            <motion.div {...initialLoadProps} className='mob-banner-right'>
-                <img src={bannerImg} alt={index.title} />
-            </motion.div>
         </div>
     </div>
 }
