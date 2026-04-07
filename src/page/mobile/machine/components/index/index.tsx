@@ -24,12 +24,12 @@ export const MobMachineIndex = () => {
                 </div>
             </div>
         </div>
-        <div className="mob-mc-in-bottom-box">
+        {/* <div className="mob-mc-in-bottom-box">
             {MachinList.bottomList.map((item, index) => {
                 return <motion.div {...initialLoadProps} className="mob-mc-in-item" key={index}>
                     <div className="mob-mc-in-item-title">{item.title}<div className='mob-mc-in-item-title-color'>{item.color}</div></div>
                 </motion.div>
             })}
-        </div>
+        </div> */}
     </>
 }

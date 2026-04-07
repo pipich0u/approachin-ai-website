@@ -1,5 +1,6 @@
 import './index.css'
 import { MobKllmIndex } from './components/index/index'
+import { MobModelLogos } from '@/page/mobile/common/MobModelLogos'
 import { MobKllmAdvantages } from './components/advantages'
 import { MobKllmScenes } from './components/service'
 import PageConsult from '@/page/mobile/index/components/consult'
@@ -14,6 +15,7 @@ export const MobKLLMPage = () => {
 
     return <div className='mob-kllm-page'>
         <MobKllmIndex />
+        <MobModelLogos />
         <MobKllmAdvantages />
         <MobKllmScenes />
         <PageConsult />

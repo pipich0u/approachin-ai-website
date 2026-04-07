@@ -2,6 +2,7 @@ import './index.css'
 import { useEffect } from 'react'
 import { trackPageView } from '@/utils/umami'
 import { MobAMaaSIndex } from './components/index/index'
+import { MobModelLogos } from '@/page/mobile/common/MobModelLogos'
 import { MobAMaaSIntroduce } from './components/introduce'
 import { MobAMaaSRelation } from './components/relation'
 import { MobAMaaSTestimony } from './components/testimony'
@@ -16,9 +17,10 @@ export const MobAMaaSPage = () => {
 
     return <div className='mob-amaas-page'>
         <MobAMaaSIndex />
+        <MobModelLogos />
         <MobAMaaSIntroduce />
         <MobAMaaSRelation />
-        <MobAMaaSTestimony />
+        {/* <MobAMaaSTestimony /> */}
         <PageConsult />
         <PageContact />
     </div>

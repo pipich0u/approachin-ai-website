@@ -1,5 +1,6 @@
 import './index.css'
 import { MobATaaSIndex } from './components/index/index'
+import { MobModelLogos } from '@/page/mobile/common/MobModelLogos'
 import { MobATaaSAdvantages } from './components/advantages'
 import { MobATaaSService } from './components/service'
 import PageConsult from '@/page/mobile/index/components/consult'
@@ -14,6 +15,7 @@ export const MobATaaSPage = () => {
 
     return <div className='mob-ataas-page'>
         <MobATaaSIndex />
+        <MobModelLogos />
         <MobATaaSAdvantages />
         <MobATaaSService />
         <PageConsult />

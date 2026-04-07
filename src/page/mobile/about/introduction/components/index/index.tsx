@@ -62,18 +62,20 @@ export const MobIntroductionIndex = () => {
                         <p key={index}>{renderContent(content)}</p>
                     ))}
                 </div>
-                <div className='mob-leaf-rows'>
-                    {leafItems.map((item, i) => (
-                        <div className='mob-leaf-item' key={i}>
-                            <div className='mob-leaf-wrap'>
-                                <img src={leafImg} alt="" className='mob-leaf-icon' />
-                                <div className='mob-leaf-text'>
-                                    <span className='mob-leaf-big'>首个</span>
-                                    <span className='mob-leaf-small'>{item}</span>
+                <div className='mob-leaf-scroll'>
+                    <div className='mob-leaf-track'>
+                        {[...leafItems, ...leafItems].map((item, i) => (
+                            <div className='mob-leaf-item' key={i}>
+                                <div className='mob-leaf-wrap'>
+                                    <img src={leafImg} alt="" className='mob-leaf-icon' />
+                                    <div className='mob-leaf-text'>
+                                        <span className='mob-leaf-big'>首个</span>
+                                        <span className='mob-leaf-small'>{item}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
 

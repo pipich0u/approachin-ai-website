@@ -1,5 +1,6 @@
 import './index.css'
 import { MobMachineIndex } from './components/index/index'
+import { MobModelLogos } from '@/page/mobile/common/MobModelLogos'
 import { MobMachineProduct } from './components/product'
 import { MobMachineAmaas } from './components/amaas'
 import { MobMachineIntroduce } from './components/introduce'
@@ -18,11 +19,12 @@ export const MobMachinePage = () => {
 
     return <div className='mob-machin-page'>
         <MobMachineIndex />
+        <MobModelLogos />
         <MobMachineIntroduce />
         <MobMachineAmaas />
         <MobMachineCompare />
         <MobMachineProduct />
-        <MobMachineScene />
+        {/* <MobMachineScene /> */}
         <PageConsult />
         <PageContact />
     </div>

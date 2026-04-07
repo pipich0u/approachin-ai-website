@@ -62,24 +62,59 @@
     margin-bottom: 0;
 }
 
-/* 麦穗 - 横向滑动 */
-.mob-leaf-rows {
-    display: flex;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+/* 麦穗 - 无限轮播 */
+.mob-leaf-scroll {
+    width: 100%;
+    overflow: hidden;
     margin-top: 36px;
-    padding-bottom: 16px;
-    scrollbar-width: none;
+    position: relative;
 }
 
-.mob-leaf-rows::-webkit-scrollbar {
-    display: none;
+.mob-leaf-scroll::before,
+.mob-leaf-scroll::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.mob-leaf-scroll::before {
+    left: 0;
+    background: linear-gradient(to right, #fff, transparent);
+}
+
+.mob-leaf-scroll::after {
+    right: 0;
+    background: linear-gradient(to left, #fff, transparent);
+}
+
+.mob-leaf-track {
+    display: flex;
+    align-items: center;
+    width: -webkit-fit-content;
+    width: fit-content;
+    -webkit-animation: mob-leaf-scroll 40s linear infinite;
+    animation: mob-leaf-scroll 40s linear infinite;
+}
+
+@-webkit-keyframes mob-leaf-scroll {
+    from { -webkit-transform: translateX(0); transform: translateX(0); }
+    to { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+}
+
+@keyframes mob-leaf-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
 
 .mob-leaf-item {
-    flex: 0 0 200px;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
+    padding: 0 10px;
 }
 
 .mob-leaf-wrap {
@@ -103,6 +138,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;

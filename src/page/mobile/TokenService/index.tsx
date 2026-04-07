@@ -1,5 +1,6 @@
 import './index.css'
 import { MobTokenServiceIndex } from './components/index/index'
+import { MobModelLogos } from '@/page/mobile/common/MobModelLogos'
 import { MobTokenServiceAdvantages } from './components/advantages'
 import { MobTokenServiceService } from './components/service'
 import PageConsult from '@/page/mobile/index/components/consult'
@@ -14,6 +15,7 @@ export const MobTokenServicePage = () => {
 
     return <div className='mob-ts-page'>
         <MobTokenServiceIndex />
+        <MobModelLogos />
         <MobTokenServiceAdvantages />
         <MobTokenServiceService />
         <PageConsult />
