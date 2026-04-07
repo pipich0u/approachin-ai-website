@@ -59,9 +59,9 @@
 }
 
 .mob-moon-influence-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .mob-moon-influence-card {

@@ -20,9 +20,9 @@
 }
 
 .mob-amaas-testimony-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .mob-amaas-testimony-card {

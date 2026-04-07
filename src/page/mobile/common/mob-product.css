@@ -26,9 +26,9 @@
 }
 
 .mob-product-adv-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .mob-product-adv-card {
@@ -78,9 +78,9 @@
 }
 
 .mob-product-svc-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .mob-product-svc-card {
@@ -119,9 +119,9 @@
 }
 
 .mob-product-scene-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .mob-product-scene-card {
