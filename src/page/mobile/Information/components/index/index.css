@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(/src/assets/images/mob/mob_bg_in.webp) no-repeat center / cover;
+    background: url(/src/assets/images/img/introduction_bg.webp) no-repeat 50% / cover;
 }
 
 .mob-in-idx-content-title {

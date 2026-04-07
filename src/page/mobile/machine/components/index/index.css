@@ -1,5 +1,5 @@
 .mob-machine-bg {
-    background: #000 url('/images/machine_banner.webp') no-repeat right center;
+    background: #000 url('/images/machine_banner.webp') no-repeat right calc(50% + 15px);
     background-size: auto 100%;
 }
 

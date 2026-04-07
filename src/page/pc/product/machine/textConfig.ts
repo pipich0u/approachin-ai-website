@@ -8,7 +8,7 @@ export const machineTextConfig = {
     index: {
         title: 'Token Machine',
         title2: '全场景软硬一体化方案',
-        desc: '内置趋境KLLM推理引擎及AMaaS模型服务平台，搭配深度优化的硬件，提供最低成本最高性能的私有化算力设施',
+        desc: '内置趋境KLLM推理引擎及AMaaS模型服务平台，提供最优形态的硬件',
         btn: '立即咨询',
         bottomList: [
             {

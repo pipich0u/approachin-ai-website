@@ -1,5 +1,4 @@
 import { motion } from 'motion/react'
-import { IconFont } from '@/utils/antdUtils'
 import './index.css'
 import { scrollInViewOnceProps } from '@/utils/motionConfig'
 import { amaasTextConfig } from '@/page/pc/product/AMaaS/textConfig'
@@ -22,7 +21,7 @@ export const MobAMaaSIntroduce = () => {
                             <div className='mob-amaas-in-item-list'>
                                 {item.features.map((feature, idx) => (
                                     <div key={idx} className='mob-amaas-in-item-list-li'>
-                                        <IconFont style={{ fontSize: '18px', color: '#6951FF' }} type='icon-dui'></IconFont>
+                                        <span className='mob-amaas-in-dot'></span>
                                         <div>{feature}</div>
                                     </div>
                                 ))}

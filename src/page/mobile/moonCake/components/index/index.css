@@ -2,7 +2,8 @@
     width: 100%;
     padding: 60px 40px;
     box-sizing: border-box;
-    background: url('/src/assets/images/img/moon_bg.webp') no-repeat center / cover;
+    background: url('/src/assets/images/img/moon_bg.webp') no-repeat 46% center;
+    background-size: auto 100%;
     font-family: var(--font-stack);
     position: relative;
 }
@@ -46,12 +47,12 @@
 }
 
 .mob-moon-banner-btn {
-    width: 180px;
-    height: 52px;
-    border-radius: 8px;
+    width: 140px;
+    height: 42px;
+    border-radius: 6px;
     background: linear-gradient(135deg, #7B2FFF 0%, #5550FF 60%, #3D6DFC 100%);
     color: #fff;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 400;
     border: none;
     cursor: pointer;

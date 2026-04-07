@@ -21,10 +21,9 @@
 .mob-amaas-relation-title {
     color: #1D2129;
     text-align: center;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 150%;
-    letter-spacing: 0.76px;
 }
 
 .mob-amaas-relation-img-wrap {
@@ -62,20 +61,18 @@
 }
 
 .mob-amaas-rel-box-rig-title {
-    color: #000;
+    color: #1D2129;
     font-size: 32px;
-    font-weight: 450;
+    font-weight: 600;
     line-height: 150%;
-    letter-spacing: 0.64px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 .mob-amaas-rel-box-rig-desc {
-    color: #59595A;
-    font-size: 24px;
-    font-weight: 305;
-    line-height: 150%;
-    letter-spacing: 0.48px;
+    color: #4E5969;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.7;
     margin-bottom: 30px;
 }
 
@@ -89,12 +86,10 @@
 }
 
 .mob-amaas-rel-li-text {
-    color: #59595A;
-    font-size: 24px;
-    font-weight: 305;
-    line-height: 200%;
-    letter-spacing: 0.48px;
-    opacity: 0.9;
+    color: #4E5969;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.8;
 }
 
 /* =========================

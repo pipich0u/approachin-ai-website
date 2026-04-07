@@ -4,7 +4,7 @@ export const tokenServiceTextConfig = {
 
 export const overviewText = {
     name: 'Token Service',
-    title: '以SLO为中心的高效能Token API',
+    title: '日均万亿的高效能Token',
     desc: '将算力资源指标与业务 SLO 对齐，实时感知业务变化，并动态调度算力资源，为企业提供稳定、高效、可控的大模型推理服务。',
 }
 

@@ -5,7 +5,7 @@ export const ataasTextConfig = {
 export const overviewText = {
     name: 'ATaaS',
     title: '全球领先的高效能Token生产平台',
-    features: '异构推理2.0｜以存换算2.0｜虚实同构｜极致弹性｜万卡扩展',
+    features: '异构推理2.0｜以存换算2.0｜虚实同构｜极致弹性',
     desc: '基于趋境自研推理引擎与异构算力调度技术，构建面向大规模 Token 生产的全栈基础设施，为企业提供极致性价比的 AI 推理算力底座。',
 }
 
