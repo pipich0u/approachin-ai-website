@@ -1,27 +1,34 @@
-import { motion } from 'motion/react'
+import '@/page/mobile/common/mob-banner.css'
 import './index.css'
+import { motion } from 'motion/react'
 import { initialLoadProps } from '@/utils/motionConfig'
 import { trackButtonClick } from '@/utils/umami'
 import { amaasTextConfig } from '@/page/pc/product/AMaaS/textConfig'
 import { useNavigate } from 'react-router-dom'
+import bannerImg from '@/assets/images/img/amaas.webp'
 
 export const MobAMaaSIndex = () => {
     const { index } = amaasTextConfig
     const navigate = useNavigate()
-    return <div className='mob-amaas-banner'>
-        <div className='mob-amaas-banner-inner'>
-            <motion.div {...initialLoadProps} className='mob-amaas-banner-name'>{index.title}</motion.div>
-            <motion.div {...initialLoadProps} className='mob-amaas-banner-title'>{index.subtitle}</motion.div>
-            <motion.p {...initialLoadProps} className='mob-amaas-banner-features'>
-                {index.features.join('  |  ')}
-            </motion.p>
-            <motion.button
-                {...initialLoadProps}
-                className='mob-amaas-banner-btn'
-                onClick={() => { trackButtonClick(index.buttonText, '移动端AMaaS首屏'); navigate('/contact') }}
-            >
-                {index.buttonText}
-            </motion.button>
+    return <div className='mob-banner mob-amaas-bg'>
+        <div className='mob-banner-content'>
+            <div className='mob-banner-left'>
+                <motion.div {...initialLoadProps} className='mob-banner-name'>{index.title}</motion.div>
+                <motion.div {...initialLoadProps} className='mob-banner-title'>{index.subtitle}</motion.div>
+                <motion.p {...initialLoadProps} className='mob-banner-features'>
+                    {index.features.join('  |  ')}
+                </motion.p>
+                <motion.button
+                    {...initialLoadProps}
+                    className='mob-banner-btn'
+                    onClick={() => { trackButtonClick(index.buttonText, '移动端AMaaS首屏'); navigate('/contact') }}
+                >
+                    {index.buttonText}
+                </motion.button>
+            </div>
+            <motion.div {...initialLoadProps} className='mob-banner-right'>
+                <img src={bannerImg} alt={index.title} />
+            </motion.div>
         </div>
     </div>
 }
