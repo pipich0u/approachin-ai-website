@@ -31,7 +31,7 @@
 
 .mob-solution-banner-desc {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 22px;
+    font-size: 26px;
     line-height: 1.6;
     margin-top: 16px;
     max-width: 500px;
@@ -44,7 +44,7 @@
     border-radius: 8px;
     background: linear-gradient(135deg, #7B2FFF 0%, #5550FF 60%, #3D6DFC 100%);
     color: #fff;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 400;
     border: none;
     cursor: pointer;
@@ -57,7 +57,7 @@
 }
 
 .mob-solution-cases-title {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
     color: #1D2129;
     text-align: center;
@@ -78,14 +78,14 @@
 
 .mob-solution-case-label {
     color: #6C3AE1;
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 500;
     margin-bottom: 8px;
 }
 
 .mob-solution-case-title {
     color: #1D2129;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     margin-bottom: 12px;
     line-height: 1.4;
@@ -93,6 +93,6 @@
 
 .mob-solution-case-desc {
     color: #4E5969;
-    font-size: 22px;
+    font-size: 26px;
     line-height: 1.7;
 }

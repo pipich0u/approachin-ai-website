@@ -11,7 +11,7 @@
     align-items: center;
     gap: 6px;
     color: #6147FF;
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 500;
     margin-bottom: 16px;
 }
@@ -26,7 +26,7 @@
 
 .mob-moon-banner-desc {
     color: #4E5969;
-    font-size: 22px;
+    font-size: 26px;
     line-height: 1.7;
     margin-bottom: 30px;
 }
@@ -37,7 +37,7 @@
     border-radius: 8px;
     background: linear-gradient(135deg, #7B2FFF 0%, #5550FF 60%, #3D6DFC 100%);
     color: #fff;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 400;
     border: none;
     cursor: pointer;
@@ -51,7 +51,7 @@
 }
 
 .mob-moon-influence-title {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
     color: #1D2129;
     text-align: center;
@@ -82,6 +82,6 @@
 
 .mob-moon-influence-card-desc {
     color: #4E5969;
-    font-size: 22px;
+    font-size: 26px;
     line-height: 1.7;
 }

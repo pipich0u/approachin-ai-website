@@ -18,7 +18,7 @@
 }
 
 .mob-product-adv-title {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
     color: #1D2129;
     text-align: center;
@@ -32,29 +32,29 @@
 }
 
 .mob-product-adv-card {
-    padding: 30px;
-    border-radius: 12px;
+    padding: 36px;
+    border-radius: 16px;
     background: #F7F8FA;
 }
 
 .mob-product-adv-num {
     color: #6C3AE1;
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 700;
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .mob-product-adv-card-title {
     color: #1D2129;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .mob-product-adv-card-list p {
     color: #4E5969;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 400;
     line-height: 1.8;
     margin: 0;
@@ -70,7 +70,7 @@
 }
 
 .mob-product-svc-title {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
     color: #1D2129;
     text-align: center;
@@ -84,21 +84,21 @@
 }
 
 .mob-product-svc-card {
-    padding: 30px;
-    border-radius: 12px;
+    padding: 36px;
+    border-radius: 16px;
     background: #fff;
 }
 
 .mob-product-svc-card-title {
     color: #1D2129;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .mob-product-svc-card-desc {
     color: #4E5969;
-    font-size: 22px;
+    font-size: 26px;
     line-height: 1.7;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .mob-product-scenes-title {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
     color: #1D2129;
     text-align: center;
@@ -125,30 +125,30 @@
 }
 
 .mob-product-scene-card {
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     background: #F7F8FA;
 }
 
 .mob-product-scene-card img {
     width: 100%;
-    height: 300px;
+    height: 360px;
     object-fit: cover;
 }
 
 .mob-product-scene-card-body {
-    padding: 24px 30px;
+    padding: 28px 36px;
 }
 
 .mob-product-scene-card-title {
     color: #1D2129;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .mob-product-scene-card-desc {
     color: #4E5969;
-    font-size: 22px;
+    font-size: 26px;
     line-height: 1.7;
 }
