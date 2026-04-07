@@ -27,7 +27,7 @@ export default function MobileIndex() {
       <PageCooperate />
       <SourcePage />
       <DevelopPage />
-      <MobAiCloud />
+      {/* <MobAiCloud /> */}
       <PageConsult />
       <PageContact />
     </div>

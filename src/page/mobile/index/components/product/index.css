@@ -115,7 +115,7 @@
     display: flex;
     align-items: center;
     font-family: var(--font-stack);
-    font-size: 16px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 380;
     line-height: 150%;
@@ -142,7 +142,7 @@
     color: #666;
     text-align: justify;
     font-family: var(--font-stack);
-    font-size: 23.114px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 330;
     line-height: 150%;
