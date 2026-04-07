@@ -86,9 +86,9 @@ export const mobMenuHrefListDefault = [
         href: '',
         isSelected: true,
         subItems: [
-            { title: 'KLLM推理引擎', href: '/kllm' },
-            { title: 'AMaaS平台', href: '/amaas' },
-            { title: 'ATaaS', href: '/ataas' }
+            { title: 'KLLM-企业级高效能推理引擎', href: '/kllm' },
+            { title: 'AMaaS-模型价值即服务平台', href: '/amaas' },
+            { title: 'ATaaS-Token价值即服务平台', href: '/ataas' }
         ]
     },
     {

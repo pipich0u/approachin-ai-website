@@ -16,7 +16,7 @@
     content: '';
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
-    background: linear-gradient(to right, #000 0%, #000 20%, transparent 70%);
+    background: linear-gradient(to right, #000 0%, #000 40%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.4) 100%);
 }
 
 .mob-cp-banner-inner {

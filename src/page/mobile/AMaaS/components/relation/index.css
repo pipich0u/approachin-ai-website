@@ -19,56 +19,24 @@
 }
 
 .mob-amaas-relation-title {
-    color: #333;
+    color: #1D2129;
     text-align: center;
-    font-size: 38px;
-    font-weight: 450;
+    font-size: 36px;
+    font-weight: 700;
     line-height: 150%;
     letter-spacing: 0.76px;
 }
 
-.mob-amaas-relation-box {
-    display: flex;
-    flex-direction: column;
+.mob-amaas-relation-img-wrap {
+    width: 100%;
     margin-top: 53px;
-    gap: 60px;
+    margin-bottom: 40px;
 }
 
-/* =========================
-   主内容区（层级块）
-========================= */
-.mob-amaas-relation-box-item {
-    width: 100%;
-}
-
-.mob-amaas-relation-box-title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.mob-amaas-relation-box-text {
-    color: #333;
-    font-size: 32px;
-    font-weight: 450;
-    line-height: 150%;
-}
-
-.mob-amaas-relation-box-desc {
-    color: #666;
-    font-size: 24px;
-    font-weight: 330;
-    line-height: 150%;
-    margin-left: 10px;
-}
-
-.mob-amaas-relation-box-item-content {
-    width: 100%;
-}
-
-.mob-amaas-relation-box-item-content img {
+.mob-amaas-relation-img-wrap img {
     width: 100%;
     object-fit: contain;
+    border-radius: 12px;
 }
 
 /* =========================

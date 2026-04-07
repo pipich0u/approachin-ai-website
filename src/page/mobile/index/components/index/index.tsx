@@ -82,7 +82,7 @@ export default function PageIndex() {
                                 {current === idx && (
                                     <div
                                         className="mob-hero-indicator-fill"
-                                        style={{ width: `${progress}%` }}
+                                        style={{ transform: `scaleX(${progress / 100})` }}
                                     />
                                 )}
                             </div>

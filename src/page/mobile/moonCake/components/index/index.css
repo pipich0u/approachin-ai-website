@@ -4,6 +4,20 @@
     box-sizing: border-box;
     background: url('/src/assets/images/img/moon_bg.webp') no-repeat center / cover;
     font-family: var(--font-stack);
+    position: relative;
+}
+
+.mob-moon-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 0;
+}
+
+.mob-moon-banner > * {
+    position: relative;
+    z-index: 1;
 }
 
 .mob-moon-banner-tag {
@@ -74,8 +88,9 @@
 }
 
 .mob-moon-influence-card img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: auto;
+    max-height: 60px;
     object-fit: contain;
     flex-shrink: 0;
 }

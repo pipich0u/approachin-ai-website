@@ -24,11 +24,14 @@
 
 .mob-amaas-testimony-list {
     display: flex;
-    overflow-x: auto;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     padding: 0 40px 16px;
     scrollbar-width: none;
+    -webkit-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
+    gap: 20px;
 }
 
 .mob-amaas-testimony-list::-webkit-scrollbar {
@@ -36,15 +39,16 @@
 }
 
 .mob-amaas-testimony-card {
-    flex: 0 0 75vw;
+    min-width: 75vw;
+    max-width: 75vw;
     padding: 36px;
     border-radius: 16px;
     background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 20px;
     scroll-snap-align: start;
+    flex-shrink: 0;
 }
 
 .mob-amaas-testimony-card:last-child {

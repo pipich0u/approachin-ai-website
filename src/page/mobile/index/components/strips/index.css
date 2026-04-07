@@ -4,37 +4,39 @@
 }
 
 .mob-strips-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #1D2129;
+    font-size: 34px;
+    font-weight: 520;
+    font-style: Semibold;
+    color: #1B1D22;
     text-align: center;
-    margin-bottom: 24px;
+    line-height: 150%;
+    margin-bottom: 54px;
 }
 
 .mob-strips-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 26px;
 }
 
 .mob-strip-item {
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
     background: #fff;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
     border: 1px solid #f0f0f0;
 }
 
 .mob-strip-body {
     flex: 1;
     min-width: 0;
-    padding: 20px;
+    padding: 32px;
 }
 
 .mob-strip-img-wrap {
-    width: 140px;
+    width: 224px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -52,40 +54,40 @@
 .mob-strip-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 8px;
+    gap: 10px;
+    margin-bottom: 13px;
 }
 
 .mob-strip-tag {
-    font-size: 11px;
-    padding: 2px 8px;
-    border-radius: 4px;
+    font-size: 18px;
+    padding: 3px 13px;
+    border-radius: 6px;
     background: linear-gradient(90deg, rgba(69, 0, 245, 0.10) 0%, rgba(205, 105, 255, 0.10) 100%);
     color: #6133CC;
 }
 
 .mob-strip-name {
-    font-size: 17px;
+    font-size: 28px;
     font-weight: 600;
     color: #1D2129;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 .mob-strip-desc {
-    font-size: 12px;
+    font-size: 20px;
     color: #4E5969;
     line-height: 1.6;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 .mob-strip-btn {
     align-self: flex-start;
-    padding: 5px 16px;
+    padding: 8px 26px;
     border: 1px solid #42464E;
-    border-radius: 4px;
+    border-radius: 6px;
     background: transparent;
     color: #0C0D0E;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 500;
     cursor: pointer;
 }

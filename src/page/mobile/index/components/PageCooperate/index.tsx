@@ -52,7 +52,7 @@ export default function PageCooperate() {
                                         key={`out-${index}`}
                                         className='mob-circle-item-wrapper mob-circle-item-outer'
                                     >
-                                        <img src={img} alt={`outer-${index}`} className='mob-circle-item' />
+                                        <img src={img} alt={`outer-${index}`} className='mob-circle-item' loading="lazy" />
                                     </div>
                                 ))}
                             </div>
@@ -62,7 +62,7 @@ export default function PageCooperate() {
                                         key={`in-${index}`}
                                         className='mob-circle-item-wrapper mob-circle-item-inner mob-big'
                                     >
-                                        <img src={img} alt={`inner-${index}`} className='mob-circle-item mob-big' />
+                                        <img src={img} alt={`inner-${index}`} className='mob-circle-item mob-big' loading="lazy" />
                                     </div>
                                 ))}
                             </div>

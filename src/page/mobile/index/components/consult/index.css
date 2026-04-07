@@ -6,15 +6,28 @@
     align-items: center;
     font-family: var(--font-stack);
     justify-content: center;
+    padding-top: 40px;
     background: url(/src/assets/images/img/consult-bg.webp) no-repeat center bottom;
     background-size: contain;
+    position: relative;
+}
+
+.mob-consult-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, #fff);
+    pointer-events: none;
 }
 
 .mob-consult-title {
     color: #252525;
     text-align: center;
     font-family: var(--font-stack);
-    font-size: 38px;
+    font-size: 34px;
     font-style: normal;
     font-weight: 450;
     line-height: 150%;
@@ -89,5 +102,6 @@
 }
 
 .mob-consult-button:active {
-    scale: 0.95;
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
 }

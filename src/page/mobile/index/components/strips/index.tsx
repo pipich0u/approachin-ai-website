@@ -7,7 +7,7 @@ import product2 from '@/assets/images/img/product_2.webp';
 import product3 from '@/assets/images/img/product_3.webp';
 import amaas from '@/assets/images/img/amaas.webp';
 
-const stripImages = [product1, product2, product3, amaas];
+const stripImages = [product3, amaas, product1, product2];
 
 export default function MobStrips() {
     const navigate = useNavigate();
@@ -34,7 +34,7 @@ export default function MobStrips() {
                             <button className="mob-strip-btn" onClick={() => navigateTo(item.link)}>了解详情</button>
                         </div>
                         <div className="mob-strip-img-wrap">
-                            <img src={stripImages[idx]} alt={item.title} />
+                            <img src={stripImages[idx]} alt={item.title} loading="lazy" />
                         </div>
                     </div>
                 ))}

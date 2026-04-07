@@ -21,7 +21,6 @@ export const MobMoonCakeIndex = () => {
             <div className='mob-moon-influence-list'>
                 {MoonInfluenceList.items.map((item, i) => (
                     <motion.div {...scrollInViewOnceProps} className='mob-moon-influence-card' key={i}>
-                        <img src={item.img} alt="" />
                         <div className='mob-moon-influence-card-desc'>{item.desc}</div>
                     </motion.div>
                 ))}

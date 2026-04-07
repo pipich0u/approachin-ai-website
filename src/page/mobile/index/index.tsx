@@ -24,7 +24,7 @@ export default function MobileIndex() {
       <MobStrips />
       <PageTab />
       <PageCase />
-      <PageCooperate />
+      {/* <PageCooperate /> */}
       <SourcePage />
       <DevelopPage />
       {/* <MobAiCloud /> */}

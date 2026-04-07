@@ -22,7 +22,7 @@
     align-items: center;
     font-weight: 520;
     font-style: Semibold;
-    font-size: 38px;
+    font-size: 34px;
     line-height: 150%;
     letter-spacing: 0.8px;
     color: #1B1D22;
@@ -259,5 +259,6 @@
 } */
 
 .mob-cpa-ct-bt-btn:active {
-    scale: 0.95;
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
 }

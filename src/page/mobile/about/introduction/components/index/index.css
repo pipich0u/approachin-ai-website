@@ -9,7 +9,7 @@
 .mob-intro-banner {
     width: 100%;
     height: 300px;
-    background: #1a0a2e url('/images/about_banner_new.webp') center / cover no-repeat;
+    background: #1a0a2e url('/images/about_banner.webp') center / 100% 100% no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,6 +95,8 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    -webkit-filter: brightness(1.3) saturate(1.2);
+    filter: brightness(1.3) saturate(1.2);
 }
 
 .mob-leaf-text {
@@ -112,7 +114,7 @@
 .mob-leaf-big {
     font-size: 22px;
     font-weight: 700;
-    color: #DAA520;
+    color: #F0C040;
     letter-spacing: 1px;
     line-height: 1.2;
 }
