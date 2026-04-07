@@ -163,7 +163,7 @@
 .about-leaf-wrap {
     position: relative;
     width: 200px;
-    aspect-ratio: 838 / 298;
+    height: 71px; /* 200 * 298/838 */
     display: flex;
     align-items: center;
     justify-content: center;
